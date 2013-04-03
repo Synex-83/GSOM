@@ -36,6 +36,7 @@ public class Test {
 		// Invert p, using LU decomposition
 		RealMatrix pInverse = new LUDecomposition(p).getSolver().getInverse();
 		System.out.println(pInverse.toString());
+		System.out.println("D8D");
 	}
 
 }
