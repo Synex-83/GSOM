@@ -74,6 +74,7 @@ public class SelfOrganizingMap {
 	{
 		String line = "";
 		double temp[] = null;
+		Node winner = null;
 		StringTokenizer first = new StringTokenizer(input, "\n");		
 		first.nextToken();		
 		
@@ -89,15 +90,27 @@ public class SelfOrganizingMap {
 				{
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
-				setAccumulatedValue(new ArrayRealVector(temp));
+				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("===============================");
+//				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
+//				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+//				System.out.println("*******************************");
 			}
 		}
 	}
 	
 	/**
-	 * @param temp
+	 * @param input as the input vector presented to the network.
+	 * @return the winner node of the iteration
+	 * Similar to {@link #setAccumulatedValue(ArrayRealVector)} needs to use only one of these methods to select the
+	 * winner. Euclidean measure takes the minimum value.
 	 */
-	private void setAccumulatedValue(ArrayRealVector input) {
+	private Node setEuclideanAccumulatedValue(ArrayRealVector input)
+	{
+		double temp = 0.0;
+		double minSeen = Double.POSITIVE_INFINITY;
+		Node minNode = null;
 		
 		System.out.println("Input Vector = " + input.toString());
 		
@@ -105,11 +118,54 @@ public class SelfOrganizingMap {
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{
-				SOM[i][j].setACTIVATION_VALUE(multiply(SOM[i][j].getWEIGHTS(),input)); 
+				temp = ((SOM[i][j].getWEIGHTS()).subtract(input)).getNorm(); // in case there is an error this would revert to zero
+				
+				if(temp < minSeen)
+				{
+					minNode = SOM[i][j];
+					minSeen = temp;
+				}
+				
+				SOM[i][j].setACTIVATION_VALUE(temp); 
 			}
 		}	
 		
 		printSOM();
+		return minNode;
+	}
+	
+	/**
+	 * @param input as the input vector presented to the network
+	 * @return the winner node of the iteration
+	 * Similar to {@link #setEuclideanAccumulatedValue(ArrayRealVector)} need to use only one of these methods to selec the
+	 * winner. The multiplication based method takes the maximum value.
+	 */ 
+	private Node setAccumulatedValue(ArrayRealVector input) {
+		
+		double temp = 0.0;
+		double maxSeen = 0.0;
+		Node maxNode = null;
+		
+		System.out.println("Input Vector = " + input.toString());
+		
+		for(int i = 0 ; i < SOM.length; i++)
+		{
+			for(int j=0; j < SOM[0].length; j++)
+			{
+				temp = multiply(SOM[i][j].getWEIGHTS(),input); // in case there is an error this would revert to zero
+				
+				if(temp > maxSeen)
+				{
+					maxNode = SOM[i][j];
+					maxSeen = temp;
+				}
+				
+				SOM[i][j].setACTIVATION_VALUE(temp); 
+			}
+		}	
+		
+		printSOM();
+		return maxNode;
 	}
 
 	/**
@@ -137,9 +193,51 @@ public class SelfOrganizingMap {
 			{				
 				//System.out.println(i + " " + j);
 				System.out.println("X =" + SOM[i][j].getX() + " Y =" + SOM[i][j].getY() + " ACTIVATION VALUE =" + SOM[i][j].getACTIVATION_VALUE());
-				System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+				//System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
 			}
-			System.out.println("===============================");
+			
 		}
+		
+		//System.out.println("===============================");
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
