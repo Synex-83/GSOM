@@ -40,7 +40,7 @@ public class Test {
 		System.out.println("D8D");*/
 		
 		double temp[] = {5.0,6.0,2.0};
-		
+		double temp1[] = {5.0,6.0,2.0};
 		ArrayRealVector arv = new ArrayRealVector(temp);
 		
 		System.out.print(arv.toString());
@@ -48,6 +48,7 @@ public class Test {
 		ArrayRealVector lol = (ArrayRealVector) arv.mapMultiplyToSelf(5);
 		
 		System.out.print((arv.add(lol).toString()));
+		
 	}
 
 }
