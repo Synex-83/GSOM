@@ -20,6 +20,8 @@ public class SelfOrganizingMap {
 	private int GRID_OPTION = 0;
 	private int INPUT_DIMENSION = 0;
 	private int NUMER_OF_ITERATIONS = 0;
+	private int SOM_HORIZONTAL_LENGTH = 0;
+	private int SOM_VERTICAL_LENGTH = 0;
 	private double INITIAL_LEARNING_RATE = 0.0;
 	private double LEARNING_RATE = 0.0;
 	private double MAX_RADIUS = 0.0; //radius at first epoch (t = 0)
@@ -62,6 +64,7 @@ public class SelfOrganizingMap {
 			initialize();
 		}
 		
+		RADIUS = MAX_RADIUS;
 	}
 	
 	/**
@@ -86,14 +89,17 @@ public class SelfOrganizingMap {
 
 		NUMER_OF_ITERATIONS = iterations;
 		INITIAL_LEARNING_RATE = learningRate;
+		LEARNING_RATE = INITIAL_LEARNING_RATE;
 		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
 		
-
 		
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			EpochRadiusDecay(i);
+	
 			trainSOM(input);
+			EpochRadiusDecay(i);
+			LearningRateDecay(i);
+			System.out.println("****************************************************************" + i);
 		}				
 
 	}
@@ -125,8 +131,12 @@ public class SelfOrganizingMap {
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
-				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-				System.out.println("===============================");
+				adjustNeighbouroodOfWinners(winner, new ArrayRealVector(temp));
+				
+				
+				
+/*				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("===============================");*/
 /*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("*******************************");*/
@@ -134,17 +144,86 @@ public class SelfOrganizingMap {
 		}
 	}
 	
-	public void adjustNeighbouroodOfWinners(Node winner)
+	/**
+	 * @param winner as the winnder node of the input presentation
+	 * @param inputVector as the input vector recently presented to the network
+	 */
+	private void adjustNeighbouroodOfWinners(Node winner, ArrayRealVector inputVector)
 	{
+		int radius = (int)Math.ceil(RADIUS);
+		double distance = 0.0;
+		double theta = 0.0;
+		ArrayRealVector tempWeights = null;
 		
+		int effective_x_min = winner.getX() - radius;
+		int effective_x_max = winner.getX() + radius;
+		int effective_y_min = winner.getY() - radius;
+		int effective_y_max = winner.getY() + radius;
+		
+		if(effective_x_min  < 0)
+		{
+			effective_x_min = 0;
+		}
+		
+		if(effective_x_max > SOM_HORIZONTAL_LENGTH)
+		{
+			effective_x_max = SOM_HORIZONTAL_LENGTH - 1;
+		}
+		
+		if(effective_y_min < 0)
+		{
+			effective_y_min = 0;
+		}
+		
+		if(effective_y_max > SOM_VERTICAL_LENGTH)
+		{
+			effective_y_max = SOM_VERTICAL_LENGTH - 1;
+		}
+		
+		
+		for(int i = effective_y_min; i <= effective_y_max; i++)
+		{
+			for(int j = effective_x_min; j <= effective_x_max; j++)
+			{
+				distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				
+				if(distance <= RADIUS)
+				{
+					//weight adjust
+					theta = Math.exp(-(Math.pow(distance, 2)/(2*Math.pow(RADIUS, 2))));
+					tempWeights = SOM[i][j].getWEIGHTS().add((inputVector.subtract(SOM[i][j].getWEIGHTS())).mapMultiplyToSelf(theta*LEARNING_RATE)) ;
+					SOM[i][j].setWEIGHTS(tempWeights);					
+				}
+			}
+		}
 	}
 	
-	public void LearningRateDecay(int currentIteration)
+	/**
+	 * @param BMU
+	 * @param Neighbour
+	 * @return
+	 */
+	private  double eculideanDistanceInNodes(Node BMU, Node Neighbour)	
+	{
+		ArrayRealVector BMUnit = new ArrayRealVector(new double[]{BMU.getX(),BMU.getY()});
+		ArrayRealVector neighbourUnit = new ArrayRealVector(new double[]{Neighbour.getX(),Neighbour.getY()});		
+		ArrayRealVector subValue = BMUnit.subtract(neighbourUnit);
+		
+		return Math.sqrt(subValue.getNorm());
+	}
+	
+	/**
+	 * @param currentIteration
+	 */
+	private  void LearningRateDecay(int currentIteration)
 	{
 		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/NUMER_OF_ITERATIONS);
 	}
 	
-	public void EpochRadiusDecay(int currentIteration)
+	/**
+	 * @param currentIteration
+	 */
+	private void EpochRadiusDecay(int currentIteration)
 	{
 		RADIUS = MAX_RADIUS*Math.exp(-((double)currentIteration/TIME_STEP));
 		//System.out.println(RADIUS);
@@ -231,6 +310,9 @@ public class SelfOrganizingMap {
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j);
 			}
 		}
+		
+		SOM_HORIZONTAL_LENGTH = SOM[0].length;
+		SOM_VERTICAL_LENGTH = SOM.length;
 	}
 	
 	/**
