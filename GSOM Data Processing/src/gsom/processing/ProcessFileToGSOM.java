@@ -51,7 +51,7 @@ public class ProcessFileToGSOM {
 			else
 			{
 				//LINES_TO_WRITE= "Point\tNumber\tType\tDecision\t\r\n";
-				LINES_TO_WRITE= "Point\tZero\tNumber\tType\t\r\n";
+				LINES_TO_WRITE= "Point\tNumber\tType\t\r\n";
 			}
 			
 			while((strLine = br.readLine()) != null)
@@ -215,7 +215,7 @@ public class ProcessFileToGSOM {
 			//Math.pow(normalizedJunctionNumber,2)+
 			double vectorNorm = Math.sqrt(Math.pow(normalizedJunctionType,2)+  Math.pow(decisionNumber,2));
 			//tempString += (normalizedJunctionNumber/vectorNorm) +"\t"+ (normalizedJunctionType/vectorNorm) +"\t"+ (decisionNumber/vectorNorm);
-			tempString += 0+"\t"+(normalizedJunctionType/vectorNorm) +"\t"+ (decisionNumber/vectorNorm);//+"\t"+0;
+			tempString += (normalizedJunctionType/vectorNorm) +"\t"+ (decisionNumber/vectorNorm);//+"\t"+0;
 		}
 			
 		return tempString;
