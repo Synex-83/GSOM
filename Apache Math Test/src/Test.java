@@ -47,7 +47,7 @@ public class Test {
 		
 		ArrayRealVector lol = (ArrayRealVector) arv.mapMultiplyToSelf(5);
 		
-		System.out.print(lol.toString());
+		System.out.print((arv.add(lol).toString()));
 	}
 
 }
