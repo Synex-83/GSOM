@@ -7,6 +7,7 @@ package maps.Structures;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.ArrayRealVector;
+import org.apache.commons.math3.util.OpenIntToFieldHashMap.Iterator;
 
 /**
  * @author 		Manjusri Ishwara
@@ -95,13 +96,26 @@ public class SelfOrganizingMap {
 		
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-	
+			exportWeights(i);
 			trainSOM(input);
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
-			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
+			//System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}				
 
+	}
+	
+	
+	private void exportWeights(int iterations)
+	{
+		if(iterations == 100)
+		{
+		for(int i = 0; i < SOM.length; i++){
+			for(int j = 0; j < SOM[0].length; j++){
+				System.out.println("X= "+SOM[i][j].getX() +" Y ="+SOM[i][j].getY() + " WEIGHTS= " + SOM[i][j].getWEIGHTS().toString());
+			}
+		}
+		}
 	}
 	
 	/**
