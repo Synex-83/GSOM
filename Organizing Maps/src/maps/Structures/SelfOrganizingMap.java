@@ -99,7 +99,7 @@ public class SelfOrganizingMap {
 			trainSOM(input);
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
-			System.out.println("****************************************************************" + i);
+			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}				
 
 	}
@@ -145,7 +145,7 @@ public class SelfOrganizingMap {
 	}
 	
 	/**
-	 * @param winner as the winnder node of the input presentation
+	 * @param winner as the winner node of the input presentation
 	 * @param inputVector as the input vector recently presented to the network
 	 */
 	private void adjustNeighbouroodOfWinners(Node winner, ArrayRealVector inputVector)
@@ -165,7 +165,7 @@ public class SelfOrganizingMap {
 			effective_x_min = 0;
 		}
 		
-		if(effective_x_max > SOM_HORIZONTAL_LENGTH)
+		if(effective_x_max >= SOM_HORIZONTAL_LENGTH)
 		{
 			effective_x_max = SOM_HORIZONTAL_LENGTH - 1;
 		}
@@ -175,7 +175,7 @@ public class SelfOrganizingMap {
 			effective_y_min = 0;
 		}
 		
-		if(effective_y_max > SOM_VERTICAL_LENGTH)
+		if(effective_y_max >= SOM_VERTICAL_LENGTH)
 		{
 			effective_y_max = SOM_VERTICAL_LENGTH - 1;
 		}
@@ -185,7 +185,17 @@ public class SelfOrganizingMap {
 		{
 			for(int j = effective_x_min; j <= effective_x_max; j++)
 			{
+				try{
 				distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				}catch(Exception e)
+				{
+					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
+					System.out.println("X Min " + effective_x_min);
+					System.out.println("X Max " + effective_x_max);
+					System.out.println("Y Min " + effective_y_min);
+					System.out.println("Y Max " + effective_y_max);
+					System.out.println("Radius " + RADIUS);
+				}
 				
 				if(distance <= RADIUS)
 				{
