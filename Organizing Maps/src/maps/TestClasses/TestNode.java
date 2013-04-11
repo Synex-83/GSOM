@@ -9,7 +9,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import maps.Structures.Node;
 
 /**
- * @author 		Manjusri Ishwara
+ * @author 		Manjusri Ishwara W
  * @date   		Mar 31, 2013 - 12:08:32 AM
  * @type		TestNode
  */
