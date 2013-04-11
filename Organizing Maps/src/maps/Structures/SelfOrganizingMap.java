@@ -19,7 +19,14 @@ public class SelfOrganizingMap {
 	@SuppressWarnings("unused")
 	private int GRID_OPTION = 0;
 	private int INPUT_DIMENSION = 0;
-	
+	private int NUMER_OF_ITERATIONS = 0;
+	private int SOM_HORIZONTAL_LENGTH = 0;
+	private int SOM_VERTICAL_LENGTH = 0;
+	private double INITIAL_LEARNING_RATE = 0.0;
+	private double LEARNING_RATE = 0.0;
+	private double MAX_RADIUS = 0.0; //radius at first epoch (t = 0)
+	private double RADIUS = 0.0;
+	private double TIME_STEP = 0.0; //lambda of X(t) = t0 * exp(-t/lambda)
 	
 
 	/**
@@ -37,6 +44,7 @@ public class SelfOrganizingMap {
 			int side = (int)Math.sqrt(numberOfNodes);
 			SOM = new Node[side][side];
 			GRID_OPTION = grid;
+			MAX_RADIUS = side/2;
 			initialize();
 		}
 		else if(grid == 1)
@@ -44,6 +52,7 @@ public class SelfOrganizingMap {
 			int side = (int)numberOfNodes/depth;
 			SOM = new Node[depth][side];
 			GRID_OPTION = grid;
+			MAX_RADIUS = Math.max(depth, side)/2;
 			initialize();
 		}
 		else if(grid == 2)
@@ -51,8 +60,11 @@ public class SelfOrganizingMap {
 			int side = (int)numberOfNodes/depth;
 			SOM = new HexNode[depth][side];
 			GRID_OPTION = grid;
+			MAX_RADIUS = Math.max(depth, side)/2;
 			initialize();
 		}
+		
+		RADIUS = MAX_RADIUS;
 	}
 	
 	/**
@@ -69,13 +81,41 @@ public class SelfOrganizingMap {
 	
 	/**
 	 * @param input
+	 * @param iterations
+	 * @param learningRate
 	 */
-	public void trainSOM(String input)
+	public void trainSOM(String input, int iterations, double learningRate)
+	{
+
+		NUMER_OF_ITERATIONS = iterations;
+		INITIAL_LEARNING_RATE = learningRate;
+		LEARNING_RATE = INITIAL_LEARNING_RATE;
+		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
+		
+		
+		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
+		{
+	
+			trainSOM(input);
+			EpochRadiusDecay(i);
+			LearningRateDecay(i);
+			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
+		}				
+
+	}
+	
+	/**
+	 * @param input as the input vector
+	 * Performs a single iteration of SOM training
+	 */
+	private void trainSOM(String input)
 	{
 		String line = "";
 		double temp[] = null;
 		Node winner = null;
-		StringTokenizer first = new StringTokenizer(input, "\n");		
+		
+		
+		StringTokenizer first = new StringTokenizer(input, "\n");
 		first.nextToken();		
 		
 		while(first.hasMoreTokens())
@@ -91,13 +131,112 @@ public class SelfOrganizingMap {
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				adjustNeighbouroodOfWinners(winner, new ArrayRealVector(temp));
+				
+				
+				
+/*				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("===============================");*/
+/*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-				System.out.println("===============================");
-//				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
-//				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-//				System.out.println("*******************************");
+				System.out.println("*******************************");*/
 			}
 		}
+	}
+	
+	/**
+	 * @param winner as the winner node of the input presentation
+	 * @param inputVector as the input vector recently presented to the network
+	 */
+	private void adjustNeighbouroodOfWinners(Node winner, ArrayRealVector inputVector)
+	{
+		int radius = (int)Math.ceil(RADIUS);
+		double distance = 0.0;
+		double theta = 0.0;
+		ArrayRealVector tempWeights = null;
+		
+		int effective_x_min = winner.getX() - radius;
+		int effective_x_max = winner.getX() + radius;
+		int effective_y_min = winner.getY() - radius;
+		int effective_y_max = winner.getY() + radius;
+		
+		if(effective_x_min  < 0)
+		{
+			effective_x_min = 0;
+		}
+		
+		if(effective_x_max >= SOM_HORIZONTAL_LENGTH)
+		{
+			effective_x_max = SOM_HORIZONTAL_LENGTH - 1;
+		}
+		
+		if(effective_y_min < 0)
+		{
+			effective_y_min = 0;
+		}
+		
+		if(effective_y_max >= SOM_VERTICAL_LENGTH)
+		{
+			effective_y_max = SOM_VERTICAL_LENGTH - 1;
+		}
+		
+		
+		for(int i = effective_y_min; i <= effective_y_max; i++)
+		{
+			for(int j = effective_x_min; j <= effective_x_max; j++)
+			{
+				try{
+				distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				}catch(Exception e)
+				{
+					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
+					System.out.println("X Min " + effective_x_min);
+					System.out.println("X Max " + effective_x_max);
+					System.out.println("Y Min " + effective_y_min);
+					System.out.println("Y Max " + effective_y_max);
+					System.out.println("Radius " + RADIUS);
+				}
+				
+				if(distance <= RADIUS)
+				{
+					//weight adjust
+					theta = Math.exp(-(Math.pow(distance, 2)/(2*Math.pow(RADIUS, 2))));
+					tempWeights = SOM[i][j].getWEIGHTS().add((inputVector.subtract(SOM[i][j].getWEIGHTS())).mapMultiplyToSelf(theta*LEARNING_RATE)) ;
+					SOM[i][j].setWEIGHTS(tempWeights);					
+				}
+			}
+		}
+	}
+	
+	/**
+	 * @param BMU
+	 * @param Neighbour
+	 * @return
+	 */
+	private  double eculideanDistanceInNodes(Node BMU, Node Neighbour)	
+	{
+		ArrayRealVector BMUnit = new ArrayRealVector(new double[]{BMU.getX(),BMU.getY()});
+		ArrayRealVector neighbourUnit = new ArrayRealVector(new double[]{Neighbour.getX(),Neighbour.getY()});		
+		ArrayRealVector subValue = BMUnit.subtract(neighbourUnit);
+		
+		return Math.sqrt(subValue.getNorm());
+	}
+	
+	/**
+	 * @param currentIteration
+	 */
+	private  void LearningRateDecay(int currentIteration)
+	{
+		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/NUMER_OF_ITERATIONS);
+	}
+	
+	/**
+	 * @param currentIteration
+	 */
+	private void EpochRadiusDecay(int currentIteration)
+	{
+		RADIUS = MAX_RADIUS*Math.exp(-((double)currentIteration/TIME_STEP));
+		//System.out.println(RADIUS);
 	}
 	
 	/**
@@ -106,6 +245,7 @@ public class SelfOrganizingMap {
 	 * Similar to {@link #setAccumulatedValue(ArrayRealVector)} needs to use only one of these methods to select the
 	 * winner. Euclidean measure takes the minimum value.
 	 */
+	@SuppressWarnings("unused")
 	private Node setEuclideanAccumulatedValue(ArrayRealVector input)
 	{
 		double temp = 0.0;
@@ -146,7 +286,7 @@ public class SelfOrganizingMap {
 		double maxSeen = 0.0;
 		Node maxNode = null;
 		
-		System.out.println("Input Vector = " + input.toString());
+		//System.out.println("Input Vector = " + input.toString());
 		
 		for(int i = 0 ; i < SOM.length; i++)
 		{
@@ -164,7 +304,7 @@ public class SelfOrganizingMap {
 			}
 		}	
 		
-		printSOM();
+		//printSOM();
 		return maxNode;
 	}
 
@@ -180,6 +320,9 @@ public class SelfOrganizingMap {
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j);
 			}
 		}
+		
+		SOM_HORIZONTAL_LENGTH = SOM[0].length;
+		SOM_VERTICAL_LENGTH = SOM.length;
 	}
 	
 	/**

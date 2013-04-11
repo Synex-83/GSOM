@@ -42,6 +42,14 @@ public class Node {
 	}
 	
 	/**
+	 * @param weights to set the weight vector of a node
+	 */
+	public void setWEIGHTS(ArrayRealVector weights)
+	{
+		WEIGHTS = weights;
+	}
+	
+	/**
 	 * @return the x coordinate
 	 */
 	public int getX() {
