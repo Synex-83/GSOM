@@ -4,3 +4,6 @@ bin
 /RemoteSystemsTempFiles/*
 /Organizing Maps/.classpath
 /Organizing Maps/.classpath
+
+/Organizing Maps/src/maps/TestClasses/TestSOM.java
+/Organizing Maps/src/maps/TestClasses/TestNode.java
