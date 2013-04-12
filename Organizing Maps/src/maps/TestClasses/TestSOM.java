@@ -22,7 +22,7 @@ public class TestSOM {
 		FileProcessing fp = new FileProcessing("E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1" +
 				"\\01.Randa Rasanga - [Clean]\\12333.txt", 1);
 		//System.out.println(fp.readFile());
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,100,0,fp.getDataDimension());
+		SelfOrganizingMap SOM = new SelfOrganizingMap(100,10,0,fp.getDataDimension());
 		SOM.trainSOM(fp.readFile(), 100, 0.25);
 	}
 
