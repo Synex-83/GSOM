@@ -7,3 +7,4 @@ bin
 
 /Organizing Maps/src/maps/TestClasses/TestSOM.java
 /Organizing Maps/src/maps/TestClasses/TestNode.java
+/Organizing Maps/*.classpath
