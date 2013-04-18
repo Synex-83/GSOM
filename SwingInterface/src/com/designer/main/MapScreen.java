@@ -5,6 +5,7 @@ package com.designer.main;
 
 import java.awt.Window.Type;
 
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -12,6 +13,13 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.JButton;
+import java.awt.Component;
+import javax.swing.Box;
+import javax.swing.JTextField;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 /**
  * @author User
@@ -33,6 +41,7 @@ public class MapScreen extends JFrame {
 	private JLabel lblLearningRateValue; 
 	private JLabel lblSpreadFactorValue;
 	private JLabel lblRadiusValue;
+	private JTextField txtFileSelection;
 	
 	public MapScreen(double iterations, double learningRate, double spreadFactor, double radius, int option) {
 		
@@ -99,8 +108,26 @@ public class MapScreen extends JFrame {
 		getContentPane().add(lblRadiusValue);
 		
 		JButton btnPause = new JButton("Pause");
-		btnPause.setBounds(202, 20, 89, 23);
+		btnPause.setBounds(151, 20, 76, 23);
 		getContentPane().add(btnPause);
+		
+		JLabel lblInputFile = new JLabel("Input File");
+		lblInputFile.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblInputFile.setBounds(151, 75, 76, 14);
+		getContentPane().add(lblInputFile);
+		
+		txtFileSelection = new JTextField();
+		txtFileSelection.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+			     JFileChooser openFile = new JFileChooser();
+	             openFile.showOpenDialog(null);
+	              txtFileSelection.setText(openFile.getSelectedFile().getAbsolutePath().toString());
+			}
+		});
+		txtFileSelection.setBounds(237, 75, 259, 16);
+		getContentPane().add(txtFileSelection);
+		txtFileSelection.setColumns(10);
 		
 		initialize();
 	}
