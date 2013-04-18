@@ -97,7 +97,7 @@ public class ParameterScreen extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(validateInput())
 				{
-					(new MapScreen()).setVisible(true);
+					(new MapScreen(NUM_ITERATIONS,LEARNING_RATE,SPREAD_FACTOR,RADIUS,OPTION)).setVisible(true);
 					dispose();
 				}
 			}
@@ -131,16 +131,22 @@ public class ParameterScreen extends JFrame {
 		try
 		{
 			NUM_ITERATIONS = Integer.parseInt(txtIterations.getText().toString());
-			LEARNING_RATE = Double.parseDouble(txtIterations.getText().toString());
+			LEARNING_RATE = Double.parseDouble(txtLearningRate.getText().toString());
 			
 			if(OPTION == 2)
 			{
 				RADIUS = Double.parseDouble(txtRadius.getText().toString());
 				SPREAD_FACTOR = Double.parseDouble(txtSpreadFactor.getText().toString());
 				
-				if(SPREAD_FACTOR < 0 && SPREAD_FACTOR > 1.0)
+				if(SPREAD_FACTOR < 0 || SPREAD_FACTOR > 1.0)
 				{
 					JOptionPane.showMessageDialog(null, "Spread Factor  should be between 0.0 and 1.0 included", "Naughty", JOptionPane.ERROR_MESSAGE);
+					return false;
+				}
+				
+				if(RADIUS < 1)
+				{
+					JOptionPane.showMessageDialog(null, "Radius should be greater than 1.0", "Naughty", JOptionPane.ERROR_MESSAGE);
 					return false;
 				}
 			}
@@ -151,11 +157,13 @@ public class ParameterScreen extends JFrame {
 				return false;
 			}
 			
-			if(LEARNING_RATE < 0 && LEARNING_RATE > 1.0)
+			if(LEARNING_RATE < 0 || LEARNING_RATE > 1.0)
 			{
 				JOptionPane.showMessageDialog(null, "Learning rate should be between 0.0 and 1.0 included", "Naughty", JOptionPane.ERROR_MESSAGE);
 				return false;
 			}
+			
+
 		}
 		catch(NumberFormatException nfe)
 		{
