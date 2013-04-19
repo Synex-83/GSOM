@@ -3,35 +3,40 @@
  */
 package com.designer.main;
 
-import java.awt.Window.Type;
-
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.JButton;
-import java.awt.Component;
-import javax.swing.Box;
 import javax.swing.JTextField;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import maps.Structures.SelfOrganizingMap;
+import maps.Util.FileProcessing; 
 /**
  * @author User
  *
  */
 public class MapScreen extends JFrame {
 	
-	double NUM_ITERATIONS = 0.0;
-	double ETA = 0.0;
-	double SPREAD_FACTOR = 0.0;
-	int LEARNING_OPTION = 0;
-	double RADIUS = 0.0;
+	private double NUM_ITERATIONS = 0.0;
+	private double ETA = 0.0;
+	private double SPREAD_FACTOR = 0.0;
+	private int LEARNING_OPTION = 0;
+	private double RADIUS = 0.0;
+	private int WIDTH = 0;
+	private int HEIGHT = 0;
+	private int MAP_OPTION = 0;
+	private SelfOrganizingMap SOM = null;
+	private FileProcessing FILE_PROCESSING = null;
+	private int NUM_NODES = 0;
+	
+	
+	private String FILE_PATH;
 	private JPanel pnlMap;
 	private JLabel lblIterations;
 	private JLabel lblLearningRate;
@@ -42,14 +47,29 @@ public class MapScreen extends JFrame {
 	private JLabel lblSpreadFactorValue;
 	private JLabel lblRadiusValue;
 	private JTextField txtFileSelection;
+	private JButton btnLoadParameters;
+	private JButton btnTrain;
+
 	
-	public MapScreen(double iterations, double learningRate, double spreadFactor, double radius, int option) {
+	public MapScreen(double iterations, double learningRate, double spreadFactor, double radius, int option, int width, int height, int mapOption) {
 		
 		NUM_ITERATIONS = iterations;
 		ETA = learningRate;
 		SPREAD_FACTOR = spreadFactor;
 		RADIUS = radius;
-		LEARNING_OPTION = option;
+		LEARNING_OPTION = option; //SOM, GSOM, OTHER etc...
+		WIDTH = width;
+		HEIGHT = height;
+		MAP_OPTION = mapOption;
+		
+		if(HEIGHT == 0)
+		{
+			NUM_NODES = WIDTH*WIDTH;
+		}
+		else
+		{
+			NUM_NODES = WIDTH*HEIGHT;
+		}
 		
 		setType(Type.UTILITY);
 		setResizable(false);
@@ -86,48 +106,79 @@ public class MapScreen extends JFrame {
 		lblIterationValue = new JLabel("");
 		lblIterationValue.setForeground(Color.RED);
 		lblIterationValue.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblIterationValue.setBounds(102, 24, 84, 14);
+		lblIterationValue.setBounds(102, 24, 68, 14);
 		getContentPane().add(lblIterationValue);
 		
 		lblLearningRateValue = new JLabel("");
 		lblLearningRateValue.setForeground(new Color(255, 153, 51));
 		lblLearningRateValue.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblLearningRateValue.setBounds(102, 50, 84, 14);
+		lblLearningRateValue.setBounds(102, 50, 68, 14);
 		getContentPane().add(lblLearningRateValue);
 		
 		lblSpreadFactorValue = new JLabel("");
 		lblSpreadFactorValue.setForeground(new Color(51, 204, 51));
 		lblSpreadFactorValue.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblSpreadFactorValue.setBounds(102, 75, 84, 14);
+		lblSpreadFactorValue.setBounds(102, 75, 68, 14);
 		getContentPane().add(lblSpreadFactorValue);
 		
 		lblRadiusValue = new JLabel("");
 		lblRadiusValue.setForeground(new Color(153, 51, 204));
 		lblRadiusValue.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblRadiusValue.setBounds(102, 101, 84, 14);
+		lblRadiusValue.setBounds(102, 101, 68, 14);
 		getContentPane().add(lblRadiusValue);
 		
-		JButton btnPause = new JButton("Pause");
-		btnPause.setBounds(151, 20, 76, 23);
-		getContentPane().add(btnPause);
+		JButton btnPlay = new JButton("Play");
+		btnPlay.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnPlay.setBounds(256, 98, 62, 23);
+		getContentPane().add(btnPlay);
 		
 		JLabel lblInputFile = new JLabel("Input File");
 		lblInputFile.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblInputFile.setBounds(151, 75, 76, 14);
+		lblInputFile.setBounds(192, 23, 76, 14);
 		getContentPane().add(lblInputFile);
 		
 		txtFileSelection = new JTextField();
+		txtFileSelection.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		txtFileSelection.setEditable(false);
 		txtFileSelection.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 			     JFileChooser openFile = new JFileChooser();
 	             openFile.showOpenDialog(null);
-	              txtFileSelection.setText(openFile.getSelectedFile().getAbsolutePath().toString());
+	             FILE_PATH = openFile.getSelectedFile().getAbsolutePath().toString();
+				 txtFileSelection.setText(openFile.getSelectedFile().getName().toString());
 			}
 		});
-		txtFileSelection.setBounds(237, 75, 259, 16);
+		txtFileSelection.setBounds(278, 23, 180, 16);
 		getContentPane().add(txtFileSelection);
 		txtFileSelection.setColumns(10);
+		
+		JButton btnPause = new JButton("Pause");
+		btnPause.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnPause.setBounds(192, 98, 63, 23);
+		getContentPane().add(btnPause);
+		
+		btnLoadParameters = new JButton("Load Parameters");
+		btnLoadParameters.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnLoadParameters.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0)
+			{
+				FILE_PROCESSING = new FileProcessing(FILE_PATH,1);
+				SOM = new SelfOrganizingMap(NUM_NODES,HEIGHT,MAP_OPTION,FILE_PROCESSING.getDataDimension());				
+			}
+		});
+		btnLoadParameters.setBounds(192, 46, 126, 23);
+		getContentPane().add(btnLoadParameters);
+		
+		btnTrain = new JButton("Train");
+		btnTrain.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnTrain.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SOM.trainSOM(FILE_PROCESSING.readFile(), (int)NUM_ITERATIONS, ETA);
+			}
+		});
+		btnTrain.setBounds(192, 72, 62, 23);
+		getContentPane().add(btnTrain);
 		
 		initialize();
 	}
