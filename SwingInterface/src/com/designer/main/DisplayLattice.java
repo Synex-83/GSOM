@@ -1,19 +1,29 @@
-package com.test.image;
+/**
+ * 
+ */
+package com.designer.main;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.geom.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-public class ImageEditor extends JPanel {
-	
+import javax.swing.JPanel;
+
+/**
+ * @author User
+ *
+ */
+public class DisplayLattice extends JPanel {
+
 	private BufferedImage img = new BufferedImage(100, 100, 1);
 	Font arialFont = new Font("Arial", Font.BOLD, 12);
 
 	boolean ready = false;
 	
 	/** Creates a new instance of LatticeRenderer */
-	public ImageEditor() {
+	public DisplayLattice() {
 		setImage(getImage());
 		render(100);
 	}
@@ -69,13 +79,5 @@ public class ImageEditor extends JPanel {
 		img = bimg;
 	}
 	
-
-
 	
-	
-    public static void main( String [] args ) {
-         JFrame frame = new JFrame();
-         frame.add(new ImageEditor());
-        frame.setVisible( true );
-    }
 }

@@ -11,17 +11,13 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
-import java.awt.Window.Type;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Component;
-import javax.swing.Box;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+
 import javax.swing.JSeparator;
 import javax.swing.JRadioButton;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ChangeEvent;
+
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 

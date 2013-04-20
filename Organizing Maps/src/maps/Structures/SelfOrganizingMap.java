@@ -4,10 +4,10 @@
  */
 package maps.Structures;
 
+import java.awt.image.BufferedImage;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.ArrayRealVector;
-import org.apache.commons.math3.util.OpenIntToFieldHashMap.Iterator;
 
 /**
  * @author 		Manjusri Ishwara
@@ -96,7 +96,7 @@ public class SelfOrganizingMap {
 		
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			exportWeights(i);
+			exportImageNorm(i);
 			trainSOM(input);
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
@@ -111,11 +111,41 @@ public class SelfOrganizingMap {
 		if(iterations == 100)
 		{
 		for(int i = 0; i < SOM.length; i++){
-			for(int j = 0; j < SOM[0].length; j++){
+			for(int j = 0; j < SOM[0].length; j++){				
 				System.out.println("X= "+SOM[i][j].getX() +" Y ="+SOM[i][j].getY() + " WEIGHTS= " + SOM[i][j].getWEIGHTS().toString());
 			}
 		}
 		}
+	}
+	
+	private BufferedImage exportImageNorm(int iterations)
+	{
+		BufferedImage colorNodes = new BufferedImage(SOM[0].length, SOM.length, 1);
+		double[][] normL2values = new double[SOM[0].length][SOM.length];
+		double minL2 = 10.0;
+		double maxL2 = 0.0;
+		double temp = 0.0;	
+		for(int i = 0; i < SOM.length; i++){
+			for(int j = 0; j < SOM[0].length; j++){			    
+				 temp  = SOM[i][j].getWEIGHTS().getNorm();
+				 if(temp > maxL2)
+				 {
+					 maxL2 = temp;
+				 }			
+				 if(temp < minL2)
+				 {
+					 minL2 = temp;
+				 }
+			}			
+		}
+		
+			System.out.println(maxL2 + "\t" + minL2);		
+/*		for(int i = 0; i < normL2values.length ; i++){
+			for(int j = 0; j < normL2values[0].length; j++){
+				
+			}
+		}*/
+		return null;
 	}
 	
 	/**
