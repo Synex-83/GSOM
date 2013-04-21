@@ -97,7 +97,7 @@ public class SelfOrganizingMap {
 		
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			;
+			exportWeights(i);
 			//(new MapScreen().updateMap(exportImageNorm(i)));
 			trainSOM(input);
 			EpochRadiusDecay(i);
@@ -110,14 +110,14 @@ public class SelfOrganizingMap {
 	
 	private void exportWeights(int iterations)
 	{
-		if(iterations == 100)
-		{
+		/*if(iterations == 100)
+		{*/
 		for(int i = 0; i < SOM.length; i++){
 			for(int j = 0; j < SOM[0].length; j++){				
 				System.out.println("X= "+SOM[i][j].getX() +" Y ="+SOM[i][j].getY() + " WEIGHTS= " + SOM[i][j].getWEIGHTS().toString());
 			}
 		}
-		}
+		//}
 	}
 	
 	private BufferedImage exportImageNorm(int iterations)
