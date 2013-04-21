@@ -4,6 +4,7 @@
  */
 package maps.Structures;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.StringTokenizer;
 
@@ -96,7 +97,8 @@ public class SelfOrganizingMap {
 		
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			exportImageNorm(i);
+			;
+			//(new MapScreen().updateMap(exportImageNorm(i)));
 			trainSOM(input);
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
@@ -125,6 +127,7 @@ public class SelfOrganizingMap {
 		double minL2 = 10.0;
 		double maxL2 = 0.0;
 		double temp = 0.0;	
+		double scaledNorm = 0.0;
 		for(int i = 0; i < SOM.length; i++){
 			for(int j = 0; j < SOM[0].length; j++){			    
 				 temp  = SOM[i][j].getWEIGHTS().getNorm();
@@ -139,13 +142,14 @@ public class SelfOrganizingMap {
 			}			
 		}
 		
-			System.out.println(maxL2 + "\t" + minL2);		
-/*		for(int i = 0; i < normL2values.length ; i++){
+		System.out.println(maxL2 + "\t" + minL2);		
+		for(int i = 0; i < normL2values.length ; i++){
 			for(int j = 0; j < normL2values[0].length; j++){
-				
+				scaledNorm  = (normL2values[i][j] - minL2)/(maxL2 - minL2);
+				colorNodes.setRGB(i, j, (new Color((float)scaledNorm,(float)scaledNorm,(float)scaledNorm)).getRGB());
 			}
-		}*/
-		return null;
+		}
+		return colorNodes;
 	}
 	
 	/**

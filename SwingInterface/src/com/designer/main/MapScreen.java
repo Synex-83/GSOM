@@ -15,6 +15,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
+
 import maps.Structures.SelfOrganizingMap;
 import maps.Util.FileProcessing; 
 /**
@@ -37,7 +39,7 @@ public class MapScreen extends JFrame {
 	
 	
 	private String FILE_PATH;
-	private JPanel pnlMap;
+	private DisplayLattice pnlMap;
 	private JLabel lblIterations;
 	private JLabel lblLearningRate;
 	private JLabel lblSpreadfactor;
@@ -79,7 +81,7 @@ public class MapScreen extends JFrame {
 		setLocation(150,150);
 		getContentPane().setLayout(null);
 		
-		pnlMap = new JPanel();
+		pnlMap = new DisplayLattice();
 		pnlMap.setBounds(6, 130, 582, 440);
 		getContentPane().add(pnlMap);
 		
@@ -189,5 +191,10 @@ public class MapScreen extends JFrame {
 		lblLearningRateValue.setText(""+ETA);
 		lblSpreadFactorValue.setText(""+SPREAD_FACTOR);
 		lblRadiusValue.setText(""+RADIUS);
+	}
+	
+	public void updateMap(BufferedImage image)
+	{
+		pnlMap = new DisplayLattice(image);
 	}
 }

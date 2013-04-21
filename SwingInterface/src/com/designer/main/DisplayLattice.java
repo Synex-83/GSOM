@@ -17,67 +17,51 @@ import javax.swing.JPanel;
  */
 public class DisplayLattice extends JPanel {
 
-	private BufferedImage img = new BufferedImage(100, 100, 1);
-	Font arialFont = new Font("Arial", Font.BOLD, 12);
-
-	boolean ready = false;
+	private BufferedImage IMAGE = null;
+	private BufferedImage DISPLAY_IMAGE = null;
 	
-	/** Creates a new instance of LatticeRenderer */
-	public DisplayLattice() {
-		setImage(getImage());
-		render(100);
+	public DisplayLattice()
+	{
+		IMAGE = new BufferedImage(100, 100, 1);
+		render();
+	}
+	
+	public DisplayLattice(BufferedImage map) {
+		IMAGE = map;
+		render();
 	}
 
 	public void paint(Graphics g) {
-		if (img == null)
+		if (IMAGE == null)
 			super.paint(g);
 		else
-			g.drawImage(img, 0, 0, this);
+			g.drawImage(IMAGE, 0, 0, this);
 	}
 	
+	public void render() {
 
-	
-	// Yeah, it's ugly.  But it works, and I didn't feel like commenting it. :)
-	// All it does it slaps the given lattice's weight values up in a 2x2
-	// grid as an image
-	public void render( int iteration) {
-
-	float cellWidth = 10;
-	float cellHeight = 10;
+	int cellWidth = 5;
+	int cellHeight = 5;
 		
-		int imgW = img.getWidth();
-		int imgH = img.getHeight();
-		float r, g, b;
-		Graphics2D g2 = img.createGraphics();
+		int imgW = IMAGE.getWidth();
+		int imgH = IMAGE.getHeight();
+		DISPLAY_IMAGE = new BufferedImage(imgW*cellWidth, imgH*cellHeight, 1);
+
+		
+		Graphics2D g2 = IMAGE.createGraphics();
 		g2.setBackground(Color.black);
-		g2.clearRect(0,0,imgW,imgH);
-		for (int x=0; x<100; x++) {
-			for (int y=0; y<100; y++) {
-				r = (float)Math.random();
-				g = (float)Math.random();
-				b = (float)Math.random();
-				g2.setColor(new Color(r,g,b));
+		g2.clearRect(0,0,DISPLAY_IMAGE.getWidth(),DISPLAY_IMAGE.getHeight());
+		
+		for (int x=0; x<imgW; x++) {
+			for (int y=0; y<imgH; y++) {
+				g2.setColor(new Color(IMAGE.getRGB(x, y)));
 				g2.fillRect((int)(x*cellWidth), (int)(y*cellHeight),
 							(int)cellWidth, (int)cellHeight);
 			}
 		}
 		g2.setColor(Color.black);
-		g2.setFont(arialFont);
-	//	g2.drawString("Iteration: " + String.valueOf(iteration), 5, 15);
 		g2.dispose();
 		repaint();
-	}
-	
-	public BufferedImage getImage() {
-		if (img == null)
-			img = (BufferedImage)createImage(100, 100);
-		
-		return img;
-	}
-	
-	public void setImage(BufferedImage bimg) {
-		img = bimg;
-	}
-	
-	
+		revalidate();
+	}	
 }
