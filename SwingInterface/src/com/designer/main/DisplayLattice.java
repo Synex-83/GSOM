@@ -62,6 +62,11 @@ public class DisplayLattice extends JPanel {
 		g2.setColor(Color.black);
 		g2.dispose();
 		repaint();
-		revalidate();
+		//revalidate();
 	}	
+	
+	public void setImage(BufferedImage image)
+	{
+		IMAGE = image;
+	}
 }
