@@ -2,11 +2,14 @@ package com.test.image;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.*;
 import java.awt.image.BufferedImage;
 
+@SuppressWarnings("serial")
 public class ImageEditor extends JPanel {
 	
+	/**
+	 * 
+	 */
 	private BufferedImage img = new BufferedImage(100, 100, 1);
 	Font arialFont = new Font("Arial", Font.BOLD, 12);
 
