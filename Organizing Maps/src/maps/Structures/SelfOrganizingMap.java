@@ -100,6 +100,7 @@ public class SelfOrganizingMap {
 			//exportWeights(i);
 			//
 			//(new MapScreen().updateMap(exportImageNorm(i)));
+			new DisplayLattice(exportImageNorm(i));
 			trainSOM(input);
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
@@ -132,6 +133,7 @@ public class SelfOrganizingMap {
 		for(int i = 0; i < SOM.length; i++){
 			for(int j = 0; j < SOM[0].length; j++){			    
 				 temp  = SOM[i][j].getWEIGHTS().getNorm();
+				 normL2values[i][j] = temp;
 				 if(temp > maxL2)
 				 {
 					 maxL2 = temp;
@@ -147,6 +149,7 @@ public class SelfOrganizingMap {
 		for(int i = 0; i < normL2values.length ; i++){
 			for(int j = 0; j < normL2values[0].length; j++){
 				scaledNorm  = (normL2values[i][j] - minL2)/(maxL2 - minL2);
+				//System.out.println(scaledNorm);
 				colorNodes.setRGB(i, j, (new Color((float)scaledNorm,(float)scaledNorm,(float)scaledNorm)).getRGB());
 			}
 		}

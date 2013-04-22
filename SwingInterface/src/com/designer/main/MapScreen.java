@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 
+import maps.Structures.DisplayLattice;
 import maps.Structures.SelfOrganizingMap;
 import maps.Util.FileProcessing; 
 /**

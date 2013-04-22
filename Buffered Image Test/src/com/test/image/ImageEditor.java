@@ -17,11 +17,8 @@ public class ImageEditor extends JPanel {
 	
 	/** Creates a new instance of LatticeRenderer */
 	public ImageEditor() {
-		//while(true)
-		//{
 		setImage(getImage());
 		render(100);
-		//}
 	}
 
 	public void paint(Graphics g) {
@@ -38,8 +35,8 @@ public class ImageEditor extends JPanel {
 	// grid as an image
 	public void render( int iteration) {
 
-	float cellWidth = 1;
-	float cellHeight = 1;
+	float cellWidth = 5;
+	float cellHeight = 5;
 		
 		int imgW = img.getWidth();
 		int imgH = img.getHeight();
@@ -59,7 +56,6 @@ public class ImageEditor extends JPanel {
 		}
 		g2.setColor(Color.black);
 		g2.setFont(arialFont);
-	//	g2.drawString("Iteration: " + String.valueOf(iteration), 5, 15);
 		g2.dispose();
 		repaint();
 	}

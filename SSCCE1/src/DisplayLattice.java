@@ -1,20 +1,13 @@
-/**
- * 
- */
-package com.designer.main;
+
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-/**
- * @author User
- *
- */
+
 public class DisplayLattice extends JPanel {
 
 	private BufferedImage IMAGE = null;
@@ -22,7 +15,7 @@ public class DisplayLattice extends JPanel {
 	
 	public DisplayLattice()
 	{
-		IMAGE = new BufferedImage(100, 100, 1);
+		IMAGE = new BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB);
 		render();
 	}
 	
@@ -31,11 +24,9 @@ public class DisplayLattice extends JPanel {
 		render();
 	}
 
-	public void paint(Graphics g) {
-		if (IMAGE == null)
-			super.paint(g);
-		else
-			g.drawImage(IMAGE, 0, 0, this);
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.drawImage(IMAGE, 0, 0, this);
 	}
 	
 	public void render() {
@@ -49,7 +40,7 @@ public class DisplayLattice extends JPanel {
 
 		
 		Graphics2D g2 = IMAGE.createGraphics();
-		g2.setBackground(Color.black);
+		g2.setBackground(Color.red);
 		g2.clearRect(0,0,DISPLAY_IMAGE.getWidth(),DISPLAY_IMAGE.getHeight());
 		
 		for (int x=0; x<imgW; x++) {
@@ -59,14 +50,17 @@ public class DisplayLattice extends JPanel {
 							(int)cellWidth, (int)cellHeight);
 			}
 		}
-		g2.setColor(Color.black);
+		//g2.setColor(Color.black);
 		g2.dispose();
 		repaint();
 		//revalidate();
+		System.out.println("XX");
 	}	
 	
 	public void setImage(BufferedImage image)
 	{
 		IMAGE = image;
+		render();
+		//repaint();
 	}
 }
