@@ -79,7 +79,6 @@ public class ImageEditor extends JPanel {
     public static void main( String [] args ) {
          JFrame frame = new JFrame();
          frame.add(new ImageEditor());
-
          frame.setVisible( true );
 
     }
