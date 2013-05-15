@@ -20,7 +20,7 @@ public class Test {
 		String filename = "";
 		Maze mz = new Maze();
 		mz.createAllJunctions();
-		mz.createGraph("E:\\workspace\\DataCleanValidation\\src\\validation\\test\\graph.txt");
+		mz.createGraph("E:\\workspace\\GSOM - SVN\\DataCleanValidation\\src\\validation\\test\\graph.txt");
 		mz.createRelationships();
 		
 	    for (File file : files) {
@@ -59,7 +59,7 @@ public class Test {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\PhD\\My Data\\13.Erandi").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\01.Randa Rasanga").listFiles();
 	    showFiles(files,1);
 	}
 

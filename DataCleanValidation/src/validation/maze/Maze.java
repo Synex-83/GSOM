@@ -49,7 +49,7 @@ public class Maze {
 	public Maze()
 	{
 		createAllJunctions();
-		createGraph("E:\\workspace\\DataCleanValidation\\src\\validation\\test\\graph.txt");
+		createGraph("E:\\workspace\\GSOM - SVN\\DataCleanValidation\\src\\validation\\test\\graph.txt");
 		createRelationships();
 	}
 	
