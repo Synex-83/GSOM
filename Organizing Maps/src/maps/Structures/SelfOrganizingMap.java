@@ -5,6 +5,8 @@
 package maps.Structures;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.StringTokenizer;
 
@@ -15,13 +17,15 @@ import org.apache.commons.math3.linear.ArrayRealVector;
  * @date   		Mar 31, 2013 - 12:34:39 AM
  * @type		SelfOrganizingMap
  */
-public class SelfOrganizingMap {
+public class SelfOrganizingMap implements ActionListener {
 	
 	private Node[][] SOM = null;
+	private double[][] NORM_MAP = null; //holds the L2 norm of each vector in the SOM[][].
 	@SuppressWarnings("unused")
 	private int GRID_OPTION = 0;
 	private int INPUT_DIMENSION = 0;
 	private int NUMER_OF_ITERATIONS = 0;
+	private int CURRENT_ITERATION=0;
 	private int SOM_HORIZONTAL_LENGTH = 0;
 	private int SOM_VERTICAL_LENGTH = 0;
 	private double INITIAL_LEARNING_RATE = 0.0;
@@ -29,6 +33,8 @@ public class SelfOrganizingMap {
 	private double MAX_RADIUS = 0.0; //radius at first epoch (t = 0)
 	private double RADIUS = 0.0;
 	private double TIME_STEP = 0.0; //lambda of X(t) = t0 * exp(-t/lambda)
+	private String INPUT_SAMPLES = null;
+	private DisplayLattice DISPLAY_SCREEN = null;
 	
 
 	/**
@@ -37,7 +43,7 @@ public class SelfOrganizingMap {
 	 * @param grid as the type of grid (0 = square, 1 = rectangle, 2 = hexagonal)
 	 * @param inputDimension the dimension of the input data vector
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int depth, int grid, int inputDimensison)
+	public SelfOrganizingMap(int numberOfNodes, int depth, int grid, int inputDimensison, DisplayLattice screen)
 	{
 		INPUT_DIMENSION = inputDimensison;
 		
@@ -45,8 +51,10 @@ public class SelfOrganizingMap {
 		{
 			int side = (int)Math.sqrt(numberOfNodes);
 			SOM = new Node[side][side];
+			NORM_MAP = new double[side][side];
 			GRID_OPTION = grid;
 			MAX_RADIUS = side/2;
+			DISPLAY_SCREEN = screen;
 			initialize();
 		}
 		else if(grid == 1)
@@ -86,29 +94,37 @@ public class SelfOrganizingMap {
 	 * @param iterations
 	 * @param learningRate
 	 */
-	public void trainSOM(String input, int iterations, double learningRate)
+	public void initTrainSOM(String input, int iterations, double learningRate)
 	{
 
 		NUMER_OF_ITERATIONS = iterations;
 		INITIAL_LEARNING_RATE = learningRate;
 		LEARNING_RATE = INITIAL_LEARNING_RATE;
 		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
-		
-		
-		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
+		INPUT_SAMPLES = input;
+		//DISPLAY_SCREEN.render();
+	/*	for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
 			//exportWeights(i);
 			//
 			//(new MapScreen().updateMap(exportImageNorm(i)));
-			new DisplayLattice(exportImageNorm(i));
-			trainSOM(input);
+			//new DisplayLattice(exportImageNorm(i));
+			trainSOM(input); // the image should be ready at this point.
 			EpochRadiusDecay(i);
 			LearningRateDecay(i);
 			//System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
-		}				
+		}			*/	
 
 	}
 	
+	private void singleCompleteRun()
+	{
+		DISPLAY_SCREEN.render();
+		//trainSOM(INPUT_SAMPLES); 		
+		EpochRadiusDecay(CURRENT_ITERATION);
+		LearningRateDecay(CURRENT_ITERATION);
+		System.out.println(CURRENT_ITERATION);
+	}
 	
 	private void exportWeights(int iterations)
 	{
@@ -122,7 +138,7 @@ public class SelfOrganizingMap {
 		}
 	}
 	
-	private BufferedImage exportImageNorm(int iterations)
+	private BufferedImage exportImageNorm()
 	{
 		BufferedImage colorNodes = new BufferedImage(SOM[0].length, SOM.length, 1);
 		double[][] normL2values = new double[SOM[0].length][SOM.length];
@@ -142,7 +158,7 @@ public class SelfOrganizingMap {
 				 {
 					 minL2 = temp;
 				 }
-			}			
+			}								
 		}
 		
 		System.out.println(maxL2 + "\t" + minL2);		
@@ -184,9 +200,7 @@ public class SelfOrganizingMap {
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
 				adjustNeighbouroodOfWinners(winner, new ArrayRealVector(temp));
-				
-				
-				
+							
 /*				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("===============================");*/
 /*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
@@ -329,7 +343,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param input as the input vector presented to the network
 	 * @return the winner node of the iteration
-	 * Similar to {@link #setEuclideanAccumulatedValue(ArrayRealVector)} need to use only one of these methods to selec the
+	 * Similar to {@link #setEuclideanAccumulatedValue(ArrayRealVector)} need to use only one of these methods to select the
 	 * winner. The multiplication based method takes the maximum value.
 	 */ 
 	private Node setAccumulatedValue(ArrayRealVector input) {
@@ -368,7 +382,7 @@ public class SelfOrganizingMap {
 		for(int i = 0 ; i < SOM.length; i++)
 		{
 			for(int j=0; j < SOM[0].length; j++)
-			{
+			{ 
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j);
 			}
 		}
@@ -394,6 +408,31 @@ public class SelfOrganizingMap {
 		}
 		
 		//System.out.println("===============================");
+	}
+	
+	private void getNormMap()
+	{
+		for(int i = 0; i < SOM.length; i++)
+		{
+			for(int j = 0; j<SOM[0].length; j++)
+			{
+				NORM_MAP[i][j] =  SOM[i][j].getWEIGHTS().getNorm();
+			}
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(CURRENT_ITERATION <= NUMER_OF_ITERATIONS)
+		{
+			singleCompleteRun();	
+			CURRENT_ITERATION++;
+		}
+		
 	}
 	
 }

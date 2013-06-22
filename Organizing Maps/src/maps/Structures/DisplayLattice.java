@@ -4,7 +4,6 @@
 package maps.Structures;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -17,44 +16,46 @@ import javax.swing.JPanel;
  */
 public class DisplayLattice extends JPanel {
 
-	private BufferedImage IMAGE = null;
-	private BufferedImage DISPLAY_IMAGE = null;
+	private BufferedImage IMAGE = IMAGE = new BufferedImage(400, 400, 1);;
 	
 	public DisplayLattice()
 	{
-		IMAGE = new BufferedImage(100, 100, 1);
-		render();
+		
+		//repaint();
 	}
 	
-	public DisplayLattice(BufferedImage map) {
-		IMAGE = map;
-		render();
-	}
 
-	public void paint(Graphics g) {
+	public void paintComponent(Graphics g) {	
 		if (IMAGE == null)
-			super.paint(g);
+			super.paintComponents(g);
 		else
 			g.drawImage(IMAGE, 0, 0, this);
+	}
+	
+	public BufferedImage getImage()
+	{
+		if(IMAGE == null)
+				IMAGE = (BufferedImage)createImage(getWidth(), getHeight());
+		
+		return IMAGE;
 	}
 	
 	public void render() {
 
 	int cellWidth = 50;
-	int cellHeight = 5;
+	int cellHeight = 50;
 		
 		int imgW = IMAGE.getWidth();
 		int imgH = IMAGE.getHeight();
-		DISPLAY_IMAGE = new BufferedImage(imgW*cellWidth, imgH*cellHeight, 1);
-
 		
 		Graphics2D g2 = IMAGE.createGraphics();
 		g2.setBackground(Color.black);
-		g2.clearRect(0,0,DISPLAY_IMAGE.getWidth(),DISPLAY_IMAGE.getHeight());
+		g2.clearRect(0,0,IMAGE.getWidth(),IMAGE.getHeight());
 		
 		for (int x=0; x<imgW; x++) {
 			for (int y=0; y<imgH; y++) {
-				g2.setColor(new Color(IMAGE.getRGB(x, y)));
+				//g2.setColor(new Color(IMAGE.getRGB(x, y)));
+				g2.setColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
 				g2.fillRect((int)(x*cellWidth), (int)(y*cellHeight),
 							(int)cellWidth, (int)cellHeight);
 			}
@@ -62,11 +63,11 @@ public class DisplayLattice extends JPanel {
 		g2.setColor(Color.black);
 		g2.dispose();
 		repaint();
-		revalidate();
 	}	
 	
 	public void setImage(BufferedImage image)
 	{
 		IMAGE = image;
+		repaint();
 	}
 }

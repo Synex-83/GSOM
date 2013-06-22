@@ -7,6 +7,8 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.Timer;
+
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -37,10 +39,11 @@ public class MapScreen extends JFrame {
 	private SelfOrganizingMap SOM = null;
 	private FileProcessing FILE_PROCESSING = null;
 	private int NUM_NODES = 0;
+	private Timer REFRESH_TIMER = null;
 	
 	
 	private String FILE_PATH;
-	private DisplayLattice pnlMap;
+	private JPanel pnlMap;
 	private JLabel lblIterations;
 	private JLabel lblLearningRate;
 	private JLabel lblSpreadfactor;
@@ -52,6 +55,7 @@ public class MapScreen extends JFrame {
 	private JTextField txtFileSelection;
 	private JButton btnLoadParameters;
 	private JButton btnTrain;
+	private DisplayLattice displayScreen;
 
 	
 	public MapScreen(double iterations, double learningRate, double spreadFactor, double radius, int option, int width, int height, int mapOption) {
@@ -78,12 +82,13 @@ public class MapScreen extends JFrame {
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Map");
-		setSize(600, 600);
+		setSize(650, 800);
 		setLocation(150,150);
 		getContentPane().setLayout(null);
 		
-		pnlMap = new DisplayLattice();
-		pnlMap.setBounds(6, 130, 582, 440);
+		displayScreen = new DisplayLattice();
+		pnlMap = displayScreen;
+		pnlMap.setBounds(6, 130, 600, 600);
 		getContentPane().add(pnlMap);
 		
 		lblIterations = new JLabel("Iterations");
@@ -149,7 +154,7 @@ public class MapScreen extends JFrame {
 			     JFileChooser openFile = new JFileChooser();
 	             openFile.showOpenDialog(null);
 	             FILE_PATH = openFile.getSelectedFile().getAbsolutePath().toString();
-				 txtFileSelection.setText(openFile.getSelectedFile().getName().toString());
+				 txtFileSelection.setText(openFile.getSelectedFile().getName().toString());				
 			}
 		});
 		txtFileSelection.setBounds(278, 23, 180, 16);
@@ -167,7 +172,7 @@ public class MapScreen extends JFrame {
 			public void actionPerformed(ActionEvent arg0)
 			{
 				FILE_PROCESSING = new FileProcessing(FILE_PATH,1);
-				SOM = new SelfOrganizingMap(NUM_NODES,HEIGHT,MAP_OPTION,FILE_PROCESSING.getDataDimension());				
+				SOM = new SelfOrganizingMap(NUM_NODES,HEIGHT,MAP_OPTION,FILE_PROCESSING.getDataDimension(),displayScreen);				
 			}
 		});
 		btnLoadParameters.setBounds(192, 46, 126, 23);
@@ -177,13 +182,20 @@ public class MapScreen extends JFrame {
 		btnTrain.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnTrain.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				SOM.trainSOM(FILE_PROCESSING.readFile(), (int)NUM_ITERATIONS, ETA);
+				initialObjectSetUp();
 			}
 		});
 		btnTrain.setBounds(192, 72, 62, 23);
 		getContentPane().add(btnTrain);
 		
 		initialize();
+	}
+	
+	private void initialObjectSetUp()
+	{
+		SOM.initTrainSOM(FILE_PROCESSING.readFile(), (int)NUM_ITERATIONS, ETA);
+		REFRESH_TIMER = new Timer(100, SOM);
+		REFRESH_TIMER.start();
 	}
 	
 	private void initialize()
@@ -194,8 +206,4 @@ public class MapScreen extends JFrame {
 		lblRadiusValue.setText(""+RADIUS);
 	}
 	
-	public void updateMap(BufferedImage image)
-	{
-		pnlMap = new DisplayLattice(image);
-	}
 }
