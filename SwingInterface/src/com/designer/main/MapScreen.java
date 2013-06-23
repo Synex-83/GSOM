@@ -7,6 +7,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
 import java.awt.Font;
@@ -17,8 +18,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
-
 import maps.Structures.DisplayLattice;
 import maps.Structures.SelfOrganizingMap;
 import maps.Util.FileProcessing; 
@@ -42,7 +41,7 @@ public class MapScreen extends JFrame {
 	private Timer REFRESH_TIMER = null;
 	
 	
-	private String FILE_PATH;
+	private String FILE_PATH ="E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1\\01.Randa Rasanga - [Clean]\\12333.txt";;
 	private JPanel pnlMap;
 	private JLabel lblIterations;
 	private JLabel lblLearningRate;
@@ -154,6 +153,7 @@ public class MapScreen extends JFrame {
 			     JFileChooser openFile = new JFileChooser();
 	             openFile.showOpenDialog(null);
 	             FILE_PATH = openFile.getSelectedFile().getAbsolutePath().toString();
+	             FILE_PATH = "E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1\\01.Randa Rasanga - [Clean]\\12333.txt";
 				 txtFileSelection.setText(openFile.getSelectedFile().getName().toString());				
 			}
 		});
@@ -204,6 +204,18 @@ public class MapScreen extends JFrame {
 		lblLearningRateValue.setText(""+ETA);
 		lblSpreadFactorValue.setText(""+SPREAD_FACTOR);
 		lblRadiusValue.setText(""+RADIUS);
+	}
+	
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				MapScreen frame = new MapScreen(100,0.25,0.0,0.0,1,100,0,0);
+				frame.setVisible(true);
+			}
+		});
+
 	}
 	
 }
