@@ -120,7 +120,7 @@ public class SelfOrganizingMap implements ActionListener {
 	private void singleCompleteRun()
 	{
 		DISPLAY_SCREEN.render();
-		//trainSOM(INPUT_SAMPLES); 		
+		trainSOM(INPUT_SAMPLES); 		
 		EpochRadiusDecay(CURRENT_ITERATION);
 		LearningRateDecay(CURRENT_ITERATION);
 		System.out.println(CURRENT_ITERATION);

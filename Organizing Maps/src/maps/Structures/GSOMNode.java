@@ -12,7 +12,7 @@ package maps.Structures;
 public class GSOMNode extends Node {
 
 	private double TOTAL_ERROR = 0.0;
-	private boolean IS_BOUNDRY = false;
+	private boolean IS_BOUNDRY = true; //every node created in the GSOM is initially a boundry node. So set to true as the default value.
 	private GSOMNode LEFT,RIGHT,UP,DOWN;
 	
 

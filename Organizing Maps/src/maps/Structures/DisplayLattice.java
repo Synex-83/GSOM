@@ -15,10 +15,11 @@ public class DisplayLattice extends JPanel  {
 	private BufferedImage img = new BufferedImage(500, 500, 1);	
 		
 	public void paintComponent(Graphics g) {
-		if (img == null)
-			super.paintComponents(g);
-		else
+		super.paintComponent(g);
+		if (img != null)
+		{
 			g.drawImage(img, 0, 0, this);
+		}
 	}
 	
 
