@@ -14,6 +14,7 @@ public class GSOMNode extends Node {
 	private double TOTAL_ERROR = 0.0;
 	private boolean IS_BOUNDRY = true; //every node created in the GSOM is initially a boundry node. So set to true as the default value.
 	private GSOMNode LEFT,RIGHT,UP,DOWN;
+	private boolean VISITED = false;
 	
 
 	public GSOMNode(int Dimensions, int x, int y) {
@@ -90,6 +91,20 @@ public class GSOMNode extends Node {
 	 */
 	public void setDOWN(GSOMNode down) {
 		DOWN = down;
+	}
+
+	/**
+	 * @return the vISITED
+	 */
+	public boolean isVisited() {
+		return VISITED;
+	}
+
+	/**
+	 * @param vISITED the vISITED to set
+	 */
+	public void setVisited(boolean visited) {
+		VISITED = visited;
 	}
 	
 }
