@@ -108,5 +108,5 @@ public class Node {
 		
 		WEIGHTS = new ArrayRealVector(temp);
 	}
-
+	
 }

@@ -199,7 +199,7 @@ public class SelfOrganizingMap implements ActionListener {
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
-				adjustNeighbouroodOfWinners(winner, new ArrayRealVector(temp));
+				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 							
 /*				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("===============================");*/
@@ -214,7 +214,7 @@ public class SelfOrganizingMap implements ActionListener {
 	 * @param winner as the winner node of the input presentation
 	 * @param inputVector as the input vector recently presented to the network
 	 */
-	private void adjustNeighbouroodOfWinners(Node winner, ArrayRealVector inputVector)
+	private void adjustNeighbourhoodOfWinners(Node winner, ArrayRealVector inputVector)
 	{
 		int radius = (int)Math.ceil(RADIUS);
 		double distance = 0.0;

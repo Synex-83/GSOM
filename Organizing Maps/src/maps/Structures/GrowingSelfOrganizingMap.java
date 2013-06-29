@@ -21,18 +21,28 @@ public class GrowingSelfOrganizingMap {
 
 	private int INPUT_DIMENSION = 0;
 	private int NUMBER_OF_ITERATIONS = 0;
+	private int NUMBER_OF_NODES_IN_NETWORK = 0;
 	private GSOMNode BASE_NODE = null; //node at (0,0) of the GSOM and one of the four fundamental nodes
 	private double SPREAD_FACTOR = 0.0; //SF
 	private double GROWTH_THRESHOLD = 0.0; //GT
 	private double INITIAL_LEARNING_RATE = 0.0;
 	private double INITIAL_NEIGHBORHOOD_RADIUS = 0.0;
-	private Queue<GSOMNode> nodesToVisit = null;
+	private double HIGHEST_ERROR = 0.0;
+	private double LEARNING_RATE = 0.0;
+	private double RADIUS = 0.0;
+	private double ALPHA = 0.0; //discount factor of the learning rate.
+	private Queue<GSOMNode> NODES_TO_VISIT = null;
+	private NumberPole NUMBER_POLE = null;
 	
-	public GrowingSelfOrganizingMap(int inputDimension, double spreadFactor, DisplayLattice screen)
+	public GrowingSelfOrganizingMap(int inputDimension,double ETA, double spreadFactor, double radius, DisplayLattice screen)
 	{
 		INPUT_DIMENSION = inputDimension;
 		SPREAD_FACTOR = spreadFactor;
-		nodesToVisit = new LinkedList<GSOMNode>();
+		INITIAL_NEIGHBORHOOD_RADIUS = radius;
+		INITIAL_LEARNING_RATE = ETA;
+		LEARNING_RATE = INITIAL_LEARNING_RATE;
+		NODES_TO_VISIT = new LinkedList<GSOMNode>();
+		NUMBER_POLE = new NumberPole();
 		
 		initGSOM();
 		initGrowthThreshold(SPREAD_FACTOR, INPUT_DIMENSION);
@@ -52,13 +62,28 @@ public class GrowingSelfOrganizingMap {
 	 */
 	private void initGSOM() 
 	{
-		BASE_NODE = new GSOMNode(INPUT_DIMENSION, 0, 0); //set 0, 0 		
+		BASE_NODE = new GSOMNode(INPUT_DIMENSION, 0, 0); //set 0, 0
+		addToNumberPole(BASE_NODE);
+		
+		
 		BASE_NODE.setRIGHT(new GSOMNode(INPUT_DIMENSION, 0, 1)); // set 0, 1
 		BASE_NODE.setUP(new GSOMNode(INPUT_DIMENSION, 1, 0)); // set 1, 0
 		BASE_NODE.getUP().setLEFT(new GSOMNode(INPUT_DIMENSION, 1, 1)); // set 1, 1 and as the left of 1,0
 		BASE_NODE.getLEFT().setUP(BASE_NODE.getUP().getLEFT()); //set up of  0,1
+		
+		
+		
+		NUMBER_OF_NODES_IN_NETWORK = 4; //initial number of nodes
 	}
 	
+	/**
+	 * @param bASE_NODE2
+	 */
+	private void addToNumberPole(GSOMNode node) {
+		
+		
+	}
+
 	/**
 	 * @param input as input vector
 	 * Performs a single iteration of SOM training
@@ -84,21 +109,136 @@ public class GrowingSelfOrganizingMap {
 				{
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
-				
-				winner = presentSingleInput(new ArrayRealVector(temp));
+								
+				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) //goes to 0...100 all inclusive
+				{ 
+					winner = presentSingleInput(new ArrayRealVector(temp)); //idea of a return value is to halt further execution of code until the method call has returned.
+					calculateGrowthError(winner, new ArrayRealVector(temp)); //processes the QE and triggers node growth if required.
+					adjustNeighbourhoodOfWinner(winner, new ArrayRealVector(temp));
+					learningRateDecay();
+					radiusDecay(i);
+				}
 			}
-
 		}
 	}
 	
+	/**
+	 * @param winner
+	 */
+	private void calculateGrowthError(GSOMNode winner, ArrayRealVector inputVector) 
+	{			
+		double differenceInVectors = (inputVector.subtract(winner.getWEIGHTS())).getNorm();		
+		winner.setTotalError(winner.getTotalError() + differenceInVectors);
+		if(winner.getTotalError() >= GROWTH_THRESHOLD)
+		{
+			if(winner.getTotalError() < HIGHEST_ERROR)
+			{
+				HIGHEST_ERROR = winner.getTotalError();
+			}
+			growNodes(winner);			
+		}		
+	}
+
+	/**
+	 * @param winner
+	 */
+	private void growNodes(GSOMNode winner) 
+	{
+	
+	}
+
 	/**
 	 * @param arrayRealVector
 	 * @return
 	 */
 	private GSOMNode presentSingleInput(ArrayRealVector input)
 	{		
+		GSOMNode winner = getWinner(input);
+		winner.incrementNumberOfHits();
+		return winner;
+	}
+
+	/**
+	 * @param winner
+	 * @param input
+	 */
+	private void adjustNeighbourhoodOfWinner(GSOMNode winner, ArrayRealVector inputVector) 
+	{
+		adjustWeightVectors(winner, inputVector);
+	}
+	
+	/**
+	 * @param neighbours
+	 */
+	private void adjustWeightVectors(GSOMNode node, ArrayRealVector input) {
+		GSOMNode winner = node;
+		LinkedList<GSOMNode> neighbourList = new LinkedList<GSOMNode>();
+		neighbourList.add(winner);
+			
+		Queue<GSOMNode> neighbourQueue = new LinkedList<GSOMNode>();
+		neighbourQueue.add(winner);
 		
-		return null;
+		GSOMNode temp = null;
+		ArrayRealVector tempWeights = null;
+		
+		while(!neighbourQueue.isEmpty())
+		{
+			temp = neighbourQueue.remove();
+			tempWeights = temp.getWEIGHTS().add((input.subtract(temp.getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
+			temp.setWEIGHTS(tempWeights);
+			
+			if(temp.getRIGHT() != null && !neighbourList.contains(temp.getRIGHT()) && getEculidianDistance(winner, temp.getRIGHT()) <= RADIUS)
+			{
+				neighbourQueue.add(temp.getRIGHT());
+				neighbourList.add(temp.getRIGHT());
+			}		
+			
+			if(temp.getLEFT() != null && !neighbourList.contains(temp.getLEFT()) && getEculidianDistance(winner, temp.getLEFT()) <= RADIUS)
+			{
+				neighbourQueue.add(temp.getLEFT());
+				neighbourList.add(temp.getLEFT());
+			}
+			
+			if(temp.getUP() != null && !neighbourList.contains(temp.getUP()) && getEculidianDistance(winner, temp.getUP()) <= RADIUS)
+			{
+				neighbourQueue.add(temp.getUP());
+				neighbourList.add(temp.getUP());
+			}
+			
+			if(temp.getDOWN() != null && !neighbourList.contains(temp.getDOWN()) && getEculidianDistance(winner, temp.getDOWN()) <= RADIUS)
+			{
+				neighbourQueue.add(temp.getDOWN());
+				neighbourList.add(temp.getDOWN());
+			}
+		}
+	}
+
+	private double getEculidianDistance(GSOMNode a, GSOMNode b)
+	{
+		
+		ArrayRealVector first = new ArrayRealVector(new double[]{a.getX(),a.getY()});
+		ArrayRealVector seconed = new ArrayRealVector(new double[]{b.getX(), b.getY()});
+		ArrayRealVector distance = first.subtract(seconed);		
+		return distance.getNorm();		
+	}
+	
+	private void learningRateDecay()
+	{
+		LEARNING_RATE = ALPHA*CHI(NUMBER_OF_NODES_IN_NETWORK)*LEARNING_RATE;
+	}
+	
+	/**
+	 * @param nUMBER_OF_NODES_IN_NETWORK2
+	 * @return
+	 */
+	private double CHI(int numberOfNodes) {
+		// TODO Auto-generated method stub		
+		return (1 - (3.5/numberOfNodes));
+	}
+
+	private void radiusDecay(int currentIteration)
+	{
+		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS*Math.exp(currentIteration/(NUMBER_OF_ITERATIONS/4));
 	}
 
 	private GSOMNode getWinner(ArrayRealVector input)
@@ -108,11 +248,11 @@ public class GrowingSelfOrganizingMap {
 		double minSeen = Double.POSITIVE_INFINITY;
 		GSOMNode minNode = null;
 		
-		nodesToVisit.add(BASE_NODE);
+		NODES_TO_VISIT.add(BASE_NODE);
 		
-		while(!nodesToVisit.isEmpty())
+		while(!NODES_TO_VISIT.isEmpty())
 		{
-			tempNode = nodesToVisit.remove();	
+			tempNode = NODES_TO_VISIT.remove();	
 						
 			addToQueue(tempNode);
 			tempValue = getEuclideanAccumulatedValue(input, tempNode);
@@ -126,7 +266,7 @@ public class GrowingSelfOrganizingMap {
 			tempNode.setACTIVATION_VALUE(tempValue);
 		}	
 		
-		nodesToVisit.clear();
+		NODES_TO_VISIT.clear();
 		resetGSOMNodeVisit();
 		return minNode;		
 	}
@@ -150,22 +290,22 @@ public class GrowingSelfOrganizingMap {
 		
 		if(temp.getRIGHT() != null && !(temp.getRIGHT() .isVisited()))
 		{
-			nodesToVisit.add(temp.getRIGHT());
+			NODES_TO_VISIT.add(temp.getRIGHT());
 			
 		}
 		if(temp.getUP() != null && !(temp.getUP().isVisited()))
 		{
-			nodesToVisit.add(temp.getUP());
+			NODES_TO_VISIT.add(temp.getUP());
 			
 		}
 		if(temp.getLEFT() != null && !(temp.getLEFT().isVisited()))
 		{
-			nodesToVisit.add(temp.getLEFT());
+			NODES_TO_VISIT.add(temp.getLEFT());
 			
 		}
 		if(temp.getDOWN() != null && !(temp.getDOWN().isVisited()))
 		{
-			nodesToVisit.add(temp.getDOWN());
+			NODES_TO_VISIT.add(temp.getDOWN());
 			
 		}
 	}
@@ -174,36 +314,36 @@ public class GrowingSelfOrganizingMap {
 	{
 		GSOMNode tempNode = null;
 		
-		nodesToVisit.add(BASE_NODE);
+		NODES_TO_VISIT.add(BASE_NODE);
 		
-		while(!nodesToVisit.isEmpty())
+		while(!NODES_TO_VISIT.isEmpty())
 		{
-			tempNode = nodesToVisit.remove();
+			tempNode = NODES_TO_VISIT.remove();
 			tempNode.setVisited(false);
 						
 			if(tempNode.getRIGHT() != null && tempNode.getRIGHT().isVisited())
 			{
-				nodesToVisit.add(tempNode.getRIGHT());
+				NODES_TO_VISIT.add(tempNode.getRIGHT());
 				
 			}
 			if(tempNode.getUP() != null && tempNode.getUP().isVisited())
 			{
-				nodesToVisit.add(tempNode.getUP());
+				NODES_TO_VISIT.add(tempNode.getUP());
 				
 			}
 			if(tempNode.getLEFT() != null && tempNode.getLEFT().isVisited())
 			{
-				nodesToVisit.add(tempNode.getLEFT());
+				NODES_TO_VISIT.add(tempNode.getLEFT());
 				
 			}
 			if(tempNode.getDOWN() != null && tempNode.getDOWN().isVisited())
 			{
-				nodesToVisit.add(tempNode.getDOWN());
+				NODES_TO_VISIT.add(tempNode.getDOWN());
 				
 			}
 
 		}			
-		nodesToVisit.clear();
+		NODES_TO_VISIT.clear();
 	}
 
 	/**

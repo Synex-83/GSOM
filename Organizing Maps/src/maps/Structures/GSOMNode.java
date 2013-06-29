@@ -15,18 +15,19 @@ public class GSOMNode extends Node {
 	private boolean IS_BOUNDRY = true; //every node created in the GSOM is initially a boundry node. So set to true as the default value.
 	private GSOMNode LEFT,RIGHT,UP,DOWN;
 	private boolean VISITED = false;
+	private int NUMBER_OF_HITS = 0;
 	
 
 	public GSOMNode(int Dimensions, int x, int y) {
 		super(Dimensions, x, y);
 	}
 	
-	public double getTOTAL_ERROR() {
+	public double getTotalError() {
 		return TOTAL_ERROR;
 	}
 
-	public void setTOTAL_ERROR(double total_error) {
-		TOTAL_ERROR = total_error;
+	public void setTotalError(double error) {
+		TOTAL_ERROR = error;
 	}
 	
 	public boolean isBoundry() {
@@ -106,5 +107,20 @@ public class GSOMNode extends Node {
 	public void setVisited(boolean visited) {
 		VISITED = visited;
 	}
+
+	/**
+	 * @return the nUMBER_OF_HITS
+	 */
+	public int getNumberOfHits() {
+		return NUMBER_OF_HITS;
+	}
+
+	/**
+	 * @param nUMBER_OF_HITS the nUMBER_OF_HITS to set
+	 */
+	public void incrementNumberOfHits() {
+		NUMBER_OF_HITS++;
+	}
 	
+
 }
