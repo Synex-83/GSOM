@@ -62,16 +62,22 @@ public class GrowingSelfOrganizingMap {
 	 */
 	private void initGSOM() 
 	{
-		BASE_NODE = new GSOMNode(INPUT_DIMENSION, 0, 0); //set 0, 0
-		addToNumberPole(BASE_NODE);
-		
-		
+		BASE_NODE = new GSOMNode(INPUT_DIMENSION, 0, 0); //set 0, 0		
 		BASE_NODE.setRIGHT(new GSOMNode(INPUT_DIMENSION, 0, 1)); // set 0, 1
+		BASE_NODE.getRIGHT().setLEFT(BASE_NODE); //references adding
+		
 		BASE_NODE.setUP(new GSOMNode(INPUT_DIMENSION, 1, 0)); // set 1, 0
-		BASE_NODE.getUP().setLEFT(new GSOMNode(INPUT_DIMENSION, 1, 1)); // set 1, 1 and as the left of 1,0
-		BASE_NODE.getLEFT().setUP(BASE_NODE.getUP().getLEFT()); //set up of  0,1
+		BASE_NODE.getUP().setDOWN(BASE_NODE); //references adding
 		
+		BASE_NODE.getUP().setRIGHT(new GSOMNode(INPUT_DIMENSION, 1, 1)); // set 1, 1 and as the left of 1,0
+		BASE_NODE.getRIGHT().setUP(BASE_NODE.getUP().getRIGHT()); //set up of  0,1
+		BASE_NODE.getUP().getRIGHT().setLEFT(BASE_NODE.getUP());
+		BASE_NODE.getUP().getRIGHT().setDOWN(BASE_NODE.getRIGHT());
 		
+		addToNumberPole(BASE_NODE); //0,0
+		addToNumberPole(BASE_NODE.getUP()); //0,1
+		addToNumberPole(BASE_NODE.getRIGHT()); // 1,0
+		addToNumberPole(BASE_NODE.getUP().getRIGHT()); //1,1
 		
 		NUMBER_OF_NODES_IN_NETWORK = 4; //initial number of nodes
 	}
@@ -79,9 +85,12 @@ public class GrowingSelfOrganizingMap {
 	/**
 	 * @param bASE_NODE2
 	 */
-	private void addToNumberPole(GSOMNode node) {
-		
-		
+	private void addToNumberPole(GSOMNode node) 
+	{	
+		if(!NUMBER_POLE.nodeExists(node))
+		{
+			NUMBER_POLE.add(node);
+		}	
 	}
 
 	/**
@@ -144,7 +153,289 @@ public class GrowingSelfOrganizingMap {
 	 */
 	private void growNodes(GSOMNode winner) 
 	{
+		
+		GSOMNode left =null, right=null, up=null, down=null;
+		GSOMNode[] temp = null;
+		
+		if(winner.getLEFT() == null)
+		{
+			left = new GSOMNode(INPUT_DIMENSION,winner.getX() - 1, winner.getY());
+			winner.setLEFT(left);
+			addToNumberPole(left);
+			temp = NUMBER_POLE.getNeighborNodes(left.getX(), left.getY());
+			
+			left.setLEFT(temp[0]);
+			if(temp[0] != null)
+			{
+				left.getLEFT().setRIGHT(left);
+			}
+			
+			left.setRIGHT(temp[1]);
+		
+			left.setUP(temp[2]);
+			if(temp[2] != null)
+			{
+				left.getUP().setDOWN(left);
+			}
+			
+			left.setDOWN(temp[3]);
+			if(temp[3] != null)
+			{
+				left.getDOWN().setUP(left);
+			}
+					
+			setWeightsOfNewNode(left, winner, true, false, false, false);
+		}
+		
+		if(winner.getRIGHT() == null)
+		{
+			right = new GSOMNode(INPUT_DIMENSION,winner.getX() + 1, winner.getY()); 
+			winner.setRIGHT(right);
+			addToNumberPole(right);
+			temp = NUMBER_POLE.getNeighborNodes(right.getX(), right.getY());
+			
+			right.setLEFT(temp[0]);
+			
+			right.setRIGHT(temp[1]);
+			if(temp[1] != null)
+			{
+				right.getRIGHT().setLEFT(right);
+			}
+			
+			right.setUP(temp[2]);
+			if(temp[2] != null)
+			{
+				right.getUP().setDOWN(right);
+			}
+			
+			right.setDOWN(temp[3]);
+			if(temp[3] != null)
+			{
+				right.getDOWN().setUP(right);
+			}
+
+		}
+		
+		if(winner.getUP() == null)
+		{
+			up = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() + 1);
+			winner.setUP(up);
+			addToNumberPole(up);
+			temp = NUMBER_POLE.getNeighborNodes(up.getX(), up.getY());
+			
+			up.setLEFT(temp[0]);
+			if(temp[0] != null)
+			{
+				up.getLEFT().setRIGHT(up);
+			}
+			
+			up.setRIGHT(temp[1]);
+			if(temp[1] != null)
+			{
+				up.getRIGHT().setLEFT(up);
+			}
+			
+			up.setUP(temp[2]);
+			if(temp[2] != null)
+			{
+				up.getUP().setDOWN(up);
+			}
+			
+			up.setDOWN(temp[3]);
+
+		}
+		
+		if(winner.getDOWN() == null)
+		{
+			down = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() - 1);
+			winner.setLEFT(down);
+			addToNumberPole(down);
+			temp = NUMBER_POLE.getNeighborNodes(down.getX(), down.getY());
+			
+			down.setLEFT(temp[0]);
+			if(temp[0] != null)
+			{
+				down.getLEFT().setRIGHT(down);
+			}
+			
+			down.setRIGHT(temp[1]);
+			if(temp[1] != null)
+			{
+				down.getRIGHT().setLEFT(down);
+			}
+			
+			down.setUP(temp[2]);
+			
+			down.setDOWN(temp[3]);
+			if(temp[3] != null)
+			{
+				down.getDOWN().setUP(down);
+			}
+			
+		}
+	}
+
+	/**
+	 * @param left
+	 * @param winner
+	 * @param b
+	 * @param c
+	 * @param d
+	 * @param e
+	 */
+	private void setWeightsOfNewNode(GSOMNode newNode, GSOMNode winner, boolean isLeft,
+			boolean isRight, boolean isUp, boolean isDown) 
+	{
+		//case 2 first then 1 and 3, 4 unlikely
+		
+		GSOMNode sequeceNodeToWinner = null; //for cases 1 and 3
+		GSOMNode oppositeToNewNode = null; //for case 2
+				
+		if(isLeft)
+		{
+			sequeceNodeToWinner = winner.getRIGHT();
+			oppositeToNewNode = newNode.getLEFT();
+			
+			if(oppositeToNewNode != null)
+			{
+				categoryTwoGrowth(newNode, winner, oppositeToNewNode);
+			}
+			else if(sequeceNodeToWinner != null)
+			{
+				categoryOneGrowth(newNode, winner, sequeceNodeToWinner);
+			}
+			else if(sequeceNodeToWinner == null)
+			{
+				categoryThreeGrowth(newNode, winner, true, false, false, false);
+			}
+		}
+		else if(isRight)
+		{
+			sequeceNodeToWinner = winner.getLEFT();
+			oppositeToNewNode = newNode.getRIGHT();
+			
+			if(oppositeToNewNode != null)
+			{
+				categoryTwoGrowth(newNode, winner,  oppositeToNewNode);
+			}
+			else if(sequeceNodeToWinner != null)
+			{
+				categoryOneGrowth(newNode, winner, sequeceNodeToWinner);
+			}
+			else if(sequeceNodeToWinner == null)
+			{
+				categoryThreeGrowth(newNode, winner, false, true, false, false);
+			}
+		}
+		else if(isUp)
+		{
+			sequeceNodeToWinner = winner.getDOWN();	
+			oppositeToNewNode = newNode.getUP();
+			
+			if(oppositeToNewNode != null)
+			{
+				categoryTwoGrowth(newNode, winner,  oppositeToNewNode);
+			}
+			else if(sequeceNodeToWinner != null)
+			{
+				categoryOneGrowth(newNode, winner, sequeceNodeToWinner);
+			}
+			else if(sequeceNodeToWinner == null)
+			{
+				categoryThreeGrowth(newNode, winner, false, false, true, false);
+			}	
+		}
+		else if(isDown)
+		{
+			sequeceNodeToWinner = winner.getUP();
+			oppositeToNewNode = newNode.getDOWN();
+			
+			if(oppositeToNewNode != null)
+			{
+				categoryTwoGrowth(newNode, winner,  oppositeToNewNode);
+			}
+			else if(sequeceNodeToWinner != null)
+			{
+				categoryOneGrowth(newNode, winner, sequeceNodeToWinner);
+			}
+			else if(sequeceNodeToWinner == null)
+			{
+				categoryThreeGrowth(newNode, winner, false, false, false, true);
+			}			
+		}
+	}
 	
+	private void categoryOneGrowth(GSOMNode newNode, GSOMNode winner, GSOMNode other)
+	{
+		double w1=0, w2=0;
+		
+		w1 = winner.getWEIGHTS().getNorm();
+		w2 = other.getWEIGHTS().getNorm();
+		
+		if(w1 > w2)
+		{
+			newNode.setWEIGHTS(winner.getWEIGHTS().add(winner.getWEIGHTS().subtract(other.getWEIGHTS())));
+		}
+		else if(w2 > w1)
+		{
+			newNode.setWEIGHTS(winner.getWEIGHTS().subtract(other.getWEIGHTS().subtract(winner.getWEIGHTS())));
+		}
+		else if(w1 == w2)
+		{
+			System.out.println("A highly unlikely case has happened.");
+			newNode.setWEIGHTS(winner.getWEIGHTS());
+		}
+	}
+	
+	private void categoryTwoGrowth(GSOMNode newNode, GSOMNode winner, GSOMNode other)
+	{
+		newNode.setWEIGHTS((ArrayRealVector)((winner.getWEIGHTS().add(other.getWEIGHTS()).mapDivideToSelf(2.0))));
+	}
+
+	private void categoryThreeGrowth(GSOMNode newNode, GSOMNode winner, boolean isLeft, boolean isRight, 
+			boolean isUp, boolean isDown)
+	{
+		GSOMNode candidateNode1 = null; // to check the possiblity of up, down left and right node
+		GSOMNode candidateNode2 = null; // to check the possiblity of up, down left and right node 
+		
+		if(isLeft || isRight)
+		{
+			candidateNode1 = winner.getUP();
+			candidateNode2 = winner.getDOWN();
+		}
+		else if(isDown || isUp)
+		{
+			candidateNode1 = winner.getLEFT();
+			candidateNode2 = winner.getRIGHT();
+		}
+		
+		if(candidateNode1 != null)
+		{
+			categoryOneGrowth(newNode, winner, candidateNode1);
+		}
+		else if(candidateNode2 !=null)
+		{
+			categoryOneGrowth(newNode, winner, candidateNode2);
+		}
+		else if(candidateNode1 == null & candidateNode2 == null)
+		{
+			categoryFourGrowth(newNode, winner);
+		}
+	}
+
+	/**
+	 * @param newNode
+	 * @param winner
+	 */
+	private void categoryFourGrowth(GSOMNode newNode, GSOMNode winner) {
+		// TODO Auto-generated method stub
+		double[] temp = new double[INPUT_DIMENSION];
+		for(int i = 0; i < temp.length ; i++)
+		{
+			temp[i] = 0.5;
+		}
+		
+		newNode.setWEIGHTS(new ArrayRealVector(temp));
 	}
 
 	/**
