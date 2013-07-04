@@ -1,20 +1,40 @@
 /**
- * 
+ * 	Copyright 2013 Manjusri Wickramasinghe. All rights reserved.
+ *
+ *	Redistribution and use in source and binary forms, with or without modification, are
+ *	permitted provided that the following conditions are met:
+ *	
+ *	   1. Redistributions of source code must retain the above copyright notice, this list of
+ *	      conditions and the following disclaimer.
+ *
+ *	   2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *	      of conditions and the following disclaimer in the documentation and/or other materials
+ *	      provided with the distribution.
+ *
+ *	THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ *	WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ *	FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR
+ *	CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ *	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *	SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ *	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ *	ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 package maps.Structures;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
-
 import org.apache.commons.math3.linear.ArrayRealVector;
-
-import sun.util.locale.StringTokenIterator;
 
 /**
  * @author 		Manjusri Ishwara
  * @date		Apr 29, 2013 - 4:35:45 PM
  * @type        GrowingSelfOrganizingMap
+ * 
+ * Contains the implementation of the Growing Self-Organizing Map algorithm with the associated visualization methods.
  *
  */
 public class GrowingSelfOrganizingMap {
@@ -34,6 +54,16 @@ public class GrowingSelfOrganizingMap {
 	private Queue<GSOMNode> NODES_TO_VISIT = null;
 	private NumberPole NUMBER_POLE = null;
 	
+	/**
+	 * @param inputDimension as the number of dimensions
+	 * @param ETA as the learing rate
+	 * @param spreadFactor as the desired level of spread of the resulting GSOM
+	 * @param radius as the neighbourhood radius
+	 * @param screen as the JPanel instance
+	 * 
+	 * This method initializes all the variables in the GSOM and initilizes the basic structure of the GSOM. This method also
+	 * initilizes the number pole object which keeps all the references to the GSOMNodes.
+	 */
 	public GrowingSelfOrganizingMap(int inputDimension,double ETA, double spreadFactor, double radius, DisplayLattice screen)
 	{
 		INPUT_DIMENSION = inputDimension;
@@ -49,8 +79,12 @@ public class GrowingSelfOrganizingMap {
 	}
 
 	/**
-	 * @param spreadFactor
-	 * @param inputDimension
+	 * @param spreadFactor as the desired level of spread of the resulting GSOM
+	 * @param inputDimension as the number of dimensions
+	 * 
+	 * Called by the method {@link #GrowingSelfOrganizingMap(int, double, double, double, DisplayLattice)} to initialize the 
+	 * growth threshold which decides whether a node grows or not. The value is calculated according the standard function 
+	 * provided with the algorithm which is GT = -D*ln(SF)
 	 */
 	private void initGrowthThreshold(double spreadFactor, int inputDimension)
 	{
@@ -58,7 +92,9 @@ public class GrowingSelfOrganizingMap {
 	}
 
 	/**
-	 * 
+	 * Called by the method {@link #GrowingSelfOrganizingMap(int, double, double, double, DisplayLattice)} to initialize the 
+	 * structure of the GSOM with initial four node structures. This created the  GSOMNodes with all the initial relationships.
+	 * The NumberPole object too initialized to keep reference of each GSOMNode created.
 	 */
 	private void initGSOM() 
 	{
@@ -82,8 +118,11 @@ public class GrowingSelfOrganizingMap {
 		NUMBER_OF_NODES_IN_NETWORK = 4; //initial number of nodes
 	}
 	
+
 	/**
-	 * @param bASE_NODE2
+	 * @param node as the new GSOMNode to be added
+	 * 
+	 * Add the new node to the NumberPole object according to its X and Y location for further referencing.
 	 */
 	private void addToNumberPole(GSOMNode node) 
 	{	
@@ -94,8 +133,11 @@ public class GrowingSelfOrganizingMap {
 	}
 
 	/**
-	 * @param input as input vector
-	 * Performs a single iteration of SOM training
+	 * @param input as the input string
+	 * 
+	 * Completes a single iteration of the GSOM process. This is different from the SOM learning process
+	 * since all the inputs are not presented in a single iteration. A single input is put to the complete number of 
+	 * iterations and then set back to the intial values for the next new input.
 	 */
 	private void trainGSOM(String input)	
 	{
@@ -132,7 +174,11 @@ public class GrowingSelfOrganizingMap {
 	}
 	
 	/**
-	 * @param winner
+	 * @param winner as the winning GSOMNode
+	 * 
+	 * Calculates the growth error of the GSOMNode. If the accumulated error is greater than the growth threshold value
+	 * this method will trigger node growth and adjust the highest error of the network if it is greater than the previously
+	 * observed network error.
 	 */
 	private void calculateGrowthError(GSOMNode winner, ArrayRealVector inputVector) 
 	{			
@@ -149,7 +195,9 @@ public class GrowingSelfOrganizingMap {
 	}
 
 	/**
-	 * @param winner
+	 * @param winner as the winning GSOMNode
+	 * 
+	 * Grows nodes according to the structure and the placement of the winner node.
 	 */
 	private void growNodes(GSOMNode winner) 
 	{
@@ -275,13 +323,17 @@ public class GrowingSelfOrganizingMap {
 		}
 	}
 
+
 	/**
-	 * @param left
-	 * @param winner
-	 * @param b
-	 * @param c
-	 * @param d
-	 * @param e
+	 * @param newNode as the newly inserted GSOMNode
+	 * @param winner as the winner node of the GSOM
+	 * @param isLeft the new node is the left of the winner
+	 * @param isRight the new node is the right of the winner
+	 * @param isUp the new node is placed above the winner
+	 * @param isDown the new node is placed below the winner
+	 * 
+	 * This method is called by {@link #growNodes(GSOMNode)} when a new node is created. The weights of the node is 
+	 * adjusted by the classical four cases of the GSOM.
 	 */
 	private void setWeightsOfNewNode(GSOMNode newNode, GSOMNode winner, boolean isLeft,
 			boolean isRight, boolean isUp, boolean isDown) 
@@ -365,6 +417,11 @@ public class GrowingSelfOrganizingMap {
 		}
 	}
 	
+	/**
+	 * @param newNode
+	 * @param winner
+	 * @param other
+	 */
 	private void categoryOneGrowth(GSOMNode newNode, GSOMNode winner, GSOMNode other)
 	{
 		double w1=0, w2=0;
@@ -387,11 +444,24 @@ public class GrowingSelfOrganizingMap {
 		}
 	}
 	
+	/**
+	 * @param newNode
+	 * @param winner
+	 * @param other
+	 */
 	private void categoryTwoGrowth(GSOMNode newNode, GSOMNode winner, GSOMNode other)
 	{
 		newNode.setWEIGHTS((ArrayRealVector)((winner.getWEIGHTS().add(other.getWEIGHTS()).mapDivideToSelf(2.0))));
 	}
 
+	/**
+	 * @param newNode
+	 * @param winner
+	 * @param isLeft
+	 * @param isRight
+	 * @param isUp
+	 * @param isDown
+	 */
 	private void categoryThreeGrowth(GSOMNode newNode, GSOMNode winner, boolean isLeft, boolean isRight, 
 			boolean isUp, boolean isDown)
 	{
@@ -459,7 +529,8 @@ public class GrowingSelfOrganizingMap {
 	}
 	
 	/**
-	 * @param neighbours
+	 * @param node
+	 * @param input
 	 */
 	private void adjustWeightVectors(GSOMNode node, ArrayRealVector input) {
 		GSOMNode winner = node;
@@ -504,6 +575,11 @@ public class GrowingSelfOrganizingMap {
 		}
 	}
 
+	/**
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	private double getEculidianDistance(GSOMNode a, GSOMNode b)
 	{
 		
@@ -513,13 +589,16 @@ public class GrowingSelfOrganizingMap {
 		return distance.getNorm();		
 	}
 	
+	/**
+	 *
+	 */
 	private void learningRateDecay()
 	{
 		LEARNING_RATE = ALPHA*CHI(NUMBER_OF_NODES_IN_NETWORK)*LEARNING_RATE;
 	}
 	
 	/**
-	 * @param nUMBER_OF_NODES_IN_NETWORK2
+	 * @param numberOfNodes
 	 * @return
 	 */
 	private double CHI(int numberOfNodes) {
@@ -527,11 +606,18 @@ public class GrowingSelfOrganizingMap {
 		return (1 - (3.5/numberOfNodes));
 	}
 
+	/**
+	 * @param currentIteration
+	 */
 	private void radiusDecay(int currentIteration)
 	{
 		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS*Math.exp(currentIteration/(NUMBER_OF_ITERATIONS/4));
 	}
 
+	/**
+	 * @param input
+	 * @return
+	 */
 	private GSOMNode getWinner(ArrayRealVector input)
 	{
 		GSOMNode tempNode = null;
@@ -562,7 +648,11 @@ public class GrowingSelfOrganizingMap {
 		return minNode;		
 	}
 	
-	
+	/**
+	 * @param input
+	 * @param node
+	 * @return
+	 */
 	private double getEuclideanAccumulatedValue(ArrayRealVector input, GSOMNode node)
 	{
 		double temp = 0.0;
@@ -601,6 +691,9 @@ public class GrowingSelfOrganizingMap {
 		}
 	}
 	
+	/**
+	 * 
+	 */
 	private void resetGSOMNodeVisit()
 	{
 		GSOMNode tempNode = null;
@@ -638,8 +731,8 @@ public class GrowingSelfOrganizingMap {
 	}
 
 	/**
-	 * @param input as the current input vector.
-	 * @return the winner after the input is presented to all the nodes.
+	 * @param input
+	 * @return
 	 */
 	private GSOMNode setTotalError(ArrayRealVector input)
 	{
