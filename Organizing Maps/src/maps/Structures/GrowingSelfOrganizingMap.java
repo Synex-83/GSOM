@@ -51,6 +51,7 @@ public class GrowingSelfOrganizingMap {
 	private double LEARNING_RATE = 0.0;
 	private double RADIUS = 0.0;
 	private double ALPHA = 0.0; //discount factor of the learning rate.
+	private double FD = 0.5; //the Factor of Distribution (FD) 0 < gamma < 1
 	private Queue<GSOMNode> NODES_TO_VISIT = null;
 	private NumberPole NUMBER_POLE = null;
 	
@@ -116,6 +117,8 @@ public class GrowingSelfOrganizingMap {
 		addToNumberPole(BASE_NODE.getUP().getRIGHT()); //1,1
 		
 		NUMBER_OF_NODES_IN_NETWORK = 4; //initial number of nodes
+		
+		System.out.println("TEST");
 	}
 	
 
@@ -193,7 +196,29 @@ public class GrowingSelfOrganizingMap {
 			growNodes(winner);			
 		}		
 	}
-
+	
+	/**
+	 * @param neighbours
+	 * 
+	 * This method will be triggered with {@link #growNodes(GSOMNode)} when a non boundary node is selected as the winner
+	 * and it will be called recursively subsequently if it triggers growth in a non-boundary node.
+	 */
+	private void calculateGrowthErrorPropergation(GSOMNode[] neighbours)
+	{
+		for(int i = 0; i < neighbours.length; i++)
+		{
+			neighbours[i].setTotalError(neighbours[i].getTotalError() + FD*neighbours[i].getTotalError());
+			if(neighbours[i].getTotalError() >= GROWTH_THRESHOLD)
+			{
+				if(neighbours[i].getTotalError() < HIGHEST_ERROR)
+				{
+					HIGHEST_ERROR = neighbours[i].getTotalError();
+				}		
+				growNodes(neighbours[i]);
+			}
+		}
+	}
+	
 	/**
 	 * @param winner as the winning GSOMNode
 	 * 
@@ -205,122 +230,141 @@ public class GrowingSelfOrganizingMap {
 		GSOMNode left =null, right=null, up=null, down=null;
 		GSOMNode[] temp = null;
 		
-		if(winner.getLEFT() == null)
+		if(!winner.isBoundry())
 		{
-			left = new GSOMNode(INPUT_DIMENSION,winner.getX() - 1, winner.getY());
-			winner.setLEFT(left);
-			addToNumberPole(left);
-			temp = NUMBER_POLE.getNeighborNodes(left.getX(), left.getY());
-			
-			left.setLEFT(temp[0]);
-			if(temp[0] != null)
-			{
-				left.getLEFT().setRIGHT(left);
-			}
-			
-			left.setRIGHT(temp[1]);
-		
-			left.setUP(temp[2]);
-			if(temp[2] != null)
-			{
-				left.getUP().setDOWN(left);
-			}
-			
-			left.setDOWN(temp[3]);
-			if(temp[3] != null)
-			{
-				left.getDOWN().setUP(left);
-			}
-					
-			setWeightsOfNewNode(left, winner, true, false, false, false);
+		//	distributeErrorToNeighbors(winner);
+			temp = NUMBER_POLE.getNeighborNodes(winner.getX(), winner.getY());
+			calculateGrowthErrorPropergation(temp);
+			winner.setTotalError(GROWTH_THRESHOLD/2);
 		}
-		
-		if(winner.getRIGHT() == null)
+		else
 		{
-			right = new GSOMNode(INPUT_DIMENSION,winner.getX() + 1, winner.getY()); 
-			winner.setRIGHT(right);
-			addToNumberPole(right);
-			temp = NUMBER_POLE.getNeighborNodes(right.getX(), right.getY());
-			
-			right.setLEFT(temp[0]);
-			
-			right.setRIGHT(temp[1]);
-			if(temp[1] != null)
+			if(winner.getLEFT() == null)
 			{
-				right.getRIGHT().setLEFT(right);
+				left = new GSOMNode(INPUT_DIMENSION,winner.getX() - 1, winner.getY());
+				winner.setLEFT(left);
+				addToNumberPole(left);
+				temp = NUMBER_POLE.getNeighborNodes(left.getX(), left.getY());
+				
+				left.setLEFT(temp[0]);
+				if(temp[0] != null)
+				{
+					left.getLEFT().setRIGHT(left);
+				}
+				
+				left.setRIGHT(temp[1]);
+			
+				left.setUP(temp[2]);
+				if(temp[2] != null)
+				{
+					left.getUP().setDOWN(left);
+				}
+				
+				left.setDOWN(temp[3]);
+				if(temp[3] != null)
+				{
+					left.getDOWN().setUP(left);
+				}
+						
+				setWeightsOfNewNode(left, winner, true, false, false, false);
 			}
 			
-			right.setUP(temp[2]);
-			if(temp[2] != null)
+			if(winner.getRIGHT() == null)
 			{
-				right.getUP().setDOWN(right);
-			}
-			
-			right.setDOWN(temp[3]);
-			if(temp[3] != null)
-			{
-				right.getDOWN().setUP(right);
-			}
+				right = new GSOMNode(INPUT_DIMENSION,winner.getX() + 1, winner.getY()); 
+				winner.setRIGHT(right);
+				addToNumberPole(right);
+				temp = NUMBER_POLE.getNeighborNodes(right.getX(), right.getY());
+				
+				right.setLEFT(temp[0]);
+				
+				right.setRIGHT(temp[1]);
+				if(temp[1] != null)
+				{
+					right.getRIGHT().setLEFT(right);
+				}
+				
+				right.setUP(temp[2]);
+				if(temp[2] != null)
+				{
+					right.getUP().setDOWN(right);
+				}
+				
+				right.setDOWN(temp[3]);
+				if(temp[3] != null)
+				{
+					right.getDOWN().setUP(right);
+				}
+				
+				setWeightsOfNewNode(right, winner, false, true, false, false);
 
-		}
-		
-		if(winner.getUP() == null)
-		{
-			up = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() + 1);
-			winner.setUP(up);
-			addToNumberPole(up);
-			temp = NUMBER_POLE.getNeighborNodes(up.getX(), up.getY());
-			
-			up.setLEFT(temp[0]);
-			if(temp[0] != null)
-			{
-				up.getLEFT().setRIGHT(up);
 			}
 			
-			up.setRIGHT(temp[1]);
-			if(temp[1] != null)
+			if(winner.getUP() == null)
 			{
-				up.getRIGHT().setLEFT(up);
-			}
-			
-			up.setUP(temp[2]);
-			if(temp[2] != null)
-			{
-				up.getUP().setDOWN(up);
-			}
-			
-			up.setDOWN(temp[3]);
+				up = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() + 1);
+				winner.setUP(up);
+				addToNumberPole(up);
+				temp = NUMBER_POLE.getNeighborNodes(up.getX(), up.getY());
+				
+				up.setLEFT(temp[0]);
+				if(temp[0] != null)
+				{
+					up.getLEFT().setRIGHT(up);
+				}
+				
+				up.setRIGHT(temp[1]);
+				if(temp[1] != null)
+				{
+					up.getRIGHT().setLEFT(up);
+				}
+				
+				up.setUP(temp[2]);
+				if(temp[2] != null)
+				{
+					up.getUP().setDOWN(up);
+				}
+				
+				up.setDOWN(temp[3]);
+				
+				setWeightsOfNewNode(up, winner, false, false, true, false);
 
-		}
-		
-		if(winner.getDOWN() == null)
-		{
-			down = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() - 1);
-			winner.setLEFT(down);
-			addToNumberPole(down);
-			temp = NUMBER_POLE.getNeighborNodes(down.getX(), down.getY());
-			
-			down.setLEFT(temp[0]);
-			if(temp[0] != null)
-			{
-				down.getLEFT().setRIGHT(down);
 			}
 			
-			down.setRIGHT(temp[1]);
-			if(temp[1] != null)
+			if(winner.getDOWN() == null)
 			{
-				down.getRIGHT().setLEFT(down);
+				down = new GSOMNode(INPUT_DIMENSION,winner.getX(), winner.getY() - 1);
+				winner.setLEFT(down);
+				addToNumberPole(down);
+				temp = NUMBER_POLE.getNeighborNodes(down.getX(), down.getY());
+				
+				down.setLEFT(temp[0]);
+				if(temp[0] != null)
+				{
+					down.getLEFT().setRIGHT(down);
+				}
+				
+				down.setRIGHT(temp[1]);
+				if(temp[1] != null)
+				{
+					down.getRIGHT().setLEFT(down);
+				}
+				
+				down.setUP(temp[2]);
+				
+				down.setDOWN(temp[3]);
+				if(temp[3] != null)
+				{
+					down.getDOWN().setUP(down);
+				}
+				
+				setWeightsOfNewNode(down, winner, false, false, false, true);
 			}
 			
-			down.setUP(temp[2]);
-			
-			down.setDOWN(temp[3]);
-			if(temp[3] != null)
-			{
-				down.getDOWN().setUP(down);
-			}
-			
-		}
+			winner.setBoundry(false);
+			winner.setTotalError(GROWTH_THRESHOLD/2); //prejudeged according to the flow of text. However, how to set this 
+			//value is not specified in the thesis.
+		}	
 	}
 
 
@@ -507,7 +551,7 @@ public class GrowingSelfOrganizingMap {
 		
 		newNode.setWEIGHTS(new ArrayRealVector(temp));
 	}
-
+	
 	/**
 	 * @param arrayRealVector
 	 * @return

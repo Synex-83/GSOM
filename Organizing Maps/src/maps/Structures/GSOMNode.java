@@ -11,8 +11,8 @@ package maps.Structures;
  */
 public class GSOMNode extends Node {
 
-	private double TOTAL_ERROR = 0.0;
-	private boolean IS_BOUNDRY = true; //every node created in the GSOM is initially a boundry node. So set to true as the default value.
+	private double TOTAL_ERROR = 0.0; // accumulated error
+	private boolean IS_BOUNDRY = true; //every node created in the GSOM is initially a boundary node. So set to true as the default value.
 	private GSOMNode LEFT,RIGHT,UP,DOWN;
 	private boolean VISITED = false;
 	private int NUMBER_OF_HITS = 0;
