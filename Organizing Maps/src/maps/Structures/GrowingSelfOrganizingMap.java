@@ -65,18 +65,20 @@ public class GrowingSelfOrganizingMap {
 	 * This method initializes all the variables in the GSOM and initilizes the basic structure of the GSOM. This method also
 	 * initilizes the number pole object which keeps all the references to the GSOMNodes.
 	 */
-	public GrowingSelfOrganizingMap(int inputDimension,double ETA, double spreadFactor, double radius, DisplayLattice screen)
+	public GrowingSelfOrganizingMap(int inputDimension, int numberOfIterations, double ETA, double spreadFactor, double radius, String inputVectors, DisplayLattice screen)
 	{
 		INPUT_DIMENSION = inputDimension;
 		SPREAD_FACTOR = spreadFactor;
 		INITIAL_NEIGHBORHOOD_RADIUS = radius;
 		INITIAL_LEARNING_RATE = ETA;
 		LEARNING_RATE = INITIAL_LEARNING_RATE;
+		NUMBER_OF_ITERATIONS = numberOfIterations;
 		NODES_TO_VISIT = new LinkedList<GSOMNode>();
 		NUMBER_POLE = new NumberPole();
 		
 		initGSOM();
 		initGrowthThreshold(SPREAD_FACTOR, INPUT_DIMENSION);
+		trainGSOM(inputVectors);
 	}
 
 	/**
@@ -118,7 +120,7 @@ public class GrowingSelfOrganizingMap {
 		
 		NUMBER_OF_NODES_IN_NETWORK = 4; //initial number of nodes
 		
-		System.out.println("TEST");
+		//System.out.println("TEST");
 	}
 	
 
@@ -166,6 +168,7 @@ public class GrowingSelfOrganizingMap {
 								
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) //goes to 0...100 all inclusive
 				{ 
+					System.out.println(i);
 					winner = presentSingleInput(new ArrayRealVector(temp)); //idea of a return value is to halt further execution of code until the method call has returned.
 					calculateGrowthError(winner, new ArrayRealVector(temp)); //processes the QE and triggers node growth if required.
 					adjustNeighbourhoodOfWinner(winner, new ArrayRealVector(temp));
