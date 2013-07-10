@@ -277,11 +277,12 @@ public class GSOMArray {
 	 * @param input as the input vector
 	 * @return the winner of the single presentation
 	 * 
-	 * This method is called by {@link #presentSingleInput(ArrayRealVector)} to find the winner of a given input vector.
+	 * This method is called by {@link #presentSingleInput(ArrayRealVector)} to find the winner of a given input vector. The
+	 * winner is found by the using the minimum Euclidean distance between weight vector of the GSOMArrayNode and the input
+	 * vecto.
 	 */
 	private GSOMArrayNode getWinner(ArrayRealVector input)
 	{
-		GSOMArrayNode tempNode = null;
 		double tempValue = 0.0;
 		double minSeen = Double.POSITIVE_INFINITY;
 		GSOMArrayNode minNode = null;
@@ -296,11 +297,11 @@ public class GSOMArray {
 					
 					if(tempValue < minSeen)
 					{
-						minNode = tempNode;
+						minNode = GSOM[i][j];
 						minSeen = tempValue;						
 					}	
 					
-					tempNode.setACTIVATION_VALUE(tempValue);
+					GSOM[i][j].setACTIVATION_VALUE(tempValue);
 				}
 			}
 		}
@@ -335,18 +336,30 @@ public class GSOMArray {
 	 * This method will be triggered with {@link #growNodes(GSOMNode)} when a non boundary node is selected as the winner
 	 * and it will be called recursively subsequently if it triggers growth in a non-boundary node.
 	 */
-	private void calculateGrowthErrorPropergation(GSOMArrayNode[] neighbours)
+	private void calculateGrowthErrorPropergation(GSOMArrayNode winner)
 	{
+		int x = winner.getX() + OFFSET;
+		int y = winner.getY() + OFFSET;
+		GSOMArrayNode[] neighbours = new GSOMArrayNode[4]; //since there is only four direct neighbors
+		
+		neighbours[0] = GSOM[x][y-1]; //left
+		neighbours[1] = GSOM[x][y+1]; //right
+		neighbours[2] = GSOM[x-1][y]; //up
+		neighbours[3] = GSOM[x+1][y]; //down
+						
 		for(int i = 0; i < neighbours.length; i++)
 		{
-			neighbours[i].setTotalError(neighbours[i].getTotalError() + FD*neighbours[i].getTotalError());
-			if(neighbours[i].getTotalError() >= GROWTH_THRESHOLD)
+			if(neighbours[i] != null)
 			{
-				if(neighbours[i].getTotalError() < HIGHEST_ERROR)
+				neighbours[i].setAccumulatedError(neighbours[i].getAccumulatedError() + FD*neighbours[i].getAccumulatedError());
+				if(neighbours[i].getAccumulatedError() >= GROWTH_THRESHOLD)
 				{
-					HIGHEST_ERROR = neighbours[i].getTotalError();
-				}		
-				growNodes(neighbours[i]);
+					if(neighbours[i].getAccumulatedError() < HIGHEST_ERROR)
+					{
+						HIGHEST_ERROR = neighbours[i].getAccumulatedError();
+					}		
+					growNodes(neighbours[i]);
+				}
 			}
 		}
 	}
@@ -363,8 +376,8 @@ public class GSOMArray {
 		
 		if(!winner.isBoundry())
 		{
-			temp = NUMBER_POLE.getNeighborNodes(winner.getX(), winner.getY());
-			calculateGrowthErrorPropergation(temp);
+			//temp = NUMBER_POLE.getNeighborNodes(winner.getX(), winner.getY());
+			calculateGrowthErrorPropergation(winner);
 			winner.setAccumulatedError(GROWTH_THRESHOLD/2);
 		}
 		else
@@ -408,7 +421,7 @@ public class GSOMArray {
 			}
 			
 			winner.setBoundry(false);
-			winner.setAccumulatedError(GROWTH_THRESHOLD/2); //prejudeged according to the flow of text.
+			winner.setAccumulatedError(GROWTH_THRESHOLD/2); //Prejudged according to the flow of text.
 			//However, how to set this value is not specified in the thesis.
 		}	
 	}
