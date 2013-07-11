@@ -279,7 +279,7 @@ public class GSOMArray {
 	 * 
 	 * This method is called by {@link #presentSingleInput(ArrayRealVector)} to find the winner of a given input vector. The
 	 * winner is found by the using the minimum Euclidean distance between weight vector of the GSOMArrayNode and the input
-	 * vecto.
+	 * vector.
 	 */
 	private GSOMArrayNode getWinner(ArrayRealVector input)
 	{
@@ -313,7 +313,9 @@ public class GSOMArray {
 	 * @param winner as the winner node of the presentation of the input vector
 	 * @param inputVector as the input vector
 	 * 
-	 * Calculates the growth error of the winner.
+	 * Calculates the growth error of the winner. If the accumulated growth error is greater than what is specified in the
+	 * growth threshold it will trigger a recursive call to {@link #growNodes(GSOMArrayNode)} which call this method initially.
+	 * The highest observed error of the network is also updated with 
 	 */
 	private void calculateGrowthError(GSOMArrayNode winner, ArrayRealVector inputVector) 
 	{			
