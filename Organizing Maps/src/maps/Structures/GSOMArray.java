@@ -24,10 +24,8 @@
 
 package maps.Structures;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
 
+import java.util.StringTokenizer;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
 /**
@@ -35,7 +33,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
  * @date		Jul 8, 2013 - 7:44:07 PM
  * @type        GSOMArray
  *
- * Contains the array based implementation of the Growing Self-Organizing Map (GSOM) algorithm. Some of the assumptions made in this
+ * Contains the array based implementation of the Growing Self-Organizing Map (GSOM) algorithm. Some of the assumptions made in the
  * coding do not represent a one-to-one mapping of the Alahakoon et al. thesis. Most of these assumptions are in places where
  * there is no clear explanation is provided in the said thesis. Hence, this implementation could be marginally different from
  * the classic GSOM algorithm.
@@ -51,11 +49,12 @@ public class GSOMArray {
 	
 	private double INITIAL_ETA = 0.0; //Initial learning rate set by the user
 	private double INITIAL_NEIGHBORHOOD_RADIUS = 0.0; //Initial neighborhood radius set by the user
+	private double SPREAD_FACTOR = 0.0; //Spread factor set by user
 	private double GROWTH_THRESHOLD = 0.0; // GT calculated using the formula GT = -Dimensions*ln(SpreadFactor)
 	private double HIGHEST_ERROR = 0.0; //Highest accumulated quantization error observed in the network
 	private double LEARNING_RATE = 0.0; //Learning rate of the current epoch
 	private double RADIUS = 0.0; //Radius of the current epoch
-	private double ALPHA = 0.0; //discount factor of the learning rate.
+	private double ALPHA = 0.8; //discount factor of the learning rate.
 	private double FD = 0.5; //the Factor of Distribution (FD) 0 < gamma < 1
 	
 	private String INPUT_VECTORS = null; //Set of input vectors and a newline separated string
@@ -74,30 +73,41 @@ public class GSOMArray {
 	 * used. The array could be expanded to a larger array if the map growth exceeds the basic allocation. The offset variable
 	 * has to be recalculated each time.
 	 */
-	public GSOMArray(int dimension, int iteration, double learningRate, double radius, String inputVectors, DisplayLattice screen)
+	public GSOMArray(int dimension, int iteration, double learningRate, double radius, double spreadFactor, String inputVectors, DisplayLattice screen)
 	{
 		INPUT_DIMENSION = dimension;
 		NUMBER_OF_ITERATIONS = iteration;
+		SPREAD_FACTOR = spreadFactor;
 		INITIAL_NEIGHBORHOOD_RADIUS = radius;
 		INITIAL_ETA = learningRate;
 		INPUT_VECTORS = inputVectors;
 		LEARNING_RATE = INITIAL_ETA;
 		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS;
 				
-		GSOM = new GSOMArrayNode[71][71];
+		GSOM = new GSOMArrayNode[31][31];
 		setOffset();
 		
-		initElements();
+		calculateGrowthThreshold(); //sets growth threshold
+		initElements(); //initializes the basic structure
+		trainGSOM(INPUT_VECTORS); //sets training in motion
+	}
+	
+	/**
+	 * This method is called at initialization to calculate the gowth threshold based on the spread factor set by the user
+	 */
+	private void calculateGrowthThreshold()
+	{
+		GROWTH_THRESHOLD = -(INPUT_DIMENSION)*Math.log(SPREAD_FACTOR);
 	}
 	
 	/**
 	 * Creates the basic structure of the GSOM that contains four nodes.
 	 */
-	private void initElements()
+	private void initElements()	
 	{
 		GSOM[OFFSET][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 0);
-		GSOM[OFFSET][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 0, 1);
-		GSOM[OFFSET - 1][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 1, 0);
+		GSOM[OFFSET][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 0);
+		GSOM[OFFSET - 1][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 1);
 		GSOM[OFFSET - 1][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 1);
 		
 		NUMBER_OF_NODES_IN_NETWORK = 4;
@@ -149,7 +159,7 @@ public class GSOMArray {
 				 */
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
 				{ 
-					System.out.println(i);
+					System.out.println(i);					
 					winner = presentSingleInput(new ArrayRealVector(temp)); //idea of a return value is to halt further execution of code until the method call has returned.
 					calculateGrowthError(winner, new ArrayRealVector(temp)); //processes the QE and triggers node growth if required.
 					adjustNeighbourhoodOfWinner(winner, new ArrayRealVector(temp)); //adjust weights after the node growth has happened
@@ -189,24 +199,24 @@ public class GSOMArray {
 		
 		int ceilingValue = (int)Math.ceil(RADIUS); //takes the ceiling value radius so no array index will be missed
 		int x = node.getX() + OFFSET - ceilingValue; //find the leftmost X from the center node which is the winner
-		int y = node.getY() + OFFSET - ceilingValue; //find the topmost Y from the center node which is the winner
+		int y = ((-1)*node.getY()) + OFFSET - ceilingValue; //find the topmost Y from the center node which is the winner
 		ArrayRealVector tempWeights = null; //will hold the weight vector after the adjustment
 
 		/*
 		 * The loops move from the top of the square selected starting from x and y above. The width of the square is two
 		 * ceiling values. Upon iteration the Euclidian distance between the node chosen and the winner is checked to see 
 		 * whether it falls under the radius at the iteration. If it does not fall under the area of the radius or the GSOM
-		 * array posisiton is null the node in the position or the position is ignored.
+		 * array position is null the node in the position or the position is ignored.
 		 */
 		for(int i = 0 ; i <= 2*ceilingValue ; i++ )
 		{
 			for(int j = 0; j <= 2*ceilingValue ; j++)
 			{
-				if(GSOM[x+i][y+j] != null && getEculidianDistance(GSOM[x+i][y+j], winner) <= RADIUS) //null and radius check
+				if(GSOM[y+j][x+i] != null && getEculidianDistance(GSOM[y+j][x+i], winner) <= RADIUS) //null and radius check
 				{
 					//calculates the weights of the node by applying the Eta rule
-					tempWeights = GSOM[x+i][y+j].getWEIGHTS().add((input.subtract(GSOM[x+i][y+j].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
-					GSOM[x+i][y+j].setWEIGHTS(tempWeights); //sets the calculated set of weights to the node
+					tempWeights = GSOM[y+j][x+i].getWEIGHTS().add((input.subtract(GSOM[y+j][x+i].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
+					GSOM[y+j][x+i].setWEIGHTS(tempWeights); //sets the calculated set of weights to the node
 				}
 			}
 		}
@@ -324,7 +334,7 @@ public class GSOMArray {
 
 		if(winner.getAccumulatedError() >= GROWTH_THRESHOLD)
 		{
-			if(winner.getAccumulatedError() < HIGHEST_ERROR)
+			if(winner.getAccumulatedError() > HIGHEST_ERROR)
 			{
 				HIGHEST_ERROR = winner.getAccumulatedError();
 			}
@@ -341,13 +351,13 @@ public class GSOMArray {
 	private void calculateGrowthErrorPropergation(GSOMArrayNode winner)
 	{
 		int x = winner.getX() + OFFSET;
-		int y = winner.getY() + OFFSET;
+		int y = ((-1)*winner.getY()) + OFFSET;
 		GSOMArrayNode[] neighbours = new GSOMArrayNode[4]; //since there is only four direct neighbors
 		
-		neighbours[0] = GSOM[x][y-1]; //left
-		neighbours[1] = GSOM[x][y+1]; //right
-		neighbours[2] = GSOM[x-1][y]; //up
-		neighbours[3] = GSOM[x+1][y]; //down
+		neighbours[0] = GSOM[y][x-1]; //left
+		neighbours[1] = GSOM[y][x+1]; //right
+		neighbours[2] = GSOM[y-1][x]; //up
+		neighbours[3] = GSOM[y+1][x]; //down
 						
 		for(int i = 0; i < neighbours.length; i++)
 		{
@@ -366,60 +376,55 @@ public class GSOMArray {
 		}
 	}
 	
+	/**
+	 * @param winner as the winner node
+	 * 
+	 * If the growth error of a node calculated by {@link #calculateGrowthError(GSOMArrayNode, ArrayRealVector)} is greater
+	 * than the specified {@link #GROWTH_THRESHOLD} would trigger this method. This method adds nodes as the neighbor of the
+	 * winner in all possible locations. If the winner is not a boundary node it will share the weights and create a propagate
+	 * effect if the weight sharing exceeds the growth threshold of a neighboring node. (Could be modified to better represent
+	 * Tobi's work.)
+	 */
 	private void growNodes(GSOMArrayNode winner) 
 	{
-		
-		GSOMArrayNode left =null, right=null, up=null, down=null;
-		GSOMNode[] temp = null;
-		
-		int X = winner.getX() + OFFSET;
-		int Y = winner.getY() + OFFSET;
+		//find array positions of the winner node
+		int X = winner.getX() + OFFSET; 
+		int Y = (winner.getY()*(-1)) + OFFSET;
 		
 		
 		if(!winner.isBoundry())
 		{
-			//temp = NUMBER_POLE.getNeighborNodes(winner.getX(), winner.getY());
 			calculateGrowthErrorPropergation(winner);
 			winner.setAccumulatedError(GROWTH_THRESHOLD/2);
 		}
 		else
 		{
-			if(GSOM[X][Y - 1] == null)
+			if(GSOM[Y - 1][X] == null)
 			{
-				GSOM[X][Y - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, Y - 1 - OFFSET);
-				
+				GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
 				NUMBER_OF_NODES_IN_NETWORK++;
-				
-				setWeightsOfNewNode(GSOM[X][Y - 1], winner, true, false, false, false);
+				setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
 			}
 			
-			if(GSOM[X][Y + 1] == null)
+			if(GSOM[Y + 1][X] == null)
 			{
-				GSOM[X][Y + 1] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, Y + 1 - OFFSET);
-				
+				GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
 				NUMBER_OF_NODES_IN_NETWORK++;
-				
-				setWeightsOfNewNode(GSOM[X][Y + 1], winner, false, true, false, false);
-
+				setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
 			}
 			
-			if(GSOM[X - 1][Y] == null)
+			if(GSOM[Y][X - 1] == null)
 			{
-				GSOM[X - 1][Y] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, Y - OFFSET);
-				
+				GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
 				NUMBER_OF_NODES_IN_NETWORK++;
-
-				setWeightsOfNewNode(GSOM[X - 1][Y], winner, false, false, true, false);
-
+				setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
 			}
 			
-			if(GSOM[X + 1][Y] == null)
+			if(GSOM[Y][X + 1] == null)
 			{
-				GSOM[X + 1][Y] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, Y - OFFSET);
-				
+				GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));
 				NUMBER_OF_NODES_IN_NETWORK++;
-				
-				setWeightsOfNewNode(GSOM[X + 1][Y], winner, false, false, false, true);
+				setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
 			}
 			
 			winner.setBoundry(false);
@@ -428,18 +433,36 @@ public class GSOMArray {
 		}	
 	}
 
+	/**
+	 * @param newNode as the newly inserted node
+	 * @param winner as the winner node
+	 * @param isLeft is the new node is set left of the winner
+	 * @param isRight is the new node is set right of the winner
+	 * @param isUp is the new node is set above of the winner
+	 * @param isDown is the new node is set below of the winner
+	 * 
+	 * This method calculates the weights of the newly created nodes and calls the corresponding weight calculation method.
+	 */
 	private void setWeightsOfNewNode(GSOMArrayNode newNode, GSOMArrayNode winner, boolean isLeft,
 			boolean isRight, boolean isUp, boolean isDown) 
 	{
 		//case 2 first then 1 and 3, 4 unlikely
 		
+		int realWinnerX = winner.getX();
+		int realWinnerY = winner.getY()*(-1);
+		int realNewX = newNode.getX();
+		int realNewY = newNode.getY()*(-1);
+				
+		
 		GSOMArrayNode sequeceNodeToWinner = null; //for cases 1 and 3
 		GSOMArrayNode oppositeToNewNode = null; //for case 2
-				
+		System.out.println("OFFSET =" + OFFSET);
+		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET + 1) );
+		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET - 1) );
 		if(isLeft)
 		{
-			sequeceNodeToWinner = GSOM[winner.getX() + OFFSET][winner.getY() + OFFSET + 1];
-			oppositeToNewNode = GSOM[newNode.getX() + OFFSET][newNode.getY() + OFFSET - 1];
+			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET][realWinnerX + OFFSET + 1];
+			oppositeToNewNode = GSOM[realNewY + OFFSET][realNewX + OFFSET - 1];
 			
 			if(oppositeToNewNode != null)
 			{
@@ -456,8 +479,8 @@ public class GSOMArray {
 		}
 		else if(isRight)
 		{
-			sequeceNodeToWinner = GSOM[winner.getX() + OFFSET][winner.getY() + OFFSET - 1];
-			oppositeToNewNode = GSOM[newNode.getX() + OFFSET][newNode.getY() + OFFSET + 1];
+			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET][realWinnerX + OFFSET - 1];
+			oppositeToNewNode = GSOM[realNewY + OFFSET][realNewX + OFFSET + 1];
 			
 			if(oppositeToNewNode != null)
 			{
@@ -474,8 +497,8 @@ public class GSOMArray {
 		}
 		else if(isUp)
 		{
-			sequeceNodeToWinner = GSOM[winner.getX() + OFFSET - 1][winner.getY() + OFFSET];	
-			oppositeToNewNode =  GSOM[newNode.getX() + OFFSET - 1][newNode.getY() + OFFSET];
+			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET + 1][realWinnerX + OFFSET];	
+			oppositeToNewNode =  GSOM[realNewY + OFFSET - 1][realNewX + OFFSET];
 			
 			if(oppositeToNewNode != null)
 			{
@@ -492,8 +515,8 @@ public class GSOMArray {
 		}
 		else if(isDown)
 		{
-			sequeceNodeToWinner = GSOM[winner.getX() + OFFSET + 1][winner.getY() + OFFSET];
-			oppositeToNewNode = GSOM[newNode.getX() + OFFSET + 1][newNode.getY() + OFFSET];
+			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET - 1][realWinnerX + OFFSET];
+			oppositeToNewNode = GSOM[realNewY + OFFSET + 1][realNewX + OFFSET];
 			
 			if(oppositeToNewNode != null)
 			{
@@ -510,6 +533,11 @@ public class GSOMArray {
 		}
 	}
 	
+	/**
+	 * @param newNode as the new node inserted to the GSOM
+	 * @param winner as the winner 
+	 * @param other as the immediate neighbor to the winner in the opposite direction to the new node
+	 */
 	private void categoryOneGrowth(GSOMArrayNode newNode, GSOMArrayNode winner, GSOMArrayNode other)
 	{
 		double w1=0, w2=0;
@@ -533,9 +561,9 @@ public class GSOMArray {
 	}
 	
 	/**
-	 * @param newNode
-	 * @param winner
-	 * @param other
+	 * @param newNode as the new node inserted to the GSOM
+	 * @param winner as the winner 
+	 * @param other as the immediate neighbor to the new node
 	 */
 	private void categoryTwoGrowth(GSOMArrayNode newNode, GSOMArrayNode winner, GSOMArrayNode other)
 	{
@@ -543,12 +571,12 @@ public class GSOMArray {
 	}
 
 	/**
-	 * @param newNode
-	 * @param winner
-	 * @param isLeft
-	 * @param isRight
-	 * @param isUp
-	 * @param isDown
+	 * @param newNode as the new node inserted to the GSOM
+	 * @param winner as the winner
+	 * @param isLeft is the new node is set left of the winner
+	 * @param isRight is the new node is set right of the winner
+	 * @param isUp is the new node is set above of the winner
+	 * @param isDown is the new node is set below of the winner
 	 */
 	private void categoryThreeGrowth(GSOMArrayNode newNode, GSOMArrayNode winner, boolean isLeft, boolean isRight, 
 			boolean isUp, boolean isDown)
@@ -558,13 +586,13 @@ public class GSOMArray {
 		
 		if(isLeft || isRight)
 		{
-			candidateNode1 = GSOM[winner.getX() + OFFSET - 1][winner.getY() + OFFSET];
-			candidateNode2 = GSOM[winner.getX() + OFFSET + 1][winner.getY() + OFFSET];
+			candidateNode1 = GSOM[(winner.getY()*(-1)) + OFFSET - 1][winner.getX() + OFFSET];
+			candidateNode2 = GSOM[(winner.getY()*(-1)) + OFFSET + 1][winner.getX() + OFFSET];
 		}
 		else if(isDown || isUp)
 		{
-			candidateNode1 = GSOM[winner.getX() + OFFSET][winner.getY() + OFFSET - 1];
-			candidateNode2 = GSOM[winner.getX() + OFFSET][winner.getY() + OFFSET + 1];
+			candidateNode1 = GSOM[(winner.getY()*(-1)) + OFFSET][winner.getX() + OFFSET - 1];
+			candidateNode2 = GSOM[(winner.getY()*(-1)) + OFFSET][winner.getX() + OFFSET + 1];
 		}
 		
 		if(candidateNode1 != null)
@@ -582,11 +610,14 @@ public class GSOMArray {
 	}
 
 	/**
-	 * @param newNode
-	 * @param winner
+	 * @param newNode as the newly inserted node to the GSOM
+	 * @param winner as the winner
+	 * 
+	 * This method should never be called in execution. GSOM has not implemented node removal methods yet. Hence, this method
+	 * at this point is useless.
 	 */
-	private void categoryFourGrowth(GSOMArrayNode newNode, GSOMArrayNode winner) {
-		// TODO Auto-generated method stub
+	private void categoryFourGrowth(GSOMArrayNode newNode, GSOMArrayNode winner)
+	{
 		double[] temp = new double[INPUT_DIMENSION];
 		for(int i = 0; i < temp.length ; i++)
 		{
@@ -596,7 +627,11 @@ public class GSOMArray {
 		newNode.setWEIGHTS(new ArrayRealVector(temp));
 	}
 	
-	
+	/**
+	 * @param input as the input vector
+	 * @param node as the node to calculate the distance
+	 * @return returns the distance between the input vector and the weight vector associated with the node
+	 */
 	private double getEuclideanAccumulatedValue(ArrayRealVector input, GSOMArrayNode node)
 	{
 		double temp = 0.0;
@@ -606,11 +641,18 @@ public class GSOMArray {
 		return temp;
 	}
 	
+	/**
+	 * Calculates the offset value for the GSOM array. If the GSOM array is reinitialized for a large array size this method
+	 * has to be called after each re-initialization.
+	 */
 	public void setOffset()
 	{
 		OFFSET = (GSOM.length - 1)/2;
 	}
 	
+	/**
+	 * Utility method to print the coordinates of the GSOM
+	 */
 	public void printGSOM()
 	{
 		for(int i = 0; i < GSOM.length ; i++){
