@@ -208,7 +208,7 @@ public class GSOMArray {
 		 * whether it falls under the radius at the iteration. If it does not fall under the area of the radius or the GSOM
 		 * array position is null the node in the position or the position is ignored.
 		 */
-		for(int i = 0 ; i <= 2*ceilingValue ; i++ )
+		for(int i = 0 ; i <= 2*ceilingValue ; i++ ) 
 		{
 			for(int j = 0; j <= 2*ceilingValue ; j++)
 			{
@@ -399,34 +399,43 @@ public class GSOMArray {
 		}
 		else
 		{
-			if(GSOM[Y - 1][X] == null)
-			{
-				GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
-				NUMBER_OF_NODES_IN_NETWORK++;
-				setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
+			try{
+				if(GSOM[Y - 1][X] == null)
+				{
+					GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
+					NUMBER_OF_NODES_IN_NETWORK++;
+					setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
+				}
+
+				if(GSOM[Y + 1][X] == null)
+				{
+					GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
+					NUMBER_OF_NODES_IN_NETWORK++;
+					setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
+				}
+
+				if(GSOM[Y][X - 1] == null)
+				{
+					GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
+					NUMBER_OF_NODES_IN_NETWORK++;
+					setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
+				}
+
+				if(GSOM[Y][X + 1] == null)
+				{
+					GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X + 1 - OFFSET, ((Y - OFFSET)*(-1)));
+					NUMBER_OF_NODES_IN_NETWORK++;
+					setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
+				}
 			}
-			
-			if(GSOM[Y + 1][X] == null)
+			catch(ArrayIndexOutOfBoundsException exp)
 			{
-				GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
-				NUMBER_OF_NODES_IN_NETWORK++;
-				setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
+				System.out.println("Winner is at X=" + X + ", Y=" + Y + ". Growth has resulted in an overflow, initializing " +
+						"the array to large size");
+				RedimArray();
+				growNodes(winner);
 			}
-			
-			if(GSOM[Y][X - 1] == null)
-			{
-				GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
-				NUMBER_OF_NODES_IN_NETWORK++;
-				setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
-			}
-			
-			if(GSOM[Y][X + 1] == null)
-			{
-				GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));
-				NUMBER_OF_NODES_IN_NETWORK++;
-				setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
-			}
-			
+
 			winner.setBoundry(false);
 			winner.setAccumulatedError(GROWTH_THRESHOLD/2); //Prejudged according to the flow of text.
 			//However, how to set this value is not specified in the thesis.
@@ -669,5 +678,32 @@ public class GSOMArray {
 			}
 			System.out.println('\n');
 		}
+	}
+	
+	
+	/**
+	 * If the growth of the GSOM exceeds the initial array allocation this method increases the size of the GSOM array length
+	 * by 10 per each call and reinitializes the offset value.
+	 */
+	private void RedimArray()
+	{
+		int oldArrayLenth = GSOM.length;
+		
+		GSOMArrayNode[][] temp = new GSOMArrayNode[oldArrayLenth+10][oldArrayLenth+10];
+		
+		for(int i = 0 ; i < GSOM.length; i++)
+		{
+			for(int j = 0; j< GSOM[0].length; j++)
+			{
+				if(GSOM[i][j] != null)
+				{
+					temp[i+5][j+5] = GSOM[i][j];
+				}
+			}
+		}
+		
+		GSOM = temp;
+		
+		setOffset();
 	}
 }

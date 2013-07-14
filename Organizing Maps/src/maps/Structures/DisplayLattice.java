@@ -6,8 +6,6 @@ package maps.Structures;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
 public class DisplayLattice extends JPanel  {
