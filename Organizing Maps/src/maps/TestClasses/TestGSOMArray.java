@@ -23,7 +23,7 @@ public class TestGSOMArray {
 				"\\01.Randa Rasanga - [Clean]\\12333.txt", 1);
 		
 		GSOMArray gsom = new GSOMArray(fp.getDataDimension(), 100, 0.25, 5, 0.8, fp.readFile(), null);
-		gsom.printGSOM();
+		//gsom.printGSOM();
 	}
 
 }

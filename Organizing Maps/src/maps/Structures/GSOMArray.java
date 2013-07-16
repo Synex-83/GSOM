@@ -84,12 +84,13 @@ public class GSOMArray {
 		LEARNING_RATE = INITIAL_ETA;
 		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS;
 				
-		GSOM = new GSOMArrayNode[31][31];
+		GSOM = new GSOMArrayNode[91][91];
 		setOffset();
 		
 		calculateGrowthThreshold(); //sets growth threshold
 		initElements(); //initializes the basic structure
 		trainGSOM(INPUT_VECTORS); //sets training in motion
+		printGSOM();
 	}
 	
 	/**
@@ -130,6 +131,7 @@ public class GSOMArray {
 		
 		StringTokenizer inputTokens = new StringTokenizer(input, "\n");
 		inputTokens.nextToken();
+		int run = 1;
 		
 		while(inputTokens.hasMoreTokens()) //the input is tokenized and iterated till the complete set is over.
 		{
@@ -154,21 +156,25 @@ public class GSOMArray {
 				 * provided by the user. Initially the winner is chosen for the given input vector. Then the winner nodes growth error is increased to 
 				 * represent the differences in the nodes weight vector and the input vector. Increasing the error value will 
 				 * trigger the growth of nodes if it suffices the growth conditions. Then the weights of the neighborhood nodes
-				 * are adjusted. Finally the learning rate and the effective neighbourhood radius is decayed according to the
+				 * are adjusted. Finally the learning rate and the effective neighborhood radius is decayed according to the
 				 * specification given in the algorithm.
 				 */
+				
+				System.out.println("##################################### RUN = " + run);	
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
 				{ 
-					System.out.println(i);					
 					winner = presentSingleInput(new ArrayRealVector(temp)); //idea of a return value is to halt further execution of code until the method call has returned.
 					calculateGrowthError(winner, new ArrayRealVector(temp)); //processes the QE and triggers node growth if required.
 					adjustNeighbourhoodOfWinner(winner, new ArrayRealVector(temp)); //adjust weights after the node growth has happened
 					learningRateDecay();
 					radiusDecay(i);
+					
+					//System.out.println(" X = " + winner.getX() + " Y = " + winner.getY());
 				}
 				
 				LEARNING_RATE = INITIAL_ETA; //Reseting the value for the next input
 				RADIUS = INITIAL_NEIGHBORHOOD_RADIUS; //Reseting the value for the next input
+				run++;
 			}
 		}
 	}
@@ -201,6 +207,18 @@ public class GSOMArray {
 		int x = node.getX() + OFFSET - ceilingValue; //find the leftmost X from the center node which is the winner
 		int y = ((-1)*node.getY()) + OFFSET - ceilingValue; //find the topmost Y from the center node which is the winner
 		ArrayRealVector tempWeights = null; //will hold the weight vector after the adjustment
+		
+		try
+		{
+			if(GSOM[y][x] != null || GSOM[y + 2*ceilingValue][x] != null || GSOM[y][x  + 2*ceilingValue] != null || GSOM[y + 2*ceilingValue][x  + 2*ceilingValue] != null);
+		}
+		catch (ArrayIndexOutOfBoundsException index)
+		{
+			System.out.println("Array index has resulted in an overflow, initializing " +
+					"the array to large size");
+			RedimArray();
+			adjustWeightVectors(node, input);
+		}
 
 		/*
 		 * The loops move from the top of the square selected starting from x and y above. The width of the square is two
@@ -252,7 +270,7 @@ public class GSOMArray {
 	 */
 	private void radiusDecay(int currentIteration)
 	{
-		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS*Math.exp(currentIteration/(NUMBER_OF_ITERATIONS/4));
+		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS*Math.exp(-(currentIteration)/(NUMBER_OF_ITERATIONS/4));
 	}
 	
 	/**
@@ -350,6 +368,7 @@ public class GSOMArray {
 	 */
 	private void calculateGrowthErrorPropergation(GSOMArrayNode winner)
 	{
+		
 		int x = winner.getX() + OFFSET;
 		int y = ((-1)*winner.getY()) + OFFSET;
 		GSOMArrayNode[] neighbours = new GSOMArrayNode[4]; //since there is only four direct neighbors
@@ -363,15 +382,20 @@ public class GSOMArray {
 		{
 			if(neighbours[i] != null)
 			{
-				neighbours[i].setAccumulatedError(neighbours[i].getAccumulatedError() + FD*neighbours[i].getAccumulatedError());
+				// I have a problem with this equation since discounting the own nodes error value will not propagate anything
+				// and since it is zero to start with will always remain zero.
+				neighbours[i].setAccumulatedError(neighbours[i].getAccumulatedError() + FD*neighbours[i].getAccumulatedError()); 
+			/*	
 				if(neighbours[i].getAccumulatedError() >= GROWTH_THRESHOLD)
 				{
 					if(neighbours[i].getAccumulatedError() < HIGHEST_ERROR)
 					{
 						HIGHEST_ERROR = neighbours[i].getAccumulatedError();
 					}		
+					
+					//System.out.println(" X = " + neighbours[i].getX() + " Y = " + neighbours[i].getY());
 					growNodes(neighbours[i]);
-				}
+				}*/
 			}
 		}
 	}
@@ -394,8 +418,11 @@ public class GSOMArray {
 		
 		if(!winner.isBoundry())
 		{
-			calculateGrowthErrorPropergation(winner);
+			//System.out.println("BEFORE X = " + winner.getX() + " Y = " + winner.getY() + " error = " + winner.getAccumulatedError());
 			winner.setAccumulatedError(GROWTH_THRESHOLD/2);
+			//System.out.println("AFTER X = " + winner.getX() + " Y = " + winner.getY() + " error = " + winner.getAccumulatedError());
+			calculateGrowthErrorPropergation(winner);
+			//winner.setAccumulatedError(GROWTH_THRESHOLD/2);
 		}
 		else
 		{
@@ -404,6 +431,7 @@ public class GSOMArray {
 				{
 					GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
 					NUMBER_OF_NODES_IN_NETWORK++;
+					//System.out.println("X = " + GSOM[Y - 1][X].getX() + " Y = " + GSOM[Y - 1][X].getY() );
 					setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
 				}
 
@@ -411,6 +439,7 @@ public class GSOMArray {
 				{
 					GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
 					NUMBER_OF_NODES_IN_NETWORK++;
+					//System.out.println("X = " + GSOM[Y + 1][X].getX() + " Y = " + GSOM[Y + 1][X].getY() );
 					setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
 				}
 
@@ -418,6 +447,7 @@ public class GSOMArray {
 				{
 					GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
 					NUMBER_OF_NODES_IN_NETWORK++;
+					//System.out.println("X = " + GSOM[Y][X - 1].getX() + " Y = " + GSOM[Y][X - 1].getY() );
 					setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
 				}
 
@@ -425,6 +455,7 @@ public class GSOMArray {
 				{
 					GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X + 1 - OFFSET, ((Y - OFFSET)*(-1)));
 					NUMBER_OF_NODES_IN_NETWORK++;
+					//System.out.println("X = " + GSOM[Y][X + 1].getX() + " Y = " + GSOM[Y][X + 1].getY() );
 					setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
 				}
 			}
@@ -465,9 +496,9 @@ public class GSOMArray {
 		
 		GSOMArrayNode sequeceNodeToWinner = null; //for cases 1 and 3
 		GSOMArrayNode oppositeToNewNode = null; //for case 2
-		System.out.println("OFFSET =" + OFFSET);
+/*		System.out.println("OFFSET =" + OFFSET);
 		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET + 1) );
-		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET - 1) );
+		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET - 1) );*/
 		if(isLeft)
 		{
 			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET][realWinnerX + OFFSET + 1];
@@ -669,11 +700,18 @@ public class GSOMArray {
 			{
 				if(GSOM[i][j] == null)
 				{
-					System.out.print("N ");
+					System.out.print("\t");
 				}
 				else
 				{
-					System.out.print(GSOM[i][j].getX()+","+GSOM[i][j].getY()+" ");
+					if(GSOM[i][j].getNumberOfHits() > 0)
+					{
+						System.out.print(GSOM[i][j].getX()+","+GSOM[i][j].getY()+"\t");
+					}
+					else
+					{
+						System.out.print("x\t");
+					}
 				}
 			}
 			System.out.println('\n');
