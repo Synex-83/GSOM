@@ -48,13 +48,16 @@ public class GSOMArray {
 	private int NUMBER_OF_ITERATIONS = 0; //Number of iteration an input needs to be presented
 	
 	private double INITIAL_ETA = 0.0; //Initial learning rate set by the user
+	private double SMOOTHING_ETA = 0.0; //Initial learning rate of the smoothing phase initialized (INITIAL_ETA/2)
 	private double INITIAL_NEIGHBORHOOD_RADIUS = 0.0; //Initial neighborhood radius set by the user
 	private double SPREAD_FACTOR = 0.0; //Spread factor set by user
 	private double GROWTH_THRESHOLD = 0.0; // GT calculated using the formula GT = -Dimensions*ln(SpreadFactor)
 	private double HIGHEST_ERROR = 0.0; //Highest accumulated quantization error observed in the network
 	private double LEARNING_RATE = 0.0; //Learning rate of the current epoch
+	private double LEARNING_RATE_SMOOTHING = 0.0; //Learning rate of the current smoothing epoch
 	private double RADIUS = 0.0; //Radius of the current epoch
 	private double ALPHA = 0.8; //discount factor of the learning rate.
+	private double ALPHA_SMOOTHING = 0.9; //discount factor of the learning rate of the smoothing phase.
 	private double FD = 0.5; //the Factor of Distribution (FD) 0 < gamma < 1
 	
 	private String INPUT_VECTORS = null; //Set of input vectors and a newline separated string
@@ -82,6 +85,8 @@ public class GSOMArray {
 		INITIAL_ETA = learningRate;
 		INPUT_VECTORS = inputVectors;
 		LEARNING_RATE = INITIAL_ETA;
+		SMOOTHING_ETA = INITIAL_ETA/2;
+		LEARNING_RATE_SMOOTHING = SMOOTHING_ETA;
 		RADIUS = INITIAL_NEIGHBORHOOD_RADIUS;
 				
 		GSOM = new GSOMArrayNode[91][91];
@@ -90,6 +95,8 @@ public class GSOMArray {
 		calculateGrowthThreshold(); //sets growth threshold
 		initElements(); //initializes the basic structure
 		trainGSOM(INPUT_VECTORS); //sets training in motion
+		printGSOM();
+		smoothGSOM(INPUT_VECTORS); //starts the smoothing phase
 		printGSOM();
 	}
 	
@@ -128,6 +135,7 @@ public class GSOMArray {
 		String line = "";
 		double temp[] = null; 
 		GSOMArrayNode winner = null;
+		ArrayRealVector tempInputVector = null;
 		
 		StringTokenizer inputTokens = new StringTokenizer(input, "\n");
 		inputTokens.nextToken();
@@ -149,7 +157,8 @@ public class GSOMArray {
 				{
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
-								
+							
+				tempInputVector = new ArrayRealVector(temp);
 				/*
 				 * The loop goes from 0...70 initially and could be different in the case a redefinition of the array has taken
 				 * place due to lack of allocated array space. A single input sample is presented for the number of iterations
@@ -160,13 +169,13 @@ public class GSOMArray {
 				 * specification given in the algorithm.
 				 */
 				
-				System.out.println("##################################### RUN = " + run);	
+				System.out.println("##################################### RUN = " + run);
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
 				{ 
-					winner = presentSingleInput(new ArrayRealVector(temp)); //idea of a return value is to halt further execution of code until the method call has returned.
-					calculateGrowthError(winner, new ArrayRealVector(temp)); //processes the QE and triggers node growth if required.
-					adjustNeighbourhoodOfWinner(winner, new ArrayRealVector(temp)); //adjust weights after the node growth has happened
-					learningRateDecay();
+					winner = presentSingleInput(tempInputVector); //idea of a return value is to halt further execution of code until the method call has returned.
+					calculateGrowthError(winner, tempInputVector,false); //processes the QE and triggers node growth if required.
+					adjustNeighbourhoodOfWinner(winner, tempInputVector,false); //adjust weights after the node growth has happened
+					learningRateDecay(false);
 					radiusDecay(i);
 					
 					//System.out.println(" X = " + winner.getX() + " Y = " + winner.getY());
@@ -182,24 +191,26 @@ public class GSOMArray {
 	/**
 	 * @param winner as the winner node of the current input presentation
 	 * @param inputVector as the input vector that corresponds to the winner node
+	 * @param isSmoothing as the learning calculation for the smoothing phase is selected
 	 * 
 	 * This method is called by {@link #trainGSOM(String)}. Adjusts the weight vectors of the winner's neighboring nodes. The neighborhood nodes are selected based on the radius
 	 * value given by the user. The radius value will diminish over time and eventually come down to only one node which is
 	 * the winner itself.
 	 */
-	private void adjustNeighbourhoodOfWinner(GSOMArrayNode winner, ArrayRealVector inputVector) 
+	private void adjustNeighbourhoodOfWinner(GSOMArrayNode winner, ArrayRealVector inputVector, boolean isSmooth) 
 	{
-		adjustWeightVectors(winner, inputVector);
+		adjustWeightVectors(winner, inputVector, isSmooth);
 	}
 	
 	/**
 	 * @param node as the center node of the weight adjustment region
 	 * @param input as the input vector that corresponds to the current iteration
+	 * @param isSmoothing as the learning calculation for the smoothing phase is selected
 	 * 
 	 * This method is called by {@link #adjustWeightVectors(GSOMArrayNode, ArrayRealVector)}. This method contains the inner
 	 * workings of the neighborhood weight adjustment.
 	 */
-	private void adjustWeightVectors(GSOMArrayNode node, ArrayRealVector input)
+	private void adjustWeightVectors(GSOMArrayNode node, ArrayRealVector input, boolean isSmooth)
 	{
 		GSOMArrayNode winner = node; 
 		
@@ -217,7 +228,7 @@ public class GSOMArray {
 			System.out.println("Array index has resulted in an overflow, initializing " +
 					"the array to large size");
 			RedimArray();
-			adjustWeightVectors(node, input);
+			adjustWeightVectors(node, input, false);
 		}
 
 		/*
@@ -226,28 +237,63 @@ public class GSOMArray {
 		 * whether it falls under the radius at the iteration. If it does not fall under the area of the radius or the GSOM
 		 * array position is null the node in the position or the position is ignored.
 		 */
-		for(int i = 0 ; i <= 2*ceilingValue ; i++ ) 
+		if(isSmooth)
 		{
-			for(int j = 0; j <= 2*ceilingValue ; j++)
+			if(GSOM[y][x-1] != null)
 			{
-				if(GSOM[y+j][x+i] != null && getEculidianDistance(GSOM[y+j][x+i], winner) <= RADIUS) //null and radius check
+				tempWeights = GSOM[y][x-1].getWEIGHTS().add((input.subtract(GSOM[y][x-1].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE_SMOOTHING));
+				GSOM[y][x-1].setWEIGHTS(tempWeights);
+			}
+			else if(GSOM[y][x+1] != null)
+			{
+				tempWeights = GSOM[y][x+1].getWEIGHTS().add((input.subtract(GSOM[y][x+1].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE_SMOOTHING));
+				GSOM[y][x+1].setWEIGHTS(tempWeights);
+			}
+			else if(GSOM[y-1][x] != null)
+			{
+				tempWeights = GSOM[y-1][x].getWEIGHTS().add((input.subtract(GSOM[y-1][x].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE_SMOOTHING));
+				GSOM[y-1][x].setWEIGHTS(tempWeights);
+			}
+			else if(GSOM[y+1][x] != null)
+			{
+				tempWeights = GSOM[y+1][x].getWEIGHTS().add((input.subtract(GSOM[y+1][x].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE_SMOOTHING));
+				GSOM[y+1][x].setWEIGHTS(tempWeights);
+			}		
+		}
+		else
+		{
+			for(int i = 0 ; i <= 2*ceilingValue ; i++ ) 
+			{
+				for(int j = 0; j <= 2*ceilingValue ; j++)
 				{
-					//calculates the weights of the node by applying the Eta rule
-					tempWeights = GSOM[y+j][x+i].getWEIGHTS().add((input.subtract(GSOM[y+j][x+i].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
-					GSOM[y+j][x+i].setWEIGHTS(tempWeights); //sets the calculated set of weights to the node
+					if(GSOM[y+j][x+i] != null && getEculidianDistance(GSOM[y+j][x+i], winner) <= RADIUS) //null and radius check
+					{
+						//calculates the weights of the node by applying the Eta rule
+						tempWeights = GSOM[y+j][x+i].getWEIGHTS().add((input.subtract(GSOM[y+j][x+i].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
+						GSOM[y+j][x+i].setWEIGHTS(tempWeights); //sets the calculated set of weights to the node
+					}
 				}
 			}
 		}
 	}
 	
 	/**
+	 * @param isSmoothing as the learning calculation for the smoothing phase is selected
+	 * 
 	 * This method is called by {@link #trainGSOM(String)} to decay the learning rate during each call. The decay depends on the current learning rate and the discount value
 	 * presented by the user. Furthermore,  the number of nodes present in the network in also taken into consideration when
-	 * calculating the new learning rate.
+	 * calculating the new learning rate. This method calculates the learning rate of the smoothing phase as well.
 	 */
-	private void learningRateDecay()
+	private void learningRateDecay(boolean isSmoothing)
 	{
-		LEARNING_RATE = ALPHA*CHI(NUMBER_OF_NODES_IN_NETWORK)*LEARNING_RATE;
+		if(isSmoothing)
+		{
+			LEARNING_RATE_SMOOTHING = ALPHA_SMOOTHING*CHI(NUMBER_OF_NODES_IN_NETWORK)*LEARNING_RATE_SMOOTHING;
+		}
+		else
+		{
+			LEARNING_RATE = ALPHA*CHI(NUMBER_OF_NODES_IN_NETWORK)*LEARNING_RATE;
+		}
 	}
 	
 	/**
@@ -345,7 +391,7 @@ public class GSOMArray {
 	 * growth threshold it will trigger a recursive call to {@link #growNodes(GSOMArrayNode)} which call this method initially.
 	 * The highest observed error of the network is also updated with 
 	 */
-	private void calculateGrowthError(GSOMArrayNode winner, ArrayRealVector inputVector) 
+	private void calculateGrowthError(GSOMArrayNode winner, ArrayRealVector inputVector, boolean isSmoothing) 
 	{			
 		double differenceInVectors = (inputVector.subtract(winner.getWEIGHTS())).getNorm();		
 		winner.setAccumulatedError(winner.getAccumulatedError() + differenceInVectors);
@@ -356,7 +402,7 @@ public class GSOMArray {
 			{
 				HIGHEST_ERROR = winner.getAccumulatedError();
 			}
-			growNodes(winner);			
+			growNodes(winner, isSmoothing);			
 		}		
 	}
 	
@@ -402,6 +448,7 @@ public class GSOMArray {
 	
 	/**
 	 * @param winner as the winner node
+	 * @param isSmoothing as the check for the smoothing phase
 	 * 
 	 * If the growth error of a node calculated by {@link #calculateGrowthError(GSOMArrayNode, ArrayRealVector)} is greater
 	 * than the specified {@link #GROWTH_THRESHOLD} would trigger this method. This method adds nodes as the neighbor of the
@@ -409,7 +456,7 @@ public class GSOMArray {
 	 * effect if the weight sharing exceeds the growth threshold of a neighboring node. (Could be modified to better represent
 	 * Tobi's work.)
 	 */
-	private void growNodes(GSOMArrayNode winner) 
+	private void growNodes(GSOMArrayNode winner, boolean isSmoothing) 
 	{
 		//find array positions of the winner node
 		int X = winner.getX() + OFFSET; 
@@ -426,48 +473,52 @@ public class GSOMArray {
 		}
 		else
 		{
-			try{
-				if(GSOM[Y - 1][X] == null)
-				{
-					GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
-					NUMBER_OF_NODES_IN_NETWORK++;
-					//System.out.println("X = " + GSOM[Y - 1][X].getX() + " Y = " + GSOM[Y - 1][X].getY() );
-					setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
-				}
-
-				if(GSOM[Y + 1][X] == null)
-				{
-					GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
-					NUMBER_OF_NODES_IN_NETWORK++;
-					//System.out.println("X = " + GSOM[Y + 1][X].getX() + " Y = " + GSOM[Y + 1][X].getY() );
-					setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
-				}
-
-				if(GSOM[Y][X - 1] == null)
-				{
-					GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
-					NUMBER_OF_NODES_IN_NETWORK++;
-					//System.out.println("X = " + GSOM[Y][X - 1].getX() + " Y = " + GSOM[Y][X - 1].getY() );
-					setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
-				}
-
-				if(GSOM[Y][X + 1] == null)
-				{
-					GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X + 1 - OFFSET, ((Y - OFFSET)*(-1)));
-					NUMBER_OF_NODES_IN_NETWORK++;
-					//System.out.println("X = " + GSOM[Y][X + 1].getX() + " Y = " + GSOM[Y][X + 1].getY() );
-					setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
-				}
-			}
-			catch(ArrayIndexOutOfBoundsException exp)
+			if(!isSmoothing)
 			{
-				System.out.println("Winner is at X=" + X + ", Y=" + Y + ". Growth has resulted in an overflow, initializing " +
-						"the array to large size");
-				RedimArray();
-				growNodes(winner);
-			}
+				try{
+					if(GSOM[Y - 1][X] == null)
+					{
+						GSOM[Y - 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y - 1 - OFFSET)*(-1)));
+						NUMBER_OF_NODES_IN_NETWORK++;
+						//System.out.println("X = " + GSOM[Y - 1][X].getX() + " Y = " + GSOM[Y - 1][X].getY() );
+						setWeightsOfNewNode(GSOM[Y - 1][X], winner, false, false, true, false);
+					}
 
-			winner.setBoundry(false);
+					if(GSOM[Y + 1][X] == null)
+					{
+						GSOM[Y + 1][X] = new GSOMArrayNode(INPUT_DIMENSION, X - OFFSET, ((Y + 1 - OFFSET)*(-1)));
+						NUMBER_OF_NODES_IN_NETWORK++;
+						//System.out.println("X = " + GSOM[Y + 1][X].getX() + " Y = " + GSOM[Y + 1][X].getY() );
+						setWeightsOfNewNode(GSOM[Y + 1][X], winner, false, false, false, true);
+					}
+
+					if(GSOM[Y][X - 1] == null)
+					{
+						GSOM[Y][X - 1] = new GSOMArrayNode(INPUT_DIMENSION, X - 1 - OFFSET, ((Y - OFFSET)*(-1)));	
+						NUMBER_OF_NODES_IN_NETWORK++;
+						//System.out.println("X = " + GSOM[Y][X - 1].getX() + " Y = " + GSOM[Y][X - 1].getY() );
+						setWeightsOfNewNode(GSOM[Y][X - 1], winner, true, false, false, false);
+					}
+
+					if(GSOM[Y][X + 1] == null)
+					{
+						GSOM[Y][X + 1] = new GSOMArrayNode(INPUT_DIMENSION, X + 1 - OFFSET, ((Y - OFFSET)*(-1)));
+						NUMBER_OF_NODES_IN_NETWORK++;
+						//System.out.println("X = " + GSOM[Y][X + 1].getX() + " Y = " + GSOM[Y][X + 1].getY() );
+						setWeightsOfNewNode(GSOM[Y][X + 1], winner, false, true, false, false);
+					}
+				}
+				catch(ArrayIndexOutOfBoundsException exp)
+				{
+					System.out.println("Winner is at X=" + X + ", Y=" + Y + ". Growth has resulted in an overflow, initializing " +
+							"the array to large size");
+					RedimArray();
+					growNodes(winner,false);
+				}
+
+				winner.setBoundry(false);
+			}
+			
 			winner.setAccumulatedError(GROWTH_THRESHOLD/2); //Prejudged according to the flow of text.
 			//However, how to set this value is not specified in the thesis.
 		}	
@@ -496,9 +547,7 @@ public class GSOMArray {
 		
 		GSOMArrayNode sequeceNodeToWinner = null; //for cases 1 and 3
 		GSOMArrayNode oppositeToNewNode = null; //for case 2
-/*		System.out.println("OFFSET =" + OFFSET);
-		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET + 1) );
-		System.out.println(" X =" + (realWinnerX + OFFSET) + ", Y =" + (winner.getY() + OFFSET - 1) );*/
+
 		if(isLeft)
 		{
 			sequeceNodeToWinner = GSOM[realWinnerY + OFFSET][realWinnerX + OFFSET + 1];
@@ -646,6 +695,61 @@ public class GSOMArray {
 		else if(candidateNode1 == null & candidateNode2 == null)
 		{
 			categoryFourGrowth(newNode, winner);
+		}
+	}
+	
+	private void smoothGSOM(String input)
+	{
+		String line = "";
+		double temp[] = null; 
+		GSOMArrayNode winner = null;
+		ArrayRealVector tempInputVector = null;
+		
+		StringTokenizer inputTokens = new StringTokenizer(input, "\n");
+		inputTokens.nextToken();
+		int smooth = 1;
+		
+		while(inputTokens.hasMoreTokens()) //the input is tokenized and iterated till the complete set is over.
+		{
+			line = inputTokens.nextToken();
+			if(!line.contains("####")) // the data files used for this experiment had some records with these symbols which needs to be omitted. 
+			{
+				temp = new double[INPUT_DIMENSION]; //the getDimensions method of FileProcessing class returns the the number of elements - 1
+				String[] inputVector = line.split("\t");
+				
+				/*
+				 * The loop converts the numerical elements of the inputVector to a ArrayRealVector so it could be used to 
+				 * conduct training of the GSOM. The only part missing of the input vector is the move tag.
+				 */
+				for(int i = 1; i < inputVector.length; i++) 
+				{
+					temp[i-1] = Double.parseDouble(inputVector[i]);					
+				}
+				
+				tempInputVector = new ArrayRealVector(temp);
+								
+				/*
+				 * The loop goes from 0...70 initially and could be different in the case a redefinition of the array has taken
+				 * place due to lack of allocated array space. A single input sample is presented for the number of iterations
+				 * provided by the user. Initially the winner is chosen for the given input vector. Then the winner nodes growth error is increased to 
+				 * represent the differences in the nodes weight vector and the input vector. Increasing the error value will 
+				 * trigger the growth of nodes if it suffices the growth conditions. Then the weights of the neighborhood nodes
+				 * are adjusted. Finally the learning rate and the effective neighborhood radius is decayed according to the
+				 * specification given in the algorithm.
+				 */
+				
+				System.out.println("##################################### SMOOTH = " + smooth);	
+				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
+				{ 
+					winner = presentSingleInput(tempInputVector); //idea of a return value is to halt further execution of code until the method call has returned.
+					calculateGrowthError(winner, tempInputVector,true); //processes the QE and triggers node growth if required.
+					adjustNeighbourhoodOfWinner(winner, tempInputVector,true); //adjust weights after the node growth has happened
+					learningRateDecay(true);
+				}
+				
+				LEARNING_RATE_SMOOTHING = SMOOTHING_ETA; //Reseting the value for the next input
+				smooth++;
+			}
 		}
 	}
 
