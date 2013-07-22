@@ -28,6 +28,8 @@ package maps.Structures;
 import java.util.StringTokenizer;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
+import sun.awt.image.OffScreenImageSource;
+
 /**
  * @author 		Manjusri Wickramasignhe
  * @date		Jul 8, 2013 - 7:44:07 PM
@@ -46,6 +48,7 @@ public class GSOMArray {
 	private int INPUT_DIMENSION = 0; //Dimension of the input vector
 	private int NUMBER_OF_NODES_IN_NETWORK = 0; //Total number of nodes in the network
 	private int NUMBER_OF_ITERATIONS = 0; //Number of iteration an input needs to be presented
+	private int PATH_OF_SPREAD_NUMBER = 0; //Number of Nodes which generated new nodes. First four is by default considered generative
 	
 	private double INITIAL_ETA = 0.0; //Initial learning rate set by the user
 	private double SMOOTHING_ETA = 0.0; //Initial learning rate of the smoothing phase initialized (INITIAL_ETA/2)
@@ -95,9 +98,11 @@ public class GSOMArray {
 		calculateGrowthThreshold(); //sets growth threshold
 		initElements(); //initializes the basic structure
 		trainGSOM(INPUT_VECTORS); //sets training in motion
-		printGSOM();
+	//	printGSOM();
 		smoothGSOM(INPUT_VECTORS); //starts the smoothing phase
-		printGSOM();
+	//	printGSOM();
+		createDataSkeleton();
+		System.out.println("DONE");
 	}
 	
 	/**
@@ -113,12 +118,13 @@ public class GSOMArray {
 	 */
 	private void initElements()	
 	{
-		GSOM[OFFSET][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 0);
-		GSOM[OFFSET][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 0);
-		GSOM[OFFSET - 1][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 1);
-		GSOM[OFFSET - 1][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 1);
+		GSOM[OFFSET][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 0, 1);
+		GSOM[OFFSET][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 0, 2);
+		GSOM[OFFSET - 1][OFFSET] = new GSOMArrayNode(INPUT_DIMENSION, 0, 1, 3);
+		GSOM[OFFSET - 1][OFFSET + 1] = new GSOMArrayNode(INPUT_DIMENSION, 1, 1, 4);
 		
 		NUMBER_OF_NODES_IN_NETWORK = 4;
+		PATH_OF_SPREAD_NUMBER = 4;
 	}
 
 	/**
@@ -169,7 +175,7 @@ public class GSOMArray {
 				 * specification given in the algorithm.
 				 */
 				
-				System.out.println("##################################### RUN = " + run);
+				//System.out.println("##################################### RUN = " + run);
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
 				{ 
 					winner = presentSingleInput(tempInputVector); //idea of a return value is to halt further execution of code until the method call has returned.
@@ -220,7 +226,7 @@ public class GSOMArray {
 		ArrayRealVector tempWeights = null; //will hold the weight vector after the adjustment
 		
 		try
-		{
+		{			
 			if(GSOM[y][x] != null || GSOM[y + 2*ceilingValue][x] != null || GSOM[y][x  + 2*ceilingValue] != null || GSOM[y + 2*ceilingValue][x  + 2*ceilingValue] != null);
 		}
 		catch (ArrayIndexOutOfBoundsException index)
@@ -266,11 +272,19 @@ public class GSOMArray {
 			{
 				for(int j = 0; j <= 2*ceilingValue ; j++)
 				{
+					try{
 					if(GSOM[y+j][x+i] != null && getEculidianDistance(GSOM[y+j][x+i], winner) <= RADIUS) //null and radius check
 					{
 						//calculates the weights of the node by applying the Eta rule
 						tempWeights = GSOM[y+j][x+i].getWEIGHTS().add((input.subtract(GSOM[y+j][x+i].getWEIGHTS())).mapMultiplyToSelf(LEARNING_RATE));
 						GSOM[y+j][x+i].setWEIGHTS(tempWeights); //sets the calculated set of weights to the node
+					}
+					}
+					catch(Exception e)
+					{
+						System.out.println("Y =" + y + " j =" + j + " X = " + x + " i =" + i + " OFFSET = " + OFFSET);
+						System.out.println("Array Length = " + GSOM.length + " " + GSOM[0].length);
+						e.printStackTrace();
 					}
 				}
 			}
@@ -401,6 +415,13 @@ public class GSOMArray {
 			if(winner.getAccumulatedError() > HIGHEST_ERROR)
 			{
 				HIGHEST_ERROR = winner.getAccumulatedError();
+			}
+			
+			if(winner.getGenerativeNumber() == 0 && !(isSmoothing))
+			{
+				PATH_OF_SPREAD_NUMBER++;	//increment the path of spread since a node is generating new nodes
+				winner.setGenerativeNumber(PATH_OF_SPREAD_NUMBER); //set the number as nodes generative id
+				winner.setPOS(true); //sets as the node in POS
 			}
 			growNodes(winner, isSmoothing);			
 		}		
@@ -738,7 +759,7 @@ public class GSOMArray {
 				 * specification given in the algorithm.
 				 */
 				
-				System.out.println("##################################### SMOOTH = " + smooth);	
+				//System.out.println("##################################### SMOOTH = " + smooth);	
 				for (int i = 0; i < NUMBER_OF_ITERATIONS; i++) 
 				{ 
 					winner = presentSingleInput(tempInputVector); //idea of a return value is to halt further execution of code until the method call has returned.
@@ -786,6 +807,32 @@ public class GSOMArray {
 	}
 	
 	/**
+	 * 
+	 */
+	private void createDataSkeleton()
+	{
+		for(int i = 0; i < GSOM.length ; i++)
+		{
+			for(int j = 0; j < GSOM[0].length; j++)
+			{
+				if(GSOM[i][j] == null)
+				{
+
+				}
+				else if(!GSOM[i][j].isPOS() && GSOM[i][j].getNumberOfHits() > 0)
+				{
+					PATH_OF_SPREAD_NUMBER++;
+					GSOM[i][j].setGenerativeNumber(PATH_OF_SPREAD_NUMBER);
+					GSOM[i][j].setExternalToPos(true);
+					
+				}
+			}
+		}
+		
+		printGSOM();
+	}
+	
+	/**
 	 * Calculates the offset value for the GSOM array. If the GSOM array is reinitialized for a large array size this method
 	 * has to be called after each re-initialization.
 	 */
@@ -793,13 +840,15 @@ public class GSOMArray {
 	{
 		OFFSET = (GSOM.length - 1)/2;
 	}
+		
 	
 	/**
 	 * Utility method to print the coordinates of the GSOM
 	 */
 	public void printGSOM()
 	{
-		for(int i = 0; i < GSOM.length ; i++){
+		for(int i = 0; i < GSOM.length ; i++)
+		{
 			for(int j = 0; j < GSOM[0].length; j++)
 			{
 				if(GSOM[i][j] == null)
@@ -808,14 +857,20 @@ public class GSOMArray {
 				}
 				else
 				{
-					if(GSOM[i][j].getNumberOfHits() > 0)
+					if(GSOM[i][j].isPOS())
 					{
-						System.out.print(GSOM[i][j].getX()+","+GSOM[i][j].getY()+"\t");
+						System.out.print("x\t"); //(GSOM[i][j].getX()+","+GSOM[i][j].getY()+"\t");
+					}
+					else if(GSOM[i][j].isExternalToPos())
+					{
+						System.out.print("L\t");
 					}
 					else
 					{
-						System.out.print("x\t");
+						System.out.print(".\t");
 					}
+					
+
 				}
 			}
 			System.out.println('\n');
