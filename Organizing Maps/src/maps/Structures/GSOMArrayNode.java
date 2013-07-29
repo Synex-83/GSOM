@@ -17,6 +17,7 @@ public class GSOMArrayNode extends Node {
 	private boolean IS_EXTERNAL_TO_POS = false;
 	private int NUMBER_OF_HITS = 0; // number of times the node is selected as the winner
 	private int GENERATIVE_NUMBER = 0; // the number when this node is selected for growth.	
+	private int NUMBER_OF_HITS_IN_TEST = 0; //number of times the node is selected the winner in the testing phase
 	
 	/**
 	 * @param Dimensions

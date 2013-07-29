@@ -43,7 +43,7 @@ import sun.awt.image.OffScreenImageSource;
 public class GSOMArray {
 
 	private GSOMArrayNode[][] GSOM; //The multidimensional array which holds the GSOM 
-	
+
 	private int OFFSET = 0; //The basic array offset of the multidimensional array
 	private int INPUT_DIMENSION = 0; //Dimension of the input vector
 	private int NUMBER_OF_NODES_IN_NETWORK = 0; //Total number of nodes in the network
@@ -74,7 +74,7 @@ public class GSOMArray {
 	 * @param screen as the JPanel used for producing the visual output
 	 * 
 	 * This the only constructor of the GSOMArray class. This constructor initializes all the basic variable values and sets
-	 * up the basic four node GSOM structure. The basic GSOM array is 71 x 71 with a offset of 35. So the 0,0 element of the
+	 * up the basic four node GSOM structure. The basic GSOM array is 91 x 91 with a offset of 35. So the 0,0 element of the
 	 * GSOM is placed in the 0+offset,0+offset location. When accessing elements and adjusting them the offset has to be
 	 * used. The array could be expanded to a larger array if the map growth exceeds the basic allocation. The offset variable
 	 * has to be recalculated each time.
@@ -857,9 +857,9 @@ public class GSOMArray {
 				}
 				else
 				{
-					if(GSOM[i][j].isPOS())
+					if(GSOM[i][j].isPOS() & GSOM[i][j].getNumberOfHits() > 0 )  
 					{
-						System.out.print("x\t"); //(GSOM[i][j].getX()+","+GSOM[i][j].getY()+"\t");
+						System.out.print(GSOM[i][j].getGenerativeNumber() +"\t"); //(GSOM[i][j].getX()+","+GSOM[i][j].getY()+"\t");
 					}
 					else if(GSOM[i][j].isExternalToPos())
 					{
