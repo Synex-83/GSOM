@@ -21,10 +21,37 @@ public class DisplayLattice extends JPanel  {
 	}
 	
 
-	public void render() {
+	public void renderSOM(int NUMBER_OF_NODES, Node[][] SOM)
+	{
+		float cellWidth = 5;
+		float cellHeight = 5;
+			
+			int imgW = img.getWidth();
+			int imgH = img.getHeight();
+			float r, g, b;
+			Graphics2D g2 = img.createGraphics();
+			g2.setBackground(Color.black);
+			g2.clearRect(0,0,imgW,imgH);
+			for (int x=0; x<100; x++) {
+				for (int y=0; y<100; y++) {
+					r = (float)Math.random();
+					g = (float)Math.random();
+					b = (float)Math.random();
+					g2.setColor(new Color(r,g,b));
+					g2.fillRect((int)(x*cellWidth), (int)(y*cellHeight),
+								(int)cellWidth+1, (int)cellHeight+1);
+				}
+			}
+			g2.setColor(Color.black);
+			g2.dispose();
+			repaint();
+	}
+	
+	public void render() 
+	{
 
-	float cellWidth = 100;
-	float cellHeight = 100;
+	float cellWidth = 5;
+	float cellHeight = 5;
 		
 		int imgW = img.getWidth();
 		int imgH = img.getHeight();

@@ -62,7 +62,7 @@ public class Train implements ActionListener {
 	
 	public void train()
 	{
-		temp.render();	
+		temp.renderg();	
 	}
 	
 	public void train2()

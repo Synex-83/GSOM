@@ -189,6 +189,7 @@ public class SelfOrganizingMap implements ActionListener {
 		while(first.hasMoreTokens())
 		{
 			line = first.nextToken();
+			//System.out.println(line);
 			if(!line.contains("####"))
 			{
 				temp = new double[INPUT_DIMENSION];
@@ -431,6 +432,7 @@ public class SelfOrganizingMap implements ActionListener {
 		{
 			singleCompleteRun();	
 			CURRENT_ITERATION++;
+			System.out.println(CURRENT_ITERATION);
 		}
 		
 	}

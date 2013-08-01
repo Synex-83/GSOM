@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 @SuppressWarnings("serial")
 public class ImageEditor extends JPanel  { //implements ActionListener
 	
-	private BufferedImage img = new BufferedImage(100, 100, 1);	
+	private BufferedImage img = new BufferedImage(400, 400, 1);	
 	//Timer t; 
 	
 	public ImageEditor() {
@@ -86,8 +86,8 @@ public class ImageEditor extends JPanel  { //implements ActionListener
 		
 	public void renderb() {
 
-	float cellWidth = 10;
-	float cellHeight = 10;
+	float cellWidth = 25;
+	float cellHeight = 25;
 		
 		int imgW = img.getWidth();
 		int imgH = img.getHeight();
@@ -112,8 +112,8 @@ public class ImageEditor extends JPanel  { //implements ActionListener
 	
 	public void renderg() {
 
-	float cellWidth = 10;
-	float cellHeight = 10;
+	float cellWidth = 50;
+	float cellHeight = 50;
 		
 		int imgW = img.getWidth();
 		int imgH = img.getHeight();

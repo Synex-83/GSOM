@@ -41,7 +41,7 @@ public class MapScreen extends JFrame {
 	private Timer REFRESH_TIMER = null;
 	
 	
-	private String FILE_PATH; //="E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1\\01.Randa Rasanga - [Clean]\\12333.txt";;
+	private String FILE_PATH ="E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1\\01.Randa Rasanga - [Clean]\\12333.txt";
 	private JPanel pnlMap;
 	private JLabel lblIterations;
 	private JLabel lblLearningRate;
@@ -194,7 +194,7 @@ public class MapScreen extends JFrame {
 	private void initialObjectSetUp()
 	{
 		SOM.initTrainSOM(FILE_PROCESSING.readFile(), (int)NUM_ITERATIONS, ETA);
-		SOM.initTrainSOM(null, 100, 0.25);
+	//	SOM.initTrainSOM(null, 100, 0.25);
 		REFRESH_TIMER = new Timer(100, SOM);
 		REFRESH_TIMER.start();
 	}
