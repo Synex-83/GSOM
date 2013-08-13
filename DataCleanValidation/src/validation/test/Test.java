@@ -45,7 +45,7 @@ public class Test {
 					}
 				} else {
 		            //System.out.println("File: " + file.getName());
-		            if(filename.contains("output42.txt"))
+		            if(filename.contains("output4.txt"))
 		            {
 		            	mz.validateGameData(filename,file.getParent());
 		            }
