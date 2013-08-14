@@ -482,7 +482,7 @@ public class Maze {
 			if(!allNodes[i].getVisited())
 			{
 				majorJunction = majorJunction & allNodes[i].getVisited();
-				System.out.println(allNodes[i].getJunctionNumber() - 1 + " is not visited at least once");
+				System.out.println(allNodes[i].getJunctionNumber() + " is not visited at least once");
 			}
 				
 		}
