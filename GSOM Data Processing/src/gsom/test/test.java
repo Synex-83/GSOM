@@ -32,12 +32,12 @@ public class test {
 	        	if (Option ==0) {
 					if(filename.length() >= 14)
 					{
-						file.delete();
+						//file.delete();
 					}
 					
 					if(filename.length() <=5 )
 					{
-						file.delete();
+						//file.delete();
 					}
 				} else {
 		            System.out.println("File: " + file.getName());
