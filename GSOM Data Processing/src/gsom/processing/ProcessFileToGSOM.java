@@ -69,7 +69,7 @@ public class ProcessFileToGSOM {
 					decision = temp[3];
 					decision_number = returnDecsionInt(decision);
 					
-					tempString = "Move"+counter+"_"+junction_type+"_"+decision_number+"\t" + returnTempString(line_number,junction_number,junction_type, decision_number, mode);
+					tempString = "Move"+counter+"\t" + returnTempString(line_number,junction_number,junction_type, decision_number, mode);
 					
 					
 					LINES_TO_WRITE += tempString + "\r\n";
@@ -109,7 +109,7 @@ public class ProcessFileToGSOM {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter(parent + "\\gsom-testRAW.txt",false));
+			bw = new BufferedWriter(new FileWriter(parent + "\\gsom-1.txt",false));
 			bw.write(line);
 			bw.newLine();
 			bw.flush();
