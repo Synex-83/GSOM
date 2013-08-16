@@ -43,7 +43,7 @@ public class test {
 		            System.out.println("File: " + file.getName());
 		            if(filename.contains("output4.txt"))
 		            {
-		            	rf.readFromFile(filename,file.getParent(),1);
+		            	rf.readFromFile(filename,file.getParent(),0);
 		            }
 				}
 	        }
@@ -52,7 +52,7 @@ public class test {
 	
 	public static void main(String args[])
 	{
-	    File[] files = new File("E:\\PhD\\My Data\\02.Sapumal Bandara").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\01.Randa Rasanga").listFiles();
 	    showFiles(files,1);
 
 	}
