@@ -1,0 +1,10 @@
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.config
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.pdb
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.frmProjection.resources
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.Properties.Resources.resources
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csproj.GenerateResource.Cache
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.exe
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.pdb
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.CodeAnalysisLog.xml
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.lastcodeanalysissucceeded
