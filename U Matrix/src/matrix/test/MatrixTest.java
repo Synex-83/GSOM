@@ -9,7 +9,7 @@ import matrix.sortfile.SortFile;
 
 
 /**
- * @author Manjusri
+ * @author Manjusri Wickramasinghe
  *
  */
 public class MatrixTest {
