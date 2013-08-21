@@ -146,9 +146,9 @@ namespace SammonsProjectionDemo
                     double[] projectionJ = projection[indicesJ[j]];
 
                     double dij = distancesI[indicesJ[j]];
-                    double Dij = Helper.ManhattenDistance(
+                    double Dij = Helper.EuclideanDistance(
                             projectionI,
-                            projectionJ);
+                            projectionJ); //ManhattenDistance
 
                     // Avoid division by zero:
                     if (Dij == 0)
@@ -220,9 +220,9 @@ namespace SammonsProjectionDemo
                         continue;
                     }
 
-                    distances[j] = Helper.ManhattenDistance(
+                    distances[j] = Helper.EuclideanDistance(
                         inputI,
-                        inputData[j]);
+                        inputData[j]); //ManhattenDistance
                 }
             }
 
