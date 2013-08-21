@@ -33,7 +33,7 @@ namespace SammonsProjectionDemo
                 array[pos] = tmp;
             }
         }
-        //---------------------------------------------------------------------
+        //--------------------------------------------------------------------- dfas
         internal static double EuclideanDistance(double[] vec1, double[] vec2)
         {
             double distance = 0;
