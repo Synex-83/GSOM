@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,10 +88,7 @@ namespace SammonsProjectionDemo
         /// <exception cref="ArgumentNullException">
         /// <paramref name=">inputVectors"/> is <c>null</c>.
         /// </exception>
-        public SammonsProjection(
-            double[][] inputData,
-            int outputDimension,
-            int maxIteration)
+        public SammonsProjection(double[][] inputData, int outputDimension, int maxIteration)
         {
             if (inputData == null || inputData.Length == 0)
                 throw new ArgumentNullException("inputData");
@@ -182,12 +180,22 @@ namespace SammonsProjectionDemo
 
             // Initialize random points for the projection:
             Random rnd = new Random();
-            double[][] projection = new double[this.Count][];
+            double[][] projection = new double[this.Count][]; //this.Count
             //projection[0] = new double[]{ 0, 0};
             //projection[1] = new double[]{ 1, 0 };
             //projection[2] = new double[]{ 0, 1 };
             //projection[3] = new double[]{ 1, 1 };
             this.Projection = projection;
+
+            StreamReader reader = new StreamReader(@"points.txt");
+            string line = string.Empty;
+            while ((line = reader.ReadLine()) != null)
+            {
+                //delimit by space and assign to 1 and 2 of projection
+                //Console.WriteLine(line);
+            }
+            reader.Close();
+
             for (int i = 0; i < projection.Length; i++)
             {
                 double[] projectionI = new double[this.OutputDimension];
@@ -195,6 +203,18 @@ namespace SammonsProjectionDemo
                 for (int j = 0; j < projectionI.Length; j++)
                     projectionI[j] = rnd.Next(0, this.Count);
             }
+
+      /*      using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"WriteLines2.txt"))
+            {
+                for (int i = 0; i < projection.Length; i++)
+                {
+                    for (int j = 0; j < projection[0].Length; j++)
+                    {
+                        file.WriteLine(i + " " + projection[i][j] );
+                    }
+                }
+            }*/
+
         }
         //---------------------------------------------------------------------
         /// <summary>

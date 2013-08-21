@@ -7,3 +7,12 @@ E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProj
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.exe
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.pdb
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csprojResolveAssemblyReference.cache
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.config
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.exe
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.pdb
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.pdb
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csprojResolveAssemblyReference.cache
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.frmProjection.resources
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.Properties.Resources.resources
+E:\workspace\GSOM - SVN\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csproj.GenerateResource.Cache
