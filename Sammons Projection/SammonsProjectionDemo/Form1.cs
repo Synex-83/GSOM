@@ -14,8 +14,9 @@ namespace SammonsProjectionDemo
 {
     public partial class frmProjection : Form
     {
-        private const int INPUT_DIMENSION = 24;
-        private const string FILE = @"E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\data.csv";
+        private int INPUT_DIMENSION = 0;
+        private int NUMBER_OF_POINTS = 0;
+        private const string FILE = @"E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\data-T.csv";
         private double[][] _inputData;
 
         public frmProjection()
@@ -25,9 +26,35 @@ namespace SammonsProjectionDemo
 
         private void btnProject_Click(object sender, EventArgs e)
         {
-            ReadData();
-            Bitmap bmp = CreateProjection();
-            pbProjector.Image = bmp;
+            if (initializeProjection())
+            {
+                
+                Bitmap bmp = CreateProjection();
+                pbProjector.Image = bmp;
+            }
+        }
+
+        private bool initializeProjection()
+        {
+            int dimension;
+            bool check = true;
+
+            if (int.TryParse(txtDimensions.Text.ToString(), out dimension))
+            {
+                INPUT_DIMENSION = dimension;
+                check = check & true;
+                ReadData();
+                txtDataPoints.Text = _inputData.Length.ToString();
+                NUMBER_OF_POINTS = int.Parse(_inputData.Length.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Dimension entered is not an integer.");
+                txtDimensions.Clear();
+                check = check & false;
+            }
+
+            return check;
         }
 
         private void ReadData()
@@ -63,27 +90,30 @@ namespace SammonsProjectionDemo
 
             // Create colors and labels - here a lazy version is shown, it should
             // be read from the data set in real applications ;)
-            Color[] color = new Color[13];
-            string[] labels = new string[13];
-            for (int i = 0; i < 4; i++)
+
+
+
+            Color[] color = new Color[NUMBER_OF_POINTS];
+            string[] labels = new string[NUMBER_OF_POINTS];
+            for (int i = 0; i < 6; i++)
             {
                 color[i] = Color.Red;
                 labels[i] = "1";
             }
-            for (int i = 4; i < 8; i++)
+            for (int i = 7; i < 12; i++)
             {
                 color[i] = Color.Green;
                 labels[i] = "2";
             }
-            for (int i = 8; i < 11; i++)
+            for (int i = 13; i < 18; i++)
             {
                 color[i] = Color.Blue;
                 labels[i] = "3";
             }
 
-            for (int i = 11; i < 13; i++)
+            for (int i = 19; i < 24; i++)
             {
-                color[i] = Color.Yellow;
+                color[i] = Color.Maroon;
                 labels[i] = "4";
             }
 
@@ -91,7 +121,9 @@ namespace SammonsProjectionDemo
                 projection);
             processing.PointSize = 4;
             processing.FontSize = 8;
-            return processing.CreateImage(725, 544, labels, color);
+            return processing.CreateImage(750, 750, labels, color);
         }
+
+
     }
 }

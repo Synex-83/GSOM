@@ -6,5 +6,4 @@ E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProj
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csproj.GenerateResource.Cache
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.exe
 E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.pdb
-E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.CodeAnalysisLog.xml
-E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\bin\Debug\SammonsProjectionDemo.exe.lastcodeanalysissucceeded
+E:\workspace\GSOM\Sammons Projection\SammonsProjectionDemo\obj\Debug\SammonsProjectionDemo.csprojResolveAssemblyReference.cache

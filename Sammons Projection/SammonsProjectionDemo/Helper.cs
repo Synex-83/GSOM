@@ -33,15 +33,15 @@ namespace SammonsProjectionDemo
                 array[pos] = tmp;
             }
         }
-        //--------------------------------------------------------------------- dfas
+        //--------------------------------------------------------------------- 
         internal static double EuclideanDistance(double[] vec1, double[] vec2)
         {
             double distance = 0;
 
             for (int i = 0; i < vec1.Length; i++)
-                distance += (vec1[i] - vec2[i]);
+                distance += Math.Pow((vec1[i] - vec2[i]),2);
 
-            return distance;
+            return Math.Sqrt(distance);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace SammonsProjectionDemo
             set { _backGroundColor = value; }
         }
         //---------------------------------------------------------------------
-        private int _pointSize = 6;
+        private int _pointSize = 12;//6;
         /// <summary>
         /// The size of the displayed points.
         /// </summary>
@@ -120,11 +120,7 @@ namespace SammonsProjectionDemo
         /// The dimension of <paramref name="labels"/> or <paramref name="colors"/>
         /// doesn't match the number of points.
         /// </exception>
-        public Bitmap CreateImage(
-            int width,
-            int height,
-            string[] labels,
-            Color[] colors)
+        public Bitmap CreateImage( int width, int height, string[] labels, Color[] colors)
         {
             if (labels != null && labels.Length != _sammon.Count)
                 throw new ArgumentException();
@@ -169,10 +165,13 @@ namespace SammonsProjectionDemo
 
                     g.FillEllipse(
                         brush,
-                        (float)(x - _pointSize / 2d),
-                        (float)(y - _pointSize / 2d),
-                        _pointSize,
-                        _pointSize);
+                       // (float)(x - _pointSize / 2d),
+                       // (float)(y - _pointSize / 2d), 10, 10);
+                        (float)(x - 10 / 2d),
+                        (float)(y - 10 / 2d), 10, 10);
+
+                      //  _pointSize,
+                      //  _pointSize);
 
                     if (labels != null)
                     {
