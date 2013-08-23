@@ -20,7 +20,7 @@ public class Test {
 		String filename = "";
 		Maze mz = new Maze();
 		mz.createAllJunctions();
-		mz.createGraph("E:\\workspace\\GSOM - SVN\\DataCleanValidation\\src\\validation\\test\\graph.txt");
+		mz.createGraph("src\\validation\\test\\graph.txt");
 		mz.createRelationships();
 		
 	    for (File file : files) {

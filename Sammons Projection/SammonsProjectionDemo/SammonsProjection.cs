@@ -192,31 +192,42 @@ namespace SammonsProjectionDemo
             while ((line = reader.ReadLine()) != null)
             {
                 string[] words = line.Split(' ');
-                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2])};
+                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
 
             }
             reader.Close();
 
-        /*    for (int i = 0; i < projection.Length; i++)
-            {
-                double[] projectionI = new double[this.OutputDimension];
-                projection[i] = projectionI;
-                for (int j = 0; j < projectionI.Length; j++)
-                    projectionI[j] = rnd.Next(0, this.Count);
-            }*/
+            //StreamReader reader = new StreamReader(@"3Points.txt");
+            //string line = string.Empty;
+            //while ((line = reader.ReadLine()) != null)
+            //{
+            //    string[] words = line.Split(' ');
+            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
 
-          /*  using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"estimates.txt"))
-            {
-                for (int i = 0; i < projection.Length; i++)
-                {
-                    file.Write(i + " ");
-                    for (int j = 0; j < projection[0].Length; j++)
-                    {
-                        file.Write( projection[i][j] + " " );
-                    }
-                    file.WriteLine();
-                }
-            }*/
+            //}
+            //reader.Close();
+
+
+           // for (int i = 0; i < projection.Length; i++)
+           // {
+           //     double[] projectionI = new double[3]; //this.OutputDimension
+           //     projection[i] = projectionI;
+           //     for (int j = 0; j < projectionI.Length; j++)
+           //         projectionI[j] = rnd.Next(0, this.Count);
+           // }
+
+           //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"3Points.txt"))
+           //   {
+           //       for (int i = 0; i < projection.Length; i++)
+           //       {
+           //           file.Write(i + " ");
+           //           for (int j = 0; j < projection[0].Length; j++)
+           //           {
+           //               file.Write( projection[i][j] + " " );
+           //           }
+           //           file.WriteLine();
+           //       }
+           //   }
 
         }
         //---------------------------------------------------------------------
