@@ -109,7 +109,7 @@ public class ProcessFileToGSOM {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter(parent + "\\gsom-1.txt",false));
+			bw = new BufferedWriter(new FileWriter(parent + "\\GSOM-GAME.txt",false));
 			bw.write(line);
 			bw.newLine();
 			bw.flush();

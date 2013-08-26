@@ -40,7 +40,7 @@ public class Test {
 					}
 				} else {
 		            System.out.println("File: " + file.getName());
-		            if(filename.contains("alpha3"))
+		            if(filename.contains("output42"))
 		            {
 		            	fl.readFromFile(filename,file.getParent());
 		            }
@@ -51,7 +51,7 @@ public class Test {
 	
 	public static void main(String args[])
 	{
-	    File[] files = new File("E:\\PhD\\My Data").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\25.Kanna  R").listFiles();
 	    showFiles(files,1);
 
 	}
