@@ -179,9 +179,9 @@ namespace SammonsProjectionDemo
             _distanceMatrix = CalculateDistanceMatrix();
 
             // Initialize random points for the projection:
-            Random rnd = new Random();
+            //Random rnd = new Random();
             double[][] projection = new double[this.Count][]; //this.Count
-            //projection[0] = new double[]{ 0, 0};
+            //projection[0] = new double[]{ 0, 1};
             //projection[1] = new double[]{ 1, 0 };
             //projection[2] = new double[]{ 0, 1 };
             //projection[3] = new double[]{ 1, 1 };

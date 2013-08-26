@@ -135,18 +135,18 @@ namespace SammonsProjectionDemo
             double minY = _sammon.Projection.Min(p => p[1]);
             double maxY = _sammon.Projection.Max(p => p[1]);
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"3\Game.txt"))
-            {
-                for (int i = 0; i < _sammon.Projection.Length; i++)
-                {
-                    file.Write(i + " ");
-                    for (int j = 0; j < _sammon.Projection[0].Length; j++)
-                    {
-                        file.Write(_sammon.Projection[i][j] + " ");
-                    }
-                    file.WriteLine();
-                }
-            }
+            //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"TestPoints.txt"))
+            //{
+            //    for (int i = 0; i < _sammon.Projection.Length; i++)
+            //    {
+            //        file.Write(i + " ");
+            //        for (int j = 0; j < _sammon.Projection[0].Length; j++)
+            //        {
+            //            file.Write(_sammon.Projection[i][j] + " ");
+            //        }
+            //        file.WriteLine();
+            //    }
+            //}
 
             double ratioX = (width - 20) / (maxX - minX);
             double ratioY = (height - 20) / (maxY - minY);
