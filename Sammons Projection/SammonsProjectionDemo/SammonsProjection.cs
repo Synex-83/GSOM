@@ -128,8 +128,8 @@ namespace SammonsProjectionDemo
             double[][] projection = this.Projection;
 
             // Shuffle the indices-array for random pick of the points:
-            indicesI.FisherYatesShuffle();
-            indicesJ.FisherYatesShuffle();
+           // indicesI.FisherYatesShuffle();
+           // indicesJ.FisherYatesShuffle();
 
             for (int i = 0; i < indicesI.Length; i++)
             {
@@ -179,41 +179,55 @@ namespace SammonsProjectionDemo
             _distanceMatrix = CalculateDistanceMatrix();
 
             // Initialize random points for the projection:
-            Random rnd = new Random();
+            //Random rnd = new Random();
             double[][] projection = new double[this.Count][]; //this.Count
-            //projection[0] = new double[]{ 0, 0};
+            //projection[0] = new double[]{ 0, 1};
             //projection[1] = new double[]{ 1, 0 };
             //projection[2] = new double[]{ 0, 1 };
             //projection[3] = new double[]{ 1, 1 };
             this.Projection = projection;
 
-            StreamReader reader = new StreamReader(@"points.txt");
+            StreamReader reader = new StreamReader(@"estimates.txt");
             string line = string.Empty;
             while ((line = reader.ReadLine()) != null)
             {
-                //delimit by space and assign to 1 and 2 of projection
-                //Console.WriteLine(line);
+                string[] words = line.Split(' ');
+                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
+
             }
             reader.Close();
 
-            for (int i = 0; i < projection.Length; i++)
-            {
-                double[] projectionI = new double[this.OutputDimension];
-                projection[i] = projectionI;
-                for (int j = 0; j < projectionI.Length; j++)
-                    projectionI[j] = rnd.Next(0, this.Count);
-            }
+            //StreamReader reader = new StreamReader(@"3Points.txt");
+            //string line = string.Empty;
+            //while ((line = reader.ReadLine()) != null)
+            //{
+            //    string[] words = line.Split(' ');
+            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
 
-      /*      using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"WriteLines2.txt"))
-            {
-                for (int i = 0; i < projection.Length; i++)
-                {
-                    for (int j = 0; j < projection[0].Length; j++)
-                    {
-                        file.WriteLine(i + " " + projection[i][j] );
-                    }
-                }
-            }*/
+            //}
+            //reader.Close();
+
+
+           // for (int i = 0; i < projection.Length; i++)
+           // {
+           //     double[] projectionI = new double[3]; //this.OutputDimension
+           //     projection[i] = projectionI;
+           //     for (int j = 0; j < projectionI.Length; j++)
+           //         projectionI[j] = rnd.Next(0, this.Count);
+           // }
+
+           //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"3Points.txt"))
+           //   {
+           //       for (int i = 0; i < projection.Length; i++)
+           //       {
+           //           file.Write(i + " ");
+           //           for (int j = 0; j < projection[0].Length; j++)
+           //           {
+           //               file.Write( projection[i][j] + " " );
+           //           }
+           //           file.WriteLine();
+           //       }
+           //   }
 
         }
         //---------------------------------------------------------------------

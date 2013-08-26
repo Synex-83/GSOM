@@ -16,7 +16,7 @@ namespace SammonsProjectionDemo
     {
         private int INPUT_DIMENSION = 0;
         private int NUMBER_OF_POINTS = 0;
-        private const string FILE = @"data-T.csv";
+        private const string FILE = @"3\Game.csv";
         private double[][] _inputData;
 
         public frmProjection()
