@@ -187,25 +187,28 @@ namespace SammonsProjectionDemo
             //projection[3] = new double[]{ 1, 1 };
             this.Projection = projection;
 
-            StreamReader reader = new StreamReader(@"estimates.txt");
-            string line = string.Empty;
-            while ((line = reader.ReadLine()) != null)
-            {
-                string[] words = line.Split(' ');
-                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
-
-            }
-            reader.Close();
-
-            //StreamReader reader = new StreamReader(@"3Points.txt");
+            //StreamReader reader = new StreamReader(@"estimates.txt");
             //string line = string.Empty;
-            //while ((line = reader.ReadLine()) != null)
+            //int i = 0;
+            //while ((line = reader.ReadLine()) != null && i < this.Count)
             //{
             //    string[] words = line.Split(' ');
-            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
-
+            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
+            //    i++;
+                
             //}
             //reader.Close();
+
+            StreamReader reader = new StreamReader(@"3Points.txt");
+            int i = 0;
+            string line = string.Empty;
+            while ((line = reader.ReadLine()) != null && i < this.Count)
+            {
+                string[] words = line.Split(' ');
+                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
+                i++;
+            }
+            reader.Close();
 
 
            // for (int i = 0; i < projection.Length; i++)
