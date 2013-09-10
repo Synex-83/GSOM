@@ -187,50 +187,49 @@ namespace SammonsProjectionDemo
             //projection[3] = new double[]{ 1, 1 };
             this.Projection = projection;
 
-            //StreamReader reader = new StreamReader(@"estimates.txt");
-            //string line = string.Empty;
-            //int i = 0;
-            //while ((line = reader.ReadLine()) != null && i < this.Count)
-            //{
-            //    string[] words = line.Split(' ');
-            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
-            //    i++;
-                
-            //}
-            //reader.Close();
-
-            StreamReader reader = new StreamReader(@"3Points.txt");
-            int i = 0;
+            StreamReader reader = new StreamReader(@"2Points.txt");
             string line = string.Empty;
+            int i = 0;
             while ((line = reader.ReadLine()) != null && i < this.Count)
             {
                 string[] words = line.Split(' ');
-                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
+                projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]) };
                 i++;
             }
             reader.Close();
 
+            //StreamReader reader = new StreamReader(@"3Points.txt");
+            //int i = 0;
+            //string line = string.Empty;
+            //while ((line = reader.ReadLine()) != null && i < this.Count)
+            //{
+            //    string[] words = line.Split(' ');
+            //    projection[Convert.ToInt32(words[0])] = new double[] { Convert.ToInt32(words[1]), Convert.ToInt32(words[2]), Convert.ToInt32(words[3]) };
+            //    i++;
+            //}
+            //reader.Close();
 
-           // for (int i = 0; i < projection.Length; i++)
-           // {
-           //     double[] projectionI = new double[3]; //this.OutputDimension
-           //     projection[i] = projectionI;
-           //     for (int j = 0; j < projectionI.Length; j++)
-           //         projectionI[j] = rnd.Next(0, this.Count);
-           // }
+            //Random rnd = new Random();
+            //for (int i = 0; i < projection.Length; i++)
+            //{
+            //    double[] projectionI = new double[2]; //this.OutputDimension
+            //    projection[i] = projectionI;
+            //    for (int j = 0; j < projectionI.Length; j++)
+            //        projectionI[j] = rnd.Next(0, this.Count);
+            //}
 
-           //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"3Points.txt"))
-           //   {
-           //       for (int i = 0; i < projection.Length; i++)
-           //       {
-           //           file.Write(i + " ");
-           //           for (int j = 0; j < projection[0].Length; j++)
-           //           {
-           //               file.Write( projection[i][j] + " " );
-           //           }
-           //           file.WriteLine();
-           //       }
-           //   }
+            //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"2Points.txt"))
+            //{
+            //    for (int i = 0; i < projection.Length; i++)
+            //    {
+            //        file.Write(i + " ");
+            //        for (int j = 0; j < projection[0].Length; j++)
+            //        {
+            //            file.Write(projection[i][j] + " ");
+            //        }
+            //        file.WriteLine();
+            //    }
+            //}
 
         }
         //---------------------------------------------------------------------

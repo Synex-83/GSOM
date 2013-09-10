@@ -16,7 +16,7 @@ namespace SammonsProjectionDemo
     {
         private int INPUT_DIMENSION = 0;
         private int NUMBER_OF_POINTS = 0;
-        private const string FILE = @"CSV-Walk\1.csv";
+        private const string FILE = @"CSV\Game-average.csv";
         private double[][] _inputData;
 
         public frmProjection()
@@ -95,27 +95,27 @@ namespace SammonsProjectionDemo
 
             Color[] color = new Color[NUMBER_OF_POINTS];
             string[] labels = new string[NUMBER_OF_POINTS];
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < NUMBER_OF_POINTS; i++)
             {
                 color[i] = Color.Red;
                 labels[i] = "1";
             }
-            for (int i = 7; i < 12; i++)
-            {
-                color[i] = Color.Green;
-                labels[i] = "2";
-            }
-            for (int i = 13; i < 18; i++)
-            {
-                color[i] = Color.Blue;
-                labels[i] = "3";
-            }
+            ////for (int i = 7; i < 12; i++)
+            ////{
+            ////    color[i] = Color.Green;
+            ////    labels[i] = "2";
+            ////}
+            ////for (int i = 13; i < 18; i++)
+            ////{
+            ////    color[i] = Color.Blue;
+            ////    labels[i] = "3";
+            ////}
 
-            for (int i = 19; i < 24; i++)
-            {
-                color[i] = Color.Maroon;
-                labels[i] = "4";
-            }
+            ////for (int i = 19; i < 24; i++)
+            ////{
+            ////    color[i] = Color.Maroon;
+            ////    labels[i] = "4";
+            ////}
 
             SammonsProjectionPostProcess processing = new SammonsProjectionPostProcess(
                 projection);

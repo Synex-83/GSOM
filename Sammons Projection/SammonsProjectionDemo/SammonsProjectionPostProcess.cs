@@ -135,7 +135,7 @@ namespace SammonsProjectionDemo
             double minY = _sammon.Projection.Min(p => p[1]);
             double maxY = _sammon.Projection.Max(p => p[1]);
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"CSV-Walk\1.txt"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"CSV\1.txt"))
             {
                 for (int i = 0; i < _sammon.Projection.Length; i++)
                 {
