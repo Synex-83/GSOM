@@ -34,6 +34,8 @@ public class Maze {
 	
 	
 	private static Stack<Decision> stk = new Stack<Decision>(); //stack keeps track of the previous moves made by the player.
+	private int[][] copyOfNodeRelationships = null;
+	
 	Node allNodes[] = new Node[56];
 	Node internal[] = new Node[8];
 	/*
@@ -41,6 +43,7 @@ public class Maze {
 	 * unused to make consistent with the junction types defined.
 	 */ 
 	int[][] nodeRelationships = new int[NUMBER_OF_INTERNALS + NUMBER_OF_JUNCTIONS+1][5]; 
+	
 	String lineNumber = "";
 	int junctionType = 0;
 	int numberOfTheJunction = 0;
@@ -49,7 +52,7 @@ public class Maze {
 	public Maze()
 	{
 		createAllJunctions();
-		createGraph("E:\\workspace\\GSOM - SVN\\DataCleanValidation\\src\\validation\\test\\graph.txt");
+		createGraph("E:\\workspace\\GSOM\\DataCleanValidation\\src\\validation\\test\\graph.txt");
 		createRelationships();
 	}
 	
@@ -113,10 +116,12 @@ public class Maze {
 			}
 			
 			in.close();
+			
+			copyOfNodeRelationships = nodeRelationships;
 		}
 		catch(Exception e)
 		{
-			System.out.println (e.getStackTrace());
+			e.printStackTrace();
 		}
 	}
 	
@@ -228,6 +233,7 @@ public class Maze {
 						{
 							inGame =  false;
 							allNodesVisited();
+							System.out.println("LINK VALIDATION  " + allImportantLinksVisited());
 							System.out.println("============================================");
 							System.out.println("=========== One Game Complete ==============");
 							System.out.println("============================================");
@@ -358,6 +364,7 @@ public class Maze {
 				//Checks whether the previous junction is neighbor of the current junction
 				if(neighbour.getJunctionNumber() == current.getJunctionNumber())
 				{
+					setLinkVisit(temp.getJunctionNumber(),current.getJunctionNumber());
 					stk.push(current);
 					return true;
 				}
@@ -391,6 +398,7 @@ public class Maze {
 				
 				if(neighbour.getJunctionNumber() == current.getJunctionNumber())
 				{
+					setLinkVisit(temp.getJunctionNumber(),current.getJunctionNumber() );
 					stk.push(current);
 					return true;
 				}
@@ -404,6 +412,70 @@ public class Maze {
 		
 		return false;
 	}
+	
+	/**
+	 * @param origin
+	 * @param end
+	 */
+	private void setLinkVisit(int origin, int end) 
+	{
+		// TODO Auto-generated method stub
+		int real = origin;
+		if(origin >= 90)
+		{
+			real = (origin - 90) + 56;
+		}
+
+		
+		for(int i = 1; i < 5; i++)
+		{
+			if(copyOfNodeRelationships[real][i] == end)
+			{
+				copyOfNodeRelationships[real][i] = 0;
+			}
+		}
+		
+		
+		int reale = end;
+		if(end >= 90)
+		{
+			reale = (end - 90) + 56;
+		}
+		
+		for(int i = 1; i < 5; i++)
+		{
+			if(copyOfNodeRelationships[reale][i] == origin)
+			{
+				copyOfNodeRelationships[reale][i] = 0;
+			}
+		}
+		
+	}
+
+	/**
+	 * 
+	 */
+	private boolean allImportantLinksVisited()
+	{
+		for(int i = 0; i < copyOfNodeRelationships.length ; i++)
+		{
+			for(int j = 1; j < 5; j++)
+			{
+				if(copyOfNodeRelationships[i][j] == 0 || copyOfNodeRelationships [i][j] >= 90)
+				{
+					continue;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}	
+		return true;
+	}
+	
+
+	
 	
 	/**
 	 * Checks whether the decision recorded is possible according to its corresponding junction type.

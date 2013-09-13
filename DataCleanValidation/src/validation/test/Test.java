@@ -19,9 +19,9 @@ public class Test {
 	public static void showFiles(File[] files,int Option) {
 		String filename = "";
 		Maze mz = new Maze();
-		mz.createAllJunctions();
-		mz.createGraph("E:\\workspace\\GSOM - SVN\\src\\validation\\test\\graph.txt");
-		mz.createRelationships();
+/*		mz.createAllJunctions();
+		mz.createGraph("E:\\workspace\\GSOM\\src\\validation\\test\\graph.txt");
+		mz.createRelationships();*/
 		
 	    for (File file : files) {
 	        if (file.isDirectory()) {
@@ -36,16 +36,16 @@ public class Test {
 	        	if (Option ==0) {
 					if(filename.length() >= 14)
 					{
-						file.delete();
+						//file.delete();
 					}
 					
 					if(filename.length() <=5 )
 					{
-						file.delete();
+						//file.delete();
 					}
 				} else {
 		            //System.out.println("File: " + file.getName());
-		            if(filename.contains("output42.txt"))
+		            if(filename.contains("output4.txt"))
 		            {
 		            	mz.validateGameData(filename,file.getParent());
 		            }
@@ -59,7 +59,7 @@ public class Test {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\PhD\\My Data\\93. Mota  [walkthrough verified]").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\09.CJ  [game mode problem]").listFiles();
 	    showFiles(files,1);
 	}
 
