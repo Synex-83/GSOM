@@ -59,7 +59,7 @@ public class Test {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\PhD\\My Data\\09.CJ  [game mode problem]").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\02.Sapumal Bandara").listFiles();
 	    showFiles(files,1);
 	}
 
