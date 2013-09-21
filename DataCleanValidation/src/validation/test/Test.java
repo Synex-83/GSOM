@@ -19,9 +19,7 @@ public class Test {
 	public static void showFiles(File[] files,int Option) {
 		String filename = "";
 		Maze mz = new Maze();
-/*		mz.createAllJunctions();
-		mz.createGraph("E:\\workspace\\GSOM\\src\\validation\\test\\graph.txt");
-		mz.createRelationships();*/
+
 		
 	    for (File file : files) {
 	        if (file.isDirectory()) {
@@ -45,7 +43,7 @@ public class Test {
 					}
 				} else {
 		            //System.out.println("File: " + file.getName());
-		            if(filename.contains("output4.txt"))
+		            if(filename.contains(".rgd"))
 		            {
 		            	mz.validateGameData(filename,file.getParent());
 		            }
