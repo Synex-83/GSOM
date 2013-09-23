@@ -32,7 +32,7 @@ public class Test {
 	public static void showFiles(File[] files,int Option) {
 		String filename = "";
 		
-	//	countPlayers("TL835.rep.rgd", "E:\\PhD\\New Data Set\\TLGGICCUP_gosu_data\\TLGGICCUP_gosu_data\\PvP");
+		//countPlayers("TL742.rep.rgd", "E:\\PhD\\New Data Set\\TLGGICCUP_gosu_data\\TLGGICCUP_gosu_data\\TvZ-ODD");
 		
 	    for (File file : files) {
 	        if (file.isDirectory()) {
@@ -97,7 +97,8 @@ public class Test {
 					while(tokens.hasMoreTokens())
 					{
 						//tokens.nextToken();
-						addNodeToQueue(tokens.nextToken().toString().trim(), false);
+						addNodeToQueue(strLine.toString().trim(), false);
+						tokens.nextToken();
 					}
 				}
 					
@@ -142,7 +143,7 @@ public class Test {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\PhD\\New Data Set\\TLGGICCUP_gosu_data\\TLGGICCUP_gosu_data\\PvZ").listFiles();
+	    File[] files = new File("E:\\PhD\\New Data Set\\TLGGICCUP_gosu_data\\TLGGICCUP_gosu_data\\TvZ").listFiles();
 	    showFiles(files,0);
 	}
 
