@@ -1,0 +1,13 @@
+function [z] = weightedMean(w,x)
+    weights = w;
+    inputs = x;
+    d = size(x,1);
+    mean = size(w,2);
+    if size(w,2) == size(x,2)
+        for i = 1:d,
+            i
+        end
+    else
+        error('test');
+    end 
+        
