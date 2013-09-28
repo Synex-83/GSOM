@@ -15,7 +15,7 @@ function [y] = weightedCovariance(x,w)
                 temp2 = x(:,j);
                 
                 for k = 1:size(inputVector)                    
-                    covariance(i,j) = meanVector(1,k)*(temp1(k) - meanVector(1,i))*(temp2(k) - meanVector(1,j));
+                    covariance(i,j) = covariance(i,j) + meanVector(1,k)*(temp1(k) - meanVector(1,i))*(temp2(k) - meanVector(1,j));
                 end
                 
                 covariance(i,j) = alpha*covariance(i,j);
