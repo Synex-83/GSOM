@@ -4,6 +4,7 @@
  */
 package maps.Structures;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
 /**
@@ -16,20 +17,36 @@ public class Node {
 	
 	private int DIMENSION = 0;					//Contains the dimensionality of data
 	private ArrayRealVector WEIGHTS = null;		//Contains the set of weights associated with a node
+	private Array2DRowRealMatrix WEIGHT_MATRIX = null; //Contains the weights of the associated node in the matrix case
 	private int POSITION_X = 0; 				//x position in the 2D grid
  	private int POSITION_Y = 0; 				//y position in the 2D grid
  	private double ACTIVATION_VALUE = 0.0; 		//value after weight vector * input vector
-	
+	private boolean IS_MATRIX = false;
+	private int COVARIANCE_NUMBER = 0;		//number of vectors considered for the covariance matrix
+ 	
 	//========================= CONSTRUCTORS ==========================================
  	/**
  	 * @param Dimensions as the input dimension
  	 * @param x as the X location of the 2D grid
  	 * @param y as the Y location of the 2D grid
+ 	 * @param isMatrix as the switch to recognize between the vector based weights and the matrix based weights
+ 	 * @param covarianceNumber is the number of vectors used to calculate covariance
  	 */
-	public Node(int Dimensions, int x, int y)
+	public Node(int Dimensions, int x, int y, boolean isMatrix, int covarianceNumber)
 	{
-		DIMENSION = Dimensions;	
-		setWeightVector();
+		DIMENSION = Dimensions;
+		IS_MATRIX = isMatrix;
+		COVARIANCE_NUMBER = covarianceNumber;
+		
+		if(isMatrix)
+		{
+			setWeightVectorMatrix();
+		}
+		else
+		{
+			setWeightVector();
+		}
+		
 		POSITION_X = x;
 		POSITION_Y = y;
 	}
@@ -91,6 +108,50 @@ public class Node {
 	public void setACTIVATION_VALUE(double y) {
 		ACTIVATION_VALUE= y;
 	}
+
+	/**
+	 * @return the IS_MATRIX
+	 */
+	public boolean isMatrix() {
+		return IS_MATRIX;
+	}
+
+	/**
+	 * @param isMatrix the iS_MATRIX to set
+	 */
+	public void setIsMatrix(boolean isMatrix) {
+		IS_MATRIX = isMatrix;
+	}
+
+	/**
+	 * @return the COVARIANCE_NUMBER
+	 */
+	public int getCovarianceNumber() {
+		return COVARIANCE_NUMBER;
+	}
+
+	/**
+	 * @param covarianceNumber the cOVARIANCE_NUMBER to set
+	 */
+	public void setCovarianceNumber(int covarianceNumber) {
+		COVARIANCE_NUMBER = covarianceNumber;
+	}
+	
+	/**
+	 * @return the WEIGHT_MATRIX
+	 */
+	public Array2DRowRealMatrix getWeightMatrix() {
+		return WEIGHT_MATRIX;
+	}
+
+	/**
+	 * @param weightMatrix the wEIGHT_MATRIX to set
+	 */
+	public void setWeightMatrix(Array2DRowRealMatrix weightMatrix) {
+		WEIGHT_MATRIX = weightMatrix;
+	}
+
+
 	
 	//========================= METHODS ===============================================
 	
@@ -108,6 +169,25 @@ public class Node {
 		}
 		
 		WEIGHTS = new ArrayRealVector(temp);
+	}
+	
+	/**
+	 * Set the weight vector according to the number of vectors used to generated the covariance matrix. Initializes 
+	 * each matrix element to a random value.
+	 */
+	private void setWeightVectorMatrix()
+	{
+		double temp[][] = new double[COVARIANCE_NUMBER][COVARIANCE_NUMBER];
+		
+		for(int i = 0 ; i < COVARIANCE_NUMBER; i++)
+		{
+			for(int j = 0; j < COVARIANCE_NUMBER; j++)
+			{
+				temp[i][j] = Math.random();
+			}
+		}
+
+		setWeightMatrix(new Array2DRowRealMatrix(temp));
 	}
 	
 }

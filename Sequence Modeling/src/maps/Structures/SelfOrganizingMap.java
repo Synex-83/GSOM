@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.StringTokenizer;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
 /**
@@ -31,6 +32,8 @@ public class SelfOrganizingMap {
 	private double RADIUS = 0.0;
 	private double TIME_STEP = 0.0; 				//lambda of X(t) = t0 * exp(-t/lambda)
 	private String INPUT_SAMPLES = null;
+	private boolean IS_MATRIX_MODE = false;
+	private int COVARIANCE_NUMBER = 0;
 
 
 	/**
@@ -39,15 +42,25 @@ public class SelfOrganizingMap {
 	 * @param grid as the type of grid (0 = square, 1 = rectangle, 2 = hexagonal)
 	 * @param inputDimension the dimension of the input data vector
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int depth, int inputDimensison)
+	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber)
 	{
 		INPUT_DIMENSION = inputDimensison;
+		IS_MATRIX_MODE = isMatrixMode;
+		COVARIANCE_NUMBER = covarianceNumber;
 		
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
-		initialize();
+		
+		if(IS_MATRIX_MODE)
+		{
+			initialize();
+		}
+		else
+		{
+			initializeMatrix();
+		}
 
 		RADIUS = MAX_RADIUS;
 	}
@@ -80,10 +93,6 @@ public class SelfOrganizingMap {
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			//exportWeights(i);
-			//
-			//(new MapScreen().updateMap(exportImageNorm(i)));
-			//new DisplayLattice(exportImageNorm(i));
 			singleCompleteRun();
 			CURRENT_ITERATION++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
@@ -93,12 +102,22 @@ public class SelfOrganizingMap {
 	
 	private void singleCompleteRun()
 	{
-		trainSOM(INPUT_SAMPLES); 		
+		if(IS_MATRIX_MODE)
+		{
+			trainSOM();
+		}
+		else
+		{
+			trainSOM(INPUT_SAMPLES);
+		}
+		
 		EpochRadiusDecay(CURRENT_ITERATION);
 		LearningRateDecay(CURRENT_ITERATION);
 		System.out.println(CURRENT_ITERATION);
 	}
 	
+
+
 	private void exportWeights(int iterations)
 	{
 		if(iterations == 100)
@@ -146,8 +165,47 @@ public class SelfOrganizingMap {
 	}
 	
 	/**
+	 * Performs a single iteration of SOM training in matrix mode
+	 */
+	private void trainSOM() 
+	{
+		String line = "";
+		double temp[] = null;
+		Array2DRowRealMatrix covariance = null;
+		Node winner = null;
+		
+		
+		StringTokenizer first = new StringTokenizer(INPUT_SAMPLES, "\n");
+		first.nextToken();	
+		int tempcounter = 0;
+		
+		while(first.hasMoreTokens())
+		{
+			line = first.nextToken();
+			//System.out.println(line);
+			if(!line.contains("####"))
+			{
+				temp = new double[INPUT_DIMENSION];
+				String[] inputVector = line.split("\t");
+				
+				for(int i = 1; i < inputVector.length; i++)
+				{
+					temp[i-1] = Double.parseDouble(inputVector[i]);					
+				}
+				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
+				
+				tempcounter++;
+				
+				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("=============================== " + tempcounter);
+			}
+		}
+	}
+	
+	/**
 	 * @param input as the input vector
-	 * Performs a single iteration of SOM training
+	 * Performs a single iteration of SOM training in vector mode
 	 */
 	public void trainSOM(String input)
 	{
@@ -360,12 +418,31 @@ public class SelfOrganizingMap {
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
-				SOM[i][j] = new Node(INPUT_DIMENSION,i,j);
+				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,false,0);
 			}
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
 		SOM_VERTICAL_LENGTH = SOM.length;
+	}
+	
+	/**
+	 * Initializes the random weights of each node in the SOM according to the number of vectors considered for the 
+	 * sliding window technique.
+	 */
+	private void initializeMatrix() {
+		
+		for(int i = 0 ; i < SOM.length; i++)
+		{
+			for(int j=0; j < SOM[0].length; j++)
+			{ 
+				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER);
+			}
+		}
+		
+		SOM_HORIZONTAL_LENGTH = SOM[0].length;
+		SOM_VERTICAL_LENGTH = SOM.length;
+		
 	}
 	
 	/**
