@@ -170,7 +170,7 @@ public class SelfOrganizingMap {
 	private void trainSOM() 
 	{
 		String line = "";
-		double temp[] = null;
+		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
 		
@@ -185,13 +185,16 @@ public class SelfOrganizingMap {
 			//System.out.println(line);
 			if(!line.contains("####"))
 			{
-				temp = new double[INPUT_DIMENSION];
+				//temp = new double[INPUT_DIMENSION];
 				String[] inputVector = line.split("\t");
 				
 				for(int i = 1; i < inputVector.length; i++)
 				{
-					temp[i-1] = Double.parseDouble(inputVector[i]);					
+					temp[COVARIANCE_NUMBER-1][i-1] = Double.parseDouble(inputVector[i]);					
 				}
+				
+				covariance = generateCovarainceMatrix(temp);
+				
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
 				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 				
@@ -203,6 +206,7 @@ public class SelfOrganizingMap {
 		}
 	}
 	
+
 	/**
 	 * @param input as the input vector
 	 * Performs a single iteration of SOM training in vector mode
@@ -464,6 +468,9 @@ public class SelfOrganizingMap {
 		//System.out.println("===============================");
 	}
 	
+	/**
+	 * 
+	 */
 	private void getNormMap()
 	{
 		for(int i = 0; i < SOM.length; i++)
@@ -474,4 +481,34 @@ public class SelfOrganizingMap {
 			}
 		}
 	}	
+	
+	/**
+	 * @param vectors as the vectors in the moving window
+	 * @return the covariance matrix of the vectors specified 
+	 */
+	private Array2DRowRealMatrix generateCovarainceMatrix(double[][] vectors) {
+		// TODO Auto-generated method stub
+		 Array2DRowRealMatrix realData = new Array2DRowRealMatrix(INPUT_DIMENSION, COVARIANCE_NUMBER);
+		 Array2DRowRealMatrix covarianceMatrix = new Array2DRowRealMatrix(COVARIANCE_NUMBER,COVARIANCE_NUMBER);
+		 
+		 for(int i  = 0; i < vectors.length; i++)
+		 {
+			 realData.setColumn(i, vectors[i]);
+		 }
+		
+		covarianceMatrix = getWeightedCovariance(realData);
+		
+		return covarianceMatrix;
+	}
+
+	/**
+	 * @param realData
+	 * @return the weighted covaraince matrix of the input data matrix
+	 */
+	private Array2DRowRealMatrix getWeightedCovariance(Array2DRowRealMatrix dataMatrix)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
