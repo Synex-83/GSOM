@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
+import org.apache.commons.math3.linear.EigenDecomposition;
 
 /**
  * @author 		Manjusri Ishwara
@@ -34,6 +35,8 @@ public class SelfOrganizingMap {
 	private String INPUT_SAMPLES = null;
 	private boolean IS_MATRIX_MODE = false;
 	private int COVARIANCE_NUMBER = 0;
+	private double VECTOR_WEIGHTS[] = {0.5,0.33,0.17}; // values should be equivalent to the size of the covariance vectors considered for the calculation
+	private double ALPHA = 0;
 
 
 	/**
@@ -47,6 +50,7 @@ public class SelfOrganizingMap {
 		INPUT_DIMENSION = inputDimensison;
 		IS_MATRIX_MODE = isMatrixMode;
 		COVARIANCE_NUMBER = covarianceNumber;
+		ALPHA = setAlpha();
 		
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
@@ -66,6 +70,20 @@ public class SelfOrganizingMap {
 	}
 	
 	/**
+	 * @return
+	 */
+	private double setAlpha() {
+		double squaredMean = 0;
+		
+		for(int i = 0; i < VECTOR_WEIGHTS.length; i++)
+		{
+			squaredMean += Math.pow(VECTOR_WEIGHTS[i],2);
+		}
+		
+		return (1 / (1 - squaredMean));
+	}
+
+	/**
 	 * @param a
 	 * @param b
 	 * @return
@@ -76,6 +94,72 @@ public class SelfOrganizingMap {
 		
 		return value;
 	}
+	
+	
+	/**
+	 * @param weightMatrix
+	 * @param covariance
+	 * @return
+	 */
+	private double multiply(Array2DRowRealMatrix weightMatrix,Array2DRowRealMatrix covariance, int option)
+	{
+		Array2DRowRealMatrix difference =	weightMatrix.subtract(covariance);
+		double distanceValue = 0;
+		
+		if(option == 0)
+		{
+			distanceValue = difference.getNorm(); // 1 - norm => max column value
+		}
+		else  if(option == 1)
+		{
+			double tempRowValue = 0;
+			double maxRowValue = 0;
+			
+			for(int i = 0; i < difference.getRowDimension() ; i++)
+			{
+				// calculation of infinity - norm => max row value
+				
+				tempRowValue = 0;
+				
+				for(int j = 0; j < difference.getColumnDimension() ; j++)
+				{
+					tempRowValue += difference.getEntry(i, j);
+				}
+				
+				if(tempRowValue > maxRowValue)
+				{
+					maxRowValue = tempRowValue;
+				}
+			}
+			
+			distanceValue = maxRowValue;
+		}
+		else  if(option == 2)
+		{
+			distanceValue = difference.getFrobeniusNorm(); // Frobenius norm 
+		}
+		else if(option == 3) // spectral norm
+		{
+			EigenDecomposition eig = new EigenDecomposition((difference.transpose()).multiply(difference));
+			
+			double eigenValues[] = eig.getRealEigenvalues();
+			
+			double maxEig = 0;
+			
+			for (int i = 0 ; i < eigenValues.length ; i++)
+			{
+				if(eigenValues[i] > maxEig)
+				{
+					maxEig = eigenValues[i];
+				}
+			}
+			
+			distanceValue = Math.sqrt(maxEig);		
+		}
+		
+		return distanceValue;
+	}
+
 	
 	/**
 	 * @param input
@@ -100,6 +184,9 @@ public class SelfOrganizingMap {
 
 	}
 	
+	/**
+	 * 
+	 */
 	private void singleCompleteRun()
 	{
 		if(IS_MATRIX_MODE)
@@ -116,8 +203,9 @@ public class SelfOrganizingMap {
 		System.out.println(CURRENT_ITERATION);
 	}
 	
-
-
+	/**
+	 * @param iterations
+	 */
 	private void exportWeights(int iterations)
 	{
 		if(iterations == 100)
@@ -130,6 +218,9 @@ public class SelfOrganizingMap {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	private BufferedImage exportImageNorm()
 	{
 		BufferedImage colorNodes = new BufferedImage(SOM[0].length, SOM.length, 1);
@@ -181,13 +272,34 @@ public class SelfOrganizingMap {
 		
 		while(first.hasMoreTokens())
 		{
+			/* 
+			 * The following loop shifts the array by one set. The values at the array position [0] is discarded 
+			 * and is replaced with the next entry which is [1].  The last entry [N] is reset to all zeros which
+			 * then will be filled by the input reading for-loop which is found immediately after this loop.
+			 */
+			for(int j = 0; j < COVARIANCE_NUMBER; j++)
+			{
+				if( (j + 1) < COVARIANCE_NUMBER)
+				{
+					temp[j] = temp[j+1];
+				}
+				else
+				{
+					temp[j] = new double[INPUT_DIMENSION];
+				}					
+			}
+			
 			line = first.nextToken();
 			//System.out.println(line);
 			if(!line.contains("####"))
 			{
-				//temp = new double[INPUT_DIMENSION];
 				String[] inputVector = line.split("\t");
 				
+				
+				/* 
+				 * The following loop fills in the last element of the sliding window with the latest input
+				 * vector element encountered. All the past input vectors are shifted up by one element.
+				 */
 				for(int i = 1; i < inputVector.length; i++)
 				{
 					temp[COVARIANCE_NUMBER-1][i-1] = Double.parseDouble(inputVector[i]);					
@@ -195,8 +307,8 @@ public class SelfOrganizingMap {
 				
 				covariance = generateCovarainceMatrix(temp);
 				
-				winner = setAccumulatedValue(new ArrayRealVector(temp));
-				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
+				winner = setAccumulatedValue(covariance);
+				//adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 				
 				tempcounter++;
 				
@@ -413,6 +525,41 @@ public class SelfOrganizingMap {
 		return maxNode;
 	}
 
+	
+	/**
+	 * @param covariance
+	 * @return the winner of the presentation
+	 */
+	private Node setAccumulatedValue(Array2DRowRealMatrix covariance) {
+		
+		
+		double temp = 0.0;
+		double maxSeen = 0.0;
+		Node maxNode = null;
+		
+		//System.out.println("Input Vector = " + input.toString());
+		
+		for(int i = 0 ; i < SOM.length; i++)
+		{
+			for(int j=0; j < SOM[0].length; j++)
+			{
+				temp = multiply(SOM[i][j].getWeightMatrix(), covariance, 2); // in case there is an error this would revert to zero
+				
+				if(temp > maxSeen)
+				{
+					maxNode = SOM[i][j];
+					maxSeen = temp;
+				}
+				
+				SOM[i][j].setACTIVATION_VALUE(temp); 
+			}
+		}	
+		
+		//printSOM();
+		return maxNode;
+		
+	}
+	
 	/**
 	 * Initializes the random weights of each node in the SOM according to the initial input dimensions.
 	 */
@@ -487,7 +634,7 @@ public class SelfOrganizingMap {
 	 * @return the covariance matrix of the vectors specified 
 	 */
 	private Array2DRowRealMatrix generateCovarainceMatrix(double[][] vectors) {
-		// TODO Auto-generated method stub
+		
 		 Array2DRowRealMatrix realData = new Array2DRowRealMatrix(INPUT_DIMENSION, COVARIANCE_NUMBER);
 		 Array2DRowRealMatrix covarianceMatrix = new Array2DRowRealMatrix(COVARIANCE_NUMBER,COVARIANCE_NUMBER);
 		 
@@ -496,7 +643,7 @@ public class SelfOrganizingMap {
 			 realData.setColumn(i, vectors[i]);
 		 }
 		
-		covarianceMatrix = getWeightedCovariance(realData);
+		covarianceMatrix = getWeightedCovarianceMatrix(realData);
 		
 		return covarianceMatrix;
 	}
@@ -505,10 +652,67 @@ public class SelfOrganizingMap {
 	 * @param realData
 	 * @return the weighted covaraince matrix of the input data matrix
 	 */
-	private Array2DRowRealMatrix getWeightedCovariance(Array2DRowRealMatrix dataMatrix)
+	private Array2DRowRealMatrix getWeightedCovarianceMatrix(Array2DRowRealMatrix dataMatrix)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		
+		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
+		double value = 0d;
+		
+		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
+			for(int j=i ; j < dataMatrix.getColumnDimension() ; j++)
+			{
+				value = calculateWeightedCovariance(dataMatrix.getColumn(i),dataMatrix.getColumn(j),i,j); // /points
+				covariance.setEntry(i, j, value);
+				covariance.setEntry(j, i, value);		    
+			}
+			
+		}
+		return covariance;
 	}
+
+	/**
+	 * @param vector first column considered for calculation
+	 * @param vector2 second column considered for calculation
+	 * @param i index of vector in first parameter with respect to the total matrix
+	 * @param j index of vector2 the second parameter with respect to the total matrix
+	 * @return the weighted covariance value between the two column vectors supplied in arguments
+	 */
+	private double calculateWeightedCovariance(double[] vector, double[] vector2, int index, int index2) {
+
+		double result = 0d;
+		double weightedMean[] = calculateWeightedMean(vector, vector2, index, index2);
+		
+		
+		for(int i = 0; i < vector.length ; i++)
+		{
+			result += VECTOR_WEIGHTS[i]*(vector[i] - weightedMean[0])*(vector2[i] - weightedMean[1]);
+		}
+		
+		return (ALPHA*result);
+
+	}
+
+	/**
+	 * @param vector
+	 * @param vector2
+	 * @param index
+	 * @param index2
+	 * @return
+	 */
+	private double[] calculateWeightedMean(double[] vector, double[] vector2,int index, int index2) {
+		
+		double temp[] = new double[2];
+		
+		for(int i = 0; i < vector.length; i++)
+		{
+			temp[0] += vector[i]*VECTOR_WEIGHTS[index];
+			temp[1] += vector2[i]*VECTOR_WEIGHTS[index2];
+		}
+			
+		return temp;
+		
+	}
+	
+	
 
 }
