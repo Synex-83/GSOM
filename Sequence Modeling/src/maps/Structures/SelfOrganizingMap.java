@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
+import org.apache.commons.math3.linear.RealMatrix;
 
 /**
  * @author 		Manjusri Ishwara
@@ -59,11 +60,11 @@ public class SelfOrganizingMap {
 		
 		if(IS_MATRIX_MODE)
 		{
-			initialize();
+			initializeMatrix();			
 		}
 		else
 		{
-			initializeMatrix();
+			initialize();
 		}
 
 		RADIUS = MAX_RADIUS;
@@ -181,6 +182,18 @@ public class SelfOrganizingMap {
 			CURRENT_ITERATION++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
+		
+		for(int i = 0; i < SOM.length; i++)
+		{
+			for(int j = 0; j < SOM[0].length; j++)
+			{
+				System.out.println("SOM I= "+i+" J= "+j);
+				printMatrix(SOM[i][j].getWeightMatrix());
+				System.out.println();
+				System.out.println("==================================================================================");
+			}
+			
+		}
 
 	}
 	
@@ -308,7 +321,7 @@ public class SelfOrganizingMap {
 				covariance = generateCovarainceMatrix(temp);
 				
 				winner = setAccumulatedValue(covariance);
-				//adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
+				adjustNeighbourhoodOfWinners(winner, covariance);
 				
 				tempcounter++;
 				
@@ -318,6 +331,7 @@ public class SelfOrganizingMap {
 		}
 	}
 	
+
 
 	/**
 	 * @param input as the input vector
@@ -402,9 +416,11 @@ public class SelfOrganizingMap {
 		{
 			for(int j = effective_x_min; j <= effective_x_max; j++)
 			{
-				try{
-				distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
-				}catch(Exception e)
+				try
+				{
+					distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				}
+				catch(Exception e)
 				{
 					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
 					System.out.println("X Min " + effective_x_min);
@@ -424,6 +440,78 @@ public class SelfOrganizingMap {
 			}
 		}
 	}
+	
+	/**
+	 * @param winner as the winner node of the input presentation
+	 * @param covariance as the covariance matrix recently presented to the network
+	 */
+	private void adjustNeighbourhoodOfWinners(Node winner, Array2DRowRealMatrix covariance) {
+		int radius = (int)Math.ceil(RADIUS);
+		double distance = 0.0;
+		double theta = 0.0;
+		RealMatrix tempWeightsMatrix = null;
+		Array2DRowRealMatrix tempPart = null;
+		
+		int effective_x_min = winner.getX() - radius;
+		int effective_x_max = winner.getX() + radius;
+		int effective_y_min = winner.getY() - radius;
+		int effective_y_max = winner.getY() + radius;
+		
+		if(effective_x_min  < 0)
+		{
+			effective_x_min = 0;
+		}
+		
+		if(effective_x_max >= SOM_HORIZONTAL_LENGTH)
+		{
+			effective_x_max = SOM_HORIZONTAL_LENGTH - 1;
+		}
+		
+		if(effective_y_min < 0)
+		{
+			effective_y_min = 0;
+		}
+		
+		if(effective_y_max >= SOM_VERTICAL_LENGTH)
+		{
+			effective_y_max = SOM_VERTICAL_LENGTH - 1;
+		}
+		
+		
+		for(int i = effective_y_min; i <= effective_y_max; i++)
+		{
+			for(int j = effective_x_min; j <= effective_x_max; j++)
+			{
+				try
+				{
+					distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				
+				}
+				catch(Exception e)
+				{
+					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
+					System.out.println("X Min " + effective_x_min);
+					System.out.println("X Max " + effective_x_max);
+					System.out.println("Y Min " + effective_y_min);
+					System.out.println("Y Max " + effective_y_max);
+					System.out.println("Radius " + RADIUS);
+				}
+				
+				if(distance <= RADIUS)
+				{
+					//weight adjust
+					theta = Math.exp(-(Math.pow(distance, 2)/(2*Math.pow(RADIUS, 2))));
+					tempPart = (Array2DRowRealMatrix)(covariance.subtract(SOM[i][j].getWeightMatrix())).scalarMultiply(theta*LEARNING_RATE);
+					tempWeightsMatrix = SOM[i][j].getWeightMatrix().add(tempPart);
+							
+
+					SOM[i][j].setWeightMatrix((Array2DRowRealMatrix)tempWeightsMatrix);					
+				}
+			}
+		}
+		
+	}
+
 	
 	/**
 	 * @param BMU
@@ -534,8 +622,8 @@ public class SelfOrganizingMap {
 		
 		
 		double temp = 0.0;
-		double maxSeen = 0.0;
-		Node maxNode = null;
+		double minSeen = Double.POSITIVE_INFINITY;
+		Node minNode = null;
 		
 		//System.out.println("Input Vector = " + input.toString());
 		
@@ -545,10 +633,10 @@ public class SelfOrganizingMap {
 			{
 				temp = multiply(SOM[i][j].getWeightMatrix(), covariance, 2); // in case there is an error this would revert to zero
 				
-				if(temp > maxSeen)
+				if(temp < minSeen)
 				{
-					maxNode = SOM[i][j];
-					maxSeen = temp;
+					minNode = SOM[i][j];
+					minSeen = temp;
 				}
 				
 				SOM[i][j].setACTIVATION_VALUE(temp); 
@@ -556,7 +644,7 @@ public class SelfOrganizingMap {
 		}	
 		
 		//printSOM();
-		return maxNode;
+		return minNode;
 		
 	}
 	
@@ -569,7 +657,7 @@ public class SelfOrganizingMap {
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
-				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,false,0);
+				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,0);
 			}
 		}
 		
@@ -713,6 +801,15 @@ public class SelfOrganizingMap {
 		
 	}
 	
-	
-
+	private void printMatrix(Array2DRowRealMatrix weightMatrix)
+	{
+		for(int i = 0; i < weightMatrix.getRowDimension(); i++)
+		{
+			for(int j = 0; j < weightMatrix.getColumnDimension(); j++)
+			{
+				System.out.print(weightMatrix.getEntry(i, j));
+			}
+			System.out.println();
+		}
+	}
 }
