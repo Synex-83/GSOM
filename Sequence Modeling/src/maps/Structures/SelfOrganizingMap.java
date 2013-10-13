@@ -6,12 +6,16 @@ package maps.Structures;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
+
+import sun.font.CreatedFontTracker;
 
 /**
  * @author 		Manjusri Ishwara
@@ -23,6 +27,7 @@ public class SelfOrganizingMap {
 	
 	private Node[][] SOM = null;
 	private double[][] NORM_MAP = null; 			//holds the L2 norm of each vector in the SOM[][]
+	private double[][] U_MATRIX = null;
 	private int INPUT_DIMENSION = 0;
 	private int NUMER_OF_ITERATIONS = 0;
 	private int CURRENT_ITERATION=0;
@@ -55,6 +60,7 @@ public class SelfOrganizingMap {
 		
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
+		U_MATRIX = new double[2*side - 1][2*side - 1];
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
 		
@@ -183,17 +189,20 @@ public class SelfOrganizingMap {
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
-		for(int i = 0; i < SOM.length; i++)
+		createUMatrix();
+		
+		for(int i = 0; i < U_MATRIX.length; i++)
 		{
-			for(int j = 0; j < SOM[0].length; j++)
+			for(int j = 0; j < U_MATRIX.length; j++)
 			{
-				System.out.println("SOM I= "+i+" J= "+j);
-				printMatrix(SOM[i][j].getWeightMatrix());
-				System.out.println();
-				System.out.println("==================================================================================");
+				//System.out.println("SOM I= "+i+" J= "+j);
+				//printMatrix(SOM[i][j].getWeightMatrix());
+				System.out.print(U_MATRIX[i][j] + " ");				
 			}
-			
+			System.out.println();			
 		}
+		
+		exportUMatrixToCSV();
 
 	}
 	
@@ -801,6 +810,9 @@ public class SelfOrganizingMap {
 		
 	}
 	
+	/**
+	 * @param weightMatrix
+	 */
 	private void printMatrix(Array2DRowRealMatrix weightMatrix)
 	{
 		for(int i = 0; i < weightMatrix.getRowDimension(); i++)
@@ -812,4 +824,129 @@ public class SelfOrganizingMap {
 			System.out.println();
 		}
 	}
+	
+	/**
+	 * 
+	 */
+	private void createUMatrix()
+	{	
+		int a = 0; // 2x + 1
+		int b = 0; // 2x
+		int c = 0; // 2y + 1
+		int d = 0; // 2y 
+		boolean overdone = false;
+		
+		
+		for(int i = 0; i< SOM.length ; i++) //first loop decides x
+		{
+			a = 2*i + 1;
+			b = 2*i;
+			for(int j = 0; j < SOM[0].length; j++) //second loop decides y
+			{
+				c = 2*j + 1;
+				d = 2*j;
+				
+				
+				if(a < SOM.length)
+				{
+					U_MATRIX[a][d] = ((SOM[i][j].getWeightMatrix()).subtract((SOM[i+1][j].getWeightMatrix()))).getFrobeniusNorm();
+				}
+				else
+				{
+					overdone = true;
+				}
+				
+				if(c < SOM[0].length)
+				{
+					U_MATRIX[b][c] = ((SOM[i][j].getWeightMatrix()).subtract((SOM[i][j+1].getWeightMatrix()))).getFrobeniusNorm();;
+				}
+				else
+				{
+					overdone = true;
+				}
+				
+				if(!overdone)
+				{
+					double temp1 = ((SOM[i][j].getWeightMatrix()).subtract((SOM[i+1][j+1].getWeightMatrix()))).getFrobeniusNorm();
+					double temp2 = ((SOM[i][j+1].getWeightMatrix()).subtract((SOM[i+1][j].getWeightMatrix()))).getFrobeniusNorm();
+					U_MATRIX[a][c] = (temp1 + temp2) / (2*Math.sqrt(2));
+				}
+				
+				U_MATRIX[b][d] = getAverageUMatixNeighbour(b,d); //average of all surrounding
+			}
+		}
+		
+	}
+
+	/**
+	 * @param b
+	 * @param d
+	 * @return
+	 */
+	private double getAverageUMatixNeighbour(int b, int d) {
+		
+		double value = 0;
+		double numOfNeighbours = 0;
+		
+		for (int i = b - 1; i <= b + 1; i++ )
+		{
+			for(int j = d - 1; j <=d + 1; j++)
+			{
+				if(elementExists(i,j))
+				{
+					if(i != b && j != d)
+					{
+						value += U_MATRIX[i][j];
+						numOfNeighbours++;
+					}
+				}
+			}
+		}
+		return (value/numOfNeighbours);
+	}
+
+	/**
+	 * @param i
+	 * @param j
+	 * @return
+	 */
+	private boolean elementExists(int i, int j) {
+
+		try
+		{
+			double temp = U_MATRIX[i][j];
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		
+	}
+	
+	/**
+	 * 
+	 */
+    private void exportUMatrixToCSV()
+    {
+		BufferedWriter bw = null;
+		
+		try
+		{
+			bw = new BufferedWriter(new FileWriter("csv\\100x100-1000.csv",false));
+			
+			for(int i = 0 ; i < U_MATRIX.length; i++){
+				for(int j = 0; j < U_MATRIX[0].length; j++){
+					bw.write(U_MATRIX[i][j] + ",");
+				}
+				bw.newLine();
+			}
+			bw.flush();
+			System.out.println("File Exported.");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+    }
 }
