@@ -73,12 +73,12 @@ public class FileProcessing {
 			try {
 				BR.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			}
 		}
 		
-		return (dimension - 1);
+		return (dimension - 2); // -1 for only the vectore number -2 for vector number and the label
 	}
 	
 	/**

@@ -8,6 +8,8 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
@@ -15,7 +17,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 
-import sun.font.CreatedFontTracker;
+import com.sun.jndi.url.dns.dnsURLContext;
 
 /**
  * @author 		Manjusri Ishwara
@@ -28,6 +30,7 @@ public class SelfOrganizingMap {
 	private Node[][] SOM = null;
 	private double[][] NORM_MAP = null; 			//holds the L2 norm of each vector in the SOM[][]
 	private double[][] U_MATRIX = null;
+	private double[][] U_MATRIX_SHRINK = null;
 	private int INPUT_DIMENSION = 0;
 	private int NUMER_OF_ITERATIONS = 0;
 	private int CURRENT_ITERATION=0;
@@ -61,6 +64,7 @@ public class SelfOrganizingMap {
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
 		U_MATRIX = new double[2*side - 1][2*side - 1];
+		U_MATRIX_SHRINK = new double[side][side];
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
 		
@@ -130,7 +134,7 @@ public class SelfOrganizingMap {
 				
 				for(int j = 0; j < difference.getColumnDimension() ; j++)
 				{
-					tempRowValue += difference.getEntry(i, j);
+					tempRowValue += Math.abs(difference.getEntry(i, j));
 				}
 				
 				if(tempRowValue > maxRowValue)
@@ -190,8 +194,9 @@ public class SelfOrganizingMap {
 		}			
 		
 		createUMatrix();
+		extractSmallerUMatrix();
 		
-		for(int i = 0; i < U_MATRIX.length; i++)
+/*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
 			for(int j = 0; j < U_MATRIX.length; j++)
 			{
@@ -200,12 +205,15 @@ public class SelfOrganizingMap {
 				System.out.print(U_MATRIX[i][j] + " ");				
 			}
 			System.out.println();			
-		}
+		}*/
 		
 		exportUMatrixToCSV();
+		exportSmallUMatrixToCSV();
+		displayHitNodesAndSequences();
 
 	}
-	
+
+
 	/**
 	 * 
 	 */
@@ -228,6 +236,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param iterations
 	 */
+	@SuppressWarnings("unused")
 	private void exportWeights(int iterations)
 	{
 		if(iterations == 100)
@@ -243,6 +252,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private BufferedImage exportImageNorm()
 	{
 		BufferedImage colorNodes = new BufferedImage(SOM[0].length, SOM.length, 1);
@@ -283,9 +293,12 @@ public class SelfOrganizingMap {
 	private void trainSOM() 
 	{
 		String line = "";
+		String sequence = "XXX";
+		boolean skipZeroEntries = true;
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
+		int zeroCounter = 0;
 		
 		
 		StringTokenizer first = new StringTokenizer(INPUT_SAMPLES, "\n");
@@ -317,25 +330,36 @@ public class SelfOrganizingMap {
 			{
 				String[] inputVector = line.split("\t");
 				
-				
+				sequence = sequence.substring(1).concat(inputVector[1].toString());
 				/* 
 				 * The following loop fills in the last element of the sliding window with the latest input
 				 * vector element encountered. All the past input vectors are shifted up by one element.
 				 */
-				for(int i = 1; i < inputVector.length; i++)
+				for(int i = 2; i < inputVector.length; i++)
 				{
-					temp[COVARIANCE_NUMBER-1][i-1] = Double.parseDouble(inputVector[i]);					
+					temp[COVARIANCE_NUMBER-1][i-2] = Double.parseDouble(inputVector[i]);					
 				}
-				
-				covariance = generateCovarainceMatrix(temp);
-				
-				winner = setAccumulatedValue(covariance);
-				adjustNeighbourhoodOfWinners(winner, covariance);
-				
-				tempcounter++;
-				
-				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-				System.out.println("=============================== " + tempcounter);
+						
+				if(!skipZeroEntries)
+				{
+					covariance = generateCovarainceMatrix(temp);
+					
+					winner = setAccumulatedValue(covariance,sequence);
+					adjustNeighbourhoodOfWinners(winner, covariance);
+					
+					tempcounter++;
+					
+				//	System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				//	System.out.println("=============================== " + tempcounter);
+				}
+				else
+				{
+					zeroCounter++;
+					
+					if(zeroCounter >= 2)
+						skipZeroEntries = false;
+				}
+
 			}
 		}
 	}
@@ -627,7 +651,7 @@ public class SelfOrganizingMap {
 	 * @param covariance
 	 * @return the winner of the presentation
 	 */
-	private Node setAccumulatedValue(Array2DRowRealMatrix covariance) {
+	private Node setAccumulatedValue(Array2DRowRealMatrix covariance, String sequence) {
 		
 		
 		double temp = 0.0;
@@ -652,6 +676,8 @@ public class SelfOrganizingMap {
 			}
 		}	
 		
+		minNode.incrementNumberOfHits();
+		minNode.addMappingSequence(sequence);
 		//printSOM();
 		return minNode;
 		
@@ -715,6 +741,7 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private void getNormMap()
 	{
 		for(int i = 0; i < SOM.length; i++)
@@ -813,6 +840,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param weightMatrix
 	 */
+	@SuppressWarnings("unused")
 	private void printMatrix(Array2DRowRealMatrix weightMatrix)
 	{
 		for(int i = 0; i < weightMatrix.getRowDimension(); i++)
@@ -886,23 +914,91 @@ public class SelfOrganizingMap {
 	private double getAverageUMatixNeighbour(int b, int d) {
 		
 		double value = 0;
-		double numOfNeighbours = 0;
+		int numOfNeighbours = 0;
+		double medianArray[] = new double[8];
+		double retValue = 0;
+		int index = 0;
+		
+		int counter = 0;
 		
 		for (int i = b - 1; i <= b + 1; i++ )
 		{
 			for(int j = d - 1; j <=d + 1; j++)
 			{
-				if(elementExists(i,j))
+				if(elementExists(i,j,false))
 				{
 					if(i != b && j != d)
 					{
+						medianArray[counter] = U_MATRIX[i][j];
 						value += U_MATRIX[i][j];
 						numOfNeighbours++;
 					}
 				}
 			}
 		}
-		return (value/numOfNeighbours);
+		
+		Arrays.sort(medianArray);
+		
+		if(numOfNeighbours%2 == 1)
+		{
+			index = numOfNeighbours/2;
+			retValue = medianArray[index];
+		}
+		else if(numOfNeighbours%2 == 0)
+		{
+			retValue = (medianArray[3] + medianArray[4])/2;
+		}
+		
+		return retValue;  //(value/numOfNeighbours); put this if average is needed
+	}
+	
+	/**
+	 * @param b
+	 * @param d
+	 * @return
+	 */
+	private double getAverageSOMNeighbour(int b, int d)
+	{
+		double value = 0;
+		int numOfNeighbours = 0;
+		double medianArray[] = new double[8];
+		double retValue = 0;
+		int index = 0;
+		double temp = 0;
+		
+		int counter = 0;
+		
+		for (int i = b - 1; i <= b + 1; i++ )
+		{
+			for(int j = d - 1; j <=d + 1; j++)
+			{
+				if(elementExists(i,j,true))
+				{
+					if(i != b && j != d)
+					{
+						temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
+						medianArray[counter] = temp;
+						value += temp;
+						numOfNeighbours++;
+					}
+				}
+			}
+		}
+		
+		Arrays.sort(medianArray);
+		
+		if(numOfNeighbours%2 == 1)
+		{
+			index = numOfNeighbours/2;
+			retValue = medianArray[index];
+		}
+		else if(numOfNeighbours%2 == 0)
+		{
+			retValue = (medianArray[3] + medianArray[4])/2;
+		}
+		
+		return (value/numOfNeighbours); //put this if average is needed
+	
 	}
 
 	/**
@@ -910,11 +1006,22 @@ public class SelfOrganizingMap {
 	 * @param j
 	 * @return
 	 */
-	private boolean elementExists(int i, int j) {
+	private boolean elementExists(int i, int j, boolean isSOM) {
 
 		try
 		{
-			double temp = U_MATRIX[i][j];
+			
+			@SuppressWarnings("unused")
+			double temp = 0;
+			
+			if(isSOM)
+			{
+				temp = SOM[i][j].getX();
+			}
+			else
+			{
+				temp = U_MATRIX[i][j];
+			}
 			return true;
 		}
 		catch(Exception e)
@@ -927,13 +1034,53 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
+	private void extractSmallerUMatrix()
+	{
+		for(int i = 0; i < SOM.length; i++)
+		{
+			for(int j = 0; j < SOM[0].length; j++)
+			{
+				U_MATRIX_SHRINK[i][j] = getAverageSOMNeighbour(i,j);
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void exportSmallUMatrixToCSV()
+	{
+		BufferedWriter bw = null;
+		
+		try
+		{
+			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-SMALL-2.csv",false));
+			
+			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
+				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
+					bw.write(U_MATRIX_SHRINK[i][j] + ",");
+				}
+				bw.newLine();
+			}
+			bw.flush();
+			System.out.println("File Exported - SMALL U.");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 */
     private void exportUMatrixToCSV()
     {
 		BufferedWriter bw = null;
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\100x100-1000.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-2.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX.length; i++){
 				for(int j = 0; j < U_MATRIX[0].length; j++){
@@ -942,11 +1089,60 @@ public class SelfOrganizingMap {
 				bw.newLine();
 			}
 			bw.flush();
-			System.out.println("File Exported.");
+			System.out.println("File Exported - BIG U.");
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
     }
+    
+	
+	/**
+	 * 
+	 */
+	private void displayHitNodesAndSequences()
+	{
+		
+		BufferedWriter bw = null;
+		BufferedWriter as = null;
+		ArrayList<String> temp = null;
+		
+		try
+		{
+			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-NODE-DESCRIPTION-2.txt",false));
+			as = new BufferedWriter(new FileWriter("csv\\100x100-NX-NODE-2.csv",false));
+			for(int i = 0; i < SOM.length; i++)
+			{
+				for(int j = 0; j<SOM[0].length; j++)
+				{
+					bw.write("Node "+ i +" " + j + " hits = " + SOM[i][j].getNumberOfHits());
+					bw.newLine();
+					
+					temp = SOM[i][j].getMappedSequences();
+					
+					for(int k = 0; k < temp.size(); k++)
+					{
+						bw.write(temp.get(k) + " ");
+					}
+					bw.newLine();
+					bw.write("================================================================================");
+					bw.newLine();
+					
+					as.write(SOM[i][j].getNumberOfHits() + ",");
+					
+				}
+				as.newLine();
+			}
+			as.flush();
+			bw.flush();
+			System.out.println("File Exported - NODE DESCRIPTION.");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+
+	}
 }

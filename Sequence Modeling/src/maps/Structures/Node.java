@@ -4,6 +4,8 @@
  */
 package maps.Structures;
 
+import java.util.ArrayList;
+
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
@@ -23,6 +25,8 @@ public class Node {
  	private double ACTIVATION_VALUE = 0.0; 		//value after weight vector * input vector
 	private boolean IS_MATRIX = false;
 	private int COVARIANCE_NUMBER = 0;		//number of vectors considered for the covariance matrix
+	private int NUMBER_OF_HITS = 0;			//number of inputs mapped to the unit
+	private ArrayList<String> MAPPED_SEQUENCES = null; //the mapped sequences will be put here for each node 
  	
 	//========================= CONSTRUCTORS ==========================================
  	/**
@@ -37,6 +41,7 @@ public class Node {
 		DIMENSION = Dimensions;
 		IS_MATRIX = isMatrix;
 		COVARIANCE_NUMBER = covarianceNumber;
+		MAPPED_SEQUENCES = new ArrayList<String>();
 		
 		if(isMatrix)
 		{
@@ -151,8 +156,19 @@ public class Node {
 		WEIGHT_MATRIX = weightMatrix;
 	}
 
+	/**
+	 * @return the number of hits for that particular node
+	 */
+	public int getNumberOfHits() {
+		return NUMBER_OF_HITS;
+	}
 
-	
+	/**
+	 * @return the sequence list mapped to the particular node
+	 */
+	public ArrayList<String> getMappedSequences() {
+		return MAPPED_SEQUENCES;
+	}
 	//========================= METHODS ===============================================
 	
 	/**
@@ -188,6 +204,25 @@ public class Node {
 		}
 
 		setWeightMatrix(new Array2DRowRealMatrix(temp));
+	}
+	
+	/**
+	 * Increments the nodes hit amount by one each time the method in called.
+	 */
+	public void incrementNumberOfHits()
+	{
+		NUMBER_OF_HITS++;
+	}
+	
+	/**
+	 * @param sequence the input sequence which mapped to this node whilst training
+	 */
+	public void addMappingSequence(String sequence)
+	{
+		if(!MAPPED_SEQUENCES.contains(sequence))
+		{
+			MAPPED_SEQUENCES.add(sequence);
+		}
 	}
 	
 }
