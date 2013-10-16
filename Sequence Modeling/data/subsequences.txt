@@ -1,0 +1,4 @@
+Point	Label	A	B	C
+1	A	1	0	0
+2	B	0	1	0
+3	C	0	0	1

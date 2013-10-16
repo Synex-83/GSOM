@@ -52,8 +52,8 @@ public class Node {
 			setWeightVector();
 		}
 		
-		POSITION_X = x;
-		POSITION_Y = y;
+		POSITION_X = y;
+		POSITION_Y = x;
 	}
 	//========================= GETTERS & SETTERS =====================================
 

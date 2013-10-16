@@ -210,6 +210,7 @@ public class SelfOrganizingMap {
 		exportUMatrixToCSV();
 		exportSmallUMatrixToCSV();
 		displayHitNodesAndSequences();
+		testSOM();
 
 	}
 
@@ -288,13 +289,88 @@ public class SelfOrganizingMap {
 	}
 	
 	/**
+	 * Tests the generated SOM in matrix mode input.
+	 */
+	private void testSOM()
+	{
+		String line = "";
+		String sequence = "XXX";
+		boolean skipZeroEntries = false;
+		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
+		Array2DRowRealMatrix covariance = null;
+		Node winner = null;
+		int zeroCounter = 0;
+		int tempcounter = 0;
+		
+		StringTokenizer first = new StringTokenizer(INPUT_SAMPLES, "\n");
+		first.nextToken();	
+		
+		while(first.hasMoreTokens())
+		{
+			/* 
+			 * The following loop shifts the array by one set. The values at the array position [0] is discarded 
+			 * and is replaced with the next entry which is [1].  The last entry [N] is reset to all zeros which
+			 * then will be filled by the input reading for-loop which is found immediately after this loop.
+			 */
+			for(int j = 0; j < COVARIANCE_NUMBER; j++)
+			{
+				if( (j + 1) < COVARIANCE_NUMBER)
+				{
+					temp[j] = temp[j+1];
+				}
+				else
+				{
+					temp[j] = new double[INPUT_DIMENSION];
+				}					
+			}
+			
+			line = first.nextToken();
+			//System.out.println(line);
+			if(!line.contains("####"))
+			{
+				String[] inputVector = line.split("\t");
+				
+				sequence = sequence.substring(1).concat(inputVector[1].toString());
+				/* 
+				 * The following loop fills in the last element of the sliding window with the latest input
+				 * vector element encountered. All the past input vectors are shifted up by one element.
+				 */
+				for(int i = 2; i < inputVector.length; i++)
+				{
+					temp[COVARIANCE_NUMBER-1][i-2] = Double.parseDouble(inputVector[i]);					
+				}
+						
+				if(!skipZeroEntries)
+				{
+					covariance = generateCovarainceMatrix(temp);
+					
+					winner = setAccumulatedValue(covariance,sequence);
+					
+					tempcounter++;
+					
+					System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+					System.out.println("=============================== " + tempcounter);
+				}
+				else
+				{
+					zeroCounter++;
+					
+					if(zeroCounter >= 2)
+						skipZeroEntries = false;
+				}
+
+			}
+		}
+	}
+	
+	/**
 	 * Performs a single iteration of SOM training in matrix mode
 	 */
 	private void trainSOM() 
 	{
 		String line = "";
 		String sequence = "XXX";
-		boolean skipZeroEntries = true;
+		boolean skipZeroEntries = false;
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
@@ -1054,7 +1130,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-SMALL-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-SMALL-2.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
@@ -1080,7 +1156,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-2.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX.length; i++){
 				for(int j = 0; j < U_MATRIX[0].length; j++){
@@ -1110,8 +1186,8 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\100x100-NX-NODE-DESCRIPTION-2.txt",false));
-			as = new BufferedWriter(new FileWriter("csv\\100x100-NX-NODE-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-DESCRIPTION-2.txt",false));
+			as = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-2.csv",false));
 			for(int i = 0; i < SOM.length; i++)
 			{
 				for(int j = 0; j<SOM[0].length; j++)
