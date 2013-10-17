@@ -17,7 +17,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 
-import com.sun.jndi.url.dns.dnsURLContext;
+//import com.sun.jndi.url.dns.dnsURLContext;
 
 /**
  * @author 		Manjusri Ishwara
@@ -1130,7 +1130,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-SMALL-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-SMALL-3.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
@@ -1156,7 +1156,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-3.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX.length; i++){
 				for(int j = 0; j < U_MATRIX[0].length; j++){
@@ -1186,8 +1186,8 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-DESCRIPTION-2.txt",false));
-			as = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-2.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-DESCRIPTION-3.txt",false));
+			as = new BufferedWriter(new FileWriter("csv\\SS-NX-NODE-3.csv",false));
 			for(int i = 0; i < SOM.length; i++)
 			{
 				for(int j = 0; j<SOM[0].length; j++)
