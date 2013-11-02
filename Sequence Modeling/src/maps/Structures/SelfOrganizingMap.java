@@ -17,7 +17,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 
-//import com.sun.jndi.url.dns.dnsURLContext;
+
 
 /**
  * @author 		Manjusri Ishwara
@@ -28,6 +28,7 @@ import org.apache.commons.math3.linear.RealMatrix;
 public class SelfOrganizingMap {
 	
 	private Node[][] SOM = null;
+	private FiniteStateMachine FSM = null;
 	private double[][] NORM_MAP = null; 			//holds the L2 norm of each vector in the SOM[][]
 	private double[][] U_MATRIX = null;
 	private double[][] U_MATRIX_SHRINK = null;
@@ -67,6 +68,8 @@ public class SelfOrganizingMap {
 		U_MATRIX_SHRINK = new double[side][side];
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
+		
+		FSM = new FiniteStateMachine();
 		
 		if(IS_MATRIX_MODE)
 		{
@@ -190,11 +193,11 @@ public class SelfOrganizingMap {
 		{
 			singleCompleteRun();
 			CURRENT_ITERATION++;
-			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
+		//	System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
-		createUMatrix();
-		extractSmallerUMatrix();
+	//	createUMatrix();
+	//	extractSmallerUMatrix();
 		
 /*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
@@ -207,10 +210,10 @@ public class SelfOrganizingMap {
 			System.out.println();			
 		}*/
 		
-		exportUMatrixToCSV();
-		exportSmallUMatrixToCSV();
-		displayHitNodesAndSequences();
-		testSOM();
+	//	exportUMatrixToCSV();
+	//	exportSmallUMatrixToCSV();
+	//	displayHitNodesAndSequences();
+	//	testSOM();
 
 	}
 
@@ -422,6 +425,8 @@ public class SelfOrganizingMap {
 					
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
+					
+					FSM.addUpdateNode(new FSMNode(sequence), winner);
 					
 					tempcounter++;
 					
