@@ -3,6 +3,7 @@
  */
 package maps.Structures;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import org.omg.CORBA.Current;
@@ -15,9 +16,9 @@ import org.omg.CORBA.Current;
  */
 public class FSMNode {
 
-	private Vector<Integer> OUTGOING_LINKS = null;
-	private Vector<Integer> INCOMING_LINKS = null;
-	private Vector<Node> PREVIOUS_WINNERS = null;
+	private ArrayList<Integer> OUTGOING_LINKS = null;
+	private ArrayList<Integer> INCOMING_LINKS = null;
+	private ArrayList<Node> PREVIOUS_WINNERS = null;
 	
 	private String SEQUENCE = "";
 	private int GROWTH_RADIUS = 0;
@@ -25,14 +26,28 @@ public class FSMNode {
 	private Node CURRENT_WINNER = null;
 	
 	/**
+	 * @return the OUTGOING_LINKS
+	 */
+	public ArrayList<Integer> getOUTGOING_LINKS() {
+		return OUTGOING_LINKS;
+	}
+
+	/**
+	 * @return the INCOMING_LINKS
+	 */
+	public ArrayList<Integer> getINCOMING_LINKS() {
+		return INCOMING_LINKS;
+	}
+	
+	/**
 	 * @param sequence
 	 */
 	public FSMNode(String sequence)
 	{
 		SEQUENCE = sequence;
-		PREVIOUS_WINNERS = new Vector<Node>();
-		INCOMING_LINKS = new Vector<Integer>();
-		OUTGOING_LINKS = new Vector<Integer>();
+		PREVIOUS_WINNERS = new ArrayList<Node>();
+		INCOMING_LINKS = new ArrayList<Integer>();
+		OUTGOING_LINKS = new ArrayList<Integer>();
 	}
 
 	/**

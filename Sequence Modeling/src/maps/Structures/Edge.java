@@ -11,7 +11,7 @@ package maps.Structures;
  */
 public class Edge {
 	
-	private int EDGE_LENGTH = 0;
+	private double EDGE_LENGTH = 0;
 	private FSMNode ORIGIN = null;
 	private FSMNode DESTINATION = null;
 	private double INTENSITY = 0;
@@ -22,19 +22,20 @@ public class Edge {
 		ORIGIN = origin;
 		DESTINATION = destination;
 		EDGE_ID = id;
+		EDGE_LENGTH = setInitialDistance(origin.getCurrentWinner(), destination.getCurrentWinner());
 	}
 	
 	/**
 	 * @return the eDGE_LENGTH
 	 */
-	public int getEdgeLength() {
+	public double getEdgeLength() {
 		return EDGE_LENGTH;
 	}
 	/**
 	 * @param eDGE_LENGTH the eDGE_LENGTH to set
 	 */
-	public void setEdgeLength(int length) {
-		EDGE_LENGTH = length;
+	public void setEdgeLength(double d) {
+		EDGE_LENGTH = d;
 	}
 	/**
 	 * @return the oRIGIN
@@ -83,6 +84,17 @@ public class Edge {
 	 */
 	public void setEdgeID(int id) {
 		EDGE_ID = id;
+	}
+	
+	private double setInitialDistance(Node origin, Node destination )
+	{
+		System.out.println("*****************************************" + origin.getX() );
+		System.out.println("*****************************************" + destination.getX() );
+		double diffX = Math.pow(origin.getX() - destination.getX(),2);
+		double diffY = Math.pow(origin.getY() - destination.getY(),2);
+	
+		
+		return Math.sqrt(diffX + diffY);
 	}
 
 }

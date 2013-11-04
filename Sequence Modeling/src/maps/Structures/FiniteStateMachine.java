@@ -3,6 +3,7 @@
  */
 package maps.Structures;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -74,11 +75,12 @@ public class FiniteStateMachine {
 			current.setWinner(winner); 
 			FSM.add(current);
 			
-			if(previous != null)
+			if(previous != null && !previous.getSequence().equals(current.getSequence())) //prevents the AAA -> AAA -> AAA
 			{
-				LINKS.add(new Edge(previous, current, LINK_NUMBERS));
+				System.out.println("LINK ADDED =============================");
+				LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
 				previous.addOutgoingLink(LINK_NUMBERS);
-				current.addOutgoingLink(LINK_NUMBERS);
+				current.addIncomingLink(LINK_NUMBERS);
 			}
 						
 			LINK_NUMBERS++;
@@ -92,12 +94,13 @@ public class FiniteStateMachine {
 	private void update(FSMNode current, FSMNode previous, Node winner) 
 	{
 		int distance = 0;
-		if(!(current.getCurrentWinner().equals(winner)))
+		if(!(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence())))
 		{
 			
 			current.setCurrentWinner(winner);
-			//once the node moves to the current winner every incomming and outgoing link for this particular
+			//once the node moves to the current winner every incoming and outgoing link for this particular
 			//FSM node has to be recalculated.
+			updateLinks(current,winner);
 
 		}
 		else
@@ -107,6 +110,53 @@ public class FiniteStateMachine {
 		
 	}
 	
+
+	/**
+	 * @param current
+	 * @param winner
+	 */
+	private void updateLinks(FSMNode current, Node winner) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Integer> incoming = current.getINCOMING_LINKS();
+		incoming.addAll(current.getOUTGOING_LINKS());
+		
+		int temp1 = 0;
+	
+		Iterator<Integer> itr1 = incoming.iterator();
+
+		
+		while(itr1.hasNext())
+		{
+			temp1 = (Integer) itr1.next();
+			 
+			for(int i = 0; i < LINKS.size(); i++)
+			{
+				if(temp1 == LINKS.elementAt(i).getEdgeID())
+				{
+					fixDistances(LINKS.elementAt(i), winner); //only applicable in 2D case.
+				}
+			}
+		}
+		
+		
+	}
+
+	/**
+	 * @param elementAt
+	 * @param winner
+	 */
+	private void fixDistances(Edge edge, Node winner)
+	{
+		// TODO Auto-generated method stub
+		
+		double diffX = Math.pow(edge.getOrigin().getCurrentWinner().getX() - edge.getDestination().getCurrentWinner().getX(),2);
+		double diffY = Math.pow(edge.getOrigin().getCurrentWinner().getY() - edge.getDestination().getCurrentWinner().getY(),2);
+		
+		
+		edge.setEdgeLength(Math.sqrt(diffX + diffY));
+		
+	}
 
 	public void addUpdateEdge(FSMNode current, FSMNode previous, int id)
 	{

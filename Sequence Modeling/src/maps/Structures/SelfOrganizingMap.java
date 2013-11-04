@@ -47,6 +47,7 @@ public class SelfOrganizingMap {
 	private int COVARIANCE_NUMBER = 0;
 	private double VECTOR_WEIGHTS[] = {0.5,0.33,0.17}; // values should be equivalent to the size of the covariance vectors considered for the calculation
 	private double ALPHA = 0;
+	private FSMNode PREVIOUS = null;
 
 
 	/**
@@ -377,6 +378,7 @@ public class SelfOrganizingMap {
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
+		FSMNode current = null;
 		int zeroCounter = 0;
 		
 		
@@ -410,6 +412,8 @@ public class SelfOrganizingMap {
 				String[] inputVector = line.split("\t");
 				
 				sequence = sequence.substring(1).concat(inputVector[1].toString());
+				
+				System.out.println("===========================SEQUENCE============================" + sequence);
 				/* 
 				 * The following loop fills in the last element of the sliding window with the latest input
 				 * vector element encountered. All the past input vectors are shifted up by one element.
@@ -426,7 +430,13 @@ public class SelfOrganizingMap {
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
 					
-					FSM.addUpdateNode(new FSMNode(sequence), winner);
+					current = new FSMNode(sequence);
+					
+					FSM.addUpdateNode(current, PREVIOUS, winner);
+					
+					PREVIOUS = current;
+					current = null;
+					
 					
 					tempcounter++;
 					
