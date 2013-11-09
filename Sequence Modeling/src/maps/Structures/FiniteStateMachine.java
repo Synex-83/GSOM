@@ -56,13 +56,13 @@ public class FiniteStateMachine {
 		Boolean addNewNode = true;
 		FSMNode temp = null;
 		
-		while(itr.hasNext())
+		while(itr.hasNext()) //averts the problem of repeating sequence. Better way available?
 		{
 			temp = itr.next();
 			
 			if((temp.getSequence().trim()).equals(current.getSequence().trim()) )
 			{
-				System.out.println("NODE EXISTS:-" + temp.getSequence());
+				System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
 				update(temp,previous,winner); //trigger link update
 				addNewNode = false;
 				break;
@@ -134,7 +134,7 @@ public class FiniteStateMachine {
 			{
 				if(temp1 == LINKS.elementAt(i).getEdgeID())
 				{
-					fixDistances(LINKS.elementAt(i), winner); //only applicable in 2D case.
+					fixDistances(LINKS.elementAt(i), winner); //only applicable in 2D case. put break after this
 				}
 			}
 		}
@@ -148,7 +148,7 @@ public class FiniteStateMachine {
 	 */
 	private void fixDistances(Edge edge, Node winner)
 	{
-		// TODO Auto-generated method stub
+		// Wrong calculation.....becuase one is in origin and the other in destination
 		
 		double diffX = Math.pow(edge.getOrigin().getCurrentWinner().getX() - edge.getDestination().getCurrentWinner().getX(),2);
 		double diffY = Math.pow(edge.getOrigin().getCurrentWinner().getY() - edge.getDestination().getCurrentWinner().getY(),2);
