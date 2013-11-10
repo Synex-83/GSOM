@@ -197,6 +197,8 @@ public class SelfOrganizingMap {
 		//	System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
+		FSM.printLinks();
+		
 	//	createUMatrix();
 	//	extractSmallerUMatrix();
 		
@@ -430,9 +432,9 @@ public class SelfOrganizingMap {
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
 					
-					current = new FSMNode(sequence);
+					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
-					FSM.addUpdateNode(current, PREVIOUS, winner);
+					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
 					
 					PREVIOUS = current;
 					current = null;

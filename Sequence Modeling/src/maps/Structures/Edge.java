@@ -88,8 +88,8 @@ public class Edge {
 	
 	private double setInitialDistance(Node origin, Node destination )
 	{
-		System.out.println("*****************************************" + origin.getX() );
-		System.out.println("*****************************************" + destination.getX() );
+	//	System.out.println("*****************************************" + origin.getX() );
+	//	System.out.println("*****************************************" + destination.getX() );
 		double diffX = Math.pow(origin.getX() - destination.getX(),2);
 		double diffY = Math.pow(origin.getY() - destination.getY(),2);
 	
