@@ -16,6 +16,7 @@ public class Edge {
 	private FSMNode DESTINATION = null;
 	private double INTENSITY = 0;
 	private int EDGE_ID = 0;
+	private int NUMBER_OF_HITS = 0;
 	
 	public Edge(FSMNode origin, FSMNode destination, int id)
 	{
@@ -23,6 +24,7 @@ public class Edge {
 		DESTINATION = destination;
 		EDGE_ID = id;
 		EDGE_LENGTH = setInitialDistance(origin.getCurrentWinner(), destination.getCurrentWinner());
+		NUMBER_OF_HITS++;
 	}
 	
 	/**
@@ -95,6 +97,20 @@ public class Edge {
 	
 		
 		return Math.sqrt(diffX + diffY);
+	}
+
+	/**
+	 * @return the NUMBER_OF_HITS
+	 */
+	public int getNumberOfHits() {
+		return NUMBER_OF_HITS;
+	}
+
+	/**
+	 * @param NUMBER_OF_HITS the nUMBER_OF_HITS to set
+	 */
+	public void incrementNumberOfHits() {
+		NUMBER_OF_HITS++;
 	}
 
 }

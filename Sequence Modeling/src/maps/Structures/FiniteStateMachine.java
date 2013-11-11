@@ -64,7 +64,7 @@ public class FiniteStateMachine {
 			if((temp.getSequence().trim()).equals(current.getSequence().trim()) )
 			{
 				System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
-				current = temp; //object equvilance will fix the issue.				
+				current = temp; //object equivalence will fix the issue.				
 				update(current,previous,winner); //trigger link update
 				addNewNode = false;
 				break;
@@ -119,6 +119,7 @@ public class FiniteStateMachine {
 		else
 		{
 			System.out.println("SAME WINNER");
+			linkExists(current, previous); //goda beheth...should update the hits properly per each call.
 		}
 		
 	}
@@ -178,6 +179,11 @@ public class FiniteStateMachine {
 		
 	}
 
+	/**
+	 * @param current
+	 * @param previous
+	 * @param id
+	 */
 	public void addUpdateEdge(FSMNode current, FSMNode previous, int id)
 	{
 		Iterator<Edge> itr = LINKS.iterator();
@@ -237,6 +243,8 @@ public class FiniteStateMachine {
 			{		
 				if(temp.getDestination().getSequence().equals(current.getSequence()))
 				{
+					temp.incrementNumberOfHits();
+					System.out.println("HERE");
 					return true;
 				}
 			}
@@ -259,6 +267,7 @@ public class FiniteStateMachine {
 			
 			System.out.println("##############################################################################");
 			System.out.println("EDGE ID = " + temp.getEdgeID());
+			System.out.println("EDGE HITS = " + temp.getNumberOfHits());
 			System.out.println("EDGE LENGTH = " + temp.getEdgeLength());
 			System.out.println("ORIGIN SEQUENCE = " + temp.getOrigin().getSequence());
 			System.out.println("ORIGIN X = " + temp.getOrigin().getCurrentWinner().getX() +" ORIGIN Y =" + temp.getOrigin().getCurrentWinner().getY());
