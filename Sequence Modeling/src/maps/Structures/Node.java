@@ -27,6 +27,7 @@ public class Node {
 	private int COVARIANCE_NUMBER = 0;		//number of vectors considered for the covariance matrix
 	private int NUMBER_OF_HITS = 0;			//number of inputs mapped to the unit
 	private ArrayList<String> MAPPED_SEQUENCES = null; //the mapped sequences will be put here for each node 
+	private double INTENSITY = 0; //the intensity contribution per winning presentation
  	
 	//========================= CONSTRUCTORS ==========================================
  	/**
@@ -223,6 +224,20 @@ public class Node {
 		{
 			MAPPED_SEQUENCES.add(sequence);
 		}
+	}
+
+	/**
+	 * @return the INTENSITY
+	 */
+	public double getIntensity() {
+		return INTENSITY;
+	}
+
+	/**
+	 * @param iNTENSITY the INTENSITY to set
+	 */
+	public void setIntensity(double intensity) {
+		INTENSITY = intensity;
 	}
 	
 }

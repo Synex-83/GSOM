@@ -45,6 +45,8 @@ public class SelfOrganizingMap {
 	private String INPUT_SAMPLES = null;
 	private boolean IS_MATRIX_MODE = false;
 	private int COVARIANCE_NUMBER = 0;
+	private int PRESENTATION_NUMBER = 0;
+	private int CURRENT_PRESENTATION_NUMBER = 0;
 	private double VECTOR_WEIGHTS[] = {0.5,0.33,0.17}; // values should be equivalent to the size of the covariance vectors considered for the calculation
 	private double ALPHA = 0;
 	private FSMNode PREVIOUS = null;
@@ -188,12 +190,14 @@ public class SelfOrganizingMap {
 		INITIAL_LEARNING_RATE = learningRate;
 		LEARNING_RATE = INITIAL_LEARNING_RATE;
 		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
+		PRESENTATION_NUMBER = 8*101;
 		INPUT_SAMPLES = input;
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
 			singleCompleteRun();
 			CURRENT_ITERATION++;
+		//	CURRENT_PRESENTATION_NUMBER++;
 		//	System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
@@ -428,13 +432,18 @@ public class SelfOrganizingMap {
 				if(!skipZeroEntries)
 				{
 					covariance = generateCovarainceMatrix(temp);
+					CURRENT_PRESENTATION_NUMBER++;
 					
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
+					calculateIntensityContribution(winner,1);
+					
 					
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
 					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
+					FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
+					FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					
 					PREVIOUS = current;
 					current = null;
@@ -457,7 +466,76 @@ public class SelfOrganizingMap {
 		}
 	}
 	
-
+	/**
+	 * @param winner
+	 */
+	private void calculateIntensityContribution(Node winner, int radius) 
+	{
+		double distance = 0;
+		double cummulativeValue = 0;
+		int effective_x_min = winner.getX() - radius;
+		int effective_x_max = winner.getX() + radius;
+		int effective_y_min = winner.getY() - radius;
+		int effective_y_max = winner.getY() + radius;
+		
+		if(effective_x_min  < 0)
+		{
+			effective_x_min = 0;
+		}
+		
+		if(effective_x_max >= SOM_HORIZONTAL_LENGTH)
+		{
+			effective_x_max = SOM_HORIZONTAL_LENGTH - 1;
+		}
+		
+		if(effective_y_min < 0)
+		{
+			effective_y_min = 0;
+		}
+		
+		if(effective_y_max >= SOM_VERTICAL_LENGTH)
+		{
+			effective_y_max = SOM_VERTICAL_LENGTH - 1;
+		}
+		
+		
+		for(int i = effective_y_min; i <= effective_y_max; i++)
+		{
+			for(int j = effective_x_min; j <= effective_x_max; j++)
+			{
+				try
+				{
+					distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				}
+				catch(Exception e)
+				{
+					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
+					System.out.println("X Min " + effective_x_min);
+					System.out.println("X Max " + effective_x_max);
+					System.out.println("Y Min " + effective_y_min);
+					System.out.println("Y Max " + effective_y_max);
+					System.out.println("Radius " + RADIUS);
+				}
+				
+				if(distance <= radius)
+				{
+					cummulativeValue += multiply(SOM[i][j].getWeightMatrix(), winner.getWeightMatrix(), 2);		
+				}
+			}
+		}
+		
+		if(radius == 1)
+		{
+			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/27)));
+			System.out.println("CCCCCCCCCCCCCCCCCCCCCCCCC VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/27)));
+		}
+		else
+		{
+			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/125)));
+			System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOO VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/16)));
+		}
+		
+	}
 
 	/**
 	 * @param input as the input vector

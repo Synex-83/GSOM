@@ -17,6 +17,7 @@ public class Edge {
 	private double INTENSITY = 0;
 	private int EDGE_ID = 0;
 	private int NUMBER_OF_HITS = 0;
+	private Boolean IS_SOLID = false;
 	
 	public Edge(FSMNode origin, FSMNode destination, int id)
 	{
@@ -73,7 +74,7 @@ public class Edge {
 	 * @param iNTENSITY the iNTENSITY to set
 	 */
 	public void setIntensity(double value) {
-		INTENSITY = value;
+		INTENSITY += value;
 	}
 	/**
 	 * @return the EDGE_ID
@@ -111,6 +112,24 @@ public class Edge {
 	 */
 	public void incrementNumberOfHits() {
 		NUMBER_OF_HITS++;
+	}
+
+	/**
+	 * @return the IS_SOLID
+	 */
+	public Boolean isSolid() {
+		return IS_SOLID;
+	}
+
+	/**
+	 * @param status the iS_SOLID to set
+	 */
+	public void solidifyLink(Boolean status) {
+		IS_SOLID = status;
+	}
+	
+	public void setDecayedIntensity(double value) {
+		INTENSITY = value;
 	}
 
 }

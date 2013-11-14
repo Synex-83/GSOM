@@ -267,6 +267,7 @@ public class FiniteStateMachine {
 			
 			System.out.println("##############################################################################");
 			System.out.println("EDGE ID = " + temp.getEdgeID());
+			System.out.println("EDGE INTENSITY = " + temp.getIntensity());
 			System.out.println("EDGE HITS = " + temp.getNumberOfHits());
 			System.out.println("EDGE LENGTH = " + temp.getEdgeLength());
 			System.out.println("ORIGIN SEQUENCE = " + temp.getOrigin().getSequence());
@@ -276,4 +277,78 @@ public class FiniteStateMachine {
 			System.out.println("******************************************************************************");
 		}
 	}
+
+	/**
+	 * @param current
+	 */
+	public void updateEdgeIntensity(FSMNode current, FSMNode previous, Node winner) {
+		
+		ArrayList<Integer> incoming = current.getINCOMING_LINKS();
+		//incoming.addAll(current.getOUTGOING_LINKS());
+		
+		int temp1 = 0;
+		Edge edge = null;
+		
+		Collections.sort(incoming);
+	
+		Iterator<Integer> itr1 = incoming.iterator();
+
+		
+		while(itr1.hasNext())
+		{
+			temp1 = (Integer) itr1.next();
+			 
+			for(int i = 0; i < LINKS.size(); i++)
+			{
+				if(temp1 == LINKS.elementAt(i).getEdgeID())
+				{
+					edge = LINKS.elementAt(i);
+					
+					if((current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence())))
+					{
+						edge.setIntensity((edge.getOrigin().getCurrentWinner().getIntensity() + edge.getDestination().getCurrentWinner().getIntensity())/2);
+						
+						//think of intensity logic and solidifying is the loop correct??? is the modification correct???
+					}
+					
+					if(itr1.hasNext())
+					{
+						temp1 = (Integer) itr1.next(); //fixes the issue of a break and multiple for loops.
+					}
+				}
+			}
+		}		
+	}
+
+	/**
+	 * @param currentPresentationNumber
+	 * @param presentationNumber
+	 */
+	public void edgeIntesityDecay(int currentPresentationNumber, int presentationNumber) {
+		
+		Iterator<Edge> ite = LINKS.iterator();
+		double factor = (double)currentPresentationNumber/presentationNumber;
+		Edge temp = null;
+		double intensity = 0;
+		
+		while(ite.hasNext())
+		{
+			temp = ite.next();
+			intensity = (temp.getIntensity())*Math.exp(-factor);
+			System.out.println("FACTOR = " + factor);
+			System.out.println("EDGE NUMBER = " + temp.getEdgeID() + " DECAYED INTENSITY = " + intensity );
+			
+			if(intensity <= 0.0)
+			{
+				temp.setDecayedIntensity(0.0);	
+			}
+			else
+			{
+				temp.setDecayedIntensity(intensity);	
+			}	
+		}
+		
+	}
+	
+
 }
