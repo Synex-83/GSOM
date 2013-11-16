@@ -74,8 +74,10 @@ public class FiniteStateMachine {
 		if(addNewNode)
 		{
 			//System.out.println("NEW NODE ADDED:-" + sequence);
-			current.setWinner(winner); 
+			current.setWinner(winner);
+			current.setFocus(true);
 			FSM.add(current);
+		
 			
 			if(previous != null && !previous.getSequence().equals(current.getSequence())) //prevents the AAA -> AAA -> AAA
 			{
@@ -98,6 +100,7 @@ public class FiniteStateMachine {
 	private void update(FSMNode current, FSMNode previous, Node winner) 
 	{
 		int distance = 0;
+		current.setFocus(true);
 		if(!(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence())))
 		{
 			
@@ -120,6 +123,14 @@ public class FiniteStateMachine {
 		{
 			System.out.println("SAME WINNER");
 			linkExists(current, previous); //goda beheth...should update the hits properly per each call.
+		}
+		
+		System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
+		
+		if(current.getCurrentWinner().getNumberOfHits() >= 100 && current.isHollow())
+		{
+			current.setHollow(false);
+			System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
 		}
 		
 	}
@@ -244,7 +255,7 @@ public class FiniteStateMachine {
 				if(temp.getDestination().getSequence().equals(current.getSequence()))
 				{
 					temp.incrementNumberOfHits();
-					System.out.println("HERE");
+					//System.out.println("HERE");
 					return true;
 				}
 			}
@@ -304,10 +315,14 @@ public class FiniteStateMachine {
 				{
 					edge = LINKS.elementAt(i);
 					
-					if((current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence())))
+					//(current.getCurrentWinner().equals(winner)) &&
+					
+					if( !(previous.getSequence().equals(current.getSequence())) && previous.isFocused())
 					{
+						//System.out.println("CORRECT EDGE");
 						edge.setIntensity((edge.getOrigin().getCurrentWinner().getIntensity() + edge.getDestination().getCurrentWinner().getIntensity())/2);
 						
+						previous.setFocus(false);
 						//think of intensity logic and solidifying is the loop correct??? is the modification correct???
 					}
 					
@@ -335,8 +350,8 @@ public class FiniteStateMachine {
 		{
 			temp = ite.next();
 			intensity = (temp.getIntensity())*Math.exp(-factor);
-			System.out.println("FACTOR = " + factor);
-			System.out.println("EDGE NUMBER = " + temp.getEdgeID() + " DECAYED INTENSITY = " + intensity );
+			//System.out.println("FACTOR = " + factor);
+			//System.out.println("EDGE NUMBER = " + temp.getEdgeID() + " DECAYED INTENSITY = " + intensity );
 			
 			if(intensity <= 0.0)
 			{

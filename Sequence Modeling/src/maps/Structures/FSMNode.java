@@ -22,6 +22,8 @@ public class FSMNode {
 	
 	private String SEQUENCE = "";
 	private int GROWTH_RADIUS = 0;
+	private boolean FOCUS = false;
+	private boolean HOLLOW = true;
 	
 	private Node CURRENT_WINNER = null;
 	
@@ -112,6 +114,34 @@ public class FSMNode {
 	public void addOutgoingLink(int id)
 	{
 		OUTGOING_LINKS.add(id);
+	}
+
+	/**
+	 * @return the FOCUS
+	 */
+	public boolean isFocused() {
+		return FOCUS;
+	}
+
+	/**
+	 * @param FOCUS the fOCUS to set
+	 */
+	public void setFocus(boolean focus) {
+		FOCUS = focus;
+	}
+
+	/**
+	 * @return the HOLLOW
+	 */
+	public boolean isHollow() {
+		return HOLLOW;
+	}
+
+	/**
+	 * @param HOLLOW the hOLLOW to set
+	 */
+	public void setHollow(boolean hollow) {
+		HOLLOW = hollow;
 	}
 
 }

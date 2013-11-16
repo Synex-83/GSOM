@@ -436,14 +436,18 @@ public class SelfOrganizingMap {
 					
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
-					calculateIntensityContribution(winner,1);
+					calculateIntensityContribution(winner,1); // calculates the intensity values
 					
 					
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
 					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
+					
 					FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
+					
 					FSM.updateEdgeIntensity(current, PREVIOUS, winner);
+					
+	
 					
 					PREVIOUS = current;
 					current = null;
@@ -527,12 +531,12 @@ public class SelfOrganizingMap {
 		if(radius == 1)
 		{
 			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/27)));
-			System.out.println("CCCCCCCCCCCCCCCCCCCCCCCCC VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/27)));
+			System.out.println("RADIUS 1 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/27)));
 		}
 		else
 		{
 			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/125)));
-			System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOO VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/16)));
+			System.out.println("RADIUS 2 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/16)));
 		}
 		
 	}
