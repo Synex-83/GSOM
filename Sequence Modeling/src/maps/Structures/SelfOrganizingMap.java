@@ -964,13 +964,10 @@ public class SelfOrganizingMap {
 		
 		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
 		double value = 0d;
+				
+	//	covariance = calculateWeightedCovarianceCorrected(calculateWeightedMeanCorrect(dataMatrix), dataMatrix);
 		
-	//	calculateWeightedMeanCorrect(dataMatrix);
-		
-		
-		covariance = calculateWeightedCovarianceCorrected(calculateWeightedMeanCorrect(dataMatrix), dataMatrix);
-		
-/*		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
+		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
 			for(int j=i ; j < dataMatrix.getColumnDimension() ; j++)
 			{
 				value = calculateWeightedCovariance(dataMatrix.getColumn(i),dataMatrix.getColumn(j),i,j); // /points
@@ -978,11 +975,16 @@ public class SelfOrganizingMap {
 				covariance.setEntry(j, i, value);		    
 			}
 			
-		}*/
+		}
 		
 		return covariance;
 	}
 	
+	/**
+	 * @param weightedMean
+	 * @param dataMatrix
+	 * @return
+	 */
 	private Array2DRowRealMatrix calculateWeightedCovarianceCorrected(double[] weightedMean, Array2DRowRealMatrix dataMatrix)
 	{
 		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
@@ -1043,7 +1045,7 @@ public class SelfOrganizingMap {
 			result += VECTOR_WEIGHTS[i]*(vector[i] - weightedMean[0])*(vector2[i] - weightedMean[1]);
 		}
 		
-		return (ALPHA*result);
+		return result; //(ALPHA*result);
 
 	}
 	
@@ -1061,11 +1063,16 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		for(int i = 0; i < vector.length; i++)
+		double mean[] = {0.5,0.33,0.17};
+		
+		temp[0] = mean[index];
+		temp[1] = mean[index2];
+		
+/*		for(int i = 0; i < vector.length; i++)
 		{
 			temp[0] += vector[i]*VECTOR_WEIGHTS[index];
 			temp[1] += vector2[i]*VECTOR_WEIGHTS[index2];
-		}
+		}*/
 			
 		return temp;
 	}

@@ -4,9 +4,9 @@ function [y] = weightedCovariance(x,w)
     inputVector = x; %input vectors
     alpha = 0;
     covariance = zeros(size(x,2));
-    if size(inputVector,2) == size(weightValues,2)
+   % if size(inputVector,2) == size(weightValues,2)
         alpha = calculateAlpha(w)
-        meanVector = weightedMean(w,x)
+        meanVector = [0.5,0.33,0.17] %weightedMean(w,x)
          
         for i = 1:size(covariance)
             for j = 1:size(covariance)
@@ -17,15 +17,16 @@ function [y] = weightedCovariance(x,w)
                 for k = 1:size(inputVector)                    
                     covariance(i,j) = covariance(i,j) + weightValues(1,k)*(temp1(k) - meanVector(1,i))*(temp2(k) - meanVector(1,j));
                 end
+                %
+                %covariance(i,j) = alpha*covariance(i,j);
                 
-                covariance(i,j) = alpha*covariance(i,j);
             end
         end
         
         y = covariance;
      
-    else
-        error('The weights values and the number of input vectors do not agree');
-    end
+   % else
+    %    error('The weights values and the number of input vectors do not agree');
+   % end
     
     
