@@ -7,7 +7,12 @@ package maps.Structures;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
@@ -16,6 +21,7 @@ import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.linear.RealVector;
 
 
 
@@ -26,6 +32,8 @@ import org.apache.commons.math3.linear.RealMatrix;
  */
 
 public class SelfOrganizingMap {
+	
+
 	
 	private Node[][] SOM = null;
 	private FiniteStateMachine FSM = null;
@@ -957,7 +965,12 @@ public class SelfOrganizingMap {
 		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
 		double value = 0d;
 		
-		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
+	//	calculateWeightedMeanCorrect(dataMatrix);
+		
+		
+		covariance = calculateWeightedCovarianceCorrected(calculateWeightedMeanCorrect(dataMatrix), dataMatrix);
+		
+/*		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
 			for(int j=i ; j < dataMatrix.getColumnDimension() ; j++)
 			{
 				value = calculateWeightedCovariance(dataMatrix.getColumn(i),dataMatrix.getColumn(j),i,j); // /points
@@ -965,8 +978,51 @@ public class SelfOrganizingMap {
 				covariance.setEntry(j, i, value);		    
 			}
 			
-		}
+		}*/
+		
 		return covariance;
+	}
+	
+	private Array2DRowRealMatrix calculateWeightedCovarianceCorrected(double[] weightedMean, Array2DRowRealMatrix dataMatrix)
+	{
+		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
+		double value = 0d;
+		
+		for(int i = 0; i < dataMatrix.getColumnDimension(); i++)
+		{
+			dataMatrix.setColumnVector(i, dataMatrix.getColumnVector(i).mapSubtract(weightedMean[i]));
+		}
+		
+		for(int i = 0 ; i < dataMatrix.getColumnDimension() ; i++){
+			for(int j=i ; j < dataMatrix.getColumnDimension() ; j++)
+			{
+				value = calculateWeightedCovarianceSimple(dataMatrix.getColumn(i),dataMatrix.getColumn(j)); // /points
+				covariance.setEntry(i, j, value);
+				covariance.setEntry(j, i, value);		    
+			}
+			
+		}
+		
+		return covariance;
+	}
+
+
+	/**
+	 * @param column
+	 * @param column2
+	 * @return
+	 */
+	private double calculateWeightedCovarianceSimple(double[] column, double[] column2) {
+		
+		double result = 0d;
+		
+		for(int i = 0; i < column.length ; i++)
+		{
+			result += VECTOR_WEIGHTS[i]*(column[i])*(column2[i]);
+		}
+		
+		return (ALPHA*result);
+	
 	}
 
 	/**
@@ -990,8 +1046,11 @@ public class SelfOrganizingMap {
 		return (ALPHA*result);
 
 	}
+	
 
 	/**
+	 * THIS IS AN INCORRECT VERSION. HOWEVER, THIS METHOD DO SCALE VERY WELL WITH THE LEARNING HENCE NOT REMOVING
+	 * USE THIS IF THE CORRECT MATHEMATICAL METHOD FAIL. THIS IS A SCALER ONLY NOT WHAT THE NAME SAYS.
 	 * @param vector
 	 * @param vector2
 	 * @param index
@@ -1009,7 +1068,32 @@ public class SelfOrganizingMap {
 		}
 			
 		return temp;
+	}
+	
+	/**
+	 * @param dataMatrix
+	 * @return
+	 */
+	private double[] calculateWeightedMeanCorrect(Array2DRowRealMatrix dataMatrix){
+			
+		double temp[][] = new double[dataMatrix.getColumnDimension()][dataMatrix.getColumnDimension()];
+		double wMean[] = new double[dataMatrix.getColumnDimension()];
 		
+		for(int i = 0; i < temp.length; i++)
+		{
+			temp[i] = (dataMatrix.getColumnVector(i).mapMultiply(VECTOR_WEIGHTS[i])).toArray();
+		}
+		
+		for(int i = 0; i < temp.length; i++)
+		{
+			for(int j = 0; j <temp[0].length; j++)
+			{
+				wMean[i] += temp[j][i];
+			}
+
+		}
+		
+		return wMean;
 	}
 	
 	/**

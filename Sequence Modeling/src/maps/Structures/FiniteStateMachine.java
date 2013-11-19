@@ -127,7 +127,7 @@ public class FiniteStateMachine {
 		
 		System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
 		
-		if(current.getCurrentWinner().getNumberOfHits() >= 1600 && current.isHollow())
+		if(current.getCurrentWinner().getNumberOfHits() >= 1400 && current.isHollow())
 		{
 			current.setHollow(false);
 			System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");

@@ -4,6 +4,7 @@
  */
 package maps.Structures;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
@@ -15,8 +16,9 @@ import org.apache.commons.math3.linear.ArrayRealVector;
  * @type		Node
  */
 
-public class Node {
+public class Node implements Serializable  {
 	
+
 	private int DIMENSION = 0;					//Contains the dimensionality of data
 	private ArrayRealVector WEIGHTS = null;		//Contains the set of weights associated with a node
 	private Array2DRowRealMatrix WEIGHT_MATRIX = null; //Contains the weights of the associated node in the matrix case
