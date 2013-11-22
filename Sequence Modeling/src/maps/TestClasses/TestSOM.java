@@ -19,7 +19,7 @@ public class TestSOM {
 	 */
 	public static void main(String[] args) {
 
-		FileProcessing fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\sequences.txt", 1); 
+		FileProcessing fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\game.txt", 1); 
 
 		//System.out.println(fp.readFile());
 		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3);

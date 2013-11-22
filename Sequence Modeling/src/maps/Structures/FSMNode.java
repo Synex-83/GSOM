@@ -95,6 +95,7 @@ public class FSMNode {
 		PREVIOUS_WINNERS.add(CURRENT_WINNER);
 		CURRENT_WINNER = winner;
 		System.out.println("CURRENT WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
+		setHollow(true);
 	}
 	
 	/**
@@ -143,5 +144,5 @@ public class FSMNode {
 	public void setHollow(boolean hollow) {
 		HOLLOW = hollow;
 	}
-
+	
 }

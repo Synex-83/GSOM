@@ -55,7 +55,7 @@ public class SelfOrganizingMap {
 	private int COVARIANCE_NUMBER = 0;
 	private int PRESENTATION_NUMBER = 0;
 	private int CURRENT_PRESENTATION_NUMBER = 0;
-	private double VECTOR_WEIGHTS[] = {0.5,0.33,0.17}; // values should be equivalent to the size of the covariance vectors considered for the calculation
+	private double VECTOR_WEIGHTS[] = {0.19,0.13,0.1250,0.1150,0.1,0.090,0.080,0.065,0.050,0.025,0.015,0.010,0.005}; // values should be equivalent to the size of the covariance vectors considered for the calculation
 	private double ALPHA = 0;
 	private FSMNode PREVIOUS = null;
 
@@ -209,10 +209,11 @@ public class SelfOrganizingMap {
 		//	System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
-		FSM.printLinks();
+		//FSM.printLinks();
+		FSM.printSummary();
 		
 	//	createUMatrix();
-	//	extractSmallerUMatrix();
+		extractSmallerUMatrix();
 		
 /*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
@@ -226,7 +227,7 @@ public class SelfOrganizingMap {
 		}*/
 		
 	//	exportUMatrixToCSV();
-	//	exportSmallUMatrixToCSV();
+		exportSmallUMatrixToCSV();
 	//	displayHitNodesAndSequences();
 	//	testSOM();
 
@@ -425,7 +426,14 @@ public class SelfOrganizingMap {
 			{
 				String[] inputVector = line.split("\t");
 				
-				sequence = sequence.substring(1).concat(inputVector[1].toString());
+				if(sequence.contains("X"))
+				{
+					sequence = sequence.substring(1).concat(inputVector[1].toString());
+				}
+				else
+				{
+					sequence = sequence.substring(2).concat(inputVector[1].toString());
+				}
 				
 				System.out.println("===========================SEQUENCE============================" + sequence);
 				/* 
@@ -1320,7 +1328,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\SS-NX-SMALL-3.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\SS-3-VERIFICATION.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){

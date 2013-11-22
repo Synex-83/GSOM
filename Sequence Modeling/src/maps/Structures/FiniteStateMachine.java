@@ -6,6 +6,8 @@ package maps.Structures;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Vector;
 
 /**
@@ -18,6 +20,7 @@ public class FiniteStateMachine {
 	
 	private Vector<FSMNode> FSM = null;
 	private Vector<Edge> LINKS = null;
+	private int THRESHOLD = 100;
 	
 	private int LINK_NUMBERS = 0;
 	
@@ -127,7 +130,7 @@ public class FiniteStateMachine {
 		
 		System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
 		
-		if(current.getCurrentWinner().getNumberOfHits() >= 1400 && current.isHollow())
+		if(current.getCurrentWinner().getNumberOfHits() >= THRESHOLD && current.isHollow())
 		{
 			current.setHollow(false);
 			System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
@@ -360,6 +363,63 @@ public class FiniteStateMachine {
 			else
 			{
 				temp.setDecayedIntensity(intensity);	
+			}	
+		}
+		
+	}
+
+	/**
+	 * 
+	 */
+	public void printSummary() 
+	{
+		Iterator<Edge> ite = LINKS.iterator();
+		Iterator<FSMNode> itr = FSM.iterator();
+		Iterator<FSMNode> itr2 = FSM.iterator();
+		Queue<FSMNode> solidNode = new LinkedList<FSMNode>();
+		
+		Edge temp = null;
+		FSMNode temp1 = null;
+
+		
+		System.out.println("==============================================================");
+		System.out.println("==============================================================");
+		System.out.println("THRESHOLD NUMBER OF HITS =" + THRESHOLD);
+		
+		System.out.println("********             SOLID SEQUENCES                  ********");
+		while(itr.hasNext())
+		{
+			temp1 = itr.next();
+
+			if(!temp1.isHollow())
+			{
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				solidNode.add(temp1);
+				
+			}
+		}
+		
+		System.out.println("********             HOLLOW SEQUENCES                  ********");
+		while(itr2.hasNext())
+		{
+			temp1 = itr2.next();
+
+			if(temp1.isHollow())
+			{
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				solidNode.add(temp1);
+				
+			}
+		}
+		
+		System.out.println("********         LINKS (ORIGIN -> DIRECTION)          ********");
+		while(ite.hasNext())
+		{
+			temp = ite.next();		
+			
+			if(solidNode.contains(temp.getOrigin()) && solidNode.contains(temp.getDestination()))
+			{
+				System.out.println(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence());
 			}	
 		}
 		
