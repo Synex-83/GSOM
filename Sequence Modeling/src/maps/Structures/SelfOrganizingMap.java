@@ -15,6 +15,9 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
@@ -55,9 +58,17 @@ public class SelfOrganizingMap {
 	private int COVARIANCE_NUMBER = 0;
 	private int PRESENTATION_NUMBER = 0;
 	private int CURRENT_PRESENTATION_NUMBER = 0;
-	private double VECTOR_WEIGHTS[] = {0.19,0.13,0.1250,0.1150,0.1,0.090,0.080,0.065,0.050,0.025,0.015,0.010,0.005}; // values should be equivalent to the size of the covariance vectors considered for the calculation
+	private double VECTOR_WEIGHTS[] = null; 
+		
+		//{0.5,0.20,0.15,0.10,0.05}; 
+		
+		//{0.5,0.33,0.17};
+	//{0.19,0.13,0.1250,0.1150,0.1,0.090,0.080,0.065,0.050,0.025,0.015,0.010,0.005}; // values should be equivalent to the size of the covariance vectors considered for the calculation
+	
+	
 	private double ALPHA = 0;
 	private FSMNode PREVIOUS = null;
+	private Queue<Array2DRowRealMatrix> PREV_COVARIANCE = new LinkedList<Array2DRowRealMatrix>();
 
 
 	/**
@@ -66,12 +77,42 @@ public class SelfOrganizingMap {
 	 * @param grid as the type of grid (0 = square, 1 = rectangle, 2 = hexagonal)
 	 * @param inputDimension the dimension of the input data vector
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber)
+	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
 	{
+		
+		if(vector == 1)
+		{
+			double temp[] =  {0.5,0.33,0.17};
+			VECTOR_WEIGHTS = temp;
+		}
+		else if(vector == 2)
+		{
+			double temp[] =  {0.5,0.33,0.17};
+			VECTOR_WEIGHTS = temp;
+		}
+		else if(vector == 3)
+		{
+			double temp[] =  {0.5,0.3,0.15,0.05};
+			VECTOR_WEIGHTS = temp;
+		}
+		else if(vector == 4)
+		{
+			double temp[] =  {0.5,0.20,0.15,0.10,0.05};
+			VECTOR_WEIGHTS = temp;
+		}
+		else if(vector == 5)
+		{
+			double temp[] =  {0.19,0.13,0.1250,0.1150,0.1,0.090,0.080,0.065,0.050,0.025,0.015,0.010,0.005};
+			VECTOR_WEIGHTS = temp;
+		}
+			
+		
+		
 		INPUT_DIMENSION = inputDimensison;
 		IS_MATRIX_MODE = isMatrixMode;
 		COVARIANCE_NUMBER = covarianceNumber;
 		ALPHA = setAlpha();
+		
 		
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
@@ -80,7 +121,11 @@ public class SelfOrganizingMap {
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
 		
-		FSM = new FiniteStateMachine();
+		FSM = new FiniteStateMachine(threshold, iteration, vector);
+		
+
+		
+
 		
 		if(IS_MATRIX_MODE)
 		{
@@ -206,14 +251,15 @@ public class SelfOrganizingMap {
 			singleCompleteRun();
 			CURRENT_ITERATION++;
 		//	CURRENT_PRESENTATION_NUMBER++;
-		//	System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
+			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
 		
 		//FSM.printLinks();
-		FSM.printSummary();
+		//FSM.printSummary();
+		FSM.writeSummaryToFile();
 		
 	//	createUMatrix();
-		extractSmallerUMatrix();
+	//	extractSmallerUMatrix();
 		
 /*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
@@ -227,7 +273,7 @@ public class SelfOrganizingMap {
 		}*/
 		
 	//	exportUMatrixToCSV();
-		exportSmallUMatrixToCSV();
+	//	exportSmallUMatrixToCSV();
 	//	displayHitNodesAndSequences();
 	//	testSOM();
 
@@ -250,7 +296,7 @@ public class SelfOrganizingMap {
 		
 		EpochRadiusDecay(CURRENT_ITERATION);
 		LearningRateDecay(CURRENT_ITERATION);
-		System.out.println(CURRENT_ITERATION);
+		//System.out.println(CURRENT_ITERATION);
 	}
 	
 	/**
@@ -367,8 +413,8 @@ public class SelfOrganizingMap {
 					
 					tempcounter++;
 					
-					System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-					System.out.println("=============================== " + tempcounter);
+				//	System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				//	System.out.println("=============================== " + tempcounter);
 				}
 				else
 				{
@@ -426,7 +472,7 @@ public class SelfOrganizingMap {
 			{
 				String[] inputVector = line.split("\t");
 				
-				if(sequence.contains("X"))
+				if(sequence.length() < 6)
 				{
 					sequence = sequence.substring(1).concat(inputVector[1].toString());
 				}
@@ -435,7 +481,7 @@ public class SelfOrganizingMap {
 					sequence = sequence.substring(2).concat(inputVector[1].toString());
 				}
 				
-				System.out.println("===========================SEQUENCE============================" + sequence);
+				//System.out.println("===========================SEQUENCE============================" + sequence);
 				/* 
 				 * The following loop fills in the last element of the sliding window with the latest input
 				 * vector element encountered. All the past input vectors are shifted up by one element.
@@ -449,6 +495,8 @@ public class SelfOrganizingMap {
 				{
 					covariance = generateCovarainceMatrix(temp);
 					CURRENT_PRESENTATION_NUMBER++;
+					
+					//covarianceExists(covariance);
 					
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
@@ -464,7 +512,7 @@ public class SelfOrganizingMap {
 					FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					
 	
-					
+					PREV_COVARIANCE.add(covariance);
 					PREVIOUS = current;
 					current = null;
 					
@@ -486,6 +534,24 @@ public class SelfOrganizingMap {
 		}
 	}
 	
+	/**
+	 * @param covariance
+	 */
+	private void covarianceExists(Array2DRowRealMatrix covariance) 
+	{
+	//	System.out.println(PREV_COVARIANCE.size());
+			
+		if(PREV_COVARIANCE.contains(covariance))
+		{
+			System.out.println("COVARIANCE MATRIXES EQUAL " + CURRENT_ITERATION );
+		}
+		else
+		{
+			System.out.println("COVARIANCE MATRIXES NOT EQUAL " + CURRENT_ITERATION );
+		}
+
+	}
+
 	/**
 	 * @param winner
 	 */
@@ -547,12 +613,12 @@ public class SelfOrganizingMap {
 		if(radius == 1)
 		{
 			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/27)));
-			System.out.println("RADIUS 1 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/27)));
+		//	System.out.println("RADIUS 1 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/27)));
 		}
 		else
 		{
 			winner.setIntensity((1 - ((Math.pow(cummulativeValue, 2))/125)));
-			System.out.println("RADIUS 2 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/16)));
+		//	System.out.println("RADIUS 2 VALUE=========================== " + (1 - (Math.pow(cummulativeValue, 2)/16)));
 		}
 		
 	}

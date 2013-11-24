@@ -3,12 +3,17 @@
  */
 package maps.Structures;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Vector;
+
+import maps.Util.FileProcessing;
 
 /**
  * @author 		Manjusri Ishwara
@@ -20,14 +25,19 @@ public class FiniteStateMachine {
 	
 	private Vector<FSMNode> FSM = null;
 	private Vector<Edge> LINKS = null;
-	private int THRESHOLD = 100;
+	private int THRESHOLD = 0;
+	private int ITERATION = 0;
 	
 	private int LINK_NUMBERS = 0;
+	private int FILE_OPTION = 0;
 	
-	public FiniteStateMachine()
+	public FiniteStateMachine(int threhold, int iteration, int fileOption)
 	{
 		FSM = new Vector<FSMNode>();
 		LINKS = new Vector<Edge>();
+		THRESHOLD = threhold;
+		ITERATION = iteration;
+		FILE_OPTION = fileOption;
 	}
 
 	/**
@@ -66,7 +76,7 @@ public class FiniteStateMachine {
 			
 			if((temp.getSequence().trim()).equals(current.getSequence().trim()) )
 			{
-				System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
+				//System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
 				current = temp; //object equivalence will fix the issue.				
 				update(current,previous,winner); //trigger link update
 				addNewNode = false;
@@ -84,7 +94,7 @@ public class FiniteStateMachine {
 			
 			if(previous != null && !previous.getSequence().equals(current.getSequence())) //prevents the AAA -> AAA -> AAA
 			{
-				System.out.println("LINK ADDED =============================");
+			//	System.out.println("LINK ADDED =============================");
 				LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
 				previous.addOutgoingLink(LINK_NUMBERS);
 				current.addIncomingLink(LINK_NUMBERS);
@@ -114,7 +124,7 @@ public class FiniteStateMachine {
 			
 			if(!(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
 			{
-				System.out.println("LINK ADDED =============================");
+				//System.out.println("LINK ADDED =============================");
 				LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
 				previous.addOutgoingLink(LINK_NUMBERS);
 				current.addIncomingLink(LINK_NUMBERS);
@@ -124,16 +134,16 @@ public class FiniteStateMachine {
 		}
 		else
 		{
-			System.out.println("SAME WINNER");
+			//System.out.println("SAME WINNER");
 			linkExists(current, previous); //goda beheth...should update the hits properly per each call.
 		}
 		
-		System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
+		//System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
 		
 		if(current.getCurrentWinner().getNumberOfHits() >= THRESHOLD && current.isHollow())
 		{
 			current.setHollow(false);
-			System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
+			//System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
 		}
 		
 	}
@@ -407,7 +417,7 @@ public class FiniteStateMachine {
 			if(temp1.isHollow())
 			{
 				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
-				solidNode.add(temp1);
+			//	solidNode.add(temp1);
 				
 			}
 		}
@@ -426,4 +436,98 @@ public class FiniteStateMachine {
 	}
 	
 
+	/**
+	 * 
+	 */
+	public void writeSummaryToFile() 
+	{
+		Iterator<Edge> ite = LINKS.iterator();
+		Iterator<FSMNode> itr = FSM.iterator();
+		Iterator<FSMNode> itr2 = FSM.iterator();
+		Queue<FSMNode> solidNode = new LinkedList<FSMNode>();
+		
+		Edge temp = null;
+		FSMNode temp1 = null;
+		FileWriter write = null;
+		
+		try
+		{
+			
+			
+			if(FILE_OPTION == 1)
+			{
+				write = new FileWriter("ABC-Sequence.txt",true);
+			}
+			else if(FILE_OPTION == 2)
+			{
+				write = new FileWriter("ABC-8-Sequences.txt",true);
+			}
+			else if(FILE_OPTION == 3)
+			{
+				write = new FileWriter("ABCD-Sequences.txt",true);
+			}
+			else if(FILE_OPTION == 4)
+			{
+				write = new FileWriter("Game-Scaled.txt",true);
+			}
+			else if(FILE_OPTION == 5)
+			{
+				write = new FileWriter("Game.txt",true);
+			}
+			
+			
+			
+			BufferedWriter writer = new BufferedWriter(write);
+			
+			writer.write("========================     " + ITERATION + "      =====================\n");
+			writer.newLine();
+			writer.write("==============================================================\n");
+			writer.newLine();
+			writer.write("==============================================================\n");
+			writer.newLine();
+			writer.write("THRESHOLD NUMBER OF HITS =" + THRESHOLD +"\n");
+			writer.newLine();
+			writer.write("********             SOLID SEQUENCES                  ********\n");
+			writer.newLine();
+			
+			while(itr.hasNext())
+			{
+				temp1 = itr.next();
+
+				if(!temp1.isHollow())
+				{
+					writer.write("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
+					writer.newLine();
+					solidNode.add(temp1);
+				
+				}
+			}
+		
+		
+			writer.write("********         LINKS (ORIGIN -> DIRECTION)          ********\n");
+			writer.newLine();
+			while(ite.hasNext())
+			{
+				temp = ite.next();		
+			
+				if(solidNode.contains(temp.getOrigin()) && solidNode.contains(temp.getDestination()))
+				{
+					writer.write(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence() + "\n");
+					writer.newLine();
+				}	
+			}
+			
+			writer.flush();
+			write.close();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			System.out.println("DONE");
+		}
+		
+	}
 }

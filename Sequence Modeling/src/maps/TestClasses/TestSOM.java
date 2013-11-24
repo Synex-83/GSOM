@@ -19,11 +19,45 @@ public class TestSOM {
 	 */
 	public static void main(String[] args) {
 
-		FileProcessing fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\game.txt", 1); 
+		FileProcessing fp = null;
+		int th = 0;
 
 		//System.out.println(fp.readFile());
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3);
-		SOM.initTrainSOM(fp.readFile(),100,0.25);
+		for(int j = 1; j <=5 ; j++)
+		{
+			
+			if(j == 1)
+			{
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\sequences.txt", 1); 
+				th = 800;
+			}
+			else if(j == 2)
+			{
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\testCombinations.txt", 1);
+				th = 800;
+			}
+			else if(j == 3)
+			{
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt", 1);
+				th = 800;
+			}
+			else if(j == 4)
+			{
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\game.txt", 1);
+				th = 100;
+			}
+			else if(j == 5)
+			{
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\encodedSeq.txt", 1);
+				th = 100;
+			}
+			
+			for(int i = 1; i <= 100; i++)
+			{
+				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,th,i,j);
+				SOM.initTrainSOM(fp.readFile(),100,0.25);
+			}
+		}
 		
 		//trainSOM(fp.readFile());
 		

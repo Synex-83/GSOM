@@ -91,10 +91,10 @@ public class FSMNode {
 	 * @param cURRENT_WINNER the winner to set
 	 */
 	public void setCurrentWinner(Node winner) {
-		System.out.println("PREVIOUS WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
+		//System.out.println("PREVIOUS WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
 		PREVIOUS_WINNERS.add(CURRENT_WINNER);
 		CURRENT_WINNER = winner;
-		System.out.println("CURRENT WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
+		//System.out.println("CURRENT WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
 		setHollow(true);
 	}
 	
@@ -104,7 +104,7 @@ public class FSMNode {
 	public void setWinner(Node winner)
 	{
 		CURRENT_WINNER = winner;
-		System.out.println("WINNER SET :- X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
+		//System.out.println("WINNER SET :- X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
 	}
 	
 	public void addIncomingLink(int id)
