@@ -23,10 +23,10 @@ public class TestSOM {
 		int th = 0;
 
 		//System.out.println(fp.readFile());
-		for(int j = 1; j <=5 ; j++)
+		for(int j = 4; j <=5 ; j++)
 		{
 			
-			if(j == 1)
+/*			if(j == 1)
 			{
 				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\sequences.txt", 1); 
 				th = 800;
@@ -40,15 +40,15 @@ public class TestSOM {
 			{
 				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt", 1);
 				th = 800;
-			}
-			else if(j == 4)
+			}*/
+			if(j == 4)
 			{
-				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\game.txt", 1);
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\encodedSeq.txt", 1);
 				th = 100;
 			}
 			else if(j == 5)
 			{
-				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\encodedSeq.txt", 1);
+				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\game.txt", 1);
 				th = 100;
 			}
 			

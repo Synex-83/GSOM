@@ -1,0 +1,3458 @@
+========================     1      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =35 Y =41 HITS =1447
+
+Sequence BCD X =0 Y =0 HITS =2348
+
+Sequence CDE X =69 Y =40 HITS =1421
+
+Sequence DEF X =88 Y =16 HITS =1428
+
+Sequence EFG X =71 Y =0 HITS =1416
+
+Sequence FGB X =49 Y =0 HITS =800
+
+Sequence CAB X =19 Y =61 HITS =1064
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     2      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =15 Y =72 HITS =1444
+
+Sequence BCD X =77 Y =77 HITS =1449
+
+Sequence CDE X =15 Y =43 HITS =1547
+
+Sequence DEF X =3 Y =0 HITS =2218
+
+Sequence EFG X =2 Y =17 HITS =1493
+
+Sequence CAB X =87 Y =21 HITS =1044
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     3      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =47 Y =16 HITS =1476
+
+Sequence BCD X =2 Y =81 HITS =1429
+
+Sequence CDE X =49 Y =0 HITS =1596
+
+Sequence DEF X =19 Y =0 HITS =1550
+
+Sequence EFG X =1 Y =0 HITS =2205
+
+Sequence CAB X =42 Y =83 HITS =1077
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     4      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =46 Y =16 HITS =1418
+
+Sequence BCD X =5 Y =91 HITS =1457
+
+Sequence CDE X =67 Y =0 HITS =1474
+
+Sequence DEF X =88 Y =0 HITS =1636
+
+Sequence EFG X =78 Y =32 HITS =1434
+
+Sequence GBC X =51 Y =0 HITS =1168
+
+Sequence CAB X =1 Y =22 HITS =1050
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     5      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =0 HITS =1544
+
+Sequence BCD X =6 Y =96 HITS =1509
+
+Sequence CDE X =2 Y =0 HITS =2011
+
+Sequence DEF X =77 Y =17 HITS =1426
+
+Sequence EFG X =84 Y =0 HITS =1476
+
+Sequence CAB X =63 Y =81 HITS =1009
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     6      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =25 Y =16 HITS =1466
+
+Sequence BCD X =93 Y =0 HITS =1713
+
+Sequence CDE X =62 Y =88 HITS =1427
+
+Sequence DEF X =16 Y =0 HITS =1474
+
+Sequence EFG X =0 Y =0 HITS =2398
+
+Sequence CAB X =1 Y =64 HITS =1043
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     7      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =47 Y =16 HITS =1467
+
+Sequence BCD X =2 Y =91 HITS =1458
+
+Sequence CDE X =67 Y =0 HITS =1475
+
+Sequence DEF X =91 Y =6 HITS =1490
+
+Sequence EFG X =79 Y =38 HITS =1465
+
+Sequence CAB X =0 Y =19 HITS =1082
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     8      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =43 Y =16 HITS =1466
+
+Sequence BCD X =0 Y =83 HITS =1483
+
+Sequence CDE X =61 Y =0 HITS =1834
+
+Sequence DEF X =22 Y =0 HITS =1473
+
+Sequence EFG X =6 Y =1 HITS =1911
+
+Sequence CAB X =58 Y =42 HITS =1094
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     9      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =19 Y =16 HITS =1467
+
+Sequence BCD X =99 Y =83 HITS =1481
+
+Sequence CDE X =0 Y =0 HITS =2390
+
+Sequence DEF X =16 Y =0 HITS =1471
+
+Sequence EFG X =38 Y =0 HITS =1540
+
+Sequence CAB X =28 Y =91 HITS =1011
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     10      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =98 Y =16 HITS =1465
+
+Sequence BCD X =0 Y =0 HITS =2409
+
+Sequence CDE X =95 Y =0 HITS =1559
+
+Sequence DEF X =19 Y =70 HITS =1451
+
+Sequence EFG X =89 Y =39 HITS =1465
+
+Sequence CAB X =34 Y =41 HITS =1012
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     11      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =43 Y =41 HITS =1422
+
+Sequence BCD X =1 Y =40 HITS =1482
+
+Sequence CDE X =93 Y =37 HITS =1441
+
+Sequence DEF X =93 Y =16 HITS =1474
+
+Sequence EFG X =87 Y =0 HITS =1779
+
+Sequence FGB X =58 Y =0 HITS =990
+
+Sequence BCA X =0 Y =0 HITS =1003
+
+Sequence CAB X =1 Y =66 HITS =1032
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+BCA --> CAB
+
+CAB --> ABC
+
+========================     12      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =48 Y =42 HITS =1446
+
+Sequence BCD X =16 Y =0 HITS =1484
+
+Sequence CDE X =80 Y =55 HITS =1570
+
+Sequence DEF X =44 Y =62 HITS =1472
+
+Sequence EFG X =3 Y =75 HITS =1464
+
+Sequence CAB X =91 Y =0 HITS =1066
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     13      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =17 Y =16 HITS =1467
+
+Sequence BCD X =84 Y =90 HITS =1456
+
+Sequence CDE X =2 Y =0 HITS =2199
+
+Sequence DEF X =2 Y =16 HITS =1472
+
+Sequence EFG X =10 Y =37 HITS =1469
+
+Sequence CAB X =85 Y =43 HITS =1050
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     14      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =92 Y =75 HITS =1466
+
+Sequence BCD X =2 Y =0 HITS =1839
+
+Sequence CDE X =15 Y =77 HITS =1465
+
+Sequence DEF X =0 Y =16 HITS =1470
+
+Sequence EFG X =3 Y =44 HITS =1462
+
+Sequence CAB X =53 Y =0 HITS =1106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     15      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =84 Y =0 HITS =1698
+
+Sequence BCD X =78 Y =92 HITS =1430
+
+Sequence CDE X =46 Y =0 HITS =1711
+
+Sequence DEF X =25 Y =0 HITS =1760
+
+Sequence EFG X =1 Y =0 HITS =2201
+
+Sequence CAB X =22 Y =87 HITS =1012
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     16      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =0 HITS =1607
+
+Sequence BCD X =9 Y =0 HITS =1533
+
+Sequence CDE X =63 Y =0 HITS =1472
+
+Sequence DEF X =88 Y =36 HITS =1433
+
+Sequence EFG X =98 Y =5 HITS =1419
+
+Sequence CAB X =0 Y =49 HITS =1077
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     17      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =23 Y =0 HITS =1727
+
+Sequence BCD X =3 Y =74 HITS =1456
+
+Sequence CDE X =79 Y =0 HITS =1550
+
+Sequence DEF X =85 Y =16 HITS =1470
+
+Sequence EFG X =0 Y =0 HITS =2403
+
+Sequence BCA X =54 Y =0 HITS =865
+
+Sequence CAB X =6 Y =52 HITS =1042
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+BCA --> CAB
+
+CAB --> ABC
+
+========================     18      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =59 Y =77 HITS =1495
+
+Sequence BCD X =4 Y =88 HITS =1482
+
+Sequence CDE X =81 Y =36 HITS =1441
+
+Sequence DEF X =81 Y =16 HITS =1475
+
+Sequence EFG X =95 Y =0 HITS =1807
+
+Sequence CAB X =2 Y =18 HITS =1047
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     19      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =6 HITS =1451
+
+Sequence BCD X =94 Y =94 HITS =1456
+
+Sequence CDE X =1 Y =0 HITS =2224
+
+Sequence DEF X =0 Y =15 HITS =1420
+
+Sequence EFG X =1 Y =37 HITS =1487
+
+Sequence GBC X =46 Y =4 HITS =864
+
+Sequence CAB X =90 Y =39 HITS =1051
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     20      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =49 Y =16 HITS =1466
+
+Sequence BCD X =1 Y =93 HITS =1468
+
+Sequence CDE X =77 Y =0 HITS =1839
+
+Sequence DEF X =82 Y =37 HITS =1461
+
+Sequence EFG X =95 Y =6 HITS =1517
+
+Sequence GBC X =50 Y =0 HITS =1042
+
+Sequence CAB X =3 Y =20 HITS =1024
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     21      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =0 HITS =1543
+
+Sequence BCD X =88 Y =0 HITS =1532
+
+Sequence CDE X =3 Y =0 HITS =2200
+
+Sequence DEF X =0 Y =16 HITS =1470
+
+Sequence EFG X =5 Y =37 HITS =1463
+
+Sequence CAB X =99 Y =51 HITS =1086
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     22      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =35 HITS =1449
+
+Sequence BCD X =11 Y =0 HITS =1768
+
+Sequence CDE X =0 Y =62 HITS =1475
+
+Sequence DEF X =24 Y =82 HITS =1479
+
+Sequence EFG X =62 Y =78 HITS =1423
+
+Sequence CAB X =66 Y =17 HITS =1010
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     23      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =16 HITS =1467
+
+Sequence BCD X =0 Y =0 HITS =2328
+
+Sequence CDE X =71 Y =40 HITS =1472
+
+Sequence DEF X =98 Y =10 HITS =1526
+
+Sequence EFG X =74 Y =0 HITS =1568
+
+Sequence FGB X =51 Y =0 HITS =824
+
+Sequence CAB X =0 Y =59 HITS =1035
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     24      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =28 Y =6 HITS =1535
+
+Sequence BCD X =82 Y =94 HITS =1426
+
+Sequence CDE X =5 Y =0 HITS =2147
+
+Sequence DEF X =1 Y =15 HITS =1418
+
+Sequence EFG X =0 Y =38 HITS =1480
+
+Sequence GBC X =47 Y =4 HITS =864
+
+Sequence CAB X =68 Y =18 HITS =1048
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     25      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =91 Y =0 HITS =1676
+
+Sequence BCD X =77 Y =80 HITS =1454
+
+Sequence CDE X =48 Y =0 HITS =1683
+
+Sequence DEF X =17 Y =0 HITS =1501
+
+Sequence EFG X =0 Y =0 HITS =2231
+
+Sequence CAB X =39 Y =81 HITS =1064
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     26      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =9 Y =16 HITS =1474
+
+Sequence BCD X =3 Y =70 HITS =1479
+
+Sequence CDE X =0 Y =0 HITS =2235
+
+Sequence DEF X =16 Y =0 HITS =1470
+
+Sequence EFG X =45 Y =0 HITS =1522
+
+Sequence CAB X =55 Y =51 HITS =1027
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     27      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =24 Y =39 HITS =1466
+
+Sequence BCD X =95 Y =0 HITS =1587
+
+Sequence CDE X =0 Y =67 HITS =1475
+
+Sequence DEF X =24 Y =59 HITS =1466
+
+Sequence EFG X =53 Y =59 HITS =1457
+
+Sequence CAB X =27 Y =18 HITS =1048
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     28      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =44 Y =45 HITS =1497
+
+Sequence BCD X =38 Y =0 HITS =1791
+
+Sequence CDE X =78 Y =68 HITS =1475
+
+Sequence DEF X =48 Y =62 HITS =1423
+
+Sequence EFG X =1 Y =73 HITS =1421
+
+Sequence CAB X =70 Y =0 HITS =1120
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     29      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =0 HITS =1621
+
+Sequence BCD X =97 Y =1 HITS =1845
+
+Sequence CDE X =0 Y =0 HITS =2212
+
+Sequence DEF X =0 Y =36 HITS =1512
+
+Sequence EFG X =4 Y =16 HITS =1463
+
+Sequence CAB X =81 Y =48 HITS =1045
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     30      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =68 Y =0 HITS =1485
+
+Sequence BCD X =6 Y =78 HITS =1475
+
+Sequence CDE X =98 Y =0 HITS =2204
+
+Sequence DEF X =5 Y =0 HITS =1983
+
+Sequence EFG X =25 Y =0 HITS =1622
+
+Sequence CAB X =62 Y =53 HITS =1042
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     31      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =32 Y =0 HITS =1856
+
+Sequence BCD X =94 Y =59 HITS =1459
+
+Sequence CDE X =49 Y =0 HITS =1557
+
+Sequence DEF X =18 Y =16 HITS =1473
+
+Sequence EFG X =4 Y =0 HITS =2195
+
+Sequence CAB X =19 Y =48 HITS =1007
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     32      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =16 HITS =1465
+
+Sequence BCD X =94 Y =83 HITS =1483
+
+Sequence CDE X =3 Y =0 HITS =1913
+
+Sequence DEF X =39 Y =0 HITS =1869
+
+Sequence EFG X =94 Y =0 HITS =1832
+
+Sequence CAB X =35 Y =87 HITS =1067
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     33      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =37 HITS =1505
+
+Sequence BCD X =2 Y =0 HITS =1924
+
+Sequence CDE X =5 Y =68 HITS =1475
+
+Sequence DEF X =83 Y =15 HITS =1422
+
+Sequence EFG X =82 Y =0 HITS =1569
+
+Sequence FGB X =63 Y =0 HITS =880
+
+Sequence CAB X =54 Y =47 HITS =1003
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     34      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =28 Y =0 HITS =1804
+
+Sequence BCD X =93 Y =92 HITS =1456
+
+Sequence CDE X =50 Y =0 HITS =1776
+
+Sequence DEF X =0 Y =16 HITS =1474
+
+Sequence EFG X =2 Y =0 HITS =2213
+
+Sequence CAB X =23 Y =84 HITS =1043
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     35      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =66 Y =17 HITS =1492
+
+Sequence BCD X =0 Y =0 HITS =2405
+
+Sequence CDE X =60 Y =0 HITS =1503
+
+Sequence DEF X =68 Y =37 HITS =1466
+
+Sequence EFG X =95 Y =33 HITS =1490
+
+Sequence CAB X =2 Y =57 HITS =1035
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     36      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =34 HITS =1469
+
+Sequence BCD X =84 Y =0 HITS =1558
+
+Sequence CDE X =4 Y =42 HITS =1418
+
+Sequence DEF X =0 Y =19 HITS =1468
+
+Sequence EFG X =2 Y =0 HITS =1625
+
+Sequence CAB X =97 Y =51 HITS =1221
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     37      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =80 Y =16 HITS =1465
+
+Sequence BCD X =11 Y =0 HITS =1506
+
+Sequence CDE X =77 Y =0 HITS =1473
+
+Sequence DEF X =26 Y =75 HITS =1498
+
+Sequence EFG X =95 Y =37 HITS =1440
+
+Sequence CAB X =25 Y =49 HITS =1003
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     38      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =51 Y =18 HITS =1543
+
+Sequence BCD X =1 Y =67 HITS =1458
+
+Sequence CDE X =75 Y =15 HITS =1451
+
+Sequence DEF X =57 Y =0 HITS =1565
+
+Sequence EFG X =89 Y =0 HITS =1587
+
+Sequence FGB X =39 Y =0 HITS =986
+
+Sequence CAB X =28 Y =67 HITS =1034
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     39      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =5 HITS =1464
+
+Sequence BCD X =84 Y =93 HITS =1457
+
+Sequence CDE X =2 Y =0 HITS =2199
+
+Sequence DEF X =2 Y =16 HITS =1472
+
+Sequence EFG X =0 Y =36 HITS =1433
+
+Sequence GBC X =45 Y =4 HITS =821
+
+Sequence CAB X =49 Y =20 HITS =1024
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     40      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =17 Y =85 HITS =1477
+
+Sequence BCD X =82 Y =0 HITS =1483
+
+Sequence CDE X =14 Y =50 HITS =1455
+
+Sequence DEF X =5 Y =0 HITS =1896
+
+Sequence EFG X =0 Y =16 HITS =1466
+
+Sequence FGB X =34 Y =0 HITS =1042
+
+Sequence CAB X =52 Y =57 HITS =1032
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     41      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =39 Y =0 HITS =1440
+
+Sequence BCD X =3 Y =1 HITS =1794
+
+Sequence CDE X =87 Y =0 HITS =1969
+
+Sequence DEF X =84 Y =37 HITS =1462
+
+Sequence EFG X =82 Y =16 HITS =1463
+
+Sequence CAB X =2 Y =48 HITS =1080
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     42      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =51 Y =41 HITS =1477
+
+Sequence BCD X =0 Y =0 HITS =2376
+
+Sequence CDE X =85 Y =67 HITS =1474
+
+Sequence DEF X =0 Y =69 HITS =1452
+
+Sequence EFG X =45 Y =61 HITS =1444
+
+Sequence CAB X =63 Y =0 HITS =1167
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     43      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =33 Y =33 HITS =1467
+
+Sequence BCD X =0 Y =1 HITS =1924
+
+Sequence CDE X =83 Y =67 HITS =1475
+
+Sequence DEF X =60 Y =45 HITS =1469
+
+Sequence EFG X =0 Y =74 HITS =1451
+
+Sequence CAB X =77 Y =0 HITS =1125
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     44      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =5 Y =16 HITS =1465
+
+Sequence BCD X =5 Y =91 HITS =1475
+
+Sequence CDE X =2 Y =0 HITS =2228
+
+Sequence DEF X =17 Y =0 HITS =1419
+
+Sequence EFG X =65 Y =0 HITS =1830
+
+Sequence CAB X =64 Y =85 HITS =1009
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     45      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =53 Y =0 HITS =1426
+
+Sequence BCD X =1 Y =0 HITS =1737
+
+Sequence CDE X =75 Y =0 HITS =1453
+
+Sequence DEF X =85 Y =16 HITS =1471
+
+Sequence EFG X =84 Y =37 HITS =1461
+
+Sequence CAB X =0 Y =49 HITS =1145
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     46      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =37 Y =16 HITS =1464
+
+Sequence BCD X =0 Y =82 HITS =1431
+
+Sequence CDE X =52 Y =0 HITS =1567
+
+Sequence DEF X =24 Y =0 HITS =1552
+
+Sequence EFG X =6 Y =0 HITS =2048
+
+Sequence CAB X =52 Y =88 HITS =1049
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     47      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =22 Y =60 HITS =1468
+
+Sequence BCD X =4 Y =0 HITS =1580
+
+Sequence CDE X =2 Y =68 HITS =1478
+
+Sequence DEF X =48 Y =37 HITS =1454
+
+Sequence EFG X =79 Y =58 HITS =1454
+
+Sequence CAB X =45 Y =0 HITS =1038
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     48      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =24 Y =83 HITS =1496
+
+Sequence BCD X =85 Y =0 HITS =1588
+
+Sequence CDE X =50 Y =59 HITS =1464
+
+Sequence DEF X =4 Y =43 HITS =1482
+
+Sequence EFG X =0 Y =64 HITS =1465
+
+Sequence CAB X =20 Y =0 HITS =1105
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     49      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =14 Y =73 HITS =1494
+
+Sequence BCD X =83 Y =79 HITS =1482
+
+Sequence CDE X =1 Y =36 HITS =1442
+
+Sequence DEF X =4 Y =16 HITS =1474
+
+Sequence EFG X =1 Y =0 HITS =2217
+
+Sequence CAB X =88 Y =36 HITS =1013
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     50      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =41 Y =16 HITS =1451
+
+Sequence BCD X =0 Y =30 HITS =1522
+
+Sequence CDE X =66 Y =0 HITS =1474
+
+Sequence DEF X =94 Y =1 HITS =1445
+
+Sequence EFG X =74 Y =32 HITS =1440
+
+Sequence CAB X =6 Y =0 HITS =1054
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     51      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =92 Y =42 HITS =1450
+
+Sequence BCD X =83 Y =0 HITS =1508
+
+Sequence CDE X =85 Y =63 HITS =1477
+
+Sequence DEF X =24 Y =78 HITS =1454
+
+Sequence EFG X =5 Y =70 HITS =1425
+
+Sequence CAB X =39 Y =0 HITS =1070
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     52      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =42 Y =18 HITS =1469
+
+Sequence BCD X =1 Y =0 HITS =1795
+
+Sequence CDE X =73 Y =44 HITS =1526
+
+Sequence DEF X =96 Y =16 HITS =1474
+
+Sequence EFG X =93 Y =0 HITS =1572
+
+Sequence CAB X =2 Y =59 HITS =1034
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     53      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =39 HITS =1462
+
+Sequence BCD X =94 Y =0 HITS =1509
+
+Sequence CDE X =0 Y =65 HITS =1421
+
+Sequence DEF X =24 Y =63 HITS =1466
+
+Sequence EFG X =52 Y =70 HITS =1487
+
+Sequence GBC X =4 Y =50 HITS =851
+
+Sequence CAB X =19 Y =18 HITS =1050
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     54      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =41 Y =16 HITS =1465
+
+Sequence BCD X =2 Y =78 HITS =1482
+
+Sequence CDE X =47 Y =0 HITS =1534
+
+Sequence DEF X =18 Y =0 HITS =1474
+
+Sequence EFG X =2 Y =0 HITS =2176
+
+Sequence CAB X =44 Y =81 HITS =1022
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     55      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =28 Y =16 HITS =1466
+
+Sequence BCD X =84 Y =91 HITS =1506
+
+Sequence CDE X =4 Y =0 HITS =2173
+
+Sequence DEF X =8 Y =16 HITS =1470
+
+Sequence EFG X =0 Y =73 HITS =1490
+
+Sequence CAB X =55 Y =18 HITS =1027
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     56      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =47 Y =16 HITS =1473
+
+Sequence BCD X =5 Y =77 HITS =1507
+
+Sequence CDE X =48 Y =0 HITS =1699
+
+Sequence DEF X =28 Y =0 HITS =1553
+
+Sequence EFG X =10 Y =0 HITS =2149
+
+Sequence CAB X =46 Y =83 HITS =1134
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     57      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =74 HITS =1457
+
+Sequence BCD X =83 Y =75 HITS =1475
+
+Sequence CDE X =4 Y =57 HITS =1445
+
+Sequence DEF X =39 Y =0 HITS =1944
+
+Sequence EFG X =4 Y =0 HITS =1965
+
+Sequence CAB X =54 Y =18 HITS =1040
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     58      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =65 Y =16 HITS =1466
+
+Sequence BCD X =0 Y =0 HITS =2418
+
+Sequence CDE X =59 Y =0 HITS =1478
+
+Sequence DEF X =62 Y =35 HITS =1422
+
+Sequence EFG X =92 Y =31 HITS =1456
+
+Sequence CAB X =1 Y =58 HITS =1092
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     59      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =11 Y =73 HITS =1530
+
+Sequence BCD X =97 Y =84 HITS =1430
+
+Sequence CDE X =7 Y =36 HITS =1442
+
+Sequence DEF X =5 Y =16 HITS =1474
+
+Sequence EFG X =1 Y =0 HITS =2211
+
+Sequence GBC X =47 Y =0 HITS =1029
+
+Sequence CAB X =49 Y =56 HITS =1041
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     60      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =3 Y =16 HITS =1445
+
+Sequence BCD X =87 Y =0 HITS =1663
+
+Sequence CDE X =2 Y =0 HITS =1637
+
+Sequence DEF X =35 Y =86 HITS =1481
+
+Sequence EFG X =1 Y =38 HITS =1459
+
+Sequence CAB X =92 Y =74 HITS =1215
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     61      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =54 Y =16 HITS =1467
+
+Sequence BCD X =3 Y =88 HITS =1482
+
+Sequence CDE X =77 Y =0 HITS =1616
+
+Sequence DEF X =56 Y =0 HITS =1767
+
+Sequence EFG X =0 Y =0 HITS =2414
+
+Sequence GBC X =93 Y =47 HITS =821
+
+Sequence CAB X =45 Y =43 HITS =1020
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     62      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =43 Y =39 HITS =1464
+
+Sequence BCD X =0 Y =0 HITS =2342
+
+Sequence CDE X =73 Y =54 HITS =1458
+
+Sequence DEF X =45 Y =62 HITS =1467
+
+Sequence EFG X =0 Y =67 HITS =1465
+
+Sequence CAB X =47 Y =18 HITS =1035
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     63      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =0 HITS =1623
+
+Sequence BCD X =39 Y =91 HITS =1458
+
+Sequence CDE X =1 Y =0 HITS =2201
+
+Sequence DEF X =39 Y =35 HITS =1608
+
+Sequence EFG X =48 Y =0 HITS =1811
+
+Sequence CAB X =3 Y =84 HITS =1020
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     64      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =3 Y =16 HITS =1466
+
+Sequence BCD X =0 Y =86 HITS =1457
+
+Sequence CDE X =1 Y =0 HITS =2223
+
+Sequence DEF X =40 Y =0 HITS =1487
+
+Sequence EFG X =23 Y =0 HITS =1672
+
+Sequence CAB X =50 Y =83 HITS =1041
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     65      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =34 HITS =1447
+
+Sequence BCD X =3 Y =0 HITS =1824
+
+Sequence CDE X =3 Y =61 HITS =1474
+
+Sequence DEF X =21 Y =84 HITS =1477
+
+Sequence EFG X =61 Y =79 HITS =1424
+
+Sequence CAB X =60 Y =18 HITS =1014
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     66      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =16 HITS =1466
+
+Sequence BCD X =0 Y =82 HITS =1531
+
+Sequence CDE X =9 Y =0 HITS =1810
+
+Sequence DEF X =35 Y =0 HITS =2016
+
+Sequence EFG X =57 Y =0 HITS =1730
+
+Sequence CAB X =28 Y =48 HITS =1041
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     67      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =84 Y =6 HITS =1469
+
+Sequence BCD X =77 Y =80 HITS =1417
+
+Sequence CDE X =57 Y =0 HITS =1541
+
+Sequence DEF X =3 Y =16 HITS =1474
+
+Sequence EFG X =2 Y =0 HITS =2223
+
+Sequence CAB X =11 Y =47 HITS =1044
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     68      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =42 Y =28 HITS =1528
+
+Sequence BCD X =0 Y =1 HITS =1947
+
+Sequence CDE X =75 Y =57 HITS =1447
+
+Sequence DEF X =42 Y =58 HITS =1435
+
+Sequence EFG X =2 Y =72 HITS =1570
+
+Sequence CAB X =61 Y =17 HITS =1012
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     69      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =4 Y =68 HITS =1456
+
+Sequence BCD X =92 Y =87 HITS =1457
+
+Sequence CDE X =0 Y =37 HITS =1522
+
+Sequence DEF X =5 Y =16 HITS =1473
+
+Sequence EFG X =1 Y =0 HITS =1900
+
+Sequence CAB X =96 Y =18 HITS =1048
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     70      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =0 HITS =1544
+
+Sequence BCD X =85 Y =0 HITS =1506
+
+Sequence CDE X =0 Y =0 HITS =2404
+
+Sequence DEF X =5 Y =16 HITS =1471
+
+Sequence EFG X =1 Y =37 HITS =1472
+
+Sequence CAB X =83 Y =50 HITS =1009
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     71      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =16 HITS =1466
+
+Sequence BCD X =1 Y =86 HITS =1458
+
+Sequence CDE X =2 Y =0 HITS =2228
+
+Sequence DEF X =18 Y =0 HITS =1455
+
+Sequence EFG X =49 Y =0 HITS =1518
+
+Sequence CAB X =63 Y =80 HITS =1022
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     72      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =42 HITS =1432
+
+Sequence BCD X =88 Y =0 HITS =1482
+
+Sequence CDE X =0 Y =39 HITS =1622
+
+Sequence DEF X =7 Y =16 HITS =1473
+
+Sequence EFG X =2 Y =0 HITS =1799
+
+Sequence CAB X =63 Y =63 HITS =1014
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     73      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =71 Y =40 HITS =1449
+
+Sequence BCD X =81 Y =0 HITS =1508
+
+Sequence CDE X =77 Y =63 HITS =1474
+
+Sequence DEF X =29 Y =76 HITS =1428
+
+Sequence EFG X =7 Y =85 HITS =1467
+
+Sequence CAB X =18 Y =18 HITS =1043
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     74      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =18 HITS =1491
+
+Sequence BCD X =1 Y =1 HITS =1923
+
+Sequence CDE X =1 Y =42 HITS =1466
+
+Sequence DEF X =12 Y =73 HITS =1439
+
+Sequence EFG X =49 Y =80 HITS =1443
+
+Sequence CAB X =99 Y =35 HITS =1470
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     75      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =49 Y =16 HITS =1467
+
+Sequence BCD X =8 Y =92 HITS =1456
+
+Sequence CDE X =75 Y =0 HITS =1811
+
+Sequence DEF X =91 Y =6 HITS =1451
+
+Sequence EFG X =73 Y =36 HITS =1434
+
+Sequence CAB X =25 Y =25 HITS =1011
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     76      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =71 Y =0 HITS =1492
+
+Sequence BCD X =94 Y =71 HITS =1470
+
+Sequence CDE X =54 Y =0 HITS =2196
+
+Sequence DEF X =22 Y =6 HITS =1471
+
+Sequence EFG X =0 Y =0 HITS =2217
+
+Sequence CAB X =12 Y =42 HITS =1027
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     77      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =30 Y =0 HITS =1830
+
+Sequence BCD X =87 Y =92 HITS =1458
+
+Sequence CDE X =3 Y =0 HITS =2175
+
+Sequence DEF X =0 Y =17 HITS =1498
+
+Sequence EFG X =8 Y =83 HITS =1466
+
+Sequence CAB X =87 Y =23 HITS =1012
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     78      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =48 Y =0 HITS =1630
+
+Sequence BCD X =1 Y =94 HITS =1507
+
+Sequence CDE X =76 Y =0 HITS =1581
+
+Sequence DEF X =71 Y =15 HITS =1420
+
+Sequence EFG X =85 Y =83 HITS =1468
+
+Sequence CAB X =0 Y =18 HITS =1048
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     79      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =52 Y =22 HITS =1536
+
+Sequence BCD X =0 Y =39 HITS =1423
+
+Sequence CDE X =67 Y =42 HITS =1422
+
+Sequence DEF X =91 Y =16 HITS =1474
+
+Sequence EFG X =82 Y =0 HITS =1726
+
+Sequence CAB X =1 Y =66 HITS =1042
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     80      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =44 Y =0 HITS =1600
+
+Sequence BCD X =5 Y =0 HITS =1794
+
+Sequence CDE X =69 Y =0 HITS =1450
+
+Sequence DEF X =60 Y =82 HITS =1481
+
+Sequence EFG X =80 Y =52 HITS =1489
+
+Sequence CAB X =9 Y =46 HITS =1022
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     81      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =87 Y =19 HITS =1544
+
+Sequence BCD X =83 Y =85 HITS =1457
+
+Sequence CDE X =96 Y =1 HITS =2122
+
+Sequence DEF X =1 Y =16 HITS =1431
+
+Sequence EFG X =52 Y =0 HITS =2176
+
+Sequence CAB X =37 Y =81 HITS =1011
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     82      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =38 Y =0 HITS =1663
+
+Sequence BCD X =3 Y =0 HITS =1820
+
+Sequence CDE X =67 Y =0 HITS =1500
+
+Sequence DEF X =17 Y =88 HITS =1468
+
+Sequence EFG X =3 Y =81 HITS =1416
+
+Sequence CAB X =66 Y =71 HITS =1048
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     83      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =4 Y =16 HITS =1466
+
+Sequence BCD X =85 Y =82 HITS =1448
+
+Sequence CDE X =11 Y =0 HITS =1972
+
+Sequence DEF X =27 Y =0 HITS =1471
+
+Sequence EFG X =59 Y =0 HITS =1656
+
+Sequence CAB X =38 Y =87 HITS =1067
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     84      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =19 Y =0 HITS =1544
+
+Sequence BCD X =2 Y =94 HITS =1458
+
+Sequence CDE X =1 Y =0 HITS =2199
+
+Sequence DEF X =56 Y =16 HITS =1452
+
+Sequence EFG X =47 Y =0 HITS =1533
+
+Sequence CAB X =63 Y =86 HITS =1053
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     85      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =7 Y =72 HITS =1478
+
+Sequence BCD X =94 Y =86 HITS =1508
+
+Sequence CDE X =0 Y =36 HITS =1467
+
+Sequence DEF X =5 Y =16 HITS =1474
+
+Sequence EFG X =4 Y =0 HITS =2208
+
+Sequence CAB X =53 Y =56 HITS =1045
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     86      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =23 Y =18 HITS =1418
+
+Sequence BCD X =95 Y =1 HITS =1457
+
+Sequence CDE X =2 Y =65 HITS =1475
+
+Sequence DEF X =18 Y =56 HITS =1419
+
+Sequence EFG X =52 Y =69 HITS =1481
+
+Sequence CAB X =42 Y =0 HITS =1220
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     87      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =0 HITS =1570
+
+Sequence BCD X =88 Y =0 HITS =1534
+
+Sequence CDE X =1 Y =0 HITS =2201
+
+Sequence DEF X =3 Y =37 HITS =1463
+
+Sequence EFG X =2 Y =16 HITS =1464
+
+Sequence CAB X =82 Y =48 HITS =1045
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     88      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =16 HITS =1474
+
+Sequence BCD X =88 Y =83 HITS =1479
+
+Sequence CDE X =5 Y =0 HITS =2195
+
+Sequence DEF X =27 Y =0 HITS =1680
+
+Sequence EFG X =47 Y =0 HITS =1632
+
+Sequence CAB X =43 Y =91 HITS =1049
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     89      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =49 Y =16 HITS =1492
+
+Sequence BCD X =0 Y =76 HITS =1430
+
+Sequence CDE X =54 Y =0 HITS =1663
+
+Sequence DEF X =21 Y =0 HITS =1422
+
+Sequence EFG X =6 Y =0 HITS =2173
+
+Sequence CAB X =44 Y =80 HITS =1062
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     90      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =19 Y =16 HITS =1473
+
+Sequence BCD X =91 Y =80 HITS =1474
+
+Sequence CDE X =12 Y =0 HITS =2016
+
+Sequence DEF X =29 Y =0 HITS =1496
+
+Sequence EFG X =53 Y =0 HITS =1467
+
+Sequence CAB X =41 Y =87 HITS =1049
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     91      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =33 Y =0 HITS =1831
+
+Sequence BCD X =0 Y =76 HITS =1455
+
+Sequence CDE X =6 Y =0 HITS =2098
+
+Sequence DEF X =62 Y =49 HITS =1473
+
+Sequence EFG X =75 Y =70 HITS =1464
+
+Sequence CAB X =84 Y =33 HITS =1307
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     92      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =23 Y =41 HITS =1496
+
+Sequence BCD X =86 Y =0 HITS =1638
+
+Sequence CDE X =1 Y =36 HITS =1441
+
+Sequence DEF X =9 Y =16 HITS =1473
+
+Sequence EFG X =0 Y =0 HITS =2398
+
+Sequence CAB X =91 Y =55 HITS =1035
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     93      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =38 Y =49 HITS =1470
+
+Sequence BCD X =76 Y =15 HITS =1453
+
+Sequence CDE X =66 Y =58 HITS =1472
+
+Sequence DEF X =1 Y =49 HITS =1479
+
+Sequence EFG X =6 Y =69 HITS =1443
+
+Sequence GBC X =2 Y =33 HITS =880
+
+Sequence CAB X =39 Y =1 HITS =1087
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     94      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =42 HITS =1469
+
+Sequence BCD X =9 Y =0 HITS =1560
+
+Sequence CDE X =72 Y =40 HITS =1437
+
+Sequence DEF X =72 Y =7 HITS =1474
+
+Sequence EFG X =89 Y =0 HITS =1792
+
+Sequence FGB X =55 Y =0 HITS =832
+
+Sequence CAB X =28 Y =64 HITS =1049
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+EFG --> FGB
+
+CAB --> ABC
+
+========================     95      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =59 Y =75 HITS =1455
+
+Sequence BCD X =4 Y =84 HITS =1430
+
+Sequence CDE X =88 Y =35 HITS =1438
+
+Sequence DEF X =95 Y =5 HITS =1448
+
+Sequence EFG X =71 Y =0 HITS =1424
+
+Sequence GBC X =56 Y =0 HITS =836
+
+Sequence CAB X =41 Y =56 HITS =1045
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     96      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =50 Y =79 HITS =1469
+
+Sequence BCD X =0 Y =83 HITS =1509
+
+Sequence CDE X =77 Y =79 HITS =1472
+
+Sequence DEF X =43 Y =17 HITS =1449
+
+Sequence EFG X =74 Y =0 HITS =1850
+
+Sequence GBC X =50 Y =0 HITS =942
+
+Sequence CAB X =22 Y =28 HITS =1050
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     97      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =15 HITS =1492
+
+Sequence BCD X =90 Y =93 HITS =1457
+
+Sequence CDE X =1 Y =0 HITS =2228
+
+Sequence DEF X =0 Y =16 HITS =1472
+
+Sequence EFG X =2 Y =38 HITS =1505
+
+Sequence CAB X =56 Y =16 HITS =1039
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     98      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =27 Y =17 HITS =1492
+
+Sequence BCD X =87 Y =93 HITS =1456
+
+Sequence CDE X =0 Y =0 HITS =2410
+
+Sequence DEF X =1 Y =15 HITS =1419
+
+Sequence EFG X =2 Y =39 HITS =1518
+
+Sequence CAB X =84 Y =23 HITS =1049
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     99      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =50 Y =78 HITS =1548
+
+Sequence BCD X =0 Y =93 HITS =1453
+
+Sequence CDE X =96 Y =37 HITS =1469
+
+Sequence DEF X =95 Y =6 HITS =1469
+
+Sequence EFG X =76 Y =0 HITS =1630
+
+Sequence CAB X =3 Y =24 HITS =1092
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+
+========================     100      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =71 Y =16 HITS =1464
+
+Sequence BCD X =2 Y =92 HITS =1458
+
+Sequence CDE X =94 Y =32 HITS =1448
+
+Sequence DEF X =53 Y =0 HITS =2197
+
+Sequence EFG X =69 Y =0 HITS =1467
+
+Sequence CAB X =22 Y =89 HITS =1035
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDE
+
+CDE --> DEF
+
+DEF --> EFG
+
+CAB --> ABC
+

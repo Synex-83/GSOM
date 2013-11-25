@@ -1,0 +1,4400 @@
+========================     1      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =15 HITS =2162
+
+Sequence BCD X =0 Y =0 HITS =3131
+
+Sequence BAB X =54 Y =0 HITS =1433
+
+Sequence CDA X =2 Y =37 HITS =1212
+
+Sequence DAA X =88 Y =67 HITS =834
+
+Sequence AAA X =94 Y =29 HITS =840
+
+Sequence AAB X =59 Y =85 HITS =849
+
+Sequence ABA X =79 Y =0 HITS =858
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     2      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =91 Y =0 HITS =2353
+
+Sequence BCD X =88 Y =15 HITS =2151
+
+Sequence BAB X =78 Y =41 HITS =1277
+
+Sequence CDA X =40 Y =0 HITS =1235
+
+Sequence DAA X =3 Y =79 HITS =844
+
+Sequence AAA X =38 Y =72 HITS =832
+
+Sequence AAB X =0 Y =0 HITS =1420
+
+Sequence ABA X =62 Y =83 HITS =853
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     3      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =0 HITS =2264
+
+Sequence BCD X =0 Y =18 HITS =2222
+
+Sequence BAB X =75 Y =19 HITS =1294
+
+Sequence CDA X =90 Y =88 HITS =1183
+
+Sequence DAA X =4 Y =1 HITS =909
+
+Sequence AAA X =0 Y =55 HITS =847
+
+Sequence AAB X =26 Y =86 HITS =874
+
+Sequence ABA X =99 Y =0 HITS =1453
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     4      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =15 HITS =2162
+
+Sequence BCD X =0 Y =0 HITS =3292
+
+Sequence BAB X =0 Y =36 HITS =1299
+
+Sequence CDA X =97 Y =54 HITS =1185
+
+Sequence DAA X =95 Y =20 HITS =869
+
+Sequence AAA X =80 Y =0 HITS =1041
+
+Sequence AAB X =86 Y =95 HITS =844
+
+Sequence ABA X =0 Y =76 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     5      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =84 Y =34 HITS =2085
+
+Sequence BCD X =80 Y =57 HITS =2147
+
+Sequence BAB X =83 Y =17 HITS =1269
+
+Sequence CDA X =37 Y =0 HITS =1718
+
+Sequence DAA X =1 Y =50 HITS =861
+
+Sequence AAA X =2 Y =80 HITS =872
+
+Sequence AAB X =5 Y =0 HITS =1054
+
+Sequence ABA X =89 Y =0 HITS =907
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     6      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =62 Y =0 HITS =2215
+
+Sequence BCD X =34 Y =0 HITS =2260
+
+Sequence BAB X =17 Y =0 HITS =1548
+
+Sequence CDA X =51 Y =79 HITS =1210
+
+Sequence DAA X =0 Y =71 HITS =836
+
+Sequence AAA X =0 Y =45 HITS =872
+
+Sequence AAB X =80 Y =86 HITS =833
+
+Sequence ABA X =0 Y =20 HITS =1008
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     7      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =96 Y =0 HITS =2538
+
+Sequence BCD X =91 Y =15 HITS =2150
+
+Sequence BAB X =92 Y =42 HITS =1277
+
+Sequence CDA X =0 Y =17 HITS =1218
+
+Sequence DAA X =4 Y =80 HITS =877
+
+Sequence AAA X =37 Y =73 HITS =876
+
+Sequence AAB X =9 Y =0 HITS =976
+
+Sequence ABA X =63 Y =94 HITS =969
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     8      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =32 Y =54 HITS =2113
+
+Sequence BCD X =11 Y =20 HITS =2139
+
+Sequence BAB X =24 Y =0 HITS =1368
+
+Sequence CDA X =92 Y =17 HITS =1233
+
+Sequence DAA X =0 Y =46 HITS =985
+
+Sequence AAA X =10 Y =71 HITS =870
+
+Sequence AAB X =45 Y =0 HITS =984
+
+Sequence ABA X =2 Y =0 HITS =994
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     9      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =17 Y =0 HITS =2271
+
+Sequence BCD X =34 Y =0 HITS =2206
+
+Sequence BAB X =18 Y =16 HITS =1265
+
+Sequence CDA X =41 Y =73 HITS =1201
+
+Sequence DAA X =91 Y =76 HITS =855
+
+Sequence AAA X =86 Y =22 HITS =859
+
+Sequence AAB X =4 Y =95 HITS =847
+
+Sequence ABA X =0 Y =1 HITS =1090
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     10      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =16 Y =0 HITS =2234
+
+Sequence BCD X =36 Y =0 HITS =2173
+
+Sequence BAB X =31 Y =16 HITS =1264
+
+Sequence CDA X =21 Y =47 HITS =1222
+
+Sequence DAA X =82 Y =20 HITS =870
+
+Sequence AAA X =70 Y =62 HITS =869
+
+Sequence AAB X =46 Y =85 HITS =849
+
+Sequence ABA X =0 Y =2 HITS =846
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     11      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =83 Y =0 HITS =2169
+
+Sequence BCD X =52 Y =20 HITS =2133
+
+Sequence BAB X =26 Y =49 HITS =1271
+
+Sequence CDA X =1 Y =1 HITS =1367
+
+Sequence DAA X =33 Y =78 HITS =849
+
+Sequence AAA X =72 Y =75 HITS =852
+
+Sequence AAB X =0 Y =41 HITS =849
+
+Sequence ABA X =1 Y =75 HITS =890
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     12      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =84 Y =60 HITS =2127
+
+Sequence BCD X =77 Y =14 HITS =2076
+
+Sequence BAB X =42 Y =15 HITS =1262
+
+Sequence CDA X =17 Y =17 HITS =1209
+
+Sequence DAA X =3 Y =0 HITS =1032
+
+Sequence AAA X =26 Y =0 HITS =986
+
+Sequence AAB X =3 Y =89 HITS =849
+
+Sequence ABA X =87 Y =0 HITS =976
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     13      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =43 Y =45 HITS =2113
+
+Sequence BCD X =70 Y =61 HITS =2072
+
+Sequence BAB X =22 Y =76 HITS =1271
+
+Sequence CDA X =21 Y =0 HITS =1350
+
+Sequence DAA X =63 Y =44 HITS =876
+
+Sequence AAA X =78 Y =0 HITS =943
+
+Sequence AAB X =3 Y =0 HITS =944
+
+Sequence ABA X =1 Y =94 HITS =864
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     14      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =0 HITS =2866
+
+Sequence BCD X =0 Y =15 HITS =2186
+
+Sequence BAB X =0 Y =39 HITS =1271
+
+Sequence CDA X =80 Y =17 HITS =1218
+
+Sequence DAA X =85 Y =46 HITS =871
+
+Sequence AAA X =80 Y =70 HITS =853
+
+Sequence AAB X =86 Y =0 HITS =995
+
+Sequence ABA X =3 Y =89 HITS =849
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     15      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =83 Y =15 HITS =2162
+
+Sequence BCD X =82 Y =0 HITS =2159
+
+Sequence BAB X =69 Y =50 HITS =1269
+
+Sequence CDA X =20 Y =0 HITS =1284
+
+Sequence DAA X =1 Y =81 HITS =844
+
+Sequence AAA X =24 Y =91 HITS =827
+
+Sequence AAB X =1 Y =0 HITS =1073
+
+Sequence ABA X =70 Y =80 HITS =857
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     16      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =20 Y =32 HITS =2167
+
+Sequence BCD X =36 Y =0 HITS =2066
+
+Sequence BAB X =3 Y =16 HITS =1264
+
+Sequence CDA X =91 Y =17 HITS =1211
+
+Sequence DAA X =84 Y =0 HITS =914
+
+Sequence AAA X =3 Y =0 HITS =1064
+
+Sequence AAB X =82 Y =91 HITS =851
+
+Sequence ABA X =0 Y =61 HITS =860
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     17      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =69 Y =0 HITS =2159
+
+Sequence BCD X =48 Y =0 HITS =2159
+
+Sequence BAB X =1 Y =16 HITS =1264
+
+Sequence CDA X =89 Y =36 HITS =1218
+
+Sequence DAA X =93 Y =0 HITS =1004
+
+Sequence AAA X =3 Y =0 HITS =1057
+
+Sequence AAB X =23 Y =82 HITS =865
+
+Sequence ABA X =3 Y =80 HITS =878
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     18      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =6 Y =89 HITS =2095
+
+Sequence BCD X =37 Y =81 HITS =2159
+
+Sequence BAB X =73 Y =79 HITS =1264
+
+Sequence CDA X =2 Y =0 HITS =1413
+
+Sequence DAA X =84 Y =0 HITS =1149
+
+Sequence AAA X =73 Y =20 HITS =856
+
+Sequence AAB X =42 Y =0 HITS =851
+
+Sequence ABA X =79 Y =52 HITS =834
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     19      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =86 Y =0 HITS =2353
+
+Sequence BCD X =48 Y =23 HITS =2126
+
+Sequence BAB X =21 Y =49 HITS =1272
+
+Sequence CDA X =0 Y =0 HITS =1537
+
+Sequence DAA X =26 Y =77 HITS =837
+
+Sequence AAA X =70 Y =75 HITS =865
+
+Sequence AAB X =1 Y =41 HITS =850
+
+Sequence ABA X =3 Y =74 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     20      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =96 Y =0 HITS =2511
+
+Sequence BCD X =88 Y =15 HITS =2084
+
+Sequence BAB X =77 Y =61 HITS =1294
+
+Sequence CDA X =21 Y =21 HITS =1212
+
+Sequence DAA X =21 Y =60 HITS =867
+
+Sequence AAA X =0 Y =71 HITS =881
+
+Sequence AAB X =3 Y =0 HITS =929
+
+Sequence ABA X =90 Y =89 HITS =866
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     21      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =0 HITS =2466
+
+Sequence BCD X =7 Y =14 HITS =2076
+
+Sequence BAB X =0 Y =38 HITS =1285
+
+Sequence CDA X =21 Y =53 HITS =1233
+
+Sequence DAA X =32 Y =81 HITS =851
+
+Sequence AAA X =68 Y =84 HITS =850
+
+Sequence AAB X =89 Y =0 HITS =943
+
+Sequence ABA X =3 Y =78 HITS =869
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     22      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =52 Y =77 HITS =2128
+
+Sequence BCD X =17 Y =19 HITS =2138
+
+Sequence BAB X =0 Y =49 HITS =1271
+
+Sequence CDA X =87 Y =18 HITS =1260
+
+Sequence DAA X =86 Y =86 HITS =842
+
+Sequence AAA X =0 Y =0 HITS =1402
+
+Sequence AAB X =85 Y =0 HITS =849
+
+Sequence ABA X =1 Y =21 HITS =888
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     23      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =35 HITS =2158
+
+Sequence BCD X =18 Y =39 HITS =2156
+
+Sequence BAB X =1 Y =17 HITS =1295
+
+Sequence CDA X =93 Y =16 HITS =1203
+
+Sequence DAA X =2 Y =73 HITS =864
+
+Sequence AAA X =85 Y =81 HITS =838
+
+Sequence AAB X =98 Y =45 HITS =854
+
+Sequence ABA X =1 Y =0 HITS =1072
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     24      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =62 Y =0 HITS =2228
+
+Sequence BCD X =46 Y =0 HITS =2412
+
+Sequence BAB X =23 Y =0 HITS =1500
+
+Sequence CDA X =66 Y =84 HITS =1211
+
+Sequence DAA X =3 Y =31 HITS =854
+
+Sequence AAA X =0 Y =71 HITS =873
+
+Sequence AAB X =98 Y =79 HITS =885
+
+Sequence ABA X =0 Y =0 HITS =1436
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     25      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =0 HITS =3304
+
+Sequence BCD X =0 Y =16 HITS =2225
+
+Sequence BAB X =61 Y =62 HITS =1271
+
+Sequence CDA X =81 Y =0 HITS =1338
+
+Sequence DAA X =19 Y =63 HITS =841
+
+Sequence AAA X =2 Y =84 HITS =833
+
+Sequence AAB X =84 Y =43 HITS =847
+
+Sequence ABA X =99 Y =75 HITS =868
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     26      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =23 Y =33 HITS =2147
+
+Sequence BCD X =13 Y =15 HITS =2142
+
+Sequence BAB X =0 Y =49 HITS =1272
+
+Sequence CDA X =46 Y =0 HITS =1194
+
+Sequence DAA X =29 Y =0 HITS =1031
+
+Sequence AAA X =9 Y =0 HITS =1034
+
+Sequence AAB X =87 Y =0 HITS =940
+
+Sequence ABA X =1 Y =80 HITS =878
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     27      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =33 HITS =2151
+
+Sequence BCD X =0 Y =15 HITS =2150
+
+Sequence BAB X =27 Y =0 HITS =1455
+
+Sequence CDA X =83 Y =43 HITS =1204
+
+Sequence DAA X =88 Y =20 HITS =869
+
+Sequence AAA X =64 Y =0 HITS =974
+
+Sequence AAB X =95 Y =96 HITS =848
+
+Sequence ABA X =5 Y =0 HITS =1199
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     28      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =29 Y =46 HITS =2168
+
+Sequence BCD X =4 Y =0 HITS =2615
+
+Sequence BAB X =0 Y =46 HITS =1294
+
+Sequence CDA X =99 Y =7 HITS =1224
+
+Sequence DAA X =29 Y =72 HITS =841
+
+Sequence AAA X =70 Y =84 HITS =836
+
+Sequence AAB X =94 Y =62 HITS =853
+
+Sequence ABA X =3 Y =72 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     29      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =68 HITS =2136
+
+Sequence BCD X =84 Y =76 HITS =2154
+
+Sequence BAB X =19 Y =42 HITS =1311
+
+Sequence CDA X =49 Y =0 HITS =1436
+
+Sequence DAA X =5 Y =22 HITS =868
+
+Sequence AAA X =7 Y =0 HITS =844
+
+Sequence AAB X =94 Y =0 HITS =900
+
+Sequence ABA X =3 Y =75 HITS =951
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     30      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =15 Y =47 HITS =2134
+
+Sequence BCD X =76 Y =48 HITS =2100
+
+Sequence BAB X =1 Y =64 HITS =1295
+
+Sequence CDA X =42 Y =0 HITS =1252
+
+Sequence DAA X =49 Y =43 HITS =827
+
+Sequence AAA X =96 Y =0 HITS =935
+
+Sequence AAB X =4 Y =1 HITS =898
+
+Sequence ABA X =0 Y =89 HITS =848
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     31      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =28 Y =25 HITS =2139
+
+Sequence BCD X =5 Y =15 HITS =2147
+
+Sequence BAB X =53 Y =6 HITS =1266
+
+Sequence CDA X =95 Y =91 HITS =1227
+
+Sequence DAA X =27 Y =0 HITS =869
+
+Sequence AAA X =7 Y =0 HITS =1177
+
+Sequence AAB X =96 Y =13 HITS =836
+
+Sequence ABA X =77 Y =0 HITS =1032
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     32      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =79 Y =47 HITS =2119
+
+Sequence BCD X =44 Y =0 HITS =2122
+
+Sequence BAB X =24 Y =16 HITS =1264
+
+Sequence CDA X =4 Y =91 HITS =1227
+
+Sequence DAA X =28 Y =0 HITS =943
+
+Sequence AAA X =83 Y =0 HITS =1081
+
+Sequence AAB X =0 Y =19 HITS =839
+
+Sequence ABA X =0 Y =0 HITS =1431
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     33      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =5 Y =89 HITS =2167
+
+Sequence BCD X =43 Y =65 HITS =2159
+
+Sequence BAB X =66 Y =77 HITS =1262
+
+Sequence CDA X =23 Y =0 HITS =1399
+
+Sequence DAA X =80 Y =0 HITS =843
+
+Sequence AAA X =83 Y =19 HITS =840
+
+Sequence AAB X =0 Y =0 HITS =1430
+
+Sequence ABA X =85 Y =52 HITS =867
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     34      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =0 HITS =2273
+
+Sequence BCD X =4 Y =0 HITS =2855
+
+Sequence BAB X =50 Y =0 HITS =1403
+
+Sequence CDA X =87 Y =49 HITS =1235
+
+Sequence DAA X =25 Y =91 HITS =850
+
+Sequence AAA X =1 Y =68 HITS =849
+
+Sequence AAB X =85 Y =76 HITS =842
+
+Sequence ABA X =92 Y =0 HITS =948
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     35      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =88 HITS =2106
+
+Sequence BCD X =41 Y =66 HITS =2118
+
+Sequence BAB X =70 Y =43 HITS =1258
+
+Sequence CDA X =19 Y =0 HITS =1283
+
+Sequence DAA X =80 Y =20 HITS =867
+
+Sequence AAA X =88 Y =0 HITS =1057
+
+Sequence AAB X =0 Y =0 HITS =1399
+
+Sequence ABA X =84 Y =81 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     36      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =0 HITS =2617
+
+Sequence BCD X =1 Y =14 HITS =2077
+
+Sequence BAB X =2 Y =39 HITS =1267
+
+Sequence CDA X =42 Y =0 HITS =1221
+
+Sequence DAA X =79 Y =78 HITS =827
+
+Sequence AAA X =44 Y =76 HITS =934
+
+Sequence AAB X =94 Y =0 HITS =868
+
+Sequence ABA X =24 Y =77 HITS =867
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     37      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =24 Y =0 HITS =2643
+
+Sequence BCD X =42 Y =0 HITS =2442
+
+Sequence BAB X =24 Y =82 HITS =1269
+
+Sequence CDA X =3 Y =41 HITS =1229
+
+Sequence DAA X =86 Y =0 HITS =850
+
+Sequence AAA X =99 Y =85 HITS =849
+
+Sequence AAB X =0 Y =0 HITS =1436
+
+Sequence ABA X =0 Y =92 HITS =844
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     38      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =0 HITS =2910
+
+Sequence BCD X =22 Y =0 HITS =2447
+
+Sequence BAB X =57 Y =0 HITS =1355
+
+Sequence CDA X =34 Y =58 HITS =1226
+
+Sequence DAA X =75 Y =36 HITS =843
+
+Sequence AAA X =84 Y =69 HITS =840
+
+Sequence AAB X =3 Y =93 HITS =848
+
+Sequence ABA X =95 Y =0 HITS =975
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     39      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =0 HITS =2240
+
+Sequence BCD X =91 Y =0 HITS =2781
+
+Sequence BAB X =17 Y =16 HITS =1264
+
+Sequence CDA X =49 Y =80 HITS =1200
+
+Sequence DAA X =1 Y =20 HITS =870
+
+Sequence AAA X =2 Y =65 HITS =865
+
+Sequence AAB X =86 Y =84 HITS =832
+
+Sequence ABA X =2 Y =0 HITS =1081
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     40      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =72 Y =4 HITS =2114
+
+Sequence BCD X =42 Y =0 HITS =2268
+
+Sequence BAB X =75 Y =70 HITS =1295
+
+Sequence CDA X =1 Y =41 HITS =1184
+
+Sequence DAA X =25 Y =0 HITS =966
+
+Sequence AAA X =89 Y =0 HITS =1050
+
+Sequence AAB X =0 Y =0 HITS =1361
+
+Sequence ABA X =41 Y =87 HITS =846
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     41      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =17 Y =61 HITS =2163
+
+Sequence BCD X =69 Y =39 HITS =2158
+
+Sequence BAB X =3 Y =63 HITS =1272
+
+Sequence CDA X =25 Y =0 HITS =1214
+
+Sequence DAA X =46 Y =35 HITS =903
+
+Sequence AAA X =92 Y =0 HITS =910
+
+Sequence AAB X =6 Y =0 HITS =912
+
+Sequence ABA X =0 Y =91 HITS =881
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     42      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =57 HITS =2093
+
+Sequence BCD X =48 Y =38 HITS =2118
+
+Sequence BAB X =28 Y =44 HITS =1269
+
+Sequence CDA X =29 Y =0 HITS =1503
+
+Sequence DAA X =82 Y =78 HITS =845
+
+Sequence AAA X =83 Y =0 HITS =872
+
+Sequence AAB X =49 Y =0 HITS =882
+
+Sequence ABA X =2 Y =78 HITS =881
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     43      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =25 Y =0 HITS =2643
+
+Sequence BCD X =7 Y =0 HITS =2335
+
+Sequence BAB X =51 Y =0 HITS =1439
+
+Sequence CDA X =21 Y =91 HITS =1218
+
+Sequence DAA X =25 Y =18 HITS =827
+
+Sequence AAA X =5 Y =85 HITS =849
+
+Sequence AAB X =93 Y =86 HITS =846
+
+Sequence ABA X =85 Y =0 HITS =889
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     44      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =38 Y =0 HITS =2277
+
+Sequence BCD X =0 Y =37 HITS =2220
+
+Sequence BAB X =22 Y =0 HITS =1449
+
+Sequence CDA X =56 Y =67 HITS =1233
+
+Sequence DAA X =6 Y =77 HITS =872
+
+Sequence AAA X =0 Y =0 HITS =1406
+
+Sequence AAB X =97 Y =80 HITS =860
+
+Sequence ABA X =86 Y =0 HITS =1041
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     45      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =3 Y =0 HITS =2943
+
+Sequence BCD X =24 Y =0 HITS =2486
+
+Sequence BAB X =57 Y =0 HITS =1452
+
+Sequence CDA X =4 Y =42 HITS =1198
+
+Sequence DAA X =79 Y =73 HITS =843
+
+Sequence AAA X =78 Y =44 HITS =887
+
+Sequence AAB X =5 Y =93 HITS =852
+
+Sequence ABA X =87 Y =19 HITS =849
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     46      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =68 Y =0 HITS =2258
+
+Sequence BCD X =45 Y =0 HITS =2274
+
+Sequence BAB X =56 Y =50 HITS =1293
+
+Sequence CDA X =10 Y =87 HITS =1211
+
+Sequence DAA X =0 Y =0 HITS =1286
+
+Sequence AAA X =21 Y =0 HITS =889
+
+Sequence AAB X =3 Y =19 HITS =841
+
+Sequence ABA X =83 Y =91 HITS =842
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     47      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =2 Y =35 HITS =2159
+
+Sequence BCD X =0 Y =55 HITS =2075
+
+Sequence BAB X =0 Y =17 HITS =1295
+
+Sequence CDA X =20 Y =0 HITS =1326
+
+Sequence DAA X =92 Y =56 HITS =847
+
+Sequence AAA X =81 Y =83 HITS =841
+
+Sequence AAB X =93 Y =0 HITS =1012
+
+Sequence ABA X =1 Y =0 HITS =999
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+BAB --> ABC
+
+========================     48      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =37 Y =0 HITS =2140
+
+Sequence BCD X =68 Y =0 HITS =2135
+
+Sequence BAB X =31 Y =82 HITS =1271
+
+Sequence CDA X =21 Y =0 HITS =1329
+
+Sequence DAA X =88 Y =0 HITS =1005
+
+Sequence AAA X =93 Y =85 HITS =849
+
+Sequence AAB X =1 Y =0 HITS =1076
+
+Sequence ABA X =0 Y =89 HITS =844
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     49      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =83 Y =14 HITS =2081
+
+Sequence BCD X =55 Y =0 HITS =2545
+
+Sequence BAB X =4 Y =16 HITS =1264
+
+Sequence CDA X =50 Y =79 HITS =1200
+
+Sequence DAA X =80 Y =0 HITS =876
+
+Sequence AAA X =4 Y =0 HITS =1044
+
+Sequence AAB X =83 Y =87 HITS =850
+
+Sequence ABA X =3 Y =67 HITS =891
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     50      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =10 Y =16 HITS =2135
+
+Sequence BCD X =0 Y =48 HITS =2159
+
+Sequence BAB X =22 Y =0 HITS =1334
+
+Sequence CDA X =95 Y =76 HITS =1216
+
+Sequence DAA X =0 Y =79 HITS =848
+
+Sequence AAA X =8 Y =0 HITS =905
+
+Sequence AAB X =93 Y =52 HITS =850
+
+Sequence ABA X =65 Y =0 HITS =883
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     51      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =73 Y =0 HITS =2345
+
+Sequence BCD X =41 Y =0 HITS =2200
+
+Sequence BAB X =50 Y =50 HITS =1291
+
+Sequence CDA X =4 Y =45 HITS =1227
+
+Sequence DAA X =1 Y =0 HITS =1080
+
+Sequence AAA X =24 Y =0 HITS =953
+
+Sequence AAB X =3 Y =94 HITS =849
+
+Sequence ABA X =86 Y =61 HITS =848
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+BAB --> ABC
+
+ABA --> BAB
+
+========================     52      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =21 Y =38 HITS =2118
+
+Sequence BCD X =7 Y =15 HITS =2133
+
+Sequence BAB X =57 Y =2 HITS =1254
+
+Sequence CDA X =87 Y =82 HITS =1180
+
+Sequence DAA X =33 Y =0 HITS =967
+
+Sequence AAA X =8 Y =0 HITS =1177
+
+Sequence AAB X =93 Y =19 HITS =839
+
+Sequence ABA X =74 Y =0 HITS =975
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     53      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =8 Y =15 HITS =2158
+
+Sequence BCD X =6 Y =74 HITS =2157
+
+Sequence BAB X =24 Y =16 HITS =1265
+
+Sequence CDA X =96 Y =17 HITS =1217
+
+Sequence DAA X =96 Y =60 HITS =841
+
+Sequence AAA X =70 Y =84 HITS =843
+
+Sequence AAB X =29 Y =0 HITS =1032
+
+Sequence ABA X =0 Y =0 HITS =1452
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     54      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =50 Y =18 HITS =2210
+
+Sequence BCD X =81 Y =14 HITS =2074
+
+Sequence BAB X =82 Y =46 HITS =1285
+
+Sequence CDA X =4 Y =61 HITS =1214
+
+Sequence DAA X =1 Y =0 HITS =1069
+
+Sequence AAA X =87 Y =0 HITS =897
+
+Sequence AAB X =0 Y =99 HITS =1410
+
+Sequence ABA X =80 Y =86 HITS =878
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     55      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =69 Y =75 HITS =2095
+
+Sequence BCD X =61 Y =15 HITS =2146
+
+Sequence BAB X =85 Y =0 HITS =1379
+
+Sequence CDA X =31 Y =36 HITS =1281
+
+Sequence DAA X =82 Y =51 HITS =843
+
+Sequence AAA X =9 Y =0 HITS =961
+
+Sequence AAB X =1 Y =20 HITS =841
+
+Sequence ABA X =60 Y =0 HITS =952
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     56      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =73 Y =0 HITS =2310
+
+Sequence BCD X =56 Y =0 HITS =2381
+
+Sequence BAB X =57 Y =49 HITS =1271
+
+Sequence CDA X =2 Y =54 HITS =1186
+
+Sequence DAA X =1 Y =20 HITS =869
+
+Sequence AAA X =2 Y =0 HITS =1123
+
+Sequence AAB X =0 Y =95 HITS =846
+
+Sequence ABA X =90 Y =60 HITS =870
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     57      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =89 HITS =2094
+
+Sequence BCD X =40 Y =38 HITS =2118
+
+Sequence BAB X =68 Y =53 HITS =1294
+
+Sequence CDA X =24 Y =0 HITS =1430
+
+Sequence DAA X =92 Y =20 HITS =869
+
+Sequence AAA X =69 Y =0 HITS =881
+
+Sequence AAB X =4 Y =0 HITS =895
+
+Sequence ABA X =85 Y =81 HITS =842
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+BAB --> ABC
+
+========================     58      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =68 Y =0 HITS =2204
+
+Sequence BCD X =76 Y =73 HITS =2157
+
+Sequence BAB X =47 Y =0 HITS =1294
+
+Sequence CDA X =2 Y =17 HITS =1218
+
+Sequence DAA X =0 Y =46 HITS =857
+
+Sequence AAA X =0 Y =81 HITS =854
+
+Sequence AAB X =6 Y =0 HITS =995
+
+Sequence ABA X =99 Y =0 HITS =1440
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     59      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =26 Y =0 HITS =2236
+
+Sequence BCD X =10 Y =0 HITS =2938
+
+Sequence BAB X =61 Y =17 HITS =1271
+
+Sequence CDA X =25 Y =83 HITS =1212
+
+Sequence DAA X =98 Y =13 HITS =863
+
+Sequence AAA X =87 Y =62 HITS =865
+
+Sequence AAB X =0 Y =85 HITS =849
+
+Sequence ABA X =67 Y =0 HITS =897
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     60      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =8 Y =0 HITS =2951
+
+Sequence BCD X =26 Y =0 HITS =2336
+
+Sequence BAB X =55 Y =0 HITS =1366
+
+Sequence CDA X =44 Y =57 HITS =1205
+
+Sequence DAA X =74 Y =31 HITS =828
+
+Sequence AAA X =80 Y =69 HITS =840
+
+Sequence AAB X =0 Y =79 HITS =843
+
+Sequence ABA X =91 Y =0 HITS =867
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     61      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =38 HITS =2168
+
+Sequence BCD X =20 Y =47 HITS =2157
+
+Sequence BAB X =21 Y =67 HITS =1243
+
+Sequence CDA X =55 Y =0 HITS =1380
+
+Sequence DAA X =49 Y =76 HITS =848
+
+Sequence AAA X =83 Y =85 HITS =848
+
+Sequence AAB X =84 Y =0 HITS =923
+
+Sequence ABA X =2 Y =75 HITS =882
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     62      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =51 Y =65 HITS =2142
+
+Sequence BCD X =23 Y =46 HITS =2104
+
+Sequence BAB X =1 Y =78 HITS =1263
+
+Sequence CDA X =65 Y =0 HITS =1400
+
+Sequence DAA X =0 Y =0 HITS =1280
+
+Sequence AAA X =8 Y =20 HITS =872
+
+Sequence AAB X =90 Y =0 HITS =930
+
+Sequence ABA X =2 Y =52 HITS =861
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     63      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =36 HITS =2164
+
+Sequence BCD X =54 Y =46 HITS =2118
+
+Sequence BAB X =2 Y =16 HITS =1272
+
+Sequence CDA X =99 Y =90 HITS =1215
+
+Sequence DAA X =30 Y =0 HITS =1047
+
+Sequence AAA X =65 Y =0 HITS =869
+
+Sequence AAB X =93 Y =19 HITS =841
+
+Sequence ABA X =6 Y =0 HITS =1105
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     64      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =79 HITS =2130
+
+Sequence BCD X =65 Y =15 HITS =2150
+
+Sequence BAB X =69 Y =72 HITS =1307
+
+Sequence CDA X =16 Y =0 HITS =1215
+
+Sequence DAA X =2 Y =90 HITS =848
+
+Sequence AAA X =89 Y =0 HITS =953
+
+Sequence AAB X =63 Y =0 HITS =875
+
+Sequence ABA X =83 Y =53 HITS =840
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     65      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =45 Y =0 HITS =2387
+
+Sequence BCD X =0 Y =47 HITS =2088
+
+Sequence BAB X =20 Y =0 HITS =1404
+
+Sequence CDA X =62 Y =75 HITS =1209
+
+Sequence DAA X =2 Y =76 HITS =851
+
+Sequence AAA X =0 Y =0 HITS =1404
+
+Sequence AAB X =97 Y =81 HITS =877
+
+Sequence ABA X =92 Y =0 HITS =1183
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     66      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =3 Y =36 HITS =2162
+
+Sequence BCD X =19 Y =34 HITS =2137
+
+Sequence BAB X =86 Y =16 HITS =1270
+
+Sequence CDA X =6 Y =17 HITS =1217
+
+Sequence DAA X =0 Y =82 HITS =843
+
+Sequence AAA X =89 Y =84 HITS =844
+
+Sequence AAB X =5 Y =0 HITS =882
+
+Sequence ABA X =90 Y =0 HITS =891
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+BAB --> ABC
+
+========================     67      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =61 Y =0 HITS =2084
+
+Sequence BCD X =39 Y =0 HITS =2166
+
+Sequence BAB X =18 Y =0 HITS =1340
+
+Sequence CDA X =70 Y =53 HITS =1207
+
+Sequence DAA X =1 Y =29 HITS =869
+
+Sequence AAA X =4 Y =69 HITS =841
+
+Sequence AAB X =82 Y =93 HITS =845
+
+Sequence ABA X =1 Y =0 HITS =990
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     68      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =10 Y =36 HITS =2080
+
+Sequence BCD X =42 Y =44 HITS =2108
+
+Sequence BAB X =3 Y =16 HITS =1271
+
+Sequence CDA X =91 Y =16 HITS =1227
+
+Sequence DAA X =91 Y =79 HITS =852
+
+Sequence AAA X =1 Y =57 HITS =888
+
+Sequence AAB X =93 Y =43 HITS =843
+
+Sequence ABA X =1 Y =0 HITS =1057
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     69      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =0 Y =15 HITS =2162
+
+Sequence BCD X =3 Y =0 HITS =2869
+
+Sequence BAB X =80 Y =62 HITS =1264
+
+Sequence CDA X =90 Y =41 HITS =1211
+
+Sequence DAA X =2 Y =79 HITS =848
+
+Sequence AAA X =28 Y =83 HITS =828
+
+Sequence AAB X =84 Y =0 HITS =880
+
+Sequence ABA X =57 Y =90 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+BAB --> ABC
+
+ABA --> BAB
+
+========================     70      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =39 Y =64 HITS =2118
+
+Sequence BCD X =1 Y =16 HITS =2224
+
+Sequence BAB X =20 Y =16 HITS =1269
+
+Sequence CDA X =52 Y =15 HITS =1211
+
+Sequence DAA X =86 Y =81 HITS =844
+
+Sequence AAA X =2 Y =85 HITS =833
+
+Sequence AAB X =88 Y =0 HITS =867
+
+Sequence ABA X =10 Y =0 HITS =988
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     71      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =4 Y =15 HITS =2161
+
+Sequence BCD X =1 Y =0 HITS =2903
+
+Sequence BAB X =20 Y =82 HITS =1270
+
+Sequence CDA X =59 Y =49 HITS =1227
+
+Sequence DAA X =87 Y =21 HITS =867
+
+Sequence AAA X =96 Y =94 HITS =847
+
+Sequence AAB X =92 Y =0 HITS =996
+
+Sequence ABA X =0 Y =61 HITS =852
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     72      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =16 Y =61 HITS =2158
+
+Sequence BCD X =18 Y =36 HITS =2119
+
+Sequence BAB X =0 Y =50 HITS =1272
+
+Sequence CDA X =85 Y =0 HITS =1228
+
+Sequence DAA X =91 Y =82 HITS =847
+
+Sequence AAA X =0 Y =0 HITS =1404
+
+Sequence AAB X =27 Y =0 HITS =1001
+
+Sequence ABA X =1 Y =77 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     73      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =19 Y =71 HITS =2129
+
+Sequence BCD X =5 Y =54 HITS =2142
+
+Sequence BAB X =51 Y =40 HITS =1294
+
+Sequence CDA X =55 Y =0 HITS =1350
+
+Sequence DAA X =25 Y =0 HITS =966
+
+Sequence AAA X =1 Y =0 HITS =1082
+
+Sequence AAB X =90 Y =45 HITS =849
+
+Sequence ABA X =92 Y =68 HITS =841
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     74      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =41 Y =15 HITS =2165
+
+Sequence BCD X =27 Y =41 HITS =2110
+
+Sequence BAB X =97 Y =19 HITS =1267
+
+Sequence CDA X =1 Y =20 HITS =1274
+
+Sequence DAA X =2 Y =86 HITS =844
+
+Sequence AAA X =81 Y =59 HITS =842
+
+Sequence AAB X =2 Y =0 HITS =960
+
+Sequence ABA X =97 Y =0 HITS =958
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     75      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =27 Y =65 HITS =2127
+
+Sequence BCD X =16 Y =18 HITS =2124
+
+Sequence BAB X =22 Y =0 HITS =1343
+
+Sequence CDA X =98 Y =0 HITS =1619
+
+Sequence DAA X =0 Y =47 HITS =937
+
+Sequence AAA X =6 Y =72 HITS =841
+
+Sequence AAB X =52 Y =0 HITS =945
+
+Sequence ABA X =0 Y =0 HITS =1447
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     76      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =17 HITS =2229
+
+Sequence BCD X =18 Y =16 HITS =2146
+
+Sequence BAB X =51 Y =0 HITS =1271
+
+Sequence CDA X =96 Y =86 HITS =1227
+
+Sequence DAA X =0 Y =86 HITS =848
+
+Sequence AAA X =7 Y =1 HITS =1025
+
+Sequence AAB X =81 Y =20 HITS =847
+
+Sequence ABA X =88 Y =0 HITS =945
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     77      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =3 Y =0 HITS =2914
+
+Sequence BCD X =17 Y =0 HITS =2077
+
+Sequence BAB X =53 Y =0 HITS =1298
+
+Sequence CDA X =18 Y =64 HITS =1221
+
+Sequence DAA X =95 Y =27 HITS =837
+
+Sequence AAA X =72 Y =69 HITS =840
+
+Sequence AAB X =0 Y =95 HITS =898
+
+Sequence ABA X =90 Y =0 HITS =853
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     78      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =43 Y =15 HITS =2169
+
+Sequence BCD X =70 Y =15 HITS =2158
+
+Sequence BAB X =43 Y =50 HITS =1311
+
+Sequence CDA X =18 Y =44 HITS =1222
+
+Sequence DAA X =87 Y =0 HITS =912
+
+Sequence AAA X =94 Y =85 HITS =849
+
+Sequence AAB X =8 Y =0 HITS =926
+
+Sequence ABA X =53 Y =88 HITS =847
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     79      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =16 Y =67 HITS =2161
+
+Sequence BCD X =84 Y =37 HITS =2074
+
+Sequence BAB X =3 Y =58 HITS =1272
+
+Sequence CDA X =18 Y =0 HITS =1262
+
+Sequence DAA X =83 Y =0 HITS =924
+
+Sequence AAA X =90 Y =19 HITS =841
+
+Sequence AAB X =0 Y =0 HITS =1404
+
+Sequence ABA X =1 Y =85 HITS =897
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     80      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =29 Y =0 HITS =2827
+
+Sequence BCD X =8 Y =0 HITS =2486
+
+Sequence BAB X =52 Y =0 HITS =1494
+
+Sequence CDA X =81 Y =49 HITS =1201
+
+Sequence DAA X =32 Y =81 HITS =850
+
+Sequence AAA X =0 Y =69 HITS =880
+
+Sequence AAB X =87 Y =78 HITS =843
+
+Sequence ABA X =94 Y =0 HITS =980
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     81      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =16 Y =0 HITS =2155
+
+Sequence BCD X =0 Y =15 HITS =2148
+
+Sequence BAB X =24 Y =16 HITS =1262
+
+Sequence CDA X =78 Y =70 HITS =1211
+
+Sequence DAA X =1 Y =0 HITS =1241
+
+Sequence AAA X =2 Y =76 HITS =872
+
+Sequence AAB X =30 Y =85 HITS =845
+
+Sequence ABA X =95 Y =1 HITS =896
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     82      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =82 Y =14 HITS =2127
+
+Sequence BCD X =27 Y =51 HITS =2117
+
+Sequence BAB X =58 Y =19 HITS =1272
+
+Sequence CDA X =1 Y =29 HITS =1236
+
+Sequence DAA X =91 Y =61 HITS =879
+
+Sequence AAA X =2 Y =85 HITS =840
+
+Sequence AAB X =1 Y =66 HITS =1081
+
+Sequence ABA X =97 Y =1 HITS =962
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+BAB --> ABC
+
+ABA --> BAB
+
+========================     83      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =1 Y =15 HITS =2162
+
+Sequence BCD X =6 Y =0 HITS =3237
+
+Sequence BAB X =2 Y =36 HITS =1263
+
+Sequence CDA X =55 Y =83 HITS =1227
+
+Sequence DAA X =87 Y =21 HITS =863
+
+Sequence AAA X =71 Y =0 HITS =909
+
+Sequence AAB X =86 Y =86 HITS =851
+
+Sequence ABA X =2 Y =77 HITS =866
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     84      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =88 Y =0 HITS =2242
+
+Sequence BCD X =84 Y =14 HITS =2076
+
+Sequence BAB X =21 Y =62 HITS =1260
+
+Sequence CDA X =0 Y =0 HITS =1789
+
+Sequence DAA X =48 Y =66 HITS =863
+
+Sequence AAA X =89 Y =84 HITS =831
+
+Sequence AAB X =0 Y =42 HITS =852
+
+Sequence ABA X =1 Y =78 HITS =932
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     85      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =5 Y =16 HITS =2158
+
+Sequence BCD X =2 Y =36 HITS =2149
+
+Sequence BAB X =32 Y =23 HITS =1273
+
+Sequence CDA X =91 Y =17 HITS =1228
+
+Sequence DAA X =1 Y =80 HITS =858
+
+Sequence AAA X =65 Y =72 HITS =835
+
+Sequence AAB X =86 Y =43 HITS =875
+
+Sequence ABA X =1 Y =1 HITS =963
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     86      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =16 Y =72 HITS =2081
+
+Sequence BCD X =0 Y =82 HITS =2234
+
+Sequence BAB X =48 Y =46 HITS =1264
+
+Sequence CDA X =41 Y =0 HITS =1230
+
+Sequence DAA X =92 Y =20 HITS =843
+
+Sequence AAA X =96 Y =0 HITS =942
+
+Sequence AAB X =6 Y =0 HITS =868
+
+Sequence ABA X =84 Y =59 HITS =855
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     87      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =80 Y =26 HITS =2115
+
+Sequence BCD X =74 Y =0 HITS =2104
+
+Sequence BAB X =54 Y =0 HITS =1403
+
+Sequence CDA X =3 Y =58 HITS =1204
+
+Sequence DAA X =25 Y =0 HITS =933
+
+Sequence AAA X =2 Y =0 HITS =1225
+
+Sequence AAB X =1 Y =93 HITS =878
+
+Sequence ABA X =96 Y =0 HITS =978
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     88      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =14 Y =33 HITS =2092
+
+Sequence BCD X =15 Y =15 HITS =2145
+
+Sequence BAB X =44 Y =36 HITS =1306
+
+Sequence CDA X =73 Y =0 HITS =1311
+
+Sequence DAA X =0 Y =75 HITS =842
+
+Sequence AAA X =4 Y =0 HITS =1034
+
+Sequence AAB X =27 Y =0 HITS =1002
+
+Sequence ABA X =90 Y =81 HITS =836
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     89      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =5 Y =15 HITS =2160
+
+Sequence BCD X =5 Y =33 HITS =2149
+
+Sequence BAB X =27 Y =16 HITS =1264
+
+Sequence CDA X =84 Y =42 HITS =1211
+
+Sequence DAA X =36 Y =0 HITS =1067
+
+Sequence AAA X =72 Y =0 HITS =856
+
+Sequence AAB X =96 Y =92 HITS =852
+
+Sequence ABA X =6 Y =0 HITS =1080
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     90      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =7 Y =79 HITS =2166
+
+Sequence BCD X =21 Y =17 HITS =2113
+
+Sequence BAB X =0 Y =16 HITS =1271
+
+Sequence CDA X =36 Y =72 HITS =1187
+
+Sequence DAA X =20 Y =0 HITS =838
+
+Sequence AAA X =86 Y =0 HITS =1112
+
+Sequence AAB X =98 Y =73 HITS =850
+
+Sequence ABA X =1 Y =0 HITS =1076
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     91      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =5 Y =15 HITS =2081
+
+Sequence BCD X =21 Y =0 HITS =2372
+
+Sequence BAB X =85 Y =16 HITS =1263
+
+Sequence CDA X =1 Y =39 HITS =1220
+
+Sequence DAA X =2 Y =1 HITS =1052
+
+Sequence AAA X =87 Y =0 HITS =896
+
+Sequence AAB X =5 Y =80 HITS =842
+
+Sequence ABA X =91 Y =63 HITS =840
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     92      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =82 Y =38 HITS =2158
+
+Sequence BCD X =43 Y =56 HITS =2100
+
+Sequence BAB X =88 Y =16 HITS =1270
+
+Sequence CDA X =0 Y =17 HITS =1213
+
+Sequence DAA X =5 Y =61 HITS =841
+
+Sequence AAA X =2 Y =86 HITS =842
+
+Sequence AAB X =0 Y =0 HITS =1396
+
+Sequence ABA X =80 Y =0 HITS =920
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     93      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =19 Y =0 HITS =2346
+
+Sequence BCD X =34 Y =0 HITS =2132
+
+Sequence BAB X =26 Y =16 HITS =1264
+
+Sequence CDA X =20 Y =65 HITS =1329
+
+Sequence DAA X =82 Y =0 HITS =1020
+
+Sequence AAA X =77 Y =56 HITS =895
+
+Sequence AAB X =53 Y =85 HITS =849
+
+Sequence ABA X =1 Y =0 HITS =1021
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+BAB --> ABC
+
+========================     94      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =68 HITS =2146
+
+Sequence BCD X =78 Y =59 HITS =2125
+
+Sequence BAB X =12 Y =43 HITS =1263
+
+Sequence CDA X =44 Y =0 HITS =1290
+
+Sequence DAA X =6 Y =21 HITS =868
+
+Sequence AAA X =2 Y =0 HITS =973
+
+Sequence AAB X =93 Y =0 HITS =868
+
+Sequence ABA X =3 Y =72 HITS =884
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+BAB --> ABC
+
+========================     95      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =22 Y =0 HITS =2385
+
+Sequence BCD X =3 Y =0 HITS =3268
+
+Sequence BAB X =52 Y =0 HITS =1398
+
+Sequence CDA X =48 Y =73 HITS =1221
+
+Sequence DAA X =90 Y =20 HITS =865
+
+Sequence AAA X =92 Y =67 HITS =847
+
+Sequence AAB X =0 Y =94 HITS =846
+
+Sequence ABA X =93 Y =0 HITS =1068
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     96      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =41 Y =0 HITS =2277
+
+Sequence BCD X =65 Y =10 HITS =2128
+
+Sequence BAB X =25 Y =0 HITS =1524
+
+Sequence CDA X =0 Y =83 HITS =1261
+
+Sequence DAA X =83 Y =78 HITS =850
+
+Sequence AAA X =83 Y =0 HITS =838
+
+Sequence AAB X =6 Y =52 HITS =848
+
+Sequence ABA X =1 Y =0 HITS =1214
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     97      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =77 Y =21 HITS =2159
+
+Sequence BCD X =11 Y =39 HITS =2077
+
+Sequence BAB X =1 Y =16 HITS =1264
+
+Sequence CDA X =54 Y =44 HITS =1212
+
+Sequence DAA X =23 Y =78 HITS =841
+
+Sequence AAA X =66 Y =80 HITS =860
+
+Sequence AAB X =0 Y =0 HITS =1228
+
+Sequence ABA X =4 Y =67 HITS =923
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+BAB --> ABC
+
+ABA --> BAB
+
+========================     98      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =18 Y =15 HITS =2155
+
+Sequence BCD X =69 Y =0 HITS =2602
+
+Sequence BAB X =3 Y =16 HITS =1265
+
+Sequence CDA X =57 Y =18 HITS =1259
+
+Sequence DAA X =23 Y =0 HITS =885
+
+Sequence AAA X =2 Y =0 HITS =1225
+
+Sequence AAB X =82 Y =96 HITS =879
+
+Sequence ABA X =4 Y =50 HITS =860
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     99      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =91 Y =82 HITS =2168
+
+Sequence BCD X =19 Y =70 HITS =2217
+
+Sequence BAB X =9 Y =16 HITS =1270
+
+Sequence CDA X =97 Y =0 HITS =1540
+
+Sequence DAA X =3 Y =66 HITS =849
+
+Sequence AAA X =1 Y =40 HITS =937
+
+Sequence AAB X =30 Y =0 HITS =889
+
+Sequence ABA X =9 Y =0 HITS =1086
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
+========================     100      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =800
+
+********             SOLID SEQUENCES                  ********
+
+Sequence ABC X =89 Y =0 HITS =2241
+
+Sequence BCD X =86 Y =14 HITS =2076
+
+Sequence BAB X =72 Y =41 HITS =1261
+
+Sequence CDA X =40 Y =0 HITS =1234
+
+Sequence DAA X =0 Y =78 HITS =827
+
+Sequence AAA X =41 Y =72 HITS =849
+
+Sequence AAB X =0 Y =0 HITS =1408
+
+Sequence ABA X =62 Y =90 HITS =855
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+ABC --> BCD
+
+BAB --> ABC
+
+BCD --> CDA
+
+CDA --> DAA
+
+DAA --> AAA
+
+AAA --> AAB
+
+AAB --> ABA
+
+ABA --> BAB
+
