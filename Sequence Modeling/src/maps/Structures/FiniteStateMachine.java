@@ -30,6 +30,7 @@ public class FiniteStateMachine {
 	
 	private int LINK_NUMBERS = 0;
 	private int FILE_OPTION = 0;
+	private int REPEAT= 0;
 	
 	public FiniteStateMachine(int threhold, int iteration, int fileOption)
 	{
@@ -130,12 +131,20 @@ public class FiniteStateMachine {
 				current.addIncomingLink(LINK_NUMBERS);
 				
 				LINK_NUMBERS++;
+				REPEAT = 0;
 			}
+		}
+		else if((current.getCurrentWinner().equals(winner)) && (previous.getSequence().equals(current.getSequence())))
+		{
+			REPEAT++;
+			current.addRepeat(REPEAT);
+			//System.out.println("============================================================ADD REPEAT" + REPEAT);
 		}
 		else
 		{
 			//System.out.println("SAME WINNER");
 			linkExists(current, previous); //goda beheth...should update the hits properly per each call.
+			REPEAT = 0;
 		}
 		
 		//System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
@@ -386,6 +395,7 @@ public class FiniteStateMachine {
 		Iterator<Edge> ite = LINKS.iterator();
 		Iterator<FSMNode> itr = FSM.iterator();
 		Iterator<FSMNode> itr2 = FSM.iterator();
+		Iterator<FSMNode> itr3 = FSM.iterator();
 		Queue<FSMNode> solidNode = new LinkedList<FSMNode>();
 		
 		Edge temp = null;
@@ -421,6 +431,23 @@ public class FiniteStateMachine {
 				
 			}
 		}
+		
+		System.out.println("********             REPEAT SEQUENCES                  ********");
+		while(itr3.hasNext())
+		{
+			temp1 = itr3.next();
+
+			if(temp1.isRepeat())
+			{
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				temp1.printRepeat();
+			//	solidNode.add(temp1);
+				
+			}
+		}
+		
+		
+		
 		
 		System.out.println("********         LINKS (ORIGIN -> DIRECTION)          ********");
 		while(ite.hasNext())

@@ -1,0 +1,3850 @@
+========================     1      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =23 Y =90 HITS =104
+
+Sequence 1D7D3R X =99 Y =28 HITS =193
+
+Sequence 7D3R8U X =35 Y =78 HITS =106
+
+Sequence 6U2L3U X =72 Y =60 HITS =161
+
+Sequence 2L3U5L X =73 Y =72 HITS =118
+
+Sequence 1D3U1R X =0 Y =99 HITS =269
+
+Sequence 3U1R9D X =99 Y =99 HITS =169
+
+Sequence 3R2D6L X =72 Y =83 HITS =118
+
+Sequence 5D4L1D X =90 Y =16 HITS =110
+
+Sequence 1D6L6R X =0 Y =0 HITS =214
+
+Sequence 6U1R4U X =99 Y =74 HITS =132
+
+Sequence 4L7U1R X =99 Y =0 HITS =212
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R9D
+
+========================     2      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =24 HITS =103
+
+Sequence 1D7D3R X =0 Y =24 HITS =180
+
+Sequence 7D3R8U X =72 Y =58 HITS =100
+
+Sequence 9U5L1D X =0 Y =11 HITS =115
+
+Sequence 9R8U1R X =0 Y =0 HITS =297
+
+Sequence 6U2L3U X =28 Y =38 HITS =165
+
+Sequence 2L3U5L X =38 Y =36 HITS =107
+
+Sequence 1D3U1R X =99 Y =0 HITS =276
+
+Sequence 3R2D6L X =43 Y =27 HITS =106
+
+Sequence 5L6U1R X =10 Y =0 HITS =116
+
+Sequence 4L1D6L X =76 Y =4 HITS =111
+
+Sequence 6L6R6R X =99 Y =99 HITS =141
+
+Sequence 6U1R4U X =56 Y =0 HITS =131
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     3      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =28 Y =91 HITS =100
+
+Sequence 1D7D3R X =99 Y =29 HITS =174
+
+Sequence 7D3R8U X =39 Y =83 HITS =104
+
+Sequence 9U5L1D X =88 Y =9 HITS =104
+
+Sequence 6U2L3U X =75 Y =79 HITS =161
+
+Sequence 2L3U5L X =64 Y =80 HITS =124
+
+Sequence 3R2D6L X =71 Y =68 HITS =122
+
+Sequence 3U1R6R X =99 Y =99 HITS =125
+
+Sequence 4L1D6L X =76 Y =99 HITS =116
+
+Sequence 6U1R4U X =99 Y =85 HITS =122
+
+Sequence 3U8D3R X =0 Y =99 HITS =202
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     4      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =27 Y =90 HITS =100
+
+Sequence 1D7D3R X =99 Y =71 HITS =178
+
+Sequence 7D3R8U X =60 Y =3 HITS =100
+
+Sequence 9U5L1D X =85 Y =88 HITS =116
+
+Sequence 6U2L3U X =70 Y =36 HITS =158
+
+Sequence 2L3U5L X =71 Y =18 HITS =102
+
+Sequence 1D3U1R X =0 Y =99 HITS =338
+
+Sequence 3U1R9D X =99 Y =0 HITS =250
+
+Sequence 3R2D6L X =69 Y =9 HITS =102
+
+Sequence 6U1R4U X =99 Y =24 HITS =120
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R9D
+
+========================     5      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =76 Y =13 HITS =171
+
+Sequence 6U2L3U X =37 Y =0 HITS =153
+
+Sequence 2L3U5L X =27 Y =0 HITS =113
+
+Sequence 1D3U1R X =0 Y =49 HITS =111
+
+Sequence 3R2D6L X =30 Y =9 HITS =108
+
+Sequence 5L6R5L X =0 Y =99 HITS =157
+
+Sequence 4L1D6L X =0 Y =32 HITS =102
+
+Sequence 6L6R6R X =99 Y =99 HITS =159
+
+Sequence 6U1R4U X =0 Y =1 HITS =170
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+========================     6      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =17 Y =32 HITS =104
+
+Sequence 1D7D3R X =71 Y =99 HITS =158
+
+Sequence 6U2L3U X =23 Y =93 HITS =126
+
+Sequence 2L3U5L X =31 Y =87 HITS =100
+
+Sequence 1D3U1R X =1 Y =49 HITS =101
+
+Sequence 3R2D6L X =39 Y =87 HITS =102
+
+Sequence 6U1R4U X =0 Y =99 HITS =187
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     7      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =75 HITS =110
+
+Sequence 1D7D3R X =20 Y =99 HITS =189
+
+Sequence 7D3R8U X =80 Y =63 HITS =111
+
+Sequence 9U5L1D X =10 Y =90 HITS =109
+
+Sequence 6U2L3U X =32 Y =60 HITS =161
+
+Sequence 2L3U5L X =42 Y =65 HITS =110
+
+Sequence 1D3U1R X =99 Y =99 HITS =282
+
+Sequence 3R2D6L X =52 Y =69 HITS =113
+
+Sequence 5D4L1D X =14 Y =81 HITS =104
+
+Sequence 4L1D6L X =78 Y =89 HITS =118
+
+Sequence 6L6R6R X =99 Y =0 HITS =135
+
+Sequence 6U1R4U X =68 Y =99 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+========================     8      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =0 Y =69 HITS =185
+
+Sequence 7D3R8U X =55 Y =14 HITS =120
+
+Sequence 9U5L1D X =14 Y =90 HITS =102
+
+Sequence 6U2L3U X =9 Y =20 HITS =146
+
+Sequence 2L3U5L X =12 Y =29 HITS =108
+
+Sequence 3R2D6L X =13 Y =38 HITS =106
+
+Sequence 4L1D6L X =29 Y =0 HITS =103
+
+Sequence 6U1R4U X =0 Y =0 HITS =216
+
+Sequence 4L7U1R X =0 Y =99 HITS =305
+
+Sequence 3U8D3R X =99 Y =0 HITS =196
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     9      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =69 Y =0 HITS =124
+
+Sequence 1D7D3R X =0 Y =71 HITS =189
+
+Sequence 7D3R8U X =59 Y =33 HITS =108
+
+Sequence 9U5L1D X =16 Y =91 HITS =102
+
+Sequence 6U2L3U X =0 Y =33 HITS =139
+
+Sequence 2L3U5L X =22 Y =42 HITS =111
+
+Sequence 1D3U1R X =99 Y =0 HITS =253
+
+Sequence 3R2D6L X =16 Y =32 HITS =113
+
+Sequence 6U1R4U X =6 Y =0 HITS =122
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     10      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =95 Y =26 HITS =100
+
+Sequence 1D7D3R X =30 Y =99 HITS =202
+
+Sequence 7D3R8U X =66 Y =40 HITS =112
+
+Sequence 9U5L1D X =9 Y =85 HITS =100
+
+Sequence 6U2L3U X =59 Y =79 HITS =161
+
+Sequence 2L3U5L X =78 Y =83 HITS =108
+
+Sequence 9L1D3U X =99 Y =99 HITS =163
+
+Sequence 1D3U1R X =99 Y =0 HITS =301
+
+Sequence 3R2D6L X =85 Y =74 HITS =118
+
+Sequence 6L6R6R X =0 Y =0 HITS =186
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     11      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =54 Y =0 HITS =112
+
+Sequence 1D7D3R X =69 Y =99 HITS =199
+
+Sequence 7D3R8U X =5 Y =60 HITS =100
+
+Sequence 9U5L1D X =89 Y =85 HITS =108
+
+Sequence 6U2L3U X =39 Y =70 HITS =161
+
+Sequence 2L3U5L X =28 Y =68 HITS =108
+
+Sequence 1D3U1R X =35 Y =0 HITS =106
+
+Sequence 3R2D6L X =19 Y =66 HITS =106
+
+Sequence 3U1R6R X =0 Y =99 HITS =162
+
+Sequence 5R6R6R X =0 Y =0 HITS =170
+
+Sequence 4L1D6L X =2 Y =89 HITS =108
+
+Sequence 6U1R4U X =14 Y =99 HITS =122
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     12      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =95 Y =71 HITS =103
+
+Sequence 1D7D3R X =29 Y =0 HITS =170
+
+Sequence 7D3R8U X =99 Y =52 HITS =116
+
+Sequence 9U5L1D X =9 Y =12 HITS =106
+
+Sequence 6U2L3U X =37 Y =32 HITS =152
+
+Sequence 2L3U5L X =79 Y =25 HITS =121
+
+Sequence 1D3U1R X =99 Y =99 HITS =296
+
+Sequence 3R2D6L X =67 Y =25 HITS =126
+
+Sequence 3U1R6R X =99 Y =0 HITS =164
+
+Sequence 4L1D6L X =99 Y =13 HITS =103
+
+Sequence 6U1R4U X =84 Y =0 HITS =126
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     13      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =38 Y =7 HITS =106
+
+Sequence 1D7D3R X =99 Y =72 HITS =162
+
+Sequence 7D3R8U X =45 Y =35 HITS =104
+
+Sequence 6U2L3U X =96 Y =25 HITS =140
+
+Sequence 2L3U5L X =87 Y =25 HITS =105
+
+Sequence 1D3U1R X =16 Y =0 HITS =119
+
+Sequence 3R2D6L X =84 Y =34 HITS =108
+
+Sequence 6U1R4U X =99 Y =0 HITS =217
+
+Sequence 4L7U1R X =99 Y =99 HITS =318
+
+Sequence 5R9U5R X =0 Y =0 HITS =151
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     14      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =70 Y =0 HITS =182
+
+Sequence 7D3R8U X =1 Y =51 HITS =104
+
+Sequence 6U2L3U X =50 Y =31 HITS =161
+
+Sequence 2L3U5L X =30 Y =22 HITS =101
+
+Sequence 1D3U1R X =0 Y =99 HITS =315
+
+Sequence 3R2D6L X =33 Y =13 HITS =108
+
+Sequence 6L1D3U X =0 Y =0 HITS =143
+
+Sequence 4L1D6L X =8 Y =17 HITS =105
+
+Sequence 6U1R4U X =1 Y =8 HITS =104
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+6L1D3U --> 1D3U1R
+
+========================     15      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =26 Y =99 HITS =175
+
+Sequence 7D3R8U X =74 Y =36 HITS =108
+
+Sequence 9U5L1D X =9 Y =84 HITS =102
+
+Sequence 6U2L3U X =58 Y =69 HITS =161
+
+Sequence 2L3U5L X =71 Y =69 HITS =121
+
+Sequence 1D3U1R X =99 Y =0 HITS =302
+
+Sequence 3R2D6L X =82 Y =69 HITS =121
+
+Sequence 3U1R6R X =99 Y =99 HITS =181
+
+Sequence 4L1D6L X =91 Y =88 HITS =101
+
+Sequence 6U1R4U X =85 Y =99 HITS =124
+
+Sequence 4L7U1R X =0 Y =99 HITS =247
+
+Sequence 2D6R6R X =0 Y =0 HITS =184
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     16      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =95 Y =24 HITS =102
+
+Sequence 1D7D3R X =31 Y =99 HITS =201
+
+Sequence 9U5L1D X =6 Y =79 HITS =102
+
+Sequence 6U2L3U X =61 Y =73 HITS =152
+
+Sequence 2L3U5L X =82 Y =72 HITS =107
+
+Sequence 1D3U1R X =99 Y =0 HITS =281
+
+Sequence 3R2D6L X =71 Y =76 HITS =110
+
+Sequence 3U1R6R X =99 Y =99 HITS =151
+
+Sequence 5D4L1D X =11 Y =99 HITS =107
+
+Sequence 4L1D6L X =99 Y =81 HITS =108
+
+Sequence 1D6L6R X =0 Y =0 HITS =180
+
+Sequence 6U1R4U X =87 Y =87 HITS =117
+
+Sequence 4L7U1R X =0 Y =99 HITS =240
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+5D4L1D --> 4L1D6L
+
+4L1D6L --> 1D6L6R
+
+========================     17      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =87 HITS =101
+
+Sequence 1D7D3R X =21 Y =12 HITS =168
+
+Sequence 7D3R8U X =87 Y =53 HITS =102
+
+Sequence 9U5L1D X =10 Y =12 HITS =113
+
+Sequence 6U2L3U X =51 Y =0 HITS =160
+
+Sequence 2L3U5L X =79 Y =33 HITS =110
+
+Sequence 3R2D6L X =68 Y =24 HITS =114
+
+Sequence 3U1R6R X =99 Y =0 HITS =120
+
+Sequence 4L1D6L X =90 Y =24 HITS =105
+
+Sequence 6U1R4U X =99 Y =14 HITS =126
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     18      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =45 Y =9 HITS =106
+
+Sequence 1D7D3R X =99 Y =71 HITS =162
+
+Sequence 9U5L1D X =87 Y =89 HITS =110
+
+Sequence 6U2L3U X =75 Y =21 HITS =152
+
+Sequence 2L3U5L X =66 Y =26 HITS =111
+
+Sequence 3R2D6L X =76 Y =35 HITS =118
+
+Sequence 4L1D6L X =70 Y =10 HITS =111
+
+Sequence 6U1R4U X =99 Y =0 HITS =234
+
+Sequence 4L7U1R X =99 Y =99 HITS =308
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     19      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =25 Y =8 HITS =100
+
+Sequence 1D7D3R X =99 Y =74 HITS =166
+
+Sequence 7D3R8U X =47 Y =22 HITS =106
+
+Sequence 9U5L1D X =77 Y =94 HITS =100
+
+Sequence 6U2L3U X =72 Y =41 HITS =161
+
+Sequence 2L3U5L X =70 Y =17 HITS =115
+
+Sequence 1D3U1R X =0 Y =0 HITS =310
+
+Sequence 3R2D6L X =72 Y =28 HITS =115
+
+Sequence 3U1R6R X =99 Y =0 HITS =200
+
+Sequence 1D6L6R X =0 Y =99 HITS =204
+
+Sequence 6U1R4U X =98 Y =13 HITS =106
+
+Sequence 4L7U1R X =99 Y =99 HITS =232
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     20      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =31 Y =99 HITS =199
+
+Sequence 7D3R8U X =67 Y =32 HITS =101
+
+Sequence 6U2L3U X =59 Y =72 HITS =152
+
+Sequence 9L1D3U X =99 Y =99 HITS =117
+
+Sequence 1D3U1R X =99 Y =24 HITS =114
+
+Sequence 3R2D6L X =81 Y =72 HITS =108
+
+Sequence 6U1R4U X =99 Y =87 HITS =129
+
+Sequence 4L7U1R X =0 Y =99 HITS =289
+
+Sequence 2D6R6R X =0 Y =0 HITS =177
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+9L1D3U --> 1D3U1R
+
+========================     21      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =9 Y =56 HITS =104
+
+Sequence 1D7D3R X =71 Y =0 HITS =181
+
+Sequence 7D3R8U X =34 Y =53 HITS =102
+
+Sequence 6U2L3U X =57 Y =26 HITS =149
+
+Sequence 2L3U5L X =45 Y =24 HITS =120
+
+Sequence 1D3U1R X =0 Y =75 HITS =117
+
+Sequence 3R2D6L X =43 Y =15 HITS =105
+
+Sequence 6R6R5R X =99 Y =99 HITS =182
+
+Sequence 6U1R4U X =0 Y =3 HITS =138
+
+Sequence 3U8D3R X =0 Y =99 HITS =155
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     22      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =96 Y =25 HITS =106
+
+Sequence 1D7D3R X =31 Y =99 HITS =198
+
+Sequence 9U5L1D X =10 Y =84 HITS =118
+
+Sequence 6U2L3U X =66 Y =75 HITS =161
+
+Sequence 2L3U5L X =77 Y =74 HITS =117
+
+Sequence 9L1D3U X =99 Y =99 HITS =127
+
+Sequence 1D3U1R X =99 Y =0 HITS =306
+
+Sequence 3R2D6L X =73 Y =86 HITS =120
+
+Sequence 1D6L6R X =0 Y =0 HITS =189
+
+Sequence 6U1R4U X =99 Y =87 HITS =128
+
+Sequence 4L7U1R X =0 Y =99 HITS =223
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     23      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =75 Y =10 HITS =106
+
+Sequence 1D7D3R X =0 Y =70 HITS =205
+
+Sequence 6U2L3U X =29 Y =52 HITS =155
+
+Sequence 2L3U5L X =32 Y =14 HITS =118
+
+Sequence 3R2D6L X =28 Y =26 HITS =118
+
+Sequence 3U1R6R X =0 Y =0 HITS =138
+
+Sequence 4L1D6L X =19 Y =0 HITS =104
+
+Sequence 6L6R6R X =99 Y =99 HITS =168
+
+Sequence 6U1R4U X =13 Y =13 HITS =116
+
+Sequence 4L7U1R X =0 Y =99 HITS =321
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     24      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =71 Y =0 HITS =161
+
+Sequence 7D3R8U X =13 Y =53 HITS =106
+
+Sequence 9U5L1D X =89 Y =13 HITS =112
+
+Sequence 6U2L3U X =31 Y =0 HITS =205
+
+Sequence 2L3U5L X =25 Y =26 HITS =112
+
+Sequence 1D3U1R X =0 Y =51 HITS =100
+
+Sequence 3R2D6L X =36 Y =22 HITS =120
+
+Sequence 4L1D6L X =12 Y =31 HITS =109
+
+Sequence 6U1R4U X =0 Y =0 HITS =222
+
+Sequence 3U8D3R X =0 Y =99 HITS =172
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     25      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =75 Y =99 HITS =210
+
+Sequence 7D3R8U X =0 Y =38 HITS =106
+
+Sequence 9U5L1D X =99 Y =68 HITS =107
+
+Sequence 6U2L3U X =48 Y =80 HITS =163
+
+Sequence 2L3U5L X =37 Y =80 HITS =109
+
+Sequence 1D3U1R X =0 Y =0 HITS =293
+
+Sequence 3R2D6L X =27 Y =75 HITS =110
+
+Sequence 3U1R6R X =0 Y =99 HITS =135
+
+Sequence 5D4L1D X =88 Y =99 HITS =115
+
+Sequence 1D6L6R X =99 Y =0 HITS =198
+
+Sequence 6U1R4U X =14 Y =99 HITS =126
+
+Sequence 2D4L1D X =99 Y =99 HITS =239
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     26      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =31 HITS =128
+
+Sequence 1D7D3R X =31 Y =99 HITS =198
+
+Sequence 7D3R8U X =87 Y =40 HITS =100
+
+Sequence 6U2L3U X =73 Y =95 HITS =152
+
+Sequence 2L3U5L X =78 Y =86 HITS =106
+
+Sequence 1D3U1R X =99 Y =0 HITS =234
+
+Sequence 3R2D6L X =68 Y =77 HITS =108
+
+Sequence 6U1R4U X =99 Y =99 HITS =216
+
+Sequence 4L7U1R X =0 Y =99 HITS =302
+
+Sequence 2D6R6R X =0 Y =0 HITS =183
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     27      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =74 Y =1 HITS =112
+
+Sequence 1D7D3R X =85 Y =83 HITS =177
+
+Sequence 6U2L3U X =54 Y =70 HITS =164
+
+Sequence 2L3U5L X =58 Y =58 HITS =112
+
+Sequence 1D3U1R X =99 Y =0 HITS =289
+
+Sequence 3R2D6L X =68 Y =58 HITS =111
+
+Sequence 4L1D6L X =91 Y =24 HITS =108
+
+Sequence 6L6R6R X =0 Y =0 HITS =122
+
+Sequence 6U1R4U X =99 Y =44 HITS =127
+
+Sequence 4L7U1R X =99 Y =99 HITS =359
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     28      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =90 Y =26 HITS =102
+
+Sequence 1D7D3R X =25 Y =89 HITS =159
+
+Sequence 9U5L1D X =1 Y =77 HITS =106
+
+Sequence 6U2L3U X =52 Y =80 HITS =166
+
+Sequence 2L3U5L X =62 Y =80 HITS =109
+
+Sequence 1D3U1R X =99 Y =0 HITS =311
+
+Sequence 3R2D6L X =72 Y =80 HITS =111
+
+Sequence 1D6L6R X =0 Y =0 HITS =208
+
+Sequence 6U1R4U X =99 Y =99 HITS =246
+
+Sequence 4L7U1R X =0 Y =99 HITS =292
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     29      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =2 Y =25 HITS =112
+
+Sequence 1D7D3R X =70 Y =99 HITS =188
+
+Sequence 9U5L1D X =94 Y =78 HITS =102
+
+Sequence 6U2L3U X =39 Y =72 HITS =152
+
+Sequence 2L3U5L X =24 Y =76 HITS =117
+
+Sequence 1D3U1R X =0 Y =0 HITS =311
+
+Sequence 3U1R9D X =0 Y =99 HITS =188
+
+Sequence 3R2D6L X =14 Y =70 HITS =110
+
+Sequence 4L1D6L X =12 Y =90 HITS =102
+
+Sequence 1D6L6R X =99 Y =0 HITS =238
+
+Sequence 6U1R4U X =25 Y =99 HITS =138
+
+Sequence 4L7U1R X =99 Y =99 HITS =253
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R9D
+
+4L1D6L --> 1D6L6R
+
+========================     30      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =4 Y =25 HITS =104
+
+Sequence 1D7D3R X =70 Y =98 HITS =183
+
+Sequence 9U5L1D X =92 Y =76 HITS =102
+
+Sequence 6U2L3U X =43 Y =72 HITS =182
+
+Sequence 2L3U5L X =23 Y =75 HITS =108
+
+Sequence 9L1D3U X =0 Y =99 HITS =125
+
+Sequence 1D3U1R X =0 Y =0 HITS =300
+
+Sequence 3R2D6L X =14 Y =73 HITS =108
+
+Sequence 5D4L1D X =81 Y =90 HITS =104
+
+Sequence 1D6L6R X =99 Y =0 HITS =210
+
+Sequence 6U1R4U X =0 Y =89 HITS =117
+
+Sequence 4L7U1R X =99 Y =99 HITS =256
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     31      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =9 Y =43 HITS =100
+
+Sequence 1D7D3R X =72 Y =99 HITS =159
+
+Sequence 7D3R8U X =38 Y =46 HITS =105
+
+Sequence 6U2L3U X =26 Y =95 HITS =125
+
+Sequence 2L3U5L X =31 Y =87 HITS =101
+
+Sequence 1D3U1R X =0 Y =20 HITS =118
+
+Sequence 3R2D6L X =39 Y =85 HITS =104
+
+Sequence 4L1D6L X =0 Y =67 HITS =101
+
+Sequence 6U1R4U X =0 Y =99 HITS =184
+
+Sequence 4L7U1R X =99 Y =99 HITS =284
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     32      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =73 Y =0 HITS =102
+
+Sequence 1D7D3R X =85 Y =80 HITS =177
+
+Sequence 9U5L1D X =88 Y =90 HITS =106
+
+Sequence 6U2L3U X =70 Y =61 HITS =156
+
+Sequence 2L3U5L X =71 Y =24 HITS =112
+
+Sequence 3R2D6L X =68 Y =34 HITS =110
+
+Sequence 6L6R6R X =0 Y =0 HITS =159
+
+Sequence 6U1R4U X =99 Y =44 HITS =125
+
+Sequence 4L7U1R X =99 Y =99 HITS =273
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     33      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =33 Y =99 HITS =116
+
+Sequence 1D7D3R X =99 Y =31 HITS =187
+
+Sequence 6U2L3U X =76 Y =59 HITS =138
+
+Sequence 2L3U5L X =66 Y =81 HITS =108
+
+Sequence 3R2D6L X =63 Y =70 HITS =114
+
+Sequence 3U1R6R X =99 Y =99 HITS =136
+
+Sequence 4L1D6L X =78 Y =86 HITS =117
+
+Sequence 6U1R4U X =99 Y =81 HITS =114
+
+Sequence 4L7U1R X =99 Y =0 HITS =336
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     34      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =32 Y =99 HITS =125
+
+Sequence 1D7D3R X =99 Y =26 HITS =162
+
+Sequence 6U2L3U X =98 Y =75 HITS =151
+
+Sequence 2L3U5L X =75 Y =75 HITS =106
+
+Sequence 1D3U1R X =0 Y =99 HITS =301
+
+Sequence 3R2D6L X =83 Y =66 HITS =108
+
+Sequence 6R6R5R X =0 Y =0 HITS =194
+
+Sequence 4L1D6L X =69 Y =99 HITS =117
+
+Sequence 6U1R4U X =99 Y =99 HITS =187
+
+Sequence 4L7U1R X =99 Y =0 HITS =329
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     35      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =73 HITS =169
+
+Sequence 7D3R8U X =41 Y =38 HITS =106
+
+Sequence 6U2L3U X =89 Y =19 HITS =146
+
+Sequence 2L3U5L X =87 Y =28 HITS =106
+
+Sequence 1D3U1R X =11 Y =0 HITS =102
+
+Sequence 3R2D6L X =86 Y =38 HITS =108
+
+Sequence 6U1R4U X =99 Y =0 HITS =199
+
+Sequence 4L7U1R X =99 Y =99 HITS =311
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     36      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =96 Y =26 HITS =110
+
+Sequence 1D7D3R X =26 Y =88 HITS =162
+
+Sequence 7D3R8U X =87 Y =36 HITS =100
+
+Sequence 9U5L1D X =4 Y =79 HITS =102
+
+Sequence 6U2L3U X =59 Y =99 HITS =199
+
+Sequence 2L3U5L X =73 Y =85 HITS =118
+
+Sequence 1D3U1R X =99 Y =0 HITS =312
+
+Sequence 3R2D6L X =64 Y =78 HITS =110
+
+Sequence 5D4L1D X =11 Y =99 HITS =105
+
+Sequence 4L1D6L X =99 Y =66 HITS =105
+
+Sequence 1D6L6R X =0 Y =0 HITS =186
+
+Sequence 6U1R4U X =99 Y =99 HITS =202
+
+Sequence 4L7U1R X =0 Y =99 HITS =254
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+4L1D6L --> 1D6L6R
+
+========================     37      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =3 Y =74 HITS =110
+
+Sequence 1D7D3R X =77 Y =0 HITS =193
+
+Sequence 7D3R8U X =23 Y =58 HITS =107
+
+Sequence 6U2L3U X =46 Y =21 HITS =173
+
+Sequence 2L3U5L X =32 Y =11 HITS =116
+
+Sequence 9L1D3U X =0 Y =1 HITS =113
+
+Sequence 1D3U1R X =0 Y =99 HITS =265
+
+Sequence 3R2D6L X =32 Y =0 HITS =123
+
+Sequence 5D4L1D X =89 Y =0 HITS =110
+
+Sequence 1D6L6R X =99 Y =99 HITS =234
+
+Sequence 6U1R4U X =0 Y =11 HITS =113
+
+Sequence 2D4L1D X =99 Y =0 HITS =240
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     38      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =80 Y =1 HITS =102
+
+Sequence 1D7D3R X =0 Y =70 HITS =197
+
+Sequence 7D3R8U X =46 Y =14 HITS =112
+
+Sequence 9U5L1D X =11 Y =90 HITS =102
+
+Sequence 6U2L3U X =22 Y =43 HITS =167
+
+Sequence 2L3U5L X =27 Y =27 HITS =115
+
+Sequence 3R2D6L X =33 Y =38 HITS =130
+
+Sequence 3U1R6R X =0 Y =0 HITS =135
+
+Sequence 4L1D6L X =22 Y =1 HITS =115
+
+Sequence 6U1R4U X =16 Y =12 HITS =102
+
+Sequence 3U8D3R X =99 Y =0 HITS =186
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     39      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =30 Y =99 HITS =198
+
+Sequence 7D3R8U X =85 Y =48 HITS =100
+
+Sequence 6U2L3U X =53 Y =71 HITS =164
+
+Sequence 2L3U5L X =81 Y =68 HITS =119
+
+Sequence 1D3U1R X =99 Y =29 HITS =129
+
+Sequence 3R2D6L X =69 Y =69 HITS =118
+
+Sequence 3U1R6R X =99 Y =99 HITS =144
+
+Sequence 4L1D6L X =99 Y =85 HITS =111
+
+Sequence 6U1R4U X =86 Y =80 HITS =108
+
+Sequence 4L7U1R X =0 Y =99 HITS =327
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     40      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =10 Y =41 HITS =106
+
+Sequence 1D7D3R X =70 Y =99 HITS =158
+
+Sequence 9U5L1D X =90 Y =86 HITS =100
+
+Sequence 6U2L3U X =28 Y =99 HITS =172
+
+Sequence 2L3U5L X =23 Y =73 HITS =114
+
+Sequence 3R2D6L X =34 Y =78 HITS =118
+
+Sequence 4L1D6L X =0 Y =68 HITS =121
+
+Sequence 6U1R4U X =0 Y =98 HITS =170
+
+Sequence 5R9U5R X =0 Y =0 HITS =153
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     41      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =37 HITS =171
+
+Sequence 9U5L1D X =90 Y =71 HITS =111
+
+Sequence 6U2L3U X =65 Y =33 HITS =161
+
+Sequence 2L3U5L X =50 Y =18 HITS =108
+
+Sequence 3R2D6L X =59 Y =19 HITS =110
+
+Sequence 3U1R6R X =99 Y =0 HITS =114
+
+Sequence 5D4L1D X =90 Y =49 HITS =104
+
+Sequence 4L1D6L X =64 Y =9 HITS =104
+
+Sequence 6L6R6R X =99 Y =99 HITS =154
+
+Sequence 6U1R4U X =82 Y =0 HITS =130
+
+Sequence 5R9U5R X =0 Y =0 HITS =151
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+========================     42      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =67 HITS =130
+
+Sequence 1D7D3R X =38 Y =0 HITS =180
+
+Sequence 7D3R8U X =83 Y =55 HITS =102
+
+Sequence 6U2L3U X =77 Y =1 HITS =149
+
+Sequence 2L3U5L X =73 Y =10 HITS =104
+
+Sequence 1D3U1R X =99 Y =99 HITS =269
+
+Sequence 3R2D6L X =64 Y =16 HITS =108
+
+Sequence 6L6R6R X =0 Y =99 HITS =177
+
+Sequence 6U1R4U X =99 Y =0 HITS =205
+
+Sequence 4L7U1R X =0 Y =0 HITS =332
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     43      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =95 Y =26 HITS =108
+
+Sequence 1D7D3R X =29 Y =99 HITS =195
+
+Sequence 6U2L3U X =57 Y =73 HITS =164
+
+Sequence 2L3U5L X =70 Y =73 HITS =113
+
+Sequence 1D3U1R X =99 Y =0 HITS =311
+
+Sequence 3R2D6L X =81 Y =71 HITS =122
+
+Sequence 3U1R6R X =99 Y =99 HITS =178
+
+Sequence 4L1D6L X =99 Y =89 HITS =100
+
+Sequence 1D6L6R X =0 Y =0 HITS =203
+
+Sequence 6U1R4U X =84 Y =99 HITS =109
+
+Sequence 4L7U1R X =0 Y =99 HITS =261
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+4L1D6L --> 1D6L6R
+
+========================     44      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =71 HITS =106
+
+Sequence 1D7D3R X =16 Y =85 HITS =177
+
+Sequence 6U2L3U X =43 Y =66 HITS =155
+
+Sequence 2L3U5L X =64 Y =70 HITS =116
+
+Sequence 3R2D6L X =54 Y =68 HITS =120
+
+Sequence 4L1D6L X =78 Y =89 HITS =107
+
+Sequence 6L6R6R X =99 Y =0 HITS =130
+
+Sequence 6U1R4U X =56 Y =99 HITS =117
+
+Sequence 4L7U1R X =0 Y =99 HITS =323
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     45      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =30 Y =0 HITS =190
+
+Sequence 7D3R8U X =85 Y =46 HITS =110
+
+Sequence 6U2L3U X =63 Y =28 HITS =161
+
+Sequence 2L3U5L X =75 Y =26 HITS =112
+
+Sequence 3R2D6L X =73 Y =15 HITS =120
+
+Sequence 6L1D3U X =99 Y =0 HITS =146
+
+Sequence 6U1R4U X =99 Y =10 HITS =116
+
+Sequence 4L7U1R X =0 Y =0 HITS =272
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     46      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =30 Y =99 HITS =185
+
+Sequence 7D3R8U X =85 Y =44 HITS =120
+
+Sequence 9U5L1D X =9 Y =85 HITS =102
+
+Sequence 6U2L3U X =79 Y =90 HITS =146
+
+Sequence 2L3U5L X =70 Y =87 HITS =108
+
+Sequence 3R2D6L X =61 Y =86 HITS =106
+
+Sequence 4L1D6L X =99 Y =70 HITS =103
+
+Sequence 6U1R4U X =99 Y =99 HITS =211
+
+Sequence 4L7U1R X =0 Y =99 HITS =303
+
+Sequence 3U8D3R X =99 Y =0 HITS =197
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     47      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =16 Y =29 HITS =108
+
+Sequence 1D7D3R X =68 Y =99 HITS =201
+
+Sequence 7D3R8U X =35 Y =41 HITS =102
+
+Sequence 6U2L3U X =26 Y =95 HITS =164
+
+Sequence 2L3U5L X =26 Y =85 HITS =107
+
+Sequence 3R2D6L X =32 Y =75 HITS =108
+
+Sequence 4L1D6L X =0 Y =63 HITS =114
+
+Sequence 6U1R4U X =0 Y =99 HITS =223
+
+Sequence 4L7U1R X =99 Y =99 HITS =298
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     48      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =0 Y =30 HITS =185
+
+Sequence 7D3R8U X =55 Y =85 HITS =120
+
+Sequence 9U5L1D X =14 Y =9 HITS =102
+
+Sequence 6U2L3U X =9 Y =79 HITS =146
+
+Sequence 2L3U5L X =12 Y =70 HITS =108
+
+Sequence 3R2D6L X =13 Y =61 HITS =106
+
+Sequence 4L1D6L X =29 Y =99 HITS =103
+
+Sequence 6U1R4U X =0 Y =99 HITS =214
+
+Sequence 4L7U1R X =0 Y =0 HITS =303
+
+Sequence 3U8D3R X =99 Y =99 HITS =195
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     49      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =65 HITS =211
+
+Sequence 7D3R8U X =51 Y =15 HITS =100
+
+Sequence 6U2L3U X =79 Y =35 HITS =167
+
+Sequence 2L3U5L X =69 Y =27 HITS =106
+
+Sequence 1D3U1R X =27 Y =0 HITS =118
+
+Sequence 3R2D6L X =69 Y =36 HITS =108
+
+Sequence 3U1R6R X =99 Y =0 HITS =117
+
+Sequence 4L1D6L X =71 Y =9 HITS =106
+
+Sequence 6U1R4U X =80 Y =12 HITS =104
+
+Sequence 4L7U1R X =99 Y =99 HITS =361
+
+Sequence 3U8D3R X =0 Y =0 HITS =171
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     50      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =1 Y =99 HITS =133
+
+Sequence 1D7D3R X =99 Y =30 HITS =194
+
+Sequence 7D3R8U X =32 Y =75 HITS =114
+
+Sequence 9U5L1D X =86 Y =10 HITS =110
+
+Sequence 6U2L3U X =99 Y =62 HITS =177
+
+Sequence 2L3U5L X =67 Y =83 HITS =109
+
+Sequence 3R2D6L X =71 Y =73 HITS =111
+
+Sequence 6U1R4U X =99 Y =99 HITS =218
+
+Sequence 4L7U1R X =99 Y =0 HITS =278
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     51      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =31 Y =99 HITS =198
+
+Sequence 6U2L3U X =54 Y =72 HITS =161
+
+Sequence 2L3U5L X =78 Y =66 HITS =112
+
+Sequence 1D3U1R X =99 Y =34 HITS =116
+
+Sequence 3R2D6L X =66 Y =67 HITS =120
+
+Sequence 6L1D3U X =99 Y =99 HITS =113
+
+Sequence 4L1D6L X =90 Y =79 HITS =107
+
+Sequence 6U1R4U X =99 Y =89 HITS =108
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+6L1D3U --> 1D3U1R
+
+========================     52      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =88 Y =23 HITS =114
+
+Sequence 1D7D3R X =13 Y =14 HITS =166
+
+Sequence 6U2L3U X =39 Y =29 HITS =155
+
+Sequence 2L3U5L X =60 Y =24 HITS =107
+
+Sequence 1D3U1R X =99 Y =0 HITS =274
+
+Sequence 3R2D6L X =51 Y =28 HITS =108
+
+Sequence 6L6R6R X =99 Y =99 HITS =129
+
+Sequence 6U1R4U X =55 Y =0 HITS =120
+
+Sequence 4L7U1R X =0 Y =0 HITS =312
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     53      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =96 Y =30 HITS =112
+
+Sequence 1D7D3R X =30 Y =99 HITS =180
+
+Sequence 7D3R8U X =67 Y =42 HITS =103
+
+Sequence 9U5L1D X =8 Y =85 HITS =100
+
+Sequence 6U2L3U X =45 Y =75 HITS =161
+
+Sequence 2L3U5L X =61 Y =75 HITS =124
+
+Sequence 1D3U1R X =99 Y =0 HITS =302
+
+Sequence 3R2D6L X =68 Y =86 HITS =106
+
+Sequence 6R6R5R X =0 Y =0 HITS =202
+
+Sequence 6U1R4U X =99 Y =99 HITS =205
+
+Sequence 4L7U1R X =0 Y =99 HITS =336
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     54      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =4 Y =28 HITS =103
+
+Sequence 1D7D3R X =70 Y =99 HITS =170
+
+Sequence 7D3R8U X =0 Y =47 HITS =114
+
+Sequence 9U5L1D X =90 Y =87 HITS =106
+
+Sequence 6U2L3U X =62 Y =67 HITS =152
+
+Sequence 2L3U5L X =20 Y =74 HITS =121
+
+Sequence 1D3U1R X =0 Y =0 HITS =314
+
+Sequence 3R2D6L X =32 Y =74 HITS =126
+
+Sequence 3U1R6R X =0 Y =99 HITS =170
+
+Sequence 4L1D6L X =0 Y =86 HITS =103
+
+Sequence 6U1R4U X =15 Y =99 HITS =126
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     55      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =98 Y =99 HITS =115
+
+Sequence 1D7D3R X =84 Y =16 HITS =177
+
+Sequence 6U2L3U X =77 Y =53 HITS =143
+
+Sequence 2L3U5L X =70 Y =69 HITS =118
+
+Sequence 1D3U1R X =73 Y =99 HITS =145
+
+Sequence 3R2D6L X =65 Y =58 HITS =120
+
+Sequence 4L1D6L X =81 Y =78 HITS =105
+
+Sequence 6L6R6R X =0 Y =99 HITS =149
+
+Sequence 6U1R4U X =99 Y =58 HITS =136
+
+Sequence 4L7U1R X =99 Y =0 HITS =290
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     56      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =94 Y =20 HITS =102
+
+Sequence 1D7D3R X =28 Y =99 HITS =187
+
+Sequence 7D3R8U X =77 Y =40 HITS =102
+
+Sequence 9U5L1D X =5 Y =79 HITS =102
+
+Sequence 6U2L3U X =55 Y =80 HITS =155
+
+Sequence 2L3U5L X =77 Y =59 HITS =107
+
+Sequence 1D3U1R X =99 Y =0 HITS =322
+
+Sequence 3R2D6L X =71 Y =68 HITS =107
+
+Sequence 3U1R6R X =99 Y =99 HITS =165
+
+Sequence 4L1D6L X =92 Y =89 HITS =101
+
+Sequence 1D6L6R X =0 Y =0 HITS =202
+
+Sequence 6U1R4U X =83 Y =99 HITS =129
+
+Sequence 4L7U1R X =0 Y =99 HITS =267
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+4L1D6L --> 1D6L6R
+
+========================     57      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =70 Y =0 HITS =192
+
+Sequence 7D3R8U X =0 Y =38 HITS =101
+
+Sequence 9U5L1D X =94 Y =24 HITS =108
+
+Sequence 6U2L3U X =44 Y =27 HITS =164
+
+Sequence 2L3U5L X =32 Y =29 HITS =108
+
+Sequence 1D3U1R X =99 Y =99 HITS =319
+
+Sequence 3R2D6L X =22 Y =32 HITS =108
+
+Sequence 3U1R6R X =0 Y =0 HITS =186
+
+Sequence 5D4L1D X =83 Y =9 HITS =102
+
+Sequence 4L1D6L X =4 Y =9 HITS =101
+
+Sequence 6U1R4U X =14 Y =0 HITS =107
+
+Sequence 4L7U1R X =99 Y =0 HITS =225
+
+Sequence 2D6R6R X =0 Y =99 HITS =146
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+5D4L1D --> 4L1D6L
+
+========================     58      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =70 HITS =121
+
+Sequence 1D7D3R X =27 Y =0 HITS =158
+
+Sequence 6U2L3U X =73 Y =0 HITS =205
+
+Sequence 2L3U5L X =75 Y =26 HITS =112
+
+Sequence 1D3U1R X =99 Y =99 HITS =310
+
+Sequence 3R2D6L X =64 Y =20 HITS =118
+
+Sequence 4L1D6L X =99 Y =31 HITS =114
+
+Sequence 6U1R4U X =99 Y =0 HITS =240
+
+Sequence 4L7U1R X =0 Y =0 HITS =308
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     59      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =24 Y =0 HITS =108
+
+Sequence 1D7D3R X =15 Y =83 HITS =195
+
+Sequence 6U2L3U X =30 Y =58 HITS =158
+
+Sequence 2L3U5L X =27 Y =36 HITS =116
+
+Sequence 1D3U1R X =0 Y =0 HITS =282
+
+Sequence 3R2D6L X =30 Y =47 HITS =114
+
+Sequence 6L6R6R X =99 Y =0 HITS =176
+
+Sequence 6U1R4U X =0 Y =42 HITS =110
+
+Sequence 4L7U1R X =0 Y =99 HITS =314
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     60      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =9 Y =43 HITS =100
+
+Sequence 1D7D3R X =71 Y =99 HITS =164
+
+Sequence 7D3R8U X =18 Y =52 HITS =102
+
+Sequence 9U5L1D X =90 Y =87 HITS =106
+
+Sequence 6U2L3U X =27 Y =99 HITS =203
+
+Sequence 2L3U5L X =23 Y =70 HITS =111
+
+Sequence 1D3U1R X =0 Y =25 HITS =118
+
+Sequence 3R2D6L X =33 Y =80 HITS =128
+
+Sequence 4L1D6L X =2 Y =72 HITS =106
+
+Sequence 6U1R4U X =0 Y =98 HITS =149
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     61      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =71 HITS =167
+
+Sequence 7D3R8U X =46 Y =23 HITS =106
+
+Sequence 6U2L3U X =90 Y =25 HITS =146
+
+Sequence 2L3U5L X =79 Y =30 HITS =106
+
+Sequence 1D3U1R X =55 Y =0 HITS =104
+
+Sequence 3R2D6L X =88 Y =37 HITS =108
+
+Sequence 4L1D6L X =71 Y =11 HITS =107
+
+Sequence 6U1R4U X =99 Y =0 HITS =219
+
+Sequence 4L7U1R X =99 Y =99 HITS =315
+
+Sequence 3U8D3R X =0 Y =0 HITS =191
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     62      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =69 Y =0 HITS =185
+
+Sequence 7D3R8U X =14 Y =55 HITS =120
+
+Sequence 9U5L1D X =90 Y =14 HITS =102
+
+Sequence 6U2L3U X =20 Y =9 HITS =146
+
+Sequence 2L3U5L X =29 Y =12 HITS =108
+
+Sequence 3R2D6L X =38 Y =13 HITS =106
+
+Sequence 4L1D6L X =0 Y =29 HITS =103
+
+Sequence 6U1R4U X =0 Y =0 HITS =210
+
+Sequence 4L7U1R X =99 Y =0 HITS =304
+
+Sequence 3U8D3R X =0 Y =99 HITS =198
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     63      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =26 Y =95 HITS =106
+
+Sequence 1D7D3R X =99 Y =23 HITS =150
+
+Sequence 6U2L3U X =95 Y =71 HITS =158
+
+Sequence 2L3U5L X =85 Y =75 HITS =116
+
+Sequence 1D3U1R X =0 Y =99 HITS =279
+
+Sequence 3R2D6L X =81 Y =64 HITS =118
+
+Sequence 4L1D6L X =66 Y =99 HITS =110
+
+Sequence 1D6L6R X =0 Y =0 HITS =199
+
+Sequence 6U1R4U X =99 Y =99 HITS =185
+
+Sequence 4L7U1R X =99 Y =0 HITS =258
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+4L1D6L --> 1D6L6R
+
+========================     64      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =25 HITS =108
+
+Sequence 1D7D3R X =28 Y =99 HITS =157
+
+Sequence 7D3R8U X =78 Y =46 HITS =102
+
+Sequence 9U5L1D X =10 Y =89 HITS =105
+
+Sequence 6U2L3U X =72 Y =96 HITS =149
+
+Sequence 2L3U5L X =69 Y =86 HITS =113
+
+Sequence 3R2D6L X =65 Y =76 HITS =112
+
+Sequence 4L1D6L X =89 Y =72 HITS =105
+
+Sequence 6U1R4U X =99 Y =99 HITS =213
+
+Sequence 3U8D3R X =99 Y =0 HITS =188
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     65      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =27 Y =0 HITS =185
+
+Sequence 9U5L1D X =4 Y =21 HITS =100
+
+Sequence 6U2L3U X =41 Y =29 HITS =143
+
+Sequence 2L3U5L X =83 Y =26 HITS =122
+
+Sequence 1D3U1R X =99 Y =99 HITS =312
+
+Sequence 3R2D6L X =71 Y =24 HITS =122
+
+Sequence 3U1R6R X =99 Y =0 HITS =160
+
+Sequence 4L1D6L X =97 Y =10 HITS =107
+
+Sequence 6L6R6R X =0 Y =99 HITS =160
+
+Sequence 6U1R4U X =85 Y =0 HITS =124
+
+Sequence 4L7U1R X =0 Y =0 HITS =245
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     66      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =0 Y =74 HITS =115
+
+Sequence 1D7D3R X =83 Y =85 HITS =183
+
+Sequence 6U2L3U X =59 Y =69 HITS =167
+
+Sequence 2L3U5L X =35 Y =66 HITS =112
+
+Sequence 1D3U1R X =0 Y =99 HITS =267
+
+Sequence 3R2D6L X =45 Y =66 HITS =124
+
+Sequence 4L1D6L X =20 Y =87 HITS =112
+
+Sequence 6L6R6R X =0 Y =0 HITS =138
+
+Sequence 6U1R4U X =39 Y =99 HITS =117
+
+Sequence 4L7U1R X =99 Y =99 HITS =347
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     67      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =74 Y =3 HITS =108
+
+Sequence 1D7D3R X =0 Y =70 HITS =180
+
+Sequence 7D3R8U X =68 Y =20 HITS =102
+
+Sequence 6U2L3U X =18 Y =45 HITS =150
+
+Sequence 2L3U5L X =16 Y =26 HITS =112
+
+Sequence 9L1D3U X =0 Y =0 HITS =126
+
+Sequence 1D3U1R X =99 Y =0 HITS =277
+
+Sequence 3R2D6L X =6 Y =30 HITS =118
+
+Sequence 1D6L6R X =99 Y =99 HITS =179
+
+Sequence 6U1R4U X =12 Y =0 HITS =128
+
+Sequence 4L7U1R X =0 Y =99 HITS =245
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     68      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =50 Y =90 HITS =105
+
+Sequence 1D7D3R X =31 Y =0 HITS =197
+
+Sequence 7D3R8U X =48 Y =72 HITS =104
+
+Sequence 9U5L1D X =11 Y =13 HITS =114
+
+Sequence 6U2L3U X =62 Y =31 HITS =161
+
+Sequence 2L3U5L X =74 Y =43 HITS =110
+
+Sequence 1D3U1R X =30 Y =99 HITS =130
+
+Sequence 3R2D6L X =84 Y =47 HITS =128
+
+Sequence 3U1R6R X =99 Y =0 HITS =187
+
+Sequence 4L1D6L X =99 Y =22 HITS =116
+
+Sequence 6L6R6R X =99 Y =99 HITS =162
+
+Sequence 6U1R4U X =87 Y =21 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     69      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =95 Y =29 HITS =108
+
+Sequence 1D7D3R X =30 Y =99 HITS =193
+
+Sequence 9U5L1D X =9 Y =84 HITS =102
+
+Sequence 6U2L3U X =58 Y =76 HITS =170
+
+Sequence 2L3U5L X =71 Y =78 HITS =117
+
+Sequence 9L1D3U X =99 Y =99 HITS =103
+
+Sequence 1D3U1R X =99 Y =0 HITS =270
+
+Sequence 3R2D6L X =83 Y =76 HITS =124
+
+Sequence 6U1R4U X =99 Y =87 HITS =116
+
+Sequence 4L7U1R X =0 Y =99 HITS =257
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     70      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =70 Y =99 HITS =182
+
+Sequence 7D3R8U X =1 Y =48 HITS =104
+
+Sequence 6U2L3U X =50 Y =68 HITS =161
+
+Sequence 2L3U5L X =30 Y =77 HITS =101
+
+Sequence 1D3U1R X =0 Y =0 HITS =313
+
+Sequence 3R2D6L X =33 Y =86 HITS =108
+
+Sequence 6L1D3U X =0 Y =99 HITS =143
+
+Sequence 4L1D6L X =8 Y =82 HITS =105
+
+Sequence 6U1R4U X =1 Y =91 HITS =104
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+6L1D3U --> 1D3U1R
+
+========================     71      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =31 Y =0 HITS =195
+
+Sequence 9U5L1D X =10 Y =12 HITS =112
+
+Sequence 6U2L3U X =69 Y =0 HITS =189
+
+Sequence 2L3U5L X =75 Y =27 HITS =113
+
+Sequence 1D3U1R X =99 Y =81 HITS =122
+
+Sequence 3R2D6L X =65 Y =23 HITS =119
+
+Sequence 4L1D6L X =99 Y =30 HITS =113
+
+Sequence 6U1R4U X =99 Y =0 HITS =221
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+========================     72      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =94 Y =79 HITS =102
+
+Sequence 1D7D3R X =28 Y =0 HITS =187
+
+Sequence 7D3R8U X =77 Y =59 HITS =102
+
+Sequence 9U5L1D X =5 Y =20 HITS =102
+
+Sequence 6U2L3U X =55 Y =19 HITS =155
+
+Sequence 2L3U5L X =77 Y =40 HITS =107
+
+Sequence 1D3U1R X =99 Y =99 HITS =315
+
+Sequence 3R2D6L X =71 Y =31 HITS =107
+
+Sequence 3U1R6R X =99 Y =0 HITS =169
+
+Sequence 4L1D6L X =92 Y =10 HITS =101
+
+Sequence 1D6L6R X =0 Y =99 HITS =201
+
+Sequence 6U1R4U X =83 Y =0 HITS =129
+
+Sequence 4L7U1R X =0 Y =0 HITS =266
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+4L1D6L --> 1D6L6R
+
+========================     73      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =0 Y =29 HITS =127
+
+Sequence 1D7D3R X =72 Y =87 HITS =168
+
+Sequence 7D3R8U X =14 Y =45 HITS =110
+
+Sequence 9U5L1D X =87 Y =87 HITS =100
+
+Sequence 6U2L3U X =40 Y =99 HITS =190
+
+Sequence 2L3U5L X =27 Y =69 HITS =102
+
+Sequence 1D3U1R X =0 Y =0 HITS =270
+
+Sequence 3R2D6L X =33 Y =78 HITS =120
+
+Sequence 6R6R5R X =99 Y =0 HITS =179
+
+Sequence 4L1D6L X =0 Y =63 HITS =115
+
+Sequence 6U1R4U X =0 Y =99 HITS =197
+
+Sequence 4L7U1R X =99 Y =99 HITS =345
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     74      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =0 Y =68 HITS =114
+
+Sequence 1D7D3R X =99 Y =70 HITS =183
+
+Sequence 9U5L1D X =79 Y =91 HITS =101
+
+Sequence 6U2L3U X =72 Y =41 HITS =164
+
+Sequence 2L3U5L X =74 Y =29 HITS =102
+
+Sequence 1D3U1R X =0 Y =99 HITS =348
+
+Sequence 3R2D6L X =70 Y =17 HITS =120
+
+Sequence 3U1R6R X =99 Y =0 HITS =184
+
+Sequence 5D4L1D X =91 Y =82 HITS =101
+
+Sequence 4L1D6L X =87 Y =8 HITS =103
+
+Sequence 6U1R4U X =98 Y =14 HITS =120
+
+Sequence 4L7U1R X =99 Y =99 HITS =158
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+5D4L1D --> 4L1D6L
+
+========================     75      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =0 Y =35 HITS =128
+
+Sequence 1D7D3R X =70 Y =99 HITS =195
+
+Sequence 7D3R8U X =12 Y =52 HITS =102
+
+Sequence 6U2L3U X =45 Y =74 HITS =184
+
+Sequence 2L3U5L X =22 Y =71 HITS =114
+
+Sequence 9L1D3U X =0 Y =99 HITS =135
+
+Sequence 1D3U1R X =0 Y =0 HITS =284
+
+Sequence 3R2D6L X =33 Y =74 HITS =114
+
+Sequence 4L1D6L X =10 Y =76 HITS =103
+
+Sequence 6U1R4U X =0 Y =86 HITS =118
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+========================     76      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =72 HITS =171
+
+Sequence 6U2L3U X =68 Y =57 HITS =164
+
+Sequence 2L3U5L X =68 Y =43 HITS =118
+
+Sequence 9L1D3U X =99 Y =0 HITS =151
+
+Sequence 3R2D6L X =81 Y =28 HITS =121
+
+Sequence 6U1R4U X =87 Y =0 HITS =129
+
+Sequence 4L7U1R X =99 Y =99 HITS =340
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+========================     77      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =69 Y =0 HITS =185
+
+Sequence 7D3R8U X =14 Y =55 HITS =120
+
+Sequence 9U5L1D X =90 Y =14 HITS =102
+
+Sequence 6U2L3U X =20 Y =9 HITS =146
+
+Sequence 2L3U5L X =29 Y =12 HITS =108
+
+Sequence 3R2D6L X =38 Y =13 HITS =106
+
+Sequence 4L1D6L X =0 Y =29 HITS =103
+
+Sequence 6U1R4U X =0 Y =0 HITS =209
+
+Sequence 4L7U1R X =99 Y =0 HITS =311
+
+Sequence 3U8D3R X =0 Y =99 HITS =184
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     78      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =0 Y =0 HITS =229
+
+Sequence 1D7D3R X =98 Y =69 HITS =191
+
+Sequence 7D3R8U X =36 Y =17 HITS =102
+
+Sequence 6U2L3U X =99 Y =33 HITS =186
+
+Sequence 2L3U5L X =86 Y =29 HITS =111
+
+Sequence 1D3U1R X =41 Y =0 HITS =106
+
+Sequence 3R2D6L X =75 Y =35 HITS =112
+
+Sequence 4L1D6L X =60 Y =0 HITS =113
+
+Sequence 6U1R4U X =99 Y =0 HITS =205
+
+Sequence 4L7U1R X =99 Y =99 HITS =255
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     79      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =26 HITS =200
+
+Sequence 9U5L1D X =72 Y =11 HITS =121
+
+Sequence 6U2L3U X =70 Y =59 HITS =161
+
+Sequence 2L3U5L X =68 Y =77 HITS =100
+
+Sequence 1D3U1R X =0 Y =0 HITS =265
+
+Sequence 3R2D6L X =65 Y =86 HITS =100
+
+Sequence 5D4L1D X =99 Y =13 HITS =125
+
+Sequence 4L1D6L X =89 Y =88 HITS =110
+
+Sequence 6U1R4U X =99 Y =77 HITS =118
+
+Sequence 2D4L1D X =99 Y =0 HITS =237
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+2D4L1D --> 4L1D6L
+
+========================     80      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =91 Y =72 HITS =108
+
+Sequence 1D7D3R X =30 Y =0 HITS =188
+
+Sequence 9U5L1D X =9 Y =17 HITS =106
+
+Sequence 6U2L3U X =56 Y =26 HITS =149
+
+Sequence 2L3U5L X =77 Y =22 HITS =111
+
+Sequence 9L1D3U X =99 Y =0 HITS =138
+
+Sequence 1D3U1R X =99 Y =99 HITS =295
+
+Sequence 3R2D6L X =70 Y =12 HITS =114
+
+Sequence 5D4L1D X =11 Y =0 HITS =101
+
+Sequence 4L1D6L X =99 Y =36 HITS =101
+
+Sequence 1D6L6R X =0 Y =99 HITS =210
+
+Sequence 6U1R4U X =99 Y =12 HITS =125
+
+Sequence 4L7U1R X =0 Y =0 HITS =243
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+9L1D3U --> 1D3U1R
+
+5D4L1D --> 4L1D6L
+
+4L1D6L --> 1D6L6R
+
+========================     81      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =99 Y =30 HITS =185
+
+Sequence 7D3R8U X =44 Y =85 HITS =120
+
+Sequence 9U5L1D X =85 Y =9 HITS =102
+
+Sequence 6U2L3U X =90 Y =79 HITS =146
+
+Sequence 2L3U5L X =87 Y =70 HITS =108
+
+Sequence 3R2D6L X =86 Y =61 HITS =106
+
+Sequence 4L1D6L X =70 Y =99 HITS =103
+
+Sequence 6U1R4U X =99 Y =99 HITS =209
+
+Sequence 4L7U1R X =99 Y =0 HITS =308
+
+Sequence 3U8D3R X =0 Y =99 HITS =191
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     82      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =72 Y =14 HITS =104
+
+Sequence 1D7D3R X =0 Y =68 HITS =192
+
+Sequence 7D3R8U X =54 Y =15 HITS =102
+
+Sequence 6U2L3U X =0 Y =48 HITS =157
+
+Sequence 2L3U5L X =32 Y =17 HITS =112
+
+Sequence 3R2D6L X =27 Y =28 HITS =122
+
+Sequence 3U1R6R X =0 Y =0 HITS =137
+
+Sequence 4L1D6L X =11 Y =4 HITS =110
+
+Sequence 6U1R4U X =0 Y =16 HITS =129
+
+Sequence 4L7U1R X =0 Y =99 HITS =312
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     83      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =91 Y =77 HITS =104
+
+Sequence 1D7D3R X =99 Y =18 HITS =189
+
+Sequence 9U5L1D X =75 Y =9 HITS =106
+
+Sequence 6U2L3U X =99 Y =63 HITS =175
+
+Sequence 2L3U5L X =79 Y =60 HITS =108
+
+Sequence 1D3U1R X =99 Y =99 HITS =346
+
+Sequence 3U1R9D X =0 Y =99 HITS =216
+
+Sequence 3R2D6L X =15 Y =56 HITS =110
+
+Sequence 6L6R6R X =0 Y =0 HITS =141
+
+Sequence 6U1R4U X =0 Y =87 HITS =103
+
+Sequence 2D4L1D X =99 Y =0 HITS =247
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R9D
+
+========================     84      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =71 Y =99 HITS =190
+
+Sequence 7D3R8U X =21 Y =42 HITS =102
+
+Sequence 9U5L1D X =90 Y =86 HITS =100
+
+Sequence 6U2L3U X =26 Y =98 HITS =155
+
+Sequence 2L3U5L X =27 Y =88 HITS =107
+
+Sequence 3R2D6L X =38 Y =82 HITS =107
+
+Sequence 4L1D6L X =10 Y =68 HITS =106
+
+Sequence 6U1R4U X =0 Y =98 HITS =186
+
+Sequence 3U8D3R X =0 Y =0 HITS =169
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     85      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =66 HITS =134
+
+Sequence 1D7D3R X =32 Y =10 HITS =163
+
+Sequence 7D3R8U X =85 Y =58 HITS =102
+
+Sequence 6U2L3U X =67 Y =6 HITS =153
+
+Sequence 2L3U5L X =77 Y =13 HITS =112
+
+Sequence 1D3U1R X =99 Y =99 HITS =270
+
+Sequence 3R2D6L X =67 Y =23 HITS =114
+
+Sequence 5D4L1D X =13 Y =0 HITS =103
+
+Sequence 4L1D6L X =90 Y =31 HITS =100
+
+Sequence 6L6R6R X =0 Y =99 HITS =132
+
+Sequence 6U1R4U X =99 Y =0 HITS =214
+
+Sequence 4L7U1R X =0 Y =0 HITS =272
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+========================     86      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =28 Y =0 HITS =118
+
+Sequence 1D7D3R X =99 Y =66 HITS =203
+
+Sequence 9U5L1D X =86 Y =91 HITS =102
+
+Sequence 6U2L3U X =99 Y =24 HITS =185
+
+Sequence 2L3U5L X =61 Y =18 HITS =120
+
+Sequence 1D3U1R X =0 Y =0 HITS =284
+
+Sequence 3R2D6L X =67 Y =28 HITS =112
+
+Sequence 4L1D6L X =55 Y =0 HITS =105
+
+Sequence 6U1R4U X =99 Y =0 HITS =198
+
+Sequence 4L7U1R X =99 Y =99 HITS =323
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     87      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =72 Y =99 HITS =162
+
+Sequence 7D3R8U X =19 Y =54 HITS =108
+
+Sequence 9U5L1D X =90 Y =86 HITS =101
+
+Sequence 6U2L3U X =25 Y =99 HITS =157
+
+Sequence 2L3U5L X =26 Y =73 HITS =110
+
+Sequence 1D3U1R X =0 Y =51 HITS =118
+
+Sequence 3R2D6L X =28 Y =83 HITS =120
+
+Sequence 4L1D6L X =11 Y =72 HITS =107
+
+Sequence 6U1R4U X =0 Y =99 HITS =159
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     88      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =26 Y =4 HITS =107
+
+Sequence 1D7D3R X =99 Y =75 HITS =159
+
+Sequence 7D3R8U X =45 Y =3 HITS =108
+
+Sequence 9U5L1D X =78 Y =97 HITS =100
+
+Sequence 6U2L3U X =91 Y =27 HITS =140
+
+Sequence 2L3U5L X =75 Y =35 HITS =105
+
+Sequence 1D3U1R X =0 Y =0 HITS =297
+
+Sequence 3R2D6L X =85 Y =36 HITS =108
+
+Sequence 4L1D6L X =74 Y =0 HITS =112
+
+Sequence 1D6L6R X =0 Y =99 HITS =214
+
+Sequence 6U1R4U X =99 Y =0 HITS =266
+
+Sequence 4L7U1R X =99 Y =99 HITS =299
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+4L1D6L --> 1D6L6R
+
+========================     89      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =12 Y =83 HITS =114
+
+Sequence 1D7D3R X =99 Y =69 HITS =184
+
+Sequence 6U2L3U X =70 Y =44 HITS =169
+
+Sequence 2L3U5L X =68 Y =33 HITS =112
+
+Sequence 3R2D6L X =64 Y =22 HITS =112
+
+Sequence 3U1R6R X =99 Y =0 HITS =154
+
+Sequence 4L1D6L X =88 Y =9 HITS =106
+
+Sequence 6U1R4U X =99 Y =14 HITS =122
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     90      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =19 Y =29 HITS =108
+
+Sequence 1D7D3R X =71 Y =99 HITS =165
+
+Sequence 7D3R8U X =12 Y =49 HITS =108
+
+Sequence 9U5L1D X =90 Y =86 HITS =102
+
+Sequence 6U2L3U X =25 Y =99 HITS =205
+
+Sequence 2L3U5L X =21 Y =72 HITS =118
+
+Sequence 1D3U1R X =2 Y =47 HITS =100
+
+Sequence 3R2D6L X =32 Y =82 HITS =122
+
+Sequence 4L1D6L X =1 Y =71 HITS =109
+
+Sequence 6U1R4U X =0 Y =99 HITS =215
+
+Sequence 3U8D3R X =0 Y =0 HITS =182
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     91      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =27 Y =99 HITS =116
+
+Sequence 1D7D3R X =22 Y =0 HITS =198
+
+Sequence 9U5L1D X =11 Y =0 HITS =112
+
+Sequence 9R8U1R X =0 Y =0 HITS =309
+
+Sequence 6U2L3U X =38 Y =24 HITS =157
+
+Sequence 2L3U5L X =25 Y =67 HITS =118
+
+Sequence 3R2D6L X =28 Y =55 HITS =126
+
+Sequence 4L1D6L X =13 Y =74 HITS =107
+
+Sequence 6U1R4U X =0 Y =53 HITS =126
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     92      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =99 Y =71 HITS =110
+
+Sequence 1D7D3R X =18 Y =85 HITS =180
+
+Sequence 9U5L1D X =7 Y =80 HITS =102
+
+Sequence 6U2L3U X =52 Y =77 HITS =137
+
+Sequence 2L3U5L X =67 Y =64 HITS =115
+
+Sequence 3R2D6L X =56 Y =64 HITS =122
+
+Sequence 5D4L1D X =11 Y =98 HITS =105
+
+Sequence 4L1D6L X =73 Y =77 HITS =115
+
+Sequence 6U1R4U X =68 Y =99 HITS =127
+
+Sequence 4L7U1R X =0 Y =99 HITS =324
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+
+========================     93      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =25 Y =8 HITS =100
+
+Sequence 1D7D3R X =99 Y =74 HITS =166
+
+Sequence 7D3R8U X =47 Y =22 HITS =106
+
+Sequence 9U5L1D X =77 Y =94 HITS =100
+
+Sequence 6U2L3U X =72 Y =41 HITS =161
+
+Sequence 2L3U5L X =70 Y =17 HITS =115
+
+Sequence 1D3U1R X =0 Y =0 HITS =305
+
+Sequence 3R2D6L X =72 Y =28 HITS =115
+
+Sequence 3U1R6R X =99 Y =0 HITS =202
+
+Sequence 1D6L6R X =0 Y =99 HITS =203
+
+Sequence 6U1R4U X =98 Y =13 HITS =106
+
+Sequence 4L7U1R X =99 Y =99 HITS =230
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+========================     94      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =41 Y =7 HITS =108
+
+Sequence 1D7D3R X =99 Y =68 HITS =191
+
+Sequence 7D3R8U X =51 Y =17 HITS =106
+
+Sequence 9U5L1D X =85 Y =91 HITS =102
+
+Sequence 6U2L3U X =72 Y =45 HITS =161
+
+Sequence 2L3U5L X =72 Y =20 HITS =117
+
+Sequence 1D3U1R X =18 Y =0 HITS =115
+
+Sequence 3R2D6L X =74 Y =31 HITS =118
+
+Sequence 3U1R6R X =99 Y =0 HITS =161
+
+Sequence 5D4L1D X =99 Y =88 HITS =104
+
+Sequence 4L1D6L X =75 Y =9 HITS =106
+
+Sequence 6U1R4U X =86 Y =0 HITS =122
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+1D3U1R --> 3U1R6R
+
+5D4L1D --> 4L1D6L
+
+========================     95      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =98 Y =70 HITS =181
+
+Sequence 7D3R8U X =50 Y =14 HITS =111
+
+Sequence 6U2L3U X =99 Y =35 HITS =189
+
+Sequence 2L3U5L X =70 Y =26 HITS =106
+
+Sequence 3R2D6L X =76 Y =36 HITS =122
+
+Sequence 3U1R6R X =99 Y =0 HITS =130
+
+Sequence 6R6R5R X =0 Y =99 HITS =178
+
+Sequence 4L1D6L X =74 Y =10 HITS =113
+
+Sequence 6U1R4U X =87 Y =0 HITS =117
+
+Sequence 4L7U1R X =99 Y =99 HITS =327
+
+Sequence 3U8D3R X =0 Y =0 HITS =173
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     96      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 1D7D3R X =30 Y =0 HITS =185
+
+Sequence 7D3R8U X =85 Y =55 HITS =120
+
+Sequence 9U5L1D X =9 Y =14 HITS =102
+
+Sequence 6U2L3U X =79 Y =9 HITS =146
+
+Sequence 2L3U5L X =70 Y =12 HITS =108
+
+Sequence 3R2D6L X =61 Y =13 HITS =106
+
+Sequence 4L1D6L X =99 Y =29 HITS =103
+
+Sequence 6U1R4U X =99 Y =0 HITS =211
+
+Sequence 4L7U1R X =0 Y =0 HITS =311
+
+Sequence 3U8D3R X =99 Y =99 HITS =193
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     97      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =70 Y =99 HITS =104
+
+Sequence 1D7D3R X =0 Y =30 HITS =182
+
+Sequence 7D3R8U X =45 Y =83 HITS =106
+
+Sequence 9U5L1D X =14 Y =8 HITS =103
+
+Sequence 6U2L3U X =24 Y =56 HITS =149
+
+Sequence 2L3U5L X =25 Y =66 HITS =118
+
+Sequence 9L1D3U X =0 Y =99 HITS =125
+
+Sequence 3R2D6L X =13 Y =64 HITS =124
+
+Sequence 4L1D6L X =22 Y =99 HITS =116
+
+Sequence 6U1R4U X =11 Y =99 HITS =120
+
+Sequence 4L7U1R X =0 Y =0 HITS =325
+
+Sequence 3U8D3R X =99 Y =99 HITS =181
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     98      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =54 Y =86 HITS =108
+
+Sequence 1D7D3R X =99 Y =25 HITS =147
+
+Sequence 9U5L1D X =82 Y =8 HITS =100
+
+Sequence 6U2L3U X =91 Y =78 HITS =146
+
+Sequence 2L3U5L X =88 Y =68 HITS =110
+
+Sequence 9D8D9D X =99 Y =99 HITS =246
+
+Sequence 3R2D6L X =78 Y =62 HITS =110
+
+Sequence 6L1D3U X =0 Y =99 HITS =205
+
+Sequence 6U1R4U X =10 Y =99 HITS =110
+
+Sequence 4L7U1R X =99 Y =0 HITS =246
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+========================     99      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =89 Y =40 HITS =110
+
+Sequence 1D7D3R X =28 Y =96 HITS =183
+
+Sequence 7D3R8U X =66 Y =40 HITS =104
+
+Sequence 9U5L1D X =9 Y =81 HITS =105
+
+Sequence 6U2L3U X =60 Y =84 HITS =149
+
+Sequence 2L3U5L X =73 Y =82 HITS =106
+
+Sequence 1D3U1R X =99 Y =25 HITS =103
+
+Sequence 3R2D6L X =71 Y =91 HITS =102
+
+Sequence 6L6R6R X =0 Y =0 HITS =190
+
+Sequence 6U1R4U X =99 Y =89 HITS =120
+
+Sequence 4L7U1R X =0 Y =99 HITS =276
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+1D7D3R --> 7D3R8U
+
+6U2L3U --> 2L3U5L
+
+========================     100      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence 7U1D7D X =28 Y =3 HITS =102
+
+Sequence 1D7D3R X =99 Y =68 HITS =198
+
+Sequence 9U5L1D X =88 Y =90 HITS =107
+
+Sequence 6U2L3U X =71 Y =44 HITS =161
+
+Sequence 2L3U5L X =73 Y =25 HITS =113
+
+Sequence 1D3U1R X =52 Y =0 HITS =111
+
+Sequence 3R2D6L X =83 Y =26 HITS =126
+
+Sequence 5D4L1D X =89 Y =81 HITS =100
+
+Sequence 4L1D6L X =71 Y =13 HITS =109
+
+Sequence 6U1R4U X =99 Y =0 HITS =210
+
+Sequence 4L7U1R X =99 Y =99 HITS =346
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+7U1D7D --> 1D7D3R
+
+6U2L3U --> 2L3U5L
+
+5D4L1D --> 4L1D6L
+

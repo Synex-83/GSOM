@@ -22,11 +22,13 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\repeat.txt", 1);
 		//System.out.println(fp.readFile());
+		/*	
 		for(int j = 4; j <=5 ; j++)
 		{
 			
-/*			if(j == 1)
+			if(j == 1)
 			{
 				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\sequences.txt", 1); 
 				th = 800;
@@ -40,7 +42,7 @@ public class TestSOM {
 			{
 				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt", 1);
 				th = 800;
-			}*/
+			}
 			if(j == 4)
 			{
 				fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\encodedSeq.txt", 1);
@@ -53,11 +55,11 @@ public class TestSOM {
 			}
 			
 			for(int i = 1; i <= 100; i++)
-			{
-				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,th,i,j);
+			{*/
+				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,800,0,0);
 				SOM.initTrainSOM(fp.readFile(),100,0.25);
-			}
-		}
+			//}
+		//}
 		
 		//trainSOM(fp.readFile());
 		

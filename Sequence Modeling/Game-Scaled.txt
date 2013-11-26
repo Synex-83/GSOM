@@ -1,0 +1,4310 @@
+========================     1      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =316
+
+Sequence UUT X =99 Y =0 HITS =284
+
+Sequence OBP X =21 Y =87 HITS =110
+
+Sequence BPF X =30 Y =0 HITS =186
+
+Sequence UKB X =73 Y =99 HITS =110
+
+Sequence NCE X =50 Y =24 HITS =179
+
+Sequence CEK X =33 Y =54 HITS =114
+
+Sequence BEA X =65 Y =67 HITS =121
+
+Sequence FDL X =99 Y =43 HITS =119
+
+Sequence KNA X =59 Y =38 HITS =112
+
+Sequence JHB X =47 Y =37 HITS =128
+
+Sequence HBL X =27 Y =35 HITS =107
+
+Sequence NAG X =28 Y =25 HITS =116
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     2      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =308
+
+Sequence BPF X =9 Y =49 HITS =156
+
+Sequence UKB X =73 Y =6 HITS =110
+
+Sequence NCE X =37 Y =79 HITS =161
+
+Sequence CEK X =46 Y =89 HITS =115
+
+Sequence UJV X =0 Y =99 HITS =226
+
+Sequence BEA X =67 Y =42 HITS =120
+
+Sequence FDL X =70 Y =73 HITS =117
+
+Sequence KNA X =46 Y =62 HITS =107
+
+Sequence JHB X =56 Y =63 HITS =134
+
+Sequence HBL X =37 Y =90 HITS =103
+
+Sequence NAG X =19 Y =82 HITS =100
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     3      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =293
+
+Sequence OBP X =87 Y =18 HITS =104
+
+Sequence BPF X =89 Y =47 HITS =165
+
+Sequence UKB X =23 Y =4 HITS =103
+
+Sequence NCE X =61 Y =69 HITS =189
+
+Sequence CEK X =48 Y =87 HITS =106
+
+Sequence UJV X =99 Y =99 HITS =236
+
+Sequence BEA X =29 Y =46 HITS =120
+
+Sequence FDL X =34 Y =87 HITS =120
+
+Sequence KNA X =44 Y =64 HITS =111
+
+Sequence JHB X =48 Y =74 HITS =125
+
+Sequence NAG X =86 Y =75 HITS =101
+
+Sequence MIU X =99 Y =0 HITS =202
+
+Sequence PVW X =0 Y =99 HITS =287
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+========================     4      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =0 HITS =302
+
+Sequence BPF X =79 Y =25 HITS =174
+
+Sequence PFR X =89 Y =2 HITS =111
+
+Sequence UKB X =98 Y =51 HITS =113
+
+Sequence PFS X =99 Y =0 HITS =213
+
+Sequence NCE X =49 Y =33 HITS =195
+
+Sequence CEK X =59 Y =9 HITS =103
+
+Sequence BEA X =46 Y =44 HITS =113
+
+Sequence FDL X =18 Y =33 HITS =106
+
+Sequence KNA X =23 Y =57 HITS =104
+
+Sequence JHB X =15 Y =47 HITS =119
+
+Sequence HBL X =68 Y =13 HITS =123
+
+Sequence NAG X =58 Y =18 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     5      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =85 Y =10 HITS =162
+
+Sequence PFR X =47 Y =9 HITS =100
+
+Sequence UKB X =99 Y =0 HITS =175
+
+Sequence NCE X =34 Y =53 HITS =204
+
+Sequence CEK X =24 Y =46 HITS =107
+
+Sequence BEA X =32 Y =67 HITS =126
+
+Sequence FDL X =39 Y =97 HITS =104
+
+Sequence KNA X =0 Y =73 HITS =114
+
+Sequence JHB X =15 Y =80 HITS =133
+
+Sequence HBL X =35 Y =29 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     6      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =273
+
+Sequence BPF X =18 Y =74 HITS =177
+
+Sequence UKB X =0 Y =51 HITS =128
+
+Sequence NCE X =50 Y =68 HITS =185
+
+Sequence CEK X =51 Y =79 HITS =110
+
+Sequence UJV X =0 Y =99 HITS =211
+
+Sequence BEA X =44 Y =38 HITS =120
+
+Sequence AVS X =0 Y =0 HITS =285
+
+Sequence FDL X =81 Y =28 HITS =103
+
+Sequence MIT X =99 Y =99 HITS =275
+
+Sequence KNA X =73 Y =48 HITS =119
+
+Sequence JHB X =85 Y =43 HITS =124
+
+Sequence HBL X =35 Y =89 HITS =106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     7      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =18 Y =80 HITS =100
+
+Sequence BPF X =22 Y =5 HITS =138
+
+Sequence FSW X =99 Y =99 HITS =301
+
+Sequence NCE X =38 Y =50 HITS =181
+
+Sequence CEK X =28 Y =69 HITS =105
+
+Sequence KUJ X =0 Y =0 HITS =181
+
+Sequence BEA X =50 Y =43 HITS =126
+
+Sequence EAV X =0 Y =99 HITS =197
+
+Sequence FDL X =68 Y =43 HITS =121
+
+Sequence KNA X =42 Y =0 HITS =104
+
+Sequence JHB X =56 Y =12 HITS =108
+
+Sequence HBL X =13 Y =53 HITS =116
+
+Sequence PVW X =99 Y =0 HITS =292
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     8      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =316
+
+Sequence UUT X =0 Y =0 HITS =259
+
+Sequence BPF X =27 Y =88 HITS =153
+
+Sequence UKB X =60 Y =1 HITS =105
+
+Sequence NCE X =41 Y =57 HITS =191
+
+Sequence CEK X =42 Y =71 HITS =112
+
+Sequence KUJ X =0 Y =99 HITS =231
+
+Sequence BEA X =51 Y =40 HITS =122
+
+Sequence EAV X =99 Y =99 HITS =213
+
+Sequence FDL X =38 Y =20 HITS =100
+
+Sequence KNA X =80 Y =53 HITS =102
+
+Sequence JHB X =85 Y =63 HITS =111
+
+Sequence HBL X =33 Y =98 HITS =121
+
+Sequence NAG X =19 Y =62 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     9      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =16 Y =99 HITS =167
+
+Sequence UKB X =39 Y =87 HITS =103
+
+Sequence NCE X =31 Y =47 HITS =170
+
+Sequence CEK X =10 Y =31 HITS =108
+
+Sequence BEA X =42 Y =44 HITS =118
+
+Sequence FDL X =57 Y =16 HITS =115
+
+Sequence KNA X =30 Y =11 HITS =108
+
+Sequence VTJ X =0 Y =0 HITS =121
+
+Sequence JHB X =28 Y =0 HITS =135
+
+Sequence HBL X =11 Y =41 HITS =117
+
+Sequence NAG X =17 Y =57 HITS =107
+
+Sequence MIU X =99 Y =99 HITS =287
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     10      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =26 Y =10 HITS =100
+
+Sequence BPF X =30 Y =99 HITS =168
+
+Sequence UKB X =99 Y =24 HITS =108
+
+Sequence PFS X =0 Y =72 HITS =118
+
+Sequence NCE X =49 Y =87 HITS =163
+
+Sequence CEK X =12 Y =41 HITS =118
+
+Sequence EKU X =0 Y =0 HITS =185
+
+Sequence KUJ X =0 Y =99 HITS =244
+
+Sequence BEA X =47 Y =75 HITS =110
+
+Sequence FDL X =78 Y =56 HITS =114
+
+Sequence KNA X =38 Y =51 HITS =107
+
+Sequence JHB X =49 Y =52 HITS =120
+
+Sequence HBL X =14 Y =59 HITS =120
+
+Sequence NAG X =40 Y =99 HITS =128
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFS
+
+NCE --> CEK
+
+CEK --> EKU
+
+EKU --> KUJ
+
+JHB --> HBL
+
+========================     11      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =289
+
+Sequence BPF X =0 Y =24 HITS =135
+
+Sequence UKB X =95 Y =71 HITS =105
+
+Sequence NCE X =33 Y =44 HITS =191
+
+Sequence CEK X =59 Y =16 HITS =104
+
+Sequence KUJ X =0 Y =0 HITS =208
+
+Sequence BEA X =48 Y =54 HITS =124
+
+Sequence EAV X =99 Y =0 HITS =217
+
+Sequence FDL X =23 Y =71 HITS =117
+
+Sequence KNA X =0 Y =42 HITS =111
+
+Sequence JHB X =21 Y =57 HITS =121
+
+Sequence HBL X =50 Y =10 HITS =112
+
+Sequence NAG X =37 Y =23 HITS =113
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     12      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =284
+
+Sequence OBP X =89 Y =23 HITS =102
+
+Sequence BPF X =20 Y =81 HITS =168
+
+Sequence UKB X =54 Y =96 HITS =109
+
+Sequence PFS X =0 Y =99 HITS =197
+
+Sequence NCE X =44 Y =55 HITS =185
+
+Sequence CEK X =16 Y =59 HITS =117
+
+Sequence VSV X =0 Y =0 HITS =291
+
+Sequence BEA X =52 Y =43 HITS =116
+
+Sequence FDL X =0 Y =38 HITS =133
+
+Sequence KNA X =53 Y =11 HITS =109
+
+Sequence JHB X =42 Y =12 HITS =114
+
+Sequence HBL X =12 Y =70 HITS =116
+
+Sequence NAG X =29 Y =58 HITS =118
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     13      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =278
+
+Sequence OBP X =99 Y =84 HITS =103
+
+Sequence BPF X =1 Y =75 HITS =162
+
+Sequence UKB X =89 Y =24 HITS =107
+
+Sequence NCE X =50 Y =59 HITS =179
+
+Sequence CEK X =60 Y =73 HITS =100
+
+Sequence BEA X =38 Y =57 HITS =118
+
+Sequence EAV X =99 Y =99 HITS =193
+
+Sequence FDL X =23 Y =28 HITS =120
+
+Sequence KNA X =11 Y =51 HITS =110
+
+Sequence JHB X =14 Y =41 HITS =118
+
+Sequence HBL X =52 Y =88 HITS =113
+
+Sequence NAG X =37 Y =80 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     14      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =284
+
+Sequence OBP X =16 Y =21 HITS =100
+
+Sequence BPF X =17 Y =81 HITS =189
+
+Sequence PFR X =0 Y =91 HITS =116
+
+Sequence UKB X =42 Y =88 HITS =111
+
+Sequence PFS X =0 Y =99 HITS =190
+
+Sequence NCE X =37 Y =41 HITS =174
+
+Sequence BEA X =64 Y =46 HITS =133
+
+Sequence FDL X =76 Y =20 HITS =116
+
+Sequence KNA X =52 Y =17 HITS =118
+
+Sequence JHB X =64 Y =16 HITS =129
+
+Sequence HBL X =10 Y =57 HITS =111
+
+Sequence NAG X =21 Y =62 HITS =106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFR
+
+BPF --> PFS
+
+JHB --> HBL
+
+========================     15      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =17 Y =74 HITS =180
+
+Sequence UKB X =2 Y =50 HITS =119
+
+Sequence NCE X =51 Y =67 HITS =195
+
+Sequence CEK X =50 Y =78 HITS =110
+
+Sequence UJV X =0 Y =99 HITS =208
+
+Sequence BEA X =56 Y =38 HITS =139
+
+Sequence FDL X =82 Y =31 HITS =112
+
+Sequence MIT X =99 Y =99 HITS =229
+
+Sequence KNA X =77 Y =48 HITS =109
+
+Sequence JHB X =87 Y =42 HITS =116
+
+Sequence HBL X =37 Y =99 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     16      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =86 Y =57 HITS =183
+
+Sequence UKB X =0 Y =45 HITS =112
+
+Sequence NCE X =58 Y =59 HITS =170
+
+Sequence UJV X =99 Y =99 HITS =231
+
+Sequence BEA X =34 Y =44 HITS =132
+
+Sequence KNA X =47 Y =36 HITS =115
+
+Sequence JHB X =51 Y =47 HITS =122
+
+Sequence HBL X =62 Y =90 HITS =111
+
+Sequence NAG X =64 Y =80 HITS =121
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+JHB --> HBL
+
+========================     17      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =311
+
+Sequence OBP X =74 Y =86 HITS =112
+
+Sequence BPF X =68 Y =0 HITS =160
+
+Sequence UKB X =26 Y =99 HITS =101
+
+Sequence NCE X =49 Y =14 HITS =174
+
+Sequence CEK X =78 Y =57 HITS =112
+
+Sequence KUJ X =99 Y =0 HITS =250
+
+Sequence BEA X =49 Y =30 HITS =116
+
+Sequence FDL X =9 Y =49 HITS =110
+
+Sequence KNA X =49 Y =45 HITS =125
+
+Sequence JHB X =36 Y =44 HITS =126
+
+Sequence HBL X =88 Y =46 HITS =120
+
+Sequence NAG X =56 Y =0 HITS =113
+
+Sequence PVW X =0 Y =0 HITS =289
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     18      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence KOU X =99 Y =0 HITS =197
+
+Sequence UUT X =0 Y =99 HITS =263
+
+Sequence OBP X =89 Y =24 HITS =102
+
+Sequence BPF X =0 Y =45 HITS =178
+
+Sequence UKB X =99 Y =76 HITS =115
+
+Sequence FSW X =99 Y =99 HITS =317
+
+Sequence NCE X =43 Y =33 HITS =192
+
+Sequence CEK X =53 Y =22 HITS =114
+
+Sequence UJV X =0 Y =0 HITS =247
+
+Sequence BEA X =16 Y =52 HITS =114
+
+Sequence FDL X =49 Y =99 HITS =130
+
+Sequence KNA X =38 Y =64 HITS =112
+
+Sequence JHB X =32 Y =79 HITS =128
+
+Sequence HBL X =41 Y =11 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     19      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =71 Y =9 HITS =100
+
+Sequence BPF X =19 Y =66 HITS =174
+
+Sequence UKB X =0 Y =36 HITS =136
+
+Sequence NCE X =51 Y =69 HITS =185
+
+Sequence BEA X =61 Y =56 HITS =130
+
+Sequence FDL X =56 Y =99 HITS =123
+
+Sequence KNA X =87 Y =44 HITS =109
+
+Sequence JHB X =86 Y =54 HITS =119
+
+Sequence HBL X =34 Y =90 HITS =105
+
+Sequence NAG X =35 Y =78 HITS =111
+
+Sequence MIU X =99 Y =0 HITS =255
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     20      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =295
+
+Sequence OBP X =78 Y =18 HITS =100
+
+Sequence BPF X =18 Y =18 HITS =186
+
+Sequence UKB X =6 Y =44 HITS =117
+
+Sequence PFS X =0 Y =0 HITS =184
+
+Sequence NCE X =53 Y =33 HITS =175
+
+Sequence CEK X =54 Y =22 HITS =110
+
+Sequence BEA X =50 Y =61 HITS =112
+
+Sequence EAV X =99 Y =0 HITS =280
+
+Sequence FDL X =79 Y =77 HITS =133
+
+Sequence KNA X =82 Y =53 HITS =126
+
+Sequence JHB X =84 Y =65 HITS =122
+
+Sequence HBL X =42 Y =6 HITS =107
+
+Sequence NAG X =33 Y =18 HITS =106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFS
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     21      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =20 Y =82 HITS =102
+
+Sequence BPF X =26 Y =18 HITS =177
+
+Sequence UKB X =54 Y =13 HITS =115
+
+Sequence NCE X =30 Y =51 HITS =183
+
+Sequence CEK X =20 Y =53 HITS =109
+
+Sequence UJV X =0 Y =0 HITS =219
+
+Sequence BEA X =64 Y =52 HITS =132
+
+Sequence AVS X =99 Y =0 HITS =274
+
+Sequence FDL X =67 Y =81 HITS =107
+
+Sequence KNA X =50 Y =73 HITS =115
+
+Sequence JHB X =56 Y =84 HITS =125
+
+Sequence HBL X =7 Y =37 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     22      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =345
+
+Sequence UUT X =99 Y =0 HITS =234
+
+Sequence OBP X =29 Y =88 HITS =106
+
+Sequence BPF X =41 Y =1 HITS =177
+
+Sequence NCE X =27 Y =43 HITS =184
+
+Sequence CEK X =19 Y =56 HITS =108
+
+Sequence BEA X =42 Y =26 HITS =106
+
+Sequence FDL X =78 Y =31 HITS =113
+
+Sequence MIT X =0 Y =99 HITS =217
+
+Sequence KNA X =55 Y =49 HITS =109
+
+Sequence JHB X =66 Y =49 HITS =128
+
+Sequence HBL X =13 Y =46 HITS =108
+
+Sequence NAG X =16 Y =25 HITS =106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     23      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =24 Y =18 HITS =207
+
+Sequence UKB X =51 Y =11 HITS =114
+
+Sequence NCE X =32 Y =51 HITS =195
+
+Sequence CEK X =21 Y =55 HITS =111
+
+Sequence UJV X =0 Y =0 HITS =224
+
+Sequence BEA X =64 Y =50 HITS =129
+
+Sequence FDL X =70 Y =82 HITS =100
+
+Sequence KNA X =49 Y =78 HITS =100
+
+Sequence JHB X =58 Y =86 HITS =113
+
+Sequence HBL X =9 Y =39 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     24      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =299
+
+Sequence OBP X =73 Y =20 HITS =106
+
+Sequence BPF X =22 Y =74 HITS =198
+
+Sequence UKB X =10 Y =41 HITS =109
+
+Sequence NCE X =52 Y =65 HITS =194
+
+Sequence UJV X =0 Y =99 HITS =196
+
+Sequence BEA X =61 Y =51 HITS =118
+
+Sequence FDL X =83 Y =67 HITS =106
+
+Sequence KNA X =66 Y =40 HITS =110
+
+Sequence JHB X =76 Y =43 HITS =114
+
+Sequence HBL X =38 Y =89 HITS =109
+
+Sequence NAG X =34 Y =78 HITS =112
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     25      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =82 Y =0 HITS =101
+
+Sequence BPF X =98 Y =68 HITS =168
+
+Sequence UKB X =28 Y =2 HITS =104
+
+Sequence NCE X =51 Y =59 HITS =190
+
+Sequence CEK X =65 Y =51 HITS =118
+
+Sequence UJV X =99 Y =99 HITS =267
+
+Sequence BEA X =37 Y =56 HITS =120
+
+Sequence EAV X =99 Y =0 HITS =225
+
+Sequence FDL X =16 Y =76 HITS =116
+
+Sequence KNA X =12 Y =52 HITS =103
+
+Sequence JHB X =13 Y =62 HITS =120
+
+Sequence HBL X =86 Y =58 HITS =124
+
+Sequence NAG X =68 Y =75 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     26      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =89 Y =20 HITS =102
+
+Sequence BPF X =28 Y =82 HITS =183
+
+Sequence PFR X =2 Y =89 HITS =109
+
+Sequence UKB X =50 Y =99 HITS =121
+
+Sequence PFS X =0 Y =99 HITS =206
+
+Sequence NCE X =32 Y =48 HITS =192
+
+Sequence CEK X =22 Y =60 HITS =106
+
+Sequence EKU X =99 Y =0 HITS =244
+
+Sequence BEA X =46 Y =57 HITS =106
+
+Sequence FDL X =27 Y =15 HITS =117
+
+Sequence KNA X =53 Y =13 HITS =108
+
+Sequence JHB X =41 Y =1 HITS =129
+
+Sequence HBL X =21 Y =70 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFR
+
+BPF --> PFS
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     27      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =289
+
+Sequence OBP X =75 Y =87 HITS =110
+
+Sequence BPF X =66 Y =0 HITS =161
+
+Sequence NCE X =46 Y =6 HITS =189
+
+Sequence CEK X =79 Y =49 HITS =106
+
+Sequence BEA X =46 Y =19 HITS =123
+
+Sequence FDL X =13 Y =49 HITS =120
+
+Sequence KNA X =53 Y =47 HITS =117
+
+Sequence JHB X =46 Y =34 HITS =116
+
+Sequence HBL X =85 Y =40 HITS =120
+
+Sequence NAG X =36 Y =0 HITS =117
+
+Sequence NRO X =99 Y =0 HITS =197
+
+Sequence MIU X =99 Y =99 HITS =203
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     28      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =298
+
+Sequence OBP X =0 Y =83 HITS =105
+
+Sequence BPF X =21 Y =17 HITS =192
+
+Sequence UKB X =50 Y =13 HITS =103
+
+Sequence FSW X =99 Y =0 HITS =332
+
+Sequence NCE X =29 Y =50 HITS =180
+
+Sequence CEK X =10 Y =53 HITS =108
+
+Sequence BEA X =66 Y =55 HITS =129
+
+Sequence FDL X =72 Y =84 HITS =124
+
+Sequence KNA X =51 Y =72 HITS =125
+
+Sequence JHB X =59 Y =84 HITS =130
+
+Sequence HBL X =5 Y =43 HITS =111
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     29      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =288
+
+Sequence OBP X =86 Y =87 HITS =118
+
+Sequence BPF X =18 Y =75 HITS =207
+
+Sequence UKB X =11 Y =48 HITS =112
+
+Sequence NCE X =48 Y =68 HITS =183
+
+Sequence CEK X =50 Y =78 HITS =106
+
+Sequence UJV X =0 Y =99 HITS =226
+
+Sequence BEA X =52 Y =33 HITS =126
+
+Sequence FDL X =82 Y =28 HITS =128
+
+Sequence KNA X =72 Y =48 HITS =112
+
+Sequence JHB X =83 Y =41 HITS =126
+
+Sequence HBL X =38 Y =90 HITS =103
+
+Sequence ANR X =99 Y =99 HITS =250
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     30      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =326
+
+Sequence UUT X =99 Y =99 HITS =281
+
+Sequence OBP X =20 Y =0 HITS =110
+
+Sequence BPF X =10 Y =79 HITS =162
+
+Sequence UKB X =73 Y =2 HITS =115
+
+Sequence NCE X =30 Y =52 HITS =196
+
+Sequence CEK X =11 Y =46 HITS =108
+
+Sequence UJV X =0 Y =99 HITS =233
+
+Sequence BEA X =47 Y =74 HITS =124
+
+Sequence FDL X =99 Y =57 HITS =128
+
+Sequence KNA X =61 Y =62 HITS =109
+
+Sequence JHB X =60 Y =72 HITS =112
+
+Sequence HBL X =1 Y =56 HITS =124
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     31      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =99 HITS =305
+
+Sequence BPF X =78 Y =74 HITS =180
+
+Sequence PFR X =90 Y =97 HITS =108
+
+Sequence UKB X =96 Y =47 HITS =111
+
+Sequence NCE X =44 Y =64 HITS =201
+
+Sequence CEK X =56 Y =89 HITS =102
+
+Sequence BEA X =53 Y =44 HITS =110
+
+Sequence FDL X =40 Y =99 HITS =127
+
+Sequence KNA X =15 Y =41 HITS =114
+
+Sequence JHB X =13 Y =53 HITS =118
+
+Sequence HBL X =65 Y =86 HITS =129
+
+Sequence NAG X =54 Y =78 HITS =109
+
+Sequence MIU X =0 Y =0 HITS =255
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     32      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =18 Y =99 HITS =102
+
+Sequence BPF X =21 Y =3 HITS =147
+
+Sequence FSW X =99 Y =99 HITS =321
+
+Sequence NCE X =38 Y =48 HITS =176
+
+Sequence CEK X =27 Y =59 HITS =108
+
+Sequence BEA X =50 Y =42 HITS =118
+
+Sequence EAV X =0 Y =99 HITS =199
+
+Sequence FDL X =69 Y =20 HITS =113
+
+Sequence KNA X =41 Y =0 HITS =125
+
+Sequence JHB X =51 Y =30 HITS =120
+
+Sequence HBL X =0 Y =58 HITS =119
+
+Sequence NAG X =18 Y =33 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     33      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =99 HITS =275
+
+Sequence OBP X =12 Y =0 HITS =106
+
+Sequence BPF X =81 Y =22 HITS =213
+
+Sequence UKB X =87 Y =49 HITS =114
+
+Sequence NCE X =50 Y =29 HITS =178
+
+Sequence UJV X =99 Y =0 HITS =220
+
+Sequence BEA X =47 Y =61 HITS =123
+
+Sequence FDL X =20 Y =75 HITS =118
+
+Sequence KNA X =15 Y =51 HITS =117
+
+Sequence JHB X =14 Y =63 HITS =123
+
+Sequence HBL X =60 Y =6 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     34      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =287
+
+Sequence BPF X =18 Y =24 HITS =204
+
+Sequence UKB X =0 Y =48 HITS =125
+
+Sequence NCE X =51 Y =31 HITS =181
+
+Sequence CEK X =51 Y =10 HITS =109
+
+Sequence UJV X =0 Y =0 HITS =175
+
+Sequence BEA X =52 Y =65 HITS =118
+
+Sequence FDL X =82 Y =71 HITS =128
+
+Sequence KNA X =75 Y =52 HITS =115
+
+Sequence JHB X =86 Y =59 HITS =119
+
+Sequence HBL X =40 Y =9 HITS =103
+
+Sequence MIU X =99 Y =0 HITS =275
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     35      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =14 Y =99 HITS =127
+
+Sequence BPF X =3 Y =38 HITS =156
+
+Sequence UKB X =76 Y =99 HITS =117
+
+Sequence NCE X =41 Y =13 HITS =179
+
+Sequence CEK X =10 Y =51 HITS =108
+
+Sequence UJV X =0 Y =0 HITS =193
+
+Sequence BEA X =40 Y =24 HITS =112
+
+Sequence FDL X =83 Y =52 HITS =112
+
+Sequence KNA X =45 Y =47 HITS =111
+
+Sequence JHB X =66 Y =37 HITS =124
+
+Sequence HBL X =0 Y =47 HITS =113
+
+Sequence MIU X =0 Y =99 HITS =225
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     36      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =268
+
+Sequence UUT X =0 Y =99 HITS =263
+
+Sequence OBP X =86 Y =38 HITS =100
+
+Sequence BPF X =17 Y =8 HITS =145
+
+Sequence NCE X =46 Y =33 HITS =191
+
+Sequence CEK X =44 Y =43 HITS =106
+
+Sequence BEA X =45 Y =20 HITS =110
+
+Sequence FDL X =48 Y =62 HITS =124
+
+Sequence KNA X =46 Y =0 HITS =114
+
+Sequence JHB X =55 Y =0 HITS =128
+
+Sequence HBL X =26 Y =38 HITS =113
+
+Sequence NAG X =21 Y =48 HITS =106
+
+Sequence HOV X =99 Y =0 HITS =227
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     37      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =0 HITS =315
+
+Sequence BPF X =80 Y =22 HITS =207
+
+Sequence UKB X =89 Y =55 HITS =111
+
+Sequence NCE X =43 Y =30 HITS =165
+
+Sequence CEK X =57 Y =9 HITS =106
+
+Sequence UJV X =99 Y =0 HITS =196
+
+Sequence BEA X =52 Y =46 HITS =109
+
+Sequence EAV X =0 Y =99 HITS =255
+
+Sequence FDL X =40 Y =0 HITS =127
+
+Sequence KNA X =15 Y =58 HITS =110
+
+Sequence JHB X =13 Y =47 HITS =119
+
+Sequence HBL X =66 Y =10 HITS =115
+
+Sequence NAG X =53 Y =19 HITS =111
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     38      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =27 Y =17 HITS =171
+
+Sequence UKB X =40 Y =11 HITS =113
+
+Sequence NCE X =49 Y =48 HITS =183
+
+Sequence CEK X =20 Y =55 HITS =107
+
+Sequence BEA X =49 Y =60 HITS =118
+
+Sequence AVS X =99 Y =0 HITS =214
+
+Sequence FDL X =82 Y =82 HITS =134
+
+Sequence ITK X =0 Y =0 HITS =198
+
+Sequence JHB X =73 Y =90 HITS =101
+
+Sequence HBL X =10 Y =46 HITS =105
+
+Sequence NAG X =19 Y =39 HITS =116
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     39      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =99 Y =49 HITS =111
+
+Sequence BPF X =28 Y =16 HITS =186
+
+Sequence UKB X =62 Y =9 HITS =103
+
+Sequence PFS X =0 Y =0 HITS =206
+
+Sequence NCE X =33 Y =56 HITS =165
+
+Sequence CEK X =19 Y =26 HITS =105
+
+Sequence BEA X =48 Y =48 HITS =109
+
+Sequence FDL X =27 Y =85 HITS =121
+
+Sequence KNA X =53 Y =87 HITS =108
+
+Sequence JHB X =41 Y =99 HITS =138
+
+Sequence HBL X =10 Y =26 HITS =114
+
+Sequence NAG X =21 Y =44 HITS =108
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     40      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =287
+
+Sequence OBP X =1 Y =88 HITS =110
+
+Sequence BPF X =0 Y =40 HITS =175
+
+Sequence UKB X =99 Y =68 HITS =129
+
+Sequence NCE X =38 Y =35 HITS =179
+
+Sequence BEA X =62 Y =50 HITS =125
+
+Sequence FDL X =67 Y =0 HITS =121
+
+Sequence KNA X =37 Y =61 HITS =115
+
+Sequence JHB X =48 Y =52 HITS =120
+
+Sequence HBL X =44 Y =10 HITS =109
+
+Sequence NAG X =31 Y =21 HITS =106
+
+Sequence VPV X =99 Y =0 HITS =291
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     41      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =99 Y =26 HITS =156
+
+Sequence UKB X =13 Y =67 HITS =110
+
+Sequence NCE X =54 Y =35 HITS =194
+
+Sequence CEK X =39 Y =27 HITS =104
+
+Sequence BEA X =59 Y =48 HITS =122
+
+Sequence EAV X =0 Y =0 HITS =192
+
+Sequence FDL X =78 Y =72 HITS =114
+
+Sequence KNA X =88 Y =49 HITS =108
+
+Sequence JHB X =81 Y =59 HITS =117
+
+Sequence HBL X =39 Y =0 HITS =131
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     42      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =290
+
+Sequence OBP X =92 Y =0 HITS =109
+
+Sequence BPF X =16 Y =25 HITS =177
+
+Sequence UKB X =1 Y =49 HITS =119
+
+Sequence KBP X =99 Y =0 HITS =260
+
+Sequence NCE X =51 Y =36 HITS =183
+
+Sequence CEK X =47 Y =11 HITS =104
+
+Sequence UJV X =0 Y =0 HITS =211
+
+Sequence BEA X =42 Y =63 HITS =127
+
+Sequence FDL X =80 Y =68 HITS =108
+
+Sequence KNA X =73 Y =53 HITS =116
+
+Sequence VTJ X =99 Y =27 HITS =100
+
+Sequence JHB X =84 Y =54 HITS =125
+
+Sequence HBL X =38 Y =10 HITS =114
+
+Sequence NAG X =28 Y =21 HITS =113
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+UKB --> KBP
+
+NCE --> CEK
+
+JHB --> HBL
+
+KBP --> BPF
+
+========================     43      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =282
+
+Sequence BPF X =22 Y =96 HITS =133
+
+Sequence UKB X =72 Y =19 HITS =114
+
+Sequence NCE X =40 Y =61 HITS =188
+
+Sequence CEK X =14 Y =40 HITS =104
+
+Sequence BEA X =52 Y =59 HITS =116
+
+Sequence EAV X =0 Y =0 HITS =218
+
+Sequence FDL X =71 Y =78 HITS =113
+
+Sequence KNA X =48 Y =87 HITS =102
+
+Sequence JHB X =57 Y =85 HITS =120
+
+Sequence HBL X =12 Y =49 HITS =121
+
+Sequence NAG X =17 Y =63 HITS =108
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     44      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =269
+
+Sequence BPF X =0 Y =31 HITS =167
+
+Sequence UKB X =76 Y =99 HITS =106
+
+Sequence NCE X =45 Y =32 HITS =192
+
+Sequence CEK X =60 Y =1 HITS =109
+
+Sequence KUJ X =0 Y =0 HITS =165
+
+Sequence VWB X =99 Y =0 HITS =194
+
+Sequence BEA X =46 Y =44 HITS =120
+
+Sequence EAV X =0 Y =99 HITS =207
+
+Sequence FDL X =78 Y =0 HITS =113
+
+Sequence KNA X =9 Y =45 HITS =102
+
+Sequence JHB X =0 Y =52 HITS =133
+
+Sequence HBL X =50 Y =10 HITS =107
+
+Sequence NAG X =41 Y =20 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     45      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =297
+
+Sequence BPF X =83 Y =0 HITS =206
+
+Sequence UKB X =65 Y =0 HITS =115
+
+Sequence NCE X =61 Y =58 HITS =185
+
+Sequence CEK X =44 Y =55 HITS =112
+
+Sequence BEA X =0 Y =99 HITS =208
+
+Sequence FDL X =60 Y =88 HITS =114
+
+Sequence ITK X =99 Y =0 HITS =173
+
+Sequence KNA X =22 Y =99 HITS =116
+
+Sequence MVT X =36 Y =0 HITS =138
+
+Sequence JHB X =35 Y =83 HITS =126
+
+Sequence HBL X =47 Y =65 HITS =111
+
+Sequence NAG X =81 Y =45 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     46      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =90 Y =83 HITS =102
+
+Sequence BPF X =72 Y =17 HITS =171
+
+Sequence UKB X =50 Y =0 HITS =123
+
+Sequence NCE X =68 Y =49 HITS =183
+
+Sequence CEK X =78 Y =53 HITS =101
+
+Sequence UJV X =99 Y =0 HITS =187
+
+Sequence SVW X =0 Y =99 HITS =271
+
+Sequence BEA X =36 Y =54 HITS =125
+
+Sequence FDL X =32 Y =81 HITS =108
+
+Sequence MIT X =99 Y =99 HITS =285
+
+Sequence KNA X =50 Y =73 HITS =119
+
+Sequence JHB X =46 Y =85 HITS =120
+
+Sequence HBL X =90 Y =36 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     47      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =297
+
+Sequence OBP X =15 Y =76 HITS =108
+
+Sequence BPF X =76 Y =20 HITS =192
+
+Sequence UKB X =45 Y =11 HITS =114
+
+Sequence NCE X =68 Y =52 HITS =195
+
+Sequence CEK X =90 Y =45 HITS =104
+
+Sequence UJV X =99 Y =0 HITS =140
+
+Sequence BEA X =51 Y =45 HITS =108
+
+Sequence FDL X =99 Y =62 HITS =136
+
+Sequence KNA X =45 Y =87 HITS =108
+
+Sequence JHB X =55 Y =87 HITS =117
+
+Sequence HBL X =90 Y =36 HITS =103
+
+Sequence NAG X =80 Y =33 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     48      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =271
+
+Sequence BPF X =18 Y =24 HITS =177
+
+Sequence UKB X =2 Y =48 HITS =120
+
+Sequence NCE X =48 Y =30 HITS =178
+
+Sequence CEK X =50 Y =11 HITS =106
+
+Sequence UJV X =0 Y =0 HITS =198
+
+Sequence BEA X =54 Y =64 HITS =118
+
+Sequence FDL X =84 Y =71 HITS =125
+
+Sequence KNA X =74 Y =54 HITS =114
+
+Sequence JHB X =85 Y =59 HITS =120
+
+Sequence HBL X =40 Y =6 HITS =113
+
+Sequence MIU X =99 Y =0 HITS =261
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     49      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =24 Y =88 HITS =165
+
+Sequence PFR X =13 Y =99 HITS =100
+
+Sequence UKB X =38 Y =59 HITS =138
+
+Sequence NCE X =59 Y =81 HITS =185
+
+Sequence CEK X =61 Y =90 HITS =102
+
+Sequence UJV X =0 Y =99 HITS =204
+
+Sequence VWB X =99 Y =99 HITS =212
+
+Sequence BEA X =66 Y =65 HITS =110
+
+Sequence FDL X =74 Y =99 HITS =120
+
+Sequence KNA X =99 Y =72 HITS =116
+
+Sequence JHB X =99 Y =83 HITS =136
+
+Sequence HBL X =45 Y =90 HITS =101
+
+Sequence MIU X =99 Y =0 HITS =215
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     50      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =0 Y =78 HITS =124
+
+Sequence BPF X =78 Y =97 HITS =132
+
+Sequence UKB X =2 Y =25 HITS =120
+
+Sequence NCE X =60 Y =55 HITS =195
+
+Sequence CEK X =39 Y =63 HITS =102
+
+Sequence KUJ X =99 Y =99 HITS =238
+
+Sequence BEA X =56 Y =41 HITS =141
+
+Sequence FDL X =99 Y =36 HITS =114
+
+Sequence KNA X =44 Y =99 HITS =108
+
+Sequence JHB X =83 Y =35 HITS =125
+
+Sequence HBL X =87 Y =53 HITS =122
+
+Sequence NAG X =74 Y =64 HITS =119
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     51      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =256
+
+Sequence OBP X =57 Y =84 HITS =114
+
+Sequence BPF X =16 Y =75 HITS =168
+
+Sequence UKB X =99 Y =60 HITS =107
+
+Sequence NCE X =18 Y =31 HITS =186
+
+Sequence CEK X =33 Y =52 HITS =114
+
+Sequence BEA X =0 Y =0 HITS =209
+
+Sequence FDL X =35 Y =22 HITS =119
+
+Sequence ITK X =0 Y =99 HITS =156
+
+Sequence KNA X =25 Y =10 HITS =109
+
+Sequence JHB X =23 Y =0 HITS =120
+
+Sequence HBL X =19 Y =42 HITS =113
+
+Sequence NAG X =0 Y =39 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     52      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =80 Y =23 HITS =106
+
+Sequence BPF X =75 Y =80 HITS =198
+
+Sequence UKB X =47 Y =87 HITS =118
+
+Sequence NCE X =73 Y =50 HITS =175
+
+Sequence UJV X =99 Y =99 HITS =216
+
+Sequence BEA X =57 Y =53 HITS =116
+
+Sequence FDL X =32 Y =17 HITS =114
+
+Sequence MIT X =99 Y =0 HITS =292
+
+Sequence KNA X =51 Y =24 HITS =109
+
+Sequence JHB X =44 Y =14 HITS =119
+
+Sequence NAG X =79 Y =70 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+========================     53      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =299
+
+Sequence OBP X =82 Y =19 HITS =104
+
+Sequence BPF X =4 Y =22 HITS =132
+
+Sequence UKB X =99 Y =72 HITS =129
+
+Sequence NCE X =36 Y =42 HITS =197
+
+Sequence CEK X =60 Y =28 HITS =118
+
+Sequence KUJ X =0 Y =0 HITS =190
+
+Sequence BEA X =42 Y =56 HITS =130
+
+Sequence EAV X =99 Y =0 HITS =187
+
+Sequence FDL X =20 Y =71 HITS =112
+
+Sequence JHB X =23 Y =53 HITS =112
+
+Sequence HBL X =59 Y =0 HITS =123
+
+Sequence NAG X =37 Y =21 HITS =113
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     54      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =291
+
+Sequence BPF X =18 Y =77 HITS =181
+
+Sequence UKB X =1 Y =45 HITS =107
+
+Sequence NCE X =58 Y =68 HITS =191
+
+Sequence CEK X =41 Y =97 HITS =104
+
+Sequence EKU X =99 Y =0 HITS =239
+
+Sequence UJV X =0 Y =99 HITS =184
+
+Sequence BEA X =43 Y =54 HITS =136
+
+Sequence FDL X =87 Y =68 HITS =113
+
+Sequence KNA X =82 Y =39 HITS =114
+
+Sequence JHB X =86 Y =51 HITS =122
+
+Sequence HBL X =32 Y =87 HITS =121
+
+Sequence NAG X =43 Y =84 HITS =105
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     55      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =282
+
+Sequence OBP X =30 Y =88 HITS =114
+
+Sequence BPF X =81 Y =31 HITS =177
+
+Sequence UKB X =90 Y =68 HITS =111
+
+Sequence NCE X =51 Y =31 HITS =195
+
+Sequence CEK X =68 Y =0 HITS =123
+
+Sequence UJV X =99 Y =0 HITS =174
+
+Sequence BEA X =38 Y =33 HITS =124
+
+Sequence FDL X =12 Y =29 HITS =112
+
+Sequence KNA X =23 Y =51 HITS =109
+
+Sequence AMV X =0 Y =99 HITS =245
+
+Sequence JHB X =13 Y =43 HITS =120
+
+Sequence NAG X =63 Y =24 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+========================     56      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =276
+
+Sequence BPF X =10 Y =20 HITS =159
+
+Sequence UKB X =0 Y =39 HITS =110
+
+Sequence NCE X =52 Y =35 HITS =174
+
+Sequence CEK X =59 Y =20 HITS =100
+
+Sequence BEA X =53 Y =68 HITS =125
+
+Sequence FDL X =81 Y =77 HITS =116
+
+Sequence KNA X =71 Y =53 HITS =121
+
+Sequence JHB X =83 Y =65 HITS =127
+
+Sequence HBL X =45 Y =9 HITS =114
+
+Sequence HOV X =99 Y =0 HITS =261
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     57      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =308
+
+Sequence BPF X =54 Y =82 HITS =174
+
+Sequence UKB X =31 Y =94 HITS =121
+
+Sequence NCE X =68 Y =43 HITS =183
+
+Sequence CEK X =91 Y =57 HITS =101
+
+Sequence BEA X =52 Y =39 HITS =132
+
+Sequence EAV X =0 Y =0 HITS =259
+
+Sequence FDL X =63 Y =13 HITS =102
+
+Sequence KNA X =41 Y =26 HITS =110
+
+Sequence JHB X =40 Y =16 HITS =123
+
+Sequence HBL X =90 Y =66 HITS =103
+
+Sequence NAG X =81 Y =66 HITS =118
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     58      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =300
+
+Sequence UUT X =0 Y =0 HITS =274
+
+Sequence OBP X =89 Y =99 HITS =120
+
+Sequence BPF X =91 Y =46 HITS =151
+
+Sequence UKB X =25 Y =99 HITS =106
+
+Sequence NCE X =52 Y =42 HITS =176
+
+Sequence CEK X =70 Y =47 HITS =114
+
+Sequence UJV X =99 Y =0 HITS =242
+
+Sequence BEA X =39 Y =39 HITS =120
+
+Sequence FDL X =20 Y =20 HITS =117
+
+Sequence KNA X =12 Y =46 HITS =105
+
+Sequence JHB X =20 Y =35 HITS =114
+
+Sequence HBL X =82 Y =41 HITS =120
+
+Sequence NAG X =64 Y =23 HITS =118
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     59      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =0 HITS =288
+
+Sequence BPF X =81 Y =69 HITS =174
+
+Sequence PFR X =90 Y =99 HITS =122
+
+Sequence UKB X =99 Y =48 HITS =127
+
+Sequence PFS X =99 Y =99 HITS =220
+
+Sequence NCE X =51 Y =66 HITS =198
+
+Sequence CEK X =49 Y =77 HITS =108
+
+Sequence BEA X =50 Y =33 HITS =127
+
+Sequence FDL X =18 Y =28 HITS =137
+
+Sequence MIT X =0 Y =99 HITS =256
+
+Sequence KNA X =25 Y =47 HITS =114
+
+Sequence JHB X =14 Y =40 HITS =120
+
+Sequence HBL X =61 Y =92 HITS =113
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     60      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =252
+
+Sequence OBP X =93 Y =0 HITS =123
+
+Sequence BPF X =19 Y =20 HITS =207
+
+Sequence PFR X =10 Y =0 HITS =108
+
+Sequence NCE X =51 Y =33 HITS =185
+
+Sequence CEK X =51 Y =10 HITS =105
+
+Sequence BEA X =45 Y =61 HITS =120
+
+Sequence FDL X =55 Y =95 HITS =122
+
+Sequence KNA X =82 Y =53 HITS =120
+
+Sequence JHB X =85 Y =66 HITS =123
+
+Sequence HBL X =40 Y =10 HITS =109
+
+Sequence NAG X =28 Y =18 HITS =101
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     61      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =42 Y =11 HITS =168
+
+Sequence UKB X =66 Y =87 HITS =117
+
+Sequence NCE X =39 Y =43 HITS =179
+
+Sequence CEK X =11 Y =42 HITS =110
+
+Sequence BEA X =56 Y =61 HITS =134
+
+Sequence EAV X =98 Y =0 HITS =102
+
+Sequence AVS X =99 Y =99 HITS =304
+
+Sequence FDL X =1 Y =57 HITS =110
+
+Sequence KNA X =70 Y =47 HITS =109
+
+Sequence JHB X =81 Y =39 HITS =116
+
+Sequence HBL X =12 Y =32 HITS =119
+
+Sequence NAG X =24 Y =32 HITS =124
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+EAV --> AVS
+
+JHB --> HBL
+
+========================     62      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =289
+
+Sequence UUT X =99 Y =99 HITS =296
+
+Sequence BPF X =18 Y =74 HITS =186
+
+Sequence UKB X =5 Y =44 HITS =109
+
+Sequence NCE X =48 Y =67 HITS =173
+
+Sequence CEK X =41 Y =90 HITS =103
+
+Sequence UJV X =0 Y =99 HITS =219
+
+Sequence BEA X =58 Y =52 HITS =124
+
+Sequence KNA X =66 Y =39 HITS =120
+
+Sequence JHB X =78 Y =41 HITS =118
+
+Sequence HBL X =32 Y =86 HITS =125
+
+Sequence NAG X =42 Y =81 HITS =105
+
+Sequence HOV X =99 Y =0 HITS =243
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     63      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =275
+
+Sequence UUT X =0 Y =99 HITS =275
+
+Sequence OBP X =11 Y =0 HITS =107
+
+Sequence BPF X =80 Y =21 HITS =186
+
+Sequence PFR X =91 Y =0 HITS =101
+
+Sequence UKB X =99 Y =47 HITS =128
+
+Sequence PFS X =99 Y =0 HITS =202
+
+Sequence NCE X =52 Y =34 HITS =191
+
+Sequence CEK X =49 Y =23 HITS =106
+
+Sequence BEA X =47 Y =67 HITS =116
+
+Sequence FDL X =19 Y =75 HITS =120
+
+Sequence MIT X =0 Y =0 HITS =262
+
+Sequence KNA X =29 Y =52 HITS =118
+
+Sequence JHB X =17 Y =62 HITS =133
+
+Sequence HBL X =60 Y =10 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+BPF --> PFR
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     64      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =290
+
+Sequence UUT X =99 Y =99 HITS =316
+
+Sequence OBP X =79 Y =2 HITS =108
+
+Sequence BPF X =19 Y =72 HITS =219
+
+Sequence PFR X =9 Y =95 HITS =102
+
+Sequence UKB X =0 Y =32 HITS =125
+
+Sequence NCE X =51 Y =69 HITS =177
+
+Sequence BEA X =53 Y =57 HITS =124
+
+Sequence EAV X =99 Y =0 HITS =237
+
+Sequence FDL X =82 Y =37 HITS =126
+
+Sequence KNA X =58 Y =45 HITS =110
+
+Sequence JHB X =83 Y =51 HITS =128
+
+Sequence HBL X =38 Y =91 HITS =105
+
+Sequence NAG X =35 Y =82 HITS =123
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+BPF --> PFR
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     65      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =17 Y =36 HITS =108
+
+Sequence BPF X =82 Y =81 HITS =189
+
+Sequence UKB X =32 Y =99 HITS =137
+
+Sequence NCE X =66 Y =43 HITS =188
+
+Sequence UJV X =99 Y =99 HITS =194
+
+Sequence BEA X =50 Y =56 HITS =116
+
+Sequence FDL X =99 Y =37 HITS =138
+
+Sequence KNA X =48 Y =27 HITS =100
+
+Sequence JHB X =42 Y =18 HITS =123
+
+Sequence HBL X =87 Y =66 HITS =127
+
+Sequence NAG X =79 Y =56 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     66      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =87 Y =79 HITS =106
+
+Sequence BPF X =4 Y =28 HITS =153
+
+Sequence UKB X =54 Y =43 HITS =119
+
+Sequence NCE X =33 Y =45 HITS =192
+
+Sequence CEK X =10 Y =48 HITS =113
+
+Sequence EKU X =99 Y =99 HITS =161
+
+Sequence VWB X =0 Y =99 HITS =213
+
+Sequence BEA X =35 Y =57 HITS =111
+
+Sequence FDL X =0 Y =67 HITS =107
+
+Sequence KNA X =24 Y =92 HITS =102
+
+Sequence JHB X =14 Y =99 HITS =129
+
+Sequence HBL X =9 Y =37 HITS =107
+
+Sequence NAG X =26 Y =26 HITS =103
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     67      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =25 Y =18 HITS =204
+
+Sequence UKB X =49 Y =1 HITS =113
+
+Sequence NCE X =31 Y =49 HITS =190
+
+Sequence CEK X =18 Y =58 HITS =107
+
+Sequence UJV X =0 Y =0 HITS =205
+
+Sequence BEA X =58 Y =42 HITS =120
+
+Sequence FDL X =69 Y =79 HITS =120
+
+Sequence MIT X =0 Y =99 HITS =279
+
+Sequence KNA X =47 Y =73 HITS =115
+
+Sequence JHB X =57 Y =84 HITS =121
+
+Sequence HBL X =6 Y =37 HITS =105
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     68      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =301
+
+Sequence BPF X =19 Y =77 HITS =192
+
+Sequence UKB X =1 Y =51 HITS =114
+
+Sequence NCE X =54 Y =66 HITS =180
+
+Sequence UJV X =0 Y =99 HITS =196
+
+Sequence BEA X =54 Y =34 HITS =124
+
+Sequence FDL X =81 Y =27 HITS =108
+
+Sequence KNA X =86 Y =49 HITS =103
+
+Sequence JHB X =83 Y =40 HITS =127
+
+Sequence HBL X =39 Y =90 HITS =103
+
+Sequence NAG X =29 Y =79 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+JHB --> HBL
+
+========================     69      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =99 Y =38 HITS =163
+
+Sequence UKB X =99 Y =59 HITS =103
+
+Sequence NCE X =28 Y =37 HITS =185
+
+Sequence UJV X =0 Y =99 HITS =221
+
+Sequence BEA X =34 Y =25 HITS =108
+
+Sequence FDL X =50 Y =44 HITS =115
+
+Sequence KNA X =28 Y =0 HITS =109
+
+Sequence JHB X =18 Y =0 HITS =125
+
+Sequence HBL X =8 Y =43 HITS =101
+
+Sequence NAG X =12 Y =53 HITS =118
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+JHB --> HBL
+
+========================     70      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =99 Y =65 HITS =171
+
+Sequence UKB X =0 Y =26 HITS =106
+
+Sequence NCE X =59 Y =64 HITS =189
+
+Sequence BEA X =45 Y =56 HITS =133
+
+Sequence FDL X =38 Y =99 HITS =102
+
+Sequence ITK X =99 Y =98 HITS =101
+
+Sequence KNA X =86 Y =46 HITS =109
+
+Sequence JHB X =99 Y =51 HITS =131
+
+Sequence HBL X =53 Y =89 HITS =113
+
+Sequence NAG X =53 Y =79 HITS =104
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+JHB --> HBL
+
+========================     71      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =262
+
+Sequence OBP X =7 Y =28 HITS =104
+
+Sequence BPF X =62 Y =0 HITS =183
+
+Sequence UKB X =24 Y =99 HITS =114
+
+Sequence NCE X =65 Y =38 HITS =182
+
+Sequence CEK X =39 Y =9 HITS =102
+
+Sequence BEA X =49 Y =81 HITS =126
+
+Sequence FDL X =84 Y =58 HITS =108
+
+Sequence ITK X =99 Y =0 HITS =230
+
+Sequence JHB X =59 Y =51 HITS =125
+
+Sequence HBL X =53 Y =5 HITS =101
+
+Sequence NAG X =81 Y =29 HITS =112
+
+Sequence MIU X =0 Y =0 HITS =214
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     72      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =313
+
+Sequence UUT X =99 Y =0 HITS =261
+
+Sequence BPF X =81 Y =79 HITS =210
+
+Sequence NCE X =59 Y =41 HITS =204
+
+Sequence CEK X =53 Y =63 HITS =108
+
+Sequence EKU X =0 Y =99 HITS =237
+
+Sequence BEA X =45 Y =29 HITS =110
+
+Sequence FDL X =48 Y =0 HITS =113
+
+Sequence KNA X =49 Y =88 HITS =115
+
+Sequence JHB X =51 Y =99 HITS =105
+
+Sequence HBL X =67 Y =57 HITS =105
+
+Sequence NAG X =80 Y =58 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     73      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =0 Y =57 HITS =108
+
+Sequence BPF X =70 Y =83 HITS =174
+
+Sequence UKB X =44 Y =93 HITS =102
+
+Sequence NCE X =57 Y =57 HITS =167
+
+Sequence CEK X =79 Y =73 HITS =104
+
+Sequence EKU X =0 Y =0 HITS =238
+
+Sequence UJV X =99 Y =99 HITS =207
+
+Sequence BEA X =71 Y =40 HITS =112
+
+Sequence FDL X =64 Y =16 HITS =126
+
+Sequence KNA X =47 Y =14 HITS =119
+
+Sequence JHB X =61 Y =3 HITS =114
+
+Sequence HBL X =89 Y =72 HITS =115
+
+Sequence NAG X =74 Y =53 HITS =114
+
+Sequence VPV X =99 Y =0 HITS =318
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     74      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =0 HITS =292
+
+Sequence BPF X =80 Y =77 HITS =204
+
+Sequence UKB X =98 Y =51 HITS =116
+
+Sequence NCE X =48 Y =68 HITS =179
+
+Sequence CEK X =44 Y =99 HITS =107
+
+Sequence UJV X =99 Y =99 HITS =188
+
+Sequence BEA X =57 Y =37 HITS =108
+
+Sequence FDL X =20 Y =22 HITS =132
+
+Sequence KNA X =22 Y =45 HITS =109
+
+Sequence JHB X =13 Y =34 HITS =119
+
+Sequence HBL X =63 Y =89 HITS =105
+
+Sequence NAG X =71 Y =80 HITS =101
+
+Sequence MIU X =0 Y =99 HITS =313
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     75      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =310
+
+Sequence OBP X =88 Y =23 HITS =108
+
+Sequence BPF X =8 Y =37 HITS =141
+
+Sequence NCE X =25 Y =49 HITS =178
+
+Sequence CEK X =55 Y =12 HITS =112
+
+Sequence UJV X =0 Y =0 HITS =249
+
+Sequence BEA X =12 Y =58 HITS =122
+
+Sequence FDL X =28 Y =70 HITS =120
+
+Sequence JHB X =38 Y =54 HITS =118
+
+Sequence HBL X =45 Y =11 HITS =114
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     76      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =272
+
+Sequence UUT X =99 Y =0 HITS =318
+
+Sequence BPF X =72 Y =80 HITS =195
+
+Sequence PFR X =96 Y =89 HITS =108
+
+Sequence UKB X =33 Y =99 HITS =102
+
+Sequence NCE X =66 Y =46 HITS =185
+
+Sequence CEK X =91 Y =56 HITS =100
+
+Sequence BEA X =54 Y =45 HITS =119
+
+Sequence FDL X =67 Y =14 HITS =128
+
+Sequence KNA X =46 Y =13 HITS =110
+
+Sequence JHB X =54 Y =3 HITS =117
+
+Sequence HBL X =86 Y =67 HITS =119
+
+Sequence NAG X =82 Y =56 HITS =111
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     77      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =10 Y =39 HITS =165
+
+Sequence UKB X =45 Y =45 HITS =114
+
+Sequence NCE X =15 Y =61 HITS =177
+
+Sequence CEK X =9 Y =70 HITS =101
+
+Sequence UJV X =0 Y =0 HITS =212
+
+Sequence VWB X =0 Y =99 HITS =229
+
+Sequence BEA X =28 Y =61 HITS =119
+
+Sequence FDL X =54 Y =0 HITS =121
+
+Sequence MIT X =99 Y =99 HITS =207
+
+Sequence KNA X =27 Y =99 HITS =124
+
+Sequence JHB X =15 Y =99 HITS =134
+
+Sequence HBL X =7 Y =49 HITS =103
+
+Sequence NAG X =32 Y =23 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     78      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =25 Y =17 HITS =174
+
+Sequence UKB X =50 Y =1 HITS =116
+
+Sequence NCE X =31 Y =49 HITS =177
+
+Sequence CEK X =10 Y =49 HITS =108
+
+Sequence BEA X =66 Y =54 HITS =124
+
+Sequence FDL X =69 Y =82 HITS =104
+
+Sequence KNA X =52 Y =75 HITS =114
+
+Sequence JHB X =56 Y =86 HITS =121
+
+Sequence HBL X =9 Y =39 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     79      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =0 HITS =283
+
+Sequence OBP X =20 Y =64 HITS =100
+
+Sequence BPF X =14 Y =41 HITS =189
+
+Sequence PFR X =8 Y =0 HITS =128
+
+Sequence NCE X =47 Y =44 HITS =174
+
+Sequence CEK X =44 Y =10 HITS =104
+
+Sequence BEA X =58 Y =58 HITS =117
+
+Sequence FDL X =57 Y =21 HITS =111
+
+Sequence KNA X =45 Y =80 HITS =111
+
+Sequence JHB X =58 Y =42 HITS =116
+
+Sequence HBL X =35 Y =4 HITS =109
+
+Sequence NAG X =36 Y =23 HITS =105
+
+Sequence HOV X =0 Y =99 HITS =219
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFR
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     80      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =77 Y =87 HITS =104
+
+Sequence BPF X =15 Y =79 HITS =177
+
+Sequence UKB X =0 Y =61 HITS =122
+
+Sequence NCE X =55 Y =62 HITS =190
+
+Sequence CEK X =56 Y =74 HITS =113
+
+Sequence BEA X =51 Y =30 HITS =116
+
+Sequence FDL X =80 Y =32 HITS =117
+
+Sequence MIT X =99 Y =99 HITS =280
+
+Sequence KNA X =68 Y =46 HITS =119
+
+Sequence JHB X =80 Y =45 HITS =124
+
+Sequence HBL X =44 Y =88 HITS =116
+
+Sequence NAG X =34 Y =77 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     81      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =0 Y =72 HITS =156
+
+Sequence UKB X =0 Y =63 HITS =128
+
+Sequence NCE X =51 Y =62 HITS =192
+
+Sequence CEK X =59 Y =87 HITS =104
+
+Sequence KUJ X =0 Y =99 HITS =174
+
+Sequence BEA X =73 Y =46 HITS =116
+
+Sequence FDL X =99 Y =37 HITS =141
+
+Sequence KNA X =93 Y =13 HITS =117
+
+Sequence JHB X =99 Y =25 HITS =124
+
+Sequence HBL X =49 Y =87 HITS =121
+
+Sequence NAG X =36 Y =78 HITS =118
+
+Sequence DSH X =0 Y =80 HITS =109
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     82      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =14 Y =20 HITS =174
+
+Sequence UKB X =37 Y =0 HITS =126
+
+Sequence NCE X =30 Y =53 HITS =183
+
+Sequence BEA X =43 Y =58 HITS =116
+
+Sequence FDL X =53 Y =81 HITS =107
+
+Sequence ITK X =0 Y =0 HITS =197
+
+Sequence KNA X =80 Y =99 HITS =118
+
+Sequence JHB X =65 Y =83 HITS =128
+
+Sequence HBL X =9 Y =42 HITS =100
+
+Sequence NAG X =15 Y =52 HITS =109
+
+Sequence BNA X =99 Y =98 HITS =102
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+JHB --> HBL
+
+BNA --> NAG
+
+========================     83      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =290
+
+Sequence UUT X =0 Y =0 HITS =274
+
+Sequence BPF X =73 Y =81 HITS =174
+
+Sequence PFR X =95 Y =90 HITS =102
+
+Sequence UKB X =49 Y =89 HITS =111
+
+Sequence KBP X =99 Y =0 HITS =257
+
+Sequence PFS X =99 Y =99 HITS =174
+
+Sequence NCE X =75 Y =51 HITS =185
+
+Sequence CEK X =87 Y =51 HITS =118
+
+Sequence BEA X =35 Y =62 HITS =131
+
+Sequence FDL X =25 Y =17 HITS =128
+
+Sequence KNA X =48 Y =28 HITS =118
+
+Sequence VTJ X =71 Y =0 HITS =100
+
+Sequence JHB X =39 Y =15 HITS =125
+
+Sequence HBL X =89 Y =64 HITS =109
+
+Sequence NAG X =70 Y =69 HITS =104
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+BPF --> PFR
+
+UKB --> KBP
+
+BPF --> PFS
+
+NCE --> CEK
+
+JHB --> HBL
+
+KBP --> BPF
+
+========================     84      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =42 Y =16 HITS =100
+
+Sequence BPF X =78 Y =10 HITS =165
+
+Sequence UKB X =1 Y =52 HITS =113
+
+Sequence NCE X =51 Y =51 HITS =183
+
+Sequence CEK X =57 Y =41 HITS =102
+
+Sequence BEA X =49 Y =63 HITS =119
+
+Sequence AVS X =0 Y =0 HITS =313
+
+Sequence FDL X =63 Y =84 HITS =106
+
+Sequence KNA X =27 Y =88 HITS =107
+
+Sequence JHB X =23 Y =99 HITS =125
+
+Sequence HBL X =77 Y =42 HITS =115
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     85      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =89 Y =52 HITS =110
+
+Sequence BPF X =25 Y =80 HITS =180
+
+Sequence UKB X =50 Y =99 HITS =124
+
+Sequence NCE X =31 Y =45 HITS =179
+
+Sequence UJV X =0 Y =99 HITS =196
+
+Sequence BEA X =47 Y =52 HITS =119
+
+Sequence FDL X =32 Y =15 HITS =101
+
+Sequence KNA X =57 Y =13 HITS =109
+
+Sequence JHB X =47 Y =13 HITS =119
+
+Sequence HBL X =12 Y =62 HITS =117
+
+Sequence NAG X =17 Y =51 HITS =112
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     86      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =246
+
+Sequence BPF X =0 Y =14 HITS =192
+
+Sequence PFR X =46 Y =0 HITS =100
+
+Sequence UKB X =90 Y =74 HITS =111
+
+Sequence NCE X =47 Y =43 HITS =182
+
+Sequence BEA X =46 Y =55 HITS =142
+
+Sequence EAV X =99 Y =0 HITS =212
+
+Sequence FDL X =24 Y =71 HITS =129
+
+Sequence KNA X =0 Y =41 HITS =114
+
+Sequence JHB X =24 Y =55 HITS =116
+
+Sequence NAG X =35 Y =26 HITS =104
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+BEA --> EAV
+
+========================     87      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =286
+
+Sequence OBP X =12 Y =67 HITS =110
+
+Sequence BPF X =99 Y =68 HITS =160
+
+Sequence UKB X =24 Y =0 HITS =108
+
+Sequence NCE X =86 Y =48 HITS =185
+
+Sequence CEK X =44 Y =86 HITS =105
+
+Sequence BEA X =73 Y =57 HITS =124
+
+Sequence FDL X =54 Y =22 HITS =112
+
+Sequence MIT X =0 Y =99 HITS =241
+
+Sequence KNA X =51 Y =52 HITS =103
+
+Sequence JHB X =60 Y =43 HITS =122
+
+Sequence HBL X =53 Y =88 HITS =108
+
+Sequence IUI X =99 Y =99 HITS =226
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     88      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =99 HITS =306
+
+Sequence UUT X =99 Y =0 HITS =333
+
+Sequence OBP X =9 Y =46 HITS =100
+
+Sequence BPF X =70 Y =81 HITS =186
+
+Sequence UKB X =44 Y =89 HITS =109
+
+Sequence NCE X =65 Y =40 HITS =197
+
+Sequence CEK X =88 Y =61 HITS =100
+
+Sequence EKU X =0 Y =1 HITS =115
+
+Sequence BEA X =47 Y =55 HITS =123
+
+Sequence FDL X =99 Y =51 HITS =131
+
+Sequence JHB X =40 Y =15 HITS =124
+
+Sequence HBL X =87 Y =70 HITS =122
+
+Sequence NAG X =76 Y =53 HITS =110
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     89      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =283
+
+Sequence UUT X =99 Y =99 HITS =258
+
+Sequence OBP X =13 Y =0 HITS =110
+
+Sequence BPF X =9 Y =53 HITS =156
+
+Sequence NCE X =39 Y =75 HITS =193
+
+Sequence CEK X =43 Y =88 HITS =119
+
+Sequence UJV X =0 Y =99 HITS =217
+
+Sequence BEA X =59 Y =49 HITS =126
+
+Sequence FDL X =85 Y =74 HITS =128
+
+Sequence KNA X =62 Y =77 HITS =114
+
+Sequence JHB X =73 Y =77 HITS =121
+
+Sequence NAG X =28 Y =76 HITS =103
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+OBP --> BPF
+
+NCE --> CEK
+
+========================     90      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =292
+
+Sequence UUT X =0 Y =0 HITS =319
+
+Sequence BPF X =80 Y =27 HITS =180
+
+Sequence PFR X =89 Y =0 HITS =126
+
+Sequence UKB X =98 Y =51 HITS =114
+
+Sequence PFS X =99 Y =0 HITS =171
+
+Sequence NCE X =47 Y =31 HITS =185
+
+Sequence CEK X =56 Y =1 HITS =102
+
+Sequence BEA X =42 Y =45 HITS =127
+
+Sequence EAV X =0 Y =99 HITS =239
+
+Sequence FDL X =17 Y =33 HITS =104
+
+Sequence KNA X =12 Y =55 HITS =106
+
+Sequence JHB X =14 Y =45 HITS =121
+
+Sequence HBL X =64 Y =11 HITS =113
+
+Sequence NAG X =54 Y =16 HITS =103
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+BPF --> PFR
+
+BPF --> PFS
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     91      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =80 Y =71 HITS =174
+
+Sequence UKB X =99 Y =51 HITS =110
+
+Sequence FSW X =99 Y =0 HITS =341
+
+Sequence NCE X =47 Y =69 HITS =169
+
+Sequence CEK X =47 Y =99 HITS =107
+
+Sequence UJV X =99 Y =99 HITS =204
+
+Sequence BEA X =52 Y =49 HITS =121
+
+Sequence EAV X =0 Y =99 HITS =269
+
+Sequence FDL X =20 Y =30 HITS =120
+
+Sequence KNA X =24 Y =49 HITS =110
+
+Sequence JHB X =14 Y =45 HITS =119
+
+Sequence HBL X =61 Y =90 HITS =109
+
+Sequence NAG X =62 Y =80 HITS =126
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     92      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =0 HITS =304
+
+Sequence OBP X =18 Y =17 HITS =104
+
+Sequence BPF X =82 Y =68 HITS =180
+
+Sequence PFR X =89 Y =99 HITS =129
+
+Sequence UKB X =91 Y =44 HITS =105
+
+Sequence NCE X =44 Y =62 HITS =185
+
+Sequence CEK X =60 Y =69 HITS =108
+
+Sequence BEA X =32 Y =59 HITS =116
+
+Sequence EAV X =0 Y =0 HITS =227
+
+Sequence FDL X =0 Y =66 HITS =109
+
+Sequence KNA X =12 Y =42 HITS =120
+
+Sequence JHB X =0 Y =55 HITS =135
+
+Sequence HBL X =70 Y =68 HITS =107
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+BPF --> PFR
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     93      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =99 Y =99 HITS =247
+
+Sequence OBP X =39 Y =0 HITS =107
+
+Sequence BPF X =9 Y =78 HITS =156
+
+Sequence NCE X =42 Y =63 HITS =188
+
+Sequence CEK X =37 Y =40 HITS =110
+
+Sequence BEA X =25 Y =58 HITS =116
+
+Sequence FDL X =63 Y =46 HITS =116
+
+Sequence ITK X =0 Y =99 HITS =159
+
+Sequence KNA X =0 Y =52 HITS =102
+
+Sequence JHB X =0 Y =41 HITS =119
+
+Sequence HBL X =40 Y =51 HITS =115
+
+Sequence NAG X =39 Y =79 HITS =106
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     94      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =301
+
+Sequence BPF X =75 Y =19 HITS =180
+
+Sequence UKB X =48 Y =2 HITS =123
+
+Sequence NCE X =68 Y =48 HITS =192
+
+Sequence CEK X =79 Y =49 HITS =108
+
+Sequence EKU X =99 Y =99 HITS =252
+
+Sequence UJV X =99 Y =0 HITS =204
+
+Sequence BEA X =38 Y =42 HITS =131
+
+Sequence FDL X =27 Y =81 HITS =124
+
+Sequence KNA X =46 Y =75 HITS =103
+
+Sequence JHB X =39 Y =86 HITS =120
+
+Sequence HBL X =93 Y =39 HITS =101
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+CEK --> EKU
+
+JHB --> HBL
+
+========================     95      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence BPF X =19 Y =22 HITS =204
+
+Sequence UKB X =10 Y =50 HITS =101
+
+Sequence NCE X =52 Y =31 HITS =183
+
+Sequence CEK X =42 Y =3 HITS =108
+
+Sequence UJV X =0 Y =0 HITS =215
+
+Sequence BEA X =45 Y =46 HITS =123
+
+Sequence FDL X =61 Y =0 HITS =130
+
+Sequence KNA X =76 Y =55 HITS =122
+
+Sequence JHB X =87 Y =46 HITS =116
+
+Sequence HBL X =33 Y =13 HITS =125
+
+Sequence NAG X =43 Y =20 HITS =108
+
+Sequence HOV X =99 Y =99 HITS =230
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     96      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =306
+
+Sequence OBP X =0 Y =82 HITS =111
+
+Sequence BPF X =98 Y =78 HITS =147
+
+Sequence UKB X =0 Y =24 HITS =107
+
+Sequence NCE X =62 Y =63 HITS =192
+
+Sequence CEK X =38 Y =66 HITS =110
+
+Sequence BEA X =65 Y =48 HITS =130
+
+Sequence EAV X =0 Y =99 HITS =207
+
+Sequence FDL X =76 Y =29 HITS =117
+
+Sequence KNA X =89 Y =51 HITS =104
+
+Sequence JHB X =76 Y =39 HITS =108
+
+Sequence HBL X =47 Y =88 HITS =115
+
+Sequence NAG X =61 Y =81 HITS =102
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+
+========================     97      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence UUT X =0 Y =99 HITS =295
+
+Sequence BPF X =98 Y =70 HITS =168
+
+Sequence PFR X =99 Y =99 HITS =293
+
+Sequence KBP X =99 Y =0 HITS =245
+
+Sequence NCE X =56 Y =56 HITS =199
+
+Sequence CEK X =67 Y =51 HITS =106
+
+Sequence BEA X =42 Y =54 HITS =120
+
+Sequence FDL X =19 Y =66 HITS =106
+
+Sequence KNA X =13 Y =45 HITS =109
+
+Sequence JHB X =14 Y =55 HITS =115
+
+Sequence HBL X =85 Y =54 HITS =122
+
+Sequence NAG X =62 Y =84 HITS =123
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+BPF --> PFR
+
+KBP --> BPF
+
+NCE --> CEK
+
+JHB --> HBL
+
+========================     98      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =0 Y =0 HITS =261
+
+Sequence UUT X =99 Y =99 HITS =315
+
+Sequence BPF X =16 Y =70 HITS =189
+
+Sequence UKB X =1 Y =32 HITS =127
+
+Sequence NCE X =63 Y =65 HITS =186
+
+Sequence UJV X =0 Y =99 HITS =194
+
+Sequence BEA X =47 Y =52 HITS =116
+
+Sequence FDL X =52 Y =99 HITS =128
+
+Sequence KNA X =76 Y =44 HITS =112
+
+Sequence JHB X =86 Y =51 HITS =123
+
+Sequence HBL X =30 Y =85 HITS =130
+
+Sequence NAG X =57 Y =75 HITS =105
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OUU --> UUT
+
+JHB --> HBL
+
+========================     99      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OBP X =17 Y =91 HITS =100
+
+Sequence BPF X =81 Y =76 HITS =189
+
+Sequence UKB X =98 Y =50 HITS =120
+
+Sequence NCE X =51 Y =68 HITS =187
+
+Sequence BEA X =55 Y =38 HITS =120
+
+Sequence FDL X =19 Y =30 HITS =106
+
+Sequence MIT X =0 Y =99 HITS =274
+
+Sequence KNA X =28 Y =46 HITS =123
+
+Sequence JHB X =16 Y =42 HITS =122
+
+Sequence HBL X =52 Y =99 HITS =124
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+JHB --> HBL
+
+========================     100      =====================
+
+==============================================================
+
+==============================================================
+
+THRESHOLD NUMBER OF HITS =100
+
+********             SOLID SEQUENCES                  ********
+
+Sequence OUU X =99 Y =99 HITS =299
+
+Sequence OBP X =80 Y =26 HITS =102
+
+Sequence BPF X =0 Y =18 HITS =135
+
+Sequence UKB X =89 Y =70 HITS =107
+
+Sequence NCE X =47 Y =41 HITS =188
+
+Sequence CEK X =68 Y =26 HITS =110
+
+Sequence KUJ X =0 Y =0 HITS =175
+
+Sequence BEA X =33 Y =54 HITS =133
+
+Sequence EAV X =99 Y =0 HITS =214
+
+Sequence FDL X =43 Y =73 HITS =117
+
+Sequence KNA X =0 Y =40 HITS =108
+
+Sequence JHB X =17 Y =53 HITS =110
+
+Sequence HBL X =53 Y =12 HITS =113
+
+Sequence NAG X =34 Y =19 HITS =100
+
+********         LINKS (ORIGIN -> DIRECTION)          ********
+
+OBP --> BPF
+
+NCE --> CEK
+
+BEA --> EAV
+
+JHB --> HBL
+

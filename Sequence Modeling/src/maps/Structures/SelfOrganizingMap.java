@@ -80,7 +80,12 @@ public class SelfOrganizingMap {
 	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
 	{
 		
-		if(vector == 1)
+		if(vector ==0)
+		{
+			double temp[] =  {0.5,0.33,0.17};
+			VECTOR_WEIGHTS = temp;
+		}
+		else if(vector == 1)
 		{
 			double temp[] =  {0.5,0.33,0.17};
 			VECTOR_WEIGHTS = temp;
@@ -255,8 +260,8 @@ public class SelfOrganizingMap {
 		}			
 		
 		//FSM.printLinks();
-		//FSM.printSummary();
-		FSM.writeSummaryToFile();
+		FSM.printSummary();
+		//FSM.writeSummaryToFile();
 		
 	//	createUMatrix();
 	//	extractSmallerUMatrix();
