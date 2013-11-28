@@ -82,7 +82,7 @@ public class SelfOrganizingMap {
 		
 		if(vector ==0)
 		{
-			double temp[] =  {0.5,0.33,0.17};
+			double temp[] =  {0.5,0.30,0.15,0.05};
 			VECTOR_WEIGHTS = temp;
 		}
 		else if(vector == 1)
@@ -264,7 +264,7 @@ public class SelfOrganizingMap {
 		//FSM.writeSummaryToFile();
 		
 	//	createUMatrix();
-	//	extractSmallerUMatrix();
+		extractSmallerUMatrix();
 		
 /*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
@@ -278,7 +278,7 @@ public class SelfOrganizingMap {
 		}*/
 		
 	//	exportUMatrixToCSV();
-	//	exportSmallUMatrixToCSV();
+		exportSmallUMatrixToCSV();
 	//	displayHitNodesAndSequences();
 	//	testSOM();
 
@@ -440,7 +440,7 @@ public class SelfOrganizingMap {
 	{
 		String line = "";
 		String sequence = "XXX";
-		boolean skipZeroEntries = false;
+		boolean skipZeroEntries = true;
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
