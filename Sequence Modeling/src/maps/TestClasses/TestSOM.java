@@ -56,7 +56,7 @@ public class TestSOM {
 			
 			for(int i = 1; i <= 100; i++)
 			{*/
-				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,800,0,0);
+				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,66276,0,0);
 				SOM.initTrainSOM(fp.readFile(),100,0.25);
 			//}
 		//}
