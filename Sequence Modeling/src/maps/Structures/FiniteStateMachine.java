@@ -413,7 +413,7 @@ public class FiniteStateMachine {
 
 			if(!temp1.isHollow())
 			{
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + "\tY =" + temp1.getCurrentWinner().getY() + "\tHITS =" + temp1.getCurrentWinner().getNumberOfHits());
 				solidNode.add(temp1);
 				
 			}
@@ -426,7 +426,7 @@ public class FiniteStateMachine {
 
 			if(temp1.isHollow())
 			{
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + "\tY =" + temp1.getCurrentWinner().getY() + "\tHITS =" + temp1.getCurrentWinner().getNumberOfHits());
 			//	solidNode.add(temp1);
 				
 			}
@@ -439,7 +439,7 @@ public class FiniteStateMachine {
 
 			if(temp1.isRepeat())
 			{
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + "\tY =" + temp1.getCurrentWinner().getY() + "\tHITS =" + temp1.getCurrentWinner().getNumberOfHits());
 				temp1.printRepeat();
 			//	solidNode.add(temp1);
 				
@@ -454,7 +454,7 @@ public class FiniteStateMachine {
 		{
 			temp = ite.next();		
 			
-			if(solidNode.contains(temp.getOrigin()) && solidNode.contains(temp.getDestination()))
+			if(solidNode.contains(temp.getOrigin()) || solidNode.contains(temp.getDestination()))
 			{
 				System.out.println(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence());
 			}	
