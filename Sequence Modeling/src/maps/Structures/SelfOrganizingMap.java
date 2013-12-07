@@ -26,6 +26,8 @@ import org.apache.commons.math3.linear.EigenDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
 
+import sun.awt.windows.ThemeReader;
+
 
 
 /**
@@ -59,6 +61,7 @@ public class SelfOrganizingMap {
 	private int PRESENTATION_NUMBER = 0;
 	private int CURRENT_PRESENTATION_NUMBER = 0;
 	private double VECTOR_WEIGHTS[] = null; 
+	private int THRESHOLD = 0;
 		
 		//{0.5,0.20,0.15,0.10,0.05}; 
 		
@@ -76,6 +79,10 @@ public class SelfOrganizingMap {
 	 * @param depth	as the depth or the number of rows in the map
 	 * @param grid as the type of grid (0 = square, 1 = rectangle, 2 = hexagonal)
 	 * @param inputDimension the dimension of the input data vector
+	 * @param covarianceNumber the size of the covariance matrix
+	 * @param threshold the solidification threshold
+	 * @param iteration the number of iterations
+	 * @vector choice of weight vector.
 	 */
 	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
 	{
@@ -122,7 +129,7 @@ public class SelfOrganizingMap {
 		IS_MATRIX_MODE = isMatrixMode;
 		COVARIANCE_NUMBER = covarianceNumber;
 		ALPHA = setAlpha();
-		
+		THRESHOLD = threshold; ///for two
 		
 		int side = (int)Math.sqrt(numberOfNodes);
 		SOM = new Node[side][side];
@@ -258,8 +265,10 @@ public class SelfOrganizingMap {
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
+			PREVIOUS = null;
 			singleCompleteRun();
 			CURRENT_ITERATION++;
+			
 		//	CURRENT_PRESENTATION_NUMBER++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
 		}			
@@ -298,6 +307,7 @@ public class SelfOrganizingMap {
 		if(IS_MATRIX_MODE)
 		{
 			trainSOM();
+
 		}
 		else
 		{
@@ -444,7 +454,7 @@ public class SelfOrganizingMap {
 	private void trainSOM() 
 	{
 		String line = "";
-		String sequence = "XXX";
+		String sequence = "XX"; //XXX gt > 3
 		boolean skipZeroEntries = true;
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
@@ -513,6 +523,11 @@ public class SelfOrganizingMap {
 					calculateIntensityContribution(winner,1); // calculates the intensity values
 					
 					
+					if(sequence.equals("AA"))
+					{
+						System.out.println("X = " + winner.getX() + " Y = "+winner.getY());
+					}
+					
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
 					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
@@ -536,7 +551,7 @@ public class SelfOrganizingMap {
 				{
 					zeroCounter++;
 					
-					if(zeroCounter >= 2)
+					if(zeroCounter >= 1) //2 for gt > 3
 						skipZeroEntries = false;
 				}
 
@@ -943,9 +958,12 @@ public class SelfOrganizingMap {
 			}
 		}	
 		
+
+		
 		minNode.incrementNumberOfHits();
 		minNode.addMappingSequence(sequence);
 		//printSOM();
+				
 		return minNode;
 		
 	}
@@ -1147,7 +1165,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.5,0.33,0.17};
+		double mean[] = {0.7,0.3};//{0.5,0.33,0.17};
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];

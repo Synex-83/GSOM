@@ -115,7 +115,10 @@ public class FiniteStateMachine {
 	{
 		int distance = 0;
 		current.setFocus(true);
-		if(!(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence())))
+		
+
+		
+		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{
 			
 			current.setCurrentWinner(winner);
@@ -151,6 +154,11 @@ public class FiniteStateMachine {
 		
 		if(current.getCurrentWinner().getNumberOfHits() >= THRESHOLD && current.isHollow())
 		{
+			
+/*			if(previous==null)
+			{
+				current.setCurrentWinner(winner);
+			}*/
 			current.setHollow(false);
 			//System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
 		}
@@ -272,7 +280,7 @@ public class FiniteStateMachine {
 		{
 			temp = ite.next();
 			
-			if(temp.getOrigin().getSequence().equals(previous.getSequence()))
+			if(previous != null &&  temp.getOrigin().getSequence().equals(previous.getSequence())) //previous != null && 
 			{		
 				if(temp.getDestination().getSequence().equals(current.getSequence()))
 				{

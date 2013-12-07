@@ -22,7 +22,7 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Protein\\O22918Tab.txt", 1);
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\kohen.txt", 1);
 		//System.out.println(fp.readFile());
 		/*	
 		for(int j = 4; j <=5 ; j++)
@@ -56,8 +56,8 @@ public class TestSOM {
 			
 			for(int i = 1; i <= 100; i++)
 			{*/
-				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,200,0,6);
-				SOM.initTrainSOM(fp.readFile(),500,0.25);
+				SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,10,0,0);
+				SOM.initTrainSOM(fp.readFile(),100,0.25);
 			//}
 		//}
 		
