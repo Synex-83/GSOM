@@ -82,7 +82,7 @@ public class SelfOrganizingMap {
 	 * @param covarianceNumber the size of the covariance matrix
 	 * @param threshold the solidification threshold
 	 * @param iteration the number of iterations
-	 * @vector choice of weight vector.
+	 * @param vector choice of weight vector.
 	 */
 	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
 	{
@@ -265,7 +265,7 @@ public class SelfOrganizingMap {
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			PREVIOUS = null;
+			//PREVIOUS = null;
 			singleCompleteRun();
 			CURRENT_ITERATION++;
 			
@@ -523,9 +523,9 @@ public class SelfOrganizingMap {
 					calculateIntensityContribution(winner,1); // calculates the intensity values
 					
 					
-					if(sequence.equals("AA"))
+					if(sequence.equals("GA") & CURRENT_ITERATION >= 90 )
 					{
-						System.out.println("X = " + winner.getX() + " Y = "+winner.getY());
+						System.out.println("X = " + winner.getX() + " Y = "+winner.getY() + " HITS = " + winner.getNumberOfHits());
 					}
 					
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
