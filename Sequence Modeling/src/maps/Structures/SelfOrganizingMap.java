@@ -94,7 +94,7 @@ public class SelfOrganizingMap {
 		}
 		else if(vector == 1)
 		{
-			double temp[] =  {0.5,0.33,0.17};
+			double temp[] =  {0.6,0.4};
 			VECTOR_WEIGHTS = temp;
 		}
 		else if(vector == 2)
@@ -122,6 +122,7 @@ public class SelfOrganizingMap {
 			double temp[] =  {0.001,0.005,0.01,0.015,0.02,0.025,0.03,0.035,0.04,0.045,0.05,0.055,0.06,0.065,0.07,0.075,0.084,0.09,0.1,0.125};
 			VECTOR_WEIGHTS = temp;
 		}
+
 			
 		
 		
@@ -1165,7 +1166,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.7,0.3};//{0.5,0.33,0.17};
+		double mean[] = {0.5,0.33,0.17}; //{0.7,0.3};//
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];
@@ -1422,7 +1423,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\SS-3-VERIFICATION.csv",false));
+			bw = new BufferedWriter(new FileWriter("csv\\KOHEN-R.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
