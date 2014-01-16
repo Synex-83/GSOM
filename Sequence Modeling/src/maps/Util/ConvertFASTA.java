@@ -19,7 +19,7 @@ import java.util.Iterator;
  *
  */
 public class ConvertFASTA {
-	private static String FILE_LOCATION =  "E:\\workspace\\GSOM\\Sequence Modeling\\data\\Protein\\O22918.txt";
+	private static String FILE_LOCATION =  "C:\\Users\\Manjusri\\Desktop\\mtDNA\\blue whale - X72204.txt";
 	private String DELIMETER = " ";
 	private static BufferedReader BR = null;
 	static FileWriter write = null;
@@ -108,7 +108,7 @@ public class ConvertFASTA {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Protein").listFiles();
+	    File[] files = new File("C:\\Users\\Manjusri\\Desktop\\mtDNA").listFiles();
 	    showFiles(files);
 	}
 	
