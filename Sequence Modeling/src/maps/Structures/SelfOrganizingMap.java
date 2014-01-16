@@ -1422,7 +1422,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("csv\\KOHEN-R.csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\DIRT\\csv\\KOHEN-R.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
