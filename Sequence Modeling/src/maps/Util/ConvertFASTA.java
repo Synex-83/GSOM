@@ -81,7 +81,7 @@ public class ConvertFASTA {
 			}
 			
 			System.out.println();
-			
+			System.out.println("FILE = " + fileToRead.getName());
 			System.out.println("UNIQUE CHARS = " + letters.size());
 		}
 		//return temp;
@@ -108,7 +108,7 @@ public class ConvertFASTA {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("C:\\Users\\Manjusri\\Desktop\\mtDNA").listFiles();
+	    File[] files = new File("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA").listFiles();
 	    showFiles(files);
 	}
 	
