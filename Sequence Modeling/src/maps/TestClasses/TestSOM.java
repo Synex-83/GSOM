@@ -22,7 +22,7 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\humanCSV.txt", 1);
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\D38113.txt", 1);
 		//System.out.println(fp.readFile());
 		/*	
 		for(int j = 4; j <=5 ; j++)
