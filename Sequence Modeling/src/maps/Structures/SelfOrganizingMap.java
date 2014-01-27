@@ -454,7 +454,7 @@ public class SelfOrganizingMap {
 	private void trainSOM() 
 	{
 		String line = "";
-		String sequence = "XXX"; //XXX gt > 3
+		String sequence = "XX"; //XXX gt > 3 XX for 2
 		boolean skipZeroEntries = true;
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
@@ -551,7 +551,7 @@ public class SelfOrganizingMap {
 				{
 					zeroCounter++;
 					
-					if(zeroCounter >= 2) //2 for gt > 3
+					if(zeroCounter >= 1) //2 for gt > 3
 						skipZeroEntries = false;
 				}
 
@@ -1165,7 +1165,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.5,0.33,0.17};//{0.7,0.3} -- for 2
+		double mean[] = {0.6,0.4};//{0.5,0.33,0.17}; -- for 3
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];
