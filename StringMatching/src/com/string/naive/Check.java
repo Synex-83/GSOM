@@ -293,7 +293,7 @@ public class Check {
 		
 		
 		
-		String p = "ACCCCAAAAAA";
+		String p = "ACCCCAAAAA";
 		
 		NaiveStringMatching nv = new NaiveStringMatching(s, p);
 		nv.count();
