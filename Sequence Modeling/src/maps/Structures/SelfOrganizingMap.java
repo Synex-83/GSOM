@@ -83,9 +83,14 @@ public class SelfOrganizingMap {
 	 * @param threshold the solidification threshold
 	 * @param iteration the number of iterations
 	 * @param vector choice of weight vector.
+	 * 
+	 * Basic constructor for the self-organizing maps algorithms. 
+	 * ENTRY POINT FOR THE ENTIRE ALGORITHM
 	 */
 	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
 	{
+		//The number of elements in the weight vector used in the weighted covariance matrix is directly proportional 
+		//to the number of attributes in the input vector.
 		
 		if(vector ==0)
 		{
@@ -117,19 +122,16 @@ public class SelfOrganizingMap {
 			double temp[] =  {0.19,0.13,0.1250,0.1150,0.1,0.090,0.080,0.065,0.050,0.025,0.015,0.010,0.005};
 			VECTOR_WEIGHTS = temp;
 		}
-		else if(vector == 6) //Protein
+		else if(vector == 6) 
 		{
 			double temp[] =  {0.001,0.005,0.01,0.015,0.02,0.025,0.03,0.035,0.04,0.045,0.05,0.055,0.06,0.065,0.07,0.075,0.084,0.09,0.1,0.125};
 			VECTOR_WEIGHTS = temp;
 		}
-
-			
 		
-		
-		INPUT_DIMENSION = inputDimensison;
-		IS_MATRIX_MODE = isMatrixMode;
-		COVARIANCE_NUMBER = covarianceNumber;
-		ALPHA = setAlpha();
+		INPUT_DIMENSION = inputDimensison; //Input dimensions of the input vector
+		IS_MATRIX_MODE = isMatrixMode; //whether the SOM weights are vector or matrix based
+		COVARIANCE_NUMBER = covarianceNumber; //number of vectors participating in a covariance matrix
+		ALPHA = setAlpha(); //calculates the constant of the weighted covariance equation
 		THRESHOLD = threshold; ///for two
 		
 		int side = (int)Math.sqrt(numberOfNodes);
@@ -139,26 +141,23 @@ public class SelfOrganizingMap {
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
 		
-		FSM = new FiniteStateMachine(threshold, iteration, vector);
+		FSM = new FiniteStateMachine(threshold, iteration, vector); //initiates a new FSM which essentially creates the V layer
 		
-
-		
-
-		
+		//The initialization of the SOM is different based on the type of structure used to hold node weights.
 		if(IS_MATRIX_MODE)
 		{
-			initializeMatrix();			
+			initializeMatrix();		//initializes the matrix mode SOM
 		}
 		else
 		{
-			initialize();
+			initialize();	//initializes the vector mode SOM - Classical SOM
 		}
-
-		RADIUS = MAX_RADIUS;
+		
+		RADIUS = MAX_RADIUS; //Sets the effective radius of the neighborhood 
 	}
 	
 	/**
-	 * @return
+	 * @return the constant part of weighted covariance calculation
 	 */
 	private double setAlpha() {
 		double squaredMean = 0;
@@ -174,7 +173,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param a
 	 * @param b
-	 * @return
+	 * @return the vector dot product
 	 */
 	private double multiply(ArrayRealVector a, ArrayRealVector b)
 	{
@@ -187,7 +186,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param weightMatrix
 	 * @param covariance
-	 * @return
+	 * @return the norm between the weight matrix and the weighted covariance matrix
 	 */
 	private double multiply(Array2DRowRealMatrix weightMatrix,Array2DRowRealMatrix covariance, int option)
 	{
@@ -198,15 +197,13 @@ public class SelfOrganizingMap {
 		{
 			distanceValue = difference.getNorm(); // 1 - norm => max column value
 		}
-		else  if(option == 1)
+		else  if(option == 1) // calculation of infinity - norm => max row value
 		{
 			double tempRowValue = 0;
 			double maxRowValue = 0;
 			
 			for(int i = 0; i < difference.getRowDimension() ; i++)
-			{
-				// calculation of infinity - norm => max row value
-				
+			{				
 				tempRowValue = 0;
 				
 				for(int j = 0; j < difference.getColumnDimension() ; j++)
@@ -267,7 +264,7 @@ public class SelfOrganizingMap {
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
 			//PREVIOUS = null;
-			singleCompleteRun();
+			singleCompleteRun(); //executes a single iteration of the SOM
 			CURRENT_ITERATION++;
 			
 		//	CURRENT_PRESENTATION_NUMBER++;
@@ -301,10 +298,12 @@ public class SelfOrganizingMap {
 
 
 	/**
-	 * 
+	 *  Executes a single iteration of the SOM algorithm. 
 	 */
 	private void singleCompleteRun()
 	{
+		//The invocation of the iterations are different based on the mode of the weight vectors.
+		
 		if(IS_MATRIX_MODE)
 		{
 			trainSOM();
@@ -376,6 +375,7 @@ public class SelfOrganizingMap {
 	/**
 	 * Tests the generated SOM in matrix mode input.
 	 */
+	@SuppressWarnings("unused")
 	private void testSOM()
 	{
 		String line = "";
@@ -449,13 +449,15 @@ public class SelfOrganizingMap {
 	}
 	
 	/**
-	 * Performs a single iteration of SOM training in matrix mode
+	 * Performs a single iteration of SOM training in matrix mode.
 	 */
 	private void trainSOM() 
 	{
 		String line = "";
-		String sequence = "XX"; //XXX gt > 3 XX for 2
-		boolean skipZeroEntries = true;
+		// The value of variable sequence has to be changed to XX when the covariance number is 2 and to XXX when
+		// the covariance number is 3 or greater.
+		String sequence = "XX";
+		boolean skipZeroEntries = true; //switch to take off X entries from the subsequence generated
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
 		Node winner = null;
@@ -511,7 +513,7 @@ public class SelfOrganizingMap {
 					temp[COVARIANCE_NUMBER-1][i-2] = Double.parseDouble(inputVector[i]);					
 				}
 						
-				if(!skipZeroEntries)
+				if(!skipZeroEntries && !sequence.contains("X")) //to avoid the X in the middle checking breaks
 				{
 					covariance = generateCovarainceMatrix(temp);
 					CURRENT_PRESENTATION_NUMBER++;
@@ -520,36 +522,28 @@ public class SelfOrganizingMap {
 					
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
-					calculateIntensityContribution(winner,1); // calculates the intensity values
-					
-					
-					if(sequence.equals("GA") & CURRENT_ITERATION >= 90 )
-					{
-						System.out.println("X = " + winner.getX() + " Y = "+winner.getY() + " HITS = " + winner.getNumberOfHits());
-					}
-					
+					//calculateIntensityContribution(winner,1); // calculates the intensity values
+										
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
 					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
 					
 					FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
-					
 					FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					
-	
 					PREV_COVARIANCE.add(covariance);
 					PREVIOUS = current;
 					current = null;
 					
-					
-					tempcounter++;
-					
-				//	System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-				//	System.out.println("=============================== " + tempcounter);
+					tempcounter++;					
 				}
 				else
 				{
 					zeroCounter++;
+					
+					/* Needs to skip 1 entry if the covaraince number is 1 else two if the number is 3. For any other
+					 * number the value is set to n-1.
+					 */
 					
 					if(zeroCounter >= 1) //2 for gt > 3
 						skipZeroEntries = false;
@@ -562,6 +556,7 @@ public class SelfOrganizingMap {
 	/**
 	 * @param covariance
 	 */
+	@SuppressWarnings("unused")
 	private void covarianceExists(Array2DRowRealMatrix covariance) 
 	{
 	//	System.out.println(PREV_COVARIANCE.size());
@@ -1087,6 +1082,7 @@ public class SelfOrganizingMap {
 	 * @param dataMatrix
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private Array2DRowRealMatrix calculateWeightedCovarianceCorrected(double[] weightedMean, Array2DRowRealMatrix dataMatrix)
 	{
 		Array2DRowRealMatrix covariance = new Array2DRowRealMatrix(dataMatrix.getColumnDimension(),dataMatrix.getColumnDimension());
@@ -1183,6 +1179,7 @@ public class SelfOrganizingMap {
 	 * @param dataMatrix
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private double[] calculateWeightedMeanCorrect(Array2DRowRealMatrix dataMatrix){
 			
 		double temp[][] = new double[dataMatrix.getColumnDimension()][dataMatrix.getColumnDimension()];
@@ -1224,6 +1221,7 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private void createUMatrix()
 	{	
 		int a = 0; // 2x + 1
@@ -1422,7 +1420,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("E:\\DIRT\\csv\\KOHEN-R.csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\2gameCompact.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
@@ -1442,6 +1440,7 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unused")
     private void exportUMatrixToCSV()
     {
 		BufferedWriter bw = null;
@@ -1469,6 +1468,7 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
+    @SuppressWarnings("unused")
 	private void displayHitNodesAndSequences()
 	{
 		
