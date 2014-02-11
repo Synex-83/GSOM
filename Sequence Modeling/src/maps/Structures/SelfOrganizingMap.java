@@ -676,7 +676,7 @@ public class SelfOrganizingMap {
 				
 				tempcounter++;
 				
-				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY() + (new ArrayRealVector(temp)).toString());
 				System.out.println("=============================== " + tempcounter);
 /*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
@@ -1277,7 +1277,7 @@ public class SelfOrganizingMap {
 	 * @param d
 	 * @return
 	 */
-	private double getAverageUMatixNeighbour(int b, int d) {
+	private double getAverageUMatixNeighbour(int b, int d) { //for vectors
 		
 		double value = 0;
 		int numOfNeighbours = 0;
@@ -1323,7 +1323,7 @@ public class SelfOrganizingMap {
 	 * @param d
 	 * @return
 	 */
-	private double getAverageSOMNeighbour(int b, int d)
+	private double getAverageSOMNeighbour(int b, int d) //for matrices??
 	{
 		double value = 0;
 		int numOfNeighbours = 0;
@@ -1342,7 +1342,8 @@ public class SelfOrganizingMap {
 				{
 					if(i != b && j != d)
 					{
-						temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
+						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						//((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
 						medianArray[counter] = temp;
 						value += temp;
 						numOfNeighbours++;
