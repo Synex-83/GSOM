@@ -22,7 +22,7 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\vectors\\ty.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\vectors\\tz.txt", 1); //2gameCompact.txt
 
 		//for matrix based learning
 		//SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,50,0,4);
