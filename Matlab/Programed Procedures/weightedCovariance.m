@@ -5,8 +5,8 @@ function [y] = weightedCovariance(x,w)
     alpha = 0;
     covariance = zeros(size(x,2));
    % if size(inputVector,2) == size(weightValues,2)
-        alpha = calculateAlpha(w)
-        meanVector = [0.6,0.3,0.1] %weightedMean(w,x)
+        alpha = calculateAlpha(w);
+        meanVector = weightedMean(w,x) %[0.6,0.3,0.1]; 
          
         for i = 1:size(covariance)
             for j = 1:size(covariance)
