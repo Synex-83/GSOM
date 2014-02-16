@@ -6,7 +6,7 @@ function [z] = weightedMean(w,x)
     if size(weights,2) == size(inputs,2)
         for i = 1:d,
             for j = 1:size(meanV,2)
-                meanV(1,j) = meanV(1,j) + weights(1,j)*inputs(i,j);
+               meanV(1,j) =  meanV(1,j) + weights(1,i)*inputs(i,j);
             end
         end
         
