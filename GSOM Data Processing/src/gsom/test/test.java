@@ -52,7 +52,7 @@ public class test {
 	
 	public static void main(String args[])
 	{
-	    File[] files = new File("E:\\PhD\\My Data\\01.Randa Rasanga").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\24.Sura").listFiles();
 	    showFiles(files,1);
 
 	}
