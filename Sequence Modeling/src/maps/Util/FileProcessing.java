@@ -78,7 +78,7 @@ public class FileProcessing {
 			}
 		}
 		
-		return (dimension - 1); // -1 for only the vector number -2 for vector number and the label
+		return (dimension - 2); // -1 for only the vector number -2 for vector number and the label
 	}
 	
 	/**

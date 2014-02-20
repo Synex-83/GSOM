@@ -1342,8 +1342,8 @@ public class SelfOrganizingMap {
 				{
 					if(i != b && j != d)
 					{
-						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
-						//((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
+						//temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
 						medianArray[counter] = temp;
 						value += temp;
 						numOfNeighbours++;
