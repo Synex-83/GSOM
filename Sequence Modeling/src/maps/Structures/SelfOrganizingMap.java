@@ -528,8 +528,8 @@ public class SelfOrganizingMap {
 					
 					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
 					
-					FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
-					FSM.updateEdgeIntensity(current, PREVIOUS, winner);
+					//FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
+					//FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					
 					PREV_COVARIANCE.add(covariance);
 					PREVIOUS = current;
