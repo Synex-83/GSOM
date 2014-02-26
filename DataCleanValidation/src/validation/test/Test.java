@@ -43,7 +43,7 @@ public class Test {
 					}
 				} else {
 		            //System.out.println("File: " + file.getName());
-		            if(filename.contains(".rgd"))
+		            if(filename.contains("output42.txt"))
 		            {
 		            	mz.validateGameData(filename,file.getParent());
 		            }
@@ -57,7 +57,7 @@ public class Test {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-	    File[] files = new File("E:\\PhD\\My Data\\30.Dawpadee Kiriella [incomplete data]").listFiles();
+	    File[] files = new File("E:\\PhD\\My Data\\12.Lalindu").listFiles();
 	    showFiles(files,1);
 	}
 
