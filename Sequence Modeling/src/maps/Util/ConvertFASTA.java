@@ -19,7 +19,7 @@ import java.util.Iterator;
  *
  */
 public class ConvertFASTA {
-	private static String FILE_LOCATION =  "C:\\Users\\Manjusri\\Desktop\\mtDNA\\blue whale - X72204.txt";
+	private static String FILE_LOCATION =  "C:\\Users\\Manjusri\\Desktop\\mtDNA\\gray seal - X72004.txt";
 	private String DELIMETER = " ";
 	private static BufferedReader BR = null;
 	static FileWriter write = null;
