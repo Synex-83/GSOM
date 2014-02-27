@@ -263,6 +263,7 @@ public class SelfOrganizingMap {
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
+			System.out.println("HERE 2");
 			//PREVIOUS = null;
 			singleCompleteRun(); //executes a single iteration of the SOM
 			CURRENT_ITERATION++;
@@ -469,6 +470,8 @@ public class SelfOrganizingMap {
 		first.nextToken();	
 		int tempcounter = 0;
 		
+		System.out.println("LENGTH =============================== " + INPUT_SAMPLES.length());
+		
 		while(first.hasMoreTokens())
 		{
 			/* 
@@ -497,6 +500,7 @@ public class SelfOrganizingMap {
 				if(sequence.length() < 6)
 				{
 					sequence = sequence.substring(1).concat(inputVector[1].toString());
+					System.out.println(sequence);
 				}
 				else
 				{
