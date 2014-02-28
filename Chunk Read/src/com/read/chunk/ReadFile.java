@@ -50,9 +50,10 @@ public class ReadFile {
 				{
 					tr[1] = strLine;
 				
+					if(j==100){
 					System.out.println(tr[0] + "\n" + tr[1]);
 					System.out.println("++++++++++++++++++++++" + j);
-				
+					}
 					tr[0] = tr[1];
 					//temp += strLine + "\n";
 					//System.out.println(strLine);
