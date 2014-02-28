@@ -6,9 +6,11 @@ package maps.Structures;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -245,6 +247,125 @@ public class SelfOrganizingMap {
 		return distanceValue;
 	}
 
+	/**
+	 * @param input
+	 * @param iterations
+	 * @param learningRate
+	 * 
+	 * The memory efficient version of  {@link #initTrainSOM(String, int, double)}
+	 */
+	public void initTrainSOMMemoryEfficient(String fileLocation, int iterations, double learningRate)
+	{
+
+		NUMER_OF_ITERATIONS = iterations;
+		INITIAL_LEARNING_RATE = learningRate;
+		LEARNING_RATE = INITIAL_LEARNING_RATE;
+		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
+
+		System.out.println("HERE 2");
+		trainSOMMemoryEfficient(fileLocation); 
+		
+		FSM.printSummary();
+		extractSmallerUMatrix();
+		exportSmallUMatrixToCSV();
+	}
+	
+	private void trainSOMMemoryEfficient(String fileLocation) 
+	{
+		String line = "";
+		// The value of variable sequence has to be changed to XX when the covariance number is 2 and to XXX when
+		// the covariance number is 3 or greater.
+		String sequence = "XX";
+		boolean skipZeroEntries = true; //switch to take off X entries from the subsequence generated
+		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
+		Array2DRowRealMatrix covariance = null;
+		Node winner = null;
+		FSMNode current = null;
+		int zeroCounter = 0;
+		BufferedReader BR = null;
+		int counter = 0;
+		
+		//System.out.println("LENGTH =============================== " + INPUT_SAMPLES.length());
+		
+		try{
+		
+		//================================================================================================
+			for(int k = 0; k <= NUMER_OF_ITERATIONS; k++)
+			{
+				FileReader file = new FileReader(fileLocation);
+				BR = new BufferedReader(file);
+				String strLine = null;
+				BR.readLine();
+				counter = 0;
+				while((strLine = BR.readLine()) != null)
+				{
+					counter++;
+					for(int j = 0; j < COVARIANCE_NUMBER; j++)
+					{
+						if( (j + 1) < COVARIANCE_NUMBER)
+						{
+							temp[j] = temp[j+1];
+						}
+						else
+						{
+							temp[j] = new double[INPUT_DIMENSION];
+						}					
+					}
+					
+					line = strLine;
+					if(!line.contains("####"))
+					{
+						String[] inputVector = line.split("\t");
+
+						sequence = sequence.substring(1).concat(inputVector[1].toString());
+
+									
+						//System.out.println("===========================SEQUENCE============================" + sequence);
+						/* 
+						 * The following loop fills in the last element of the sliding window with the latest input
+						 * vector element encountered. All the past input vectors are shifted up by one element.
+						 */
+						for(int i = 2; i < inputVector.length; i++)
+						{
+							temp[COVARIANCE_NUMBER-1][i-2] = Double.parseDouble(inputVector[i]);					
+						}
+								
+						if(!skipZeroEntries && !sequence.contains("X")) //to avoid the X in the middle checking breaks
+						{
+							covariance = generateCovarainceMatrix(temp);
+							
+							winner = setAccumulatedValue(covariance,sequence);
+							adjustNeighbourhoodOfWinners(winner, covariance);
+							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
+			
+							PREVIOUS = current;
+							current = null;				
+							
+							System.out.println(counter);
+						}
+						else
+						{
+							zeroCounter++;
+							
+							/* Needs to skip 1 entry if the covaraince number is 1 else two if the number is 3. For any other
+							 * number the value is set to n-1.
+							 */
+							
+							if(zeroCounter >= 1) //2 for gt > 3
+								skipZeroEntries = false;
+						}
+
+					}
+				}
+				System.out.println("===============" + k);
+			}
+		//===================================================================================================
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
 	
 	/**
 	 * @param input
@@ -520,7 +641,7 @@ public class SelfOrganizingMap {
 				if(!skipZeroEntries && !sequence.contains("X")) //to avoid the X in the middle checking breaks
 				{
 					covariance = generateCovarainceMatrix(temp);
-					CURRENT_PRESENTATION_NUMBER++;
+					//CURRENT_PRESENTATION_NUMBER++;
 					
 					//covarianceExists(covariance);
 					
@@ -535,7 +656,7 @@ public class SelfOrganizingMap {
 					//FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
 					//FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					
-					PREV_COVARIANCE.add(covariance);
+					//PREV_COVARIANCE.add(covariance);
 					PREVIOUS = current;
 					current = null;
 					

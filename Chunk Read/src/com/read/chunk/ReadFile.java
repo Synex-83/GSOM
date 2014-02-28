@@ -29,8 +29,8 @@ public class ReadFile {
 		int PF = 2;
 		String tr[] = new String[2];
 		
-		tr[0] = "FIRST";
-		tr[1] = "SECONED";
+		tr[0] = "XXX FIRST";
+		tr[1] = "XXX SECONED";
 		
 		try
 		{
