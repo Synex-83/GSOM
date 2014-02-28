@@ -72,6 +72,13 @@ public class FSMNode {
 	}
 	
 	/**
+	 * @return the PREVIOUS_WINNERS
+	 */
+	public ArrayList<Node> getPREVIOUS() {
+		return PREVIOUS_WINNERS;
+	}
+	
+	/**
 	 * @return the OUTGOING_LINKS
 	 */
 	public ArrayList<Integer> getOUTGOING_LINKS() {

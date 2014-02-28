@@ -24,6 +24,7 @@ import maps.Util.FileProcessing;
 public class FiniteStateMachine {
 	
 	private Vector<FSMNode> FSM = null;
+	private Vector<Node> PREVIOUS = null;
 	private Vector<Edge> LINKS = null;
 	private int THRESHOLD = 0;
 	private int ITERATION = 0;
@@ -466,6 +467,25 @@ public class FiniteStateMachine {
 			{
 				System.out.println(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence());
 			}	
+		}
+		
+		System.out.println("********         PREVIOUS WINNERS        ********");
+		Iterator<FSMNode> itr4 = solidNode.iterator();
+		ArrayList<Node> tt = new ArrayList<Node>();
+		
+		while(itr4.hasNext())
+		{
+			temp1 = itr4.next();		
+			
+			tt = temp1.getPREVIOUS();
+			
+			
+			System.out.println("++++++++++++++++++++++++++++  " + temp1.getSequence() + "  ++++++++++++++++++++++++++++");
+			int size =tt.size();
+            for(int j = 0; j < size ; j++)
+            {
+                System.out.println("X = " + tt.get(j).getX() + " Y = " + tt.get(j).getY());
+            }
 		}
 		
 	}
