@@ -299,7 +299,7 @@ public class SelfOrganizingMap {
 				counter = 0;
 				while((strLine = BR.readLine()) != null)
 				{
-					counter++;
+					//counter++;
 					for(int j = 0; j < COVARIANCE_NUMBER; j++)
 					{
 						if( (j + 1) < COVARIANCE_NUMBER)
@@ -341,10 +341,14 @@ public class SelfOrganizingMap {
 							PREVIOUS = current;
 							current = null;				
 							
+<<<<<<< HEAD
 							if(counter%10000 == 0)
 							{
 								System.out.println(counter);
 							}
+=======
+							//System.out.println(counter);
+>>>>>>> edd4be362db79d7daeaede41f927bcb06427f35d
 						}
 						else
 						{
