@@ -572,6 +572,25 @@ public class FiniteStateMachine {
 				}	
 			}
 			
+			System.out.println("********         PREVIOUS WINNERS        ********");
+			Iterator<FSMNode> itr4 = solidNode.iterator();
+			ArrayList<Node> tt = new ArrayList<Node>();
+
+			while(itr4.hasNext())
+			{
+				temp1 = itr4.next();		
+
+				tt = temp1.getPREVIOUS();
+
+
+				System.out.println("++++++++++++++++++++++++++++  " + temp1.getSequence() + "  ++++++++++++++++++++++++++++");
+				int size =tt.size();
+	            for(int j = 0; j < size ; j++)
+	            {
+	                System.out.println("X = " + tt.get(j).getX() + " Y = " + tt.get(j).getY());
+	            }
+			}
+			
 			writer.flush();
 			write.close();
 		}

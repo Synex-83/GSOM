@@ -297,6 +297,9 @@ public class SelfOrganizingMap {
 				String strLine = null;
 				BR.readLine();
 				counter = 0;
+				sequence = "XX";
+				EpochRadiusDecay(k);
+				LearningRateDecay(k);
 				while((strLine = BR.readLine()) != null)
 				{
 					//counter++;
@@ -333,7 +336,7 @@ public class SelfOrganizingMap {
 						if(!skipZeroEntries && !sequence.contains("X")) //to avoid the X in the middle checking breaks
 						{
 							covariance = generateCovarainceMatrix(temp);
-							
+							//System.out.println( sequence + "  " + covariance.toString());
 							winner = setAccumulatedValue(covariance,sequence);
 							adjustNeighbourhoodOfWinners(winner, covariance);
 							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
@@ -358,7 +361,7 @@ public class SelfOrganizingMap {
 
 					}
 				}
-				System.out.println("===============" + k);
+				System.out.println("===============" + k + " LEARNING RATE =" + LEARNING_RATE + "  RADIUS =" +RADIUS );
 			}
 		//===================================================================================================
 		}
@@ -385,7 +388,7 @@ public class SelfOrganizingMap {
 		//DISPLAY_SCREEN.render();
 		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
-			System.out.println("HERE 2");
+			//System.out.println("HERE 2");
 			//PREVIOUS = null;
 			singleCompleteRun(); //executes a single iteration of the SOM
 			CURRENT_ITERATION++;
@@ -592,7 +595,7 @@ public class SelfOrganizingMap {
 		first.nextToken();	
 		int tempcounter = 0;
 		
-		System.out.println("LENGTH =============================== " + INPUT_SAMPLES.length());
+		//System.out.println("LENGTH =============================== " + INPUT_SAMPLES.length());
 		
 		while(first.hasMoreTokens())
 		{
@@ -622,7 +625,7 @@ public class SelfOrganizingMap {
 				if(sequence.length() < 6)
 				{
 					sequence = sequence.substring(1).concat(inputVector[1].toString());
-					System.out.println(sequence);
+					//System.out.println(sequence);
 				}
 				else
 				{
@@ -645,7 +648,7 @@ public class SelfOrganizingMap {
 					//CURRENT_PRESENTATION_NUMBER++;
 					
 					//covarianceExists(covariance);
-					
+					//System.out.println( sequence + "  " + covariance.toString());
 					winner = setAccumulatedValue(covariance,sequence);
 					adjustNeighbourhoodOfWinners(winner, covariance);
 					//calculateIntensityContribution(winner,1); // calculates the intensity values
@@ -1547,7 +1550,7 @@ public class SelfOrganizingMap {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\2gameCompact.csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\TEst.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
