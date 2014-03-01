@@ -341,7 +341,10 @@ public class SelfOrganizingMap {
 							PREVIOUS = current;
 							current = null;				
 							
-							System.out.println(counter);
+							if(counter%10000 == 0)
+							{
+								System.out.println(counter);
+							}
 						}
 						else
 						{
