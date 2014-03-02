@@ -484,7 +484,8 @@ public class FiniteStateMachine {
 			int size =tt.size();
             for(int j = 0; j < size ; j++)
             {
-                System.out.println("X = " + tt.get(j).getX() + " Y = " + tt.get(j).getY());
+                //System.out.println("X = " + tt.get(j).getX() + " Y = " + tt.get(j).getY());
+                System.out.println("X=\t" + tt.get(j).getX() + "\tY=\t" + tt.get(j).getY());
             }
 		}
 		
@@ -572,7 +573,7 @@ public class FiniteStateMachine {
 				}	
 			}
 			
-			System.out.println("********         PREVIOUS WINNERS        ********");
+			System.out.println("********         PREVIOUS WINNERS hh    ********");
 			Iterator<FSMNode> itr4 = solidNode.iterator();
 			ArrayList<Node> tt = new ArrayList<Node>();
 
@@ -587,7 +588,7 @@ public class FiniteStateMachine {
 				int size =tt.size();
 	            for(int j = 0; j < size ; j++)
 	            {
-	                System.out.println("X = " + tt.get(j).getX() + " Y = " + tt.get(j).getY());
+	                System.out.println("X=\t" + tt.get(j).getX() + "\tY=\t" + tt.get(j).getY());
 	            }
 			}
 			
