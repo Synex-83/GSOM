@@ -22,15 +22,15 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\2g.txt"
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\psequences.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("C:\\Users\\User\\Downloads\\MSNBC\\30.txt", 1); //2gameCompact.txt
 
 
 		//for matrix based learning
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,50,0,2);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,50,0,4);
 		
 		System.out.println("HERE 1");
 
-		SOM.initTrainSOMMemoryEfficient("E:\\workspace\\GSOM\\Sequence Modeling\\data\\psequences.txt", 100, 0.25);
+		SOM.initTrainSOMMemoryEfficient("C:\\Users\\User\\Downloads\\MSNBC\\30.txt", 100, 0.25);
 
 		
 		
