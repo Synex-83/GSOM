@@ -5,9 +5,19 @@
 package maps.Util;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
+
+import maps.Structures.Edge;
+import maps.Structures.FSMNode;
+import maps.Structures.Node;
 
 /**
  * @author 		Manjusri Ishwara
@@ -19,6 +29,7 @@ public class FileProcessing {
 	private String FILE_LOCATION =  null;
 	private String DELIMETER = " ";
 	private BufferedReader BR = null;
+	private String FILE_STRING = null;
 	
 	/**
 	 * @param filename as the input file 
@@ -103,7 +114,57 @@ public class FileProcessing {
 		{
 			
 		}
+
+		return temp;
+	}
+	
+	public String readFileLine()
+	{
+		String temp = "";
+	
+		try
+		{
+			FileReader file = new FileReader(FILE_LOCATION);
+			BR = new BufferedReader(file);
+			String strLine = null;
+
+			while((strLine = BR.readLine()) != null)
+			{
+				temp += strLine;
+			}
+		}
+		catch(Exception e)
+		{
+			
+		}
 		
 		return temp;
 	}
+	
+	public void writeFile()
+	{
+		FILE_STRING = readFileLine();
+		
+		FileWriter write = null;
+		
+		try
+		{
+
+			write = new FileWriter("Inoneline-d38112.txt",true);
+			BufferedWriter writer = new BufferedWriter(write);
+			writer.write(FILE_STRING);
+			writer.newLine();
+			writer.flush();
+			write.close();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			System.out.println("DONE");
+		}
+	}
 }
+
