@@ -41,9 +41,12 @@ import sun.awt.windows.ThemeReader;
 public class SelfOrganizingMap {
 	
 
-	
+	// LAYERS
 	private Node[][] SOM = null;
 	private FiniteStateMachine FSM = null;
+	private Node[][] ZERO_MAP = null;
+	
+	// VARIABLES
 	private double[][] NORM_MAP = null; 			//holds the L2 norm of each vector in the SOM[][]
 	private double[][] U_MATRIX = null;
 	private double[][] U_MATRIX_SHRINK = null;
@@ -143,7 +146,8 @@ public class SelfOrganizingMap {
 		NORM_MAP = new double[side][side];
 		MAX_RADIUS = side/2;
 		
-		FSM = new FiniteStateMachine(threshold, iteration, vector); //initiates a new FSM which essentially creates the V layer
+		ZERO_MAP = new Node[side][side]; //initializes the 3d layer to contains sequence draws.		
+		FSM = new FiniteStateMachine(threshold, iteration, vector,ZERO_MAP); //initiates a new FSM which essentially creates the V layer
 		
 		//The initialization of the SOM is different based on the type of structure used to hold node weights.
 		if(IS_MATRIX_MODE)
@@ -339,7 +343,7 @@ public class SelfOrganizingMap {
 							//System.out.println( sequence + "  " + covariance.toString());
 							winner = setAccumulatedValue(covariance,sequence);
 							adjustNeighbourhoodOfWinners(winner, covariance);
-							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
+							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner,LEARNING_RATE,RADIUS);
 			
 							PREVIOUS = current;
 							current = null;				
@@ -394,7 +398,7 @@ public class SelfOrganizingMap {
 			CURRENT_ITERATION++;
 			
 		//	CURRENT_PRESENTATION_NUMBER++;
-			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
+			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ******************");
 		}			
 		
 		//FSM.printLinks();
@@ -417,6 +421,9 @@ public class SelfOrganizingMap {
 		
 	//	exportUMatrixToCSV();
 		exportSmallUMatrixToCSV();
+		
+		extractSmallerUMatrixZERO();
+		exportSmallUMatrixToCSVZERO();
 	//	displayHitNodesAndSequences();
 	//	testSOM();
 
@@ -655,7 +662,7 @@ public class SelfOrganizingMap {
 										
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
-					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner);
+					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS);
 					
 					//FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
 					//FSM.updateEdgeIntensity(current, PREVIOUS, winner);
@@ -1101,7 +1108,7 @@ public class SelfOrganizingMap {
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
-				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,0);
+				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,0,false);
 			}
 		}
 		
@@ -1119,7 +1126,8 @@ public class SelfOrganizingMap {
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
-				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER);
+				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
+				ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
 			}
 		}
 		
@@ -1493,10 +1501,58 @@ public class SelfOrganizingMap {
 			retValue = (medianArray[3] + medianArray[4])/2;
 		}
 		
-		return (value/numOfNeighbours); //put this if average is needed
-	
+		return (value/numOfNeighbours); //put this if average is needed	
 	}
 
+	/**
+	 * @param b
+	 * @param d
+	 * @return
+	 */
+	private double getAverageSOMNeighbourZERO(int b, int d) //for matrices??
+	{
+		double value = 0;
+		int numOfNeighbours = 0;
+		double medianArray[] = new double[8];
+		double retValue = 0;
+		int index = 0;
+		double temp = 0;
+		
+		int counter = 0;
+		
+		for (int i = b - 1; i <= b + 1; i++ )
+		{
+			for(int j = d - 1; j <=d + 1; j++)
+			{
+				if(elementExists(i,j,true))
+				{
+					if(i != b && j != d)
+					{
+						//temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						temp = ((ZERO_MAP[b][d].getWeightMatrix()).subtract(ZERO_MAP[i][j].getWeightMatrix())).getFrobeniusNorm();
+						medianArray[counter] = temp;
+						value += temp;
+						numOfNeighbours++;
+					}
+				}
+			}
+		}
+		
+		Arrays.sort(medianArray);
+		
+		if(numOfNeighbours%2 == 1)
+		{
+			index = numOfNeighbours/2;
+			retValue = medianArray[index];
+		}
+		else if(numOfNeighbours%2 == 0)
+		{
+			retValue = (medianArray[3] + medianArray[4])/2;
+		}
+		
+		return (value/numOfNeighbours); //put this if average is needed	
+	}
+	
 	/**
 	 * @param i
 	 * @param j
@@ -1541,6 +1597,18 @@ public class SelfOrganizingMap {
 		}
 	}
 	
+	private void extractSmallerUMatrixZERO()
+	{
+		for(int i = 0; i < ZERO_MAP.length; i++)
+		{
+			for(int j = 0; j < ZERO_MAP[0].length; j++)
+			{
+				U_MATRIX_SHRINK[i][j] = ZERO_MAP[i][j].getWeightMatrix().getFrobeniusNorm();
+				//getAverageSOMNeighbourZERO(i,j);
+			}
+		}
+	}
+	
 	/**
 	 * 
 	 */
@@ -1551,6 +1619,32 @@ public class SelfOrganizingMap {
 		try
 		{
 			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\TEst.csv",false));
+			
+			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
+				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
+					bw.write(U_MATRIX_SHRINK[i][j] + ",");
+				}
+				bw.newLine();
+			}
+			bw.flush();
+			System.out.println("File Exported - SMALL U.");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void exportSmallUMatrixToCSVZERO()
+	{
+		BufferedWriter bw = null;
+		
+		try
+		{
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\ZERO.csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){

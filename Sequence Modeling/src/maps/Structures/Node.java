@@ -38,21 +38,32 @@ public class Node implements Serializable  {
  	 * @param y as the Y location of the 2D grid
  	 * @param isMatrix as the switch to recognize between the vector based weights and the matrix based weights
  	 * @param covarianceNumber is the number of vectors used to calculate covariance
+ 	 * @param zero represts whether intializing the zero map
  	 */
-	public Node(int Dimensions, int x, int y, boolean isMatrix, int covarianceNumber)
+	public Node(int Dimensions, int x, int y, boolean isMatrix, int covarianceNumber, boolean zero)
 	{
 		DIMENSION = Dimensions;
 		IS_MATRIX = isMatrix;
 		COVARIANCE_NUMBER = covarianceNumber;
 		MAPPED_SEQUENCES = new ArrayList<String>();
 		
-		if(isMatrix)
+		if(!zero)
 		{
-			setWeightVectorMatrix();
+			if(isMatrix)
+			{
+				setWeightVectorMatrix();
+			}
+			else
+			{
+				setWeightVector();
+			}
 		}
 		else
 		{
-			setWeightVector();
+			if(isMatrix)
+			{
+				setWeightVectorZeroMatrix();
+			}
 		}
 		
 		POSITION_X = y;
@@ -191,7 +202,7 @@ public class Node implements Serializable  {
 	}
 	
 	/**
-	 * Set the weight vector according to the number of vectors used to generated the covariance matrix. Initializes 
+	 * Set the weight vector according to the number of vectors used to generate the covariance matrix. Initializes 
 	 * each matrix element to a random value.
 	 */
 	private void setWeightVectorMatrix()
@@ -203,6 +214,25 @@ public class Node implements Serializable  {
 			for(int j = 0; j < COVARIANCE_NUMBER; j++)
 			{
 				temp[i][j] = Math.random();
+			}
+		}
+
+		setWeightMatrix(new Array2DRowRealMatrix(temp));
+	}
+	
+	/**
+	 * Set the weight vector according to the number of vectors used to generate the covariance matrix. Initializes all 
+	 * elements to zero.
+	 */
+	private void setWeightVectorZeroMatrix()
+	{
+		double temp[][] = new double[COVARIANCE_NUMBER][COVARIANCE_NUMBER];
+		
+		for(int i = 0 ; i < COVARIANCE_NUMBER; i++)
+		{
+			for(int j = 0; j < COVARIANCE_NUMBER; j++)
+			{
+				temp[i][j] = 0.0;
 			}
 		}
 

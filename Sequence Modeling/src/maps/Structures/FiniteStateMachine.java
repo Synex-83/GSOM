@@ -13,6 +13,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Vector;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.ArrayRealVector;
+
 import maps.Util.FileProcessing;
 
 /**
@@ -23,6 +26,7 @@ import maps.Util.FileProcessing;
  */
 public class FiniteStateMachine {
 	
+	private Node[][] ZERO_MAP = null;
 	private Vector<FSMNode> FSM = null;
 	private Vector<Node> PREVIOUS = null;
 	private Vector<Edge> LINKS = null;
@@ -33,13 +37,14 @@ public class FiniteStateMachine {
 	private int FILE_OPTION = 0;
 	private int REPEAT= 0;
 	
-	public FiniteStateMachine(int threhold, int iteration, int fileOption)
+	public FiniteStateMachine(int threhold, int iteration, int fileOption, Node[][] map)
 	{
 		FSM = new Vector<FSMNode>();
 		LINKS = new Vector<Edge>();
 		THRESHOLD = threhold;
 		ITERATION = iteration;
 		FILE_OPTION = fileOption;
+		ZERO_MAP = map;
 	}
 
 	/**
@@ -66,7 +71,7 @@ public class FiniteStateMachine {
 	 * Searches the whole vector to verify there is no node with the same sequence. If non is found the new node is appended to the end of the 
 	 * list. If the sequence exists the data in the sequence is updated to suite the new position of the winner.
 	 */
-	public FSMNode addUpdateNode(FSMNode current, FSMNode previous, Node winner)
+	public FSMNode addUpdateNode(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius)
 	{
 		Iterator<FSMNode> itr = FSM.iterator();
 		Boolean addNewNode = true;
@@ -80,7 +85,7 @@ public class FiniteStateMachine {
 			{
 				//System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
 				current = temp; //object equivalence will fix the issue.				
-				update(current,previous,winner); //trigger link update
+				update(current,previous,winner,learningRate,radius); //trigger link update
 				addNewNode = false;
 				break;
 			}
@@ -112,7 +117,7 @@ public class FiniteStateMachine {
 	 * @param temp
 	 * @param winner
 	 */
-	private void update(FSMNode current, FSMNode previous, Node winner) 
+	private void update(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius) 
 	{
 		int distance = 0;
 		current.setFocus(true);
@@ -161,17 +166,121 @@ public class FiniteStateMachine {
 				current.setCurrentWinner(winner);
 			}*/
 			current.setHollow(false);
+						
 			//System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
 		}
 		
+		//Connection with zero layer should happen here. The DDA should be in the SOM class
+		//The condition for the trigger is that both current and previous has to be solid.
+		//Another variable has to be introduced as mark to check whether the node is already represented in the
+		//the zero map and if both are marked then the current learning rate and the radius should be sent to the 
+		//zero map for processing.
+		
+		if(!current.isHollow() && !previous.isHollow() && linkExists(current, previous))
+		{
+			processZeroMap(previous, current, learningRate, radius);
+		}
+		
 	}
-	
+
+	private void processZeroMap(FSMNode prev, FSMNode cur, double learningRate, double radius)
+	{
+		// TODO Auto-generated method stub
+		int Xp = prev.getCurrentWinner().getX();
+		int Xc = cur.getCurrentWinner().getX();
+		int Yp = prev.getCurrentWinner().getY();
+		int Yc = cur.getCurrentWinner().getY();
+		System.out.println("SQ 1 =" + prev.getSequence() + " SQ 2 =" + cur.getSequence() + " ^^^^^^^^^^^^^^^^^^^^^^^");
+		AdaptZeroMap(Xp, Yp, Xc, Yc,
+				(Array2DRowRealMatrix) (prev.getCurrentWinner().getWeightMatrix()).add(cur.getCurrentWinner().getWeightMatrix()).scalarMultiply(0.5*learningRate)
+);
+	}
+
+	private void AdaptZeroMap(int x1, int y1, int x2, int y2, Array2DRowRealMatrix adaptation)
+	{
+		// TODO Auto-generated method stub
+		float m = (float)(y2-y1)/(float)(x2-x1);
+		float x0 = 0;
+		float x_1 = 0;
+		float y0 = 0;
+		float y_1 = 0;
+		
+		
+		
+		System.out.println("X1=" + x1 + " Y1=" + y1 + "\tX2=" + x2 + " Y2=" + y2 + "\tm=" +m + " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		
+		if( Double.isInfinite(m) || m > 1 )
+		{
+			if(y1 < y2)
+			{
+				x0 = x1;
+				y0 = y1;
+				x_1 = x2;
+				y_1 = y2;
+			}
+			else
+			{
+				x0 = x2;
+				y0 = y2;
+				x_1 = x1;
+				y_1 = y1;
+			}
+			
+			float tempX = x0;
+			
+			for(float tempY = y0; tempY <= y_1; tempY++,tempX += 1/m)
+			{
+				System.out.println(Math.round(tempX) + " " + tempY);
+				int i = (int)tempX;
+				int j = (int)tempY;
+				//System.out.println("PRE  ZERO_MAP["+i+"]["+j+"] ->" + ZERO_MAP[i][j].getWeightMatrix().toString());
+				//System.out.println("ADAPTATION ->" + adaptation.toString());
+				ZERO_MAP[i][j].setWeightMatrix(ZERO_MAP[i][j].getWeightMatrix().add(adaptation));
+				//System.out.println("POST ZERO_MAP["+i+"]["+j+"] ->" + ZERO_MAP[i][j].getWeightMatrix().toString());
+				//System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
+			}
+		}
+		else if(m < 1 || m == 1)
+		{
+			if(x1 < x2)
+			{
+				x0 = x1;
+				y0 = y1;
+				x_1 = x2;
+				y_1 = y2;
+			}
+			else
+			{
+				x0 = x2;
+				y0 = y2;
+				x_1 = x1;
+				y_1 = y1;
+			}
+			
+			float tempY = y0;
+			
+			for(float tempX = x0; tempX <= x_1; tempX++,tempY += m)
+			{
+				System.out.println(tempX + " " + Math.round(tempY));
+				
+				int i = (int)tempX;
+				int j = (int)tempY;
+				//System.out.println("PRE  ZERO_MAP["+i+"]["+j+"] ->" + ZERO_MAP[i][j].getWeightMatrix().toString());
+				//System.out.println("ADAPTATION ->" + adaptation.toString());
+				ZERO_MAP[i][j].setWeightMatrix(ZERO_MAP[i][j].getWeightMatrix().add(adaptation));
+				//System.out.println("POST ZERO_MAP["+i+"]["+j+"] ->" + ZERO_MAP[i][j].getWeightMatrix().toString());
+				//System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
+			}
+		}
+		 
+	}
 
 	/**
 	 * @param current
 	 * @param winner
 	 */
-	private void updateLinks(FSMNode current, Node winner) {
+	private void updateLinks(FSMNode current, Node winner)
+	{
 		// TODO Auto-generated method stub
 		
 		ArrayList<Integer> incoming = current.getINCOMING_LINKS();
