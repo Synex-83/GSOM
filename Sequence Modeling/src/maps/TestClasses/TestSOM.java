@@ -36,7 +36,7 @@ public class TestSOM {
 		//SOM.initTrainSOMMemoryEfficient("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\15g.txt", 100, 0.25);
 
 		//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-		SOM.initTrainSOM(fp.readFile(),100,0.25);
+		SOM.initTrainSOM(fp.readFile(),1000,0.25);
 		//trainSOM(fp.readFile());
 		
 	}

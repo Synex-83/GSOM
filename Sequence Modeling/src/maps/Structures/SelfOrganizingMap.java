@@ -928,6 +928,12 @@ public class SelfOrganizingMap {
 		{
 			for(int j = effective_x_min; j <= effective_x_max; j++)
 			{
+				if(CURRENT_ITERATION >=75)
+				{
+					//System.out.println("RADIUS =" + radius);
+					//System.out.print("Neigbourhood ["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
+				}
+				
 				try
 				{
 					distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
@@ -1094,7 +1100,8 @@ public class SelfOrganizingMap {
 		minNode.incrementNumberOfHits();
 		minNode.addMappingSequence(sequence);
 		//printSOM();
-				
+			
+		System.out.println("Winner ["+minNode.getX() +","+ minNode.getY()+"]");
 		return minNode;
 		
 	}
@@ -1128,7 +1135,11 @@ public class SelfOrganizingMap {
 			{ 
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
 				ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
+				
+				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
+			
+			System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
@@ -1603,8 +1614,10 @@ public class SelfOrganizingMap {
 		{
 			for(int j = 0; j < ZERO_MAP[0].length; j++)
 			{
-				U_MATRIX_SHRINK[i][j] = ZERO_MAP[i][j].getWeightMatrix().getFrobeniusNorm();
-				//getAverageSOMNeighbourZERO(i,j);
+				U_MATRIX_SHRINK[j][i] = getAverageSOMNeighbourZERO(i,j);
+						
+						//ZERO_MAP[i][j].getWeightMatrix().getFrobeniusNorm();
+				//
 			}
 		}
 	}

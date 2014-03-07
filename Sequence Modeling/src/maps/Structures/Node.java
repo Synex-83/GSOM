@@ -65,7 +65,7 @@ public class Node implements Serializable  {
 				setWeightVectorZeroMatrix();
 			}
 		}
-		
+		//swap avoids the complexity of row major column major issue associated with the 2-D arrays in this program
 		POSITION_X = y;
 		POSITION_Y = x;
 	}

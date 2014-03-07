@@ -230,7 +230,7 @@ public class FiniteStateMachine {
 			
 			for(float tempY = y0; tempY <= y_1; tempY++,tempX += 1/m)
 			{
-				System.out.println(Math.round(tempX) + " " + tempY);
+				//System.out.println(Math.round(tempX) + " " + tempY);
 				int i = (int)tempX;
 				int j = (int)tempY;
 				//System.out.println("PRE  ZERO_MAP["+i+"]["+j+"] ->" + ZERO_MAP[i][j].getWeightMatrix().toString());
@@ -261,7 +261,7 @@ public class FiniteStateMachine {
 			
 			for(float tempX = x0; tempX <= x_1; tempX++,tempY += m)
 			{
-				System.out.println(tempX + " " + Math.round(tempY));
+				//System.out.println(tempX + " " + Math.round(tempY));
 				
 				int i = (int)tempX;
 				int j = (int)tempY;
