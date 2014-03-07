@@ -271,7 +271,7 @@ public class SelfOrganizingMap {
 		
 		FSM.printSummary();
 		extractSmallerUMatrix();
-		exportSmallUMatrixToCSV();
+		//exportSmallUMatrixToCSV();
 	}
 	
 	private void trainSOMMemoryEfficient(String fileLocation) 
@@ -397,6 +397,14 @@ public class SelfOrganizingMap {
 			singleCompleteRun(); //executes a single iteration of the SOM
 			CURRENT_ITERATION++;
 			
+			if((i%100)== 0)
+			{
+				extractSmallerUMatrix();
+				exportSmallUMatrixToCSV(i);
+							
+				extractSmallerUMatrixZERO();
+				exportSmallUMatrixToCSVZERO(i);
+			}
 		//	CURRENT_PRESENTATION_NUMBER++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ******************");
 		}			
@@ -406,7 +414,7 @@ public class SelfOrganizingMap {
 		//FSM.writeSummaryToFile();
 		
 	//	createUMatrix();
-		extractSmallerUMatrix();
+	//	extractSmallerUMatrix();
 		
 /*		for(int i = 0; i < U_MATRIX.length; i++)
 		{
@@ -420,10 +428,10 @@ public class SelfOrganizingMap {
 		}*/
 		
 	//	exportUMatrixToCSV();
-		exportSmallUMatrixToCSV();
+	//	exportSmallUMatrixToCSV();
 		
-		extractSmallerUMatrixZERO();
-		exportSmallUMatrixToCSVZERO();
+	//	extractSmallerUMatrixZERO();
+	//	exportSmallUMatrixToCSVZERO();
 	//	displayHitNodesAndSequences();
 	//	testSOM();
 
@@ -589,7 +597,7 @@ public class SelfOrganizingMap {
 		String line = "";
 		// The value of variable sequence has to be changed to XX when the covariance number is 2 and to XXX when
 		// the covariance number is 3 or greater.
-		String sequence = "XX";
+		String sequence = "XXX";
 		boolean skipZeroEntries = true; //switch to take off X entries from the subsequence generated
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
@@ -681,7 +689,7 @@ public class SelfOrganizingMap {
 					 * number the value is set to n-1.
 					 */
 					
-					if(zeroCounter >= 1) //2 for gt > 3
+					if(zeroCounter >= 2) //2 for gt > 3
 						skipZeroEntries = false;
 				}
 
@@ -1101,7 +1109,7 @@ public class SelfOrganizingMap {
 		minNode.addMappingSequence(sequence);
 		//printSOM();
 			
-		System.out.println("Winner ["+minNode.getX() +","+ minNode.getY()+"]");
+		//System.out.println("Winner ["+minNode.getX() +","+ minNode.getY()+"]");
 		return minNode;
 		
 	}
@@ -1309,7 +1317,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.6,0.4};//{0.5,0.33,0.17}; -- for 3
+		double mean[] = {0.5,0.33,0.17};//{0.6,0.4}; -- for 2
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];
@@ -1614,9 +1622,11 @@ public class SelfOrganizingMap {
 		{
 			for(int j = 0; j < ZERO_MAP[0].length; j++)
 			{
-				U_MATRIX_SHRINK[j][i] = getAverageSOMNeighbourZERO(i,j);
+				U_MATRIX_SHRINK[i][j] = ZERO_MAP[i][j].getWeightMatrix().getFrobeniusNorm();
+				
+				//getAverageSOMNeighbourZERO(i,j);
 						
-						//ZERO_MAP[i][j].getWeightMatrix().getFrobeniusNorm();
+						//
 				//
 			}
 		}
@@ -1625,13 +1635,13 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
-	private void exportSmallUMatrixToCSV()
+	private void exportSmallUMatrixToCSV(int iteration)
 	{
 		BufferedWriter bw = null;
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\TEst.csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\TEst-"+iteration+".csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
@@ -1651,13 +1661,13 @@ public class SelfOrganizingMap {
 	/**
 	 * 
 	 */
-	private void exportSmallUMatrixToCSVZERO()
+	private void exportSmallUMatrixToCSVZERO(int iteration)
 	{
 		BufferedWriter bw = null;
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\ZERO.csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\ZERO-"+iteration+".csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){

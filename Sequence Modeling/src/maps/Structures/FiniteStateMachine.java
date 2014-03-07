@@ -190,7 +190,7 @@ public class FiniteStateMachine {
 		int Xc = cur.getCurrentWinner().getX();
 		int Yp = prev.getCurrentWinner().getY();
 		int Yc = cur.getCurrentWinner().getY();
-		System.out.println("SQ 1 =" + prev.getSequence() + " SQ 2 =" + cur.getSequence() + " ^^^^^^^^^^^^^^^^^^^^^^^");
+		//System.out.println("SQ 1 =" + prev.getSequence() + " SQ 2 =" + cur.getSequence() + " ^^^^^^^^^^^^^^^^^^^^^^^");
 		AdaptZeroMap(Xp, Yp, Xc, Yc,
 				(Array2DRowRealMatrix) (prev.getCurrentWinner().getWeightMatrix()).add(cur.getCurrentWinner().getWeightMatrix()).scalarMultiply(0.5*learningRate)
 );
@@ -207,7 +207,7 @@ public class FiniteStateMachine {
 		
 		
 		
-		System.out.println("X1=" + x1 + " Y1=" + y1 + "\tX2=" + x2 + " Y2=" + y2 + "\tm=" +m + " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		//System.out.println("X1=" + x1 + " Y1=" + y1 + "\tX2=" + x2 + " Y2=" + y2 + "\tm=" +m + " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		
 		if( Double.isInfinite(m) || m > 1 )
 		{
@@ -531,7 +531,9 @@ public class FiniteStateMachine {
 
 			if(!temp1.isHollow())
 			{
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + "\tY =" + temp1.getCurrentWinner().getY() + "\tHITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
+				//encountered when developing. Refer Node class comment on line 68.
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
 				solidNode.add(temp1);
 				
 			}
@@ -661,7 +663,10 @@ public class FiniteStateMachine {
 
 				if(!temp1.isHollow())
 				{
-					writer.write("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + " Y =" + temp1.getCurrentWinner().getY() + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
+					
+					//the use of Y values to display X and vice verse is to compensate for the intial array problem 
+					//encountered when developing. Refer Node class comment on line 68.
+					writer.write("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
 					writer.newLine();
 					solidNode.add(temp1);
 				
