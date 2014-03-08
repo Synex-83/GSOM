@@ -5,6 +5,7 @@ package maps.Structures;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Vector;
 
 
 /**
@@ -32,10 +33,12 @@ public class FSMNode {
 	private ArrayList<repeatNode> REPEAT = new ArrayList<FSMNode.repeatNode>();
 	
 	private String SEQUENCE = "";
+	private String EFFECTIVE_SEQUENCE = "";
 	private int GROWTH_RADIUS = 0;
 	private boolean FOCUS = false;
 	private boolean HOLLOW = true;
 	private boolean IS_REPEAT = false;
+	private boolean IS_COMPOUND = false;
 	
 	private Node CURRENT_WINNER = null;
 	
@@ -115,6 +118,14 @@ public class FSMNode {
 		SEQUENCE = s;
 	}
 	
+	public String getEffectiveSequence() {
+		return EFFECTIVE_SEQUENCE;
+	}
+
+	public void setEffectiveSequence(String sequence) {
+		EFFECTIVE_SEQUENCE = sequence;
+	}
+
 	/**
 	 * @return the GROWTH_RADIUS
 	 */
@@ -139,7 +150,8 @@ public class FSMNode {
 	/**
 	 * @param cURRENT_WINNER the winner to set
 	 */
-	public void setCurrentWinner(Node winner) {
+	public void setCurrentWinner(Node winner) 
+	{
 		//System.out.println("PREVIOUS WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
 		PREVIOUS_WINNERS.add(CURRENT_WINNER);
 		CURRENT_WINNER = winner;
@@ -148,7 +160,8 @@ public class FSMNode {
 		IS_REPEAT = false; //reinitilizes the repeater with the movement of the node to new location.
 		REPEAT.clear();
 	}
-	
+
+
 	/**
 	 * @param winner
 	 */
@@ -201,6 +214,20 @@ public class FSMNode {
 	 */
 	public boolean isRepeat() {
 		return IS_REPEAT;
+	}
+
+	/**
+	 * @return
+	 */
+	public boolean isCOMPOUND() {
+		return IS_COMPOUND;
+	}
+
+	/**
+	 * @param value
+	 */
+	public void setCOMPOUND(boolean value) {
+		IS_COMPOUND = value;
 	}
 
 	/**

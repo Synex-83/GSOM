@@ -587,7 +587,7 @@ public class SelfOrganizingMap {
 		String line = "";
 		// The value of variable sequence has to be changed to XX when the covariance number is 2 and to XXX when
 		// the covariance number is 3 or greater.
-		String sequence = "XXX";
+		String sequence = "XX";
 		boolean skipZeroEntries = true; //switch to take off X entries from the subsequence generated
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
@@ -679,7 +679,7 @@ public class SelfOrganizingMap {
 					 * number the value is set to n-1.
 					 */
 					
-					if(zeroCounter >= 2) //2 for gt > 3
+					if(zeroCounter >= 1) //2 for gt > 3
 						skipZeroEntries = false;
 				}
 
@@ -1307,7 +1307,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.5,0.33,0.17};//{0.6,0.4}; -- for 2
+		double mean[] = {0.6,0.4};;// {0.5,0.33,0.17}-- for 3
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];

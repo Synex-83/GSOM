@@ -27,11 +27,11 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt"
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\repeat.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\A.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,50,0,2);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,50,0,3);
 		
 		System.out.println("HERE 3");
 

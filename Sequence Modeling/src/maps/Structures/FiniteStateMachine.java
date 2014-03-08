@@ -25,8 +25,11 @@ public class FiniteStateMachine {
 	private Vector<FSMNode> FSM = null;
 	private Vector<Node> PREVIOUS = null;
 	private Vector<Edge> LINKS = null;
+	private Vector<FSMNode> COMPOUND_NODES = null;
+	private FSMNode CURRENT_COMPOUND = null;
 	private int THRESHOLD = 0;
 	private int ITERATION = 0;
+	private int COMPOUND_COUNTER = 0; //zero means not a compound match > 0 means the compound node has to be used.
 	
 	private int LINK_NUMBERS = 0;
 	private int FILE_OPTION = 0;
@@ -36,6 +39,7 @@ public class FiniteStateMachine {
 	{
 		FSM = new Vector<FSMNode>();
 		LINKS = new Vector<Edge>();
+		COMPOUND_NODES = new Vector<FSMNode>();
 		THRESHOLD = threhold;
 		ITERATION = iteration;
 		FILE_OPTION = fileOption;
@@ -121,8 +125,8 @@ public class FiniteStateMachine {
 		
 		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{
-			
 			current.setCurrentWinner(winner);
+			resetCompoundArrays(current);
 			//once the node moves to the current winner every incoming and outgoing link for this particular
 			//FSM node has to be recalculated.
 			updateLinks(current,winner);
@@ -154,8 +158,7 @@ public class FiniteStateMachine {
 		//System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
 		
 		if(current.getCurrentWinner().getNumberOfHits() >= THRESHOLD && current.isHollow())
-		{
-			
+		{			
 /*			if(previous==null)
 			{
 				current.setCurrentWinner(winner);
@@ -173,11 +176,87 @@ public class FiniteStateMachine {
 		
 		if(!current.isHollow() && !previous.isHollow() && linkExists(current, previous))
 		{
+			processCompound(previous,current);
 			processZeroMap(previous, current, learningRate, radius);
+			COMPOUND_COUNTER++;
+		}
+		else
+		{
+			COMPOUND_COUNTER = 0;
 		}
 		
 	}
 
+	
+	/**
+	 * @param winner
+	 */
+	private void resetCompoundArrays(FSMNode winner)
+	{
+		Vector<Integer> index = new Vector<Integer>();
+		
+		for(int i = 0; i < COMPOUND_NODES.size(); i++)
+		{
+			if(COMPOUND_NODES.get(i).getSequence().contains(winner.getSequence()))
+			{
+				index.add(i);
+			}
+		}
+		
+		for(int i=0; i < index.size(); i++)
+		{
+			COMPOUND_NODES.remove(index.get(i));
+		}
+		
+		COMPOUND_COUNTER = 0 ;
+		CURRENT_COMPOUND = null;
+	}
+	
+	/**
+	 * @param previous2
+	 * @param current
+	 */
+	private void processCompound(FSMNode prev, FSMNode curr)
+	{
+		boolean exists = false;
+		FSMNode  temp = null;
+		String compoundSequence = "";
+		
+		if(COMPOUND_COUNTER >= 1)
+		{
+			compoundSequence = CURRENT_COMPOUND.getSequence() + curr.getSequence();
+		}
+		else
+		{
+			compoundSequence  = prev.getSequence()+curr.getSequence();
+		}
+		
+		
+		for(int i = 0; i < COMPOUND_NODES.size(); i++)
+		{
+			if(COMPOUND_NODES.get(i).equals(compoundSequence))
+			{
+				exists = true;
+				CURRENT_COMPOUND = COMPOUND_NODES.get(i);
+			}
+		}
+		
+		if(!exists)
+		{
+			temp = new FSMNode(compoundSequence);
+			temp.setCOMPOUND(true);
+			//temp.setEffectiveSequence(compoundSequence.s)
+			COMPOUND_NODES.add(temp);
+			CURRENT_COMPOUND = temp;
+		}
+	}
+
+	/**
+	 * @param prev
+	 * @param cur
+	 * @param learningRate
+	 * @param radius
+	 */
 	private void processZeroMap(FSMNode prev, FSMNode cur, double learningRate, double radius)
 	{
 		// TODO Auto-generated method stub
@@ -509,6 +588,7 @@ public class FiniteStateMachine {
 		Iterator<FSMNode> itr = FSM.iterator();
 		Iterator<FSMNode> itr2 = FSM.iterator();
 		Iterator<FSMNode> itr3 = FSM.iterator();
+		Iterator<FSMNode> itr5 = COMPOUND_NODES.iterator();
 		Queue<FSMNode> solidNode = new LinkedList<FSMNode>();
 		
 		Edge temp = null;
@@ -532,6 +612,12 @@ public class FiniteStateMachine {
 				solidNode.add(temp1);
 				
 			}
+		}
+		System.out.println("********             LONG SEQUENCES                  ********");
+		while(itr5.hasNext())
+		{
+			temp1 = itr5.next();
+			System.out.println("Sequence " + temp1.getSequence() );
 		}
 		
 		System.out.println("********             HOLLOW SEQUENCES                  ********");
@@ -606,6 +692,7 @@ public class FiniteStateMachine {
 		Iterator<Edge> ite = LINKS.iterator();
 		Iterator<FSMNode> itr = FSM.iterator();
 		Iterator<FSMNode> itr2 = FSM.iterator();
+
 		Queue<FSMNode> solidNode = new LinkedList<FSMNode>();
 		
 		Edge temp = null;
