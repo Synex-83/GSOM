@@ -380,7 +380,7 @@ public class SelfOrganizingMap {
 		PRESENTATION_NUMBER = 8*101;
 		INPUT_SAMPLES = input;
 		//DISPLAY_SCREEN.render();
-		for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
+		for(int i = 1; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
 			//System.out.println("HERE 2");
 			//PREVIOUS = null;
@@ -587,7 +587,7 @@ public class SelfOrganizingMap {
 		String line = "";
 		// The value of variable sequence has to be changed to XX when the covariance number is 2 and to XXX when
 		// the covariance number is 3 or greater.
-		String sequence = "XX";
+		String sequence = "XXX";
 		boolean skipZeroEntries = true; //switch to take off X entries from the subsequence generated
 		double temp[][] = new double[COVARIANCE_NUMBER][INPUT_DIMENSION]; 
 		Array2DRowRealMatrix covariance = null;
@@ -675,11 +675,15 @@ public class SelfOrganizingMap {
 				{
 					zeroCounter++;
 					
+					// this is to stop the solid compounds moving through iterations and creating longer compound sequences
+					// than what is actually present in data.
+					FSM.resertCurrentCompound(); 
+					PREVIOUS = null; //resets the previous pointer when data set iteration is complete.
+					
 					/* Needs to skip 1 entry if the covaraince number is 1 else two if the number is 3. For any other
 					 * number the value is set to n-1.
-					 */
-					
-					if(zeroCounter >= 1) //2 for gt > 3
+					 */				
+					if(zeroCounter >= 2) //2 for gt > 3
 						skipZeroEntries = false;
 				}
 
@@ -1307,7 +1311,7 @@ public class SelfOrganizingMap {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.6,0.4};;// {0.5,0.33,0.17}-- for 3
+		double mean[] = {0.5,0.33,0.17};// -- {0.6,0.4} for 2
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];

@@ -62,6 +62,14 @@ public class FiniteStateMachine {
 		FSM = fSM;
 	}
 
+	/**
+	 * 
+	 */
+	public void resertCurrentCompound()
+	{
+		CURRENT_COMPOUND = null;
+		COMPOUND_COUNTER = 0;
+	}
 
 	/**
 	 * @param node
@@ -142,7 +150,7 @@ public class FiniteStateMachine {
 				REPEAT = 0;
 			}
 		}
-		else if((current.getCurrentWinner().equals(winner)) && (previous.getSequence().equals(current.getSequence())))
+		else if(previous!=null && (current.getCurrentWinner().equals(winner)) && (previous.getSequence().equals(current.getSequence())))
 		{
 			REPEAT++;
 			current.addRepeat(REPEAT);
@@ -174,7 +182,7 @@ public class FiniteStateMachine {
 		//the zero map and if both are marked then the current learning rate and the radius should be sent to the 
 		//zero map for processing.
 		
-		if(!current.isHollow() && !previous.isHollow() && linkExists(current, previous))
+		if(previous!=null  && !current.isHollow() && !previous.isHollow() && linkExists(current, previous))
 		{
 			processCompound(previous,current);
 			processZeroMap(previous, current, learningRate, radius);
@@ -193,19 +201,18 @@ public class FiniteStateMachine {
 	 */
 	private void resetCompoundArrays(FSMNode winner)
 	{
-		Vector<Integer> index = new Vector<Integer>();
 		
-		for(int i = 0; i < COMPOUND_NODES.size(); i++)
+		for(int i = COMPOUND_NODES.size() -1 ; i >= 0 ; i--)
 		{
 			if(COMPOUND_NODES.get(i).getSequence().contains(winner.getSequence()))
 			{
-				index.add(i);
+				System.out.println("IDENTIFIED FOR REMOVAL\t" + COMPOUND_NODES.get(i).getSequence() + 
+						" (" + COMPOUND_NODES.get(i).getEffectiveSequence() + 
+						") [" + COMPOUND_NODES.get(i).getCompoundCount() + "] "  + "\tWINNER IS\t" + winner.getSequence());
+				System.out.println("BEFORE =\t" + COMPOUND_NODES.size());
+				COMPOUND_NODES.remove(i);
+				System.out.println("AFTER =\t" + COMPOUND_NODES.size());
 			}
-		}
-		
-		for(int i=0; i < index.size(); i++)
-		{
-			COMPOUND_NODES.remove(index.get(i));
 		}
 		
 		COMPOUND_COUNTER = 0 ;
@@ -224,20 +231,27 @@ public class FiniteStateMachine {
 		
 		if(COMPOUND_COUNTER >= 1)
 		{
-			compoundSequence = CURRENT_COMPOUND.getSequence() + curr.getSequence();
+			compoundSequence = CURRENT_COMPOUND.getSequence() + " -> " +curr.getSequence();
 		}
 		else
 		{
-			compoundSequence  = prev.getSequence()+curr.getSequence();
+			compoundSequence  = prev.getSequence() + " -> " + curr.getSequence();
 		}
 		
 		
 		for(int i = 0; i < COMPOUND_NODES.size(); i++)
 		{
-			if(COMPOUND_NODES.get(i).equals(compoundSequence))
+			if(COMPOUND_NODES.get(i).getSequence().equals(compoundSequence))
 			{
 				exists = true;
 				CURRENT_COMPOUND = COMPOUND_NODES.get(i);
+				CURRENT_COMPOUND.incrementCompoundCount();
+				//System.out.println("HERE");
+				break;
+			}
+			else
+			{
+				//System.out.println("NOT HERE");
 			}
 		}
 		
@@ -245,10 +259,33 @@ public class FiniteStateMachine {
 		{
 			temp = new FSMNode(compoundSequence);
 			temp.setCOMPOUND(true);
-			//temp.setEffectiveSequence(compoundSequence.s)
+			temp.setEffectiveSequence(getEffectiveSequence(prev, curr));
 			COMPOUND_NODES.add(temp);
 			CURRENT_COMPOUND = temp;
+			CURRENT_COMPOUND.incrementCompoundCount();
 		}
+	}
+
+	/**
+	 * @param prev
+	 * @param curr
+	 * @return
+	 */
+	private String getEffectiveSequence(FSMNode prev, FSMNode curr) 
+	{
+		String temp = "";
+		int length = curr.getSequence().length() - 1;
+		
+		if(COMPOUND_COUNTER >=1)
+		{
+			temp = CURRENT_COMPOUND.getEffectiveSequence() + curr.getSequence().substring(length);
+		}
+		else
+		{
+			temp = prev.getSequence() + curr.getSequence().substring(length);
+		}
+		
+		return temp;
 	}
 
 	/**
@@ -270,6 +307,13 @@ public class FiniteStateMachine {
 );
 	}
 
+	/**
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @param adaptation
+	 */
 	private void AdaptZeroMap(int x1, int y1, int x2, int y2, Array2DRowRealMatrix adaptation)
 	{
 		// TODO Auto-generated method stub
@@ -617,7 +661,7 @@ public class FiniteStateMachine {
 		while(itr5.hasNext())
 		{
 			temp1 = itr5.next();
-			System.out.println("Sequence " + temp1.getSequence() );
+			System.out.println("Sequence " + temp1.getSequence() +  " (" + temp1.getEffectiveSequence() + ")  [COUNT " + temp1.getCompoundCount() + "]" );
 		}
 		
 		System.out.println("********             HOLLOW SEQUENCES                  ********");
@@ -627,7 +671,9 @@ public class FiniteStateMachine {
 
 			if(temp1.isHollow())
 			{
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + temp1.getCurrentWinner().getX() + "\tY =" + temp1.getCurrentWinner().getY() + "\tHITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
+				//encountered when developing. Refer Node class comment on line 68.
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
 			//	solidNode.add(temp1);
 				
 			}

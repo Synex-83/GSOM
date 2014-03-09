@@ -22,16 +22,16 @@ public class TestSOM {
 		FileProcessing fp = null;
 		int th = 0;
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\2g.txt"
-		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\15g.txt
+		// E:\\workspace\\GSOM\\Sequence Modeling\\data\\repeat.txt
 		//"C:\\Users\\User\\Desktop\\A.txt"
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt"
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\A.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,50,0,3);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,350,0,4);
 		
 		System.out.println("HERE 3");
 

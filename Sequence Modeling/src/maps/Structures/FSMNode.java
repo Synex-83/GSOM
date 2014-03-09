@@ -39,6 +39,7 @@ public class FSMNode {
 	private boolean HOLLOW = true;
 	private boolean IS_REPEAT = false;
 	private boolean IS_COMPOUND = false;
+	private int COMPOUND_COUNT = 0;
 	
 	private Node CURRENT_WINNER = null;
 	
@@ -250,6 +251,28 @@ public class FSMNode {
 
 			System.out.println("Number " + temp1.repeatNumber + " Hit Count =" + temp1.hitCount);
 		
+		}
+	}
+
+	/**
+	 * @return the COMPOUND_COUNT
+	 */
+	public int getCompoundCount() {
+		return COMPOUND_COUNT;
+	}
+
+	/**
+	 * @param cOMPOUND_COUNT the cOMPOUND_COUNT to set
+	 */
+	public void incrementCompoundCount() {
+		
+		if(this.IS_COMPOUND)
+		{
+			COMPOUND_COUNT++;
+		}
+		else
+		{
+			System.out.println("NON - COMPOUND");
 		}
 	}
 	
