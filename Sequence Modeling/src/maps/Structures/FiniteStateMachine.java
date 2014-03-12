@@ -206,12 +206,12 @@ public class FiniteStateMachine {
 		{
 			if(COMPOUND_NODES.get(i).getSequence().contains(winner.getSequence()))
 			{
-				System.out.println("IDENTIFIED FOR REMOVAL\t" + COMPOUND_NODES.get(i).getSequence() + 
-						" (" + COMPOUND_NODES.get(i).getEffectiveSequence() + 
-						") [" + COMPOUND_NODES.get(i).getCompoundCount() + "] "  + "\tWINNER IS\t" + winner.getSequence());
-				System.out.println("BEFORE =\t" + COMPOUND_NODES.size());
+				//System.out.println("IDENTIFIED FOR REMOVAL\t" + COMPOUND_NODES.get(i).getSequence() + 
+				//		" (" + COMPOUND_NODES.get(i).getEffectiveSequence() + 
+				//		") [" + COMPOUND_NODES.get(i).getCompoundCount() + "] "  + "\tWINNER IS\t" + winner.getSequence());
+				//System.out.println("BEFORE =\t" + COMPOUND_NODES.size());
 				COMPOUND_NODES.remove(i);
-				System.out.println("AFTER =\t" + COMPOUND_NODES.size());
+				//System.out.println("AFTER =\t" + COMPOUND_NODES.size());
 			}
 		}
 		
