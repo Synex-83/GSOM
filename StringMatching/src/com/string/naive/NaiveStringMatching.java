@@ -55,7 +55,7 @@ public class NaiveStringMatching
 				{
 					COUNTER++;
 				//	a.add(i);
-					System.out.println(i+ " ");
+					System.out.print(i+ " ");
 				}
 			}			
 		}
@@ -66,7 +66,7 @@ public class NaiveStringMatching
 		System.out.println("STRING LENGTH = " + INPUT_STRING.length());
 		System.out.println("PATTERN = " + PATTERN + " COUNT = " + COUNTER);
 		System.out.println("PERCENTAGE = " + d);
-		System.out.println("*****************");
+		System.out.println("***********************************************");
 		
 		/*for(int j = 0; j < a.size(); j++)
 		{

@@ -3,6 +3,9 @@
  */
 package com.string.naive;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 import maps.Util.FileProcessing;
 
 /**
@@ -16,31 +19,67 @@ public class Check {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		FileProcessing fp = null;
+		BufferedReader BR = null;
+		String temp = "";
 		
-		//fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt", 1); 
-		//String s1 = fp.readFileLine(); 
+		
+		//====================== NAIVE STRING MATCH FOR SUBSEQUENCES TO RETREIVE INDEX===========================
+		
+		/*fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\harbor seal - X63726.txt", 1); 
+		String s1 = fp.readFileLine(); 
 				
 	
-		fp = new FileProcessing("C:\\Users\\Manjusri\\Desktop\\2.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\gray seal - X72004.txt", 1); 
 		String s2 = fp.readFileLine(); 
+		
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\cat - U20753.txt", 1); 
+		String s3 = fp.readFileLine(); 
+	
+		String p = "AACACAATATAT";
+		
+			NaiveStringMatching nv = null; 
+		
+				System.out.println("++++++++++++++++++++++++++++++++++" + p +  "++++++++++++++++++++++++++++++++++++++");
+				System.out.println("========= X63726 ==========");
+				nv = new NaiveStringMatching(s1, p);
+				nv.count();
+				
+				System.out.println("========= X72004 ==========");
+				nv = new NaiveStringMatching(s2, p);
+				nv.count();
+				
+				System.out.println("========= U20753 ==========");
+				nv = new NaiveStringMatching(s3, p);
+				nv.count();*/
+		
+		
+		//====================== SET OF LINKS FOR SOLIDIFICATION ===================================================
+		try
+		{
+			FileReader file = new FileReader("C:\\Users\\User\\Desktop\\2.txt");
+			BR = new BufferedReader(file);
+			String strLine = null;
+
+			while((strLine = BR.readLine()) != null)
+			{
+				temp += strLine+"\n";
+			}
+		}
+		catch(Exception e)
+		{
+			
+		}
+		
 		System.out.println("HERE");
-		String p = "ACCTATC";
 		
-	//	NaiveStringMatching nv = null; 
+		String g[] = {"TG","GA","TC","AG","GC","GT","GG","TT","CG"}; //"CC", "AC", "TA", "AA", "AT", "CA", "CT"
 		
-/*		System.out.println("========= D38112 ==========");
-		nv = new NaiveStringMatching(s1, p);
-		nv.count();
-		
-		System.out.println("========= D38113 ==========");
-		nv = new NaiveStringMatching(s2, p);
-		nv.count();*/
-		
-		String g[] = {"CT","TG","GA","TC","AG","GC","CC","GT","GG","TT","CG"};
-		
-		FilterSolid ft = new FilterSolid(g, s2);
+		FilterSolid ft = new FilterSolid(g, temp);
 		
 		ft.process();
+
+		
+
 	}
 
 }
