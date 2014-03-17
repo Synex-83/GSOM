@@ -1,0 +1,2 @@
+(((WhiteRhino:0.01270,Horse:0.00080):0.01056,Cat:0.01808):0.00401,
+GreySeal:0.01468,HarborSeal:0.00892);

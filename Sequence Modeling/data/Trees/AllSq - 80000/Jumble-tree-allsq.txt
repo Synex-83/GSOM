@@ -1,0 +1,42 @@
+
+   5 Populations
+
+Fitch-Margoliash method version 3.695
+
+                  __ __             2
+                  \  \   (Obs - Exp)
+Sum of squares =  /_ /_  ------------
+                                2
+                   i  j      Obs
+
+Negative branch lengths not allowed
+
+
+      +WhiteRhino
+    +-1 
+  +-2 +Horse     
+  ! ! 
+  ! +Cat       
+  ! 
+  3GreySeal  
+  ! 
+  +HarborSeal
+
+
+remember: this is an unrooted tree!
+
+Sum of squares =     0.06594
+
+Average percent standard deviation =     6.05243
+
+Between        And            Length
+-------        ---            ------
+   3             2              0.00401
+   2             1              0.01056
+   1          WhiteRhino        0.01270
+   1          Horse             0.00080
+   2          Cat               0.01808
+   3          GreySeal          0.01468
+   3          HarborSeal        0.00892
+
+
