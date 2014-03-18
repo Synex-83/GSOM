@@ -21,7 +21,7 @@ public class AverageCommonSubstring {
 	}
 	
 
-	public int findValue(String seq1, String seq2, String[] seq_1, String[] seq_2, int length_1, int length_2)
+	public long findValue(String seq1, String seq2, String[] seq_1, String[] seq_2, int length_1, int length_2)
 	{
 		
 		String[] SEQUENCE_1 = seq_1;
@@ -33,7 +33,7 @@ public class AverageCommonSubstring {
 		NaiveStringMatching nv2 = new NaiveStringMatching(seq2);
 		ArrayList<Integer> temp = null;
 		
-		int total = 0;
+		long total = 0;
 		
 		for(int i = 0; i < SEQ_LEN_1; i++)
 		{
