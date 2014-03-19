@@ -83,6 +83,37 @@ public class NaiveStringMatching
 		System.out.println();*/
 	}
 	
+	public boolean countSeq(String pattern)
+	{
+		PATTERN = pattern;
+		INPUT_ARRAY = INPUT_STRING.toCharArray();
+		PATTERN_ARRAY = PATTERN.toCharArray();
+		int loop = INPUT_ARRAY.length - PATTERN_ARRAY.length;
+		
+		for(int i = 0; i <= loop ; i++)
+		{
+			for(int j = 0; j < PATTERN_ARRAY.length; j++)
+			{
+				if( INPUT_ARRAY[i+j] == PATTERN_ARRAY[j])
+				{
+					//continue;
+				}
+				else
+				{
+					break;
+				}
+				
+				if(j == PATTERN_ARRAY.length - 1 )
+				{
+					return true;
+				}
+			}			
+		}
+		
+		return false;
+	
+	}
+	
 	public ArrayList<Integer> count(String pattern)
 	{
 		PATTERN = pattern;

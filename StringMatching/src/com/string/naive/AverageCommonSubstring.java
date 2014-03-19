@@ -27,7 +27,7 @@ public class AverageCommonSubstring {
 		String[] SEQUENCE_1 = seq_1;
 		String[] SEQUENCE_2 = seq_2;
 		int SEQ_LEN_1 = length_1;
-		int SEQ_LEN_2 = length_2;
+		//int SEQ_LEN_2 = length_2;
 		
 		NaiveStringMatching nv1 = new NaiveStringMatching(seq1);
 		NaiveStringMatching nv2 = new NaiveStringMatching(seq2);
@@ -42,32 +42,40 @@ public class AverageCommonSubstring {
 			
 			for(int j = 0; j < SEQUENCE_1.length; j++)
 			{
-				//!(current_length_seen >= SEQUENCE_1[j].length()) &&
-				if(exists(SEQUENCE_2,SEQUENCE_1[j]))
+				//!(current_length_seen >= SEQUENCE_1[j].length()) && // && exists(SEQUENCE_2,SEQUENCE_1[j])
+				if(!(current_length_seen >= SEQUENCE_1[j].length()))
 				{
 					temp = nv1.count(SEQUENCE_1[j]);
 					
-					for(int k = 0; k < temp.size(); k++)
+					if(!(temp.isEmpty()) || !(temp == null))
 					{
-						if(temp.get(k) >= i)
-						{
-							current_length_seen = SEQUENCE_1[j].length();
-							current_max += SEQUENCE_1[j].length();
-							break;
-						}
-					}
 					
+						for(int k = 0; k < temp.size(); k++)
+						{
+							if(temp.get(k) >= i && nv2.countSeq(SEQUENCE_1[j]))
+							{
+								current_length_seen = SEQUENCE_1[j].length();
+								current_max += SEQUENCE_1[j].length();
+								break;
+							}
+						}
+					
+					}
 				}					
 			}
-			
 			total += current_max;
-			//System.out.println("I = \t" + i + "\t max =\t" + total);
 		}
-		
 		return total;
 	}
 
 
+	/**
+	 * @param sequence
+	 * @param string
+	 * @return
+	 * 
+	 * Check the comparative 
+	 */
 	private boolean exists(String[] sequence, String string) 
 	{
 
