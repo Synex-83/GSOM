@@ -24,14 +24,15 @@ public class TestSOM {
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\2g.txt"
 		// E:\\workspace\\GSOM\\Sequence Modeling\\data\\repeat.txt
 		//"C:\\Users\\User\\Desktop\\A.txt"
-		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt"
+		//"
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt", 1); //2gameCompact.txt
+		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sets\\X72204.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,3,350,0,4);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,350,0,3);
 		
 		System.out.println("HERE 3");
 
