@@ -28,7 +28,7 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sets\\X72204.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sets\\V00654.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning

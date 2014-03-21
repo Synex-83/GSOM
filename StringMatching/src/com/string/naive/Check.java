@@ -40,6 +40,15 @@ public class Check {
 		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\horse - X79547.txt", 1); 
 		String s5 = fp.readFileLine(); 
 		
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\fin whale - X61145.txt", 1); 
+		String s6 = fp.readFileLine(); 
+		
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\blue whale - X72204.txt", 1); 
+		String s7 = fp.readFileLine(); 
+		
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\cow - V00654.txt", 1); 
+		String s8 = fp.readFileLine(); 
+		
 		//String p = "ACT";
 		
 /*			NaiveStringMatching nv = null; 
@@ -61,7 +70,7 @@ public class Check {
 		//====================== SET OF LINKS FOR SOLIDIFICATION ===================================================
 /*		try
 		{
-			FileReader file = new FileReader("C:\\Users\\User\\Desktop\\Extracts\\5.txt");
+			FileReader file = new FileReader("C:\\Users\\User\\Desktop\\Extracts\\8.txt");
 			BR = new BufferedReader(file);
 			String strLine = null;
 			System.out.println("HERE1");
@@ -77,13 +86,13 @@ public class Check {
 		
 		System.out.println("HERE");
 		
-		String g[] = {"TG","GA","AG","GT","GG","CG","GC","TT"}; //, "AC", "TA", "AA", "AT", "CA" , "CC", "CT", "TC",
+		String g[] = {"TG","GA","AG","GT","GG","CG","GC","TC"}; // "AC", "TA", "AA", "AT", "CA", "TT", "CC",  "CT"
 		
 		FilterSolid ft = new FilterSolid(g, temp);
 		
-		ft.process();*/
-
-//====================================================================================================================
+		ft.process();
+*/
+//=========================================  Average Commom Subsequence Calculation========================================================
 
 		String[] longSequence_1 = {"AC", "TA", "AA", "AT", "CA", "CC",
 				"TAA", "CCA", "CCAA", "CAA", "AAC", "AACC", "CAC", "CACA", "CACAA", "TAAC", "TAACC",
@@ -264,7 +273,20 @@ public class Check {
 
 		System.out.println("========= X79547 ==========\t" + longSequence_5.length + "\tS5\t" + s5.length());
 
+		String[] longSequence_6 = {"TA", "AA", "AT", "AC", "CT", "CA", "CC",
+				"AAC", "AACC", "TAA", "ACC", "TAAC", "TAC", "TACC", "CCA", "CCAC", "CCACA", "TAACC", "CAA", "CAC", "CACA", "CACAA", "CACAAC", "CACAACC", "CCACC", "CCACCA", "CCACCAC", "CCAA", "TACCA", "TACCAA", "TACCAAC", "TACCAACA", "CAAC", "CAACC", "CCACAA", "CACAC", "CACACC", "CACACCA", "CACACCAA", "TACA", "CACC", "CACCA", "CACCAC", "CACCACA", "CAACCA", "CAACCAA", "CAACCAAC", "CAACCAACC", "CAACCAACCA", "CAACCAACCAC", "CAACCAACCACA", "CAACCAACCACAA", "TAACA", "CACAACCA", "CAACA", "AACCA", "AACCAC", "AACCACC", "TACAA", "TACAAC", "TACCAACAC", "TACCAACACC", "CACACA", "TACAC", "CCACAAC", "CCACAACA", "CCACAACAC", "CCAAC", "AACA", "AACAA", "CACCAA", "CCAACA", "TAACAA", "AACCAA", "AACAAC", "AACAACC", "CAACAC", "AACCACA", "AACAC", "AACACA", "AACACAA", "AACAACA", "AACAACAA", "AACACC", "AACACCA", "AACACCAC", "AACACCACA", "CAT", "CCAT", "AAT", "CAACAA", "CAACAAC", "CAACAACC", "CCAACAA", "CCAACAAT", "CACAT", "TACACA", "CCACCACA", "CCACCACAC", "CCACCACACA", "CCACCACACAA", "CCACCACACAAC", "CAAT", "CAATA", "CAATAA", "AATA", "AATAT", "CCATA", "CCATAT", "TAAT", "CACAAT", "TAT", "CCACCAA", "CATA", "CATAC", "CATACC", "CATACCA", "CATACCAC", "CATACCACA", "CATACCACAT", "CATACCACATA", "CAATAC", "CATACA", "CATACAC", "CATACACC", "CATACACCA", "CATACACCAA", "CATACACCAAC", "CATACACCAACC", "CAACACC", "CCACCAT", "CCACCATA", "AACACAT", "AACACATA", "AACACATAC", "AACCACCA", "AACCACCAC", "CCAAT", "AATAC", "AATACA", "AATACAA", "AATACAAC", "AATACAACA", "AATACAACAC", "TATA", "TATAC", "CCATAA", "AACACAAT", "AACACAATA", "AACACAATAC", "CACAATA", "CCATATA", "CCATATAA", "AACAT", "TATAA", "TATAAT", "TATAATA", "TATAATAC", "AATAA", "AATAAC", "AATAACC", "CATAT", "ACT", "CTA", "CTAT", "CTATA", "CTATAC", "CTATACA", "CTATACAC", "CTATACACT", "CTATACACTA", "CCACT", "CCACTA", "CCACTAC", "CCACTACT", "CCACTACTA", "TATAT", "CCT", "CCTA", "CCTAA", "AACT", "CTAC", "CTACT", "CCTAC", "CCTACA", "CCTACAA", "CCTACAAC", "CCTACAACA", "CCTACAACAC", "CCTACAACACT", "CAACCAT", "CCAACAT", "AATACC", "AATACCT", "TACT", "TACTA", "TACTAC", "TACTACT", "TACTACTA", "TACTACTAA", "CCATAC", "CCATACT", "CATAA", "CATAAC", "CATAACC", "CATAACCA", "CACT", "CACTA", "CACTAA", "CACTAAT", "CACATA", "CCTAAT", "CCTAATA", "CCTAATAA", "CCTAATAAT", "CCATACTA", "CCATACTAT", "CTACC", "CTACCA", "CTACCAC", "CTACCACT", "CTACCACTA", "CTACCACTAA", "CTACCACTAAT", "CTACCACTAATA", "CCAACC", "CCAACCA", "CCAACCAT", "CAACCT", "CAACCTA", "CAACCTAA", "CAACCTAAT", "CCACTAT", "CTATAT", "CTATATA", "CTATATAT", "CTATATATA", "CTATATATAC", "CTATATATACT", "CTATATATACTA", "CTATATATACTAA", "CTATATATACTAAT", "CATAACA", "CATAACAC", "CATAACACA", "CATAACACAA", "CATAACACAAC", "AACACAC", "AACACACA", "AACACACAC", "AACACACACA", "AACACACACAC", "AACACACACACC", "AACACACACACCA", "AACACACACACCAC", "AACACACACACCACA", "AACACACACACCACAT", "CAATAAT", "CAATAATA", "CAATAATAT", "CCTACAC", "CCTACACA", "CCTACACAT", "CCTAT", "AACTA", "AACTAA", "AACTAAC", "AACTAACA", "AACTAACAA", "AACTAACAAT", "AACTAACAATA", "CCACAC", "CCACACC", "CCACACCT", "CCACACCTA", "CCACACCTAA", "CCACACCTAAC", "CCACACCTAACA", "TAATA", "TAATAA", "AACCT", "AACCTA", "AACCTAT", "CCTACT", "CACATAC", "CACATACA", "CACACAA", "AACACT", "AACTAACAC", "AACTAACACT", "CAATAT", "CCTACAT", "CAACCAAT", "AATACT", "CACCAT", "CACCATA", "CACCATAC", "CACCATACT", "CACCATACTA", "CACCATACTAA", "CACCATACTAAT", "CCAACT", "CCTATA", "CCTATAC", "CCTATACA", "CCTATACAA", "CCTATACAAT", "CTAA", "CTAAT", "CTAATA", "CTAATAT", "CTAATATA", "CTAATATAA", "CCTACC", "AATAACA", "AATAACAA", "TAACAAT", "AATAAT", "CCAATA", "CCAATAA", "CCAATAAC", "CCAATAACT", "CCAATAACTA", "CCAATAACTAC", "CCAATAACTACA", "CCAATAACTACAC", "CCAATAACTACACC", "CCAATAACTACACCT", "CCACAAT", "CCTACTA", "AACTAT", "AACACCAT", "AACACCATA", "AACACCATAA", "AACACCATAAC", "AACACCATAACT", "AACACCATAACTA", "AACACCATAACTAT", "AACACCATAACTATA", "AACACCATAACTATAT", "AACACCATAACTATATA", "AACACCATAACTATATAA", "AACACCATAACTATATAAT", "AACATA", "AACATAA", "AACATAAT", "TACAACT", "TATAAC", "TATAACC", "TATAACCA", "TATAACCAA", "AATACTA", "AATACTAC", "AATACTACC", "AATACTACCA", "AATAACT", "AACTAAT", "AATAATA", "AATAATAC", "AATAATACT", "AACAAT", "AACAATA", "AACAATAT", "AACAATATA", "AACAATATAC", "AACAATATACA", "AACAATATACAT", "AACACACC", "CCACTAA", "CCACTAAT", "CCACTAATA", "CCACTAATAA", "CCATACA", "CCATACAT", "TACCAC", "TACCACC", "CCTACCA", "CCTACCAC", "CCTACCACA", "CCTACCACAC", "CCTACCACACA", "CCTACCACACAA", "CCTACCACACAAT", "CCTACTAC", "CCTACTACT", "CCAATAC", "CCAATACT", "CCTAAC", "CCTAACA", "CCTAACAT", "CCTACATA", "CCTACATAA", "CCTACATAAT", "TAACT", "TAACTA", "TACAAT", "TACAATA", "TACAATAA", "TACAATAAC", "TACAATAACC", "TACAATAACCA", "TACAATAACCAC", "TACAATAACCACA", "TACTAT", "CCAATAAT", "AATACAT", "AACTAC", "CCTATACT", "CCACCT", "AACCTAA", "TACCT", "AATAATACTA", "AATAATACTAA", "TACAACC", "TACAACCT", "AATATA", "CCAACAC", "CCAACACT", "CCAACACTA", "CCAACACTAA", "CCAACACA", "AACCAT", "AACCATA", "AACCATAA", "AACCATAAC", "AACCATAACC", "AACCATAACCT", "AACCACCAA", "TACAATAT", "CCACAT", "CCTAACC", "CCATACC", "CCATACCA", "CCATACCAT", "CCATACCATA", "CCATACCATAC", "CCATACCATACC", "TAACAC", "TAACACT", "TAACACTA", "CCATACTAA", "CCATACTAAT", "CCATACTAATA", "CCATACTAATAA", "TACAATAAT", "TAACACA", "TAACACAA", "CCTAACCA", "CCTAACCAC", "CCTAACCACA", "AACACAAC", "AACACAACT", "CCACATA", "CCACCACT", "CCACCACTA", "CCACCACTAT", "TACCAACAT", "AATAATAT", "AATAATATA", "AATAATATAA", "CCACTAATAAT", "CCTACACT", "AATACAACT", "TACCAACACCT", "TACCAACACCTA", "TACCAACACCTAT", "TATATA", "TATATAT", "TAACAT", "CCTAATAT", "TATACA", "TATACAC", "TATACACT", "AACCTAAC", "AACCTAACA", "AACCTAACAT", "AATACTAT", "TATACC", "AATAACAAT", "AACAACCT", "AACACCACAT", "AACAACT", "AACAACTA", "AACAACTAA", "AACAACTAAT", "AACAACTAATA", "AACAACTAATAA", "CCACCACACAACT", "AACACATACT", "AACCACCACT", "AATACAACACT", "AATACAACACTA", "AACAACCTA", "AACAACCTAA", "AACACAATACT", "CCACCTA", "CCACCTAA", "CCACCTAAT", "CCACCTAATA", "CCACCTAATAT", "TATAATACT", "TATAATACTA", "TATAATACTAT", "CCTAACCT", "AATAACCT", "AATAACCTA", "AATAACCTAA", "AATAACCTAAT"};
 
+		System.out.println("========= X61145 ==========\t" + longSequence_6.length + "\tS6\t" + s6.length());
+		
+		String[] longSequence_7 = {"TA", "AA", "AT", "AC", "CA", "CC",
+				"TAA", "CAA", "CCA", "CCAA", "ACC", "ACCA", "TAC", "ACA", "ACAA", "AAC", "AACC", "AACCA", "TACC", "TACCA", "TACCAA", "TAAC", "TAACA", "CCAC", "CCACA", "CCACAA", "ACAC", "ACACA", "CAAC", "CAACA", "TAACC", "CCAAC", "CAC", "AACA", "AACAC", "AACACA", "AACACAA", "AACAA", "AACAAC", "AACAACA", "AACAACAA", "CACA", "CACC", "CACCA", "CACCAA", "CAACAA", "CAACAAC", "CAACAACC", "CCAACA", "CCAACAA", "CACAC", "CACACC", "TACA", "TACAC", "TACACA", "TACACAA", "TACACAAC", "TACCAC", "TACCACA", "TACCACAA", "CAACC", "CAACCA", "AACAACC", "TAACCA", "TAACAC", "TAACACA", "CCACC", "CCACCA", "CCACCAA", "TAACAA", "TACACC", "TACACCA", "TACACCAA", "TACACCAAC", "TACACCAACC", "ACCAC", "ACCACC", "ACCACCA", "ACCACCAA", "ACCACCAAC", "ACCACCAACA", "CAACAC", "CACAA", "TACAA", "AACACAAC", "AACACAACA", "AACACAACAC", "CACAAC", "CCAACAC", "CCAACACA", "TACAAC", "TACAACA", "TACAACAC", "AACCAC", "CCAACC", "CCAACCA", "TAACACAA", "TAACACAAC", "AACACAC", "AACACACA", "AACACACAC", "AACACACACA", "AACACACACAC", "AACACACACACC", "AACACACACACCA", "AACACACACACCAC", "AACACACACACCACA", "CCACAC", "CCACACC", "AACCAA", "CAAT", "CAATA", "CACAAT", "CACAATA", "AAT", "AATA", "AATAA", "AATAAC", "AATAACA", "AATAACAA", "CCAT", "CAT", "CACACA", "CACACAC", "CCATA", "CCATAT", "AATAACC", "AATAT", "AATATA", "AATATAC", "AATATACA", "AATATACAC", "AATATACACA", "AATATACACAC", "AATATACACACC", "CCACAAT", "CATA", "CATAA", "CATAAT", "TAACCAA", "AACACC", "AACACCA", "AACACCAT", "AACACCATA", "AACACCATAA", "AACACCATAAC", "TAT", "TATA", "TATAT", "TATATA", "CCAAT", "AACACAAT", "TAAT", "TAATA", "TAATAC", "TAATACA", "TAATACAA", "TAATACAAC", "TAACAT", "AATAC", "CACCAC", "CACCACC", "CACCACCA", "CACCACCAC", "CACCACCACC", "AATAAT", "AATAATA", "AATAATAC", "AACAAT", "AACACACC", "TAATAA", "AACAT", "CAATAC", "CAATACA", "CAATACAC", "TATAC", "TATACA", "TATACAC", "TATACACC", "TATACACCA", "CCACAT", "CCATAC", "CCATACA", "CCATACAT", "TACACAAT", "TAATAT", "CACACAT", "CATAT", "CCAATA", "CCAATAC", "CATAATA", "CATAATAT", "AATACC", "AACCACA", "AACCACAC", "AACCACACC", "TATATAA", "CCATAA", "CCATAAC", "CCATAACC", "CCATAACCA", "CACAACC", "CACAACCA", "CACAACCAA", "CACAACCAAC", "CACAACCAACA", "CACAACCAACAT", "CCAATAA", "CCAATAAT", "AATACA", "AATACAT", "TACAT", "TATAA", "CCATAAT", "TATATAC", "TATATACC", "TACATA", "TACATAA", "TATACACA", "TATACACAC", "TACCAT", "TACCATA", "AACATA", "AACATAC", "AACATACA", "AACATACAC", "AACATACACC", "AACATACACCA", "AACATACACCAT", "AACATACACCATA", "TAATAAT", "AACCACC", "AACCACCA", "AACCACCAA", "CCATACC", "CCATACCA", "CCATACCAT", "CCATACCATA", "CCATACCATAC", "CCATACCATACC", "AACCAAT", "AACATAT", "AACATAA", "CCACATA", "CCACCAC", "AACAACAT", "AACAACATA", "AACAACATAA", "AATAACAT", "AATAACATA", "AATAACATAA", "CCAATAT", "AATACAA", "AATACAAC", "AATACAACC", "CCACCAT", "CCACCATA", "CCACCATAT", "AACAATA", "AATAACAAT", "AACCAT", "AACCATA", "AACACAATA", "AACACAATAC", "CCAACCAT", "AACACACACACCACAT", "AATACCA", "AATACCAA", "AATACCAAT", "AACACAT"};
+		
+		System.out.println("========= X72204 ==========\t" + longSequence_7.length + "\tS7\t" + s7.length());
+		
+		String[] longSequence_8 = {"AC", "TA", "AA", "AT", "CA",
+				"TAC", "TAT", "TATA", "TATAT", "ATA", "ATAT", "ATATA", "TATAC", "TATATA", "TATATAC", "CAT", "CATA", "TACA", "TACAC", "CAC", "CACA", "CATAT", "CACAT", "CATAC", "CATACA", "CATACAC", "CATACACA", "CACAC", "CACACA", "CACACAT", "TATACA", "CAA", "CAAC", "CAACA", "CAACAA", "AAT", "AATA", "AATAT", "AAC", "AACA", "AACAA", "AACAC", "TAA", "TAAT", "TAAC", "CAAT", "AATAA", "AATAAT", "AACAT", "CAATA", "CAATAA", "CATATA", "AATATA", "AATATAC", "CAACAC", "CATATAT", "CACAA", "AACACA", "AACACAA", "AACACAAT", "CATAA", "CATAAT", "TATACAT", "TATACATA", "TATACATAA", "CATAATA", "CATAATAC", "TAATA", "AATAC", "AATACA", "AATACAT", "AATACATA", "AATACATAT", "TACAA", "AATAATA", "AATAATAT", "AATAATATA", "AATAATATAA", "AATAATATAAT", "TACAAC", "CATAAC", "TATAA", "TATAAT", "TATAATA", "TAATAA", "AACATA", "AACATAT", "AACAAC", "AACATAC", "CACAAT", "CACAATA", "AACAAT", "AACAATA", "AACAATAA", "CAATAT", "AATAAC", "AACAACA", "TAATAT", "TAATATA", "TAATATAA", "TAATATAAC", "AACACAAC", "TAACA", "TAACAA", "TATAAC", "AATACAA", "AATACAAT", "CAATAC", "CAATACA", "CAATACAC", "CATAATAT", "TACAT", "TACATA", "TACATAA", "TACATAAC", "TACATAACA", "TACATAACAT", "CATATAA", "TACATAAT", "TACATAATA", "TACATAATAC", "TACATAATACA", "TACATAATACAT", "TACATAATACATA", "TACATAATACATAT", "TACATAATACATATA", "TACATAATACATATAA", "TACATAATACATATAAT", "TATATAT", "AACACAT", "AACACATA", "TACACA", "TACACAT", "CACACAC", "TAACAC", "CAATAAT", "TAACAT", "TAATAC", "CAATAATA", "CAATAATAT", "AACATAA", "TAACACA", "AATAACA", "AACAACAT", "AACAACATA", "AACAACATAA", "TACAAT", "TAATAAT", "AATACAAC", "AATAACAA", "AATAACAAT"};
+		
+		System.out.println("========= V00654 ==========\t" + longSequence_8.length + "\tS8\t" + s8.length());
 //====================================================================================================================
 		
 	/*	String[] Test1 = {"ACB", "BC", "AA", "AB"};
@@ -282,44 +304,90 @@ public class Check {
 		
 		System.out.println("80000-Longest Seq-NO Exist");
 		
-		for(int i = 1; i <= 5; i++)
+		for(int i = 6; i <= 8; i++)
 		{
 
 			System.out.println("=========================================================");
 			if(i==1)
 			{
-				System.out.println("S1 S2 VALUE =\t" + av.findValue(s1, s2, longSequence_1,  longSequence_2, s1.length(), s2.length()));
-				System.out.println("S1 S3 VALUE =\t" + av.findValue(s1, s3, longSequence_1,  longSequence_3, s1.length(), s3.length()));
-				System.out.println("S1 S4 VALUE =\t" + av.findValue(s1, s4, longSequence_1,  longSequence_4, s1.length(), s4.length()));
-				System.out.println("S1 S5 VALUE =\t" + av.findValue(s1, s5, longSequence_1,  longSequence_5, s1.length(), s5.length()));
+				//System.out.println("S1 S2 VALUE =\t" + av.findValue(s1, s2, longSequence_1,  longSequence_2, s1.length(), s2.length()));
+				//System.out.println("S1 S3 VALUE =\t" + av.findValue(s1, s3, longSequence_1,  longSequence_3, s1.length(), s3.length()));
+				//System.out.println("S1 S4 VALUE =\t" + av.findValue(s1, s4, longSequence_1,  longSequence_4, s1.length(), s4.length()));
+				//System.out.println("S1 S5 VALUE =\t" + av.findValue(s1, s5, longSequence_1,  longSequence_5, s1.length(), s5.length()));
+				System.out.println("S1 S6 VALUE =\t" + av.findValue(s1, s6, longSequence_1,  longSequence_6, s1.length(), s6.length()));
+				System.out.println("S1 S7 VALUE =\t" + av.findValue(s1, s7, longSequence_1,  longSequence_7, s1.length(), s7.length()));
+				System.out.println("S1 S8 VALUE =\t" + av.findValue(s1, s8, longSequence_1,  longSequence_8, s1.length(), s8.length()));
 			}
 			else if(i==2)
 			{
-				System.out.println("S2 S1 VALUE =\t" + av.findValue(s2, s1, longSequence_2,  longSequence_1, s2.length(), s1.length()));
-				System.out.println("S2 S3 VALUE =\t" + av.findValue(s2, s3, longSequence_2,  longSequence_3, s2.length(), s3.length()));
-				System.out.println("S2 S4 VALUE =\t" + av.findValue(s2, s4, longSequence_2,  longSequence_4, s2.length(), s4.length()));
-				System.out.println("S2 S5 VALUE =\t" + av.findValue(s2, s5, longSequence_2,  longSequence_5, s2.length(), s5.length()));
+				//System.out.println("S2 S1 VALUE =\t" + av.findValue(s2, s1, longSequence_2,  longSequence_1, s2.length(), s1.length()));
+				//System.out.println("S2 S3 VALUE =\t" + av.findValue(s2, s3, longSequence_2,  longSequence_3, s2.length(), s3.length()));
+				//System.out.println("S2 S4 VALUE =\t" + av.findValue(s2, s4, longSequence_2,  longSequence_4, s2.length(), s4.length()));
+				//System.out.println("S2 S5 VALUE =\t" + av.findValue(s2, s5, longSequence_2,  longSequence_5, s2.length(), s5.length()));
+				System.out.println("S2 S6 VALUE =\t" + av.findValue(s2, s6, longSequence_2,  longSequence_6, s2.length(), s6.length()));
+				System.out.println("S2 S7 VALUE =\t" + av.findValue(s2, s7, longSequence_2,  longSequence_7, s2.length(), s7.length()));
+				System.out.println("S2 S8 VALUE =\t" + av.findValue(s2, s8, longSequence_2,  longSequence_8, s2.length(), s8.length()));
 			}
 			else if(i==3)
 			{
-				System.out.println("S3 S1 VALUE =\t" + av.findValue(s3, s1, longSequence_3,  longSequence_1, s3.length(), s1.length()));
-				System.out.println("S3 S2 VALUE =\t" + av.findValue(s3, s2, longSequence_3,  longSequence_2, s3.length(), s2.length()));
-				System.out.println("S3 S4 VALUE =\t" + av.findValue(s3, s4, longSequence_3,  longSequence_4, s3.length(), s4.length()));
-				System.out.println("S3 S5 VALUE =\t" + av.findValue(s3, s5, longSequence_3,  longSequence_5, s3.length(), s5.length()));
+				//System.out.println("S3 S1 VALUE =\t" + av.findValue(s3, s1, longSequence_3,  longSequence_1, s3.length(), s1.length()));
+				//System.out.println("S3 S2 VALUE =\t" + av.findValue(s3, s2, longSequence_3,  longSequence_2, s3.length(), s2.length()));
+				//System.out.println("S3 S4 VALUE =\t" + av.findValue(s3, s4, longSequence_3,  longSequence_4, s3.length(), s4.length()));
+				//System.out.println("S3 S5 VALUE =\t" + av.findValue(s3, s5, longSequence_3,  longSequence_5, s3.length(), s5.length()));
+				System.out.println("S3 S6 VALUE =\t" + av.findValue(s3, s6, longSequence_3,  longSequence_6, s3.length(), s6.length()));
+				System.out.println("S3 S7 VALUE =\t" + av.findValue(s3, s7, longSequence_3,  longSequence_7, s3.length(), s7.length()));
+				System.out.println("S3 S8 VALUE =\t" + av.findValue(s3, s8, longSequence_3,  longSequence_8, s3.length(), s8.length()));			
 			}
 			else if(i==4)
 			{
-				System.out.println("S4 S1 VALUE =\t" + av.findValue(s4, s1, longSequence_4,  longSequence_1, s4.length(), s1.length()));
-				System.out.println("S4 S2 VALUE =\t" + av.findValue(s4, s2, longSequence_4,  longSequence_2, s4.length(), s2.length()));
-				System.out.println("S4 S3 VALUE =\t" + av.findValue(s4, s3, longSequence_4,  longSequence_3, s4.length(), s3.length()));
-				System.out.println("S4 S5 VALUE =\t" + av.findValue(s4, s5, longSequence_4,  longSequence_5, s4.length(), s5.length()));
+				//System.out.println("S4 S1 VALUE =\t" + av.findValue(s4, s1, longSequence_4,  longSequence_1, s4.length(), s1.length()));
+				//System.out.println("S4 S2 VALUE =\t" + av.findValue(s4, s2, longSequence_4,  longSequence_2, s4.length(), s2.length()));
+				//System.out.println("S4 S3 VALUE =\t" + av.findValue(s4, s3, longSequence_4,  longSequence_3, s4.length(), s3.length()));
+				//System.out.println("S4 S5 VALUE =\t" + av.findValue(s4, s5, longSequence_4,  longSequence_5, s4.length(), s5.length()));
+				System.out.println("S4 S6 VALUE =\t" + av.findValue(s4, s6, longSequence_4,  longSequence_6, s4.length(), s6.length()));
+				System.out.println("S4 S7 VALUE =\t" + av.findValue(s4, s7, longSequence_4,  longSequence_7, s4.length(), s7.length()));
+				System.out.println("S4 S8 VALUE =\t" + av.findValue(s4, s8, longSequence_4,  longSequence_8, s4.length(), s8.length()));
+			
 			}
 			else if(i==5)
 			{
-				System.out.println("S5 S1 VALUE =\t" + av.findValue(s5, s1, longSequence_5,  longSequence_1, s5.length(), s1.length()));
-				System.out.println("S5 S2 VALUE =\t" + av.findValue(s5, s2, longSequence_5,  longSequence_2, s5.length(), s2.length()));
-				System.out.println("S5 S3 VALUE =\t" + av.findValue(s5, s3, longSequence_5,  longSequence_3, s5.length(), s3.length()));
-				System.out.println("S5 S4 VALUE =\t" + av.findValue(s5, s4, longSequence_5,  longSequence_4, s5.length(), s4.length()));
+				//System.out.println("S5 S1 VALUE =\t" + av.findValue(s5, s1, longSequence_5,  longSequence_1, s5.length(), s1.length()));
+				//System.out.println("S5 S2 VALUE =\t" + av.findValue(s5, s2, longSequence_5,  longSequence_2, s5.length(), s2.length()));
+				//System.out.println("S5 S3 VALUE =\t" + av.findValue(s5, s3, longSequence_5,  longSequence_3, s5.length(), s3.length()));
+				//System.out.println("S5 S4 VALUE =\t" + av.findValue(s5, s4, longSequence_5,  longSequence_4, s5.length(), s4.length()));
+				System.out.println("S5 S6 VALUE =\t" + av.findValue(s5, s6, longSequence_5,  longSequence_6, s5.length(), s6.length()));
+				System.out.println("S5 S7 VALUE =\t" + av.findValue(s5, s7, longSequence_5,  longSequence_7, s5.length(), s7.length()));
+				System.out.println("S5 S8 VALUE =\t" + av.findValue(s5, s8, longSequence_5,  longSequence_8, s5.length(), s8.length()));
+			}
+			else if(i == 6)
+			{
+				System.out.println("S6 S1 VALUE =\t" + av.findValue(s6, s1, longSequence_6,  longSequence_1, s6.length(), s1.length()));
+				System.out.println("S6 S2 VALUE =\t" + av.findValue(s6, s2, longSequence_6,  longSequence_2, s6.length(), s2.length()));
+				System.out.println("S6 S3 VALUE =\t" + av.findValue(s6, s3, longSequence_6,  longSequence_3, s6.length(), s3.length()));
+				System.out.println("S6 S4 VALUE =\t" + av.findValue(s6, s4, longSequence_6,  longSequence_4, s6.length(), s4.length()));
+				System.out.println("S6 S5 VALUE =\t" + av.findValue(s6, s5, longSequence_6,  longSequence_5, s6.length(), s5.length()));
+				System.out.println("S6 S7 VALUE =\t" + av.findValue(s6, s7, longSequence_6,  longSequence_7, s6.length(), s7.length()));
+				System.out.println("S6 S8 VALUE =\t" + av.findValue(s6, s8, longSequence_6,  longSequence_8, s6.length(), s8.length()));
+			}
+			else if(i == 7)
+			{
+				System.out.println("S7 S1 VALUE =\t" + av.findValue(s7, s1, longSequence_7,  longSequence_1, s7.length(), s1.length()));
+				System.out.println("S7 S2 VALUE =\t" + av.findValue(s7, s2, longSequence_7,  longSequence_2, s7.length(), s2.length()));
+				System.out.println("S7 S3 VALUE =\t" + av.findValue(s7, s3, longSequence_7,  longSequence_3, s7.length(), s3.length()));
+				System.out.println("S7 S4 VALUE =\t" + av.findValue(s7, s4, longSequence_7,  longSequence_4, s7.length(), s4.length()));
+				System.out.println("S7 S5 VALUE =\t" + av.findValue(s7, s5, longSequence_7,  longSequence_5, s7.length(), s5.length()));
+				System.out.println("S7 S6 VALUE =\t" + av.findValue(s7, s6, longSequence_7,  longSequence_6, s7.length(), s6.length()));
+				System.out.println("S7 S8 VALUE =\t" + av.findValue(s7, s8, longSequence_7,  longSequence_8, s7.length(), s8.length()));
+			}
+			else if(i == 8)
+			{
+				System.out.println("S8 S1 VALUE =\t" + av.findValue(s8, s1, longSequence_8,  longSequence_1, s8.length(), s1.length()));
+				System.out.println("S8 S2 VALUE =\t" + av.findValue(s8, s2, longSequence_8,  longSequence_2, s8.length(), s2.length()));
+				System.out.println("S8 S3 VALUE =\t" + av.findValue(s8, s3, longSequence_8,  longSequence_3, s8.length(), s3.length()));
+				System.out.println("S8 S4 VALUE =\t" + av.findValue(s8, s4, longSequence_8,  longSequence_4, s8.length(), s4.length()));
+				System.out.println("S8 S5 VALUE =\t" + av.findValue(s8, s5, longSequence_8,  longSequence_5, s8.length(), s5.length()));
+				System.out.println("S8 S6 VALUE =\t" + av.findValue(s8, s6, longSequence_8,  longSequence_6, s8.length(), s6.length()));
+				System.out.println("S8 S7 VALUE =\t" + av.findValue(s8, s7, longSequence_8,  longSequence_7, s8.length(), s7.length()));	
 			}
 		}
 	}
