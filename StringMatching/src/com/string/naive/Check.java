@@ -298,97 +298,245 @@ public class Check {
 		//AverageCommonSubstring av = new AverageCommonSubstring();
 		AverageCommonSubstring av = new AverageCommonSubstring();
 		
+		double[][] values = new double[8][8];
+		double[][] acs = new double[8][8];
 		//System.out.println( s1.length()+"\t"+ s2.length() + "\t" + s3.length());
 		//System.out.println("VALUE =\t" + av.findValue(s5, s4, longSequence_5_2,  longSequence_4_2, s5.length(), s4.length()));
 	//	System.out.println("VALUE =\t" + av.findValue(a ,b, Test1, Test2, a.length(), b.length()) );
 		
 		System.out.println("80000-Longest Seq-NO Exist");
 		
-		for(int i = 6; i <= 8; i++)
+		for(int i = 1; i <= 8; i++)
 		{
 
 			System.out.println("=========================================================");
 			if(i==1)
-			{
-				//System.out.println("S1 S2 VALUE =\t" + av.findValue(s1, s2, longSequence_1,  longSequence_2, s1.length(), s2.length()));
-				//System.out.println("S1 S3 VALUE =\t" + av.findValue(s1, s3, longSequence_1,  longSequence_3, s1.length(), s3.length()));
-				//System.out.println("S1 S4 VALUE =\t" + av.findValue(s1, s4, longSequence_1,  longSequence_4, s1.length(), s4.length()));
-				//System.out.println("S1 S5 VALUE =\t" + av.findValue(s1, s5, longSequence_1,  longSequence_5, s1.length(), s5.length()));
-				System.out.println("S1 S6 VALUE =\t" + av.findValue(s1, s6, longSequence_1,  longSequence_6, s1.length(), s6.length()));
-				System.out.println("S1 S7 VALUE =\t" + av.findValue(s1, s7, longSequence_1,  longSequence_7, s1.length(), s7.length()));
-				System.out.println("S1 S8 VALUE =\t" + av.findValue(s1, s8, longSequence_1,  longSequence_8, s1.length(), s8.length()));
+			{ 
+				values[1][0] = av.findValue(s1, s2, longSequence_1,  longSequence_2, s1.length(), s2.length());
+				System.out.println("S1 S2 VALUE =\t" + values[1][0]);
+				 
+				values[2][0] = av.findValue(s1, s3, longSequence_1,  longSequence_3, s1.length(), s3.length());
+				System.out.println("S1 S3 VALUE =\t" + values[2][0]);
+				 
+				values[3][0] = av.findValue(s1, s4, longSequence_1,  longSequence_4, s1.length(), s4.length());
+				System.out.println("S1 S4 VALUE =\t" + values[3][0] );
+				
+				values[4][0] = av.findValue(s1, s5, longSequence_1,  longSequence_5, s1.length(), s5.length());
+				System.out.println("S1 S5 VALUE =\t" + values[4][0]);
+				
+				values[5][0] = av.findValue(s1, s6, longSequence_1,  longSequence_6, s1.length(), s6.length());
+				System.out.println("S1 S6 VALUE =\t" + values[5][0]);
+				
+				values[6][0] = av.findValue(s1, s7, longSequence_1,  longSequence_7, s1.length(), s7.length());
+				System.out.println("S1 S7 VALUE =\t" + values[6][0]);
+				
+				values[7][0] = av.findValue(s1, s8, longSequence_1,  longSequence_8, s1.length(), s8.length());
+				System.out.println("S1 S8 VALUE =\t" + values[7][0]);
 			}
 			else if(i==2)
 			{
-				//System.out.println("S2 S1 VALUE =\t" + av.findValue(s2, s1, longSequence_2,  longSequence_1, s2.length(), s1.length()));
-				//System.out.println("S2 S3 VALUE =\t" + av.findValue(s2, s3, longSequence_2,  longSequence_3, s2.length(), s3.length()));
-				//System.out.println("S2 S4 VALUE =\t" + av.findValue(s2, s4, longSequence_2,  longSequence_4, s2.length(), s4.length()));
-				//System.out.println("S2 S5 VALUE =\t" + av.findValue(s2, s5, longSequence_2,  longSequence_5, s2.length(), s5.length()));
-				System.out.println("S2 S6 VALUE =\t" + av.findValue(s2, s6, longSequence_2,  longSequence_6, s2.length(), s6.length()));
-				System.out.println("S2 S7 VALUE =\t" + av.findValue(s2, s7, longSequence_2,  longSequence_7, s2.length(), s7.length()));
-				System.out.println("S2 S8 VALUE =\t" + av.findValue(s2, s8, longSequence_2,  longSequence_8, s2.length(), s8.length()));
+				values[0][1] = av.findValue(s2, s1, longSequence_2,  longSequence_1, s2.length(), s1.length());
+				System.out.println("S2 S1 VALUE =\t" + values[0][1]);
+				
+				values[2][1] = av.findValue(s2, s3, longSequence_2,  longSequence_3, s2.length(), s3.length());
+				System.out.println("S2 S3 VALUE =\t" + values[2][1]);
+				
+				values[3][1] = av.findValue(s2, s4, longSequence_2,  longSequence_4, s2.length(), s4.length());
+				System.out.println("S2 S4 VALUE =\t" + values[3][1]);
+				
+				values[4][1] = av.findValue(s2, s5, longSequence_2,  longSequence_5, s2.length(), s5.length());
+				System.out.println("S2 S5 VALUE =\t" + values[4][1]);
+				
+				values[5][1] = av.findValue(s2, s6, longSequence_2,  longSequence_6, s2.length(), s6.length());
+				System.out.println("S2 S6 VALUE =\t" + values[5][1]);
+				
+				values[6][1] = av.findValue(s2, s7, longSequence_2,  longSequence_7, s2.length(), s7.length());
+				System.out.println("S2 S7 VALUE =\t" + values[6][1]);
+				
+				values[7][1] = av.findValue(s2, s8, longSequence_2,  longSequence_8, s2.length(), s8.length());
+				System.out.println("S2 S8 VALUE =\t" + values[7][1]);
 			}
 			else if(i==3)
 			{
-				//System.out.println("S3 S1 VALUE =\t" + av.findValue(s3, s1, longSequence_3,  longSequence_1, s3.length(), s1.length()));
-				//System.out.println("S3 S2 VALUE =\t" + av.findValue(s3, s2, longSequence_3,  longSequence_2, s3.length(), s2.length()));
-				//System.out.println("S3 S4 VALUE =\t" + av.findValue(s3, s4, longSequence_3,  longSequence_4, s3.length(), s4.length()));
-				//System.out.println("S3 S5 VALUE =\t" + av.findValue(s3, s5, longSequence_3,  longSequence_5, s3.length(), s5.length()));
-				System.out.println("S3 S6 VALUE =\t" + av.findValue(s3, s6, longSequence_3,  longSequence_6, s3.length(), s6.length()));
-				System.out.println("S3 S7 VALUE =\t" + av.findValue(s3, s7, longSequence_3,  longSequence_7, s3.length(), s7.length()));
-				System.out.println("S3 S8 VALUE =\t" + av.findValue(s3, s8, longSequence_3,  longSequence_8, s3.length(), s8.length()));			
+				values[0][2] = av.findValue(s3, s1, longSequence_3,  longSequence_1, s3.length(), s1.length());
+				System.out.println("S3 S1 VALUE =\t" + values[0][2]);
+				
+				values[1][2] = av.findValue(s3, s2, longSequence_3,  longSequence_2, s3.length(), s2.length());
+				System.out.println("S3 S2 VALUE =\t" + values[1][2]);
+				
+				values[3][2] = av.findValue(s3, s4, longSequence_3,  longSequence_4, s3.length(), s4.length());
+				System.out.println("S3 S4 VALUE =\t" + values[3][2]);
+				
+				values[4][2] = av.findValue(s3, s5, longSequence_3,  longSequence_5, s3.length(), s5.length());
+				System.out.println("S3 S5 VALUE =\t" + values[4][2]);
+				
+				values[5][2] = av.findValue(s3, s6, longSequence_3,  longSequence_6, s3.length(), s6.length());
+				System.out.println("S3 S6 VALUE =\t" + values[5][2]);
+				
+				values[6][2] = av.findValue(s3, s7, longSequence_3,  longSequence_7, s3.length(), s7.length());
+				System.out.println("S3 S7 VALUE =\t" + values[6][2]);
+				
+				values[7][2] = av.findValue(s3, s8, longSequence_3,  longSequence_8, s3.length(), s8.length());
+				System.out.println("S3 S8 VALUE =\t" + values[7][2]);			
 			}
 			else if(i==4)
 			{
-				//System.out.println("S4 S1 VALUE =\t" + av.findValue(s4, s1, longSequence_4,  longSequence_1, s4.length(), s1.length()));
-				//System.out.println("S4 S2 VALUE =\t" + av.findValue(s4, s2, longSequence_4,  longSequence_2, s4.length(), s2.length()));
-				//System.out.println("S4 S3 VALUE =\t" + av.findValue(s4, s3, longSequence_4,  longSequence_3, s4.length(), s3.length()));
-				//System.out.println("S4 S5 VALUE =\t" + av.findValue(s4, s5, longSequence_4,  longSequence_5, s4.length(), s5.length()));
-				System.out.println("S4 S6 VALUE =\t" + av.findValue(s4, s6, longSequence_4,  longSequence_6, s4.length(), s6.length()));
-				System.out.println("S4 S7 VALUE =\t" + av.findValue(s4, s7, longSequence_4,  longSequence_7, s4.length(), s7.length()));
-				System.out.println("S4 S8 VALUE =\t" + av.findValue(s4, s8, longSequence_4,  longSequence_8, s4.length(), s8.length()));
-			
+				values[0][3] = av.findValue(s4, s1, longSequence_4,  longSequence_1, s4.length(), s1.length());
+				System.out.println("S4 S1 VALUE =\t" + values[0][3]);
+				
+				values[1][3] = av.findValue(s4, s2, longSequence_4,  longSequence_2, s4.length(), s2.length());
+				System.out.println("S4 S2 VALUE =\t" + values[1][3]);
+				
+				values[2][3] = av.findValue(s4, s3, longSequence_4,  longSequence_3, s4.length(), s3.length());
+				System.out.println("S4 S3 VALUE =\t" + values[2][3]);
+				
+				values[4][3] = av.findValue(s4, s5, longSequence_4,  longSequence_5, s4.length(), s5.length());
+				System.out.println("S4 S5 VALUE =\t" + values[4][3]);
+				
+				values[5][3] = av.findValue(s4, s6, longSequence_4,  longSequence_6, s4.length(), s6.length());
+				System.out.println("S4 S6 VALUE =\t" + values[5][3]);
+				
+				values[6][3] = av.findValue(s4, s7, longSequence_4,  longSequence_7, s4.length(), s7.length());
+				System.out.println("S4 S7 VALUE =\t" + values[6][3]);
+				
+				values[7][3] = av.findValue(s4, s8, longSequence_4,  longSequence_8, s4.length(), s8.length());
+				System.out.println("S4 S8 VALUE =\t" + values[7][3]);		
 			}
 			else if(i==5)
 			{
-				//System.out.println("S5 S1 VALUE =\t" + av.findValue(s5, s1, longSequence_5,  longSequence_1, s5.length(), s1.length()));
-				//System.out.println("S5 S2 VALUE =\t" + av.findValue(s5, s2, longSequence_5,  longSequence_2, s5.length(), s2.length()));
-				//System.out.println("S5 S3 VALUE =\t" + av.findValue(s5, s3, longSequence_5,  longSequence_3, s5.length(), s3.length()));
-				//System.out.println("S5 S4 VALUE =\t" + av.findValue(s5, s4, longSequence_5,  longSequence_4, s5.length(), s4.length()));
-				System.out.println("S5 S6 VALUE =\t" + av.findValue(s5, s6, longSequence_5,  longSequence_6, s5.length(), s6.length()));
-				System.out.println("S5 S7 VALUE =\t" + av.findValue(s5, s7, longSequence_5,  longSequence_7, s5.length(), s7.length()));
-				System.out.println("S5 S8 VALUE =\t" + av.findValue(s5, s8, longSequence_5,  longSequence_8, s5.length(), s8.length()));
+				values[0][4] = av.findValue(s5, s1, longSequence_5,  longSequence_1, s5.length(), s1.length());
+				System.out.println("S5 S1 VALUE =\t" + values[0][4]);
+				
+				values[1][4] = av.findValue(s5, s2, longSequence_5,  longSequence_2, s5.length(), s2.length());
+				System.out.println("S5 S2 VALUE =\t" + values[1][4]);
+				
+				values[2][4] = av.findValue(s5, s3, longSequence_5,  longSequence_3, s5.length(), s3.length());
+				System.out.println("S5 S3 VALUE =\t" + values[2][4]);
+				
+				values[3][4] = av.findValue(s5, s4, longSequence_5,  longSequence_4, s5.length(), s4.length());
+				System.out.println("S5 S4 VALUE =\t" + values[3][4]);
+				
+				values[5][4] = av.findValue(s5, s6, longSequence_5,  longSequence_6, s5.length(), s6.length());
+				System.out.println("S5 S6 VALUE =\t" + values[5][4]);
+				
+				values[6][4] = av.findValue(s5, s7, longSequence_5,  longSequence_7, s5.length(), s7.length());
+				System.out.println("S5 S7 VALUE =\t" + values[6][4]);
+				
+				values[7][4] = av.findValue(s5, s8, longSequence_5,  longSequence_8, s5.length(), s8.length());
+				System.out.println("S5 S8 VALUE =\t" + values[7][4]);
 			}
 			else if(i == 6)
 			{
-				System.out.println("S6 S1 VALUE =\t" + av.findValue(s6, s1, longSequence_6,  longSequence_1, s6.length(), s1.length()));
-				System.out.println("S6 S2 VALUE =\t" + av.findValue(s6, s2, longSequence_6,  longSequence_2, s6.length(), s2.length()));
-				System.out.println("S6 S3 VALUE =\t" + av.findValue(s6, s3, longSequence_6,  longSequence_3, s6.length(), s3.length()));
-				System.out.println("S6 S4 VALUE =\t" + av.findValue(s6, s4, longSequence_6,  longSequence_4, s6.length(), s4.length()));
-				System.out.println("S6 S5 VALUE =\t" + av.findValue(s6, s5, longSequence_6,  longSequence_5, s6.length(), s5.length()));
-				System.out.println("S6 S7 VALUE =\t" + av.findValue(s6, s7, longSequence_6,  longSequence_7, s6.length(), s7.length()));
-				System.out.println("S6 S8 VALUE =\t" + av.findValue(s6, s8, longSequence_6,  longSequence_8, s6.length(), s8.length()));
+				values[0][5] = av.findValue(s6, s1, longSequence_6,  longSequence_1, s6.length(), s1.length());
+				System.out.println("S6 S1 VALUE =\t" + values[0][5]);
+				
+				values[1][5] = av.findValue(s6, s2, longSequence_6,  longSequence_2, s6.length(), s2.length());
+				System.out.println("S6 S2 VALUE =\t" + values[1][5]);
+				
+				values[2][5] = av.findValue(s6, s3, longSequence_6,  longSequence_3, s6.length(), s3.length());
+				System.out.println("S6 S3 VALUE =\t" + values[2][5]);
+				
+				values[3][5] = av.findValue(s6, s4, longSequence_6,  longSequence_4, s6.length(), s4.length());
+				System.out.println("S6 S4 VALUE =\t" + values[3][5]);
+				
+				values[4][5] = av.findValue(s6, s5, longSequence_6,  longSequence_5, s6.length(), s5.length());
+				System.out.println("S6 S5 VALUE =\t" + values[4][5]);
+				
+				values[6][5] = av.findValue(s6, s7, longSequence_6,  longSequence_7, s6.length(), s7.length());
+				System.out.println("S6 S7 VALUE =\t" + values[6][5]);
+				
+				values[7][5] = av.findValue(s6, s8, longSequence_6,  longSequence_8, s6.length(), s8.length());
+				System.out.println("S6 S8 VALUE =\t" + values[7][5]);
 			}
 			else if(i == 7)
 			{
-				System.out.println("S7 S1 VALUE =\t" + av.findValue(s7, s1, longSequence_7,  longSequence_1, s7.length(), s1.length()));
-				System.out.println("S7 S2 VALUE =\t" + av.findValue(s7, s2, longSequence_7,  longSequence_2, s7.length(), s2.length()));
-				System.out.println("S7 S3 VALUE =\t" + av.findValue(s7, s3, longSequence_7,  longSequence_3, s7.length(), s3.length()));
-				System.out.println("S7 S4 VALUE =\t" + av.findValue(s7, s4, longSequence_7,  longSequence_4, s7.length(), s4.length()));
-				System.out.println("S7 S5 VALUE =\t" + av.findValue(s7, s5, longSequence_7,  longSequence_5, s7.length(), s5.length()));
-				System.out.println("S7 S6 VALUE =\t" + av.findValue(s7, s6, longSequence_7,  longSequence_6, s7.length(), s6.length()));
-				System.out.println("S7 S8 VALUE =\t" + av.findValue(s7, s8, longSequence_7,  longSequence_8, s7.length(), s8.length()));
+				values[0][6] = av.findValue(s7, s1, longSequence_7,  longSequence_1, s7.length(), s1.length());
+				System.out.println("S7 S1 VALUE =\t" + values[0][6]);
+				
+				values[1][6] = av.findValue(s7, s2, longSequence_7,  longSequence_2, s7.length(), s2.length());
+				System.out.println("S7 S2 VALUE =\t" + values[1][6]);
+				
+				values[2][6] = av.findValue(s7, s3, longSequence_7,  longSequence_3, s7.length(), s3.length());
+				System.out.println("S7 S3 VALUE =\t" + values[2][6]);
+				
+				values[3][6] = av.findValue(s7, s4, longSequence_7,  longSequence_4, s7.length(), s4.length());
+				System.out.println("S7 S4 VALUE =\t" + values[3][6]);
+				
+				values[4][6] = av.findValue(s7, s5, longSequence_7,  longSequence_5, s7.length(), s5.length());
+				System.out.println("S7 S5 VALUE =\t" + values[4][6]);
+				
+				values[5][6] = av.findValue(s7, s6, longSequence_7,  longSequence_6, s7.length(), s6.length());
+				System.out.println("S7 S6 VALUE =\t" + values[5][6]);
+				
+				values[7][6] = av.findValue(s7, s8, longSequence_7,  longSequence_8, s7.length(), s8.length());
+				System.out.println("S7 S8 VALUE =\t" + values[7][6]);
 			}
 			else if(i == 8)
 			{
-				System.out.println("S8 S1 VALUE =\t" + av.findValue(s8, s1, longSequence_8,  longSequence_1, s8.length(), s1.length()));
-				System.out.println("S8 S2 VALUE =\t" + av.findValue(s8, s2, longSequence_8,  longSequence_2, s8.length(), s2.length()));
-				System.out.println("S8 S3 VALUE =\t" + av.findValue(s8, s3, longSequence_8,  longSequence_3, s8.length(), s3.length()));
-				System.out.println("S8 S4 VALUE =\t" + av.findValue(s8, s4, longSequence_8,  longSequence_4, s8.length(), s4.length()));
-				System.out.println("S8 S5 VALUE =\t" + av.findValue(s8, s5, longSequence_8,  longSequence_5, s8.length(), s5.length()));
-				System.out.println("S8 S6 VALUE =\t" + av.findValue(s8, s6, longSequence_8,  longSequence_6, s8.length(), s6.length()));
-				System.out.println("S8 S7 VALUE =\t" + av.findValue(s8, s7, longSequence_8,  longSequence_7, s8.length(), s7.length()));	
+				values[0][7] = av.findValue(s8, s1, longSequence_8,  longSequence_1, s8.length(), s1.length());
+				System.out.println("S8 S1 VALUE =\t" + values[0][7]);
+				
+				values[1][7] = av.findValue(s8, s2, longSequence_8,  longSequence_2, s8.length(), s2.length());
+				System.out.println("S8 S2 VALUE =\t" + values[1][7]);
+				
+				values[2][7] = av.findValue(s8, s3, longSequence_8,  longSequence_3, s8.length(), s3.length());
+				System.out.println("S8 S3 VALUE =\t" + values[2][7]);
+				
+				values[3][7] = av.findValue(s8, s4, longSequence_8,  longSequence_4, s8.length(), s4.length());
+				System.out.println("S8 S4 VALUE =\t" + values[3][7]);
+				
+				values[4][7] = av.findValue(s8, s5, longSequence_8,  longSequence_5, s8.length(), s5.length());
+				System.out.println("S8 S5 VALUE =\t" + values[4][7]);
+				
+				values[5][7] = av.findValue(s8, s6, longSequence_8,  longSequence_6, s8.length(), s6.length());
+				System.out.println("S8 S6 VALUE =\t" + values[5][7]);
+				
+				values[6][7] = av.findValue(s8, s7, longSequence_8,  longSequence_7, s8.length(), s7.length());
+				System.out.println("S8 S7 VALUE =\t" + values[6][7]);	
 			}
+		}
+		
+		double[] lengthString = {16826, 16797, 17009, 16829, 16660, 16398, 16402, 16338};
+		double[] logString = {9.7307, 9.7290, 9.7415, 9.7309, 9.7208, 9.7049, 9.7052, 9.7012};
+		double[] norm = {0.0012, 0.0012, 0.0011, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012};
+		
+
+		for(int i = 0 ; i < values.length; i++)
+		{
+			for(int j = 0; j < values[0].length; j++)
+			{
+				if(!(i == j))
+				{
+					values[j][i] = (logString[j]/(values[j][i]/lengthString[i])) - norm[i] ;
+				}
+			}
+		}
+		
+		for(int i = 0 ; i < values.length; i++)
+		{
+			double tmp = 0.0;
+			
+			for(int j = 0; j < values[0].length; j++)
+			{
+				if(!(i == j))
+				{
+					tmp = (values[j][i] + values[i][j])/2;
+					acs[j][i] = tmp;
+					acs[i][j] = tmp;
+				}
+			}
+		}
+		
+		for(int i = 0 ; i < acs.length; i++)
+		{
+			double tmp = 0.0;
+			
+			for(int j = 0; j < acs[0].length; j++)
+			{
+				System.out.print(acs[j][i]+"\t");
+			}
+			
+			System.out.println();
 		}
 	}
 
@@ -398,7 +546,7 @@ public class Check {
 /*String[] longSequence_1_2 = {"AC", "TA", "AA", "AT", "CA", "CC", "CT",
 		"CCT", "CTA", "TAA", "CCTA", "CTAA", "CCTAA", "CCA", "CCAA", "CAA", "AAC", "AACC", "CAC", "CACA", "CACAA",
 		"CTAC", "CTACA", "TAAC", "TAACC", "TAACCT", "TAACCTA", "TAC", "TAACA", "TAACAA", "AACT", "AACTA", "AACTAA",
-		"CACAC", "CACACA", "CACACAC", "CACACACC", "CACC", "CTACAA", "AACCA", "AACCAA", "AACCAAC", "AACCAACA",
+		"CACAC", "CACACA", "CACACAC", "CACA CACC", "CACC", "CTACAA", "AACCA", "AACCAA", "AACCAAC", "AACCAACA",
 		"AACCAACAC", "AACCAACACA", "AACCAACACAA", "AACA", "TACA", "TACT", "AACAA", "TACAC", "TACACC", "CACACC",
 		"AACAAC", "AACAACT", "AACAACTA", "AACAACTAA", "AACTAC", "AACTACA", "AACTACAA", "AAT", "TAACT", "CTAT",
 		"CTATA", "TACC", "AATA", "CTACC", "CTACCT", "CAT", "CATA", "CATAA", "CATAAT", "CTACCTA", "CTACCTAC",
