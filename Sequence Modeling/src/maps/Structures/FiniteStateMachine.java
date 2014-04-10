@@ -5,6 +5,7 @@ package maps.Structures;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -19,7 +20,7 @@ import org.apache.commons.math3.linear.Array2DRowRealMatrix;
  * @type        FiniteStateMachine
  *
  */
-public class FiniteStateMachine {
+public class FiniteStateMachine implements Serializable {
 	
 	private Node[][] ZERO_MAP = null;
 	private Vector<FSMNode> FSM = null;
@@ -652,7 +653,7 @@ public class FiniteStateMachine {
 			{
 				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
 				//encountered when developing. Refer Node class comment on line 68.
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
 				solidNode.add(temp1);
 				
 			}
@@ -707,7 +708,7 @@ public class FiniteStateMachine {
 			}	
 		}
 		
-		System.out.println("********         PREVIOUS WINNERS        ********");
+/*		System.out.println("********         PREVIOUS WINNERS        ********");
 		Iterator<FSMNode> itr4 = solidNode.iterator();
 		ArrayList<Node> tt = new ArrayList<Node>();
 		
@@ -726,7 +727,7 @@ public class FiniteStateMachine {
                 System.out.println("X=\t" + tt.get(j).getX() + "\tY=\t" + tt.get(j).getY());
             }
 		}
-		
+		*/
 	}
 	
 

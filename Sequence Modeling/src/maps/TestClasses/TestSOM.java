@@ -4,6 +4,12 @@
  */
 package maps.TestClasses;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 import maps.Util.FileProcessing;
 import maps.Structures.SelfOrganizingMap;
 
@@ -16,8 +22,10 @@ public class TestSOM {
 
 	/**
 	 * @param args
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		FileProcessing fp = null;
 		int th = 0;
@@ -28,11 +36,27 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sets\\V00654.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\2g.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,350,0,3);
+		SelfOrganizingMap SOM = null;//new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4);
+		
+		//============SERIALIZE================
+		/*
+		FileOutputStream fout = new FileOutputStream("address.ser");
+		ObjectOutputStream oos = new ObjectOutputStream(fout);   
+		oos.writeObject(SOM);
+		oos.close();
+		fout.close();
+		System.out.println("Done ");*/
+		
+		//=============DESERIALIZE===============		
+		FileInputStream fin = new FileInputStream("address.ser");
+		ObjectInputStream ois = new ObjectInputStream(fin);
+		SOM = (SelfOrganizingMap) ois.readObject();
+		ois.close();
+		System.out.println("Done 2");
 		
 		System.out.println("HERE 3");
 
