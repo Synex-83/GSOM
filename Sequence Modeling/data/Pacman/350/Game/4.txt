@@ -1,0 +1,104 @@
+==============================================================
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =64 Y =75 HITS =731
+Sequence QG X =1 Y =48 HITS =439
+Sequence GL X =75 Y =23 HITS =471
+Sequence LA X =11 Y =85 HITS =503
+Sequence AF X =45 Y =52 HITS =622
+Sequence NN X =100 Y =94 HITS =1078
+Sequence MD X =35 Y =90 HITS =526
+Sequence OV X =18 Y =25 HITS =507
+Sequence VV X =97 Y =77 HITS =783
+Sequence RW X =100 Y =1 HITS =557
+Sequence KN X =75 Y =58 HITS =380
+Sequence NK X =72 Y =65 HITS =662
+Sequence IA X =65 Y =100 HITS =391
+Sequence AN X =44 Y =30 HITS =451
+Sequence GA X =55 Y =99 HITS =371
+Sequence NC X =1 Y =87 HITS =643
+Sequence HD X =27 Y =79 HITS =505
+Sequence MR X =1 Y =1 HITS =1725
+Sequence LL X =100 Y =100 HITS =2304
+Sequence KR X =26 Y =13 HITS =562
+Sequence RV X =96 Y =21 HITS =655
+Sequence ZS X =86 Y =1 HITS =468
+Sequence CN X =57 Y =23 HITS =554
+Sequence CG X =61 Y =82 HITS =359
+Sequence NH X =35 Y =99 HITS =369
+Sequence LE X =44 Y =92 HITS =422
+Sequence KC X =69 Y =89 HITS =503
+Sequence VO X =22 Y =38 HITS =485
+Sequence KK X =100 Y =100 HITS =2304
+********             LONG SEQUENCES                  ********
+Sequence NN -> NC (NNC)  [COUNT 7]
+Sequence CN -> NN (CNN)  [COUNT 48]
+Sequence NC -> CN (NCN)  [COUNT 82]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 82]
+Sequence CN -> NN -> NC (CNNC)  [COUNT 20]
+Sequence LL -> LI (LLI)  [COUNT 123]
+Sequence KC -> CN (KCN)  [COUNT 34]
+Sequence KC -> CN -> NN (KCNN)  [COUNT 34]
+Sequence KR -> RV (KRV)  [COUNT 20]
+Sequence KR -> RV -> VV (KRVV)  [COUNT 19]
+Sequence NK -> KR (NKR)  [COUNT 63]
+Sequence NK -> KR -> RV (NKRV)  [COUNT 48]
+Sequence NK -> KR -> RV -> VV (NKRVV)  [COUNT 48]
+Sequence NN -> NK (NNK)  [COUNT 104]
+Sequence NN -> NK -> KR (NNKR)  [COUNT 66]
+Sequence NN -> NK -> KR -> RV (NNKRV)  [COUNT 66]
+Sequence RV -> VV (RVV)  [COUNT 48]
+Sequence NC -> CN -> NN -> NK (NCNNK)  [COUNT 47]
+Sequence NC -> CN -> NN -> NK -> KR (NCNNKR)  [COUNT 47]
+Sequence NC -> CN -> NN -> NK -> KR -> RV (NCNNKRV)  [COUNT 47]
+Sequence KC -> CN -> NN -> NK (KCNNK)  [COUNT 32]
+Sequence NN -> NK -> KR -> RV -> VV (NNKRVV)  [COUNT 42]
+Sequence NC -> CN -> NN -> NK -> KR -> RV -> VV (NCNNKRVV)  [COUNT 16]
+Sequence NK -> KR -> RV -> VV -> VO (NKRVVO)  [COUNT 31]
+Sequence NN -> NK -> KR -> RV -> VV -> VO (NNKRVVO)  [COUNT 41]
+Sequence RV -> VV -> VO (RVVO)  [COUNT 45]
+Sequence GL -> LL (GLL)  [COUNT 13]
+Sequence RV -> VV -> VO -> OV (RVVOV)  [COUNT 40]
+Sequence VO -> OV (VOV)  [COUNT 13]
+Sequence OV -> VV (OVV)  [COUNT 52]
+Sequence NN -> NK -> KR -> RV -> VV -> VO -> OV (NNKRVVOV)  [COUNT 13]
+Sequence LL -> LA (LLA)  [COUNT 21]
+Sequence LL -> LA -> AF (LLAF)  [COUNT 11]
+Sequence GL -> LA (GLA)  [COUNT 23]
+Sequence GL -> LA -> AF (GLAF)  [COUNT 23]
+Sequence LA -> AN (LAN)  [COUNT 21]
+Sequence LA -> AN -> NK (LANK)  [COUNT 21]
+Sequence AN -> NC (ANC)  [COUNT 8]
+Sequence AN -> NK (ANK)  [COUNT 6]
+Sequence LA -> AF (LAF)  [COUNT 10]
+Sequence QG -> GL (QGL)  [COUNT 57]
+Sequence QG -> GL -> LA (QGLA)  [COUNT 49]
+Sequence QG -> GL -> LA -> AF (QGLAF)  [COUNT 49]
+Sequence GL -> LL -> LE (GLLE)  [COUNT 5]
+Sequence IA -> AN (IAN)  [COUNT 17]
+Sequence KN -> NN (KNN)  [COUNT 23]
+Sequence KN -> NN -> NK (KNNK)  [COUNT 15]
+Sequence KN -> NN -> NK -> KR (KNNKR)  [COUNT 8]
+Sequence KN -> NN -> NK -> KR -> RV (KNNKRV)  [COUNT 8]
+Sequence KN -> NN -> NK -> KR -> RV -> VV (KNNKRVV)  [COUNT 4]
+Sequence KN -> NN -> NK -> KR -> RV -> VV -> VO (KNNKRVVO)  [COUNT 4]
+Sequence IA -> AN -> NK (IANK)  [COUNT 4]
+Sequence KK -> KN (KKN)  [COUNT 4]
+Sequence KK -> KN -> NN (KKNN)  [COUNT 4]
+Sequence KK -> KN -> NN -> NK (KKNNK)  [COUNT 4]
+Sequence KK -> KN -> NN -> NK -> KR (KKNNKR)  [COUNT 4]
+Sequence KK -> KN -> NN -> NK -> KR -> RV (KKNNKRV)  [COUNT 4]
+Sequence GA -> AN (GAN)  [COUNT 8]
+Sequence GA -> AN -> NC (GANC)  [COUNT 2]
+Sequence CN -> NH (CNH)  [COUNT 2]
+Sequence NN -> NH (NNH)  [COUNT 9]
+Sequence NN -> NH -> HD (NNHD)  [COUNT 9]
+Sequence GA -> AN -> NH (GANH)  [COUNT 4]
+Sequence GA -> AN -> NH -> HD (GANHD)  [COUNT 4]
+Sequence CG -> GA (CGA)  [COUNT 7]
+Sequence NC -> CG (NCG)  [COUNT 3]
+Sequence CN -> NN -> NH (CNNH)  [COUNT 1]
+Sequence CN -> NN -> NH -> HD (CNNHD)  [COUNT 1]
+Sequence NC -> CG -> GL (NCGL)  [COUNT 1]
+Sequence NC -> CG -> GL -> LL (NCGLL)  [COUNT 1]
+Sequence NC -> CG -> GL -> LL -> LE (NCGLLE)  [COUNT 1]

@@ -1,0 +1,38 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =57 Y =73 HITS =792
+Sequence QG X =1 Y =51 HITS =537
+Sequence MD X =37 Y =96 HITS =512
+Sequence FC X =46 Y =88 HITS =626
+Sequence CN X =64 Y =15 HITS =661
+Sequence NN X =83 Y =100 HITS =833
+Sequence NH X =29 Y =100 HITS =655
+Sequence HD X =55 Y =51 HITS =523
+Sequence MB X =1 Y =83 HITS =621
+Sequence BH X =65 Y =53 HITS =549
+Sequence NK X =100 Y =65 HITS =587
+Sequence VV X =99 Y =100 HITS =555
+Sequence BN X =74 Y =25 HITS =552
+Sequence LE X =37 Y =88 HITS =514
+Sequence IA X =57 Y =100 HITS =502
+Sequence IV X =1 Y =1 HITS =1705
+********             LONG SEQUENCES                  ********
+Sequence LI -> IV (LIV)  [COUNT 13]
+Sequence NN -> NH (NNH)  [COUNT 38]
+Sequence CN -> NN (CNN)  [COUNT 35]
+Sequence CN -> NH (CNH)  [COUNT 4]
+Sequence CN -> NN -> NH (CNNH)  [COUNT 2]
+Sequence FC -> CN (FCN)  [COUNT 97]
+Sequence FC -> CN -> NH (FCNH)  [COUNT 39]
+Sequence FC -> CN -> NN (FCNN)  [COUNT 20]
+Sequence FC -> CN -> NN -> NH (FCNNH)  [COUNT 20]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 18]
+Sequence NN -> NK (NNK)  [COUNT 28]
+Sequence BN -> NH (BNH)  [COUNT 15]
+Sequence MB -> BN (MBN)  [COUNT 19]
+Sequence MB -> BH (MBH)  [COUNT 47]
+Sequence NN -> NH -> HD (NNHD)  [COUNT 7]
+Sequence FC -> CN -> NN -> NH -> HD (FCNNHD)  [COUNT 5]
+Sequence MB -> BH -> HD (MBHD)  [COUNT 8]
+Sequence NH -> HD (NHD)  [COUNT 2]
+Sequence BH -> HD (BHD)  [COUNT 2]

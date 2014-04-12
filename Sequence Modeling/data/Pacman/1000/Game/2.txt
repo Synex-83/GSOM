@@ -1,0 +1,55 @@
+THRESHOLD NUMBER OF HITS =1000
+********             SOLID SEQUENCES                  ********
+Sequence CL X =54 Y =36 HITS =1063
+Sequence LE X =16 Y =44 HITS =1121
+Sequence BN X =61 Y =71 HITS =1179
+Sequence NH X =1 Y =49 HITS =1264
+Sequence HO X =70 Y =70 HITS =1127
+Sequence OV X =98 Y =77 HITS =1460
+Sequence VV X =1 Y =91 HITS =1464
+Sequence LI X =26 Y =74 HITS =2444
+Sequence NN X =1 Y =83 HITS =1726
+Sequence NK X =35 Y =100 HITS =2248
+Sequence LL X =1 Y =76 HITS =1241
+Sequence ER X =97 Y =30 HITS =1215
+Sequence RV X =78 Y =100 HITS =1830
+Sequence AN X =69 Y =40 HITS =1036
+Sequence DK X =54 Y =36 HITS =1063
+Sequence LA X =1 Y =1 HITS =1476
+Sequence KN X =43 Y =99 HITS =1196
+Sequence HR X =97 Y =30 HITS =1215
+Sequence IV X =100 Y =1 HITS =4041
+********             LONG SEQUENCES                  ********
+Sequence LI -> IV (LIV)  [COUNT 61]
+Sequence NN -> NK (NNK)  [COUNT 377]
+Sequence RV -> VV (RVV)  [COUNT 126]
+Sequence OV -> VV (OVV)  [COUNT 143]
+Sequence NN -> NH (NNH)  [COUNT 27]
+Sequence LL -> LI (LLI)  [COUNT 102]
+Sequence LL -> LI -> IV (LLIV)  [COUNT 24]
+Sequence LL -> LA (LLA)  [COUNT 16]
+Sequence ER -> RV (ERV)  [COUNT 48]
+Sequence ER -> RV -> VV (ERVV)  [COUNT 41]
+Sequence KN -> NN (KNN)  [COUNT 158]
+Sequence KN -> NN -> NK (KNNK)  [COUNT 131]
+Sequence BN -> NH (BNH)  [COUNT 100]
+Sequence BN -> NH -> HO (BNHO)  [COUNT 77]
+Sequence NH -> HO (NHO)  [COUNT 28]
+Sequence NH -> HO -> OV (NHOV)  [COUNT 23]
+Sequence NH -> HO -> OV -> VV (NHOVV)  [COUNT 23]
+Sequence BN -> NH -> HO -> OV (BNHOV)  [COUNT 26]
+Sequence BN -> NH -> HO -> OV -> VV (BNHOVV)  [COUNT 13]
+Sequence LL -> LE (LLE)  [COUNT 26]
+Sequence HO -> OV (HOV)  [COUNT 4]
+Sequence HO -> OV -> VV (HOVV)  [COUNT 4]
+Sequence LE -> ER (LER)  [COUNT 89]
+Sequence LE -> ER -> RV (LERV)  [COUNT 38]
+Sequence LE -> ER -> RV -> VV (LERVV)  [COUNT 38]
+Sequence CL -> LI (CLI)  [COUNT 35]
+Sequence CL -> LI -> IV (CLIV)  [COUNT 3]
+Sequence CL -> LA (CLA)  [COUNT 12]
+Sequence CL -> LE (CLE)  [COUNT 5]
+Sequence AN -> NK (ANK)  [COUNT 13]
+Sequence AN -> NH (ANH)  [COUNT 4]
+Sequence LA -> AN (LAN)  [COUNT 11]
+Sequence LA -> AN -> NK (LANK)  [COUNT 11]

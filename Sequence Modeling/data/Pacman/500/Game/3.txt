@@ -1,0 +1,33 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence FC X =18 Y =55 HITS =512
+Sequence CN X =80 Y =37 HITS =539
+Sequence MB X =52 Y =64 HITS =827
+Sequence BH X =75 Y =1 HITS =812
+Sequence LA X =37 Y =61 HITS =648
+Sequence NK X =35 Y =20 HITS =536
+Sequence IL X =50 Y =1 HITS =589
+Sequence LL X =1 Y =27 HITS =635
+Sequence RV X =1 Y =100 HITS =2478
+Sequence VV X =1 Y =1 HITS =2172
+Sequence OV X =76 Y =74 HITS =713
+Sequence LI X =28 Y =29 HITS =2767
+Sequence IO X =60 Y =25 HITS =584
+Sequence MD X =1 Y =62 HITS =792
+Sequence IV X =100 Y =100 HITS =676
+********             LONG SEQUENCES                  ********
+Sequence RV -> VV (RVV)  [COUNT 517]
+Sequence LI -> IV (LIV)  [COUNT 75]
+Sequence MB -> BH (MBH)  [COUNT 207]
+Sequence LL -> LI (LLI)  [COUNT 39]
+Sequence LL -> LI -> IV (LLIV)  [COUNT 11]
+Sequence OV -> VV (OVV)  [COUNT 39]
+Sequence IL -> LL (ILL)  [COUNT 80]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 30]
+Sequence LI -> IO (LIO)  [COUNT 77]
+Sequence LI -> IO -> OV (LIOV)  [COUNT 77]
+Sequence LI -> IO -> OV -> VV (LIOVV)  [COUNT 46]
+Sequence IO -> OV (IOV)  [COUNT 8]
+Sequence IO -> OV -> VV (IOVV)  [COUNT 8]
+Sequence FC -> CN (FCN)  [COUNT 9]
+********             HOLLOW SEQUENCES      

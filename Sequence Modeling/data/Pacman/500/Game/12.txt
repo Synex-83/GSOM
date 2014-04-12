@@ -1,0 +1,15 @@
+==============================================================
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =84 Y =65 HITS =666
+Sequence LA X =86 Y =13 HITS =604
+Sequence NN X =88 Y =99 HITS =533
+Sequence NH X =91 Y =54 HITS =500
+Sequence AL X =28 Y =56 HITS =541
+Sequence NK X =76 Y =65 HITS =693
+Sequence MD X =100 Y =53 HITS =692
+Sequence IV X =1 Y =1 HITS =1313
+********             LONG SEQUENCES                  ********
+Sequence LI -> IV (LIV)  [COUNT 10]
+Sequence LA -> AL (LAL)  [COUNT 3]
+Sequence NN -> NK (NNK)  [COUNT 12]

@@ -1,0 +1,127 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =57 Y =73 HITS =792
+Sequence IQ X =38 Y =2 HITS =419
+Sequence QG X =1 Y =51 HITS =537
+Sequence GM X =100 Y =28 HITS =423
+Sequence MD X =37 Y =96 HITS =512
+Sequence FC X =46 Y =88 HITS =626
+Sequence CN X =64 Y =15 HITS =661
+Sequence LA X =11 Y =100 HITS =471
+Sequence FN X =89 Y =48 HITS =445
+Sequence NN X =83 Y =100 HITS =833
+Sequence NH X =29 Y =100 HITS =655
+Sequence HD X =55 Y =51 HITS =523
+Sequence MB X =1 Y =83 HITS =621
+Sequence BH X =65 Y =53 HITS =549
+Sequence ZS X =75 Y =1 HITS =355
+Sequence SF X =22 Y =60 HITS =406
+Sequence NC X =11 Y =88 HITS =351
+Sequence LL X =77 Y =99 HITS =403
+Sequence LM X =72 Y =83 HITS =462
+Sequence DE X =63 Y =100 HITS =374
+Sequence KN X =100 Y =57 HITS =436
+Sequence NK X =100 Y =65 HITS =587
+Sequence IL X =89 Y =59 HITS =398
+Sequence JF X =41 Y =59 HITS =477
+Sequence ZQ X =100 Y =12 HITS =357
+Sequence HO X =90 Y =24 HITS =482
+Sequence VV X =99 Y =100 HITS =555
+Sequence BN X =74 Y =25 HITS =552
+Sequence GA X =46 Y =100 HITS =407
+Sequence AL X =64 Y =25 HITS =412
+Sequence LE X =37 Y =88 HITS =514
+Sequence ER X =21 Y =7 HITS =423
+Sequence HR X =21 Y =7 HITS =423
+Sequence RD X =13 Y =63 HITS =390
+Sequence VI X =1 Y =26 HITS =416
+Sequence IA X =57 Y =100 HITS =502
+Sequence ZT X =75 Y =1 HITS =355
+Sequence EO X =90 Y =24 HITS =482
+Sequence MC X =1 Y =100 HITS =362
+Sequence IV X =1 Y =1 HITS =1705
+********             LONG SEQUENCES                  ********
+Sequence NN -> NH (NNH)  [COUNT 61]
+Sequence CN -> NN (CNN)  [COUNT 59]
+Sequence FC -> CN (FCN)  [COUNT 136]
+Sequence FC -> CN -> NH (FCNH)  [COUNT 83]
+Sequence FC -> CN -> NN (FCNN)  [COUNT 13]
+Sequence FC -> CN -> NN -> NH (FCNNH)  [COUNT 13]
+Sequence LI -> IV (LIV)  [COUNT 16]
+Sequence BN -> NH (BNH)  [COUNT 55]
+Sequence MB -> BN (MBN)  [COUNT 64]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 44]
+Sequence NN -> NK (NNK)  [COUNT 28]
+Sequence NN -> NH -> HD (NNHD)  [COUNT 32]
+Sequence NH -> HD (NHD)  [COUNT 16]
+Sequence FC -> CN -> NN -> NH -> HD (FCNNHD)  [COUNT 3]
+Sequence MB -> BH (MBH)  [COUNT 164]
+Sequence MB -> BH -> HD (MBHD)  [COUNT 57]
+Sequence JF -> FC (JFC)  [COUNT 114]
+Sequence JF -> FC -> CN (JFCN)  [COUNT 71]
+Sequence JF -> FC -> CN -> NN (JFCNN)  [COUNT 29]
+Sequence JF -> FC -> CN -> NN -> NH (JFCNNH)  [COUNT 29]
+Sequence JF -> FC -> CN -> NN -> NH -> HD (JFCNNHD)  [COUNT 29]
+Sequence BH -> HD (BHD)  [COUNT 14]
+Sequence FC -> CN -> NH -> HO (FCNHO)  [COUNT 27]
+Sequence BN -> NH -> HO (BNHO)  [COUNT 26]
+Sequence KN -> NN (KNN)  [COUNT 75]
+Sequence KN -> NN -> NK (KNNK)  [COUNT 50]
+Sequence GM -> MB (GMB)  [COUNT 22]
+Sequence GM -> MB -> BH (GMBH)  [COUNT 22]
+Sequence LM -> MD (LMD)  [COUNT 50]
+Sequence QG -> GM (QGM)  [COUNT 16]
+Sequence QG -> GM -> MD (QGMD)  [COUNT 12]
+Sequence FN -> NN (FNN)  [COUNT 29]
+Sequence FN -> NN -> NH (FNNH)  [COUNT 15]
+Sequence FN -> NN -> NH -> HD (FNNHD)  [COUNT 15]
+Sequence SF -> FN (SFN)  [COUNT 41]
+Sequence VI -> IA (VIA)  [COUNT 53]
+Sequence LI -> IQ (LIQ)  [COUNT 63]
+Sequence LI -> IQ -> QG (LIQG)  [COUNT 50]
+Sequence LI -> IQ -> QG -> GM (LIQGM)  [COUNT 26]
+Sequence LI -> IQ -> QG -> GM -> MD (LIQGMD)  [COUNT 19]
+Sequence LA -> AL (LAL)  [COUNT 14]
+Sequence GA -> AL (GAL)  [COUNT 31]
+Sequence GA -> AL -> LE (GALE)  [COUNT 13]
+Sequence LA -> AL -> LM (LALM)  [COUNT 7]
+Sequence LA -> AL -> LM -> MD (LALMD)  [COUNT 7]
+Sequence LI -> IV -> VI (LIVI)  [COUNT 3]
+Sequence LI -> IV -> VI -> IA (LIVIA)  [COUNT 3]
+Sequence VI -> IA -> AL (VIAL)  [COUNT 18]
+Sequence VI -> IA -> AL -> LM (VIALM)  [COUNT 12]
+Sequence VI -> IA -> AL -> LM -> MD (VIALMD)  [COUNT 12]
+Sequence GA -> AL -> LM (GALM)  [COUNT 18]
+Sequence GA -> AL -> LM -> MD (GALMD)  [COUNT 12]
+Sequence LE -> ER (LER)  [COUNT 17]
+Sequence GA -> AL -> LE -> ER (GALER)  [COUNT 11]
+Sequence HR -> RD (HRD)  [COUNT 35]
+Sequence IL -> LM (ILM)  [COUNT 13]
+Sequence IL -> LM -> MD (ILMD)  [COUNT 8]
+Sequence IL -> LL (ILL)  [COUNT 25]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 11]
+Sequence LL -> LE (LLE)  [COUNT 7]
+Sequence GA -> AL -> LM -> MD -> DE (GALMDE)  [COUNT 7]
+Sequence LM -> MD -> DE (LMDE)  [COUNT 4]
+Sequence LI -> IQ -> QG -> GM -> MD -> DE (LIQGMDE)  [COUNT 7]
+Sequence VI -> IA -> AL -> LL (VIALL)  [COUNT 4]
+Sequence VI -> IA -> AL -> LL -> LI (VIALLI)  [COUNT 4]
+Sequence LA -> AL -> LL (LALL)  [COUNT 4]
+Sequence LA -> AL -> LL -> LI (LALLI)  [COUNT 4]
+Sequence IL -> LL -> LI -> IV (ILLIV)  [COUNT 4]
+Sequence IL -> LL -> LI -> IV -> VI (ILLIVI)  [COUNT 4]
+Sequence IL -> LL -> LI -> IV -> VI -> IA (ILLIVIA)  [COUNT 4]
+Sequence MC -> CN (MCN)  [COUNT 7]
+Sequence LL -> LM (LLM)  [COUNT 3]
+Sequence LL -> LM -> MD (LLMD)  [COUNT 3]
+Sequence IL -> LM -> MC (ILMC)  [COUNT 3]
+Sequence IL -> LM -> MC -> CN (ILMCN)  [COUNT 3]
+Sequence MC -> CN -> NN (MCNN)  [COUNT 3]
+Sequence MC -> CN -> NN -> NK (MCNNK)  [COUNT 3]
+Sequence LI -> IQ -> QG -> GM -> MC (LIQGMC)  [COUNT 3]
+Sequence ZS -> SF (ZSF)  [COUNT 2]
+Sequence ZS -> SF -> FN (ZSFN)  [COUNT 2]
+Sequence ZQ -> QG (ZQG)  [COUNT 2]
+Sequence NC -> CN (NCN)  [COUNT 1]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 1]
+Sequence NC -> CN -> NN -> NK (NCNNK)  [COUNT 1]

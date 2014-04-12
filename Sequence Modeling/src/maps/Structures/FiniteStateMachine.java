@@ -47,6 +47,11 @@ public class FiniteStateMachine implements Serializable {
 		ZERO_MAP = map;
 	}
 
+	public void setThreshold(int hitCount)
+	{
+		THRESHOLD = hitCount;
+	}
+	
 	/**
 	 * @return the fSM
 	 */

@@ -1,0 +1,7 @@
+THRESHOLD NUMBER OF HITS =1000
+********             SOLID SEQUENCES                  ********
+Sequence LI X =24 Y =23 HITS =1345
+Sequence KT X =100 Y =100 HITS =1726
+Sequence OV X =98 Y =43 HITS =1112
+Sequence NN X =1 Y =1 HITS =2509
+********             LONG SEQUENCES                  ********

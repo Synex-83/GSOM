@@ -1,0 +1,7 @@
+THRESHOLD NUMBER OF HITS =1000
+********             SOLID SEQUENCES                  ********
+Sequence RV X =1 Y =100 HITS =2478
+Sequence VV X =1 Y =1 HITS =2172
+Sequence LI X =28 Y =29 HITS =2767
+********             LONG SEQUENCES                  ********
+Sequence RV -> VV (RVV)  [COUNT 517]

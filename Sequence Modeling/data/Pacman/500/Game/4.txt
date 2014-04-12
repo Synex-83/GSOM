@@ -1,0 +1,48 @@
+==============================================================
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =64 Y =75 HITS =731
+Sequence LA X =11 Y =85 HITS =503
+Sequence AF X =45 Y =52 HITS =622
+Sequence NN X =100 Y =94 HITS =1078
+Sequence MD X =35 Y =90 HITS =526
+Sequence OV X =18 Y =25 HITS =507
+Sequence VV X =97 Y =77 HITS =783
+Sequence RW X =100 Y =1 HITS =557
+Sequence NK X =72 Y =65 HITS =662
+Sequence NC X =1 Y =87 HITS =643
+Sequence HD X =27 Y =79 HITS =505
+Sequence MR X =1 Y =1 HITS =1725
+Sequence LL X =100 Y =100 HITS =2304
+Sequence KR X =26 Y =13 HITS =562
+Sequence RV X =96 Y =21 HITS =655
+Sequence CN X =57 Y =23 HITS =554
+Sequence KC X =69 Y =89 HITS =503
+Sequence KK X =100 Y =100 HITS =2304
+********             LONG SEQUENCES                  ********
+Sequence NN -> NC (NNC)  [COUNT 9]
+Sequence LL -> LI (LLI)  [COUNT 75]
+Sequence NN -> NK (NNK)  [COUNT 77]
+Sequence RV -> VV (RVV)  [COUNT 52]
+Sequence CN -> NN (CNN)  [COUNT 22]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 12]
+Sequence NC -> CN (NCN)  [COUNT 22]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 22]
+Sequence NC -> CN -> NN -> NK (NCNNK)  [COUNT 16]
+Sequence CN -> NN -> NC (CNNC)  [COUNT 5]
+Sequence NK -> KR (NKR)  [COUNT 20]
+Sequence NN -> NK -> KR (NNKR)  [COUNT 25]
+Sequence NN -> NK -> KR -> RV (NNKRV)  [COUNT 25]
+Sequence NN -> NK -> KR -> RV -> VV (NNKRVV)  [COUNT 15]
+Sequence NK -> KR -> RV (NKRV)  [COUNT 15]
+Sequence NK -> KR -> RV -> VV (NKRVV)  [COUNT 15]
+Sequence NC -> CN -> NN -> NK -> KR (NCNNKR)  [COUNT 14]
+Sequence NC -> CN -> NN -> NK -> KR -> RV (NCNNKRV)  [COUNT 14]
+Sequence NC -> CN -> NN -> NK -> KR -> RV -> VV (NCNNKRVV)  [COUNT 5]
+Sequence KR -> RV (KRV)  [COUNT 4]
+Sequence KR -> RV -> VV (KRVV)  [COUNT 4]
+Sequence OV -> VV (OVV)  [COUNT 3]
+Sequence LL -> LA (LLA)  [COUNT 1]
+Sequence LL -> LA -> AF (LLAF)  [COUNT 1]
+Sequence LA -> AF (LAF)  [COUNT 2]
+********             HOLLOW SEQUENCES                  ********

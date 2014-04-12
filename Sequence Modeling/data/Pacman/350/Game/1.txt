@@ -1,0 +1,38 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =73 Y =100 HITS =542
+Sequence AF X =56 Y =52 HITS =513
+Sequence NN X =100 Y =100 HITS =1373
+Sequence NH X =62 Y =100 HITS =486
+Sequence MB X =12 Y =75 HITS =396
+Sequence IL X =90 Y =58 HITS =430
+Sequence LL X =100 Y =92 HITS =366
+Sequence IV X =1 Y =1 HITS =1083
+Sequence ZS X =65 Y =1 HITS =434
+Sequence FC X =84 Y =69 HITS =497
+Sequence EO X =64 Y =30 HITS =392
+Sequence MD X =64 Y =89 HITS =356
+Sequence CN X =55 Y =30 HITS =439
+Sequence HO X =64 Y =30 HITS =392
+Sequence NK X =91 Y =48 HITS =523
+Sequence OV X =37 Y =1 HITS =372
+********             LONG SEQUENCES                  ********
+Sequence LI -> IV (LIV)  [COUNT 40]
+Sequence NN -> NK (NNK)  [COUNT 15]
+Sequence NN -> NH (NNH)  [COUNT 51]
+Sequence AF -> FC (AFC)  [COUNT 66]
+Sequence AF -> FC -> CN (AFCN)  [COUNT 20]
+Sequence AF -> FC -> CN -> NH (AFCNH)  [COUNT 20]
+Sequence FC -> CN (FCN)  [COUNT 30]
+Sequence CN -> NH (CNH)  [COUNT 10]
+Sequence CN -> NN (CNN)  [COUNT 20]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 20]
+Sequence AF -> FC -> CN -> NH -> HO (AFCNHO)  [COUNT 13]
+Sequence CN -> NH -> HO (CNHO)  [COUNT 6]
+Sequence NH -> HO (NHO)  [COUNT 12]
+Sequence CN -> NH -> HO -> OV (CNHOV)  [COUNT 3]
+Sequence LL -> LI (LLI)  [COUNT 3]
+Sequence LL -> LI -> IV (LLIV)  [COUNT 3]
+Sequence NH -> HO -> OV (NHOV)  [COUNT 3]
+Sequence IL -> LL (ILL)  [COUNT 11]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 7]

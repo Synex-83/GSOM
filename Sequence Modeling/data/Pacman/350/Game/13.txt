@@ -1,0 +1,90 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =24 Y =23 HITS =1345
+Sequence IO X =62 Y =24 HITS =753
+Sequence NK X =65 Y =1 HITS =958
+Sequence KT X =100 Y =100 HITS =1726
+Sequence LL X =1 Y =9 HITS =962
+Sequence BN X =52 Y =46 HITS =778
+Sequence NH X =12 Y =44 HITS =393
+Sequence HO X =64 Y =33 HITS =704
+Sequence OV X =98 Y =43 HITS =1112
+Sequence LA X =12 Y =74 HITS =355
+Sequence AL X =51 Y =57 HITS =530
+Sequence OU X =100 Y =56 HITS =352
+Sequence FC X =12 Y =35 HITS =364
+Sequence LB X =22 Y =77 HITS =596
+Sequence DL X =45 Y =25 HITS =536
+Sequence VV X =94 Y =1 HITS =904
+Sequence RV X =68 Y =16 HITS =663
+Sequence KR X =96 Y =68 HITS =353
+Sequence NN X =1 Y =1 HITS =2509
+Sequence ND X =9 Y =55 HITS =415
+Sequence JF X =22 Y =67 HITS =379
+Sequence VO X =61 Y =100 HITS =365
+Sequence EO X =64 Y =33 HITS =704
+Sequence IQ X =89 Y =70 HITS =384
+********             LONG SEQUENCES                  ********
+Sequence LL -> LI (LLI)  [COUNT 111]
+Sequence OV -> VV (OVV)  [COUNT 49]
+Sequence HO -> OV (HOV)  [COUNT 121]
+Sequence NN -> NK (NNK)  [COUNT 187]
+Sequence NK -> KT (NKT)  [COUNT 69]
+Sequence HO -> OV -> VV (HOVV)  [COUNT 18]
+Sequence LL -> LB (LLB)  [COUNT 32]
+Sequence RV -> VV (RVV)  [COUNT 166]
+Sequence LI -> IO (LIO)  [COUNT 347]
+Sequence LI -> IO -> OV (LIOV)  [COUNT 250]
+Sequence LI -> IO -> OV -> VV (LIOVV)  [COUNT 135]
+Sequence LL -> LI -> IO (LLIO)  [COUNT 21]
+Sequence LB -> BN (LBN)  [COUNT 132]
+Sequence BN -> NN (BNN)  [COUNT 57]
+Sequence LL -> LI -> IO -> OV (LLIOV)  [COUNT 20]
+Sequence LL -> LI -> IO -> OV -> VV (LLIOVV)  [COUNT 19]
+Sequence LL -> LB -> BN (LLBN)  [COUNT 21]
+Sequence AL -> LL (ALL)  [COUNT 178]
+Sequence LL -> LB -> BN -> NN (LLBNN)  [COUNT 2]
+Sequence AL -> LL -> LI (ALLI)  [COUNT 87]
+Sequence AL -> LL -> LI -> IO (ALLIO)  [COUNT 35]
+Sequence AL -> LL -> LB (ALLB)  [COUNT 18]
+Sequence AL -> LL -> LB -> BN (ALLBN)  [COUNT 18]
+Sequence AL -> LL -> LI -> IO -> OV (ALLIOV)  [COUNT 17]
+Sequence DL -> LL (DLL)  [COUNT 25]
+Sequence DL -> LL -> LB (DLLB)  [COUNT 17]
+Sequence DL -> LL -> LB -> BN (DLLBN)  [COUNT 17]
+Sequence DL -> LL -> LB -> BN -> NN (DLLBNN)  [COUNT 17]
+Sequence ND -> DL (NDL)  [COUNT 33]
+Sequence NN -> ND (NND)  [COUNT 17]
+Sequence NN -> ND -> DL (NNDL)  [COUNT 17]
+Sequence NN -> ND -> DL -> LL (NNDLL)  [COUNT 9]
+Sequence BN -> NN -> ND (BNND)  [COUNT 8]
+Sequence LL -> LB -> BN -> NH (LLBNH)  [COUNT 6]
+Sequence LL -> LB -> BN -> NH -> HO (LLBNHO)  [COUNT 6]
+Sequence LB -> BN -> NH (LBNH)  [COUNT 22]
+Sequence LB -> BN -> NH -> HO (LBNHO)  [COUNT 22]
+Sequence LB -> BN -> NH -> HO -> OV (LBNHOV)  [COUNT 11]
+Sequence NH -> HO (NHO)  [COUNT 6]
+Sequence BN -> NH (BNH)  [COUNT 10]
+Sequence BN -> NH -> HO (BNHO)  [COUNT 10]
+Sequence BN -> NH -> HO -> OV (BNHOV)  [COUNT 10]
+Sequence BN -> NH -> HO -> OV -> VV (BNHOVV)  [COUNT 5]
+Sequence LI -> IQ (LIQ)  [COUNT 27]
+Sequence AL -> LL -> LI -> IQ (ALLIQ)  [COUNT 6]
+Sequence JF -> FC (JFC)  [COUNT 11]
+Sequence RV -> VV -> VO (RVVO)  [COUNT 8]
+Sequence RV -> VV -> VO -> OV (RVVOV)  [COUNT 3]
+Sequence VO -> OV (VOV)  [COUNT 2]
+Sequence VV -> VO (VVO)  [COUNT 4]
+Sequence LA -> AL (LAL)  [COUNT 3]
+Sequence LA -> AL -> LL (LALL)  [COUNT 3]
+Sequence LA -> AL -> LL -> LI (LALLI)  [COUNT 3]
+Sequence LA -> AL -> LL -> LI -> IO (LALLIO)  [COUNT 1]
+Sequence LA -> AL -> LL -> LI -> IO -> OV (LALLIOV)  [COUNT 1]
+Sequence LA -> AL -> LL -> LI -> IQ (LALLIQ)  [COUNT 2]
+Sequence LI -> IO -> OU (LIOU)  [COUNT 2]
+Sequence NK -> KR (NKR)  [COUNT 4]
+Sequence NK -> KR -> RV (NKRV)  [COUNT 2]
+Sequence NK -> KR -> RV -> VV (NKRVV)  [COUNT 2]
+Sequence NK -> KR -> RV -> VV -> VO (NKRVVO)  [COUNT 2]
+Sequence NK -> KR -> RV -> VV -> VO -> OV (NKRVVOV)  [COUNT 1]
+Sequence VV -> VO -> OU (VVOU)  [COUNT 1]

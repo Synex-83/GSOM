@@ -1,0 +1,46 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =24 Y =23 HITS =1345
+Sequence IO X =62 Y =24 HITS =753
+Sequence NK X =65 Y =1 HITS =958
+Sequence KT X =100 Y =100 HITS =1726
+Sequence LL X =1 Y =9 HITS =962
+Sequence BN X =52 Y =46 HITS =778
+Sequence HO X =64 Y =33 HITS =704
+Sequence OV X =98 Y =43 HITS =1112
+Sequence AL X =51 Y =57 HITS =530
+Sequence LB X =22 Y =77 HITS =596
+Sequence DL X =45 Y =25 HITS =536
+Sequence VV X =94 Y =1 HITS =904
+Sequence RV X =68 Y =16 HITS =663
+Sequence NN X =1 Y =1 HITS =2509
+Sequence EO X =64 Y =33 HITS =704
+********             LONG SEQUENCES                  ********
+Sequence LL -> LI (LLI)  [COUNT 139]
+Sequence OV -> VV (OVV)  [COUNT 56]
+Sequence NN -> NK (NNK)  [COUNT 142]
+Sequence NK -> KT (NKT)  [COUNT 52]
+Sequence HO -> OV (HOV)  [COUNT 82]
+Sequence HO -> OV -> VV (HOVV)  [COUNT 13]
+Sequence LI -> IO (LIO)  [COUNT 218]
+Sequence LI -> IO -> OV (LIOV)  [COUNT 158]
+Sequence LI -> IO -> OV -> VV (LIOVV)  [COUNT 85]
+Sequence LL -> LI -> IO (LLIO)  [COUNT 30]
+Sequence BN -> NN (BNN)  [COUNT 39]
+Sequence LL -> LI -> IO -> OV (LLIOV)  [COUNT 21]
+Sequence LL -> LI -> IO -> OV -> VV (LLIOVV)  [COUNT 12]
+Sequence RV -> VV (RVV)  [COUNT 88]
+Sequence LB -> BN (LBN)  [COUNT 62]
+Sequence LL -> LB (LLB)  [COUNT 20]
+Sequence LL -> LB -> BN (LLBN)  [COUNT 20]
+Sequence LL -> LB -> BN -> NN (LLBNN)  [COUNT 6]
+Sequence AL -> LL (ALL)  [COUNT 31]
+Sequence DL -> LL (DLL)  [COUNT 7]
+Sequence AL -> LL -> LI (ALLI)  [COUNT 15]
+Sequence AL -> LL -> LI -> IO (ALLIO)  [COUNT 6]
+Sequence AL -> LL -> LB (ALLB)  [COUNT 3]
+Sequence AL -> LL -> LB -> BN (ALLBN)  [COUNT 3]
+Sequence AL -> LL -> LI -> IO -> OV (ALLIOV)  [COUNT 3]
+Sequence DL -> LL -> LB (DLLB)  [COUNT 3]
+Sequence DL -> LL -> LB -> BN (DLLBN)  [COUNT 3]
+Sequence DL -> LL -> LB -> BN -> NN (DLLBNN)  [COUNT 3]

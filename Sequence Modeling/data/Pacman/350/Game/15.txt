@@ -1,0 +1,17 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LA X =54 Y =54 HITS =448
+Sequence LI X =72 Y =31 HITS =497
+Sequence NK X =81 Y =68 HITS =644
+Sequence VV X =100 Y =55 HITS =616
+Sequence OV X =4 Y =82 HITS =368
+Sequence OO X =100 Y =1 HITS =680
+Sequence IO X =28 Y =1 HITS =378
+Sequence KW X =1 Y =100 HITS =822
+********             LONG SEQUENCES                  ********
+Sequence NK -> KW (NKW)  [COUNT 54]
+Sequence LI -> IO (LIO)  [COUNT 19]
+Sequence IO -> OV (IOV)  [COUNT 5]
+Sequence IO -> OV -> VV (IOVV)  [COUNT 5]
+Sequence LI -> IO -> OV (LIOV)  [COUNT 8]
+Sequence LI -> IO -> OV -> VV (LIOVV)  [COUNT 8]

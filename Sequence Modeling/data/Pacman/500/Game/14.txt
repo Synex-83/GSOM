@@ -1,0 +1,5 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LL X =100 Y =1 HITS =908
+Sequence RV X =17 Y =1 HITS =563
+********             LONG SEQUENCES                  ********

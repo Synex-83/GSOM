@@ -34,7 +34,7 @@ public class SelfOrganizingMap implements Serializable {
 
 	// LAYERS
 	private Node[][] SOM = null;
-	private FiniteStateMachine FSM = null;
+	public FiniteStateMachine FSM = null;
 	private Node[][] ZERO_MAP = null;
 	
 	// VARIABLES
