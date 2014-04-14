@@ -1,0 +1,8 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence NN X =17 Y =1 HITS =532
+Sequence NK X =29 Y =30 HITS =571
+Sequence KT X =100 Y =100 HITS =1147
+********             LONG SEQUENCES                  ********
+Sequence NK -> KT (NKT)  [COUNT 12]
+Sequence NN -> NK (NNK)  [COUNT 15]

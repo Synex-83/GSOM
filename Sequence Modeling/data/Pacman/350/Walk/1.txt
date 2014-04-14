@@ -1,0 +1,48 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence OA X =1 Y =84 HITS =355
+Sequence AQ X =48 Y =17 HITS =535
+Sequence QF X =1 Y =34 HITS =623
+Sequence FR X =45 Y =5 HITS =507
+Sequence VI X =1 Y =14 HITS =632
+Sequence IA X =44 Y =100 HITS =356
+Sequence BM X =63 Y =1 HITS =565
+Sequence MD X =48 Y =88 HITS =690
+Sequence DE X =79 Y =99 HITS =500
+Sequence EI X =89 Y =24 HITS =351
+Sequence IV X =1 Y =1 HITS =1574
+Sequence AE X =71 Y =89 HITS =552
+Sequence FC X =57 Y =100 HITS =412
+Sequence CL X =70 Y =9 HITS =497
+Sequence BN X =71 Y =19 HITS =520
+Sequence NN X =93 Y =99 HITS =534
+Sequence IM X =77 Y =67 HITS =522
+Sequence MB X =1 Y =73 HITS =1373
+Sequence JG X =99 Y =8 HITS =350
+Sequence GA X =29 Y =93 HITS =557
+Sequence BH X =99 Y =35 HITS =551
+Sequence GO X =63 Y =58 HITS =512
+Sequence KC X =60 Y =87 HITS =390
+********             LONG SEQUENCES                  ********
+Sequence MB -> BM (MBM)  [COUNT 21]
+Sequence MB -> BH (MBH)  [COUNT 202]
+Sequence IM -> MB (IMB)  [COUNT 173]
+Sequence IM -> MB -> BM (IMBM)  [COUNT 87]
+Sequence IM -> MB -> BN (IMBN)  [COUNT 86]
+Sequence BM -> MD (BMD)  [COUNT 85]
+Sequence QF -> FR (QFR)  [COUNT 34]
+Sequence AQ -> QF (AQF)  [COUNT 177]
+Sequence AQ -> QF -> FR (AQFR)  [COUNT 118]
+Sequence MD -> DE (MDE)  [COUNT 101]
+Sequence BM -> MD -> DE (BMDE)  [COUNT 50]
+Sequence FC -> CL (FCL)  [COUNT 63]
+Sequence VI -> IA (VIA)  [COUNT 7]
+Sequence OA -> AQ (OAQ)  [COUNT 6]
+Sequence OA -> AQ -> QF (OAQF)  [COUNT 6]
+Sequence OA -> AQ -> QF -> FR (OAQFR)  [COUNT 6]
+Sequence VI -> IA -> AQ (VIAQ)  [COUNT 3]
+Sequence VI -> IA -> AQ -> QF (VIAQF)  [COUNT 3]
+Sequence BM -> MD -> DE -> EI (BMDEI)  [COUNT 1]
+Sequence BM -> MD -> DE -> EI -> IV (BMDEIV)  [COUNT 1]
+Sequence MD -> DE -> EI (MDEI)  [COUNT 1]
+Sequence JG -> GA (JGA)  [COUNT 1]

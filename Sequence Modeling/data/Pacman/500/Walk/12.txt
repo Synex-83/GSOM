@@ -1,0 +1,9 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence AL X =32 Y =53 HITS =554
+Sequence VV X =100 Y =100 HITS =1671
+Sequence MB X =57 Y =25 HITS =568
+Sequence LL X =100 Y =82 HITS =570
+Sequence IV X =1 Y =1 HITS =1227
+********             LONG SEQUENCES                  ********
+Sequence AL -> LL (ALL)  [COUNT 20]

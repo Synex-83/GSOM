@@ -1,0 +1,101 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =24 Y =11 HITS =503
+Sequence OV X =69 Y =100 HITS =794
+Sequence RV X =94 Y =11 HITS =628
+Sequence IA X =17 Y =40 HITS =608
+Sequence CN X =35 Y =100 HITS =1280
+Sequence MB X =58 Y =53 HITS =550
+Sequence NC X =64 Y =25 HITS =726
+Sequence CG X =8 Y =48 HITS =617
+Sequence LL X =1 Y =10 HITS =942
+Sequence LE X =21 Y =23 HITS =614
+Sequence EB X =27 Y =48 HITS =576
+Sequence BN X =24 Y =100 HITS =727
+Sequence NH X =42 Y =1 HITS =677
+Sequence HO X =9 Y =94 HITS =640
+Sequence VW X =98 Y =1 HITS =595
+Sequence WS X =79 Y =11 HITS =509
+Sequence NN X =1 Y =2 HITS =1223
+Sequence NK X =51 Y =9 HITS =648
+Sequence LA X =55 Y =35 HITS =520
+Sequence FC X =1 Y =40 HITS =533
+Sequence BH X =23 Y =66 HITS =602
+Sequence KW X =100 Y =100 HITS =1601
+Sequence DL X =13 Y =60 HITS =522
+Sequence CL X =56 Y =73 HITS =533
+********             LONG SEQUENCES                  ********
+Sequence CN -> NN (CNN)  [COUNT 341]
+Sequence BN -> NN (BNN)  [COUNT 15]
+Sequence BN -> NN -> NC (BNNC)  [COUNT 12]
+Sequence NC -> CN (NCN)  [COUNT 78]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 78]
+Sequence OV -> VW (OVW)  [COUNT 35]
+Sequence CN -> NN -> NH (CNNH)  [COUNT 14]
+Sequence BN -> NH (BNH)  [COUNT 26]
+Sequence NC -> CG (NCG)  [COUNT 73]
+Sequence CN -> NH (CNH)  [COUNT 33]
+Sequence NN -> NH (NNH)  [COUNT 9]
+Sequence NC -> CN -> NN -> NK (NCNNK)  [COUNT 49]
+Sequence NN -> NK (NNK)  [COUNT 18]
+Sequence NK -> KW (NKW)  [COUNT 25]
+Sequence BN -> NH -> HO (BNHO)  [COUNT 9]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 16]
+Sequence CN -> NN -> NK -> KW (CNNKW)  [COUNT 16]
+Sequence EB -> BN (EBN)  [COUNT 13]
+Sequence EB -> BN -> NH (EBNH)  [COUNT 13]
+Sequence EB -> BN -> NH -> HO (EBNHO)  [COUNT 12]
+Sequence EB -> BN -> NH -> HO -> OV (EBNHOV)  [COUNT 8]
+Sequence EB -> BN -> NH -> HO -> OV -> VW (EBNHOVW)  [COUNT 6]
+Sequence CN -> NH -> HO (CNHO)  [COUNT 26]
+Sequence RV -> VW (RVW)  [COUNT 16]
+Sequence CN -> NH -> HO -> OV (CNHOV)  [COUNT 10]
+Sequence CN -> NH -> HO -> OV -> VW (CNHOVW)  [COUNT 5]
+Sequence BN -> NH -> HO -> OV (BNHOV)  [COUNT 8]
+Sequence LL -> LE (LLE)  [COUNT 52]
+Sequence LL -> LE -> EB (LLEB)  [COUNT 52]
+Sequence LL -> LE -> EB -> BN (LLEBN)  [COUNT 52]
+Sequence LL -> LE -> EB -> BN -> NH (LLEBNH)  [COUNT 52]
+Sequence LL -> LE -> EB -> BN -> NH -> HO (LLEBNHO)  [COUNT 46]
+Sequence LL -> LE -> EB -> BN -> NH -> HO -> OV (LLEBNHOV)  [COUNT 19]
+Sequence LL -> LE -> EB -> BN -> NH -> HO -> OV -> VW (LLEBNHOVW)  [COUNT 19]
+Sequence LE -> EB (LEB)  [COUNT 6]
+Sequence LE -> EB -> BN (LEBN)  [COUNT 6]
+Sequence LE -> EB -> BN -> NH (LEBNH)  [COUNT 6]
+Sequence LE -> EB -> BN -> NH -> HO (LEBNHO)  [COUNT 6]
+Sequence LE -> EB -> BN -> NH -> HO -> OV (LEBNHOV)  [COUNT 6]
+Sequence LE -> EB -> BN -> NH -> HO -> OV -> VW (LEBNHOVW)  [COUNT 3]
+Sequence MB -> BH (MBH)  [COUNT 47]
+Sequence CL -> LL (CLL)  [COUNT 4]
+Sequence NC -> CL (NCL)  [COUNT 14]
+Sequence CL -> LE (CLE)  [COUNT 1]
+Sequence CL -> LE -> EB (CLEB)  [COUNT 1]
+Sequence CL -> LE -> EB -> BN (CLEBN)  [COUNT 1]
+Sequence CL -> LE -> EB -> BN -> NH (CLEBNH)  [COUNT 1]
+Sequence CL -> LE -> EB -> BN -> NH -> HO (CLEBNHO)  [COUNT 1]
+Sequence CL -> LE -> EB -> BN -> NH -> HO -> OV (CLEBNHOV)  [COUNT 1]
+Sequence FC -> CL (FCL)  [COUNT 7]
+Sequence FC -> CL -> LE (FCLE)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB (FCLEB)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB -> BN (FCLEBN)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB -> BN -> NH (FCLEBNH)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB -> BN -> NH -> HO (FCLEBNHO)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB -> BN -> NH -> HO -> OV (FCLEBNHOV)  [COUNT 5]
+Sequence FC -> CL -> LE -> EB -> BN -> NH -> HO -> OV -> VW (FCLEBNHOVW)  [COUNT 3]
+Sequence DL -> LE (DLE)  [COUNT 13]
+Sequence FC -> CN (FCN)  [COUNT 22]
+Sequence FC -> CN -> NH (FCNH)  [COUNT 13]
+Sequence FC -> CN -> NH -> HO (FCNHO)  [COUNT 13]
+Sequence FC -> CN -> NH -> HO -> OV (FCNHOV)  [COUNT 5]
+Sequence FC -> CN -> NH -> HO -> OV -> VW (FCNHOVW)  [COUNT 3]
+Sequence FC -> CN -> NN (FCNN)  [COUNT 9]
+Sequence FC -> CN -> NN -> NH (FCNNH)  [COUNT 6]
+Sequence DL -> LL (DLL)  [COUNT 2]
+Sequence FC -> CL -> LA (FCLA)  [COUNT 2]
+Sequence LL -> LE -> EB -> BN -> NH -> HO -> OV -> VW -> WS (LLEBNHOVWS)  [COUNT 2]
+Sequence OV -> VW -> WS (OVWS)  [COUNT 2]
+Sequence KW -> WS (KWS)  [COUNT 2]
+Sequence NK -> KW -> WS (NKWS)  [COUNT 3]
+Sequence FC -> CN -> NH -> HO -> OV -> VW -> WS (FCNHOVWS)  [COUNT 1]
+Sequence LL -> LI (LLI)  [COUNT 3]
+Sequence NC -> CL -> LI (NCLI)  [COUNT 1]

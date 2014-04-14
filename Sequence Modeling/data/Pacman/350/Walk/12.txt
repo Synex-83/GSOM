@@ -1,0 +1,55 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =79 Y =61 HITS =417
+Sequence LA X =76 Y =29 HITS =471
+Sequence NH X =100 Y =27 HITS =418
+Sequence CG X =69 Y =53 HITS =428
+Sequence AL X =32 Y =53 HITS =554
+Sequence VV X =100 Y =100 HITS =1671
+Sequence DI X =41 Y =53 HITS =359
+Sequence IA X =100 Y =49 HITS =388
+Sequence AN X =21 Y =54 HITS =356
+Sequence VK X =25 Y =1 HITS =372
+Sequence KC X =90 Y =54 HITS =476
+Sequence MB X =57 Y =25 HITS =568
+Sequence BH X =51 Y =61 HITS =376
+Sequence LL X =100 Y =82 HITS =570
+Sequence IV X =1 Y =1 HITS =1227
+Sequence CL X =29 Y =36 HITS =469
+Sequence JF X =67 Y =38 HITS =354
+Sequence NC X =84 Y =1 HITS =455
+Sequence KN X =47 Y =100 HITS =375
+********             LONG SEQUENCES                  ********
+Sequence AL -> LL (ALL)  [COUNT 66]
+Sequence KC -> CL (KCL)  [COUNT 44]
+Sequence CL -> LA (CLA)  [COUNT 27]
+Sequence NC -> CL (NCL)  [COUNT 26]
+Sequence NC -> CG (NCG)  [COUNT 28]
+Sequence AL -> LL -> LI (ALLI)  [COUNT 4]
+Sequence KC -> CL -> LI (KCLI)  [COUNT 6]
+Sequence LL -> LI (LLI)  [COUNT 16]
+Sequence AL -> LL -> LI -> IV (ALLIV)  [COUNT 2]
+Sequence LL -> LI -> IV (LLIV)  [COUNT 5]
+Sequence NC -> CL -> LI (NCLI)  [COUNT 5]
+Sequence MB -> BH (MBH)  [COUNT 27]
+Sequence IA -> AL (IAL)  [COUNT 4]
+Sequence IA -> AL -> LL (IALL)  [COUNT 4]
+Sequence IA -> AL -> LL -> LI (IALLI)  [COUNT 4]
+Sequence IA -> AL -> LL -> LI -> IV (IALLIV)  [COUNT 2]
+Sequence VK -> KC (VKC)  [COUNT 17]
+Sequence VK -> KC -> CL (VKCL)  [COUNT 6]
+Sequence IA -> AL -> LL -> LI -> IV -> VK (IALLIVK)  [COUNT 1]
+Sequence IA -> AL -> LL -> LI -> IV -> VK -> KC (IALLIVKC)  [COUNT 1]
+Sequence IA -> AL -> LL -> LI -> IV -> VK -> KC -> CL (IALLIVKCL)  [COUNT 1]
+Sequence DI -> IA (DIA)  [COUNT 10]
+Sequence DI -> IA -> AL (DIAL)  [COUNT 4]
+Sequence DI -> IA -> AL -> LL (DIALL)  [COUNT 4]
+Sequence DI -> IA -> AL -> LL -> LI (DIALLI)  [COUNT 4]
+Sequence DI -> IA -> AL -> LL -> LI -> IV (DIALLIV)  [COUNT 2]
+Sequence DI -> IA -> AL -> LL -> LI -> IV -> VK (DIALLIVK)  [COUNT 2]
+Sequence DI -> IA -> AL -> LL -> LI -> IV -> VK -> KC (DIALLIVKC)  [COUNT 2]
+Sequence DI -> IA -> AL -> LL -> LI -> IV -> VK -> KC -> CL (DIALLIVKCL)  [COUNT 2]
+Sequence DI -> IA -> AN (DIAN)  [COUNT 1]
+Sequence AN -> NC (ANC)  [COUNT 3]
+Sequence AN -> NC -> CG (ANCG)  [COUNT 2]
+Sequence LA -> AN (LAN)  [COUNT 3]

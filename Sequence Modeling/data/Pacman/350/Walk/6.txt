@@ -1,0 +1,101 @@
+==============================================================
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence LI X =66 Y =69 HITS =545
+Sequence QG X =36 Y =19 HITS =524
+Sequence LA X =69 Y =46 HITS =376
+Sequence AF X =1 Y =84 HITS =365
+Sequence NN X =91 Y =93 HITS =568
+Sequence NH X =98 Y =25 HITS =432
+Sequence HD X =59 Y =50 HITS =500
+Sequence LE X =73 Y =56 HITS =397
+Sequence ER X =14 Y =16 HITS =530
+Sequence RV X =100 Y =1 HITS =1543
+Sequence VV X =83 Y =100 HITS =568
+Sequence OU X =1 Y =21 HITS =440
+Sequence IL X =49 Y =84 HITS =523
+Sequence LL X =100 Y =90 HITS =509
+Sequence ZS X =75 Y =14 HITS =784
+Sequence BN X =19 Y =72 HITS =462
+Sequence HO X =19 Y =82 HITS =445
+Sequence FC X =99 Y =51 HITS =491
+Sequence CN X =20 Y =63 HITS =716
+Sequence NC X =71 Y =36 HITS =454
+Sequence CL X =24 Y =38 HITS =368
+Sequence JF X =46 Y =63 HITS =544
+Sequence NM X =66 Y =78 HITS =379
+Sequence MB X =48 Y =27 HITS =1219
+Sequence BH X =1 Y =96 HITS =433
+Sequence IM X =56 Y =92 HITS =368
+Sequence AL X =1 Y =72 HITS =423
+Sequence IA X =91 Y =57 HITS =363
+Sequence MD X =100 Y =36 HITS =496
+Sequence EO X =19 Y =82 HITS =445
+Sequence ZT X =75 Y =14 HITS =784
+Sequence JU X =1 Y =1 HITS =1648
+********             LONG SEQUENCES                  ********
+Sequence RV -> VV (RVV)  [COUNT 52]
+Sequence ER -> RV (ERV)  [COUNT 99]
+Sequence ER -> RV -> VV (ERVV)  [COUNT 99]
+Sequence IL -> LL (ILL)  [COUNT 80]
+Sequence CN -> NN (CNN)  [COUNT 68]
+Sequence MB -> BN (MBN)  [COUNT 42]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 62]
+Sequence NC -> CN (NCN)  [COUNT 13]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 13]
+Sequence CN -> NN -> NC (CNNC)  [COUNT 2]
+Sequence LL -> LI (LLI)  [COUNT 17]
+Sequence JF -> FC (JFC)  [COUNT 99]
+Sequence JF -> FC -> CN (JFCN)  [COUNT 77]
+Sequence FC -> CN (FCN)  [COUNT 28]
+Sequence JF -> FC -> CN -> NN (JFCNN)  [COUNT 22]
+Sequence JF -> FC -> CN -> NN -> NC (JFCNNC)  [COUNT 11]
+Sequence HO -> OU (HOU)  [COUNT 11]
+Sequence MB -> BH (MBH)  [COUNT 51]
+Sequence BN -> NH (BNH)  [COUNT 19]
+Sequence BN -> NH -> HO (BNHO)  [COUNT 19]
+Sequence BN -> NH -> HO -> OU (BNHOU)  [COUNT 19]
+Sequence FC -> CN -> NH (FCNH)  [COUNT 15]
+Sequence FC -> CN -> NH -> HO (FCNHO)  [COUNT 10]
+Sequence JF -> FC -> CN -> NN -> NH (JFCNNH)  [COUNT 7]
+Sequence JF -> FC -> CN -> NN -> NH -> HD (JFCNNHD)  [COUNT 7]
+Sequence BH -> HD (BHD)  [COUNT 7]
+Sequence AL -> LL (ALL)  [COUNT 14]
+Sequence AL -> LL -> LI (ALLI)  [COUNT 14]
+Sequence NN -> NH (NNH)  [COUNT 38]
+Sequence NN -> NH -> HD (NNHD)  [COUNT 38]
+Sequence MB -> BH -> HD (MBHD)  [COUNT 7]
+Sequence LE -> ER (LER)  [COUNT 28]
+Sequence LE -> ER -> RV (LERV)  [COUNT 24]
+Sequence LE -> ER -> RV -> VV (LERVV)  [COUNT 24]
+Sequence AL -> LE (ALE)  [COUNT 16]
+Sequence AL -> LE -> ER (ALER)  [COUNT 12]
+Sequence AL -> LE -> ER -> RV (ALERV)  [COUNT 8]
+Sequence AL -> LE -> ER -> RV -> VV (ALERVV)  [COUNT 8]
+Sequence LL -> LE (LLE)  [COUNT 4]
+Sequence NM -> MB (NMB)  [COUNT 4]
+Sequence CN -> NM (CNM)  [COUNT 4]
+Sequence CN -> NM -> MB (CNMB)  [COUNT 4]
+Sequence CN -> NM -> MB -> BH (CNMBH)  [COUNT 4]
+Sequence BN -> NM (BNM)  [COUNT 4]
+Sequence BN -> NM -> MB (BNMB)  [COUNT 4]
+Sequence BN -> NM -> MB -> BH (BNMBH)  [COUNT 4]
+Sequence JF -> FC -> CN -> NM (JFCNM)  [COUNT 15]
+Sequence JF -> FC -> CN -> NM -> MB (JFCNMB)  [COUNT 15]
+Sequence JF -> FC -> CN -> NM -> MB -> BH (JFCNMBH)  [COUNT 15]
+Sequence CN -> NN -> NM (CNNM)  [COUNT 3]
+Sequence CN -> NN -> NM -> MB (CNNMB)  [COUNT 3]
+Sequence CN -> NN -> NM -> MB -> BH (CNNMBH)  [COUNT 3]
+Sequence NC -> CL (NCL)  [COUNT 12]
+Sequence IM -> MB (IMB)  [COUNT 19]
+Sequence IM -> MB -> BN (IMBN)  [COUNT 9]
+Sequence LL -> LA (LLA)  [COUNT 3]
+Sequence IA -> AL (IAL)  [COUNT 5]
+Sequence IA -> AL -> LL (IALL)  [COUNT 5]
+Sequence IA -> AL -> LL -> LI (IALLI)  [COUNT 5]
+Sequence LA -> AF (LAF)  [COUNT 10]
+Sequence CL -> LI (CLI)  [COUNT 2]
+Sequence AF -> FC (AFC)  [COUNT 6]
+Sequence AF -> FC -> CN (AFCN)  [COUNT 4]
+Sequence AF -> FC -> CN -> NH (AFCNH)  [COUNT 4]
+Sequence AF -> FC -> CN -> NH -> HO (AFCNHO)  [COUNT 3]

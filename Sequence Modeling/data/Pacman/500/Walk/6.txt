@@ -1,0 +1,25 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence LI X =66 Y =69 HITS =545
+Sequence QG X =36 Y =19 HITS =524
+Sequence NN X =91 Y =93 HITS =568
+Sequence HD X =59 Y =50 HITS =500
+Sequence ER X =14 Y =16 HITS =530
+Sequence RV X =100 Y =1 HITS =1543
+Sequence VV X =83 Y =100 HITS =568
+Sequence IL X =49 Y =84 HITS =523
+Sequence LL X =100 Y =90 HITS =509
+Sequence ZS X =75 Y =14 HITS =784
+Sequence CN X =20 Y =63 HITS =716
+Sequence JF X =46 Y =63 HITS =544
+Sequence MB X =48 Y =27 HITS =1219
+Sequence ZT X =75 Y =14 HITS =784
+Sequence JU X =1 Y =1 HITS =1648
+********             LONG SEQUENCES                  ********
+Sequence RV -> VV (RVV)  [COUNT 36]
+Sequence CN -> NN (CNN)  [COUNT 33]
+Sequence ER -> RV (ERV)  [COUNT 22]
+Sequence ER -> RV -> VV (ERVV)  [COUNT 22]
+Sequence IL -> LL (ILL)  [COUNT 5]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 5]
+Sequence LL -> LI (LLI)  [COUNT 3]

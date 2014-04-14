@@ -1,0 +1,22 @@
+THRESHOLD NUMBER OF HITS =350
+********             SOLID SEQUENCES                  ********
+Sequence MD X =10 Y =63 HITS =371
+Sequence DL X =52 Y =31 HITS =394
+Sequence NN X =17 Y =1 HITS =532
+Sequence NK X =29 Y =30 HITS =571
+Sequence KC X =1 Y =53 HITS =447
+Sequence LL X =8 Y =1 HITS =414
+Sequence IA X =1 Y =41 HITS =428
+Sequence KT X =100 Y =100 HITS =1147
+Sequence GA X =20 Y =61 HITS =430
+Sequence CN X =100 Y =23 HITS =415
+********             LONG SEQUENCES                  ********
+Sequence NK -> KT (NKT)  [COUNT 40]
+Sequence NN -> NK (NNK)  [COUNT 53]
+Sequence CN -> NN (CNN)  [COUNT 33]
+Sequence KC -> CN (KCN)  [COUNT 11]
+Sequence KC -> CN -> NN (KCNN)  [COUNT 11]
+Sequence KC -> CN -> NN -> NK (KCNNK)  [COUNT 11]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 11]
+Sequence DL -> LL (DLL)  [COUNT 4]
+Sequence MD -> DL (MDL)  [COUNT 6]

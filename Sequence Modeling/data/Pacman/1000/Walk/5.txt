@@ -1,0 +1,4 @@
+THRESHOLD NUMBER OF HITS =1000
+********             SOLID SEQUENCES                  ********
+Sequence NN X =1 Y =1 HITS =1351
+********             LONG SEQUENCES                  ********

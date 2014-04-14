@@ -1,0 +1,44 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence NK X =51 Y =1 HITS =801
+Sequence RV X =8 Y =25 HITS =600
+Sequence VV X =1 Y =1 HITS =1006
+Sequence IA X =89 Y =28 HITS =650
+Sequence AN X =40 Y =71 HITS =598
+Sequence CG X =65 Y =20 HITS =608
+Sequence NC X =92 Y =78 HITS =501
+Sequence LL X =98 Y =10 HITS =524
+Sequence NH X =100 Y =42 HITS =503
+Sequence HO X =31 Y =41 HITS =590
+Sequence KN X =43 Y =1 HITS =658
+Sequence NN X =97 Y =1 HITS =608
+Sequence ZS X =19 Y =43 HITS =578
+Sequence BH X =61 Y =40 HITS =590
+Sequence CN X =31 Y =49 HITS =960
+Sequence MD X =89 Y =37 HITS =601
+Sequence AF X =52 Y =44 HITS =544
+Sequence LA X =99 Y =70 HITS =580
+Sequence AL X =42 Y =60 HITS =635
+Sequence EO X =31 Y =41 HITS =590
+********             LONG SEQUENCES                  ********
+Sequence IA -> AN (IAN)  [COUNT 57]
+Sequence LA -> AN (LAN)  [COUNT 25]
+Sequence LA -> AN -> NK (LANK)  [COUNT 9]
+Sequence IA -> AN -> NK (IANK)  [COUNT 48]
+Sequence IA -> AL (IAL)  [COUNT 23]
+Sequence RV -> VV (RVV)  [COUNT 28]
+Sequence LA -> AL (LAL)  [COUNT 14]
+Sequence CN -> NN (CNN)  [COUNT 41]
+Sequence KN -> NN (KNN)  [COUNT 60]
+Sequence KN -> NN -> NK (KNNK)  [COUNT 47]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 27]
+Sequence LA -> AF (LAF)  [COUNT 16]
+Sequence AL -> LL (ALL)  [COUNT 6]
+Sequence IA -> AL -> LL (IALL)  [COUNT 4]
+Sequence CN -> NH (CNH)  [COUNT 2]
+Sequence NN -> NH (NNH)  [COUNT 1]
+Sequence NH -> HO (NHO)  [COUNT 1]
+Sequence CN -> NH -> HO (CNHO)  [COUNT 1]
+Sequence NC -> CN (NCN)  [COUNT 1]
+Sequence NC -> CN -> NN (NCNN)  [COUNT 1]
+Sequence NC -> CN -> NN -> NK (NCNNK)  [COUNT 1]

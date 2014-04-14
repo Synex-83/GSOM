@@ -36,7 +36,7 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
 		//C:\\Users\\User\\Desktop\\A.txt
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\15g.txt", 1); //2gameCompact.txt
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\1w.txt", 1); //2gameCompact.txt
 
 		//fp.writeFile();
 		//for matrix based learning
@@ -58,7 +58,7 @@ public class TestSOM {
 		ois.close();
 		System.out.println("Done Retrieving the serialized object.");
 		
-		SOM.FSM.setThreshold(350);
+		SOM.FSM.setThreshold(500);
 		System.out.println("THRESHOLD SET");
 		
 		//SOM.initTrainSOMMemoryEfficient("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\15g.txt", 100, 0.25);
