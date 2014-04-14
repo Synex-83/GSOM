@@ -1,0 +1,28 @@
+THRESHOLD NUMBER OF HITS =500
+********             SOLID SEQUENCES                  ********
+Sequence AQ X =48 Y =17 HITS =535
+Sequence QF X =1 Y =34 HITS =623
+Sequence FR X =45 Y =5 HITS =507
+Sequence VI X =1 Y =14 HITS =632
+Sequence BM X =63 Y =1 HITS =565
+Sequence MD X =48 Y =88 HITS =690
+Sequence DE X =79 Y =99 HITS =500
+Sequence IV X =1 Y =1 HITS =1574
+Sequence AE X =71 Y =89 HITS =552
+Sequence BN X =71 Y =19 HITS =520
+Sequence NN X =93 Y =99 HITS =534
+Sequence IM X =77 Y =67 HITS =522
+Sequence MB X =1 Y =73 HITS =1373
+Sequence GA X =29 Y =93 HITS =557
+Sequence BH X =99 Y =35 HITS =551
+Sequence GO X =63 Y =58 HITS =512
+********             LONG SEQUENCES                  ********
+Sequence BM -> MD (BMD)  [COUNT 33]
+Sequence MB -> BM (MBM)  [COUNT 21]
+Sequence MB -> BH (MBH)  [COUNT 52]
+Sequence AQ -> QF (AQF)  [COUNT 36]
+Sequence IM -> MB (IMB)  [COUNT 23]
+Sequence IM -> MB -> BM (IMBM)  [COUNT 12]
+Sequence IM -> MB -> BN (IMBN)  [COUNT 11]
+Sequence AQ -> QF -> FR (AQFR)  [COUNT 8]
+Sequence MD -> DE (MDE)  [COUNT 1]
