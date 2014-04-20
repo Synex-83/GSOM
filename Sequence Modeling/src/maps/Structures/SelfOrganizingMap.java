@@ -1139,10 +1139,10 @@ public class SelfOrganizingMap implements Serializable {
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
 				ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
 				
-				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
+				//System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
 			
-			System.out.println();
+			//System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;

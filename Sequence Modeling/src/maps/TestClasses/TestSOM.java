@@ -29,18 +29,16 @@ public class TestSOM {
 
 		FileProcessing fp = null;
 		int th = 0;
-		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\2g.txt"
-		// E:\\workspace\\GSOM\\Sequence Modeling\\data\\repeat.txt
-		//"C:\\Users\\User\\Desktop\\A.txt"
-		//"
-		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\4sequences.txt
-		//C:\\Users\\User\\Desktop\\A.txt
-		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\1w.txt", 1); //2gameCompact.txt
+		int length = 0;
+		int threshold = 0;
 
-		//fp.writeFile();
-		//for matrix based learning
-		SelfOrganizingMap SOM = null; //new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4);
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt", 1); 
+		length = 1701900;
+		threshold = (int)Math.round(length*(0.05));
+		
+		System.out.println("*******************            V00711             ****************************");
+
+		SelfOrganizingMap SOM = null; //new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4); //null; //
 		
 		//============SERIALIZE================
 		
@@ -52,22 +50,53 @@ public class TestSOM {
 		System.out.println("Done Serializing");*/
 		
 		//=============DESERIALIZE===============		
-		FileInputStream fin = new FileInputStream("address.ser");
-		ObjectInputStream ois = new ObjectInputStream(fin);
-		SOM = (SelfOrganizingMap) ois.readObject();
-		ois.close();
-		System.out.println("Done Retrieving the serialized object.");
 		
-		SOM.FSM.setThreshold(500);
-		System.out.println("THRESHOLD SET");
+/*		for(int i = 1; i < 5; i++)
+		{
+			
+			switch(i)
+			{
+				case 1:
+					threshold = (int)Math.round(length*(0.05));
+					break;
+				case 2:
+					threshold = (int)Math.round(length*(0.03));
+					break;
+				case 3:
+					threshold = (int)Math.round(length*(0.01));
+					break;
+				case 4:
+					threshold = (int)Math.round(length*(0.1));
+					break;
+			}*/
+			FileInputStream fin = new FileInputStream("address.ser");
+			ObjectInputStream ois = new ObjectInputStream(fin);
+			SOM = (SelfOrganizingMap) ois.readObject();
+			ois.close();
+			System.out.println("Done Retrieving the serialized object.");
 		
-		//SOM.initTrainSOMMemoryEfficient("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\15g.txt", 100, 0.25);
+			SOM.FSM.setThreshold(threshold);
+			System.out.println("THRESHOLD SET");
+		
 
+			System.out.println("====================================================================================");
+			System.out.println();
+			System.out.println("===================== LENGTH = " + length +" =======================================");
+			System.out.println("===================== THRESHOLD = " + threshold +" =======================================");
+			System.out.println();
+			System.out.println("====================================================================================");
+			
 		//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-		SOM.initTrainSOM(fp.readFile(),100,0.25);
+			SOM.initTrainSOM(fp.readFile(),100,0.25);
 		//trainSOM(fp.readFile());
-		
-		
+			
+			System.out.println("====================================================================================");
+			System.out.println("====================================================================================");
+			System.out.println("====================================================================================");
+			System.out.println();
+			System.out.println();
+			System.out.println();
+		//}
 		/*
 		 * WHEN ANALYZING DATA THE ZERO MAP DO NOT NEED TO BE TRANSPOSED BEFORE ANALYSIS BECUASE THE PROGRAM
 		 * WORKS AS INTENDED WITH THE INDEXES. HOWEVER, THE MAP NEEDS TO BE TRANPOSED BEFORE ANALYSIS.
