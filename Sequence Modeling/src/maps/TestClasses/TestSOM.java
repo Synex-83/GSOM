@@ -31,51 +31,35 @@ public class TestSOM {
 		int th = 0;
 		int length = 0;
 		int threshold = 0;
-
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt", 1); 
-		length = 1701900;
+		
+		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt
+		//
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\1w.txt", 1); 
+		length = 522;
 		threshold = (int)Math.round(length*(0.05));
 		
-		System.out.println("*******************            V00711             ****************************");
+		System.out.println("*******************            2            ****************************");
 
-		SelfOrganizingMap SOM = null; //new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4); //null; //
 		
 		//============SERIALIZE================
 		
-		/*FileOutputStream fout = new FileOutputStream("address.ser");
+		FileOutputStream fout = new FileOutputStream("address.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();
 		fout.close();
-		System.out.println("Done Serializing");*/
+		System.out.println("Done Serializing");
 		
 		//=============DESERIALIZE===============		
-		
-/*		for(int i = 1; i < 5; i++)
-		{
-			
-			switch(i)
-			{
-				case 1:
-					threshold = (int)Math.round(length*(0.05));
-					break;
-				case 2:
-					threshold = (int)Math.round(length*(0.03));
-					break;
-				case 3:
-					threshold = (int)Math.round(length*(0.01));
-					break;
-				case 4:
-					threshold = (int)Math.round(length*(0.1));
-					break;
-			}*/
-			FileInputStream fin = new FileInputStream("address.ser");
+
+/*			FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
-			System.out.println("Done Retrieving the serialized object.");
-		
-			SOM.FSM.setThreshold(threshold);
+			System.out.println("Done Retrieving the serialized object.");*/
+		//threshold)
+			SOM.FSM.setThreshold(500);
 			System.out.println("THRESHOLD SET");
 		
 
@@ -87,7 +71,7 @@ public class TestSOM {
 			System.out.println("====================================================================================");
 			
 		//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-			SOM.initTrainSOM(fp.readFile(),100,0.25);
+			SOM.initTrainSOM(fp.readFile(),100,0.25);//100
 		//trainSOM(fp.readFile());
 			
 			System.out.println("====================================================================================");

@@ -650,6 +650,7 @@ public class FiniteStateMachine implements Serializable {
 		System.out.println("THRESHOLD NUMBER OF HITS =" + THRESHOLD);
 		
 		System.out.println("********             SOLID SEQUENCES                  ********");
+		int i = 0;
 		while(itr.hasNext())
 		{
 			temp1 = itr.next();
@@ -660,9 +661,12 @@ public class FiniteStateMachine implements Serializable {
 				//encountered when developing. Refer Node class comment on line 68.
 				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
 				solidNode.add(temp1);
-				
+				i++;
 			}
 		}
+	
+		System.out.println("\n");
+		
 		System.out.println("********             LONG SEQUENCES                  ********");
 		while(itr5.hasNext())
 		{
@@ -671,6 +675,7 @@ public class FiniteStateMachine implements Serializable {
 		}
 		
 		System.out.println("********             HOLLOW SEQUENCES                  ********");
+		int j = 0;
 		while(itr2.hasNext())
 		{
 			temp1 = itr2.next();
@@ -681,9 +686,11 @@ public class FiniteStateMachine implements Serializable {
 				//encountered when developing. Refer Node class comment on line 68.
 				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
 			//	solidNode.add(temp1);
-				
+				j++;
 			}
 		}
+		
+		System.out.println("NUMBER OF PFS "+ " SOLID = " +i + " HOLLOW = " +j+ " TOTAL = " + (i+j));
 		
 		System.out.println("********             REPEAT SEQUENCES                  ********");
 		while(itr3.hasNext())
