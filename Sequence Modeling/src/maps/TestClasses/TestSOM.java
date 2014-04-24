@@ -36,7 +36,7 @@ public class TestSOM {
 		//
 		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\15w.txt", 1); 
 		length = 1252;
-		threshold = (int)Math.round((length/159.40)*(100)*(0.8));
+		threshold = (int)Math.round((length/159.40)*(100)*(0.5));
 		
 		System.out.println("*******************            15w            ****************************");
 
