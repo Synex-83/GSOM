@@ -1,0 +1,579 @@
+THRESHOLD NUMBER OF HITS =218
+********             SOLID SEQUENCES                  ********
+Sequence IO X =34 Y =47 HITS =270
+Sequence OV X =70 Y =18 HITS =230
+Sequence VV X =1 Y =88 HITS =302
+Sequence VT X =1 Y =77 HITS =344
+Sequence TE X =87 Y =62 HITS =285
+Sequence OA X =100 Y =84 HITS =355
+Sequence AQ X =48 Y =18 HITS =537
+Sequence QF X =97 Y =35 HITS =496
+Sequence FR X =56 Y =5 HITS =507
+Sequence RU X =44 Y =46 HITS =265
+Sequence UO X =78 Y =25 HITS =277
+Sequence VI X =100 Y =14 HITS =633
+Sequence IA X =51 Y =100 HITS =389
+Sequence FS X =63 Y =3 HITS =221
+Sequence WR X =1 Y =55 HITS =330
+Sequence RB X =89 Y =73 HITS =272
+Sequence BM X =38 Y =1 HITS =565
+Sequence MD X =49 Y =84 HITS =660
+Sequence DE X =12 Y =100 HITS =592
+Sequence EI X =11 Y =24 HITS =339
+Sequence IV X =100 Y =1 HITS =1571
+Sequence VJ X =89 Y =36 HITS =284
+Sequence JZ X =62 Y =23 HITS =257
+Sequence ZS X =58 Y =52 HITS =381
+Sequence SZ X =48 Y =37 HITS =263
+Sequence ZU X =61 Y =41 HITS =273
+Sequence UA X =100 Y =65 HITS =243
+Sequence AE X =30 Y =89 HITS =552
+Sequence EB X =78 Y =97 HITS =337
+Sequence BZ X =78 Y =1 HITS =275
+Sequence ZQ X =11 Y =50 HITS =345
+Sequence QG X =100 Y =49 HITS =297
+Sequence GM X =12 Y =36 HITS =331
+Sequence DF X =30 Y =99 HITS =276
+Sequence FC X =40 Y =98 HITS =346
+Sequence CL X =30 Y =9 HITS =498
+Sequence LA X =94 Y =100 HITS =310
+Sequence BN X =30 Y =19 HITS =521
+Sequence NH X =60 Y =89 HITS =267
+Sequence OW X =62 Y =14 HITS =246
+Sequence WN X =78 Y =37 HITS =295
+Sequence NC X =90 Y =83 HITS =332
+Sequence LJ X =62 Y =62 HITS =278
+Sequence JF X =1 Y =25 HITS =315
+Sequence LF X =72 Y =62 HITS =268
+Sequence FM X =22 Y =28 HITS =273
+Sequence EK X =24 Y =1 HITS =302
+Sequence KN X =42 Y =67 HITS =273
+Sequence NN X =2 Y =97 HITS =501
+Sequence NK X =13 Y =61 HITS =339
+Sequence TI X =100 Y =26 HITS =329
+Sequence IN X =24 Y =38 HITS =272
+Sequence NI X =69 Y =72 HITS =269
+Sequence IM X =24 Y =67 HITS =522
+Sequence MB X =100 Y =73 HITS =1373
+Sequence NZ X =70 Y =10 HITS =234
+Sequence TJ X =93 Y =17 HITS =239
+Sequence JG X =1 Y =5 HITS =383
+Sequence GA X =62 Y =97 HITS =501
+Sequence AL X =12 Y =11 HITS =343
+Sequence LN X =16 Y =81 HITS =259
+Sequence NG X =52 Y =69 HITS =270
+Sequence BH X =1 Y =35 HITS =362
+Sequence HI X =20 Y =91 HITS =260
+Sequence RO X =86 Y =14 HITS =231
+Sequence OD X =70 Y =82 HITS =270
+Sequence DL X =23 Y =49 HITS =255
+Sequence LM X =10 Y =90 HITS =257
+Sequence IG X =13 Y =1 HITS =311
+Sequence GO X =38 Y =58 HITS =512
+Sequence OB X =80 Y =83 HITS =269
+Sequence BK X =1 Y =45 HITS =274
+Sequence KC X =40 Y =87 HITS =350
+Sequence CN X =39 Y =18 HITS =290
+Sequence NJ X =13 Y =72 HITS =272
+Sequence AM X =21 Y =17 HITS =263
+Sequence HK X =33 Y =71 HITS =256
+Sequence KV X =85 Y =1 HITS =260
+Sequence AN X =47 Y =9 HITS =257
+Sequence VK X =89 Y =25 HITS =286
+Sequence CS X =50 Y =27 HITS =254
+Sequence SG X =72 Y =50 HITS =293
+Sequence OZ X =78 Y =10 HITS =238
+Sequence QZ X =47 Y =56 HITS =265
+Sequence ZW X =67 Y =32 HITS =268
+Sequence WC X =98 Y =57 HITS =252
+Sequence CG X =25 Y =80 HITS =258
+Sequence LE X =59 Y =79 HITS =269
+Sequence ES X =71 Y =2 HITS =240
+Sequence SF X =89 Y =51 HITS =286
+Sequence FN X =29 Y =58 HITS =256
+
+
+********             LONG SEQUENCES                  ********
+Sequence MB -> BM (MBM)  [COUNT 21]
+Sequence IM -> MB (IMB)  [COUNT 210]
+Sequence IM -> MB -> BM (IMBM)  [COUNT 110]
+Sequence IM -> MB -> BN (IMBN)  [COUNT 100]
+Sequence MD -> DE (MDE)  [COUNT 126]
+Sequence BM -> MD (BMD)  [COUNT 55]
+Sequence BM -> MD -> DE (BMDE)  [COUNT 55]
+Sequence IG -> GO (IGO)  [COUNT 33]
+Sequence AQ -> QF (AQF)  [COUNT 55]
+Sequence AQ -> QF -> FR (AQFR)  [COUNT 48]
+Sequence CL -> LA (CLA)  [COUNT 29]
+Sequence CL -> LA -> AE (CLAE)  [COUNT 29]
+Sequence VI -> IA (VIA)  [COUNT 151]
+Sequence VI -> IA -> AQ (VIAQ)  [COUNT 86]
+Sequence VI -> IA -> AQ -> QF (VIAQF)  [COUNT 86]
+Sequence VV -> VT (VVT)  [COUNT 72]
+Sequence MD -> DE -> EK (MDEK)  [COUNT 29]
+Sequence JG -> GA (JGA)  [COUNT 89]
+Sequence SG -> GO (SGO)  [COUNT 39]
+Sequence CN -> NN (CNN)  [COUNT 7]
+Sequence MB -> BH (MBH)  [COUNT 42]
+Sequence OA -> AQ (OAQ)  [COUNT 78]
+Sequence OA -> AQ -> QF (OAQF)  [COUNT 78]
+Sequence OA -> AQ -> QF -> FR (OAQFR)  [COUNT 78]
+Sequence VV -> VT -> TE (VVTE)  [COUNT 55]
+Sequence IV -> VJ (IVJ)  [COUNT 6]
+Sequence VK -> KC (VKC)  [COUNT 45]
+Sequence KC -> CN (KCN)  [COUNT 9]
+Sequence KC -> CN -> NN (KCNN)  [COUNT 9]
+Sequence JF -> FC (JFC)  [COUNT 4]
+Sequence JF -> FC -> CL (JFCL)  [COUNT 4]
+Sequence ZQ -> QG (ZQG)  [COUNT 6]
+Sequence FC -> CL (FCL)  [COUNT 5]
+Sequence FC -> CL -> LA (FCLA)  [COUNT 5]
+Sequence FC -> CL -> LA -> AE (FCLAE)  [COUNT 5]
+Sequence JG -> GA -> AL (JGAL)  [COUNT 41]
+Sequence GA -> AL (GAL)  [COUNT 22]
+Sequence BM -> MD -> DE -> EI (BMDEI)  [COUNT 6]
+Sequence BM -> MD -> DE -> EI -> IV (BMDEIV)  [COUNT 6]
+Sequence BM -> MD -> DE -> EI -> IV -> VJ (BMDEIVJ)  [COUNT 6]
+Sequence CL -> LJ (CLJ)  [COUNT 4]
+Sequence CL -> LJ -> JF (CLJF)  [COUNT 4]
+Sequence CL -> LJ -> JF -> FC (CLJFC)  [COUNT 4]
+Sequence CL -> LJ -> JF -> FC -> CL (CLJFCL)  [COUNT 4]
+Sequence NN -> NK (NNK)  [COUNT 5]
+Sequence MD -> DE -> EI (MDEI)  [COUNT 21]
+Sequence MD -> DE -> EI -> IG (MDEIG)  [COUNT 21]
+Sequence MD -> DE -> EI -> IG -> GO (MDEIGO)  [COUNT 21]
+Sequence UO -> OA (UOA)  [COUNT 12]
+Sequence UO -> OA -> AQ (UOAQ)  [COUNT 12]
+Sequence UO -> OA -> AQ -> QF (UOAQF)  [COUNT 12]
+Sequence UO -> OA -> AQ -> QF -> FR (UOAQFR)  [COUNT 12]
+Sequence AE -> EB (AEB)  [COUNT 34]
+Sequence FC -> CL -> LA -> AE -> EB (FCLAEB)  [COUNT 1]
+Sequence FC -> CL -> LA -> AE -> EB -> BN (FCLAEBN)  [COUNT 1]
+Sequence MD -> DF (MDF)  [COUNT 2]
+Sequence MD -> DF -> FC (MDFC)  [COUNT 2]
+Sequence MD -> DF -> FC -> CL (MDFCL)  [COUNT 2]
+Sequence MD -> DF -> FC -> CL -> LA (MDFCLA)  [COUNT 2]
+Sequence MD -> DF -> FC -> CL -> LA -> AE (MDFCLAE)  [COUNT 2]
+Sequence MD -> DF -> FC -> CL -> LA -> AE -> EB (MDFCLAEB)  [COUNT 2]
+Sequence MD -> DF -> FC -> CL -> LA -> AE -> EB -> BN (MDFCLAEBN)  [COUNT 2]
+Sequence AE -> EB -> BZ (AEBZ)  [COUNT 32]
+Sequence AE -> EB -> BZ -> ZQ (AEBZQ)  [COUNT 32]
+Sequence AE -> EB -> BZ -> ZQ -> QG (AEBZQG)  [COUNT 32]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM (AEBZQGM)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD (AEBZQGMD)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF (AEBZQGMDF)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC (AEBZQGMDFC)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL (AEBZQGMDFCL)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA (AEBZQGMDFCLA)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE (AEBZQGMDFCLAE)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB (AEBZQGMDFCLAEB)  [COUNT 31]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB -> BN (AEBZQGMDFCLAEBN)  [COUNT 31]
+Sequence WN -> NC (WNC)  [COUNT 28]
+Sequence WN -> NC -> CL (WNCL)  [COUNT 28]
+Sequence WN -> NC -> CL -> LJ (WNCLJ)  [COUNT 28]
+Sequence WN -> NC -> CL -> LJ -> JF (WNCLJF)  [COUNT 28]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC (WNCLJFC)  [COUNT 28]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL (WNCLJFCL)  [COUNT 28]
+Sequence GM -> MB (GMB)  [COUNT 4]
+Sequence GM -> MB -> BH (GMBH)  [COUNT 4]
+Sequence BK -> KC (BKC)  [COUNT 5]
+Sequence BK -> KC -> CN (BKCN)  [COUNT 5]
+Sequence BK -> KC -> CN -> NN (BKCNN)  [COUNT 5]
+Sequence FM -> MD (FMD)  [COUNT 5]
+Sequence FM -> MD -> DE (FMDE)  [COUNT 5]
+Sequence FM -> MD -> DE -> EK (FMDEK)  [COUNT 5]
+Sequence FM -> MD -> DE -> EK -> KN (FMDEKN)  [COUNT 5]
+Sequence FM -> MD -> DE -> EK -> KN -> NN (FMDEKNN)  [COUNT 5]
+Sequence FM -> MD -> DE -> EK -> KN -> NN -> NK (FMDEKNNK)  [COUNT 5]
+Sequence WR -> RB (WRB)  [COUNT 55]
+Sequence WR -> RB -> BM (WRBM)  [COUNT 55]
+Sequence WR -> RB -> BM -> MD (WRBMD)  [COUNT 55]
+Sequence WR -> RB -> BM -> MD -> DE (WRBMDE)  [COUNT 55]
+Sequence WR -> RB -> BM -> MD -> DE -> EI (WRBMDEI)  [COUNT 55]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV (WRBMDEIV)  [COUNT 55]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ (WRBMDEIVJ)  [COUNT 55]
+Sequence TI -> IN (TIN)  [COUNT 55]
+Sequence BK -> KC -> CN -> NN -> NJ (BKCNNJ)  [COUNT 3]
+Sequence BK -> KC -> CN -> NN -> NJ -> JG (BKCNNJG)  [COUNT 3]
+Sequence BK -> KC -> CN -> NN -> NJ -> JG -> GA (BKCNNJGA)  [COUNT 3]
+Sequence NN -> NG (NNG)  [COUNT 11]
+Sequence NN -> NG -> GM (NNGM)  [COUNT 11]
+Sequence NN -> NG -> GM -> MB (NNGMB)  [COUNT 11]
+Sequence NN -> NG -> GM -> MB -> BH (NNGMBH)  [COUNT 11]
+Sequence TI -> IN -> NI (TINI)  [COUNT 52]
+Sequence TI -> IN -> NI -> IM (TINIM)  [COUNT 52]
+Sequence TI -> IN -> NI -> IM -> MB (TINIMB)  [COUNT 52]
+Sequence TI -> IN -> NI -> IM -> MB -> BN (TINIMBN)  [COUNT 52]
+Sequence MD -> DE -> EI -> IG -> GO -> OB (MDEIGOB)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK (MDEIGOBK)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC (MDEIGOBKC)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN (MDEIGOBKCN)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN (MDEIGOBKCNN)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ (MDEIGOBKCNNJ)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG (MDEIGOBKCNNJG)  [COUNT 12]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA (MDEIGOBKCNNJGA)  [COUNT 12]
+Sequence GA -> AL -> LE (GALE)  [COUNT 11]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF (WNCLJFCLF)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM (WNCLJFCLFM)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD (WNCLJFCLFMD)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE (WNCLJFCLFMDE)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK (WNCLJFCLFMDEK)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN (WNCLJFCLFMDEKN)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN -> NN (WNCLJFCLFMDEKNN)  [COUNT 22]
+Sequence WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN -> NN -> NK (WNCLJFCLFMDEKNNK)  [COUNT 22]
+Sequence AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB -> BN -> NH (AEBZQGMDFCLAEBNH)  [COUNT 24]
+Sequence OA -> AQ -> QF -> FR -> RU (OAQFRU)  [COUNT 48]
+Sequence OA -> AQ -> QF -> FR -> RU -> UO (OAQFRUO)  [COUNT 48]
+Sequence OA -> AQ -> QF -> FR -> RU -> UO -> OA (OAQFRUOA)  [COUNT 48]
+Sequence OA -> AQ -> QF -> FR -> RU -> UO -> OA -> AQ (OAQFRUOAQ)  [COUNT 48]
+Sequence OA -> AQ -> QF -> FR -> RU -> UO -> OA -> AQ -> QF (OAQFRUOAQF)  [COUNT 48]
+Sequence OA -> AQ -> QF -> FR -> RU -> UO -> OA -> AQ -> QF -> FR (OAQFRUOAQFR)  [COUNT 48]
+Sequence ZQ -> QZ (ZQZ)  [COUNT 27]
+Sequence ZQ -> QZ -> ZW (ZQZW)  [COUNT 27]
+Sequence ZS -> SZ (ZSZ)  [COUNT 6]
+Sequence ZS -> SZ -> ZU (ZSZU)  [COUNT 6]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM (MDEIGOBKCNNJGAM)  [COUNT 6]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB (MDEIGOBKCNNJGAMB)  [COUNT 6]
+Sequence MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH (MDEIGOBKCNNJGAMBH)  [COUNT 6]
+Sequence NN -> NG -> GM -> MB -> BH -> HI (NNGMBHI)  [COUNT 1]
+Sequence NN -> NG -> GM -> MB -> BH -> HI -> IM (NNGMBHIM)  [COUNT 1]
+Sequence NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB (NNGMBHIMB)  [COUNT 1]
+Sequence NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB -> BM (NNGMBHIMBM)  [COUNT 1]
+Sequence JG -> GA -> AL -> LN (JGALN)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN (JGALNN)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG (JGALNNG)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM (JGALNNGM)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB (JGALNNGMB)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH (JGALNNGMBH)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI (JGALNNGMBHI)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM (JGALNNGMBHIM)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB (JGALNNGMBHIMB)  [COUNT 20]
+Sequence JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB -> BM (JGALNNGMBHIMBM)  [COUNT 20]
+Sequence CG -> GA (CGA)  [COUNT 6]
+Sequence CG -> GA -> AL (CGAL)  [COUNT 6]
+Sequence CG -> GA -> AL -> LE (CGALE)  [COUNT 6]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ (WRBMDEIVJZ)  [COUNT 40]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS (WRBMDEIVJZS)  [COUNT 40]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ (WRBMDEIVJZSZ)  [COUNT 40]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU (WRBMDEIVJZSZU)  [COUNT 40]
+Sequence LM -> MD (LMD)  [COUNT 2]
+Sequence LM -> MD -> DE (LMDE)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI (LMDEI)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG (LMDEIG)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO (LMDEIGO)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB (LMDEIGOB)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK (LMDEIGOBK)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC (LMDEIGOBKC)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN (LMDEIGOBKCN)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN (LMDEIGOBKCNN)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ (LMDEIGOBKCNNJ)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG (LMDEIGOBKCNNJG)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA (LMDEIGOBKCNNJGA)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM (LMDEIGOBKCNNJGAM)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB (LMDEIGOBKCNNJGAMB)  [COUNT 2]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH (LMDEIGOBKCNNJGAMBH)  [COUNT 2]
+Sequence VI -> IA -> AN (VIAN)  [COUNT 19]
+Sequence VI -> IA -> AN -> NK (VIANK)  [COUNT 19]
+Sequence LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK (LMDEIGOBKCNNJGAMBHK)  [COUNT 1]
+Sequence SF -> FN (SFN)  [COUNT 16]
+Sequence SF -> FN -> NC (SFNC)  [COUNT 16]
+Sequence OD -> DL (ODL)  [COUNT 24]
+Sequence OD -> DL -> LM (ODLM)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD (ODLMD)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE (ODLMDE)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI (ODLMDEI)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG (ODLMDEIG)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO (ODLMDEIGO)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB (ODLMDEIGOB)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK (ODLMDEIGOBK)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC (ODLMDEIGOBKC)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN (ODLMDEIGOBKCN)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN (ODLMDEIGOBKCNN)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ (ODLMDEIGOBKCNNJ)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG (ODLMDEIGOBKCNNJG)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA (ODLMDEIGOBKCNNJGA)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM (ODLMDEIGOBKCNNJGAM)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB (ODLMDEIGOBKCNNJGAMB)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH (ODLMDEIGOBKCNNJGAMBH)  [COUNT 24]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK (ODLMDEIGOBKCNNJGAMBHK)  [COUNT 24]
+Sequence VK -> KC -> CS (VKCS)  [COUNT 15]
+Sequence VK -> KC -> CS -> SG (VKCSG)  [COUNT 15]
+Sequence VK -> KC -> CS -> SG -> GO (VKCSGO)  [COUNT 15]
+Sequence ZQ -> QZ -> ZW -> WC (ZQZWC)  [COUNT 14]
+Sequence ZQ -> QZ -> ZW -> WC -> CG (ZQZWCG)  [COUNT 14]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA (ZQZWCGA)  [COUNT 14]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL (ZQZWCGAL)  [COUNT 14]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE (ZQZWCGALE)  [COUNT 14]
+Sequence OW -> WN (OWN)  [COUNT 29]
+Sequence OW -> WN -> NC (OWNC)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL (OWNCL)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ (OWNCLJ)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF (OWNCLJF)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC (OWNCLJFC)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL (OWNCLJFCL)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF (OWNCLJFCLF)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM (OWNCLJFCLFM)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD (OWNCLJFCLFMD)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE (OWNCLJFCLFMDE)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK (OWNCLJFCLFMDEK)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN (OWNCLJFCLFMDEKN)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN -> NN (OWNCLJFCLFMDEKNN)  [COUNT 29]
+Sequence OW -> WN -> NC -> CL -> LJ -> JF -> FC -> CL -> LF -> FM -> MD -> DE -> EK -> KN -> NN -> NK (OWNCLJFCLFMDEKNNK)  [COUNT 29]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA (WRBMDEIVJZSZUA)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE (WRBMDEIVJZSZUAE)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB (WRBMDEIVJZSZUAEB)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ (WRBMDEIVJZSZUAEBZ)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ (WRBMDEIVJZSZUAEBZQ)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG (WRBMDEIVJZSZUAEBZQG)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM (WRBMDEIVJZSZUAEBZQGM)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD (WRBMDEIVJZSZUAEBZQGMD)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF (WRBMDEIVJZSZUAEBZQGMDF)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC (WRBMDEIVJZSZUAEBZQGMDFC)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL (WRBMDEIVJZSZUAEBZQGMDFCL)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA (WRBMDEIVJZSZUAEBZQGMDFCLA)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE (WRBMDEIVJZSZUAEBZQGMDFCLAE)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB (WRBMDEIVJZSZUAEBZQGMDFCLAEB)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB -> BN (WRBMDEIVJZSZUAEBZQGMDFCLAEBN)  [COUNT 26]
+Sequence WR -> RB -> BM -> MD -> DE -> EI -> IV -> VJ -> JZ -> ZS -> SZ -> ZU -> UA -> AE -> EB -> BZ -> ZQ -> QG -> GM -> MD -> DF -> FC -> CL -> LA -> AE -> EB -> BN -> NH (WRBMDEIVJZSZUAEBZQGMDFCLAEBNH)  [COUNT 26]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES (ZQZWCGALES)  [COUNT 2]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF (ZQZWCGALESF)  [COUNT 2]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN (ZQZWCGALESFN)  [COUNT 2]
+Sequence ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN -> NC (ZQZWCGALESFNC)  [COUNT 2]
+Sequence TJ -> JG (TJG)  [COUNT 22]
+Sequence TJ -> JG -> GA (TJGA)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL (TJGAL)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN (TJGALN)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN (TJGALNN)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG (TJGALNNG)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM (TJGALNNGM)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB (TJGALNNGMB)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH (TJGALNNGMBH)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI (TJGALNNGMBHI)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM (TJGALNNGMBHIM)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB (TJGALNNGMBHIMB)  [COUNT 22]
+Sequence TJ -> JG -> GA -> AL -> LN -> NN -> NG -> GM -> MB -> BH -> HI -> IM -> MB -> BM (TJGALNNGMBHIMBM)  [COUNT 22]
+Sequence VI -> IA -> AN -> NK -> KV (VIANKV)  [COUNT 1]
+Sequence VI -> IA -> AN -> NK -> KV -> VK (VIANKVK)  [COUNT 1]
+Sequence VI -> IA -> AN -> NK -> KV -> VK -> KC (VIANKVKC)  [COUNT 1]
+Sequence VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS (VIANKVKCS)  [COUNT 1]
+Sequence VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG (VIANKVKCSG)  [COUNT 1]
+Sequence VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO (VIANKVKCSGO)  [COUNT 1]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV (ODLMDEIGOBKCNNJGAMBHKV)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI (ODLMDEIGOBKCNNJGAMBHKVI)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA (ODLMDEIGOBKCNNJGAMBHKVIA)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN (ODLMDEIGOBKCNNJGAMBHKVIAN)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK (ODLMDEIGOBKCNNJGAMBHKVIANK)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV (ODLMDEIGOBKCNNJGAMBHKVIANKV)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK (ODLMDEIGOBKCNNJGAMBHKVIANKVK)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC (ODLMDEIGOBKCNNJGAMBHKVIANKVKC)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS (ODLMDEIGOBKCNNJGAMBHKVIANKVKCS)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSG)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGO)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZ)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQ)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZ)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZW)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWC)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCG)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGA)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGAL)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALE)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALES)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESF)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESFN)  [COUNT 7]
+Sequence OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN -> NC (ODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESFNC)  [COUNT 7]
+Sequence TI -> IN -> NI -> IM -> MB -> BN -> NZ (TINIMBNZ)  [COUNT 17]
+Sequence RO -> OD (ROD)  [COUNT 14]
+Sequence RO -> OD -> DL (RODL)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM (RODLM)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD (RODLMD)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE (RODLMDE)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI (RODLMDEI)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG (RODLMDEIG)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO (RODLMDEIGO)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB (RODLMDEIGOB)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK (RODLMDEIGOBK)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC (RODLMDEIGOBKC)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN (RODLMDEIGOBKCN)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN (RODLMDEIGOBKCNN)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ (RODLMDEIGOBKCNNJ)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG (RODLMDEIGOBKCNNJG)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA (RODLMDEIGOBKCNNJGA)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM (RODLMDEIGOBKCNNJGAM)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB (RODLMDEIGOBKCNNJGAMB)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH (RODLMDEIGOBKCNNJGAMBH)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK (RODLMDEIGOBKCNNJGAMBHK)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV (RODLMDEIGOBKCNNJGAMBHKV)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI (RODLMDEIGOBKCNNJGAMBHKVI)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA (RODLMDEIGOBKCNNJGAMBHKVIA)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN (RODLMDEIGOBKCNNJGAMBHKVIAN)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK (RODLMDEIGOBKCNNJGAMBHKVIANK)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV (RODLMDEIGOBKCNNJGAMBHKVIANKV)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK (RODLMDEIGOBKCNNJGAMBHKVIANKVK)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC (RODLMDEIGOBKCNNJGAMBHKVIANKVKC)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS (RODLMDEIGOBKCNNJGAMBHKVIANKVKCS)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSG)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGO)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZ)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQ)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZ)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZW)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWC)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCG)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGA)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGAL)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALE)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALES)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESF)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESFN)  [COUNT 14]
+Sequence RO -> OD -> DL -> LM -> MD -> DE -> EI -> IG -> GO -> OB -> BK -> KC -> CN -> NN -> NJ -> JG -> GA -> AM -> MB -> BH -> HK -> KV -> VI -> IA -> AN -> NK -> KV -> VK -> KC -> CS -> SG -> GO -> OZ -> ZQ -> QZ -> ZW -> WC -> CG -> GA -> AL -> LE -> ES -> SF -> FN -> NC (RODLMDEIGOBKCNNJGAMBHKVIANKVKCSGOZQZWCGALESFNC)  [COUNT 14]
+Sequence IO -> OV (IOV)  [COUNT 13]
+Sequence IO -> OV -> VV (IOVV)  [COUNT 13]
+Sequence IO -> OV -> VV -> VT (IOVVT)  [COUNT 13]
+Sequence IO -> OV -> VV -> VT -> TE (IOVVTE)  [COUNT 13]
+Sequence VI -> IA -> AQ -> QF -> FS (VIAQFS)  [COUNT 4]
+********             HOLLOW SEQUENCES                  ********
+Sequence LI X =85 Y =15 HITS =1
+
+Sequence EO X =36 Y =29 HITS =173
+
+Sequence RV X =7 Y =69 HITS =195
+
+Sequence SW X =1 Y =71 HITS =193
+
+Sequence HO X =35 Y =29 HITS =161
+
+Sequence KT X =93 Y =2 HITS =209
+
+Sequence ZT X =58 Y =51 HITS =162
+
+Sequence MR X =93 Y =10 HITS =212
+
+NUMBER OF PFS  SOLID = 91 HOLLOW = 8 TOTAL = 99
+********             REPEAT SEQUENCES                  ********
+********         LINKS (ORIGIN -> DIRECTION)          ********
+LI --> IO
+IO --> OV
+OV --> VV
+VV --> VT
+VT --> TE
+TE --> EO
+EO --> OA
+OA --> AQ
+AQ --> QF
+QF --> FR
+FR --> RU
+RU --> UO
+UO --> OA
+FR --> RV
+RV --> VI
+VI --> IA
+IA --> AQ
+QF --> FS
+FS --> SW
+SW --> WR
+WR --> RB
+RB --> BM
+BM --> MD
+MD --> DE
+DE --> EI
+EI --> IV
+IV --> VJ
+VJ --> JZ
+JZ --> ZS
+ZS --> SZ
+SZ --> ZU
+ZU --> UA
+UA --> AE
+AE --> EB
+EB --> BZ
+BZ --> ZQ
+ZQ --> QG
+QG --> GM
+GM --> MD
+MD --> DF
+DF --> FC
+FC --> CL
+CL --> LA
+EB --> BN
+BN --> NH
+NH --> HO
+HO --> OW
+OW --> WN
+WN --> NC
+NC --> CL
+CL --> LJ
+LJ --> JF
+JF --> FC
+CL --> LF
+LF --> FM
+FM --> MD
+DE --> EK
+EK --> KN
+KN --> NN
+NN --> NK
+NK --> KT
+KT --> TI
+TI --> IN
+IN --> NI
+NI --> IM
+IM --> MB
+MB --> BN
+BN --> NZ
+NZ --> ZT
+ZT --> TJ
+TJ --> JG
+JG --> GA
+GA --> AL
+AL --> LN
+LN --> NN
+NN --> NG
+NG --> GM
+GM --> MB
+MB --> BH
+BH --> HI
+HI --> IM
+MB --> BM
+BM --> MR
+MR --> RO
+RO --> OD
+OD --> DL
+DL --> LM
+LM --> MD
+EI --> IG
+IG --> GO
+GO --> OB
+OB --> BK
+BK --> KC
+KC --> CN
+NN --> NJ
+NJ --> JG
+GA --> AM
+AM --> MB
+BH --> HK
+HK --> KV
+KV --> VI
+IA --> AN
+AN --> NK
+NK --> KV
+KV --> VK
+VK --> KC
+KC --> CS
+CS --> SG
+SG --> GO
+GO --> OZ
+OZ --> ZQ
+ZQ --> QZ
+QZ --> ZW
+ZW --> WC
+WC --> CG
+CG --> GA
+AL --> LE
+LE --> ES
+ES --> SF
+SF --> FN
+FN --> NC
+LA --> AE
+CN --> NN
+====================================================================================
+====================================================================================
