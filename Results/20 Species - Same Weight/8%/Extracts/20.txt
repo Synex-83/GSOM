@@ -1,0 +1,11 @@
+Sequence AA X =1 Y =2 HITS =174402
+
+Sequence AA X =1	Y =0	HITS =174402
+Number 1 Hit Count =36345
+Number 2 Hit Count =13832
+Number 3 Hit Count =4898
+Number 4 Hit Count =1548
+Number 5 Hit Count =1118
+Number 6 Hit Count =516
+Number 7 Hit Count =172
+Number 8 Hit Count =86

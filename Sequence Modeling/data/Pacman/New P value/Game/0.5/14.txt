@@ -1,0 +1,592 @@
+THRESHOLD NUMBER OF HITS =118
+********             SOLID SEQUENCES                  ********
+Sequence LJ X =36 Y =12 HITS =259
+Sequence KN X =89 Y =72 HITS =155
+Sequence LL X =100 Y =1 HITS =997
+Sequence LI X =65 Y =26 HITS =612
+Sequence IO X =73 Y =79 HITS =204
+Sequence OV X =30 Y =98 HITS =185
+Sequence VZ X =66 Y =100 HITS =172
+Sequence ZQ X =93 Y =87 HITS =137
+Sequence NH X =39 Y =1 HITS =275
+Sequence OU X =19 Y =100 HITS =160
+Sequence AF X =49 Y =50 HITS =290
+Sequence FC X =56 Y =11 HITS =214
+Sequence CL X =29 Y =66 HITS =197
+Sequence LA X =13 Y =1 HITS =290
+Sequence FN X =72 Y =59 HITS =309
+Sequence NN X =100 Y =22 HITS =322
+Sequence HD X =47 Y =28 HITS =223
+Sequence DL X =63 Y =48 HITS =128
+Sequence ND X =30 Y =1 HITS =166
+Sequence LE X =47 Y =18 HITS =248
+Sequence ER X =8 Y =92 HITS =305
+Sequence RV X =97 Y =96 HITS =393
+Sequence VV X =93 Y =41 HITS =347
+Sequence VO X =1 Y =61 HITS =142
+Sequence EI X =38 Y =39 HITS =228
+Sequence NJ X =77 Y =22 HITS =228
+Sequence JG X =24 Y =40 HITS =210
+Sequence GA X =56 Y =1 HITS =223
+Sequence AL X =42 Y =63 HITS =248
+Sequence MD X =47 Y =8 HITS =242
+Sequence DE X =83 Y =1 HITS =128
+Sequence VW X =100 Y =49 HITS =271
+Sequence WR X =100 Y =72 HITS =196
+Sequence IU X =7 Y =98 HITS =149
+Sequence UO X =1 Y =68 HITS =131
+Sequence OB X =15 Y =11 HITS =144
+Sequence BK X =60 Y =59 HITS =214
+Sequence KC X =66 Y =17 HITS =135
+Sequence CN X =52 Y =79 HITS =301
+Sequence NM X =85 Y =30 HITS =183
+Sequence MB X =1 Y =22 HITS =155
+Sequence IA X =65 Y =1 HITS =205
+Sequence JF X =35 Y =30 HITS =147
+Sequence ZZ X =93 Y =34 HITS =125
+Sequence ZS X =87 Y =100 HITS =243
+Sequence VK X =1 Y =75 HITS =141
+Sequence HJ X =76 Y =1 HITS =191
+Sequence NK X =77 Y =38 HITS =414
+Sequence KR X =22 Y =88 HITS =206
+Sequence SF X =14 Y =52 HITS =143
+Sequence MR X =1 Y =100 HITS =844
+Sequence HR X =8 Y =92 HITS =305
+Sequence IL X =75 Y =49 HITS =227
+Sequence ZT X =87 Y =100 HITS =243
+Sequence BH X =48 Y =41 HITS =255
+
+
+********             LONG SEQUENCES                  ********
+Sequence LL -> LI (LLI)  [COUNT 95]
+Sequence LA -> AF (LAF)  [COUNT 64]
+Sequence LL -> LA (LLA)  [COUNT 8]
+Sequence LA -> AF -> FN (LAFN)  [COUNT 56]
+Sequence CN -> NN (CNN)  [COUNT 80]
+Sequence CN -> NN -> NH (CNNH)  [COUNT 5]
+Sequence CN -> NN -> NK (CNNK)  [COUNT 59]
+Sequence LA -> AF -> FN -> NN (LAFNN)  [COUNT 18]
+Sequence LA -> AF -> FN -> NN -> NH (LAFNNH)  [COUNT 18]
+Sequence NN -> NK (NNK)  [COUNT 16]
+Sequence LL -> LJ (LLJ)  [COUNT 4]
+Sequence IL -> LL (ILL)  [COUNT 110]
+Sequence IL -> LL -> LJ (ILLJ)  [COUNT 56]
+Sequence IL -> LL -> LI (ILLI)  [COUNT 54]
+Sequence GA -> AL (GAL)  [COUNT 9]
+Sequence GA -> AL -> LL (GALL)  [COUNT 6]
+Sequence CN -> NN -> NH -> HD (CNNHD)  [COUNT 2]
+Sequence LA -> AF -> FN -> NN -> NH -> HD (LAFNNHD)  [COUNT 12]
+Sequence VW -> WR (VWR)  [COUNT 12]
+Sequence IA -> AL (IAL)  [COUNT 26]
+Sequence IA -> AL -> LL (IALL)  [COUNT 26]
+Sequence IA -> AL -> LL -> LJ (IALLJ)  [COUNT 26]
+Sequence GA -> AL -> LL -> LA (GALLA)  [COUNT 3]
+Sequence LE -> ER (LER)  [COUNT 107]
+Sequence LA -> AL (LAL)  [COUNT 26]
+Sequence RV -> VW (RVW)  [COUNT 10]
+Sequence RV -> VV (RVV)  [COUNT 20]
+Sequence ER -> RV (ERV)  [COUNT 25]
+Sequence ER -> RV -> VW (ERVW)  [COUNT 25]
+Sequence BH -> HJ (BHJ)  [COUNT 39]
+Sequence FC -> CN (FCN)  [COUNT 15]
+Sequence FC -> CN -> NN (FCNN)  [COUNT 15]
+Sequence FC -> CN -> NN -> NH (FCNNH)  [COUNT 15]
+Sequence FC -> CN -> NN -> NH -> HD (FCNNHD)  [COUNT 15]
+Sequence AF -> FC (AFC)  [COUNT 48]
+Sequence BH -> HJ -> JG (BHJG)  [COUNT 38]
+Sequence BH -> HJ -> JG -> GA (BHJGA)  [COUNT 24]
+Sequence BH -> HJ -> JG -> GA -> AL (BHJGAL)  [COUNT 24]
+Sequence BH -> HJ -> JG -> GA -> AL -> LL (BHJGALL)  [COUNT 24]
+Sequence NJ -> JG (NJG)  [COUNT 23]
+Sequence NJ -> JG -> GA (NJGA)  [COUNT 23]
+Sequence NJ -> JG -> GA -> AL (NJGAL)  [COUNT 23]
+Sequence HJ -> JG (HJG)  [COUNT 23]
+Sequence HJ -> JG -> GA (HJGA)  [COUNT 23]
+Sequence HJ -> JG -> GA -> AL (HJGAL)  [COUNT 23]
+Sequence HJ -> JG -> GA -> AL -> LL (HJGALL)  [COUNT 23]
+Sequence HJ -> JG -> GA -> AL -> LL -> LA (HJGALLA)  [COUNT 23]
+Sequence LE -> ER -> RV (LERV)  [COUNT 81]
+Sequence LE -> ER -> RV -> VV (LERVV)  [COUNT 61]
+Sequence EI -> IO (EIO)  [COUNT 41]
+Sequence LI -> IO (LIO)  [COUNT 22]
+Sequence LE -> ER -> RV -> VW (LERVW)  [COUNT 20]
+Sequence LL -> LI -> IO (LLIO)  [COUNT 21]
+Sequence AF -> FC -> CL (AFCL)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA (AFCLA)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA -> AF (AFCLAF)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA -> AF -> FN (AFCLAFN)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN (AFCLAFNN)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH (AFCLAFNNH)  [COUNT 40]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD (AFCLAFNNHD)  [COUNT 40]
+Sequence CL -> LI (CLI)  [COUNT 33]
+Sequence CN -> NN -> NJ (CNNJ)  [COUNT 16]
+Sequence RV -> VV -> VZ (RVVZ)  [COUNT 4]
+Sequence BH -> HD (BHD)  [COUNT 13]
+Sequence RV -> VZ (RVZ)  [COUNT 3]
+Sequence RV -> VZ -> ZS (RVZS)  [COUNT 3]
+Sequence LA -> AF -> FN -> NM (LAFNM)  [COUNT 17]
+Sequence FN -> ND (FND)  [COUNT 24]
+Sequence CN -> NM (CNM)  [COUNT 30]
+Sequence NK -> KR (NKR)  [COUNT 45]
+Sequence NK -> KR -> RV (NKRV)  [COUNT 45]
+Sequence NK -> KR -> RV -> VZ (NKRVZ)  [COUNT 15]
+Sequence NK -> KR -> RV -> VZ -> ZS (NKRVZS)  [COUNT 15]
+Sequence KR -> RV (KRV)  [COUNT 15]
+Sequence KR -> RV -> VW (KRVW)  [COUNT 15]
+Sequence NK -> KR -> RV -> VV (NKRVV)  [COUNT 30]
+Sequence NK -> KR -> RV -> VV -> VZ (NKRVVZ)  [COUNT 15]
+Sequence CN -> NN -> NK -> KR (CNNKR)  [COUNT 29]
+Sequence EI -> IO -> OV (EIOV)  [COUNT 25]
+Sequence EI -> IO -> OV -> VV (EIOVV)  [COUNT 14]
+Sequence EI -> IO -> OV -> VW (EIOVW)  [COUNT 11]
+Sequence EI -> IO -> OV -> VW -> WR (EIOVWR)  [COUNT 11]
+Sequence LI -> IO -> OU (LIOU)  [COUNT 14]
+Sequence LL -> LI -> IO -> OV (LLIOV)  [COUNT 13]
+Sequence LL -> LI -> IO -> OV -> VZ (LLIOVZ)  [COUNT 13]
+Sequence KN -> NN (KNN)  [COUNT 13]
+Sequence KN -> NN -> NK (KNNK)  [COUNT 13]
+Sequence IA -> AL -> LL -> LJ -> JF (IALLJF)  [COUNT 10]
+Sequence IA -> AL -> LL -> LJ -> JF -> FC (IALLJFC)  [COUNT 10]
+Sequence IL -> LL -> LJ -> JF (ILLJF)  [COUNT 20]
+Sequence IL -> LL -> LJ -> JF -> FC (ILLJFC)  [COUNT 10]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN (ILLJFCN)  [COUNT 10]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN (ILLJFCNN)  [COUNT 10]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH (ILLJFCNNH)  [COUNT 10]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD (ILLJFCNNHD)  [COUNT 10]
+Sequence OB -> BK (OBK)  [COUNT 13]
+Sequence VV -> VO (VVO)  [COUNT 9]
+Sequence VV -> VO -> OU (VVOU)  [COUNT 9]
+Sequence ZS -> SF (ZSF)  [COUNT 9]
+Sequence ZS -> SF -> FN (ZSFN)  [COUNT 9]
+Sequence ZS -> SF -> FN -> ND (ZSFND)  [COUNT 9]
+Sequence LE -> ER -> RV -> VV -> VO (LERVVO)  [COUNT 13]
+Sequence LE -> ER -> RV -> VV -> VO -> OV (LERVVOV)  [COUNT 13]
+Sequence EI -> IU (EIU)  [COUNT 8]
+Sequence RV -> VK (RVK)  [COUNT 16]
+Sequence NK -> KR -> RV -> VZ -> ZS -> SF (NKRVZSF)  [COUNT 8]
+Sequence NK -> KR -> RV -> VZ -> ZS -> SF -> FN (NKRVZSFN)  [COUNT 8]
+Sequence LE -> ER -> RV -> VV -> VO -> OV -> VK (LERVVOVK)  [COUNT 6]
+Sequence IL -> LL -> LI -> IU (ILLIU)  [COUNT 8]
+Sequence CL -> LI -> IU (CLIU)  [COUNT 5]
+Sequence EI -> IU -> UO (EIUO)  [COUNT 3]
+Sequence EI -> IU -> UO -> OB (EIUOB)  [COUNT 3]
+Sequence EI -> IU -> UO -> OB -> BK (EIUOBK)  [COUNT 3]
+Sequence IL -> LL -> LI -> IU -> UO (ILLIUO)  [COUNT 7]
+Sequence IL -> LL -> LI -> IU -> UO -> OB (ILLIUOB)  [COUNT 7]
+Sequence IL -> LL -> LI -> IU -> UO -> OB -> BK (ILLIUOBK)  [COUNT 7]
+Sequence LL -> LI -> IO -> OV -> VZ -> ZQ (LLIOVZQ)  [COUNT 6]
+Sequence NM -> MB (NMB)  [COUNT 6]
+Sequence NM -> MB -> BH (NMBH)  [COUNT 6]
+Sequence MB -> BH (MBH)  [COUNT 12]
+Sequence MB -> BH -> HD (MBHD)  [COUNT 6]
+Sequence CN -> NM -> MB (CNMB)  [COUNT 8]
+Sequence CN -> NM -> MB -> BK (CNMBK)  [COUNT 3]
+Sequence LA -> AF -> FN -> NM -> MB (LAFNMB)  [COUNT 5]
+Sequence LA -> AF -> FN -> NM -> MB -> BH (LAFNMBH)  [COUNT 5]
+Sequence LA -> AF -> FN -> NM -> MB -> BH -> HJ (LAFNMBHJ)  [COUNT 5]
+Sequence LA -> AF -> FN -> NM -> MB -> BH -> HJ -> JG (LAFNMBHJG)  [COUNT 5]
+Sequence MD -> DE (MDE)  [COUNT 11]
+Sequence MD -> DE -> EI (MDEI)  [COUNT 11]
+Sequence MD -> DE -> EI -> IU (MDEIU)  [COUNT 8]
+Sequence MD -> DE -> EI -> IU -> UO (MDEIUO)  [COUNT 4]
+Sequence MD -> DE -> EI -> IU -> UO -> OB (MDEIUOB)  [COUNT 4]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK (MDEIUOBK)  [COUNT 4]
+Sequence MD -> DE -> EI -> IO (MDEIO)  [COUNT 3]
+Sequence MD -> DE -> EI -> IO -> OV (MDEIOV)  [COUNT 3]
+Sequence MD -> DE -> EI -> IO -> OV -> VW (MDEIOVW)  [COUNT 3]
+Sequence MD -> DE -> EI -> IO -> OV -> VW -> WR (MDEIOVWR)  [COUNT 3]
+Sequence RV -> VK -> KC (RVKC)  [COUNT 6]
+Sequence RV -> VK -> KC -> CN (RVKCN)  [COUNT 3]
+Sequence RV -> VK -> KC -> CN -> NN (RVKCNN)  [COUNT 3]
+Sequence RV -> VK -> KC -> CN -> NN -> NJ (RVKCNNJ)  [COUNT 3]
+Sequence LE -> ER -> RV -> VV -> VO -> OV -> VK -> KC (LERVVOVKC)  [COUNT 1]
+Sequence IL -> LL -> LI -> IU -> UO -> OB -> BK -> KC (ILLIUOBKC)  [COUNT 3]
+Sequence RV -> VK -> KC -> CL (RVKCL)  [COUNT 3]
+Sequence RV -> VK -> KC -> CL -> LI (RVKCLI)  [COUNT 3]
+Sequence RV -> VK -> KC -> CL -> LI -> IU (RVKCLIU)  [COUNT 3]
+Sequence NK -> KR -> RV -> VV -> VZ -> ZZ (NKRVVZZ)  [COUNT 3]
+Sequence NK -> KR -> RV -> VV -> VZ -> ZZ -> ZT (NKRVVZZT)  [COUNT 3]
+Sequence ZZ -> ZQ (ZZQ)  [COUNT 3]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC (MDEIUOBKC)  [COUNT 2]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC -> CN (MDEIUOBKCN)  [COUNT 2]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC -> CN -> NM (MDEIUOBKCNM)  [COUNT 2]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC -> CN -> NM -> MB (MDEIUOBKCNMB)  [COUNT 2]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC -> CN -> NM -> MB -> BK (MDEIUOBKCNMBK)  [COUNT 2]
+Sequence MD -> DE -> EI -> IU -> UO -> OB -> BK -> KC -> CN -> NM -> MB -> BK -> KC (MDEIUOBKCNMBKC)  [COUNT 2]
+Sequence OB -> BK -> KC (OBKC)  [COUNT 2]
+Sequence OB -> BK -> KC -> CL (OBKCL)  [COUNT 2]
+Sequence OB -> BK -> KC -> CL -> LI (OBKCLI)  [COUNT 2]
+Sequence ZZ -> ZS (ZZS)  [COUNT 2]
+Sequence ND -> DL (NDL)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL (AFCLAFNNHDL)  [COUNT 3]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE (AFCLAFNNHDLE)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER (AFCLAFNNHDLER)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV (AFCLAFNNHDLERV)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VV (AFCLAFNNHDLERVV)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VV -> VO (AFCLAFNNHDLERVVO)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VV -> VO -> OV (AFCLAFNNHDLERVVOV)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VV -> VO -> OV -> VK (AFCLAFNNHDLERVVOVK)  [COUNT 2]
+Sequence AF -> FC -> CL -> LA -> AF -> FN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VV -> VO -> OV -> VK -> KC (AFCLAFNNHDLERVVOVKC)  [COUNT 2]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD -> DL (ILLJFCNNHDL)  [COUNT 2]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD -> DL -> LE (ILLJFCNNHDLE)  [COUNT 2]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD -> DL -> LE -> ER (ILLJFCNNHDLER)  [COUNT 2]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD -> DL -> LE -> ER -> RV (ILLJFCNNHDLERV)  [COUNT 2]
+Sequence IL -> LL -> LJ -> JF -> FC -> CN -> NN -> NH -> HD -> DL -> LE -> ER -> RV -> VW (ILLJFCNNHDLERVW)  [COUNT 2]
+Sequence ZS -> SF -> FN -> ND -> DL (ZSFNDL)  [COUNT 2]
+Sequence ZS -> SF -> FN -> ND -> DL -> LE (ZSFNDLE)  [COUNT 2]
+Sequence ZS -> SF -> FN -> ND -> DL -> LE -> ER (ZSFNDLER)  [COUNT 2]
+Sequence ZS -> SF -> FN -> ND -> DL -> LE -> ER -> RV (ZSFNDLERV)  [COUNT 2]
+Sequence ZS -> SF -> FN -> ND -> DL -> LE -> ER -> RV -> VV (ZSFNDLERVV)  [COUNT 2]
+Sequence FN -> ND -> DL (FNDL)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE (FNDLE)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE -> ER (FNDLER)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE -> ER -> RV (FNDLERV)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE -> ER -> RV -> VV (FNDLERVV)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE -> ER -> RV -> VV -> VO (FNDLERVVO)  [COUNT 1]
+Sequence FN -> ND -> DL -> LE -> ER -> RV -> VV -> VO -> OV (FNDLERVVOV)  [COUNT 1]
+Sequence MD -> DL (MDL)  [COUNT 1]
+********             HOLLOW SEQUENCES                  ********
+Sequence JE X =29 Y =49 HITS =94
+
+Sequence EK X =29 Y =58 HITS =45
+
+Sequence NL X =92 Y =22 HITS =43
+
+Sequence QG X =22 Y =68 HITS =81
+
+Sequence GL X =26 Y =31 HITS =97
+
+Sequence LB X =2 Y =3 HITS =53
+
+Sequence BN X =54 Y =70 HITS =95
+
+Sequence HO X =63 Y =78 HITS =108
+
+Sequence UA X =1 Y =32 HITS =101
+
+Sequence LF X =38 Y =22 HITS =48
+
+Sequence VT X =93 Y =56 HITS =45
+
+Sequence TF X =16 Y =35 HITS =44
+
+Sequence FS X =28 Y =85 HITS =78
+
+Sequence LM X =86 Y =15 HITS =79
+
+Sequence RB X =11 Y =22 HITS =44
+
+Sequence BM X =31 Y =72 HITS =76
+
+Sequence CS X =48 Y =86 HITS =82
+
+Sequence SG X =14 Y =42 HITS =101
+
+Sequence GO X =80 Y =68 HITS =102
+
+Sequence OW X =36 Y =100 HITS =104
+
+Sequence RC X =14 Y =29 HITS =42
+
+Sequence CD X =57 Y =35 HITS =50
+
+Sequence DJ X =35 Y =59 HITS =40
+
+Sequence JV X =13 Y =100 HITS =44
+
+Sequence VI X =1 Y =81 HITS =56
+
+Sequence CM X =45 Y =71 HITS =92
+
+Sequence UQ X =93 Y =63 HITS =85
+
+Sequence QE X =22 Y =54 HITS =44
+
+Sequence EO X =63 Y =78 HITS =108
+
+Sequence IZ X =46 Y =93 HITS =42
+
+Sequence SR X =86 Y =38 HITS =44
+
+Sequence JH X =78 Y =11 HITS =111
+
+Sequence AS X =34 Y =82 HITS =40
+
+Sequence SQ X =85 Y =47 HITS =94
+
+Sequence QN X =1 Y =92 HITS =97
+
+Sequence NC X =21 Y =22 HITS =98
+
+Sequence RQ X =87 Y =65 HITS =41
+
+Sequence QQ X =100 Y =29 HITS =76
+
+Sequence QS X =86 Y =55 HITS =49
+
+Sequence JK X =92 Y =13 HITS =38
+
+Sequence WC X =1 Y =39 HITS =58
+
+Sequence CG X =64 Y =37 HITS =38
+
+Sequence AM X =51 Y =61 HITS =48
+
+Sequence ML X =100 Y =15 HITS =48
+
+Sequence RU X =85 Y =87 HITS =111
+
+Sequence UL X =7 Y =60 HITS =43
+
+Sequence VP X =100 Y =80 HITS =48
+
+Sequence PH X =23 Y =61 HITS =33
+
+Sequence UB X =14 Y =67 HITS =34
+
+Sequence BW X =15 Y =89 HITS =35
+
+Sequence WN X =1 Y =53 HITS =100
+
+Sequence LU X =17 Y =94 HITS =35
+
+Sequence RD X =18 Y =62 HITS =40
+
+Sequence DI X =40 Y =50 HITS =100
+
+Sequence AN X =37 Y =73 HITS =38
+
+Sequence KZ X =38 Y =93 HITS =45
+
+Sequence QV X =75 Y =89 HITS =55
+
+Sequence UI X =8 Y =69 HITS =42
+
+Sequence AQ X =41 Y =79 HITS =45
+
+Sequence QF X =15 Y =74 HITS =86
+
+Sequence FR X =28 Y =79 HITS =40
+
+Sequence SZ X =76 Y =100 HITS =63
+
+Sequence ZW X =49 Y =100 HITS =68
+
+Sequence TI X =7 Y =76 HITS =44
+
+Sequence MC X =49 Y =55 HITS =2
+
+Sequence NW X =25 Y =100 HITS =69
+
+Sequence IP X =19 Y =82 HITS =104
+
+Sequence PK X =11 Y =83 HITS =83
+
+Sequence KS X =30 Y =92 HITS =94
+
+Sequence SE X =13 Y =58 HITS =40
+
+Sequence WZ X =57 Y =100 HITS =60
+
+Sequence GB X =66 Y =9 HITS =49
+
+Sequence LN X =85 Y =23 HITS =43
+
+Sequence HI X =90 Y =7 HITS =82
+
+Sequence WW X =100 Y =42 HITS =49
+
+Sequence WS X =100 Y =63 HITS =59
+
+Sequence RZ X =85 Y =87 HITS =111
+
+Sequence HK X =70 Y =39 HITS =41
+
+Sequence FM X =61 Y =87 HITS =53
+
+Sequence DU X =41 Y =86 HITS =41
+
+Sequence UM X =5 Y =46 HITS =42
+
+Sequence RO X =4 Y =86 HITS =36
+
+Sequence OD X =23 Y =9 HITS =48
+
+Sequence DM X =63 Y =68 HITS =51
+
+NUMBER OF PFS  SOLID = 55 HOLLOW = 84 TOTAL = 139
+********             REPEAT SEQUENCES                  ********
+Sequence VV X =40	Y =92	HITS =347
+Number 1 Hit Count =42
+********         LINKS (ORIGIN -> DIRECTION)          ********
+LJ --> JE
+EK --> KN
+KN --> NL
+NL --> LL
+LL --> LI
+LI --> IO
+IO --> OV
+OV --> VZ
+VZ --> ZQ
+ZQ --> QG
+BN --> NH
+NH --> HO
+HO --> OU
+OU --> UA
+UA --> AF
+AF --> FC
+FC --> CL
+CL --> LA
+AF --> FN
+FN --> NN
+NN --> NH
+NH --> HD
+HD --> DL
+DL --> LF
+LF --> FN
+FN --> ND
+ND --> DL
+DL --> LE
+LE --> ER
+ER --> RV
+RV --> VV
+VV --> VO
+VO --> OV
+JE --> EI
+EI --> IO
+VV --> VT
+NJ --> JG
+JG --> GA
+GA --> AL
+AL --> LM
+LM --> MD
+MD --> DE
+DE --> EI
+OV --> VW
+VW --> WR
+WR --> RB
+BM --> MD
+EI --> IU
+IU --> UO
+UO --> OB
+OB --> BK
+BK --> KC
+KC --> CN
+CN --> NM
+NM --> MB
+MB --> BK
+KC --> CS
+OW --> WR
+WR --> RC
+VI --> IA
+IA --> AL
+AL --> LL
+LL --> LJ
+LJ --> JF
+JF --> FC
+FC --> CM
+CM --> MD
+IU --> UQ
+EO --> OB
+KC --> CL
+CL --> LI
+LI --> IZ
+IZ --> ZZ
+ZZ --> ZS
+ZS --> SR
+SR --> RV
+RV --> VK
+VK --> KC
+CN --> NN
+NN --> NJ
+NJ --> JH
+JH --> HJ
+HJ --> JG
+LL --> LA
+LA --> AS
+NC --> CN
+NN --> NK
+NK --> KR
+KR --> RV
+RV --> VZ
+VZ --> ZS
+ZS --> SF
+SF --> FN
+MB --> BM
+BM --> MR
+MR --> RQ
+NJ --> JK
+RV --> VW
+VW --> WC
+CG --> GA
+GA --> AM
+ML --> LE
+ER --> RU
+UL --> LA
+LA --> AL
+MD --> DL
+VV --> VP
+PH --> HR
+IO --> OU
+OU --> UB
+WN --> ND
+DL --> LU
+LA --> AF
+WR --> RD
+DI --> IA
+IA --> AN
+AN --> NK
+NK --> KZ
+KZ --> ZQ
+ZQ --> QV
+QV --> VV
+OU --> UI
+UI --> IL
+LI --> IU
+KC --> CM
+MD --> DI
+IA --> AQ
+FR --> RV
+VV --> VZ
+VZ --> ZZ
+ZZ --> ZT
+ZT --> TI
+TI --> IL
+MC --> CN
+MB --> BN
+LI --> IP
+PK --> KN
+NK --> KS
+SE --> ER
+VW --> WZ
+ZZ --> ZQ
+GL --> LA
+MB --> BH
+BH --> HJ
+JG --> GB
+GB --> BH
+LL --> LN
+LN --> NM
+BH --> HI
+HI --> IL
+FC --> CN
+VW --> WW
+KR --> RZ
+RZ --> ZS
+KS --> SF
+SF --> FM
+FM --> MB
+BH --> HD
+HD --> DU
+UM --> MR
+MR --> RO
+DM --> MB
+OV --> VV
+IL --> LL
+KN --> NN
+WZ --> ZZ
+FN --> NM
+JK --> KR
+OV --> VK
+VO --> OU
+=====================

@@ -1,0 +1,188 @@
+*******************            X61145             ****************************
+Done Retrieving the serialized object.
+THRESHOLD SET
+====================================================================================
+
+===================== LENGTH = 1639800 =======================================
+===================== THRESHOLD = 131184 =======================================
+
+====================================================================================
+Iteration = 1 Learning Rate = 0.25 Radius = 50.0 ******************
+Iteration = 2 Learning Rate = 0.24751245843729203 Radius = 48.08175423786517 ******************
+Iteration = 3 Learning Rate = 0.2450496683266888 Radius = 46.2371018118093 ******************
+Iteration = 4 Learning Rate = 0.24261138338712704 Radius = 44.46321931973131 ******************
+Iteration = 5 Learning Rate = 0.2401973597880808 Radius = 42.75739167911238 ******************
+Iteration = 6 Learning Rate = 0.2378073561251785 Radius = 41.11700797134446 ******************
+Iteration = 7 Learning Rate = 0.23544113339606218 Radius = 39.539557445490544 ******************
+Iteration = 8 Learning Rate = 0.23309845497648707 Radius = 38.022625675360565 ******************
+Iteration = 9 Learning Rate = 0.23077908659665894 Radius = 36.56389086402058 ******************
+Iteration = 10 Learning Rate = 0.22848279631780705 Radius = 35.16112029007922 ******************
+Iteration = 11 Learning Rate = 0.22620935450898988 Radius = 33.81216689031207 ******************
+Iteration = 12 Learning Rate = 0.22395853382413206 Radius = 32.51496597339333 ******************
+Iteration = 13 Learning Rate = 0.22173010917928937 Radius = 31.26753205970494 ******************
+Iteration = 14 Learning Rate = 0.21952385773014033 Radius = 30.067955842386063 ******************
+Iteration = 15 Learning Rate = 0.21733955884970146 Radius = 28.914401264971772 ******************
+Iteration = 16 Learning Rate = 0.21517699410626445 Radius = 27.80510271114781 ******************
+Iteration = 17 Learning Rate = 0.21303594724155284 Radius = 26.73836230232015 ******************
+Iteration = 18 Learning Rate = 0.21091620414909593 Radius = 25.712547298863125 ******************
+Iteration = 19 Learning Rate = 0.208817552852818 Radius = 24.726087601068414 ******************
+Iteration = 20 Learning Rate = 0.20673978348584057 Radius = 23.77747334596993 ******************
+Iteration = 21 Learning Rate = 0.20468268826949546 Radius = 22.86525259636632 ******************
+Iteration = 22 Learning Rate = 0.20264606149254677 Radius = 21.988029118503878 ******************
+Iteration = 23 Learning Rate = 0.20062969949061962 Radius = 21.14446024501853 ******************
+Iteration = 24 Learning Rate = 0.1986334006258335 Radius = 20.333254819865825 ******************
+Iteration = 25 Learning Rate = 0.19665696526663834 Radius = 19.55317122209352 ******************
+Iteration = 26 Learning Rate = 0.19470019576785122 Radius = 18.80301546543197 ******************
+Iteration = 27 Learning Rate = 0.19276289645089156 Radius = 18.08163937079356 ******************
+Iteration = 28 Learning Rate = 0.1908448735842133 Radius = 17.387938808884055 ******************
+Iteration = 29 Learning Rate = 0.18894593536393137 Radius = 16.720852010236023 ******************
+Iteration = 30 Learning Rate = 0.1870658918946413 Radius = 16.079357940077646 ******************
+Iteration = 31 Learning Rate = 0.18520455517042947 Radius = 15.462474735549586 ******************
+Iteration = 32 Learning Rate = 0.1833617390560723 Radius = 14.869258202877889 ******************
+Iteration = 33 Learning Rate = 0.18153725926842273 Radius = 14.298800372202708 ******************
+Iteration = 34 Learning Rate = 0.17973093335798154 Radius = 13.750228107850912 ******************
+Iteration = 35 Learning Rate = 0.17794258069065244 Radius = 13.222701771925468 ******************
+Iteration = 36 Learning Rate = 0.17617202242967836 Radius = 12.715413939166092 ******************
+Iteration = 37 Learning Rate = 0.17441908151775776 Radius = 12.227588161114182 ******************
+Iteration = 38 Learning Rate = 0.17268358265933867 Radius = 11.758477777690436 ******************
+Iteration = 39 Learning Rate = 0.17096535230308896 Radius = 11.307364774366212 ******************
+Iteration = 40 Learning Rate = 0.16926421862454116 Radius = 10.873558683179398 ******************
+Iteration = 41 Learning Rate = 0.16758001150890983 Radius = 10.456395525912734 ******************
+Iteration = 42 Learning Rate = 0.16591256253407985 Radius = 10.05523679781698 ******************
+Iteration = 43 Learning Rate = 0.1642617049537642 Radius = 9.669468490323489 ******************
+Iteration = 44 Learning Rate = 0.16262727368082913 Radius = 9.298500151250302 ******************
+Iteration = 45 Learning Rate = 0.16100910527078532 Radius = 8.94176398106338 ******************
+Iteration = 46 Learning Rate = 0.1594070379054433 Radius = 8.598713963809686 ******************
+Iteration = 47 Learning Rate = 0.1578209113767315 Radius = 8.268825031391936 ******************
+Iteration = 48 Learning Rate = 0.1562505670706752 Radius = 7.951592259905896 ******************
+Iteration = 49 Learning Rate = 0.1546958479515352 Radius = 7.646530096810124 ******************
+Iteration = 50 Learning Rate = 0.15315659854610403 Radius = 7.353171617745276 ******************
+Iteration = 51 Learning Rate = 0.15163266492815836 Radius = 7.0710678118654755 ******************
+Iteration = 52 Learning Rate = 0.15012389470306647 Radius = 6.799786894587896 ******************
+Iteration = 53 Learning Rate = 0.14863013699254857 Radius = 6.538913646708634 ******************
+Iteration = 54 Learning Rate = 0.1471512424195888 Radius = 6.288048778873343 ******************
+Iteration = 55 Learning Rate = 0.1456870630934974 Radius = 6.046808320429925 ******************
+Iteration = 56 Learning Rate = 0.14423745259512166 Radius = 5.814823031727799 ******************
+Iteration = 57 Learning Rate = 0.14280226596220372 Radius = 5.591737838964281 ******************
+Iteration = 58 Learning Rate = 0.14138135967488427 Radius = 5.377211290713037 ******************
+Iteration = 59 Learning Rate = 0.1399745916413505 Radius = 5.170915035302761 ******************
+Iteration = 60 Learning Rate = 0.13858182118362677 Radius = 4.972533318246184 ******************
+Iteration = 61 Learning Rate = 0.13720290902350663 Radius = 4.781762498950185 ******************
+Iteration = 62 Learning Rate = 0.13583771726862495 Radius = 4.598310585967256 ******************
+Iteration = 63 Learning Rate = 0.13448610939866862 Radius = 4.421896790077027 ******************
+Iteration = 64 Learning Rate = 0.1331479502517243 Radius = 4.25225109451377 ******************
+Iteration = 65 Learning Rate = 0.13182310601076214 Radius = 4.089113841682086 ******************
+Iteration = 66 Learning Rate = 0.130511444190254 Radius = 3.9322353357282154 ******************
+Iteration = 67 Learning Rate = 0.1292128336229248 Radius = 3.7813754603586656 ******************
+Iteration = 68 Learning Rate = 0.1279271444466356 Radius = 3.636303311321192 ******************
+Iteration = 69 Learning Rate = 0.1266542480913974 Radius = 3.496796842985618 ******************
+Iteration = 70 Learning Rate = 0.1253940172665139 Radius = 3.3626425284835455 ******************
+Iteration = 71 Learning Rate = 0.12414632594785238 Radius = 3.2336350328867876 ******************
+Iteration = 72 Learning Rate = 0.12291104936524128 Radius = 3.1095768989242716 ******************
+Iteration = 73 Learning Rate = 0.12168806398999292 Radius = 2.9902782447563943 ******************
+Iteration = 74 Learning Rate = 0.12047724752255061 Radius = 2.875556473344236 ******************
+Iteration = 75 Learning Rate = 0.1192784788802586 Radius = 2.7652359929687966 ******************
+Iteration = 76 Learning Rate = 0.11809163818525367 Radius = 2.6591479484724947 ******************
+Iteration = 77 Learning Rate = 0.11691660675247731 Radius = 2.5571299628115574 ******************
+Iteration = 78 Learning Rate = 0.11575326707780702 Radius = 2.459025888523732 ******************
+Iteration = 79 Learning Rate = 0.11460150282630588 Radius = 2.364685568730922 ******************
+Iteration = 80 Learning Rate = 0.11346119882058896 Radius = 2.2739646073109325 ******************
+Iteration = 81 Learning Rate = 0.11233224102930539 Radius = 2.1867241478865567 ******************
+Iteration = 82 Learning Rate = 0.11121451655573528 Radius = 2.102830661293731 ******************
+Iteration = 83 Learning Rate = 0.11010791362649983 Radius = 2.0221557412034534 ******************
+Iteration = 84 Learning Rate = 0.1090123215803839 Radius = 1.9445759075846507 ******************
+Iteration = 85 Learning Rate = 0.10792763085726992 Radius = 1.8699724177071757 ******************
+Iteration = 86 Learning Rate = 0.10685373298718168 Radius = 1.7982310843956593 ******************
+Iteration = 87 Learning Rate = 0.1057905205794372 Radius = 1.7292421012560375 ******************
+Iteration = 88 Learning Rate = 0.10473788731190975 Radius = 1.6628998746072463 ******************
+Iteration = 89 Learning Rate = 0.10369572792039534 Radius = 1.5991028618608485 ******************
+Iteration = 90 Learning Rate = 0.10266393818808636 Radius = 1.5377534161012036 ******************
+Iteration = 91 Learning Rate = 0.10164241493514978 Radius = 1.4787576366283137 ******************
+Iteration = 92 Learning Rate = 0.10063105600840899 Radius = 1.422025225234578 ******************
+Iteration = 93 Learning Rate = 0.09962976027112855 Radius = 1.367469347995477 ******************
+Iteration = 94 Learning Rate = 0.09863842759290029 Radius = 1.3150065023626452 ******************
+Iteration = 95 Learning Rate = 0.09765695883963028 Radius = 1.2645563893559073 ******************
+Iteration = 96 Learning Rate = 0.09668525586362531 Radius = 1.2160417906586574 ******************
+Iteration = 97 Learning Rate = 0.09572322149377802 Radius = 1.1693884504284608 ******************
+Iteration = 98 Learning Rate = 0.09477075952584971 Radius = 1.1245249616419848 ******************
+Iteration = 99 Learning Rate = 0.09382777471284989 Radius = 1.0813826568002936 ******************
+File Exported - SMALL U.
+File Exported - SMALL U.
+Iteration = 100 Learning Rate = 0.09289417275551143 Radius = 1.039895502827228 ******************
+==============================================================
+==============================================================
+THRESHOLD NUMBER OF HITS =131184
+********             SOLID SEQUENCES                  ********
+Sequence AC X =1 Y =1 HITS =131419
+********             LONG SEQUENCES                  ********
+********             HOLLOW SEQUENCES                  ********
+Sequence GT X =25 Y =25 HITS =29937
+
+Sequence TT X =25 Y =43 HITS =68652
+
+Sequence TA X =25 Y =1 HITS =94276
+
+Sequence AA X =46 Y =18 HITS =112471
+
+Sequence AT X =1 Y =13 HITS =84982
+
+Sequence CT X =1 Y =37 HITS =80967
+
+Sequence TC X =13 Y =13 HITS =67725
+
+Sequence CA X =13 Y =1 HITS =85543
+
+Sequence AG X =1 Y =25 HITS =51803
+
+Sequence GC X =13 Y =25 HITS =36968
+
+Sequence CC X =13 Y =37 HITS =79980
+
+Sequence TG X =1 Y =61 HITS =35943
+
+Sequence GA X =25 Y =13 HITS =38740
+
+Sequence GG X =15 Y =55 HITS =25019
+
+Sequence CG X =1 Y =49 HITS =25158
+
+********             REPEAT SEQUENCES                  ********
+Sequence TT X =42	Y =24	HITS =68652
+Number 1 Hit Count =11883
+Number 2 Hit Count =2984
+Number 3 Hit Count =715
+Number 4 Hit Count =238
+Number 5 Hit Count =118
+Number 6 Hit Count =59
+Sequence AA X =17	Y =45	HITS =112471
+Number 1 Hit Count =23658
+Number 2 Hit Count =8212
+Number 3 Hit Count =3260
+Number 4 Hit Count =975
+Number 5 Hit Count =325
+Number 6 Hit Count =65
+Sequence CC X =36	Y =12	HITS =79980
+Number 1 Hit Count =17092
+Number 2 Hit Count =4813
+Number 3 Hit Count =1425
+Number 4 Hit Count =355
+Sequence GG X =54	Y =14	HITS =25019
+Number 1 Hit Count =3020
+Number 2 Hit Count =594
+Number 3 Hit Count =178
+Number 4 Hit Count =59
+********         LINKS (ORIGIN -> DIRECTION)          ********
+TA --> AC
+AC --> CT
+AA --> AC
+CA --> AC
+AC --> CG
+GA --> AC
+AC --> CC
+AC --> CA
+====================================================================================
+====================================================================================
+====================================================================================
+
+
+

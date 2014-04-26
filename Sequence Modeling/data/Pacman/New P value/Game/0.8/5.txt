@@ -1,0 +1,527 @@
+THRESHOLD NUMBER OF HITS =412
+********             SOLID SEQUENCES                  ********
+Sequence LI X =77 Y =62 HITS =782
+Sequence MD X =91 Y =31 HITS =504
+Sequence FC X =91 Y =50 HITS =463
+Sequence CN X =25 Y =58 HITS =843
+Sequence LA X =83 Y =32 HITS =413
+Sequence FN X =59 Y =79 HITS =709
+Sequence NH X =100 Y =23 HITS =696
+Sequence HD X =64 Y =38 HITS =507
+Sequence MB X =66 Y =18 HITS =600
+Sequence BH X =60 Y =55 HITS =716
+Sequence GL X =30 Y =78 HITS =524
+Sequence NK X =64 Y =100 HITS =899
+Sequence IL X =70 Y =68 HITS =601
+Sequence DL X =61 Y =71 HITS =518
+Sequence OV X =24 Y =23 HITS =725
+Sequence ZQ X =29 Y =91 HITS =418
+Sequence VV X =100 Y =98 HITS =423
+Sequence AL X =39 Y =48 HITS =413
+Sequence LE X =81 Y =55 HITS =455
+Sequence ER X =6 Y =22 HITS =423
+Sequence HR X =6 Y =22 HITS =423
+Sequence IV X =1 Y =1 HITS =1716
+
+
+********             LONG SEQUENCES                  ********
+Sequence CN -> NH (CNH)  [COUNT 72]
+Sequence LI -> IV (LIV)  [COUNT 17]
+Sequence MB -> BH (MBH)  [COUNT 145]
+Sequence NH -> HD (NHD)  [COUNT 53]
+Sequence NH -> HD -> DL (NHDL)  [COUNT 27]
+Sequence BH -> HD (BHD)  [COUNT 9]
+Sequence MB -> BH -> HD (MBHD)  [COUNT 34]
+Sequence MD -> DL (MDL)  [COUNT 25]
+Sequence DL -> LE (DLE)  [COUNT 10]
+Sequence NH -> HD -> DL -> LE (NHDLE)  [COUNT 9]
+Sequence FC -> CN (FCN)  [COUNT 40]
+Sequence FC -> CN -> NH (FCNH)  [COUNT 16]
+Sequence OV -> VV (OVV)  [COUNT 5]
+Sequence LE -> ER (LER)  [COUNT 1]
+Sequence DL -> LE -> ER (DLER)  [COUNT 1]
+Sequence AL -> LE (ALE)  [COUNT 1]
+Sequence AL -> LE -> ER (ALER)  [COUNT 1]
+Sequence LA -> AL (LAL)  [COUNT 1]
+Sequence NH -> HD -> DL -> LE -> ER (NHDLER)  [COUNT 1]
+********             HOLLOW SEQUENCES                  ********
+Sequence IQ X =2 Y =44 HITS =218
+
+Sequence QG X =39 Y =26 HITS =275
+
+Sequence GM X =39 Y =81 HITS =131
+
+Sequence DF X =93 Y =60 HITS =75
+
+Sequence NG X =100 Y =15 HITS =167
+
+Sequence ML X =90 Y =77 HITS =87
+
+Sequence AF X =49 Y =55 HITS =182
+
+Sequence NN X =93 Y =83 HITS =392
+
+Sequence DM X =51 Y =71 HITS =133
+
+Sequence DV X =14 Y =42 HITS =215
+
+Sequence VZ X =14 Y =63 HITS =250
+
+Sequence ZS X =14 Y =74 HITS =371
+
+Sequence SF X =59 Y =1 HITS =181
+
+Sequence NC X =88 Y =3 HITS =398
+
+Sequence CG X =71 Y =76 HITS =327
+
+Sequence LL X =99 Y =79 HITS =372
+
+Sequence LM X =86 Y =85 HITS =221
+
+Sequence FD X =87 Y =66 HITS =79
+
+Sequence DE X =100 Y =64 HITS =325
+
+Sequence EK X =47 Y =33 HITS =127
+
+Sequence KN X =59 Y =89 HITS =141
+
+Sequence KT X =5 Y =1 HITS =178
+
+Sequence TI X =30 Y =1 HITS =310
+
+Sequence LN X =79 Y =85 HITS =111
+
+Sequence KS X =15 Y =34 HITS =293
+
+Sequence SE X =58 Y =12 HITS =94
+
+Sequence ET X =18 Y =49 HITS =171
+
+Sequence LJ X =100 Y =2 HITS =197
+
+Sequence JF X =72 Y =38 HITS =201
+
+Sequence NM X =72 Y =100 HITS =92
+
+Sequence HI X =93 Y =70 HITS =241
+
+Sequence LZ X =24 Y =34 HITS =75
+
+Sequence ZO X =32 Y =14 HITS =247
+
+Sequence QH X =48 Y =22 HITS =199
+
+Sequence HO X =40 Y =73 HITS =198
+
+Sequence OU X =16 Y =16 HITS =173
+
+Sequence UA X =68 Y =10 HITS =206
+
+Sequence IM X =67 Y =92 HITS =138
+
+Sequence BN X =33 Y =57 HITS =231
+
+Sequence NW X =18 Y =22 HITS =72
+
+Sequence WC X =68 Y =1 HITS =264
+
+Sequence GA X =88 Y =41 HITS =367
+
+Sequence RV X =21 Y =90 HITS =183
+
+Sequence VP X =28 Y =98 HITS =252
+
+Sequence PH X =54 Y =31 HITS =300
+
+Sequence RD X =56 Y =20 HITS =382
+
+Sequence DJ X =45 Y =41 HITS =281
+
+Sequence JZ X =1 Y =53 HITS =274
+
+Sequence VI X =24 Y =1 HITS =395
+
+Sequence IA X =100 Y =52 HITS =369
+
+Sequence JU X =2 Y =3 HITS =14
+
+Sequence UQ X =56 Y =97 HITS =169
+
+Sequence QF X =31 Y =28 HITS =234
+
+Sequence FS X =9 Y =34 HITS =71
+
+Sequence SZ X =4 Y =76 HITS =125
+
+Sequence ZW X =1 Y =60 HITS =99
+
+Sequence WM X =45 Y =7 HITS =44
+
+Sequence MO X =77 Y =91 HITS =40
+
+Sequence OR X =10 Y =10 HITS =73
+
+Sequence RB X =77 Y =9 HITS =92
+
+Sequence IZ X =17 Y =56 HITS =161
+
+Sequence ZR X =20 Y =82 HITS =94
+
+Sequence AQ X =25 Y =50 HITS =136
+
+Sequence FR X =10 Y =50 HITS =121
+
+Sequence RW X =8 Y =100 HITS =275
+
+Sequence WJ X =39 Y =1 HITS =250
+
+Sequence EB X =69 Y =59 HITS =236
+
+Sequence BW X =1 Y =28 HITS =111
+
+Sequence WN X =51 Y =7 HITS =81
+
+Sequence NL X =84 Y =72 HITS =159
+
+Sequence VW X =93 Y =100 HITS =44
+
+Sequence FM X =32 Y =68 HITS =109
+
+Sequence DZ X =1 Y =13 HITS =109
+
+Sequence RR X =96 Y =91 HITS =18
+
+Sequence VU X =36 Y =100 HITS =93
+
+Sequence QS X =81 Y =100 HITS =46
+
+Sequence SN X =21 Y =10 HITS =38
+
+Sequence NU X =11 Y =14 HITS =32
+
+Sequence UL X =48 Y =15 HITS =164
+
+Sequence AN X =31 Y =42 HITS =120
+
+Sequence KR X =11 Y =28 HITS =105
+
+Sequence IK X =79 Y =79 HITS =93
+
+Sequence VO X =46 Y =1 HITS =268
+
+Sequence OQ X =10 Y =5 HITS =35
+
+Sequence QZ X =9 Y =89 HITS =35
+
+Sequence ZV X =7 Y =63 HITS =77
+
+Sequence VR X =50 Y =97 HITS =217
+
+Sequence RZ X =12 Y =82 HITS =282
+
+Sequence ZT X =14 Y =74 HITS =371
+
+Sequence TE X =76 Y =1 HITS =59
+
+Sequence EO X =39 Y =72 HITS =42
+
+Sequence OB X =77 Y =18 HITS =139
+
+Sequence BJ X =61 Y =63 HITS =50
+
+Sequence JW X =5 Y =5 HITS =25
+
+Sequence WK X =39 Y =8 HITS =85
+
+Sequence NJ X =79 Y =69 HITS =36
+
+Sequence JG X =23 Y =69 HITS =251
+
+Sequence KM X =50 Y =90 HITS =102
+
+Sequence FE X =87 Y =58 HITS =40
+
+Sequence HP X =1 Y =38 HITS =175
+
+Sequence PJ X =31 Y =21 HITS =127
+
+Sequence CL X =34 Y =35 HITS =255
+
+Sequence TJ X =26 Y =7 HITS =68
+
+Sequence RU X =12 Y =82 HITS =282
+
+Sequence GB X =99 Y =46 HITS =50
+
+Sequence IP X =2 Y =33 HITS =42
+
+Sequence PK X =26 Y =17 HITS =33
+
+Sequence LK X =41 Y =90 HITS =99
+
+Sequence NI X =92 Y =12 HITS =96
+
+Sequence LV X =11 Y =18 HITS =21
+
+Sequence VT X =85 Y =98 HITS =21
+
+Sequence IO X =49 Y =79 HITS =197
+
+Sequence QO X =15 Y =6 HITS =98
+
+Sequence QE X =63 Y =28 HITS =51
+
+Sequence BK X =53 Y =63 HITS =95
+
+Sequence KC X =100 Y =39 HITS =199
+
+Sequence ZZ X =95 Y =95 HITS =70
+
+Sequence SR X =90 Y =94 HITS =33
+
+Sequence HK X =71 Y =84 HITS =141
+
+Sequence KW X =6 Y =9 HITS =43
+
+Sequence WS X =45 Y =100 HITS =122
+
+Sequence SH X =40 Y =19 HITS =51
+
+Sequence QV X =6 Y =84 HITS =39
+
+Sequence DI X =53 Y =45 HITS =135
+
+Sequence AM X =41 Y =55 HITS =98
+
+Sequence LU X =13 Y =22 HITS =75
+
+Sequence IB X =69 Y =49 HITS =46
+
+Sequence BI X =46 Y =48 HITS =43
+
+Sequence II X =100 Y =69 HITS =83
+
+Sequence AP X =26 Y =44 HITS =68
+
+Sequence PW X =1 Y =83 HITS =105
+
+Sequence KV X =1 Y =6 HITS =71
+
+Sequence SW X =15 Y =100 HITS =56
+
+Sequence SQ X =85 Y =94 HITS =35
+
+Sequence QN X =10 Y =1 HITS =67
+
+Sequence LB X =77 Y =25 HITS =84
+
+Sequence DN X =43 Y =64 HITS =47
+
+Sequence ND X =92 Y =22 HITS =226
+
+Sequence MC X =70 Y =30 HITS =171
+
+Sequence NV X =24 Y =29 HITS =39
+
+Sequence VK X =32 Y =7 HITS =45
+
+Sequence CT X =1 Y =18 HITS =49
+
+Sequence TV X =41 Y =95 HITS =29
+
+Sequence KZ X =24 Y =34 HITS =75
+
+Sequence UJ X =18 Y =1 HITS =202
+
+Sequence JJ X =99 Y =73 HITS =34
+
+Sequence NZ X =17 Y =28 HITS =40
+
+Sequence EI X =60 Y =47 HITS =45
+
+Sequence IU X =5 Y =16 HITS =19
+
+Sequence KK X =97 Y =78 HITS =336
+
+Sequence LF X =79 Y =47 HITS =98
+
+Sequence OO X =99 Y =85 HITS =36
+
+Sequence UZ X =8 Y =70 HITS =39
+
+Sequence WD X =68 Y =1 HITS =264
+
+Sequence JV X =6 Y =13 HITS =20
+
+Sequence VJ X =39 Y =13 HITS =37
+
+Sequence QW X =1 Y =91 HITS =56
+
+Sequence WU X =89 Y =100 HITS =29
+
+Sequence UO X =32 Y =14 HITS =247
+
+Sequence OC X =85 Y =14 HITS =46
+
+Sequence CQ X =21 Y =40 HITS =41
+
+Sequence QT X =15 Y =92 HITS =35
+
+Sequence TO X =27 Y =12 HITS =35
+
+Sequence CM X =41 Y =34 HITS =55
+
+Sequence WR X =35 Y =93 HITS =30
+
+NUMBER OF PFS  SOLID = 22 HOLLOW = 165 TOTAL = 187
+********             REPEAT SEQUENCES                  ********
+Sequence NN X =82	Y =92	HITS =392
+Number 1 Hit Count =20
+Sequence LL X =78	Y =98	HITS =372
+Number 1 Hit Count =48
+********         LINKS (ORIGIN -> DIRECTION)          ********
+LI --> IQ
+GM --> MD
+MD --> DF
+DF --> FC
+FC --> CN
+CN --> NG
+ML --> LA
+LA --> AF
+AF --> FN
+FN --> NN
+NN --> NH
+NH --> HD
+HD --> DM
+DM --> MB
+MB --> BH
+BH --> HD
+HD --> DV
+SF --> FN
+FN --> NC
+CG --> GL
+GL --> LL
+LM --> MD
+NN --> NK
+NK --> KT
+TI --> IL
+IL --> LN
+NK --> KS
+IL --> LL
+JF --> FC
+CN --> NM
+NM --> MB
+BH --> HI
+HI --> IL
+IL --> LM
+MD --> DL
+DL --> LZ
+ZO --> OV
+OV --> VZ
+VZ --> ZQ
+ZQ --> QH
+AF --> FC
+CN --> NH
+NH --> HO
+HO --> OV
+OV --> VV
+IM --> MB
+MB --> BN
+GA --> AL
+AL --> LE
+LE --> ER
+ER --> RV
+VV --> VP
+PH --> HR
+HR --> RD
+OV --> VI
+IA --> AL
+AL --> LM
+MD --> DJ
+LL --> LI
+LI --> IZ
+MD --> DE
+NC --> CN
+CN --> NN
+GM --> MB
+CN --> NL
+LL --> LE
+LE --> EB
+BN --> NH
+OV --> VW
+FM --> MB
+HD --> DZ
+UL --> LA
+LA --> AN
+AN --> NK
+NK --> KR
+RV --> VV
+LI --> IK
+VV --> VO
+VV --> VR
+KM --> MD
+QG --> GL
+GL --> LA
+NH --> HP
+FC --> CL
+HD --> DL
+DL --> LE
+LE --> ET
+AN --> NH
+ML --> LE
+ER --> RU
+GB --> BH
+LI --> IP
+NI --> IL
+DL --> LV
+VV --> VT
+LI --> IO
+ZQ --> QO
+CL --> LI
+BH --> HK
+JZ --> ZQ
+ZQ --> QV
+NG --> GL
+DL --> LU
+NK --> KV
+MD --> DI
+GL --> LB
+HD --> DN
+NL --> LE
+AM --> MB
+MC --> CN
+OV --> VK
+NK --> KZ
+KZ --> ZQ
+FN --> NM
+GL --> LM
+ZQ --> QG
+AL --> LL
+LI --> IU
+ZZ --> ZQ
+CL --> LA
+DL --> LF
+LF --> FN
+FN --> ND
+ND --> DL
+LA --> AL
+OV --> VU
+ER --> RW
+ZQ --> QW
+LI --> IV
+FC --> CM
+DV --> VV
+LV --> VV
+VO --> OV
+IV --> VI
+IO --> OV
+FN --> NL
+NV --> VV
+QO --> OV
+DL --> LN
+SE --> ER
+SH --> HR
+ZV --> VV
+==================

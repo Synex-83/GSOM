@@ -1,0 +1,720 @@
+*******************            X72204             ****************************
+Done Retrieving the serialized object.
+THRESHOLD SET
+====================================================================================
+
+===================== LENGTH = 1640200 =======================================
+===================== THRESHOLD = 82010 =======================================
+
+====================================================================================
+Iteration = 1 Learning Rate = 0.25 Radius = 50.0 ******************
+Iteration = 2 Learning Rate = 0.24751245843729203 Radius = 48.08175423786517 ******************
+Iteration = 3 Learning Rate = 0.2450496683266888 Radius = 46.2371018118093 ******************
+Iteration = 4 Learning Rate = 0.24261138338712704 Radius = 44.46321931973131 ******************
+Iteration = 5 Learning Rate = 0.2401973597880808 Radius = 42.75739167911238 ******************
+Iteration = 6 Learning Rate = 0.2378073561251785 Radius = 41.11700797134446 ******************
+Iteration = 7 Learning Rate = 0.23544113339606218 Radius = 39.539557445490544 ******************
+Iteration = 8 Learning Rate = 0.23309845497648707 Radius = 38.022625675360565 ******************
+Iteration = 9 Learning Rate = 0.23077908659665894 Radius = 36.56389086402058 ******************
+Iteration = 10 Learning Rate = 0.22848279631780705 Radius = 35.16112029007922 ******************
+Iteration = 11 Learning Rate = 0.22620935450898988 Radius = 33.81216689031207 ******************
+Iteration = 12 Learning Rate = 0.22395853382413206 Radius = 32.51496597339333 ******************
+Iteration = 13 Learning Rate = 0.22173010917928937 Radius = 31.26753205970494 ******************
+Iteration = 14 Learning Rate = 0.21952385773014033 Radius = 30.067955842386063 ******************
+Iteration = 15 Learning Rate = 0.21733955884970146 Radius = 28.914401264971772 ******************
+Iteration = 16 Learning Rate = 0.21517699410626445 Radius = 27.80510271114781 ******************
+Iteration = 17 Learning Rate = 0.21303594724155284 Radius = 26.73836230232015 ******************
+Iteration = 18 Learning Rate = 0.21091620414909593 Radius = 25.712547298863125 ******************
+Iteration = 19 Learning Rate = 0.208817552852818 Radius = 24.726087601068414 ******************
+Iteration = 20 Learning Rate = 0.20673978348584057 Radius = 23.77747334596993 ******************
+Iteration = 21 Learning Rate = 0.20468268826949546 Radius = 22.86525259636632 ******************
+Iteration = 22 Learning Rate = 0.20264606149254677 Radius = 21.988029118503878 ******************
+Iteration = 23 Learning Rate = 0.20062969949061962 Radius = 21.14446024501853 ******************
+Iteration = 24 Learning Rate = 0.1986334006258335 Radius = 20.333254819865825 ******************
+Iteration = 25 Learning Rate = 0.19665696526663834 Radius = 19.55317122209352 ******************
+Iteration = 26 Learning Rate = 0.19470019576785122 Radius = 18.80301546543197 ******************
+Iteration = 27 Learning Rate = 0.19276289645089156 Radius = 18.08163937079356 ******************
+Iteration = 28 Learning Rate = 0.1908448735842133 Radius = 17.387938808884055 ******************
+Iteration = 29 Learning Rate = 0.18894593536393137 Radius = 16.720852010236023 ******************
+Iteration = 30 Learning Rate = 0.1870658918946413 Radius = 16.079357940077646 ******************
+Iteration = 31 Learning Rate = 0.18520455517042947 Radius = 15.462474735549586 ******************
+Iteration = 32 Learning Rate = 0.1833617390560723 Radius = 14.869258202877889 ******************
+Iteration = 33 Learning Rate = 0.18153725926842273 Radius = 14.298800372202708 ******************
+Iteration = 34 Learning Rate = 0.17973093335798154 Radius = 13.750228107850912 ******************
+Iteration = 35 Learning Rate = 0.17794258069065244 Radius = 13.222701771925468 ******************
+Iteration = 36 Learning Rate = 0.17617202242967836 Radius = 12.715413939166092 ******************
+Iteration = 37 Learning Rate = 0.17441908151775776 Radius = 12.227588161114182 ******************
+Iteration = 38 Learning Rate = 0.17268358265933867 Radius = 11.758477777690436 ******************
+Iteration = 39 Learning Rate = 0.17096535230308896 Radius = 11.307364774366212 ******************
+Iteration = 40 Learning Rate = 0.16926421862454116 Radius = 10.873558683179398 ******************
+Iteration = 41 Learning Rate = 0.16758001150890983 Radius = 10.456395525912734 ******************
+Iteration = 42 Learning Rate = 0.16591256253407985 Radius = 10.05523679781698 ******************
+Iteration = 43 Learning Rate = 0.1642617049537642 Radius = 9.669468490323489 ******************
+Iteration = 44 Learning Rate = 0.16262727368082913 Radius = 9.298500151250302 ******************
+Iteration = 45 Learning Rate = 0.16100910527078532 Radius = 8.94176398106338 ******************
+Iteration = 46 Learning Rate = 0.1594070379054433 Radius = 8.598713963809686 ******************
+Iteration = 47 Learning Rate = 0.1578209113767315 Radius = 8.268825031391936 ******************
+Iteration = 48 Learning Rate = 0.1562505670706752 Radius = 7.951592259905896 ******************
+Iteration = 49 Learning Rate = 0.1546958479515352 Radius = 7.646530096810124 ******************
+Iteration = 50 Learning Rate = 0.15315659854610403 Radius = 7.353171617745276 ******************
+Iteration = 51 Learning Rate = 0.15163266492815836 Radius = 7.0710678118654755 ******************
+Iteration = 52 Learning Rate = 0.15012389470306647 Radius = 6.799786894587896 ******************
+Iteration = 53 Learning Rate = 0.14863013699254857 Radius = 6.538913646708634 ******************
+Iteration = 54 Learning Rate = 0.1471512424195888 Radius = 6.288048778873343 ******************
+Iteration = 55 Learning Rate = 0.1456870630934974 Radius = 6.046808320429925 ******************
+Iteration = 56 Learning Rate = 0.14423745259512166 Radius = 5.814823031727799 ******************
+Iteration = 57 Learning Rate = 0.14280226596220372 Radius = 5.591737838964281 ******************
+Iteration = 58 Learning Rate = 0.14138135967488427 Radius = 5.377211290713037 ******************
+Iteration = 59 Learning Rate = 0.1399745916413505 Radius = 5.170915035302761 ******************
+Iteration = 60 Learning Rate = 0.13858182118362677 Radius = 4.972533318246184 ******************
+Iteration = 61 Learning Rate = 0.13720290902350663 Radius = 4.781762498950185 ******************
+Iteration = 62 Learning Rate = 0.13583771726862495 Radius = 4.598310585967256 ******************
+Iteration = 63 Learning Rate = 0.13448610939866862 Radius = 4.421896790077027 ******************
+Iteration = 64 Learning Rate = 0.1331479502517243 Radius = 4.25225109451377 ******************
+Iteration = 65 Learning Rate = 0.13182310601076214 Radius = 4.089113841682086 ******************
+Iteration = 66 Learning Rate = 0.130511444190254 Radius = 3.9322353357282154 ******************
+Iteration = 67 Learning Rate = 0.1292128336229248 Radius = 3.7813754603586656 ******************
+Iteration = 68 Learning Rate = 0.1279271444466356 Radius = 3.636303311321192 ******************
+Iteration = 69 Learning Rate = 0.1266542480913974 Radius = 3.496796842985618 ******************
+Iteration = 70 Learning Rate = 0.1253940172665139 Radius = 3.3626425284835455 ******************
+Iteration = 71 Learning Rate = 0.12414632594785238 Radius = 3.2336350328867876 ******************
+Iteration = 72 Learning Rate = 0.12291104936524128 Radius = 3.1095768989242716 ******************
+Iteration = 73 Learning Rate = 0.12168806398999292 Radius = 2.9902782447563943 ******************
+Iteration = 74 Learning Rate = 0.12047724752255061 Radius = 2.875556473344236 ******************
+Iteration = 75 Learning Rate = 0.1192784788802586 Radius = 2.7652359929687966 ******************
+Iteration = 76 Learning Rate = 0.11809163818525367 Radius = 2.6591479484724947 ******************
+Iteration = 77 Learning Rate = 0.11691660675247731 Radius = 2.5571299628115574 ******************
+Iteration = 78 Learning Rate = 0.11575326707780702 Radius = 2.459025888523732 ******************
+Iteration = 79 Learning Rate = 0.11460150282630588 Radius = 2.364685568730922 ******************
+Iteration = 80 Learning Rate = 0.11346119882058896 Radius = 2.2739646073109325 ******************
+Iteration = 81 Learning Rate = 0.11233224102930539 Radius = 2.1867241478865567 ******************
+Iteration = 82 Learning Rate = 0.11121451655573528 Radius = 2.102830661293731 ******************
+Iteration = 83 Learning Rate = 0.11010791362649983 Radius = 2.0221557412034534 ******************
+Iteration = 84 Learning Rate = 0.1090123215803839 Radius = 1.9445759075846507 ******************
+Iteration = 85 Learning Rate = 0.10792763085726992 Radius = 1.8699724177071757 ******************
+Iteration = 86 Learning Rate = 0.10685373298718168 Radius = 1.7982310843956593 ******************
+Iteration = 87 Learning Rate = 0.1057905205794372 Radius = 1.7292421012560375 ******************
+Iteration = 88 Learning Rate = 0.10473788731190975 Radius = 1.6628998746072463 ******************
+Iteration = 89 Learning Rate = 0.10369572792039534 Radius = 1.5991028618608485 ******************
+Iteration = 90 Learning Rate = 0.10266393818808636 Radius = 1.5377534161012036 ******************
+Iteration = 91 Learning Rate = 0.10164241493514978 Radius = 1.4787576366283137 ******************
+Iteration = 92 Learning Rate = 0.10063105600840899 Radius = 1.422025225234578 ******************
+Iteration = 93 Learning Rate = 0.09962976027112855 Radius = 1.367469347995477 ******************
+Iteration = 94 Learning Rate = 0.09863842759290029 Radius = 1.3150065023626452 ******************
+Iteration = 95 Learning Rate = 0.09765695883963028 Radius = 1.2645563893559073 ******************
+Iteration = 96 Learning Rate = 0.09668525586362531 Radius = 1.2160417906586574 ******************
+Iteration = 97 Learning Rate = 0.09572322149377802 Radius = 1.1693884504284608 ******************
+Iteration = 98 Learning Rate = 0.09477075952584971 Radius = 1.1245249616419848 ******************
+Iteration = 99 Learning Rate = 0.09382777471284989 Radius = 1.0813826568002936 ******************
+File Exported - SMALL U.
+File Exported - SMALL U.
+Iteration = 100 Learning Rate = 0.09289417275551143 Radius = 1.039895502827228 ******************
+==============================================================
+==============================================================
+THRESHOLD NUMBER OF HITS =82010
+********             SOLID SEQUENCES                  ********
+Sequence TA X =37 Y =13 HITS =92682
+Sequence AA X =13 Y =15 HITS =103807
+Sequence AT X =13 Y =1 HITS =84569
+Sequence AC X =25 Y =1 HITS =84749
+Sequence CA X =37 Y =1 HITS =88342
+Sequence AG X =1 Y =1 HITS =85293
+Sequence CC X =1 Y =13 HITS =82419
+********             LONG SEQUENCES                  ********
+Sequence TA -> AA (TAA)  [COUNT 3016]
+Sequence CA -> AA (CAA)  [COUNT 1708]
+Sequence CA -> AG (CAG)  [COUNT 636]
+Sequence AA -> AG (AAG)  [COUNT 485]
+Sequence TA -> AG (TAG)  [COUNT 955]
+Sequence TA -> AA -> AG (TAAG)  [COUNT 149]
+Sequence CA -> AA -> AG (CAAG)  [COUNT 197]
+Sequence AC -> CA (ACA)  [COUNT 82]
+Sequence AC -> CA -> AC (ACAC)  [COUNT 18]
+Sequence AC -> CA -> AC -> CA (ACACA)  [COUNT 9]
+Sequence AC -> CA -> AC -> CA -> AG (ACACAG)  [COUNT 2]
+Sequence AA -> AC (AAC)  [COUNT 406]
+Sequence CA -> AC (CAC)  [COUNT 480]
+Sequence TA -> AC (TAC)  [COUNT 551]
+Sequence TA -> AA -> AC (TAAC)  [COUNT 181]
+Sequence AA -> AC -> CA (AACA)  [COUNT 142]
+Sequence AA -> AC -> CA -> AC (AACAC)  [COUNT 40]
+Sequence CA -> AC -> CA (CACA)  [COUNT 166]
+Sequence CA -> AC -> CA -> AC (CACAC)  [COUNT 42]
+Sequence AC -> CA -> AG (ACAG)  [COUNT 3]
+Sequence CA -> AC -> CA -> AA (CACAA)  [COUNT 62]
+Sequence AA -> AC -> CA -> AA (AACAA)  [COUNT 56]
+Sequence AA -> AC -> CA -> AA -> AG (AACAAG)  [COUNT 16]
+Sequence CA -> AA -> AC (CAAC)  [COUNT 160]
+Sequence CA -> AA -> AC -> CA (CAACA)  [COUNT 59]
+Sequence CA -> AA -> AC -> CA -> AG (CAACAG)  [COUNT 7]
+Sequence TA -> AC -> CA (TACA)  [COUNT 159]
+Sequence TA -> AC -> CA -> AC (TACAC)  [COUNT 45]
+Sequence TA -> AC -> CA -> AC -> CA (TACACA)  [COUNT 14]
+Sequence TA -> AC -> CA -> AC -> CA -> AC (TACACAC)  [COUNT 1]
+Sequence CA -> AC -> CA -> AC -> CA (CACACA)  [COUNT 15]
+Sequence CA -> AC -> CA -> AC -> CA -> AC (CACACAC)  [COUNT 4]
+Sequence CA -> AC -> CA -> AG (CACAG)  [COUNT 36]
+Sequence AC -> CA -> AA (ACAA)  [COUNT 34]
+Sequence AC -> CA -> AA -> AG (ACAAG)  [COUNT 4]
+Sequence TA -> AA -> AC -> CA (TAACA)  [COUNT 80]
+Sequence TA -> AA -> AC -> CA -> AA (TAACAA)  [COUNT 29]
+Sequence TA -> AA -> AC -> CA -> AA -> AG (TAACAAG)  [COUNT 6]
+Sequence TA -> AC -> CA -> AG (TACAG)  [COUNT 25]
+Sequence TA -> AC -> CA -> AA (TACAA)  [COUNT 42]
+Sequence TA -> AC -> CA -> AA -> AC (TACAAC)  [COUNT 14]
+Sequence CA -> AA -> AC -> CA -> AC (CAACAC)  [COUNT 18]
+Sequence TA -> AA -> AC -> CA -> AG (TAACAG)  [COUNT 19]
+Sequence TA -> AA -> AC -> CA -> AC (TAACAC)  [COUNT 24]
+Sequence CA -> AA -> AC -> CA -> AC -> CA (CAACACA)  [COUNT 4]
+Sequence CA -> AA -> AC -> CA -> AC -> CA -> AG (CAACACAG)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA (AACACA)  [COUNT 26]
+Sequence AA -> AC -> CA -> AC -> CA -> AA (AACACAA)  [COUNT 16]
+Sequence CA -> AC -> CA -> AA -> AC (CACAAC)  [COUNT 18]
+Sequence CA -> AA -> AC -> CA -> AA (CAACAA)  [COUNT 15]
+Sequence CA -> AT (CAT)  [COUNT 454]
+Sequence TA -> AT (TAT)  [COUNT 574]
+Sequence AA -> AT (AAT)  [COUNT 326]
+Sequence AA -> AT -> TA (AATA)  [COUNT 110]
+Sequence AA -> AT -> TA -> AT (AATAT)  [COUNT 21]
+Sequence TA -> AA -> AT (TAAT)  [COUNT 215]
+Sequence AA -> AC -> CA -> AA -> AT (AACAAT)  [COUNT 9]
+Sequence CA -> AT -> TA (CATA)  [COUNT 150]
+Sequence CA -> AT -> TA -> AT (CATAT)  [COUNT 49]
+Sequence TA -> AA -> AT -> TA (TAATA)  [COUNT 86]
+Sequence TA -> AA -> AT -> TA -> AA (TAATAA)  [COUNT 28]
+Sequence CA -> AC -> CA -> AA -> AC -> CA (CACAACA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AC -> CA -> AC (CACAACAC)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AC -> CA -> AC -> CA (CACAACACA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AC -> CA -> AC -> CA -> AA (CACAACACAA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AC -> CA -> AC -> CA -> AA -> AG (CACAACACAAG)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AC (AACAAC)  [COUNT 22]
+Sequence CA -> AT -> TA -> AA (CATAA)  [COUNT 43]
+Sequence CA -> AT -> TA -> AA -> AT (CATAAT)  [COUNT 15]
+Sequence CA -> AT -> TA -> AA -> AT -> TA (CATAATA)  [COUNT 7]
+Sequence CA -> AT -> TA -> AA -> AT -> TA -> AT (CATAATAT)  [COUNT 4]
+Sequence CA -> AA -> AT (CAAT)  [COUNT 128]
+Sequence AA -> AT -> TA -> AC (AATAC)  [COUNT 21]
+Sequence CA -> AA -> AC -> CA -> AT (CAACAT)  [COUNT 16]
+Sequence TA -> AT -> TA (TATA)  [COUNT 153]
+Sequence TA -> AT -> TA -> AA (TATAA)  [COUNT 35]
+Sequence TA -> AT -> TA -> AA -> AT (TATAAT)  [COUNT 17]
+Sequence TA -> AT -> TA -> AA -> AT -> TA (TATAATA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AA -> AT -> TA -> AA (TATAATAA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AT (AACAT)  [COUNT 30]
+Sequence AA -> AC -> CA -> AT -> TA (AACATA)  [COUNT 6]
+Sequence AA -> AC -> CA -> AT -> TA -> AT (AACATAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC (TATAC)  [COUNT 52]
+Sequence TA -> AT -> TA -> AC -> CA (TATACA)  [COUNT 11]
+Sequence TA -> AT -> TA -> AC -> CA -> AC (TATACAC)  [COUNT 5]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA (TATACACA)  [COUNT 3]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA -> AA (TATACACAA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA -> AA -> AC (TATACACAAC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA -> AA -> AC -> CA (TATACACAACA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA -> AA -> AC -> CA -> AA (TATACACAACAA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT (CACAAT)  [COUNT 26]
+Sequence AT -> TA (ATA)  [COUNT 78]
+Sequence AT -> TA -> AT (ATAT)  [COUNT 23]
+Sequence TA -> AA -> AT -> TA -> AC (TAATAC)  [COUNT 20]
+Sequence TA -> AA -> AT -> TA -> AC -> CA (TAATACA)  [COUNT 6]
+Sequence TA -> AA -> AT -> TA -> AC -> CA -> AT (TAATACAT)  [COUNT 4]
+Sequence AC -> CA -> AT (ACAT)  [COUNT 26]
+Sequence AC -> CA -> AT -> TA (ACATA)  [COUNT 7]
+Sequence AC -> CA -> AT -> TA -> AT (ACATAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AA -> AC (TATAAC)  [COUNT 8]
+Sequence AA -> AC -> CA -> AT -> TA -> AA (AACATAA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AT -> TA -> AA -> AG (AACATAAG)  [COUNT 2]
+Sequence AT -> TA -> AA (ATAA)  [COUNT 19]
+Sequence AT -> TA -> AG (ATAG)  [COUNT 14]
+Sequence AA -> AT -> TA -> AA (AATAA)  [COUNT 58]
+Sequence AA -> AT -> TA -> AA -> AT (AATAAT)  [COUNT 21]
+Sequence AA -> AT -> TA -> AA -> AT -> TA (AATAATA)  [COUNT 6]
+Sequence AA -> AT -> TA -> AA -> AT -> TA -> AG (AATAATAG)  [COUNT 4]
+Sequence TA -> AC -> CA -> AA -> AT (TACAAT)  [COUNT 10]
+Sequence TA -> AT -> TA -> AG (TATAG)  [COUNT 22]
+Sequence CA -> AT -> TA -> AC (CATAC)  [COUNT 28]
+Sequence TA -> AT -> TA -> AT (TATAT)  [COUNT 44]
+Sequence AC -> CA -> AA -> AC (ACAAC)  [COUNT 8]
+Sequence TA -> AC -> CA -> AA -> AT -> TA (TACAATA)  [COUNT 6]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA (TACAATAA)  [COUNT 4]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA -> AT (TACAATAAT)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA -> AT -> TA (TACAATAATA)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA -> AT -> TA -> AG (TACAATAATAG)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AT -> TA -> AA (CATAATAA)  [COUNT 3]
+Sequence TA -> AA -> AC -> CA -> AC -> CA (TAACACA)  [COUNT 6]
+Sequence TA -> AA -> AC -> CA -> AC -> CA -> AA (TAACACAA)  [COUNT 4]
+Sequence TA -> AA -> AC -> CA -> AC -> CA -> AA -> AG (TAACACAAG)  [COUNT 4]
+Sequence TA -> AA -> AT -> TA -> AT (TAATAT)  [COUNT 23]
+Sequence TA -> AA -> AT -> TA -> AT -> TA (TAATATA)  [COUNT 6]
+Sequence TA -> AA -> AT -> TA -> AT -> TA -> AC (TAATATAC)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC (CATAAC)  [COUNT 16]
+Sequence CA -> AT -> TA -> AA -> AC -> CA (CATAACA)  [COUNT 9]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AG (CATAACAG)  [COUNT 2]
+Sequence TA -> AA -> AC -> CA -> AT (TAACAT)  [COUNT 7]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AC (AACACAAC)  [COUNT 8]
+Sequence CA -> AC -> CA -> AT (CACAT)  [COUNT 25]
+Sequence CA -> AC -> CA -> AT -> TA (CACATA)  [COUNT 6]
+Sequence CA -> AC -> CA -> AT -> TA -> AG (CACATAG)  [COUNT 4]
+Sequence AA -> AT -> TA -> AA -> AC (AATAAC)  [COUNT 12]
+Sequence AA -> AT -> TA -> AA -> AC -> CA (AATAACA)  [COUNT 8]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AA (AATAACAA)  [COUNT 6]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AA -> AC (AATAACAAC)  [COUNT 2]
+Sequence CA -> AT -> TA -> AT -> TA (CATATA)  [COUNT 6]
+Sequence CA -> AT -> TA -> AT -> TA -> AA (CATATAA)  [COUNT 4]
+Sequence CA -> AT -> TA -> AT -> TA -> AA -> AT (CATATAAT)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AG (AATAAG)  [COUNT 7]
+Sequence CA -> AA -> AT -> TA (CAATA)  [COUNT 41]
+Sequence CA -> AA -> AT -> TA -> AG (CAATAG)  [COUNT 8]
+Sequence CA -> AT -> TA -> AG (CATAG)  [COUNT 30]
+Sequence TA -> AC -> CA -> AT (TACAT)  [COUNT 42]
+Sequence TA -> AC -> CA -> AT -> TA (TACATA)  [COUNT 13]
+Sequence TA -> AC -> CA -> AT -> TA -> AC (TACATAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AC -> CA (AACAACA)  [COUNT 6]
+Sequence AA -> AC -> CA -> AA -> AC -> CA -> AT (AACAACAT)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AC -> CA -> AT -> TA (AACAACATA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AC -> CA -> AT -> TA -> AA (AACAACATAA)  [COUNT 2]
+Sequence AC -> CA -> AA -> AT (ACAAT)  [COUNT 7]
+Sequence CA -> AC -> CA -> AA -> AT -> TA (CACAATA)  [COUNT 10]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AC (CACAATAC)  [COUNT 4]
+Sequence CA -> AA -> AT -> TA -> AC (CAATAC)  [COUNT 12]
+Sequence CA -> AA -> AT -> TA -> AA (CAATAA)  [COUNT 13]
+Sequence CA -> AA -> AT -> TA -> AA -> AG (CAATAAG)  [COUNT 4]
+Sequence AT -> TA -> AC (ATAC)  [COUNT 22]
+Sequence AT -> TA -> AC -> CA (ATACA)  [COUNT 4]
+Sequence AT -> TA -> AC -> CA -> AT (ATACAT)  [COUNT 2]
+Sequence AA -> AT -> TA -> AG (AATAG)  [COUNT 10]
+Sequence AT -> TA -> AA -> AT (ATAAT)  [COUNT 3]
+Sequence AC -> CA -> AT -> TA -> AG (ACATAG)  [COUNT 5]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AT (AATAACAT)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AT -> TA (AATAACATA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AT -> TA -> AA (AATAACATAA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AT -> TA -> AA -> AG (AATAACATAAG)  [COUNT 2]
+Sequence TA -> AA -> AT -> TA -> AG (TAATAG)  [COUNT 15]
+Sequence CA -> AA -> AT -> TA -> AA -> AT (CAATAAT)  [COUNT 7]
+Sequence TA -> AA -> AT -> TA -> AT -> TA -> AA (TAATATAA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AT (CAATAT)  [COUNT 8]
+Sequence AA -> AT -> TA -> AC -> CA (AATACA)  [COUNT 3]
+Sequence AA -> AT -> TA -> AC -> CA -> AA (AATACAA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AC -> CA -> AA -> AC (AATACAAC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT (TATACAT)  [COUNT 4]
+Sequence CA -> AC -> CA -> AC -> CA -> AT (CACACAT)  [COUNT 9]
+Sequence AT -> TA -> AC -> CA -> AC (ATACAC)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA (ATATA)  [COUNT 5]
+Sequence AT -> TA -> AT -> TA -> AC (ATATAC)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AC -> CA (ATATACA)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AC -> CA -> AC (ATATACAC)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA (CAATACA)  [COUNT 5]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AA (CAATACAA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AA -> AC (CAATACAAC)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AA -> AC -> CA (CAATACAACA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AA -> AC -> CA -> AT (CAATACAACAT)  [COUNT 2]
+Sequence TA -> AC -> CA -> AC -> CA -> AA (TACACAA)  [COUNT 6]
+Sequence TA -> AC -> CA -> AC -> CA -> AA -> AC (TACACAAC)  [COUNT 4]
+Sequence TA -> AC -> CA -> AC -> CA -> AA -> AC -> CA (TACACAACA)  [COUNT 2]
+Sequence TA -> AC -> CA -> AC -> CA -> AA -> AC -> CA -> AT (TACACAACAT)  [COUNT 2]
+Sequence TA -> AA -> AT -> TA -> AA -> AT (TAATAAT)  [COUNT 9]
+Sequence CA -> AT -> TA -> AC -> CA (CATACA)  [COUNT 9]
+Sequence CA -> AT -> TA -> AC -> CA -> AT (CATACAT)  [COUNT 6]
+Sequence TA -> AT -> TA -> AT -> TA (TATATA)  [COUNT 14]
+Sequence TA -> AT -> TA -> AT -> TA -> AA (TATATAA)  [COUNT 7]
+Sequence TA -> AT -> TA -> AT -> TA -> AA -> AC (TATATAAC)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AG (TACAAG)  [COUNT 10]
+Sequence TA -> AA -> AC -> CA -> AC -> CA -> AT (TAACACAT)  [COUNT 2]
+Sequence TA -> AA -> AC -> CA -> AC -> CA -> AT -> TA (TAACACATA)  [COUNT 2]
+Sequence TA -> AA -> AC -> CA -> AC -> CA -> AT -> TA -> AC (TAACACATAC)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AG (TACAATAG)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AA -> AT (TATATAAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AA -> AT -> TA (TATATAATA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AA -> AT -> TA -> AG (TATATAATAG)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AA -> AC (CAACAAC)  [COUNT 5]
+Sequence AA -> AC -> CA -> AA -> AT -> TA (AACAATA)  [COUNT 4]
+Sequence AA -> AC -> CA -> AA -> AT -> TA -> AG (AACAATAG)  [COUNT 2]
+Sequence TA -> AC -> CA -> AT -> TA -> AA (TACATAA)  [COUNT 5]
+Sequence TA -> AC -> CA -> AT -> TA -> AA -> AT (TACATAAT)  [COUNT 4]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AA -> AT (AATAACAAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AA -> AC -> CA (TATAACA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AA -> AC -> CA -> AT (TATAACAT)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AT (ACACAT)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AC -> CA -> AA (AACAACAA)  [COUNT 4]
+Sequence CA -> AA -> AC -> CA -> AA -> AT (CAACAAT)  [COUNT 4]
+Sequence TA -> AA -> AT -> TA -> AA -> AG (TAATAAG)  [COUNT 5]
+Sequence TA -> AC -> CA -> AC -> CA -> AG (TACACAG)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AG (CACAAG)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC (ATAAC)  [COUNT 7]
+Sequence AT -> TA -> AA -> AC -> CA (ATAACA)  [COUNT 7]
+Sequence AT -> TA -> AA -> AC -> CA -> AC (ATAACAC)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AC -> CA (ATAACACA)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AC -> CA -> AT (ATAACACAT)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AC -> CA -> AT -> TA (ATAACACATA)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AC -> CA -> AT -> TA -> AA (ATAACACATAA)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AC -> CA -> AT -> TA -> AA -> AT (ATAACACATAAT)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AT (CATAACAT)  [COUNT 5]
+Sequence TA -> AA -> AC -> CA -> AA -> AT (TAACAAT)  [COUNT 8]
+Sequence TA -> AA -> AC -> CA -> AA -> AT -> TA (TAACAATA)  [COUNT 4]
+Sequence TA -> AA -> AC -> CA -> AA -> AT -> TA -> AT (TAACAATAT)  [COUNT 4]
+Sequence TA -> AA -> AC -> CA -> AA -> AT -> TA -> AT -> TA (TAACAATATA)  [COUNT 2]
+Sequence TA -> AA -> AC -> CA -> AA -> AT -> TA -> AT -> TA -> AC (TAACAATATAC)  [COUNT 2]
+Sequence CA -> AT -> TA -> AC -> CA -> AC (CATACAC)  [COUNT 2]
+Sequence CA -> AC -> CA -> AT -> TA -> AC (CACATAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AA -> AT -> TA -> AA (AACAATAA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AC -> CA (AACACAACA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AC -> CA -> AC (AACACAACAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AT (AACACAAT)  [COUNT 4]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AT -> TA (AACACAATA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AA -> AT -> TA -> AC (AACACAATAC)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AG (CACAATAG)  [COUNT 4]
+Sequence TA -> AA -> AT -> TA -> AT -> TA -> AT (TAATATAT)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AC -> CA -> AT (CAACACAT)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AC -> CA -> AT -> TA (CAACACATA)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AC -> CA -> AT -> TA -> AT (CAACACATAT)  [COUNT 2]
+Sequence AT -> TA -> AA -> AC -> CA -> AG (ATAACAG)  [COUNT 3]
+Sequence AA -> AC -> CA -> AG (AACAG)  [COUNT 10]
+Sequence TA -> AC -> CA -> AC -> CA -> AT (TACACAT)  [COUNT 5]
+Sequence TA -> AC -> CA -> AA -> AC -> CA (TACAACA)  [COUNT 6]
+Sequence TA -> AC -> CA -> AA -> AC -> CA -> AC (TACAACAC)  [COUNT 4]
+Sequence AA -> AC -> CA -> AC -> CA -> AT (AACACAT)  [COUNT 4]
+Sequence AA -> AC -> CA -> AC -> CA -> AT -> TA (AACACATA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AT -> TA -> AG (AACACATAG)  [COUNT 2]
+Sequence CA -> AT -> TA -> AT -> TA -> AG (CATATAG)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AG (TATATAG)  [COUNT 4]
+Sequence TA -> AT -> TA -> AT -> TA -> AT (TATATAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AT -> TA (TATATATA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AT -> TA -> AT -> TA -> AC (TATATATAC)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AC (CATAACAC)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AC -> CA (CATAACACA)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AC -> CA -> AA (CATAACACAA)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AC -> CA -> AA -> AC (CATAACACAAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AC (AACACAC)  [COUNT 4]
+Sequence AA -> AC -> CA -> AC -> CA -> AC -> CA (AACACACA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AC -> CA -> AC (AACACACAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AC -> CA -> AC -> CA (AACACACACA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AC -> CA -> AC -> CA -> AC (AACACACACAC)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AA -> AT -> TA (CAACAATA)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AA -> AT -> TA -> AT (CAACAATAT)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AG (CAATACAG)  [COUNT 1]
+Sequence CA -> AC -> CA -> AC -> CA -> AA (CACACAA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AA -> AT -> TA (CAATAATA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AA -> AT -> TA -> AT (CAATAATAT)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AA -> AT -> TA -> AT -> TA (CAATAATATA)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AA -> AT -> TA -> AT -> TA -> AC (CAATAATATAC)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AT (ATATAT)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AT -> TA (ATATATA)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AT -> TA -> AC (ATATATAC)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AT -> TA -> AC -> CA (ATATATACA)  [COUNT 2]
+Sequence AT -> TA -> AT -> TA -> AT -> TA -> AC -> CA -> AC (ATATATACAC)  [COUNT 2]
+Sequence TA -> AA -> AC -> CA -> AA -> AC (TAACAAC)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CA -> AG (AACACAG)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AA (TATACAA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AA -> AT (TATACAAT)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AT -> TA (CAACATA)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AT -> TA -> AA (CAACATAA)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AC -> CA -> AA (TACAACAA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AC -> CA -> AA -> AG (AATAACAAG)  [COUNT 2]
+Sequence TA -> AA -> AT -> TA -> AA -> AT -> TA (TAATAATA)  [COUNT 2]
+Sequence TA -> AA -> AT -> TA -> AA -> AT -> TA -> AG (TAATAATAG)  [COUNT 2]
+Sequence TA -> AC -> CA -> AT -> TA -> AT (TACATAT)  [COUNT 6]
+Sequence TA -> AA -> AT -> TA -> AA -> AC (TAATAAC)  [COUNT 4]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AA (CACAATAA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC (CACAATAAC)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC -> CA (CACAATAACA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC -> CA -> AA (CACAATAACAA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC -> CA -> AA -> AC (CACAATAACAAC)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AC (ACACAC)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AC -> CA (ACACACA)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AC -> CA -> AA (ACACACAA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA (AATATA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA -> AC (AATATAC)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA -> AC -> CA (AATATACA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA -> AC -> CA -> AC (AATATACAC)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA -> AC -> CA -> AC -> CA (AATATACACA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AT -> TA -> AC -> CA -> AC -> CA -> AC (AATATACACAC)  [COUNT 2]
+Sequence CA -> AA -> AC -> CA -> AA -> AG (CAACAAG)  [COUNT 1]
+Sequence CA -> AT -> TA -> AA -> AT -> TA -> AA -> AT (CATAATAAT)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AC -> CA -> AA (TAATACAA)  [COUNT 2]
+Sequence TA -> AA -> AT -> TA -> AC -> CA -> AA -> AC (TAATACAAC)  [COUNT 2]
+Sequence AA -> AT -> TA -> AA -> AT -> TA -> AC (AATAATAC)  [COUNT 2]
+Sequence CA -> AA -> AT -> TA -> AC -> CA -> AC (CAATACAC)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AA (ACACAA)  [COUNT 3]
+Sequence AC -> CA -> AC -> CA -> AA -> AT (ACACAAT)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AA -> AT -> TA (ACACAATA)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AA -> AT -> TA -> AA (ACACAATAA)  [COUNT 2]
+Sequence AC -> CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC (ACACAATAAC)  [COUNT 2]
+Sequence CA -> AC -> CA -> AC -> CA -> AT -> TA (CACACATA)  [COUNT 2]
+Sequence CA -> AC -> CA -> AC -> CA -> AT -> TA -> AT (CACACATAT)  [COUNT 2]
+Sequence TA -> AC -> CA -> AC -> CA -> AA -> AT (TACACAAT)  [COUNT 2]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA -> AC (TACAATAAC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA (TATACATA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA -> AC (TATACATAC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA -> AC -> CA (TATACATACA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA -> AC -> CA -> AC (TATACATACAC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA -> AC -> CA -> AC -> CA (TATACATACACA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CA -> AT -> TA -> AC -> CA -> AC -> CA -> AT (TATACATACACAT)  [COUNT 2]
+Sequence TA -> AC -> CA -> AT -> TA -> AA -> AT -> TA (TACATAATA)  [COUNT 2]
+Sequence TA -> AC -> CA -> AT -> TA -> AA -> AT -> TA -> AT (TACATAATAT)  [COUNT 2]
+Sequence TA -> AT -> TA -> AA -> AG (TATAAG)  [COUNT 3]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AT -> TA (CATAACATA)  [COUNT 1]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AT -> TA -> AA (CATAACATAA)  [COUNT 1]
+Sequence CA -> AT -> TA -> AA -> AC -> CA -> AT -> TA -> AA -> AC (CATAACATAAC)  [COUNT 1]
+Sequence CA -> AT -> TA -> AC -> CA -> AA (CATACAA)  [COUNT 1]
+Sequence CA -> AT -> TA -> AC -> CA -> AA -> AT (CATACAAT)  [COUNT 1]
+Sequence CA -> AT -> TA -> AC -> CA -> AA -> AT -> TA (CATACAATA)  [COUNT 1]
+Sequence CA -> AT -> TA -> AC -> CA -> AA -> AT -> TA -> AC (CATACAATAC)  [COUNT 1]
+Sequence AC -> CA -> AC -> CA -> AA -> AG (ACACAAG)  [COUNT 1]
+Sequence AA -> AT -> TA -> AC -> CA -> AT (AATACAT)  [COUNT 1]
+Sequence TA -> AT -> TA -> AT -> TA -> AC (TATATAC)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CA -> AC (TATACACAC)  [COUNT 1]
+Sequence AT -> TA -> AT -> TA -> AG (ATATAG)  [COUNT 1]
+Sequence AA -> AC -> CA -> AT -> TA -> AC (AACATAC)  [COUNT 1]
+Sequence AA -> AC -> CA -> AT -> TA -> AC -> CA (AACATACA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AT -> TA -> AC -> CA -> AC (AACATACAC)  [COUNT 1]
+Sequence AC -> CA -> AA -> AT -> TA (ACAATA)  [COUNT 2]
+Sequence AC -> CA -> AA -> AT -> TA -> AA (ACAATAA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AT -> TA -> AG (AACATAG)  [COUNT 1]
+Sequence AT -> TA -> AA -> AT -> TA (ATAATA)  [COUNT 1]
+Sequence AT -> TA -> AA -> AT -> TA -> AT (ATAATAT)  [COUNT 1]
+Sequence AT -> TA -> AA -> AT -> TA -> AT -> TA (ATAATATA)  [COUNT 1]
+Sequence AT -> TA -> AA -> AT -> TA -> AT -> TA -> AC (ATAATATAC)  [COUNT 1]
+Sequence AT -> TA -> AA -> AC -> CA -> AA (ATAACAA)  [COUNT 2]
+Sequence AC -> CA -> AA -> AT -> TA -> AG (ACAATAG)  [COUNT 1]
+Sequence AA -> AC -> CC (AACC)  [COUNT 17]
+Sequence CC -> CA (CCA)  [COUNT 85]
+Sequence CC -> CA -> AA (CCAA)  [COUNT 26]
+Sequence TA -> AC -> CC (TACC)  [COUNT 13]
+Sequence CC -> CA -> AC (CCAC)  [COUNT 28]
+Sequence CC -> CA -> AC -> CA (CCACA)  [COUNT 12]
+Sequence CC -> CA -> AC -> CA -> AC (CCACAC)  [COUNT 4]
+Sequence CC -> CA -> AC -> CA -> AC -> CC (CCACACC)  [COUNT 1]
+Sequence CC -> CA -> AT (CCAT)  [COUNT 22]
+Sequence AA -> AC -> CC -> CA (AACCA)  [COUNT 6]
+Sequence AA -> AC -> CC -> CA -> AA (AACCAA)  [COUNT 2]
+Sequence CA -> AC -> CC (CACC)  [COUNT 17]
+Sequence CC -> CA -> AA -> AT (CCAAT)  [COUNT 6]
+Sequence CC -> CA -> AA -> AT -> TA (CCAATA)  [COUNT 2]
+Sequence CC -> CA -> AA -> AT -> TA -> AC (CCAATAC)  [COUNT 2]
+Sequence CC -> CA -> AA -> AT -> TA -> AC -> CA (CCAATACA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AT -> TA -> AC -> CA -> AG (CCAATACAG)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AC -> CA (CCACACA)  [COUNT 3]
+Sequence CC -> CA -> AC -> CA -> AC -> CA -> AA (CCACACAA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AC -> CC (AATACC)  [COUNT 4]
+Sequence AA -> AT -> TA -> AC -> CC -> CA (AATACCA)  [COUNT 2]
+Sequence AA -> AT -> TA -> AC -> CC -> CA -> AA (AATACCAA)  [COUNT 1]
+Sequence AA -> AT -> TA -> AC -> CC -> CA -> AA -> AT (AATACCAAT)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA (CACCA)  [COUNT 8]
+Sequence CA -> AC -> CC -> CA -> AG (CACCAG)  [COUNT 1]
+Sequence CA -> AA -> AT -> TA -> AA -> AT -> TA -> AT -> TA -> AC -> CC (CAATAATATACC)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AA -> AG (AACCAAG)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AT (CACCAT)  [COUNT 3]
+Sequence TA -> AT -> TA -> AC -> CC (TATACC)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CC -> CA (TATACCA)  [COUNT 2]
+Sequence TA -> AT -> TA -> AC -> CC -> CA -> AG (TATACCAG)  [COUNT 1]
+Sequence AC -> CC (ACC)  [COUNT 11]
+Sequence CA -> AA -> AC -> CC (CAACC)  [COUNT 7]
+Sequence CA -> AA -> AC -> CC -> CA (CAACCA)  [COUNT 3]
+Sequence CA -> AA -> AC -> CC -> CA -> AA (CAACCAA)  [COUNT 2]
+Sequence CA -> AA -> AC -> CC -> CA -> AA -> AT (CAACCAAT)  [COUNT 1]
+Sequence TA -> AA -> AC -> CA -> AA -> AC -> CC (TAACAACC)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC (CCAAC)  [COUNT 9]
+Sequence CC -> CA -> AG (CCAG)  [COUNT 9]
+Sequence CC -> CA -> AA -> AC -> CA (CCAACA)  [COUNT 4]
+Sequence CC -> CA -> AA -> AC -> CA -> AT (CCAACAT)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CA -> AT -> TA (CCAACATA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CA -> AT -> TA -> AA (CCAACATAA)  [COUNT 1]
+Sequence CC -> CA -> AC -> CC (CCACC)  [COUNT 6]
+Sequence CA -> AC -> CA -> AA -> AC -> CC (CACAACC)  [COUNT 1]
+Sequence CA -> AA -> AC -> CC -> CA -> AA -> AC (CAACCAAC)  [COUNT 1]
+Sequence CA -> AA -> AC -> CC -> CA -> AA -> AC -> CC (CAACCAACC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA (CCATA)  [COUNT 7]
+Sequence CC -> CA -> AT -> TA -> AT (CCATAT)  [COUNT 2]
+Sequence CA -> AT -> TA -> AA -> AC -> CC (CATAACC)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC (CACCAC)  [COUNT 3]
+Sequence CA -> AC -> CC -> CA -> AC -> CA (CACCACA)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC -> CA -> AA (CACCACAA)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC -> CA -> AA -> AC (CACCACAAC)  [COUNT 1]
+Sequence AA -> AT -> TA -> AC -> CC -> CA -> AT (AATACCAT)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CC -> CA -> AA (TATACCAA)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CC -> CA -> AA -> AC (TATACCAAC)  [COUNT 1]
+Sequence TA -> AA -> AC -> CC (TAACC)  [COUNT 10]
+Sequence AC -> CA -> AA -> AC -> CC (ACAACC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AA (CCACAA)  [COUNT 4]
+Sequence CC -> CA -> AC -> CA -> AA -> AC (CCACAAC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AA -> AC -> CC (CCACAACC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AA -> AC -> CC -> CA (CCACAACCA)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AA -> AC -> CC -> CA -> AT (CCACAACCAT)  [COUNT 1]
+Sequence AA -> AT -> TA -> AA -> AC -> CC (AATAACC)  [COUNT 2]
+Sequence CC -> CA -> AA -> AC -> CA -> AG (CCAACAG)  [COUNT 1]
+Sequence CA -> AC -> CA -> AC -> CC (CACACC)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC (TAATAACC)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC -> CA (TAATAACCA)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC -> CA -> AT (TAATAACCAT)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC -> CA -> AT -> TA (TAATAACCATA)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC -> CA -> AT -> TA -> AC (TAATAACCATAC)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AA -> AC -> CC -> CA -> AT -> TA -> AC -> CC (TAATAACCATACC)  [COUNT 1]
+Sequence AA -> AT -> TA -> AT -> TA -> AC -> CA -> AC -> CA -> AC -> CC (AATATACACACC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AA -> AT (CCACAAT)  [COUNT 2]
+Sequence TA -> AC -> CC -> CA (TACCA)  [COUNT 3]
+Sequence TA -> AC -> CC -> CA -> AA (TACCAA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC (CCAACC)  [COUNT 2]
+Sequence CC -> CA -> AA -> AC -> CC -> CA (CCAACCA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC -> CA -> AA (CCAACCAA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC -> CA -> AA -> AC (CCAACCAAC)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC -> CA -> AA -> AC -> CA (CCAACCAACA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC -> CA -> AA -> AC -> CA -> AA (CCAACCAACAA)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CC -> CA -> AA -> AC -> CA -> AA -> AG (CCAACCAACAAG)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA (CCATAA)  [COUNT 3]
+Sequence CC -> CA -> AT -> TA -> AA -> AT (CCATAAT)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AT -> TA (CCATAATA)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AT -> TA -> AA (CCATAATAA)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AT -> TA -> AA -> AT (CCATAATAAT)  [COUNT 1]
+Sequence AC -> CC -> CA (ACCA)  [COUNT 4]
+Sequence AC -> CC -> CA -> AA (ACCAA)  [COUNT 3]
+Sequence AC -> CC -> CA -> AA -> AC (ACCAAC)  [COUNT 2]
+Sequence AC -> CC -> CA -> AA -> AC -> CC (ACCAACC)  [COUNT 1]
+Sequence TA -> AA -> AC -> CC -> CA (TAACCA)  [COUNT 1]
+Sequence TA -> AA -> AC -> CC -> CA -> AA (TAACCAA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC (AACACC)  [COUNT 3]
+Sequence AA -> AC -> CA -> AC -> CC -> CA (AACACCA)  [COUNT 2]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AT (AACACCAT)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AT -> TA (AACACCATA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AT -> TA -> AA (AACACCATAA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AT -> TA -> AA -> AC (AACACCATAAC)  [COUNT 1]
+Sequence TA -> AC -> CC -> CA -> AC (TACCAC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AG (CCATAG)  [COUNT 1]
+Sequence TA -> AT -> TA -> AA -> AC -> CC (TATAACC)  [COUNT 1]
+Sequence TA -> AT -> TA -> AA -> AC -> CC -> CA (TATAACCA)  [COUNT 1]
+Sequence TA -> AT -> TA -> AA -> AC -> CC -> CA -> AA (TATAACCAA)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC (AACCAC)  [COUNT 2]
+Sequence AA -> AC -> CC -> CA -> AC -> CC (AACCACC)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC -> CC -> CA (AACCACCA)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC -> CC -> CA -> AA (AACCACCAA)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AT (CCACAT)  [COUNT 2]
+Sequence CA -> AC -> CC -> CA -> AC -> CC (CACCACC)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC -> CC -> CA (CACCACCA)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC -> CC -> CA -> AC (CACCACCAC)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AC -> CC -> CA -> AC -> CC (CACCACCACC)  [COUNT 1]
+Sequence TA -> AC -> CC -> CA -> AT (TACCAT)  [COUNT 1]
+Sequence CA -> AA -> AC -> CC -> CA -> AT (CAACCAT)  [COUNT 1]
+Sequence AC -> CC -> CA -> AA -> AT (ACCAAT)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AA (AACACCAA)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CC -> CA -> AA -> AT (AACACCAAT)  [COUNT 1]
+Sequence AC -> CC -> CA -> AA -> AC -> CA (ACCAACA)  [COUNT 1]
+Sequence AC -> CC -> CA -> AA -> AC -> CA -> AT (ACCAACAT)  [COUNT 1]
+Sequence AA -> AC -> CA -> AC -> CA -> AC -> CC (AACACACC)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CC (TATACACC)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CC -> CA (TATACACCA)  [COUNT 1]
+Sequence TA -> AT -> TA -> AC -> CA -> AC -> CC -> CA -> AG (TATACACCAG)  [COUNT 1]
+Sequence AC -> CA -> AC -> CA -> AA -> AT -> TA -> AA -> AC -> CC (ACACAATAACC)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AA (CACCAA)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AA -> AC (CACCAAC)  [COUNT 1]
+Sequence CA -> AC -> CC -> CA -> AA -> AC -> CC (CACCAACC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AC (CCATAC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AC -> CA (CCATACA)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AC -> CA -> AT (CCATACAT)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CA -> AA (CCAACAA)  [COUNT 2]
+Sequence CC -> CA -> AA -> AC -> CA -> AA -> AC (CCAACAAC)  [COUNT 1]
+Sequence CC -> CA -> AA -> AC -> CA -> AA -> AC -> CC (CCAACAACC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CA -> AG (CCACAG)  [COUNT 2]
+Sequence TA -> AC -> CA -> AC -> CC (TACACC)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AG (AACCAG)  [COUNT 2]
+Sequence CC -> CA -> AC -> CA -> AC -> CA -> AT (CCACACAT)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AC -> CC (TAATACC)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AC -> CC -> CA (TAATACCA)  [COUNT 1]
+Sequence TA -> AA -> AT -> TA -> AC -> CC -> CA -> AG (TAATACCAG)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC -> CA (AACCACA)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC -> CA -> AC (AACCACAC)  [COUNT 1]
+Sequence AA -> AC -> CC -> CA -> AC -> CA -> AC -> CC (AACCACACC)  [COUNT 1]
+Sequence CC -> CA -> AC -> CC -> CA (CCACCA)  [COUNT 1]
+Sequence CC -> CA -> AC -> CC -> CA -> AT (CCACCAT)  [COUNT 1]
+Sequence TA -> AC -> CA -> AA -> AT -> TA -> AA -> AC -> CC (TACAATAACC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AC (CCATAAC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AC -> CC (CCATAACC)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AC -> CC -> CA (CCATAACCA)  [COUNT 1]
+Sequence CC -> CA -> AT -> TA -> AA -> AC -> CC -> CA -> AG (CCATAACCAG)  [COUNT 1]
+Sequence AC -> CC -> CA -> AT (ACCAT)  [COUNT 1]
+Sequence AC -> CC -> CA -> AT -> TA (ACCATA)  [COUNT 1]
+Sequence AC -> CC -> CA -> AT -> TA -> AT (ACCATAT)  [COUNT 1]
+********             HOLLOW SEQUENCES                  ********
+Sequence GT X =13 Y =27 HITS =28608
+
+Sequence TT X =1 Y =25 HITS =68124
+
+Sequence CT X =25 Y =37 HITS =79962
+
+Sequence TC X =37 Y =25 HITS =68069
+
+Sequence GC X =25 Y =25 HITS =36150
+
+Sequence TG X =1 Y =49 HITS =34119
+
+Sequence GA X =25 Y =13 HITS =38650
+
+Sequence GG X =1 Y =37 HITS =25910
+
+Sequence CG X =13 Y =39 HITS =21650
+
+********             REPEAT SEQUENCES                  ********
+Sequence TT X =24	Y =0	HITS =68124
+Number 1 Hit Count =11458
+Number 2 Hit Count =2984
+Number 3 Hit Count =773
+Number 4 Hit Count =118
+Number 5 Hit Count =118
+Number 6 Hit Count =59
+Sequence AA X =14	Y =12	HITS =103807
+Number 1 Hit Count =22211
+Number 2 Hit Count =7486
+Number 3 Hit Count =3115
+Number 4 Hit Count =900
+Number 5 Hit Count =300
+Sequence CC X =12	Y =0	HITS =82419
+Number 1 Hit Count =17000
+Number 2 Hit Count =5264
+Number 3 Hit Count =1374
+Number 4 Hit Count =416
+Sequence GG X =36	Y =0	HITS =25910
+Number 1 Hit Count =2423
+Number 2 Hit Count =414
+Number 3 Hit Count =119
+Number 4 Hit Count =59
+********         LINKS (ORIGIN -> DIRECTION)          ********
+TT --> TA
+TA --> AA
+AA --> AT
+AT --> TT
+TA --> AC
+AC --> CT
+AT --> TC
+TC --> CA
+CA --> AG
+AG --> GC
+GC --> CC
+CC --> CA
+AT --> TG
+GA --> AT
+CA --> AT
+AT --> TA
+AA --> AC
+GA --> AG
+AG --> GG
+TA --> AT
+CA --> AC
+AC --> CG
+GA --> AC
+TC --> CC
+CC --> CT
+AA --> AG
+GC --> CA
+AG --> GT
+AG --> GA
+TA --> AG
+GT --> TA
+CA --> AA
+CC --> CG
+CT --> TA
+AC --> CC
+GA --> AA
+AC --> CA
+====================================================================================
+====================================================================================
+====================================================================================
+
+
+
