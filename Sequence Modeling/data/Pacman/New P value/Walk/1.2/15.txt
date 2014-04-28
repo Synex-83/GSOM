@@ -1,12 +1,21 @@
-THRESHOLD NUMBER OF HITS =1571
+THRESHOLD NUMBER OF HITS =943
 ********             SOLID SEQUENCES                  ********
+Sequence LI X =69 Y =73 HITS =977
 Sequence NN X =100 Y =100 HITS =4560
+Sequence DL X =65 Y =56 HITS =1138
+Sequence OV X =29 Y =1 HITS =996
+Sequence LL X =92 Y =91 HITS =1307
+Sequence NK X =80 Y =66 HITS =947
+Sequence IV X =1 Y =1 HITS =1307
 
 
 ********             LONG SEQUENCES                  ********
+Sequence DL -> LL (DLL)  [COUNT 33]
+Sequence LL -> LI (LLI)  [COUNT 15]
+Sequence LI -> IV (LIV)  [COUNT 2]
+Sequence LL -> LI -> IV (LLIV)  [COUNT 3]
+Sequence NN -> NK (NNK)  [COUNT 3]
 ********             HOLLOW SEQUENCES                  ********
-Sequence LI X =69 Y =73 HITS =977
-
 Sequence IQ X =26 Y =27 HITS =291
 
 Sequence QG X =24 Y =41 HITS =138
@@ -22,8 +31,6 @@ Sequence FN X =72 Y =47 HITS =640
 Sequence NH X =50 Y =100 HITS =824
 
 Sequence HD X =34 Y =60 HITS =198
-
-Sequence DL X =65 Y =56 HITS =1138
 
 Sequence LE X =51 Y =89 HITS =364
 
@@ -83,8 +90,6 @@ Sequence BN X =55 Y =33 HITS =543
 
 Sequence HO X =65 Y =20 HITS =727
 
-Sequence OV X =29 Y =1 HITS =996
-
 Sequence VZ X =64 Y =1 HITS =44
 
 Sequence QH X =25 Y =47 HITS =258
@@ -115,8 +120,6 @@ Sequence PK X =14 Y =25 HITS =182
 
 Sequence KL X =33 Y =84 HITS =140
 
-Sequence LL X =92 Y =91 HITS =1307
-
 Sequence LJ X =41 Y =86 HITS =205
 
 Sequence JF X =41 Y =72 HITS =366
@@ -132,8 +135,6 @@ Sequence BH X =50 Y =60 HITS =533
 Sequence HI X =83 Y =100 HITS =293
 
 Sequence MC X =3 Y =91 HITS =307
-
-Sequence NK X =80 Y =66 HITS =947
 
 Sequence KI X =83 Y =84 HITS =331
 
@@ -309,8 +310,6 @@ Sequence WR X =91 Y =28 HITS =264
 
 Sequence RD X =21 Y =53 HITS =240
 
-Sequence IV X =1 Y =1 HITS =1307
-
 Sequence AP X =37 Y =32 HITS =37
 
 Sequence PW X =62 Y =10 HITS =47
@@ -367,23 +366,77 @@ Sequence UJ X =1 Y =20 HITS =110
 
 Sequence IP X =21 Y =25 HITS =32
 
-NUMBER OF PFS  SOLID = 1 HOLLOW = 181 TOTAL = 182
+NUMBER OF PFS  SOLID = 7 HOLLOW = 175 TOTAL = 182
 ********             REPEAT SEQUENCES                  ********
 Sequence NN X =99	Y =99	HITS =4560
 Number 1 Hit Count =271
 Sequence LL X =90	Y =91	HITS =1307
 Number 1 Hit Count =38
 ********         LINKS (ORIGIN -> DIRECTION)          ********
+LI --> IQ
 FN --> NN
 NN --> NH
+HD --> DL
+DL --> LE
+MD --> DL
+DL --> LV
+CL --> LI
+LI --> IZ
+HO --> OV
+OV --> VZ
+LI --> IK
+NL --> LI
+KL --> LL
+LL --> LI
 LN --> NN
 NN --> NL
+NL --> LL
 CN --> NN
 NN --> NK
+NK --> KI
 NN --> NI
+LL --> LN
+NK --> KT
+VO --> OV
+OV --> VK
+IL --> LL
+LI --> IU
 NN --> ND
+ND --> DL
+LL --> LB
+DL --> LU
+DL --> LF
+DL --> LN
+OV --> VJ
+GO --> OV
+OV --> VI
+AL --> LL
+NK --> KR
+AN --> NK
+IO --> OV
+OV --> VU
+OD --> DL
+LI --> IO
+DL --> LL
+LL --> LK
+LI --> IV
+NK --> KS
 NN --> NJ
+LL --> LE
+NK --> KV
+NK --> KW
+LN --> NK
+DL --> LM
+LL --> LA
 NN --> NM
+NK --> KZ
+LI --> IP
+OV --> VV
+IV --> VK
 BN --> NN
+LL --> LM
+IV --> VI
 KN --> NN
+GL --> LL
 IN --> NN
+========================

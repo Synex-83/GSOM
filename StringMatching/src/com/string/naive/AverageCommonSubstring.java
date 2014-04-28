@@ -42,8 +42,8 @@ public class AverageCommonSubstring {
 			
 			for(int j = 0; j < SEQUENCE_1.length; j++)
 			{
-				// &&  exists(SEQUENCE_2,SEQUENCE_1[j])
-				if(!(current_length_seen >= SEQUENCE_1[j].length()) )
+				// 
+				if(!(current_length_seen >= SEQUENCE_1[j].length()) &&  exists(SEQUENCE_2,SEQUENCE_1[j]) )
 				{
 					temp = nv1.count(SEQUENCE_1[j]);
 					
@@ -52,8 +52,8 @@ public class AverageCommonSubstring {
 					
 						for(int k = 0; k < temp.size(); k++)
 						{
-							// 
-							if(temp.get(k) >= i && nv2.countSeq(SEQUENCE_1[j]))
+							// && nv2.countSeq(SEQUENCE_1[j])
+							if(temp.get(k) >= i )
 							{
 								current_length_seen = SEQUENCE_1[j].length();
 								current_max += SEQUENCE_1[j].length();

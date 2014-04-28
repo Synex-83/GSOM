@@ -1,57 +1,15 @@
-THRESHOLD NUMBER OF HITS =370
+THRESHOLD NUMBER OF HITS =617
 ********             SOLID SEQUENCES                  ********
-Sequence MD X =91 Y =64 HITS =380
-Sequence DL X =64 Y =47 HITS =419
-Sequence LA X =72 Y =82 HITS =388
 Sequence NN X =84 Y =1 HITS =966
-Sequence ND X =89 Y =77 HITS =451
-Sequence LE X =100 Y =77 HITS =570
-Sequence ER X =1 Y =85 HITS =516
-Sequence RV X =40 Y =1 HITS =447
-Sequence AN X =1 Y =30 HITS =386
-Sequence NK X =60 Y =26 HITS =569
-Sequence KC X =100 Y =54 HITS =417
-Sequence HR X =1 Y =85 HITS =516
-Sequence LL X =94 Y =1 HITS =401
-Sequence IA X =95 Y =43 HITS =386
 Sequence KT X =1 Y =100 HITS =1141
-Sequence GA X =81 Y =61 HITS =436
-Sequence BN X =14 Y =28 HITS =494
 
 
 ********             LONG SEQUENCES                  ********
-Sequence NN -> NK (NNK)  [COUNT 109]
-Sequence NK -> KT (NKT)  [COUNT 34]
-Sequence LE -> ER (LER)  [COUNT 50]
-Sequence BN -> NN (BNN)  [COUNT 25]
-Sequence LE -> ER -> RV (LERV)  [COUNT 13]
-Sequence NN -> ND (NND)  [COUNT 32]
-Sequence BN -> NN -> ND (BNND)  [COUNT 10]
-Sequence BN -> NN -> ND -> DL (BNNDL)  [COUNT 5]
-Sequence ND -> DL (NDL)  [COUNT 12]
-Sequence ND -> DL -> LE (NDLE)  [COUNT 12]
-Sequence ND -> DL -> LE -> ER (NDLER)  [COUNT 12]
-Sequence ND -> DL -> LE -> ER -> RV (NDLERV)  [COUNT 8]
-Sequence DL -> LE (DLE)  [COUNT 5]
-Sequence DL -> LE -> ER (DLER)  [COUNT 5]
-Sequence NN -> ND -> DL (NNDL)  [COUNT 14]
-Sequence NN -> ND -> DL -> LE (NNDLE)  [COUNT 4]
-Sequence NN -> ND -> DL -> LE -> ER (NNDLER)  [COUNT 4]
-Sequence BN -> NN -> ND -> DL -> LL (BNNDLL)  [COUNT 3]
-Sequence LL -> LE (LLE)  [COUNT 6]
-Sequence MD -> DL (MDL)  [COUNT 3]
-Sequence IA -> AN (IAN)  [COUNT 7]
-Sequence GA -> AN (GAN)  [COUNT 5]
-Sequence IA -> AN -> NK (IANK)  [COUNT 2]
-Sequence LA -> AN (LAN)  [COUNT 5]
-Sequence LA -> AN -> NK (LANK)  [COUNT 3]
-Sequence LA -> AN -> NK -> KT (LANKT)  [COUNT 2]
-Sequence GA -> AN -> ND (GAND)  [COUNT 1]
-Sequence GA -> AN -> ND -> DL (GANDL)  [COUNT 1]
-Sequence GA -> AN -> ND -> DL -> LE (GANDLE)  [COUNT 1]
-Sequence GA -> AN -> ND -> DL -> LE -> ER (GANDLER)  [COUNT 1]
-Sequence GA -> AN -> ND -> DL -> LE -> ER -> RV (GANDLERV)  [COUNT 1]
 ********             HOLLOW SEQUENCES                  ********
+Sequence MD X =91 Y =64 HITS =380
+
+Sequence DL X =64 Y =47 HITS =419
+
 Sequence LU X =7 Y =78 HITS =87
 
 Sequence UA X =58 Y =92 HITS =201
@@ -62,6 +20,8 @@ Sequence FC X =84 Y =51 HITS =331
 
 Sequence CL X =22 Y =61 HITS =299
 
+Sequence LA X =72 Y =82 HITS =388
+
 Sequence FN X =41 Y =24 HITS =232
 
 Sequence NH X =99 Y =64 HITS =153
@@ -70,9 +30,17 @@ Sequence HD X =55 Y =60 HITS =246
 
 Sequence DN X =22 Y =20 HITS =48
 
+Sequence ND X =89 Y =77 HITS =451
+
+Sequence LE X =100 Y =77 HITS =570
+
+Sequence ER X =1 Y =85 HITS =516
+
 Sequence RS X =73 Y =15 HITS =71
 
 Sequence SF X =46 Y =78 HITS =99
+
+Sequence RV X =40 Y =1 HITS =447
 
 Sequence VZ X =1 Y =7 HITS =40
 
@@ -81,6 +49,10 @@ Sequence ZS X =17 Y =1 HITS =93
 Sequence RU X =21 Y =8 HITS =126
 
 Sequence UL X =38 Y =82 HITS =301
+
+Sequence AN X =1 Y =30 HITS =386
+
+Sequence NK X =60 Y =26 HITS =569
 
 Sequence KR X =1 Y =76 HITS =232
 
@@ -92,9 +64,13 @@ Sequence OV X =20 Y =83 HITS =321
 
 Sequence VK X =22 Y =89 HITS =105
 
+Sequence KC X =100 Y =54 HITS =417
+
 Sequence CS X =10 Y =43 HITS =159
 
 Sequence SH X =34 Y =100 HITS =145
+
+Sequence HR X =1 Y =85 HITS =516
 
 Sequence RC X =69 Y =91 HITS =49
 
@@ -107,6 +83,8 @@ Sequence OU X =9 Y =85 HITS =187
 Sequence UI X =33 Y =95 HITS =77
 
 Sequence IL X =64 Y =37 HITS =282
+
+Sequence LL X =94 Y =1 HITS =401
 
 Sequence LI X =76 Y =33 HITS =283
 
@@ -121,6 +99,8 @@ Sequence BK X =33 Y =31 HITS =225
 Sequence CM X =21 Y =52 HITS =247
 
 Sequence DI X =38 Y =51 HITS =297
+
+Sequence IA X =95 Y =43 HITS =386
 
 Sequence AQ X =1 Y =41 HITS =109
 
@@ -152,6 +132,8 @@ Sequence TJ X =18 Y =99 HITS =44
 
 Sequence JG X =46 Y =60 HITS =332
 
+Sequence GA X =81 Y =61 HITS =436
+
 Sequence AL X =19 Y =40 HITS =352
 
 Sequence LM X =84 Y =9 HITS =183
@@ -177,6 +159,8 @@ Sequence BH X =41 Y =33 HITS =99
 Sequence DU X =8 Y =51 HITS =78
 
 Sequence LB X =63 Y =74 HITS =303
+
+Sequence BN X =14 Y =28 HITS =494
 
 Sequence NW X =13 Y =78 HITS =138
 
@@ -318,100 +302,20 @@ Sequence PW X =9 Y =10 HITS =46
 
 Sequence WK X =28 Y =88 HITS =26
 
-NUMBER OF PFS  SOLID = 17 HOLLOW = 133 TOTAL = 150
+NUMBER OF PFS  SOLID = 2 HOLLOW = 148 TOTAL = 150
 ********             REPEAT SEQUENCES                  ********
 ********         LINKS (ORIGIN -> DIRECTION)          ********
-MD --> DL
-DL --> LU
-CL --> LA
-LA --> AF
 FN --> NN
 NN --> NH
 DN --> NN
 NN --> ND
-ND --> DL
-DL --> LE
-LE --> ER
-ER --> RS
-FN --> ND
-ER --> RV
-RV --> VZ
-ER --> RU
-UL --> LA
-LA --> AN
-AN --> NK
-NK --> KR
-KR --> RV
-RV --> VV
-VK --> KC
-KC --> CS
-SH --> HR
-HR --> RC
-IL --> LL
-LL --> LI
-BK --> KC
-KC --> CM
-CM --> MD
-MD --> DI
-DI --> IA
-IA --> AQ
-FR --> RV
-RV --> VK
-KC --> CL
 KN --> NN
 NN --> NK
-NK --> KS
-SE --> ER
 NK --> KT
 KT --> TJ
-JG --> GA
-GA --> AL
-LM --> MD
-MD --> DE
-GL --> LA
-HD --> DL
-DL --> LN
-LN --> ND
-ND --> DM
-LB --> BN
-BN --> NW
-BN --> NV
-IA --> AN
-AN --> NJ
-AL --> LL
-LL --> LB
 BN --> NN
-BN --> NL
-BN --> NM
-BB --> BN
-LL --> LJ
-RV --> VW
-RB --> BN
 NN --> NC
-CG --> GA
-GA --> AN
-HR --> RD
-IA --> AL
-MD --> DJ
 KT --> TI
-LL --> LE
-LE --> EB
-EB --> BN
-BN --> NH
-CL --> LE
-DL --> LM
-NK --> KW
-VI --> IA
-AL --> LE
-LE --> ET
-KC --> CN
 CN --> NN
-AN --> NC
-GL --> LL
-VR --> RV
-NK --> KV
-AN --> ND
 NN --> NJ
-RV --> VI
-DL --> LL
-PH --> HR
+=====================================
