@@ -174,16 +174,16 @@ public class Check {
 	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS11\t" + s11.length());
 	
 	String[] longSequence_12_3 = (new Check()).retriveArray("12.txt");  
-	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS12\t" + s12.length());
+	System.out.println("========= 12 ==========\t" + longSequence_12_3.length + "\tS12\t" + s12.length());
 	
 	String[] longSequence_13_3 = (new Check()).retriveArray("13.txt");  
-	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS13\t" + s13.length());
+	System.out.println("========= 13 ==========\t" + longSequence_13_3.length + "\tS13\t" + s13.length());
 	
 	String[] longSequence_14_3 = (new Check()).retriveArray("14.txt");  
-	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS14\t" + s14.length());
+	System.out.println("========= 14 ==========\t" + longSequence_14_3.length + "\tS14\t" + s14.length());
 	
 	String[] longSequence_15_3 = (new Check()).retriveArray("15.txt");  
-	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS15\t" + s15.length());
+	System.out.println("========= 15 ==========\t" + longSequence_15_3.length + "\tS15\t" + s15.length());
 
 //====================================================================================================================
 		
@@ -203,9 +203,9 @@ public class Check {
 	//	System.out.println("VALUE =\t" + av.findValue(a ,b, Test1, Test2, a.length(), b.length()) );
 		
 
- 		System.out.println("LCS -> 5% -> 11 Species -> Have Exist Check -> TEST 2");
+ 		System.out.println("LCS -> 5% -> 15 Species -> Have Exist Check -> TEST 2");
 
-		for(int i = 1; i <= 11; i++)
+		for(int i = 1; i <= 15; i++)
 		{
 
 			System.out.println("=========================================================");
