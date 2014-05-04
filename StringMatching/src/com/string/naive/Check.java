@@ -212,7 +212,7 @@ public class Check {
 	//	System.out.println("VALUE =\t" + av.findValue(a ,b, Test1, Test2, a.length(), b.length()) );
 		
 
- 		System.out.println("LCS -> 5% -> 20 Species -> Have Exist Check -> TEST 2");
+ 		System.out.println("LCS -> 3% -> 20 Species -> Have Exist Check -> TEST 2");
 
 		for(int i = 1; i <= 20; i++)
 		{
@@ -1457,7 +1457,7 @@ public class Check {
 		
 		try 
 		{
-			sc = new Scanner(new File("E:\\workspace\\GSOM\\Results\\20 Species - Same Weight\\Sequence Only\\5%\\" + location));
+			sc = new Scanner(new File("E:\\workspace\\GSOM\\Results\\20 Species - Same Weight\\Sequence Only\\3%\\" + location));
 		}
 		catch (FileNotFoundException e) 
 		{
