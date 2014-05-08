@@ -30,64 +30,64 @@ public class Check {
 		
 		//====================== NAIVE STRING MATCH FOR SUBSEQUENCES TO RETREIVE INDEX===========================
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\platypus - X83427.txt", 1); 
 		String s1 = fp.readFileLine(); 
 	
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\chimpanzee - D38113.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\wallaroo - Y10524.txt", 1); 
 		String s2 = fp.readFileLine(); 
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\gorilla - D38114.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\virginia opossum - Z29573.txt", 1); 
 		String s3 = fp.readFileLine(); 
 	
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\bornean orangutan - D38115.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\rat - X14848.txt", 1); 
 		String s4 = fp.readFileLine(); 
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\bonobo - D38116.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\mouse - V00711.txt", 1); 
 		String s5 = fp.readFileLine(); 
 		
 		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\cat - U20753.txt", 1); 
 		String s6 = fp.readFileLine(); 
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\cow - V00654.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\harbor seal - X63726.txt", 1); 
 		String s7 = fp.readFileLine(); 
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\mouse - V00711.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\gray seal - X72004.txt", 1); 
 		String s8 = fp.readFileLine(); 
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\rat - X14848.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\indian rhinoceros - X97336.txt", 1); 
 		String s9 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\fin whale - X61145.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\horse - X79547.txt", 1); 
 		String s10 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\harbor seal - X63726.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\fin whale - X61145.txt", 1); 
 		String s11 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\gray seal - X72004.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\blue whale - X72204.txt", 1); 
 		String s12 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\blue whale - X72204.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\cow - V00654.txt", 1); 
 		String s13 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\horse - X79547.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\common gibbon - X99256.txt", 1); 
 		String s14 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\platypus - X83427.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\gorilla - D38114.txt", 1); 
 		String s15 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\indian rhinoceros - X97336.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\human - D38112.txt", 1); 
 		String s16 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sumatran orangutan - X97707.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\bonobo - D38116.txt", 1); 
 		String s17 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\common gibbon - X99256.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\chimpanzee - D38113.txt", 1); 
 		String s18 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\wallaroo - Y10524.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\bornean orangutan - D38115.txt", 1); 
 		String s19 = fp.readFileLine();
 		
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\virginia opossum - Z29573.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\sumatran orangutan - X97707.txt", 1); 
 		String s20 = fp.readFileLine();
 		//String p = "ACT";
 		
@@ -135,64 +135,64 @@ public class Check {
 //=========================================  Average Common Subsequence Calculation========================================================
 
 
-	String[] longSequence_1_3 = (new Check()).retriveArray("1n.txt");			
+	String[] longSequence_1_3 = (new Check()).retriveArray("15.txt");			
 	System.out.println("========= 1 ==========\t" + longSequence_1_3.length + "\tS1\t" + s1.length());
 
-	String[] longSequence_2_3 = (new Check()).retriveArray("2n.txt");			
+	String[] longSequence_2_3 = (new Check()).retriveArray("19.txt");			
 	System.out.println("========= 2 ==========\t" + longSequence_2_3.length+ "\tS2\t" + s2.length());
 
-	String[] longSequence_3_3 = (new Check()).retriveArray("3n.txt");	
+	String[] longSequence_3_3 = (new Check()).retriveArray("20.txt");	
 	System.out.println("========= 3 ==========\t" + longSequence_3_3.length + "\tS3\t" + s3.length());
 
-	String[] longSequence_4_3 = (new Check()).retriveArray("4n.txt");			
+	String[] longSequence_4_3 = (new Check()).retriveArray("9.txt");			
 	System.out.println("========= 4 ==========\t" + longSequence_4_3.length + "\tS4\t" + s4.length());
 
-	String[] longSequence_5_3 = (new Check()).retriveArray("5n.txt");
+	String[] longSequence_5_3 = (new Check()).retriveArray("8.txt");
 	System.out.println("========= 5 ==========\t" + longSequence_5_3.length + "\tS5\t" + s5.length());
 
-	String[] longSequence_6_3 =(new Check()).retriveArray("6n.txt");
+	String[] longSequence_6_3 =(new Check()).retriveArray("6.txt");
 	System.out.println("========= 6 ==========\t" + longSequence_6_3.length + "\tS6\t" + s6.length());
 			
-	String[] longSequence_7_3 =(new Check()).retriveArray("7n.txt"); 
+	String[] longSequence_7_3 =(new Check()).retriveArray("11.txt"); 
 	System.out.println("========= 7 ==========\t" + longSequence_7_3.length + "\tS7\t" + s7.length());
 			
-	String[] longSequence_8_3 = (new Check()).retriveArray("8n.txt");  
+	String[] longSequence_8_3 = (new Check()).retriveArray("12.txt");  
 	System.out.println("========= 8 ==========\t" + longSequence_8_3.length + "\tS8\t" + s8.length());
 	
-	String[] longSequence_9_3 = (new Check()).retriveArray("9n.txt");  
+	String[] longSequence_9_3 = (new Check()).retriveArray("16.txt");  
 	System.out.println("========= 9 ==========\t" + longSequence_9_3.length + "\tS9\t" + s9.length());
 	
-	String[] longSequence_10_3 = (new Check()).retriveArray("10n.txt");  
+	String[] longSequence_10_3 = (new Check()).retriveArray("14.txt");  
 	System.out.println("========= 10 ==========\t" + longSequence_10_3.length + "\tS10\t" + s10.length());
 	
-	String[] longSequence_11_3 = (new Check()).retriveArray("11n.txt");  
+	String[] longSequence_11_3 = (new Check()).retriveArray("10.txt");  
 	System.out.println("========= 11 ==========\t" + longSequence_11_3.length + "\tS11\t" + s11.length());
 	
-	String[] longSequence_12_3 = (new Check()).retriveArray("12n.txt");  
+	String[] longSequence_12_3 = (new Check()).retriveArray("13.txt");  
 	System.out.println("========= 12 ==========\t" + longSequence_12_3.length + "\tS12\t" + s12.length());
 	
-	String[] longSequence_13_3 = (new Check()).retriveArray("13n.txt");  
+	String[] longSequence_13_3 = (new Check()).retriveArray("7.txt");  
 	System.out.println("========= 13 ==========\t" + longSequence_13_3.length + "\tS13\t" + s13.length());
 	
-	String[] longSequence_14_3 = (new Check()).retriveArray("14n.txt");  
+	String[] longSequence_14_3 = (new Check()).retriveArray("18.txt");  
 	System.out.println("========= 14 ==========\t" + longSequence_14_3.length + "\tS14\t" + s14.length());
 	
-	String[] longSequence_15_3 = (new Check()).retriveArray("15n.txt");  
+	String[] longSequence_15_3 = (new Check()).retriveArray("3.txt");  
 	System.out.println("========= 15 ==========\t" + longSequence_15_3.length + "\tS15\t" + s15.length());
 
-	String[] longSequence_16_3 = (new Check()).retriveArray("16n.txt");  
+	String[] longSequence_16_3 = (new Check()).retriveArray("1.txt");  
 	System.out.println("========= 16 ==========\t" + longSequence_16_3.length + "\tS16\t" + s16.length());
 	
-	String[] longSequence_17_3 = (new Check()).retriveArray("17n.txt");  
+	String[] longSequence_17_3 = (new Check()).retriveArray("5.txt");  
 	System.out.println("========= 17 ==========\t" + longSequence_17_3.length + "\tS17\t" + s17.length());
 	
-	String[] longSequence_18_3 = (new Check()).retriveArray("18n.txt");  
+	String[] longSequence_18_3 = (new Check()).retriveArray("2.txt");  
 	System.out.println("========= 18 ==========\t" + longSequence_18_3.length + "\tS18\t" + s18.length());
 	
-	String[] longSequence_19_3 = (new Check()).retriveArray("19n.txt");  
+	String[] longSequence_19_3 = (new Check()).retriveArray("4.txt");  
 	System.out.println("========= 19 ==========\t" + longSequence_19_3.length + "\tS19\t" + s19.length());
 	
-	String[] longSequence_20_3 = (new Check()).retriveArray("20n.txt");  
+	String[] longSequence_20_3 = (new Check()).retriveArray("17.txt");  
 	System.out.println("========= 20 ==========\t" + longSequence_20_3.length + "\tS20\t" + s20.length());
 //====================================================================================================================
 		
@@ -1406,13 +1406,22 @@ public class Check {
 			}
 		}
 
-		double[] lengthString = {16559, 16554, 16364, 16389, 16563, 17009, 16338, 16295, 16300, 16398, 
+/*		double[] lengthString = {16559, 16554, 16364, 16389, 16563, 17009, 16338, 16295, 16300, 16398, 
 				16826, 16797, 16402, 16660, 17019, 16829, 16499, 16472, 16896, 17084};				
 		double[] logString = {9.7147, 9.7144, 9.7028, 9.7044, 9.7149, 9.7415, 9.7012, 9.6986, 9.6989, 9.7049, 
 				9.7307, 9.7290, 9.7052, 9.7208, 9.7421, 9.7309, 9.7111, 9.7094, 9.7348, 9.7459};			
 		double[] norm = {0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0011, 0.0012, 0.0012, 0.0012, 0.0012,
-				0.0012, 0.0012, 0.0012, 0.0012, 0.0011, 0.0012, 0.0012, 0.0012, 0.0012, 0.0011};
+				0.0012, 0.0012, 0.0012, 0.0012, 0.0011, 0.0012, 0.0012, 0.0012, 0.0012, 0.0011};*/
 
+		
+		double[] lengthString = {17019, 16896, 17084, 16300, 16295, 17009, 16826, 16797, 16829, 16660, 
+				16398, 16402, 16338, 16472, 16364, 16559, 16563, 16554, 16389, 16499};				
+		double[] logString = {9.7421, 9.7348, 9.7459, 9.6989, 9.6986, 9.7415, 9.7307, 9.7290, 9.7309, 9.7208, 
+				9.7049, 9.7052, 9.7012, 9.7094, 9.7028, 9.7147, 9.7149, 9.7144, 9.7044, 9.7111};			
+		double[] norm = {0.0011, 0.0012, 0.0011, 0.0012, 0.0012, 0.0011, 0.0012, 0.0012, 0.0012, 0.0012,
+				0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012};
+		
+		
 		for(int i = 0 ; i < values.length; i++)
 		{
 			for(int j = 0; j < values[0].length; j++)

@@ -65,6 +65,7 @@ public class NaiveStringMatching
 			}			
 		}
 		
+		System.out.println("COUNTER =" + COUNTER);
 		return a;
 	
 		/*System.out.println();

@@ -34,17 +34,17 @@ public class TestSOM {
 		
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt
 		//
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\27g.txt", 1); 
-		length = 1252;
-		threshold = (int)Math.round((length/159.40)*(100)*(1.2));
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\G-File\\data5.txt", 1); 
+		length = 66;
+		threshold = (int)Math.round((length/22.7)*(100)*(0.5));
 		
-		System.out.println("*******************            20w            ****************************");
+		System.out.println("*******************            3g            ****************************");
 
 		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4); //null; //
 		
 		//============SERIALIZE================
 		
-	/*	FileOutputStream fout = new FileOutputStream("address.ser");
+		/*FileOutputStream fout = new FileOutputStream("address.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();

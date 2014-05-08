@@ -42,6 +42,7 @@ public class FSMNode {
 	private int COMPOUND_COUNT = 0;
 	
 	private Node CURRENT_WINNER = null;
+	private int INTIAL_SOLID_ITERATION = 0;
 	
 	/**
 	 *
@@ -71,6 +72,22 @@ public class FSMNode {
 		{
 			REPEAT.add(new repeatNode(repeat, 1));
 		}
+	}
+	
+	/**
+	 * @param current
+	 */
+	public void setIteration(int current)
+	{
+		INTIAL_SOLID_ITERATION = current;
+	}
+	
+	/**
+	 * @return
+	 */
+	public int getIteration()
+	{
+		return INTIAL_SOLID_ITERATION;
 	}
 	
 	/**

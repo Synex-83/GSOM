@@ -47,7 +47,7 @@ public class Convert {
 					skip_counter++;					
 				}
 				
-				if(skip_counter > 1000)
+				if(skip_counter >= 30 && skip_counter <= 50)
 				{
 					LINE_TO_WRITE += "XXX\tX\t0\t0\t0\t0\t0\r\n";
 					System.out.println(counter);

@@ -334,7 +334,7 @@ public class SelfOrganizingMap implements Serializable {
 							//System.out.println( sequence + "  " + covariance.toString());
 							winner = setAccumulatedValue(covariance,sequence);
 							adjustNeighbourhoodOfWinners(winner, covariance);
-							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner,LEARNING_RATE,RADIUS);
+							current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner,LEARNING_RATE,RADIUS,CURRENT_ITERATION);
 			
 							PREVIOUS = current;
 							current = null;				
@@ -661,8 +661,8 @@ public class SelfOrganizingMap implements Serializable {
 										
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
-					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS);
-					
+					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS,CURRENT_ITERATION);
+										
 					//FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
 					//FSM.updateEdgeIntensity(current, PREVIOUS, winner);
 					

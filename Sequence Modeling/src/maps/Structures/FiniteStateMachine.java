@@ -35,6 +35,7 @@ public class FiniteStateMachine implements Serializable {
 	private int LINK_NUMBERS = 0;
 	private int FILE_OPTION = 0;
 	private int REPEAT= 0;
+
 	
 	public FiniteStateMachine(int threhold, int iteration, int fileOption, Node[][] map)
 	{
@@ -47,6 +48,8 @@ public class FiniteStateMachine implements Serializable {
 		ZERO_MAP = map;
 	}
 
+
+	
 	public void setThreshold(int hitCount)
 	{
 		THRESHOLD = hitCount;
@@ -84,7 +87,7 @@ public class FiniteStateMachine implements Serializable {
 	 * Searches the whole vector to verify there is no node with the same sequence. If non is found the new node is appended to the end of the 
 	 * list. If the sequence exists the data in the sequence is updated to suite the new position of the winner.
 	 */
-	public FSMNode addUpdateNode(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius)
+	public FSMNode addUpdateNode(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius, int curr_iter)
 	{
 		Iterator<FSMNode> itr = FSM.iterator();
 		Boolean addNewNode = true;
@@ -98,7 +101,7 @@ public class FiniteStateMachine implements Serializable {
 			{
 				//System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
 				current = temp; //object equivalence will fix the issue.				
-				update(current,previous,winner,learningRate,radius); //trigger link update
+				update(current,previous,winner,learningRate,radius,curr_iter); //trigger link update
 				addNewNode = false;
 				break;
 			}
@@ -130,7 +133,7 @@ public class FiniteStateMachine implements Serializable {
 	 * @param temp
 	 * @param winner
 	 */
-	private void update(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius) 
+	private void update(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius, int cur_iter) 
 	{
 		int distance = 0;
 		current.setFocus(true);
@@ -178,6 +181,7 @@ public class FiniteStateMachine implements Serializable {
 				current.setCurrentWinner(winner);
 			}*/
 			current.setHollow(false);
+			current.setIteration(cur_iter);
 						
 			//System.out.println("Sequence " + current.getSequence() + " IS CONVERTED TO SOLID");
 		}
@@ -190,7 +194,7 @@ public class FiniteStateMachine implements Serializable {
 		
 		if(previous!=null  && !current.isHollow() && !previous.isHollow() && linkExists(current, previous))
 		{
-			processCompound(previous,current);
+			processCompound(previous,current,cur_iter);
 			processZeroMap(previous, current, learningRate, radius);
 			COMPOUND_COUNTER++;
 		}
@@ -229,7 +233,7 @@ public class FiniteStateMachine implements Serializable {
 	 * @param previous2
 	 * @param current
 	 */
-	private void processCompound(FSMNode prev, FSMNode curr)
+	private void processCompound(FSMNode prev, FSMNode curr, int cur_iter)
 	{
 		boolean exists = false;
 		FSMNode  temp = null;
@@ -269,6 +273,7 @@ public class FiniteStateMachine implements Serializable {
 			COMPOUND_NODES.add(temp);
 			CURRENT_COMPOUND = temp;
 			CURRENT_COMPOUND.incrementCompoundCount();
+			CURRENT_COMPOUND.setIteration(cur_iter);
 		}
 	}
 
@@ -659,7 +664,7 @@ public class FiniteStateMachine implements Serializable {
 			{
 				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
 				//encountered when developing. Refer Node class comment on line 68.
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits());
+				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "   INIT SOLID ITER =" + temp1.getIteration() );
 				solidNode.add(temp1);
 				i++;
 			}
@@ -671,7 +676,7 @@ public class FiniteStateMachine implements Serializable {
 		while(itr5.hasNext())
 		{
 			temp1 = itr5.next();
-			System.out.println("Sequence " + temp1.getSequence() +  " (" + temp1.getEffectiveSequence() + ")  [COUNT " + temp1.getCompoundCount() + "]" );
+			System.out.println("Sequence " + temp1.getSequence() +  " (" + temp1.getEffectiveSequence() + ")  [COUNT " + temp1.getCompoundCount() + "]\t{INIT SOLID ITER =" + temp1.getIteration() +"}" );
 		}
 		
 		System.out.println("********             HOLLOW SEQUENCES                  ********");
