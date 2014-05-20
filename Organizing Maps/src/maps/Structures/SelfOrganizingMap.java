@@ -8,6 +8,9 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -17,12 +20,10 @@ import org.apache.commons.math3.linear.ArrayRealVector;
  * @date   		Mar 31, 2013 - 12:34:39 AM
  * @type		SelfOrganizingMap
  */
-public class SelfOrganizingMap implements ActionListener {
+public class SelfOrganizingMap{
 	
 	private Node[][] SOM = null;
 	private double[][] NORM_MAP = null; //holds the L2 norm of each vector in the SOM[][].
-	@SuppressWarnings("unused")
-	private int GRID_OPTION = 0;
 	private int INPUT_DIMENSION = 0;
 	private int NUMER_OF_ITERATIONS = 0;
 	private int CURRENT_ITERATION=0;
@@ -34,7 +35,8 @@ public class SelfOrganizingMap implements ActionListener {
 	private double RADIUS = 0.0;
 	private double TIME_STEP = 0.0; //lambda of X(t) = t0 * exp(-t/lambda)
 	private String INPUT_SAMPLES = null;
-	private DisplayLattice DISPLAY_SCREEN = null;
+	private double[][] U_MATRIX = null;
+	private double[][] U_MATRIX_SHRINK = null;
 	
 
 	/**
@@ -43,37 +45,18 @@ public class SelfOrganizingMap implements ActionListener {
 	 * @param grid as the type of grid (0 = square, 1 = rectangle, 2 = hexagonal)
 	 * @param inputDimension the dimension of the input data vector
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int depth, int grid, int inputDimensison, DisplayLattice screen)
+	public SelfOrganizingMap(int numberOfNodes, int depth, int inputDimensison)
 	{
 		INPUT_DIMENSION = inputDimensison;
 		
-		if(grid == 0)
-		{
-			int side = (int)Math.sqrt(numberOfNodes);
-			SOM = new Node[side][side];
-			NORM_MAP = new double[side][side];
-			GRID_OPTION = grid;
-			MAX_RADIUS = side/2;
-			DISPLAY_SCREEN = screen;
-			initialize();
-		}
-		else if(grid == 1)
-		{
-			int side = (int)numberOfNodes/depth;
-			SOM = new Node[depth][side];
-			GRID_OPTION = grid;
-			MAX_RADIUS = Math.max(depth, side)/2;
-			initialize();
-		}
-		else if(grid == 2)
-		{
-			int side = (int)numberOfNodes/depth;
-			SOM = new HexNode[depth][side];
-			GRID_OPTION = grid;
-			MAX_RADIUS = Math.max(depth, side)/2;
-			initialize();
-		}
-		
+		int side = (int)Math.sqrt(numberOfNodes);
+		SOM = new Node[side][side];
+		NORM_MAP = new double[side][side];
+		MAX_RADIUS = side/2;
+		initialize();
+
+		U_MATRIX = new double[2*side - 1][2*side - 1];
+		U_MATRIX_SHRINK = new double[side][side];
 		RADIUS = MAX_RADIUS;
 	}
 	
@@ -102,28 +85,30 @@ public class SelfOrganizingMap implements ActionListener {
 		LEARNING_RATE = INITIAL_LEARNING_RATE;
 		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
 		INPUT_SAMPLES = input;
-		//DISPLAY_SCREEN.render();
-	/*	for(int i = 0; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
-		{
-			//exportWeights(i);
-			//
-			//(new MapScreen().updateMap(exportImageNorm(i)));
-			//new DisplayLattice(exportImageNorm(i));
-			trainSOM(input); // the image should be ready at this point.
-			EpochRadiusDecay(i);
-			LearningRateDecay(i);
-			//System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ***********");
-		}			*/	
-
 	}
 	
 	private void singleCompleteRun()
 	{
-		DISPLAY_SCREEN.render();
 		trainSOM(INPUT_SAMPLES); 		
 		EpochRadiusDecay(CURRENT_ITERATION);
 		LearningRateDecay(CURRENT_ITERATION);
-		System.out.println(CURRENT_ITERATION);
+		System.out.println(CURRENT_ITERATION + " LR " + LEARNING_RATE + " RAD " + RADIUS);
+	}
+	
+	public void trainSOM()
+	{
+		while(CURRENT_ITERATION < NUMER_OF_ITERATIONS)
+		{
+			singleCompleteRun();	
+			CURRENT_ITERATION++;
+			//System.out.println(CURRENT_ITERATION);
+		}
+		
+		extractSmallerUMatrix(true);
+		exportSmallUMatrixToCSV(CURRENT_ITERATION);
+		
+		extractSmallerUMatrix(false);
+		exportSmallUMatrixToCSV(0);
 	}
 	
 	private void exportWeights(int iterations)
@@ -138,39 +123,7 @@ public class SelfOrganizingMap implements ActionListener {
 		}
 	}
 	
-	private BufferedImage exportImageNorm()
-	{
-		BufferedImage colorNodes = new BufferedImage(SOM[0].length, SOM.length, 1);
-		double[][] normL2values = new double[SOM[0].length][SOM.length];
-		double minL2 = 10.0;
-		double maxL2 = 0.0;
-		double temp = 0.0;	
-		double scaledNorm = 0.0;
-		for(int i = 0; i < SOM.length; i++){
-			for(int j = 0; j < SOM[0].length; j++){			    
-				 temp  = SOM[i][j].getWEIGHTS().getNorm();
-				 normL2values[i][j] = temp;
-				 if(temp > maxL2)
-				 {
-					 maxL2 = temp;
-				 }			
-				 if(temp < minL2)
-				 {
-					 minL2 = temp;
-				 }
-			}								
-		}
-		
-		System.out.println(maxL2 + "\t" + minL2);		
-		for(int i = 0; i < normL2values.length ; i++){
-			for(int j = 0; j < normL2values[0].length; j++){
-				scaledNorm  = (normL2values[i][j] - minL2)/(maxL2 - minL2);
-				//System.out.println(scaledNorm);
-				colorNodes.setRGB(i, j, (new Color((float)scaledNorm,(float)scaledNorm,(float)scaledNorm)).getRGB());
-			}
-		}
-		return colorNodes;
-	}
+
 	
 	/**
 	 * @param input as the input vector
@@ -202,14 +155,52 @@ public class SelfOrganizingMap implements ActionListener {
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
 				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 							
-/*				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
-				System.out.println("===============================");*/
+				System.out.println( inputVector[0] +  "\tWINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("===============================");
 /*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("*******************************");*/
 			}
 		}
 	}
+	
+	
+	/**
+	 * @param input as the input vector
+	 * Performs a single iteration of SOM training
+	 */
+	public void testSOM(String input)
+	{
+		String line = "";
+		double temp[] = null;
+		Node winner = null;
+		
+		
+		StringTokenizer first = new StringTokenizer(input, "\n");
+		first.nextToken();		
+		
+		while(first.hasMoreTokens())
+		{
+			line = first.nextToken();
+			//System.out.println(line);
+			if(!line.contains("####"))
+			{
+				temp = new double[INPUT_DIMENSION];
+				String[] inputVector = line.split("\t");
+				
+				for(int i = 1; i < inputVector.length; i++)
+				{
+					temp[i-1] = Double.parseDouble(inputVector[i]);					
+				}
+				winner = setAccumulatedValue(new ArrayRealVector(temp));
+							
+				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println("===============================");
+
+			}
+		}
+	}
+	
 	
 	/**
 	 * @param winner as the winner node of the input presentation
@@ -253,7 +244,7 @@ public class SelfOrganizingMap implements ActionListener {
 			for(int j = effective_x_min; j <= effective_x_max; j++)
 			{
 				try{
-				distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+				distance = eculideanDistanceInNodes(winner, SOM[j][i]); //CHECK THE SQUARE LOGIC ABOVE -- FIXED the case of misguided indexes
 				}catch(Exception e)
 				{
 					System.out.println("Winner X =" + winner.getX() + " Winner Y =" + winner.getY());
@@ -268,8 +259,8 @@ public class SelfOrganizingMap implements ActionListener {
 				{
 					//weight adjust
 					theta = Math.exp(-(Math.pow(distance, 2)/(2*Math.pow(RADIUS, 2))));
-					tempWeights = SOM[i][j].getWEIGHTS().add((inputVector.subtract(SOM[i][j].getWEIGHTS())).mapMultiplyToSelf(theta*LEARNING_RATE)) ;
-					SOM[i][j].setWEIGHTS(tempWeights);					
+					tempWeights = SOM[j][i].getWEIGHTS().add((inputVector.subtract(SOM[j][i].getWEIGHTS())).mapMultiplyToSelf(theta*LEARNING_RATE)) ;
+					SOM[j][i].setWEIGHTS(tempWeights);					
 				}
 			}
 		}
@@ -286,7 +277,7 @@ public class SelfOrganizingMap implements ActionListener {
 		ArrayRealVector neighbourUnit = new ArrayRealVector(new double[]{Neighbour.getX(),Neighbour.getY()});		
 		ArrayRealVector subValue = BMUnit.subtract(neighbourUnit);
 		
-		return Math.sqrt(subValue.getNorm());
+		return subValue.getNorm(); //No need to square root.
 	}
 	
 	/**
@@ -410,29 +401,136 @@ public class SelfOrganizingMap implements ActionListener {
 		
 		//System.out.println("===============================");
 	}
-	
-	private void getNormMap()
+		
+	/**
+	 * Extracts a smaller U-Matrix Using norm values
+	 * 
+	 * @param average set true if the neighborhood calculation needs to be averaged else make it false. 
+	 * The calculation would then default to median.
+	 */
+	private void extractSmallerUMatrix(boolean average)
 	{
 		for(int i = 0; i < SOM.length; i++)
 		{
-			for(int j = 0; j<SOM[0].length; j++)
+			for(int j = 0; j < SOM[0].length; j++)
 			{
-				NORM_MAP[i][j] =  SOM[i][j].getWEIGHTS().getNorm();
+				U_MATRIX_SHRINK[i][j] = getAverageSOMNeighbour(i,j,average);
+				//System.out.print("[ "+ i +" ][ " + j +  " ] = " + U_MATRIX_SHRINK[i][j]+"\t");
 			}
+			
+			//System.out.println();
 		}
 	}
-
-	/* (non-Javadoc)
-	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+	
+	/**
+	 * 
+	 * @param iteration
+	 * 
+	 * exports U-matrix to a csv
 	 */
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if(CURRENT_ITERATION <= NUMER_OF_ITERATIONS)
+	private void exportSmallUMatrixToCSV(int iteration)
+	{
+		BufferedWriter bw = null;
+		
+		try
 		{
-			singleCompleteRun();	
-			CURRENT_ITERATION++;
-			System.out.println(CURRENT_ITERATION);
+			bw = new BufferedWriter(new FileWriter("C:\\Users\\User\\Desktop\\Hit Count Expr\\Zoo-"+iteration+".csv",false));
+			
+			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
+				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){
+					bw.write(U_MATRIX_SHRINK[i][j] + ",");
+				}
+				bw.newLine();
+			}
+			bw.flush();
+			System.out.println("File Exported - SMALL U.");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * @param b
+	 * @param d
+	 * @return
+	 */
+	private double getAverageSOMNeighbour(int b, int d, boolean average) //for matrices??
+	{
+		double value = 0;
+		int numOfNeighbours = 0;
+		double medianArray[] = new double[8];
+		double retValue = 0;
+		int index = 0;
+		double temp = 0;
+		
+		int counter = 0;
+		
+		for (int i = b - 1; i <= b + 1; i++ )
+		{
+			for(int j = d - 1; j <=d + 1; j++)
+			{
+				if(elementExists(i,j,true))
+				{
+					if(!(i == b && j == d))
+					{
+						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						medianArray[counter] = temp;
+						value += temp;
+						numOfNeighbours++;
+						counter++;
+					}
+				}
+			}
+		}
+		
+		Arrays.sort(medianArray);
+		
+		if(numOfNeighbours%2 == 1)
+		{
+			index = numOfNeighbours/2;
+			retValue = medianArray[index];
+		}
+		else if(numOfNeighbours%2 == 0)
+		{
+			retValue = (medianArray[3] + medianArray[4])/2;
+		}
+		
+		if(average)
+		{
+			return (value/numOfNeighbours); //put this if average is needed
+		}
+		else
+		{
+			return retValue; // put if median is needed
+		}		
+	}
+	
+	/**
+	 * @param i
+	 * @param j
+	 * @return
+	 */
+	private boolean elementExists(int i, int j, boolean isSOM) {
+
+		try
+		{
+			
+			@SuppressWarnings("unused")
+			double temp = 0;
+			
+			if(isSOM)
+			{
+				temp = SOM[i][j].getX();
+			}
+			
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
 		}
 		
 	}

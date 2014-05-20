@@ -19,11 +19,10 @@ public class TestGSOMArray {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FileProcessing fp = new FileProcessing("E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1" +
-				"\\01.Randa Rasanga - [Clean]\\12333.txt", 1);
+		FileProcessing fp = new FileProcessing("C:\\Users\\User\\Desktop\\Hit Count Expr\\zoo2.txt", 1);
 		
 		GSOMArray gsom = new GSOMArray(fp.getDataDimension(), 100, 0.25, 5, 0.8, fp.readFile(), null);
-		//gsom.printGSOM();
+		gsom.printGSOM();
 	}
 
 }

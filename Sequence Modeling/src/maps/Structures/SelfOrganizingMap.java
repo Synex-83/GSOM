@@ -393,8 +393,8 @@ public class SelfOrganizingMap implements Serializable {
 				extractSmallerUMatrix();
 				exportSmallUMatrixToCSV(i);
 							
-				extractSmallerUMatrixZERO();
-				exportSmallUMatrixToCSVZERO(i);
+				//extractSmallerUMatrixZERO();
+				//exportSmallUMatrixToCSVZERO(i);
 			}
 		//	CURRENT_PRESENTATION_NUMBER++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ******************");
@@ -817,9 +817,46 @@ public class SelfOrganizingMap implements Serializable {
 				
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY() + (new ArrayRealVector(temp)).toString());
 				System.out.println("=============================== " + tempcounter);
-/*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
+	/*			winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("*******************************");*/
+			}
+		}
+	}
+	
+	/**
+	 * @param input
+	 */
+	public void testVectorSOM(String input)
+	{
+		String line = "";
+		double temp[] = null;
+		Node winner = null;
+		
+		
+		StringTokenizer first = new StringTokenizer(input, "\n");
+		first.nextToken();	
+		int tempcounter = 0;
+		
+		while(first.hasMoreTokens())
+		{
+			line = first.nextToken();
+			//System.out.println(line);
+			if(!line.contains("####"))
+			{
+				temp = new double[INPUT_DIMENSION];
+				String[] inputVector = line.split("\t");
+				
+				for(int i = 1; i < inputVector.length; i++)
+				{
+					temp[i-1] = Double.parseDouble(inputVector[i]);					
+				}
+				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				
+				tempcounter++;
+				
+				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY() + (new ArrayRealVector(temp)).toString());
+				System.out.println("#### " + tempcounter);
 			}
 		}
 	}
@@ -1119,7 +1156,9 @@ public class SelfOrganizingMap implements Serializable {
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,0,false);
+				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
+			System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
@@ -1139,10 +1178,10 @@ public class SelfOrganizingMap implements Serializable {
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
 				ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
 				
-				//System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
+				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
 			
-			//System.out.println();
+			System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
@@ -1493,8 +1532,8 @@ public class SelfOrganizingMap implements Serializable {
 				{
 					if(i != b && j != d)
 					{
-						//temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
-						temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
+						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						//temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
 						medianArray[counter] = temp;
 						value += temp;
 						numOfNeighbours++;
@@ -1584,10 +1623,7 @@ public class SelfOrganizingMap implements Serializable {
 			{
 				temp = SOM[i][j].getX();
 			}
-			else
-			{
-				temp = U_MATRIX[i][j];
-			}
+			
 			return true;
 		}
 		catch(Exception e)
@@ -1636,7 +1672,7 @@ public class SelfOrganizingMap implements Serializable {
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\TEst-"+iteration+".csv",false));
+			bw = new BufferedWriter(new FileWriter("E:\\workspace\\GSOM\\Sequence Modeling\\csv\\Zoo-"+iteration+".csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){

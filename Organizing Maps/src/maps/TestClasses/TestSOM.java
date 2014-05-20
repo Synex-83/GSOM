@@ -19,11 +19,14 @@ public class TestSOM {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FileProcessing fp = new FileProcessing("E:\\PhD\\Experiments\\Complete Experiment on Patterns\\Experiment 1" +
-				"\\01.Randa Rasanga - [Clean]\\12333.txt", 1);
+		FileProcessing fp = new FileProcessing("C:\\Users\\User\\Desktop\\Hit Count Expr\\zoo2.txt", 1);
 		//System.out.println(fp.readFile());
-	//	SelfOrganizingMap SOM = new SelfOrganizingMap(100,10,0,fp.getDataDimension());
-	//	SOM.trainSOM(fp.readFile(), 100, 0.25);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,100,fp.getDataDimension());
+		SOM.initTrainSOM(fp.readFile(), 100, 0.25);
+		//SOM.printSOM();
+		SOM.trainSOM();
+		SOM.testSOM(fp.readFile());
+		//SOM.printSOM();
 	}
 
 }

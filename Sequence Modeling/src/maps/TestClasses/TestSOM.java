@@ -34,13 +34,14 @@ public class TestSOM {
 		
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt
 		//
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt", 1); 
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
+		fp = new FileProcessing("C:\\Users\\User\\Desktop\\Hit Count Expr\\zoo2.txt", 1); 
 		length = 738;
 		threshold = (int)Math.round((length/154.43)*(100)*(0.8));
 		
-		System.out.println("*******************            6w            ****************************");
+		System.out.println("*******************            zoo           ****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,2,1000,0,4); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),false,2,1000,0,4); //null; //
 		
 		//============SERIALIZE================
 		
@@ -53,7 +54,7 @@ public class TestSOM {
 		
 		//=============DESERIALIZE===============		
 
-			FileInputStream fin = new FileInputStream("address.ser");
+	/*		FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
@@ -61,7 +62,7 @@ public class TestSOM {
 
 			SOM.FSM.setThreshold(threshold);
 			
-			System.out.println("THRESHOLD SET");
+			System.out.println("THRESHOLD SET");*/
 		
 
 			System.out.println("====================================================================================");
@@ -72,8 +73,9 @@ public class TestSOM {
 			System.out.println("====================================================================================");
 			
 		//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-			SOM.initTrainSOM(fp.readFile(),100,0.25);//100
-		//trainSOM(fp.readFile());
+			SOM.initTrainSOM(fp.readFile(),1000,0.7);//100
+			
+			SOM.testVectorSOM(fp.readFile());
 			
 			System.out.println("====================================================================================");
 			System.out.println("====================================================================================");
