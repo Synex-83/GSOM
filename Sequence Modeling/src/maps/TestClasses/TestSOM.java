@@ -35,34 +35,34 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt
 		//
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
-		fp = new FileProcessing("C:\\Users\\User\\Desktop\\Hit Count Expr\\zoo2.txt", 1); 
-		length = 738;
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\test.txt", 1); 
+		length = 752;
 		threshold = (int)Math.round((length/154.43)*(100)*(0.8));
 		
 		System.out.println("*******************            zoo           ****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),false,2,1000,0,4); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,1000,0,1); //null; //
 		
 		//============SERIALIZE================
 		
-		/*FileOutputStream fout = new FileOutputStream("address.ser");
+		FileOutputStream fout = new FileOutputStream("address.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();
 		fout.close();
-		System.out.println("Done Serializing");*/
+		System.out.println("Done Serializing");
 		
 		//=============DESERIALIZE===============		
 
-	/*		FileInputStream fin = new FileInputStream("address.ser");
+			/*FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
-			System.out.println("Done Retrieving the serialized object.");
+			System.out.println("Done Retrieving the serialized object.");*/
 
 			SOM.FSM.setThreshold(threshold);
 			
-			System.out.println("THRESHOLD SET");*/
+			System.out.println("THRESHOLD SET");
 		
 
 			System.out.println("====================================================================================");
@@ -72,10 +72,10 @@ public class TestSOM {
 			System.out.println();
 			System.out.println("====================================================================================");
 			
-		//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-			SOM.initTrainSOM(fp.readFile(),1000,0.7);//100
+			//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
+			SOM.initTrainSOM(fp.readFile(),100,0.25);//100
 			
-			SOM.testVectorSOM(fp.readFile());
+			//SOM.testVectorSOM(fp.readFile());
 			
 			System.out.println("====================================================================================");
 			System.out.println("====================================================================================");

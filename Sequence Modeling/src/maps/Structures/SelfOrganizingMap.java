@@ -53,11 +53,13 @@ public class SelfOrganizingMap implements Serializable {
 	private double TIME_STEP = 0.0; 				//lambda of X(t) = t0 * exp(-t/lambda)
 	private String INPUT_SAMPLES = null;
 	private boolean IS_MATRIX_MODE = false;
+	private boolean IS_ZEHOURAI_MODE = false;
 	private int COVARIANCE_NUMBER = 0;
 	private int PRESENTATION_NUMBER = 0;
 	private int CURRENT_PRESENTATION_NUMBER = 0;
 	private double VECTOR_WEIGHTS[] = null; 
 	private int THRESHOLD = 0;
+	
 		
 		//{0.5,0.20,0.15,0.10,0.05}; 
 		
@@ -83,7 +85,7 @@ public class SelfOrganizingMap implements Serializable {
 	 * Basic constructor for the self-organizing maps algorithms. 
 	 * ENTRY POINT FOR THE ENTIRE ALGORITHM
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, int covarianceNumber, int threshold, int iteration, int vector)
+	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, boolean isZehourai, int covarianceNumber, int threshold, int iteration, int vector)
 	{
 		//The number of elements in the weight vector used in the weighted covariance matrix is directly proportional 
 		//to the number of attributes in the input vector.
@@ -139,11 +141,12 @@ public class SelfOrganizingMap implements Serializable {
 		
 		ZERO_MAP = new Node[side][side]; //initializes the 3d layer to contains sequence draws.		
 		FSM = new FiniteStateMachine(threshold, iteration, vector,ZERO_MAP); //initiates a new FSM which essentially creates the V layer
+		IS_ZEHOURAI_MODE = isZehourai;
 		
 		//The initialization of the SOM is different based on the type of structure used to hold node weights.
 		if(IS_MATRIX_MODE)
 		{
-			initializeMatrix();		//initializes the matrix mode SOM
+			initializeMatrix(isZehourai);		//initializes the matrix mode SOM
 		}
 		else
 		{
@@ -261,7 +264,7 @@ public class SelfOrganizingMap implements Serializable {
 		trainSOMMemoryEfficient(fileLocation); 
 		
 		FSM.printSummary();
-		extractSmallerUMatrix();
+		extractSmallerUMatrix(false);
 		//exportSmallUMatrixToCSV();
 	}
 	
@@ -390,7 +393,7 @@ public class SelfOrganizingMap implements Serializable {
 			
 			if((i%100)== 0)
 			{
-				extractSmallerUMatrix();
+				extractSmallerUMatrix(false);
 				exportSmallUMatrixToCSV(i);
 							
 				//extractSmallerUMatrixZERO();
@@ -976,7 +979,7 @@ public class SelfOrganizingMap implements Serializable {
 				
 				try
 				{
-					distance = eculideanDistanceInNodes(winner, SOM[i][j]); //CHECK THE SQUARE LOGIC ABOVE
+					distance = eculideanDistanceInNodes(winner, SOM[j][i]); //CHECK THE SQUARE LOGIC ABOVE
 				
 				}
 				catch(Exception e)
@@ -993,11 +996,11 @@ public class SelfOrganizingMap implements Serializable {
 				{
 					//weight adjust
 					theta = Math.exp(-(Math.pow(distance, 2)/(2*Math.pow(RADIUS, 2))));
-					tempPart = (Array2DRowRealMatrix)(covariance.subtract(SOM[i][j].getWeightMatrix())).scalarMultiply(theta*LEARNING_RATE);
-					tempWeightsMatrix = SOM[i][j].getWeightMatrix().add(tempPart);
+					tempPart = (Array2DRowRealMatrix)(covariance.subtract(SOM[j][i].getWeightMatrix())).scalarMultiply(theta*LEARNING_RATE);
+					tempWeightsMatrix = SOM[j][i].getWeightMatrix().add(tempPart);
 							
 
-					SOM[i][j].setWeightMatrix((Array2DRowRealMatrix)tempWeightsMatrix);					
+					SOM[j][i].setWeightMatrix((Array2DRowRealMatrix)tempWeightsMatrix);					
 				}
 			}
 		}
@@ -1016,7 +1019,7 @@ public class SelfOrganizingMap implements Serializable {
 		ArrayRealVector neighbourUnit = new ArrayRealVector(new double[]{Neighbour.getX(),Neighbour.getY()});		
 		ArrayRealVector subValue = BMUnit.subtract(neighbourUnit);
 		
-		return Math.sqrt(subValue.getNorm());
+		return (subValue.getNorm());
 	}
 	
 	/**
@@ -1024,7 +1027,7 @@ public class SelfOrganizingMap implements Serializable {
 	 */
 	private  void LearningRateDecay(int currentIteration)
 	{
-		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/NUMER_OF_ITERATIONS);
+		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/TIME_STEP); //NUMER_OF_ITERATIONS
 	}
 	
 	/**
@@ -1169,19 +1172,27 @@ public class SelfOrganizingMap implements Serializable {
 	 * Initializes the random weights of each node in the SOM according to the number of vectors considered for the 
 	 * sliding window technique.
 	 */
-	private void initializeMatrix() {
+	private void initializeMatrix(boolean isZehourai) {
 		
 		for(int i = 0 ; i < SOM.length; i++)
 		{
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
-				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
-				ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
+				if(!isZehourai)
+				{
+					SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,false);
+					ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,COVARIANCE_NUMBER,true);
+				}
+				else
+				{
+					SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,INPUT_DIMENSION,false);
+					ZERO_MAP[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,INPUT_DIMENSION,true);
+				}
 				
-				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
+				//System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
 			
-			System.out.println();
+			//System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
@@ -1229,14 +1240,33 @@ public class SelfOrganizingMap implements Serializable {
 	 */
 	private Array2DRowRealMatrix generateCovarainceMatrix(double[][] vectors) {
 		
-		 Array2DRowRealMatrix realData = new Array2DRowRealMatrix(INPUT_DIMENSION, COVARIANCE_NUMBER);
-		 Array2DRowRealMatrix covarianceMatrix = new Array2DRowRealMatrix(COVARIANCE_NUMBER,COVARIANCE_NUMBER);
+		 Array2DRowRealMatrix realData = null; 
+		 Array2DRowRealMatrix covarianceMatrix = null; 
+
 		 
-		 for(int i  = 0; i < vectors.length; i++)
+		 if(!IS_ZEHOURAI_MODE)
 		 {
-			 realData.setColumn(i, vectors[i]);
+			 
+			 realData = new Array2DRowRealMatrix(INPUT_DIMENSION, COVARIANCE_NUMBER);
+			 covarianceMatrix = new Array2DRowRealMatrix(COVARIANCE_NUMBER,COVARIANCE_NUMBER);
+			 
+			 for(int i  = 0; i < vectors.length; i++)
+			 {
+				 realData.setColumn(i, vectors[i]);
+			 }
+
 		 }
-		
+		 else
+		 {
+			 realData = new Array2DRowRealMatrix(COVARIANCE_NUMBER, INPUT_DIMENSION);
+			 covarianceMatrix = new Array2DRowRealMatrix(INPUT_DIMENSION,INPUT_DIMENSION);
+			 
+			 for(int i  = 0; i < vectors.length; i++)
+			 {
+				 realData.setRow(i, vectors[i]);
+			 }
+		 }
+		 	
 		covarianceMatrix = getWeightedCovarianceMatrix(realData);
 		
 		return covarianceMatrix;
@@ -1351,16 +1381,16 @@ public class SelfOrganizingMap implements Serializable {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.6,0.4};// -- {0.5,0.33,0.17} for 3
+	//	double mean[] = {0.6,0.4};// -- {0.5,0.33,0.17} for 3
 		
-		temp[0] = mean[index];
-		temp[1] = mean[index2];
+	//	temp[0] = mean[index];
+	//	temp[1] = mean[index2];
 		
-/*		for(int i = 0; i < vector.length; i++)
+		for(int i = 0; i < vector.length; i++) //correct way of mean calculation for two vectors 
 		{
-			temp[0] += vector[i]*VECTOR_WEIGHTS[index];
-			temp[1] += vector2[i]*VECTOR_WEIGHTS[index2];
-		}*/
+			temp[0] += vector[i]*VECTOR_WEIGHTS[i];
+			temp[1] += vector2[i]*VECTOR_WEIGHTS[i];
+		}
 			
 		return temp;
 	}
@@ -1513,11 +1543,11 @@ public class SelfOrganizingMap implements Serializable {
 	 * @param d
 	 * @return
 	 */
-	private double getAverageSOMNeighbour(int b, int d) //for matrices??
+	private double getAverageSOMNeighbour(int b, int d, boolean average) //for matrices??
 	{
 		double value = 0;
 		int numOfNeighbours = 0;
-		double medianArray[] = new double[8];
+		double medianArray[] = new double[9];
 		double retValue = 0;
 		int index = 0;
 		double temp = 0;
@@ -1530,14 +1560,15 @@ public class SelfOrganizingMap implements Serializable {
 			{
 				if(elementExists(i,j,true))
 				{
-					if(i != b && j != d)
-					{
-						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
-						//temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
+					//if(i != b && j != d)
+					//{
+						//temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
+						temp = ((SOM[b][d].getWeightMatrix()).subtract(SOM[i][j].getWeightMatrix())).getFrobeniusNorm();
 						medianArray[counter] = temp;
 						value += temp;
 						numOfNeighbours++;
-					}
+						counter++;
+					//}
 				}
 			}
 		}
@@ -1551,10 +1582,24 @@ public class SelfOrganizingMap implements Serializable {
 		}
 		else if(numOfNeighbours%2 == 0)
 		{
-			retValue = (medianArray[3] + medianArray[4])/2;
+			if(numOfNeighbours == 4)
+			{
+				retValue = (medianArray[1] + medianArray[2])/2;
+			}
+			else if(numOfNeighbours%2 == 6)
+			{
+				retValue = (medianArray[2] + medianArray[3])/2;
+			}
 		}
 		
-		return (value/numOfNeighbours); //put this if average is needed	
+		if(average)
+		{
+			return (value/numOfNeighbours); //put this if average is needed
+		}
+		else
+		{
+			return retValue; // put if median is needed
+		}		
 	}
 
 	/**
@@ -1636,13 +1681,13 @@ public class SelfOrganizingMap implements Serializable {
 	/**
 	 * 
 	 */
-	private void extractSmallerUMatrix()
+	private void extractSmallerUMatrix(boolean average)
 	{
 		for(int i = 0; i < SOM.length; i++)
 		{
 			for(int j = 0; j < SOM[0].length; j++)
 			{
-				U_MATRIX_SHRINK[i][j] = getAverageSOMNeighbour(i,j);
+				U_MATRIX_SHRINK[i][j] = getAverageSOMNeighbour(i,j, average);
 			}
 		}
 	}

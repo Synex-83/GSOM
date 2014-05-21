@@ -19,10 +19,10 @@ public class TestSOM {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FileProcessing fp = new FileProcessing("C:\\Users\\User\\Desktop\\Hit Count Expr\\zoo2.txt", 1);
+		FileProcessing fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\1w.txt", 1);
 		//System.out.println(fp.readFile());
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,100,fp.getDataDimension());
-		SOM.initTrainSOM(fp.readFile(), 100, 0.25);
+		SelfOrganizingMap SOM = new SelfOrganizingMap(100,100,fp.getDataDimension());
+		SOM.initTrainSOM(fp.readFile(), 1, 0.25);
 		//SOM.printSOM();
 		SOM.trainSOM();
 		SOM.testSOM(fp.readFile());

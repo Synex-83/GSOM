@@ -155,7 +155,7 @@ public class SelfOrganizingMap{
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
 				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 							
-				System.out.println( inputVector[0] +  "\tWINNER x =" + winner.getX() + " y= " + winner.getY());
+				System.out.println( inputVector[0] +  "\tWINNER x =" + winner.getX() + " y= " + winner.getY() );
 				System.out.println("===============================");
 /*				winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
@@ -277,7 +277,7 @@ public class SelfOrganizingMap{
 		ArrayRealVector neighbourUnit = new ArrayRealVector(new double[]{Neighbour.getX(),Neighbour.getY()});		
 		ArrayRealVector subValue = BMUnit.subtract(neighbourUnit);
 		
-		return subValue.getNorm(); //No need to square root.
+		return subValue.getNorm(); //No need to square root since the norm is already square rooted.
 	}
 	
 	/**
@@ -285,7 +285,7 @@ public class SelfOrganizingMap{
 	 */
 	private  void LearningRateDecay(int currentIteration)
 	{
-		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/NUMER_OF_ITERATIONS);
+		LEARNING_RATE = INITIAL_LEARNING_RATE*Math.exp(-(double)currentIteration/TIME_STEP); //NUMER_OF_ITERATIONS
 	}
 	
 	/**
@@ -461,7 +461,7 @@ public class SelfOrganizingMap{
 	{
 		double value = 0;
 		int numOfNeighbours = 0;
-		double medianArray[] = new double[8];
+		double medianArray[] = new double[9];
 		double retValue = 0;
 		int index = 0;
 		double temp = 0;
@@ -474,14 +474,14 @@ public class SelfOrganizingMap{
 			{
 				if(elementExists(i,j,true))
 				{
-					if(!(i == b && j == d))
-					{
+					//if(!(i == b && j == d)) //removal of this condition would ensure that all nine elements are considered
+					//{
 						temp = SOM[b][d].getWEIGHTS().subtract(SOM[i][j].getWEIGHTS()).getNorm(); 
 						medianArray[counter] = temp;
 						value += temp;
 						numOfNeighbours++;
 						counter++;
-					}
+					//}
 				}
 			}
 		}
@@ -495,7 +495,14 @@ public class SelfOrganizingMap{
 		}
 		else if(numOfNeighbours%2 == 0)
 		{
-			retValue = (medianArray[3] + medianArray[4])/2;
+			if(numOfNeighbours == 4)
+			{
+				retValue = (medianArray[1] + medianArray[2])/2;
+			}
+			else if(numOfNeighbours%2 == 6)
+			{
+				retValue = (medianArray[2] + medianArray[3])/2;
+			}
 		}
 		
 		if(average)

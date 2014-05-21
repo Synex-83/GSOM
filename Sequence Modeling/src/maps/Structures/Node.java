@@ -26,7 +26,7 @@ public class Node implements Serializable  {
  	private int POSITION_Y = 0; 				//y position in the 2D grid
  	private double ACTIVATION_VALUE = 0.0; 		//value after weight vector * input vector
 	private boolean IS_MATRIX = false;
-	private int COVARIANCE_NUMBER = 0;		//number of vectors considered for the covariance matrix
+	private int COVARIANCE_NUMBER = 0;		//number of vectors considered for the covariance matrix/ input dimension
 	private int NUMBER_OF_HITS = 0;			//number of inputs mapped to the unit
 	private ArrayList<String> MAPPED_SEQUENCES = null; //the mapped sequences will be put here for each node 
 	private double INTENSITY = 0; //the intensity contribution per winning presentation
