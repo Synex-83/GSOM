@@ -55,6 +55,14 @@ public class FileProcessing {
 	}
 	
 	/**
+	 * @return
+	 */
+	public String getFileName()
+	{
+		return FILE_LOCATION;	
+	}
+	
+	/**
 	 * @return the input dimension of the input data
 	 */
 	public int getDataDimension()

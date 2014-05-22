@@ -154,6 +154,7 @@ public class SelfOrganizingMap implements Serializable {
 		}
 		
 		RADIUS = MAX_RADIUS; //Sets the effective radius of the neighborhood 
+		System.out.println("Zehourai Mode " + isZehourai);
 	}
 	
 	/**
@@ -1363,7 +1364,7 @@ public class SelfOrganizingMap implements Serializable {
 			result += VECTOR_WEIGHTS[i]*(vector[i] - weightedMean[0])*(vector2[i] - weightedMean[1]);
 		}
 		
-		return result; //(ALPHA*result);
+		return (ALPHA*result); //result;
 
 	}
 	

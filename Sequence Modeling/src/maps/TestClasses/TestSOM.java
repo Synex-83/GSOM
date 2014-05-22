@@ -35,13 +35,13 @@ public class TestSOM {
 		//E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt
 		//
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\test.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt", 1); 
 		length = 752;
 		threshold = (int)Math.round((length/154.43)*(100)*(0.8));
 		
-		System.out.println("*******************            zoo           ****************************");
+		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,1000,0,1); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,1000,0,3); //null; //
 		
 		//============SERIALIZE================
 		
