@@ -138,7 +138,10 @@ public class FiniteStateMachine implements Serializable {
 		int distance = 0;
 		current.setFocus(true);
 		
-
+		if(current.getSequence().equals("YG"))
+		{
+			System.out.println(current.getCurrentWinner().getX() + "\t" + current.getCurrentWinner().getY()+"\t"+current.getCurrentWinner().getNumberOfHits());
+		}
 		
 		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{

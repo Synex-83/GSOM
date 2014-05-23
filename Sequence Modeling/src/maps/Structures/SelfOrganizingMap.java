@@ -92,7 +92,7 @@ public class SelfOrganizingMap implements Serializable {
 		
 		if(vector ==0)
 		{
-			double temp[] =  {0.5,0.30,0.15,0.05};
+			double temp[] =  {0.35,0.35,0.20,0.10};
 			VECTOR_WEIGHTS = temp;
 		}
 		else if(vector == 1)
