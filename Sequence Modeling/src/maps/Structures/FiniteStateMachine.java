@@ -100,7 +100,25 @@ public class FiniteStateMachine implements Serializable {
 			if((temp.getSequence().trim()).equals(current.getSequence().trim()) )
 			{
 				//System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
-				current = temp; //object equivalence will fix the issue.				
+				current = temp; //object equivalence will fix the issue.		
+				
+	//// ##################################################################################################################################
+				
+				if(current.getCurrentWinner().equals(winner))
+				{
+					current.incrementHitCount();
+				}
+				else
+				{			
+					/*if(previous == null)
+					{*/
+						current.resetNumberOfHits();
+						current.setCurrentWinner(winner);
+						resetCompoundArrays(current);
+					//}
+				}
+				
+	//// ##################################################################################################################################			
 				update(current,previous,winner,learningRate,radius,curr_iter); //trigger link update
 				addNewNode = false;
 				break;
@@ -138,15 +156,15 @@ public class FiniteStateMachine implements Serializable {
 		int distance = 0;
 		current.setFocus(true);
 		
-		if(current.getSequence().equals("YG"))
-		{
-			System.out.println(current.getCurrentWinner().getX() + "\t" + current.getCurrentWinner().getY()+"\t"+current.getCurrentWinner().getNumberOfHits());
-		}
+/*		if(current.getSequence().equals("YG"))
+		{*/
+			System.out.println(current.getSequence() + "\t" + current.getCurrentWinner().getX() + "\t" + current.getCurrentWinner().getY()+"\t"+current.getHits()+"\t"+current.getCurrentWinner().getNumberOfHits() +"\t" + current.isHollow() +"\t" +  current.isCOMPOUND() + "\t" + current.isRepeat());
+		//}
 		
 		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{
-			current.setCurrentWinner(winner);
-			resetCompoundArrays(current);
+			//current.setCurrentWinner(winner);
+			//resetCompoundArrays(current);
 			//once the node moves to the current winner every incoming and outgoing link for this particular
 			//FSM node has to be recalculated.
 			updateLinks(current,winner);
@@ -177,7 +195,7 @@ public class FiniteStateMachine implements Serializable {
 		
 		//System.out.println("######################################  Sequence " + current.getSequence() + " = " + current.getCurrentWinner().getNumberOfHits());
 		
-		if(current.getCurrentWinner().getNumberOfHits() >= THRESHOLD && current.isHollow())
+		if(current.getHits() >= THRESHOLD && current.isHollow()) //current.getCurrentWinner().getNumberOfHits()
 		{			
 /*			if(previous==null)
 			{

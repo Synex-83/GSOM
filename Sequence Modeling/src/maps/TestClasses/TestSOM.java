@@ -39,7 +39,7 @@ public class TestSOM {
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
 		length = 61;
-		threshold = (int)Math.round((length/41)*(100)*(0.0));
+		threshold = (int)Math.round((length/41)*(100)*(3.8));
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 

@@ -40,6 +40,7 @@ public class FSMNode {
 	private boolean IS_REPEAT = false;
 	private boolean IS_COMPOUND = false;
 	private int COMPOUND_COUNT = 0;
+	private int NUMBER_OF_HITS = 0;
 	
 	private Node CURRENT_WINNER = null;
 	private int INTIAL_SOLID_ITERATION = 0;
@@ -72,6 +73,31 @@ public class FSMNode {
 		{
 			REPEAT.add(new repeatNode(repeat, 1));
 		}
+	}
+	
+	/**
+	 * @return
+	 */
+	public int getHits()
+	{
+		return NUMBER_OF_HITS;
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void incrementHitCount()
+	{
+		NUMBER_OF_HITS++;
+	}
+	
+	/**
+	 * 
+	 */
+	public void resetNumberOfHits()
+	{
+		NUMBER_OF_HITS = 1;
 	}
 	
 	/**
@@ -177,6 +203,7 @@ public class FSMNode {
 		setHollow(true);
 		IS_REPEAT = false; //reinitilizes the repeater with the movement of the node to new location.
 		REPEAT.clear();
+		resetNumberOfHits();
 	}
 
 
