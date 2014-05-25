@@ -156,10 +156,10 @@ public class FiniteStateMachine implements Serializable {
 		int distance = 0;
 		current.setFocus(true);
 		
-/*		if(current.getSequence().equals("YG"))
-		{*/
+/*		if(current.getSequence().equals("99"))
+		{
 			System.out.println(current.getSequence() + "\t" + current.getCurrentWinner().getX() + "\t" + current.getCurrentWinner().getY()+"\t"+current.getHits()+"\t"+current.getCurrentWinner().getNumberOfHits() +"\t" + current.isHollow() +"\t" +  current.isCOMPOUND() + "\t" + current.isRepeat());
-		//}
+		}*/
 		
 		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{
@@ -685,7 +685,8 @@ public class FiniteStateMachine implements Serializable {
 			{
 				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
 				//encountered when developing. Refer Node class comment on line 68.
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "   INIT SOLID ITER =" + temp1.getIteration() );
+				System.out.println("Sequence " + temp1.getSequence() + "\tX = " + (temp1.getCurrentWinner().getX()+1) + "\tY = " + (temp1.getCurrentWinner().getY()+1) + "\tHITS = " +temp1.getHits() + "\tNeuron Hits = "+ temp1.getCurrentWinner().getNumberOfHits() +"\tIsHollow = "+ temp1.isHollow() + "\tIsCompound = "+ temp1.isCOMPOUND() + "\tIsRepeat = "+ temp1.isRepeat() + "\tINIT SOLID ITER = " + temp1.getIteration());
+				
 				solidNode.add(temp1);
 				i++;
 			}
@@ -710,7 +711,7 @@ public class FiniteStateMachine implements Serializable {
 			{
 				//the use of Y values to display X and vice verse is to compensate for the intial array problem 
 				//encountered when developing. Refer Node class comment on line 68.
-				System.out.println("Sequence " + temp1.getSequence() + " X =" + (temp1.getCurrentWinner().getY()+1) + " Y =" + (temp1.getCurrentWinner().getX()+1) + " HITS =" + temp1.getCurrentWinner().getNumberOfHits() + "\n");
+				System.out.println("Sequence " + temp1.getSequence() + "\tX = " + (temp1.getCurrentWinner().getX()+1) + "\tY = " + (temp1.getCurrentWinner().getY()+1) + "\tHITS = " +temp1.getHits() + "\tNeuron Hits = "+ temp1.getCurrentWinner().getNumberOfHits() +"\tIsHollow = "+ temp1.isHollow() + "\tIsCompound = "+ temp1.isCOMPOUND() + "\tIsRepeat = "+ temp1.isRepeat() + "\tINIT SOLID ITER = " + temp1.getIteration());
 			//	solidNode.add(temp1);
 				j++;
 			}

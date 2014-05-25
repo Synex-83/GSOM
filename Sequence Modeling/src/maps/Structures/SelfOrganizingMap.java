@@ -397,8 +397,8 @@ public class SelfOrganizingMap implements Serializable {
 				extractSmallerUMatrix(false);
 				exportSmallUMatrixToCSV(i);
 							
-				//extractSmallerUMatrixZERO();
-				//exportSmallUMatrixToCSVZERO(i);
+				extractSmallerUMatrixZERO();
+				exportSmallUMatrixToCSVZERO(i);
 			}
 		//	CURRENT_PRESENTATION_NUMBER++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ******************");
@@ -1382,16 +1382,17 @@ public class SelfOrganizingMap implements Serializable {
 		
 		double temp[] = new double[2];
 		
-	//	double mean[] = {0.6,0.4};// -- {0.5,0.33,0.17} for 3
+		double mean[] = {0.6,0.4};// -- {0.5,0.33,0.17} for 3
+	//	double mean[] = {0.32381,0.279958,0.26426,0.131973};
 		
-	//	temp[0] = mean[index];
-	//	temp[1] = mean[index2];
+		temp[0] = mean[index];
+		temp[1] = mean[index2];
 		
-		for(int i = 0; i < vector.length; i++) //correct way of mean calculation for two vectors 
+/*		for(int i = 0; i < vector.length; i++) //correct way of mean calculation for two vectors 
 		{
 			temp[0] += vector[i]*VECTOR_WEIGHTS[i];
 			temp[1] += vector2[i]*VECTOR_WEIGHTS[i];
-		}
+		}*/
 			
 		return temp;
 	}
