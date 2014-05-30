@@ -29,7 +29,7 @@ public class CreateFSM {
 		//FSM.createFiniteStateMachine(data);
 		
 		
-		FiniteStateMachine FSM = new FiniteStateMachine(2,data);
+		FiniteStateMachine FSM = new FiniteStateMachine(2,2,data);
 		
 
 	}

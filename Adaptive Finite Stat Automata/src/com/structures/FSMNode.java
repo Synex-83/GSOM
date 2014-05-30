@@ -3,7 +3,9 @@
  */
 package com.structures;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 
 /**
  * @author  Manjusri Ishwara
@@ -21,8 +23,8 @@ public class FSMNode {
 	private boolean IS_REPEAT = false;
 	private boolean IS_START_NODE = false;
 	
-	private Set<Integer> INCOMING_LINK = null;
-	private Set<Integer> OUTGOING_LINK = null;
+	private ArrayList<Integer> INCOMING_LINK = null;
+	private ArrayList<Integer> OUTGOING_LINK = null;
 	
 	private int[] REPEAT_LIST = null;
 
@@ -35,6 +37,9 @@ public class FSMNode {
 	public FSMNode(String sequence)
 	{
 		MAPPED_SEQUENCE = sequence;
+		
+		INCOMING_LINK = new ArrayList<Integer>();
+		OUTGOING_LINK = new ArrayList<Integer>();
 	}
 	
 	//========================  ACCESSOR METHODS  ==========================
@@ -112,14 +117,14 @@ public class FSMNode {
 	/**
 	 * @return the INCOMING_LINK
 	 */
-	public Set<Integer> getIncomingLink() {
+	public ArrayList<Integer> getIncomingLink() {
 		return INCOMING_LINK;
 	}
 
 	/**
 	 * @return the OUTGOING_LINK
 	 */
-	public Set<Integer> getOutgoingLink() {
+	public ArrayList<Integer> getOutgoingLink() {
 		return OUTGOING_LINK;
 	}
 
@@ -133,4 +138,71 @@ public class FSMNode {
 	
 	//========== CLASS METHODS ================
 	//========== PUBLIC METHODS =================
+	
+	/**
+	 * Sets an outgoing link from the give state. Only the link id is added.
+	 * @param id
+	 */
+	public void setOutgoingLink(int id)
+	{
+		OUTGOING_LINK.add(id);
+	}
+	
+	/**
+	 * Sets an incoming link from the give state. Only the link id is added.
+	 * @param id
+	 */
+	public void setIncomingLink(int id)
+	{
+		INCOMING_LINK.add(id);
+	}
+	
+	/**
+	 * 
+	 */
+	public void printIncomingOutgoingLinks()
+	{
+		Iterator<Integer> in = INCOMING_LINK.iterator();
+		Iterator<Integer> out = OUTGOING_LINK.iterator();
+		
+		System.out.println("INCOMING");
+		
+		while(in.hasNext())
+		{
+			System.out.print(in.next().toString() + "\t");
+		}
+		
+		System.out.println();
+		System.out.println("OUTCOMING");
+		
+		while(out.hasNext())
+		{
+			System.out.print(out.next().toString() + "\t");
+		}
+		
+		System.out.println("\n");
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

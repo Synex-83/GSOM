@@ -5,8 +5,6 @@ package com.structures;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * @author  Manjusri Ishwara
@@ -24,8 +22,16 @@ public class FiniteStateMachine {
 	
 	//=================== CONSTRUCTOR ===================
 	
-	
-	public FiniteStateMachine(int participantFactor, String data)
+	/**
+	 * Constructs the finite state machine. Creates the states, links and maintains lists of incoming and 
+	 * outgoing links from a given state. This is only pre-processing. No learning is taking place. This is 
+	 * done to reduce the computational overhead of creating the states and links.
+	 * 
+	 * @param participantFactor
+	 * @param option
+	 * @param data
+	 */
+	public FiniteStateMachine(int participantFactor, int option, String data)
 	{
 		PF = participantFactor;
 		SET_OF_NODES = new ArrayList<FSMNode>();
@@ -48,8 +54,12 @@ public class FiniteStateMachine {
 			{
 				SET_OF_NODES.add(current);
 			}
+			else
+			{
+				current = getExistingState(current);
+			}
 			
-			//check the availablity of the link  and if it is not already discovered it is created as a new link and 
+			//check the availability of the link  and if it is not already discovered it is created as a new link and 
 			//added to the links list of the finite state machine
 			if(previous!=null)
 			{
@@ -57,18 +67,18 @@ public class FiniteStateMachine {
 				{
 					tempLink = new Link(linkCounter, previous, current);
 					SET_OF_LINKS.add(tempLink);
+					previous.setOutgoingLink(tempLink.getLinkId()); //sets the link as an outgoing link of previous
+					current.setIncomingLink(tempLink.getLinkId()); //sets the link as an incoming link of previous
 					linkCounter++;
 				}
-			}
+			}			
 			
-			previous = current;
-			
+			previous = current;			
 		}
 				
 		System.out.println(SET_OF_NODES.size());
 		System.out.println(SET_OF_LINKS.size());
-		printListsOfStateMachine();
-	
+		printListsOfStateMachine(option);	
 	}
 	
 	//=================== ACCESSOR METHODS =======================
@@ -102,8 +112,7 @@ public class FiniteStateMachine {
 	 * @return
 	 */
 	private boolean stateExists(FSMNode node)
-	{
-		
+	{	
 		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
 		FSMNode temp = null;
 		
@@ -119,6 +128,30 @@ public class FiniteStateMachine {
 		}
 		
 		return false;
+	}
+	
+	/**
+	 * Retrieves the node from the set of states once existence is established.
+	 * @param node
+	 * @return
+	 */
+	private FSMNode getExistingState(FSMNode node)
+	{
+		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
+		FSMNode temp = null;
+		
+		
+		while(nodeIter.hasNext())
+		{
+			temp = nodeIter.next();
+			
+			if(temp.getMappedSequence().equalsIgnoreCase(node.getMappedSequence()))
+			{
+				break;
+			}
+		}
+		
+		return temp;
 	}
 	
 	/**
@@ -161,23 +194,46 @@ public class FiniteStateMachine {
 	/**
 	 * Prints the set of nodes and the set of links available in the finite state machine. No thresholding or 
 	 * learning information is considered.
+	 * 
+	 * option 	= 1 (Minimal Print)
+	 * 			= 2 (Node with incoming outgoing link print. No link print.)
+	 * 			= 3
+	 * @param option
 	 */
-	private void printListsOfStateMachine()
+	private void printListsOfStateMachine(int option)
 	{
 		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
 		Iterator<Link> linkIter = SET_OF_LINKS.iterator();
 		Link temp = null;
+		FSMNode tempNode = null;
 		
 		while(nodeIter.hasNext())
 		{
-			System.out.println(nodeIter.next().getMappedSequence().toString());
+			tempNode = nodeIter.next();
+			
+			if(option == 1)
+			{
+				System.out.println(tempNode.getMappedSequence().toString());
+			}
+			else if(option == 2)
+			{
+				System.out.println(tempNode.getMappedSequence().toString());
+				tempNode.printIncomingOutgoingLinks();
+			}
+			else if(option == 3)
+			{
+				
+			}
 		}
 		
-		while(linkIter.hasNext())
+		if(option == 2)
 		{
-			temp = linkIter.next();
-			System.out.println(temp.getLinkId() + "  "+ temp.getOriginator().getMappedSequence().toString() + "  -->  " 
+			while(linkIter.hasNext())
+			{
+				temp = linkIter.next();
+				System.out.println(temp.getLinkId() + "  "+ temp.getOriginator().getMappedSequence().toString() + "  -->  " 
 					+ temp.getDestination().getMappedSequence().toString());
+			}
 		}
 	}
 	//================== PUBLIC METHODS =============================
