@@ -180,10 +180,13 @@ public class FiniteStateMachine implements Serializable {
 				REPEAT = 0;
 			}
 		}
-		else if(previous!=null && (current.getCurrentWinner().equals(winner)) && (previous.getSequence().equals(current.getSequence())))
+		else if(previous!=null &&  (previous.getSequence().equals(current.getSequence())))
 		{
-			REPEAT++;
-			current.addRepeat(REPEAT);
+			if((current.getCurrentWinner().equals(winner)))
+			{
+				REPEAT++;
+				current.addRepeat(REPEAT);
+			}
 			//System.out.println("============================================================ADD REPEAT" + REPEAT);
 		}
 		else
