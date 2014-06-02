@@ -24,13 +24,15 @@ public class CreateFSM {
 		
 		FileProcessing fp = new FileProcessing(fileName);
 		
-		String data = fp.readFile();
+		String data = fp.readFile();		
 		
-		//FSM.createFiniteStateMachine(data);
+		FiniteStateMachine FSM = new FiniteStateMachine(2,1,data);
 		
+		FSM.createFiniteStateMachine(data);
 		
-		FiniteStateMachine FSM = new FiniteStateMachine(2,2,data);
+		System.out.println("==================== AFTER PRESENTATION ========================");
 		
+		FSM.printStateMaching(1);
 
 	}
 

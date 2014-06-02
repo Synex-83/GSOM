@@ -16,6 +16,9 @@ import java.util.Iterator;
 public class FSMNode {
 
 	private int NUMBER_OF_HITS = 0;
+	private int NUMBER_OF_SKIPS = 0;
+	
+	private double INTENSITY = 0;
 	
 	private String MAPPED_SEQUENCE = null;
 	
@@ -136,8 +139,39 @@ public class FSMNode {
 		return REPEAT_LIST;
 	}
 	
+	/**
+	 * @return the intensity
+	 */
+	public double getIntensity() {
+		return INTENSITY;
+	}
+	
+	/**
+	 * @return the NUMBER_OF_SKIPS
+	 */
+	public int getSkips(){
+		return NUMBER_OF_SKIPS;
+	}
+	
+	/**
+	 * Sets the NUMBER_OF_SKIPS
+	 * @param value
+	 */
+	public void setSkips(int value)
+	{
+		NUMBER_OF_SKIPS = value;
+	}
+	
 	//========== CLASS METHODS ================
 	//========== PUBLIC METHODS =================
+	
+	/**
+	 * Increases the number of hits of the current state by one.
+	 */
+	public void incremetHitCounter()
+	{
+		NUMBER_OF_HITS++;
+	}
 	
 	/**
 	 * Sets an outgoing link from the give state. Only the link id is added.
@@ -158,7 +192,7 @@ public class FSMNode {
 	}
 	
 	/**
-	 * 
+	 * Prints the incoming and the outgoing links of a give state.
 	 */
 	public void printIncomingOutgoingLinks()
 	{
@@ -181,6 +215,42 @@ public class FSMNode {
 		}
 		
 		System.out.println("\n");
+	}
+
+	/**
+	 * Decay the intensity of the state by the given value. Minimum value is zero. Intensity is non-negative.
+	 * @param value
+	 */
+	public void decayIntensity(double value)
+	{
+		INTENSITY -= value;
+		
+		if(INTENSITY <= 0)
+		{
+			INTENSITY = 0;
+		}
+	}
+	
+	/**
+	 * Increase the intensity of the state by the give value. 
+	 * @param value
+	 */
+	public void increaseIntensity(double value)
+	{
+		INTENSITY += value;
+	}
+	
+	/**
+	 * Decreases the skip count by one.
+	 */
+	public void decreseSkipCount()
+	{
+		NUMBER_OF_SKIPS--;
+		
+		if(NUMBER_OF_SKIPS < 0)
+		{
+			NUMBER_OF_SKIPS = 0;
+		}
 	}
 }
 

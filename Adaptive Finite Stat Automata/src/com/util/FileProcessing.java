@@ -4,11 +4,8 @@
 package com.util;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.StringTokenizer;
+
 
 /**
  * @author  Manjusri Ishwara
@@ -19,10 +16,8 @@ import java.util.StringTokenizer;
 public class FileProcessing {
 	
 	private String FILE_LOCATION =  null;
-	private String DELIMETER = " ";
 	private BufferedReader BR = null;
-	private String FILE_STRING = null;
-	
+
 	/**
 	 * @param filename as the input file 
 	 */

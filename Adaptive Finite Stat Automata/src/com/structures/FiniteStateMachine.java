@@ -52,7 +52,12 @@ public class FiniteStateMachine {
 			//as a new state to the finite state machine.
 			if(!stateExists(current))
 			{
-				SET_OF_NODES.add(current);
+				if(SET_OF_NODES.size() == 0)
+				{
+					current.setStartNode(true);
+				}
+				
+				SET_OF_NODES.add(current);							
 			}
 			else
 			{
@@ -76,8 +81,6 @@ public class FiniteStateMachine {
 			previous = current;			
 		}
 				
-		System.out.println(SET_OF_NODES.size());
-		System.out.println(SET_OF_LINKS.size());
 		printListsOfStateMachine(option);	
 	}
 	
@@ -154,6 +157,32 @@ public class FiniteStateMachine {
 		return temp;
 	}
 	
+	
+	/**
+	 * Retrieves the node from the set of states once existance is established using the subsequence represented
+	 * by the state.
+	 * @param sequence
+	 * @return
+	 */
+	private FSMNode getExistingStateFromSequence(String  sequence)
+	{
+		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
+		FSMNode temp = null;
+		
+		
+		while(nodeIter.hasNext())
+		{
+			temp = nodeIter.next();
+			
+			if(temp.getMappedSequence().equalsIgnoreCase(sequence))
+			{
+				break;
+			}
+		}
+		
+		return temp;
+	}
+	
 	/**
 	 * Verifies whether a link between two states already exist in the state machine.
 	 * @param link
@@ -204,6 +233,9 @@ public class FiniteStateMachine {
 	{
 		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
 		Iterator<Link> linkIter = SET_OF_LINKS.iterator();
+		
+		int totalHits = 0;
+		
 		Link temp = null;
 		FSMNode tempNode = null;
 		
@@ -213,7 +245,10 @@ public class FiniteStateMachine {
 			
 			if(option == 1)
 			{
-				System.out.println(tempNode.getMappedSequence().toString());
+				System.out.println("State: "+tempNode.getMappedSequence().toString() + "\tis start state = "+ tempNode.isStartNode()
+						+ "\tHit Count = " + tempNode.getHits() + "\tIntensity = " + tempNode.getIntensity());
+				
+				totalHits += tempNode.getHits();
 			}
 			else if(option == 2)
 			{
@@ -223,10 +258,16 @@ public class FiniteStateMachine {
 			else if(option == 3)
 			{
 				
+				System.out.println("Number of States =\t" + SET_OF_NODES.size());
+				System.out.println("Number of Transitions =\t" + SET_OF_LINKS.size());
 			}
 		}
 		
-		if(option == 2)
+		if(option == 1)
+		{
+			System.out.println("TOTAL HITS (M-metrices) =\t" + totalHits);
+		}
+		else if(option == 2)
 		{
 			while(linkIter.hasNext())
 			{
@@ -235,14 +276,73 @@ public class FiniteStateMachine {
 					+ temp.getDestination().getMappedSequence().toString());
 			}
 		}
+		
+		
 	}
 	//================== PUBLIC METHODS =============================
+	
+	/**
+	 * Prints the items included in the state machine
+	 * 
+	 * option 	= 1 (Minimal Print with state information)
+	 * 			= 2 (Node with incoming outgoing link print. No link print.)
+	 * 			= 3 (Basic statistics. Number of states and the number of lists.)
+	 * @param option
+	 */
+	public void printStateMaching(int option)
+	{
+		printListsOfStateMachine(option);
+	}
 	
 	/**
 	 * @param data 
 	 */
 	public void createFiniteStateMachine(String data)
 	{
-
+		String currentSubSequence = null;
+		FSMNode selectedState = null;
+				
+		int counter = data.length() - (PF) + 1;
+		for(int i = 0; i < counter; i++)
+		{
+			currentSubSequence = data.substring(i,i+PF);
+			selectedState = getExistingStateFromSequence(currentSubSequence);			
+			selectedState.incremetHitCounter();
+			
+			adjustIntensity(currentSubSequence, 0.0625,400);
+		}
 	}
+	
+	/**
+	 * Increments the intensity value of the current state by a specified fixed value and reduces the intensity of
+	 * other states by a fixed value. Rule of thumb increment value > decrement value.
+	 * @param sequence
+	 * @param decayValue
+	 */
+	public void adjustIntensity(String sequence, double decayValue, int threshold)
+	{
+		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
+		FSMNode tempNode = null;
+		
+		while(nodeIter.hasNext())
+		{			
+			tempNode = nodeIter.next();
+			
+			if(tempNode.getMappedSequence().equalsIgnoreCase(sequence) && tempNode.getHits() < threshold)
+			{
+				tempNode.increaseIntensity(1.0);
+				tempNode.setSkips(1);
+			}
+			else if(tempNode.getSkips() > 0  && tempNode.getHits() < threshold)
+			{
+				tempNode.decreseSkipCount();
+			}
+			else if(tempNode.getSkips() == 0 && tempNode.getHits() < threshold)
+			{
+				tempNode.decayIntensity(decayValue);
+			}
+			
+		}
+	}
+
 }
