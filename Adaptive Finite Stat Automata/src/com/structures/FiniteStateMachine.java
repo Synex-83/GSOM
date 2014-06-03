@@ -18,6 +18,7 @@ public class FiniteStateMachine {
 	private int PF = 0; // participant factor how many characters are considered for a given instance
 	
 	private ArrayList<FSMNode> SET_OF_NODES = null;
+	private ArrayList<FSMNode> MATURE_STATES = null;
 	private ArrayList<Link> SET_OF_LINKS = null;
 	
 	//=================== CONSTRUCTOR ===================
@@ -36,6 +37,7 @@ public class FiniteStateMachine {
 		PF = participantFactor;
 		SET_OF_NODES = new ArrayList<FSMNode>();
 		SET_OF_LINKS = new ArrayList<Link>();
+		MATURE_STATES = new ArrayList<FSMNode>();
 		
 		FSMNode previous = null;
 		FSMNode current = null;
@@ -81,7 +83,7 @@ public class FiniteStateMachine {
 			previous = current;			
 		}
 				
-		printListsOfStateMachine(option);	
+		//printListsOfStateMachine(option);	
 	}
 	
 	//=================== ACCESSOR METHODS =======================
@@ -94,17 +96,25 @@ public class FiniteStateMachine {
 	}
 
 	/**
-	 * @return the sET_OF_NODES
+	 * @return the SET_OF_NODES
 	 */
 	public ArrayList<FSMNode> getStates() {
 		return SET_OF_NODES;
 	}
 
 	/**
-	 * @return the sET_OF_LINKS
+	 * @return the SET_OF_LINKS
 	 */
-	public ArrayList<Link> getSET_OF_LINKS() {
+	public ArrayList<Link> getTransitions() {
 		return SET_OF_LINKS;
+	}
+	
+	/**
+	 * @return the MATURE_STATES
+	 */
+	public ArrayList<FSMNode> getMatureStates()
+	{
+		return MATURE_STATES;
 	}
 	
 	//================== CLASS METHODS ============================
@@ -246,7 +256,8 @@ public class FiniteStateMachine {
 			if(option == 1)
 			{
 				System.out.println("State: "+tempNode.getMappedSequence().toString() + "\tis start state = "+ tempNode.isStartNode()
-						+ "\tHit Count = " + tempNode.getHits() + "\tIntensity = " + tempNode.getIntensity());
+						+ " \tHit Count = " + tempNode.getHits() + " \tIntensity = " + tempNode.getIntensity() 
+						+ " \tMature Iteration = " +tempNode.getMaturePresentation() +" \t" + tempNode.isMature());
 				
 				totalHits += tempNode.getHits();
 			}
@@ -272,12 +283,55 @@ public class FiniteStateMachine {
 			while(linkIter.hasNext())
 			{
 				temp = linkIter.next();
-				System.out.println(temp.getLinkId() + "  "+ temp.getOriginator().getMappedSequence().toString() + "  -->  " 
-					+ temp.getDestination().getMappedSequence().toString());
+				System.out.println(temp.getLinkId() + " \t"+ temp.getOriginator().getMappedSequence().toString() + "  -->  " 
+					+ temp.getDestination().getMappedSequence().toString() + " \t" +temp.getIntensity());
+			}
+		}
+	}
+	
+	/**
+	 * Given the previous and the current states initializes the link between the states for learning.
+	 * @param current
+	 * @param previous
+	 */
+	private void processCurrentLink(FSMNode current, FSMNode previous)
+	{
+		FSMNode cur = current;
+		FSMNode prev = previous;
+		Link currentLink = null;
+		
+		if(MATURE_STATES.size() >= 2 && cur.isMature() && prev.isMature())
+		{	
+			 currentLink = getLink(prev.getOutgoingLink(),cur.getMappedSequence());
+		}
+		
+		if(currentLink != null &&  !currentLink.isInitialized())
+		{
+			currentLink.setIsInitialized(true);
+			currentLink.setIntensity((currentLink.getOriginator().getIntensity() + currentLink.getDestination().getIntensity())/2);
+		}
+	}
+	
+	/**
+	 * Return if a link exists in the outlinks that has the destination subsequence specified.
+	 * @param outLinks
+	 * @param destinationSequence
+	 * @return
+	 */
+	private Link getLink(ArrayList<Integer> outLinks, String destinationSequence)
+	{
+		Link temp = null;
+		
+		for(int i = 0; i < outLinks.size(); i++ )
+		{
+			temp = SET_OF_LINKS.get(outLinks.get(i) - 1);
+			if(temp.getDestination().getMappedSequence().equalsIgnoreCase(destinationSequence))
+			{
+				return temp;
 			}
 		}
 		
-		
+		return null;
 	}
 	//================== PUBLIC METHODS =============================
 	
@@ -295,12 +349,16 @@ public class FiniteStateMachine {
 	}
 	
 	/**
-	 * @param data 
+	 * @param data
+	 * @param threshold
+	 * @param history
+	 * @param decayFactor
 	 */
-	public void createFiniteStateMachine(String data)
+	public void createFiniteStateMachine(String data, int threshold, int history, double decayFactor)
 	{
 		String currentSubSequence = null;
 		FSMNode selectedState = null;
+		FSMNode previous = null;
 				
 		int counter = data.length() - (PF) + 1;
 		for(int i = 0; i < counter; i++)
@@ -309,7 +367,19 @@ public class FiniteStateMachine {
 			selectedState = getExistingStateFromSequence(currentSubSequence);			
 			selectedState.incremetHitCounter();
 			
-			adjustIntensity(currentSubSequence, 0.0625,400);
+			if(selectedState.getHits() >= threshold && !selectedState.isMature())
+			{
+				selectedState.setMature(true);
+				selectedState.setMaturePresentation(i);
+				
+				MATURE_STATES.add(selectedState);
+			}
+			
+			processCurrentLink(selectedState,previous);
+			adjustIntensity(currentSubSequence, decayFactor,threshold, history);
+			
+			
+			previous = selectedState;
 		}
 	}
 	
@@ -318,8 +388,9 @@ public class FiniteStateMachine {
 	 * other states by a fixed value. Rule of thumb increment value > decrement value.
 	 * @param sequence
 	 * @param decayValue
+	 * @param skips number of skips before intensity decay takes place
 	 */
-	public void adjustIntensity(String sequence, double decayValue, int threshold)
+	public void adjustIntensity(String sequence, double decayValue, int threshold, int skips)
 	{
 		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
 		FSMNode tempNode = null;
@@ -331,7 +402,7 @@ public class FiniteStateMachine {
 			if(tempNode.getMappedSequence().equalsIgnoreCase(sequence) && tempNode.getHits() < threshold)
 			{
 				tempNode.increaseIntensity(1.0);
-				tempNode.setSkips(1);
+				tempNode.setSkips(skips);
 			}
 			else if(tempNode.getSkips() > 0  && tempNode.getHits() < threshold)
 			{

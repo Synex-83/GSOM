@@ -16,6 +16,7 @@ public class Link {
 	private double INTENSITY = 0.0; //Should decided on a initial value
 	
 	private boolean IS_RECURSIVE = false;
+	private boolean IS_INITIALIZED = false;
 	
 	private FSMNode ORIGINATOR = null;
 	private FSMNode DESTINATION = null;
@@ -43,6 +44,13 @@ public class Link {
 	 */
 	public double getIntensity() {
 		return INTENSITY;
+	}
+	
+	/**
+	 * @param value the INTENSITY to set
+	 */
+	public void setIntensity(double value){
+		INTENSITY = value;
 	}
 
 
@@ -74,4 +82,20 @@ public class Link {
 	public FSMNode getDestination() {
 		return DESTINATION;
 	}	
+	
+	/**
+	 * @return the IS_INITIALIZED
+	 */
+	public boolean isInitialized()
+	{
+		return IS_INITIALIZED;
+	}
+	
+	/**
+	 * @param value the IS_INITIALIZED to set
+	 */
+	public void setIsInitialized(boolean value)
+	{
+		IS_INITIALIZED = value;
+	}
 }

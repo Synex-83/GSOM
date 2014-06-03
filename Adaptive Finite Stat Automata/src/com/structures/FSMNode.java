@@ -17,6 +17,7 @@ public class FSMNode {
 
 	private int NUMBER_OF_HITS = 0;
 	private int NUMBER_OF_SKIPS = 0;
+	private int MATURE_PRESENTATION_NUMBER =0;
 	
 	private double INTENSITY = 0;
 	
@@ -162,6 +163,22 @@ public class FSMNode {
 		NUMBER_OF_SKIPS = value;
 	}
 	
+	/**
+	 * @return MATURE_PRESENTATION_NUMBER;
+	 */
+	public int getMaturePresentation()
+	{
+		return MATURE_PRESENTATION_NUMBER;
+	}
+	
+	/**
+	 * Sets the MATURE_PRESENTATION_NUMBER
+	 * @param value
+	 */
+	public void setMaturePresentation(int value)
+	{
+		MATURE_PRESENTATION_NUMBER = value;
+	}
 	//========== CLASS METHODS ================
 	//========== PUBLIC METHODS =================
 	
