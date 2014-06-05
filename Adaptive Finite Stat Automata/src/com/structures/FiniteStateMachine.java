@@ -17,9 +17,12 @@ public class FiniteStateMachine {
 	private int NUMBER_OF_STATE = 0;
 	private int PF = 0; // participant factor how many characters are considered for a given instance
 	
+	private double LEARNING_RATE = 0.0;
+	
 	private ArrayList<FSMNode> SET_OF_NODES = null;
 	private ArrayList<FSMNode> MATURE_STATES = null;
 	private ArrayList<Link> SET_OF_LINKS = null;
+	private ArrayList<Link> INITIALIZED_LINKS = null;
 	
 	//=================== CONSTRUCTOR ===================
 	
@@ -38,6 +41,7 @@ public class FiniteStateMachine {
 		SET_OF_NODES = new ArrayList<FSMNode>();
 		SET_OF_LINKS = new ArrayList<Link>();
 		MATURE_STATES = new ArrayList<FSMNode>();
+		INITIALIZED_LINKS = new ArrayList<Link>();
 		
 		FSMNode previous = null;
 		FSMNode current = null;
@@ -115,6 +119,22 @@ public class FiniteStateMachine {
 	public ArrayList<FSMNode> getMatureStates()
 	{
 		return MATURE_STATES;
+	}
+	
+	/**
+	 * @return
+	 */
+	public double getLearningRate()
+	{
+		return LEARNING_RATE;
+	}
+	
+	/**
+	 * @param value
+	 */
+	public void setLearningRate(double value)
+	{
+		LEARNING_RATE = value;
 	}
 	
 	//================== CLASS METHODS ============================
@@ -293,12 +313,14 @@ public class FiniteStateMachine {
 	 * Given the previous and the current states initializes the link between the states for learning.
 	 * @param current
 	 * @param previous
+	 * @return 
 	 */
-	private void processCurrentLink(FSMNode current, FSMNode previous)
+	private Link processCurrentLink(FSMNode current, FSMNode previous)
 	{
 		FSMNode cur = current;
 		FSMNode prev = previous;
 		Link currentLink = null;
+		double tempIntensity = 0;
 		
 		if(MATURE_STATES.size() >= 2 && cur.isMature() && prev.isMature())
 		{	
@@ -308,8 +330,14 @@ public class FiniteStateMachine {
 		if(currentLink != null &&  !currentLink.isInitialized())
 		{
 			currentLink.setIsInitialized(true);
-			currentLink.setIntensity((currentLink.getOriginator().getIntensity() + currentLink.getDestination().getIntensity())/2);
+			
+			tempIntensity = LEARNING_RATE*((currentLink.getOriginator().getIntensity() + currentLink.getDestination().getIntensity()));
+			currentLink.setIntensity(tempIntensity/2);
+			
+			INITIALIZED_LINKS.add(currentLink);
 		}
+		
+		return currentLink;
 	}
 	
 	/**
@@ -354,12 +382,14 @@ public class FiniteStateMachine {
 	 * @param history
 	 * @param decayFactor
 	 */
-	public void createFiniteStateMachine(String data, int threshold, int history, double decayFactor)
+	public void createFiniteStateMachine(String data, int threshold, int history, double decayFactor, double eta)
 	{
 		String currentSubSequence = null;
 		FSMNode selectedState = null;
 		FSMNode previous = null;
+		Link activeLink = null;
 				
+		LEARNING_RATE = eta;
 		int counter = data.length() - (PF) + 1;
 		for(int i = 0; i < counter; i++)
 		{
@@ -375,8 +405,11 @@ public class FiniteStateMachine {
 				MATURE_STATES.add(selectedState);
 			}
 			
-			processCurrentLink(selectedState,previous);
-			adjustIntensity(currentSubSequence, decayFactor,threshold, history);
+			activeLink = processCurrentLink(selectedState,previous); //adds newly initialized links
+			adjustStateIntensity(currentSubSequence, decayFactor,threshold, history); //adjusts the intensity of nodes
+			
+			adjustLinkIntensity(activeLink,i);
+			
 			
 			
 			previous = selectedState;
@@ -384,13 +417,41 @@ public class FiniteStateMachine {
 	}
 	
 	/**
+	 * Adjust the intensity of the links using learning. 
+	 * @param activeLink
+	 */
+	private void adjustLinkIntensity(Link activeLink, int presentation)
+	{
+		// TODO Auto-generated method stub
+		Iterator<Link> linkIter = INITIALIZED_LINKS.iterator();
+		Link temp = null;
+		double intensityContribution = 0.0;
+		
+		while(linkIter.hasNext())
+		{
+			 temp = linkIter.next();
+			 
+			 if(temp.equals(activeLink))
+			 {
+				// System.out.println("SKIP");
+				 intensityContribution = (LEARNING_RATE*(temp.getOriginator().getIntensity() + temp.getDestination().getIntensity()))/2;
+				 temp.setIntensity((temp.getIntensity() + intensityContribution));
+			 }
+			 else
+			 {
+				 //temp.setIntensity(temp.getIntensity()/20000);
+			 }
+		}
+	}
+
+	/**
 	 * Increments the intensity value of the current state by a specified fixed value and reduces the intensity of
 	 * other states by a fixed value. Rule of thumb increment value > decrement value.
 	 * @param sequence
 	 * @param decayValue
 	 * @param skips number of skips before intensity decay takes place
 	 */
-	public void adjustIntensity(String sequence, double decayValue, int threshold, int skips)
+	public void adjustStateIntensity(String sequence, double decayValue, int threshold, int skips)
 	{
 		Iterator<FSMNode> nodeIter = SET_OF_NODES.iterator();
 		FSMNode tempNode = null;
@@ -399,16 +460,18 @@ public class FiniteStateMachine {
 		{			
 			tempNode = nodeIter.next();
 			
-			if(tempNode.getMappedSequence().equalsIgnoreCase(sequence) && tempNode.getHits() < threshold)
+			if(tempNode.getMappedSequence().equalsIgnoreCase(sequence)) //&& tempNode.getHits() < threshold used to check intensity at threshold 
 			{
 				tempNode.increaseIntensity(1.0);
 				tempNode.setSkips(skips);
+				
+				System.out.println(sequence+"\t"+tempNode.getIntensity());
 			}
-			else if(tempNode.getSkips() > 0  && tempNode.getHits() < threshold)
+			else if(tempNode.getSkips() > 0) //  && tempNode.getHits() < threshold
 			{
 				tempNode.decreseSkipCount();
 			}
-			else if(tempNode.getSkips() == 0 && tempNode.getHits() < threshold)
+			else if(tempNode.getSkips() == 0)// && tempNode.getHits() < threshold
 			{
 				tempNode.decayIntensity(decayValue);
 			}

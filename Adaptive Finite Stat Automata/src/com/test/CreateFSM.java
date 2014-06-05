@@ -28,11 +28,11 @@ public class CreateFSM {
 		
 		FiniteStateMachine FSM = new FiniteStateMachine(2,2,data);
 		
-		FSM.createFiniteStateMachine(data,400,1,0.0625);
+		FSM.createFiniteStateMachine(data,800,1,0.0625, 0.25);
 		
 		System.out.println("==================== AFTER PRESENTATION ========================");
-		FSM.printStateMaching(1);
-		FSM.printStateMaching(2);
+		//FSM.printStateMaching(1);
+		//FSM.printStateMaching(2);
 
 	}
 
