@@ -202,6 +202,7 @@ public class FSMNode {
 		//System.out.println("CURRENT WINNER:-X " + CURRENT_WINNER.getX() + " Y " + CURRENT_WINNER.getY());
 		setHollow(true);
 		IS_REPEAT = false; //reinitilizes the repeater with the movement of the node to new location.
+		IS_COMPOUND = false;
 		REPEAT.clear();
 		resetNumberOfHits();
 	}

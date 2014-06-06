@@ -107,6 +107,15 @@ public class FiniteStateMachine implements Serializable {
 				if(current.getCurrentWinner().equals(winner))
 				{
 					current.incrementHitCount();
+					
+					if(current.getHits() >= THRESHOLD && current.isHollow()) //current.getCurrentWinner().getNumberOfHits()
+					{	
+						current.setHollow(false);
+						current.setIteration(curr_iter);
+					}
+					
+					updateNoWinnerChange(current, previous);
+					compounder(previous, current, curr_iter);
 				}
 				else
 				{			
@@ -115,11 +124,13 @@ public class FiniteStateMachine implements Serializable {
 						current.resetNumberOfHits();
 						current.setCurrentWinner(winner);
 						resetCompoundArrays(current);
+						
+						updateWinnerChange(current, previous);
 					//}
 				}
 				
 	//// ##################################################################################################################################			
-				update(current,previous,winner,learningRate,radius,curr_iter); //trigger link update
+				//update(current,previous,winner,learningRate,radius,curr_iter); //trigger link update
 				addNewNode = false;
 				break;
 			}
@@ -147,6 +158,64 @@ public class FiniteStateMachine implements Serializable {
 		return current;
 	}
 
+	private void updateNoWinnerChange(FSMNode current, FSMNode previous)
+	{
+		if(previous!=null &&  (previous.getSequence().equals(current.getSequence())))
+		{
+			REPEAT++;
+			current.addRepeat(REPEAT);
+		
+			System.out.println(current.getSequence() + "\t =========ADD REPEAT" + REPEAT);
+		}
+		else
+		{
+			REPEAT = 0;
+			
+			if(previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
+			{
+				//System.out.println("LINK ADDED =============================");
+				LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
+				previous.addOutgoingLink(LINK_NUMBERS);
+				current.addIncomingLink(LINK_NUMBERS);
+				
+				LINK_NUMBERS++;
+				
+			}
+		}
+	}
+	
+	
+	private void updateWinnerChange(FSMNode current, FSMNode previous)
+	{
+		REPEAT = 0;
+		
+		if(  previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
+		{
+			//System.out.println("LINK ADDED =============================");
+			LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
+			previous.addOutgoingLink(LINK_NUMBERS);
+			current.addIncomingLink(LINK_NUMBERS);
+			
+			LINK_NUMBERS++;
+			
+		}
+	}
+	
+	private void compounder(FSMNode previous, FSMNode current, int cur_iter)
+	{
+		if(previous!=null  && !current.isHollow() && !previous.isHollow() && linkExists(current, previous))
+		{
+			processCompound(previous,current,cur_iter);
+			//processZeroMap(previous, current, learningRate, radius);
+			COMPOUND_COUNTER++;
+		}
+		else
+		{
+			COMPOUND_COUNTER = 0;
+		}
+	}
+	
+	
 	/**
 	 * @param temp
 	 * @param winner

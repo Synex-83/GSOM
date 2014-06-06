@@ -43,7 +43,7 @@ public class TestSOM {
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,1000,0,3); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,600,0,3); //null; //
 		
 		//============SERIALIZE================
 		
