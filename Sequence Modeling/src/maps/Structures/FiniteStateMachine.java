@@ -160,8 +160,8 @@ public class FiniteStateMachine implements Serializable {
 		{
 			System.out.println(current.getSequence() + "\t" + current.getCurrentWinner().getX() + "\t" + current.getCurrentWinner().getY()+"\t"+current.getHits()+"\t"+current.getCurrentWinner().getNumberOfHits() +"\t" + current.isHollow() +"\t" +  current.isCOMPOUND() + "\t" + current.isRepeat());
 		}*/
-		
-		if(previous!=null &&  !(current.getCurrentWinner().equals(winner)) && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
+		//&&  !(current.getCurrentWinner().equals(winner))
+		if(previous!=null  && !(previous.getSequence().equals(current.getSequence()))) //previous!=null && 
 		{
 			//current.setCurrentWinner(winner);
 			//resetCompoundArrays(current);
@@ -177,8 +177,9 @@ public class FiniteStateMachine implements Serializable {
 				current.addIncomingLink(LINK_NUMBERS);
 				
 				LINK_NUMBERS++;
-				REPEAT = 0;
+				
 			}
+			REPEAT = 0;
 		}
 		else if(previous!=null &&  (previous.getSequence().equals(current.getSequence())))
 		{
@@ -187,7 +188,8 @@ public class FiniteStateMachine implements Serializable {
 				REPEAT++;
 				current.addRepeat(REPEAT);
 			}
-			//System.out.println("============================================================ADD REPEAT" + REPEAT);
+			System.out.println(current.getSequence() + "\t =========ADD REPEAT" + REPEAT);
+			//REPEAT = 0;
 		}
 		else
 		{

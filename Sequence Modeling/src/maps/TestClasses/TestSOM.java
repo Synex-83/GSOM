@@ -35,10 +35,10 @@ public class TestSOM {
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt"
 		//"C:\\Users\\User\\Desktop\\Normal FSM vs My Version\\data6.txt"
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\D38112.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\exe.txt", 1); 
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
-		length = 61;
+		length = 100;
 		threshold = (int)Math.round((length/41)*(100)*(0));
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
@@ -56,7 +56,7 @@ public class TestSOM {
 		
 		//=============DESERIALIZE===============		
 
-			FileInputStream fin = new FileInputStream("address.ser");
+		/*	FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
@@ -64,7 +64,7 @@ public class TestSOM {
 
 			SOM.FSM.setThreshold(threshold);
 			
-			System.out.println("THRESHOLD SET");
+			System.out.println("THRESHOLD SET");*/
 		
 
 			System.out.println("====================================================================================");
