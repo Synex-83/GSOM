@@ -39,6 +39,7 @@ public class FSMNode {
 	private boolean HOLLOW = true;
 	private boolean IS_REPEAT = false;
 	private boolean IS_COMPOUND = false;
+	private boolean IS_RUN = false;
 	private int COMPOUND_COUNT = 0;
 	private int NUMBER_OF_HITS = 0;
 	
@@ -207,6 +208,15 @@ public class FSMNode {
 		resetNumberOfHits();
 	}
 
+	public void setIsRun(boolean value)
+	{
+		IS_RUN = value;
+	}
+	
+	public boolean IsRun()
+	{
+		return IS_RUN;
+	}
 
 	/**
 	 * @param winner

@@ -93,11 +93,11 @@ public class Edge {
 	{
 	//	System.out.println("*****************************************" + origin.getX() );
 	//	System.out.println("*****************************************" + destination.getX() );
-		double diffX = Math.pow(origin.getX() - destination.getX(),2);
-		double diffY = Math.pow(origin.getY() - destination.getY(),2);
+	//	double diffX = Math.pow(origin.getX() - destination.getX(),2);
+	//	double diffY = Math.pow(origin.getY() - destination.getY(),2);
 	
 		
-		return Math.sqrt(diffX + diffY);
+		return 0; //Math.sqrt(diffX + diffY);
 	}
 
 	/**

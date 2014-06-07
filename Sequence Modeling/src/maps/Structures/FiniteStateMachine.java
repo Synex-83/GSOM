@@ -37,7 +37,7 @@ public class FiniteStateMachine implements Serializable {
 	private int REPEAT= 0;
 
 	
-	public FiniteStateMachine(int threhold, int iteration, int fileOption, Node[][] map)
+	public FiniteStateMachine(int threhold, int iteration, int fileOption, Node[][] map, String data, int PF)
 	{
 		FSM = new Vector<FSMNode>();
 		LINKS = new Vector<Edge>();
@@ -46,9 +46,87 @@ public class FiniteStateMachine implements Serializable {
 		ITERATION = iteration;
 		FILE_OPTION = fileOption;
 		ZERO_MAP = map;
+		
+		FSMNode previous = null;
+		FSMNode current = null;
+		Edge tempLink = null;
+		
+		
+		int linkCounter = 1;
+		
+		int counter = data.length() - (PF) + 1;
+		for(int i = 0; i < counter; i++)
+		{
+			current = new FSMNode(data.substring(i,i+PF));
+			
+			//checks the availability of the state and if the state is not already found the subsequences is added
+			//as a new state to the finite state machine.
+			if(!stateExists(current))
+			{
+				FSM.add(current);							
+			}
+			else
+			{
+				current = getExistingState(current);
+			}
+			
+			//check the availability of the link  and if it is not already discovered it is created as a new link and 
+			//added to the links list of the finite state machine
+			if(previous!=null)
+			{
+				if(!linkExists(current, previous))
+				{
+					tempLink = new Edge( previous, current, linkCounter);
+					LINKS.add(tempLink);
+					previous.addOutgoingLink(tempLink.getEdgeID()); //sets the link as an outgoing link of previous
+					current.addIncomingLink(tempLink.getEdgeID()); //sets the link as an incoming link of previous
+					linkCounter++;
+				}
+			}			
+			
+			previous = current;			
+		}		
 	}
 
 
+	private boolean stateExists(FSMNode node)
+	{	
+		Iterator<FSMNode> nodeIter = FSM.iterator();
+		FSMNode temp = null;
+		
+		
+		while(nodeIter.hasNext())
+		{
+			temp = nodeIter.next();
+			
+			if(temp.getSequence().equalsIgnoreCase(node.getSequence()))
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private FSMNode getExistingState(FSMNode node)
+	{
+		Iterator<FSMNode> nodeIter = FSM.iterator();
+		FSMNode temp = null;
+		
+		
+		while(nodeIter.hasNext())
+		{
+			temp = nodeIter.next();
+			
+			if(temp.getSequence().equalsIgnoreCase(node.getSequence()))
+			{
+				break;
+			}
+		}
+		
+		return temp;
+	}
+	
 	
 	public void setThreshold(int hitCount)
 	{
@@ -80,6 +158,50 @@ public class FiniteStateMachine implements Serializable {
 		COMPOUND_COUNTER = 0;
 	}
 
+	public FSMNode addUpdateNodeNew(FSMNode current, FSMNode previous, Node winner, double learningRate, double radius, int curr_iter)
+	{
+
+		FSMNode temp = getExistingState(current); 
+				
+		if(!temp.IsRun())
+		{
+				current = temp;
+				current.setIsRun(true);
+				current.setWinner(winner);
+				current.setFocus(true);
+		}
+		else
+		{
+			if((temp.getSequence().trim()).equals(current.getSequence().trim()) )
+			{
+				//System.out.println("NODE EXISTS:-" + temp.getSequence()); //should return temp upon finding
+				current = temp; //object equivalence will fix the issue.		
+			
+				if(current.getCurrentWinner().equals(winner))
+				{
+					current.incrementHitCount();
+				
+					if(current.getHits() >= THRESHOLD && current.isHollow()) //current.getCurrentWinner().getNumberOfHits()
+					{	
+						current.setHollow(false);
+						current.setIteration(curr_iter);
+					}
+					
+					updateNoWinnerChange(current, previous);
+					compounder(previous, current, curr_iter);
+				}	
+				else
+				{			
+					current.resetNumberOfHits();
+					current.setCurrentWinner(winner);
+					resetCompoundArrays(current);						
+					updateWinnerChange(current, previous);
+				}
+			}
+		}	
+		return current;
+	}
+	
 	/**
 	 * @param node
 	 * @param winner
@@ -171,7 +293,7 @@ public class FiniteStateMachine implements Serializable {
 		{
 			REPEAT = 0;
 			
-			if(previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
+/*			if(previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
 			{
 				//System.out.println("LINK ADDED =============================");
 				LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
@@ -180,7 +302,7 @@ public class FiniteStateMachine implements Serializable {
 				
 				LINK_NUMBERS++;
 				
-			}
+			}*/
 		}
 	}
 	
@@ -189,7 +311,7 @@ public class FiniteStateMachine implements Serializable {
 	{
 		REPEAT = 0;
 		
-		if(  previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
+/*		if(  previous !=null && !(linkExists(current, previous)) && !(current.getSequence().contains("XX")))
 		{
 			//System.out.println("LINK ADDED =============================");
 			LINKS.add(new Edge(previous, current, LINK_NUMBERS));//no length init
@@ -198,7 +320,7 @@ public class FiniteStateMachine implements Serializable {
 			
 			LINK_NUMBERS++;
 			
-		}
+		}*/
 	}
 	
 	private void compounder(FSMNode previous, FSMNode current, int cur_iter)

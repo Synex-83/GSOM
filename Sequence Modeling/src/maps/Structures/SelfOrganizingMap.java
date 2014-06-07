@@ -85,7 +85,7 @@ public class SelfOrganizingMap implements Serializable {
 	 * Basic constructor for the self-organizing maps algorithms. 
 	 * ENTRY POINT FOR THE ENTIRE ALGORITHM
 	 */
-	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, boolean isZehourai, int covarianceNumber, int threshold, int iteration, int vector)
+	public SelfOrganizingMap(int numberOfNodes, int inputDimensison, boolean isMatrixMode, boolean isZehourai, int covarianceNumber, int threshold, int iteration, int vector, String data)
 	{
 		//The number of elements in the weight vector used in the weighted covariance matrix is directly proportional 
 		//to the number of attributes in the input vector.
@@ -140,7 +140,7 @@ public class SelfOrganizingMap implements Serializable {
 		MAX_RADIUS = side/2;
 		
 		ZERO_MAP = new Node[side][side]; //initializes the 3d layer to contains sequence draws.		
-		FSM = new FiniteStateMachine(threshold, iteration, vector,ZERO_MAP); //initiates a new FSM which essentially creates the V layer
+		FSM = new FiniteStateMachine(threshold, iteration, vector,ZERO_MAP, data, COVARIANCE_NUMBER); //initiates a new FSM which essentially creates the V layer
 		IS_ZEHOURAI_MODE = isZehourai;
 		
 		//The initialization of the SOM is different based on the type of structure used to hold node weights.
@@ -665,7 +665,7 @@ public class SelfOrganizingMap implements Serializable {
 										
 					//creating a new node would be a problem if in case the sequence is already in the FSM system.
 					
-					current = FSM.addUpdateNode(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS,CURRENT_ITERATION);
+					current = FSM.addUpdateNodeNew(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS,CURRENT_ITERATION);
 										
 					//FSM.edgeIntesityDecay(CURRENT_PRESENTATION_NUMBER, PRESENTATION_NUMBER);
 					//FSM.updateEdgeIntensity(current, PREVIOUS, winner);
@@ -718,6 +718,7 @@ public class SelfOrganizingMap implements Serializable {
 	/**
 	 * @param winner
 	 */
+	@SuppressWarnings("unused")
 	private void calculateIntensityContribution(Node winner, int radius) 
 	{
 		double distance = 0;

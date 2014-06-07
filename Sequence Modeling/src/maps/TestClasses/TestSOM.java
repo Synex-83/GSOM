@@ -28,6 +28,7 @@ public class TestSOM {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		FileProcessing fp = null;
+		FileProcessing fp1 = null;
 		int th = 0;
 		int length = 0;
 		int threshold = 0;
@@ -36,6 +37,7 @@ public class TestSOM {
 		//"C:\\Users\\User\\Desktop\\Normal FSM vs My Version\\data6.txt"
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
 		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\exe.txt", 1); 
+		fp1 = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\exeS.txt", 1); 
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
 		length = 100;
@@ -43,7 +45,7 @@ public class TestSOM {
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,600,0,3); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,600,0,3,fp1.readFileContinuous()); //null; //
 		
 		//============SERIALIZE================
 		

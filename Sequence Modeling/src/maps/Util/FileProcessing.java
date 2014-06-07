@@ -126,6 +126,31 @@ public class FileProcessing {
 		return temp;
 	}
 	
+	
+	public String readFileContinuous()
+	{
+		String temp = "";
+	
+		try
+		{
+			FileReader file = new FileReader(FILE_LOCATION);
+			BR = new BufferedReader(file);
+			String strLine = null;
+
+			while((strLine = BR.readLine()) != null)
+			{
+				temp += strLine;
+			}
+		}
+		catch(Exception e)
+		{
+			
+		}
+
+		return temp;
+	}
+	
+	
 	public String readFileLine()
 	{
 		String temp = "";
