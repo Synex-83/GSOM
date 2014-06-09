@@ -287,7 +287,7 @@ public class FiniteStateMachine implements Serializable {
 			REPEAT++;
 			current.addRepeat(REPEAT);
 		
-			System.out.println(current.getSequence() + "\t =========ADD REPEAT" + REPEAT);
+			//System.out.println(current.getSequence() + "\t =========ADD REPEAT" + REPEAT);
 		}
 		else
 		{

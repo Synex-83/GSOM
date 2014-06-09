@@ -33,15 +33,15 @@ public class TestSOM {
 		int length = 0;
 		int threshold = 0;
 		
-		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt"
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\exe.txt"
 		//"C:\\Users\\User\\Desktop\\Normal FSM vs My Version\\data6.txt"
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\exe.txt", 1); 
-		fp1 = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\exeS.txt", 1); 
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt", 1); 
+		fp1 = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\platypus - X83427.txt", 1); 
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
-		length = 100;
-		threshold = (int)Math.round((length/41)*(100)*(0));
+		length = 17019;
+		threshold = (int)Math.round((length/16)*(100)*(0.8));
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
@@ -62,11 +62,11 @@ public class TestSOM {
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
-			System.out.println("Done Retrieving the serialized object.");
+			System.out.println("Done Retrieving the serialized object.");*/
 
 			SOM.FSM.setThreshold(threshold);
 			
-			System.out.println("THRESHOLD SET");*/
+			System.out.println("THRESHOLD SET");
 		
 
 			System.out.println("====================================================================================");
