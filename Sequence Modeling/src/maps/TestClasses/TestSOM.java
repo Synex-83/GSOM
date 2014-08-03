@@ -49,7 +49,7 @@ public class TestSOM {
 		
 		//============SERIALIZE================
 		
-	/*	FileOutputStream fout = new FileOutputStream("address.ser");
+/*		FileOutputStream fout = new FileOutputStream("address.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();
@@ -58,11 +58,11 @@ public class TestSOM {
 		
 		//=============DESERIALIZE===============		
 
-		/*	FileInputStream fin = new FileInputStream("address.ser");
+			FileInputStream fin = new FileInputStream("addressALT.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
-			System.out.println("Done Retrieving the serialized object.");*/
+			System.out.println("Done Retrieving the serialized object.");
 
 			SOM.FSM.setThreshold(threshold);
 			

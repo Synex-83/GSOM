@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -104,11 +105,15 @@ public class SelfOrganizingMap{
 			//System.out.println(CURRENT_ITERATION);
 		}
 		
-		extractSmallerUMatrix(true);
-		exportSmallUMatrixToCSV(CURRENT_ITERATION);
+		if(CURRENT_ITERATION%10 == 0)
+		{
+			extractSmallerUMatrix(true);
+			exportSmallUMatrixToCSV(CURRENT_ITERATION);
+		}
 		
-		extractSmallerUMatrix(false);
-		exportSmallUMatrixToCSV(0);
+		printSOMHits();
+		//extractSmallerUMatrix(false);
+		//exportSmallUMatrixToCSV(0);
 	}
 	
 	private void exportWeights(int iterations)
@@ -153,6 +158,9 @@ public class SelfOrganizingMap{
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				
+				adjustHits(winner, inputVector[0]);
+				
 				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 							
 				System.out.println( inputVector[0] +  "\tWINNER x =" + winner.getX() + " y= " + winner.getY() );
@@ -194,6 +202,8 @@ public class SelfOrganizingMap{
 				}
 				winner = setAccumulatedValue(new ArrayRealVector(temp));
 							
+				
+				
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("===============================");
 
@@ -202,6 +212,36 @@ public class SelfOrganizingMap{
 	}
 	
 	
+	private void adjustHits(Node winner, String string) {
+		// TODO Auto-generated method stub
+		Iterator<HitHolder> ite = winner.hitList.iterator();
+		HitHolder temp = null;
+		boolean exists = false;
+		
+		
+		while(ite.hasNext())
+		{
+			temp = ite.next();
+			
+			if(temp.element.equalsIgnoreCase(string))
+			{
+				if(temp.getFirstIteration() == -1)
+				{
+					temp.firstIteration = CURRENT_ITERATION;
+				}
+				
+				temp.lastIteration = CURRENT_ITERATION;
+				temp.numberOfHits++;
+				exists = true;
+			}
+		}
+		
+		if(!exists)
+		{
+			winner.hitList.add(new HitHolder(string, CURRENT_ITERATION));
+		}
+	}
+
 	/**
 	 * @param winner as the winner node of the input presentation
 	 * @param inputVector as the input vector recently presented to the network
@@ -401,6 +441,38 @@ public class SelfOrganizingMap{
 		
 		//System.out.println("===============================");
 	}
+	
+	public void printSOMHits()
+	{
+		HitHolder temp = null;
+		Iterator<HitHolder> ite = null;
+		System.out.println("===========================================================");
+		for(int i = 0 ; i < SOM.length; i++)
+		{
+			for(int j=0; j < SOM[0].length; j++)
+			{				
+				if(SOM[i][j].hitList.size() != 0)
+				{
+					System.out.println("******************************************************");
+					System.out.println("X =" + SOM[i][j].getX() + " Y =" + SOM[i][j].getY());
+					ite = SOM[i][j].hitList.iterator();
+					
+					while(ite.hasNext())
+					{
+						temp = ite.next();
+						System.out.println("Element\t"+temp.element + "\tHits=\t" + temp.numberOfHits
+							+ "\tFirst\t" + temp.firstIteration + "\tLast\t" + temp.lastIteration);
+					}
+				}
+				//System.out.println(i + " " + j);
+				//System.out.println("X =" + SOM[i][j].getX() + " Y =" + SOM[i][j].getY() + " ACTIVATION VALUE =" + SOM[i][j].getACTIVATION_VALUE());
+				//System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+			}
+			
+		}
+		
+		//System.out.println("===============================");
+	}
 		
 	/**
 	 * Extracts a smaller U-Matrix Using norm values
@@ -434,7 +506,7 @@ public class SelfOrganizingMap{
 		
 		try
 		{
-			bw = new BufferedWriter(new FileWriter("C:\\Users\\User\\Desktop\\Hit Count Expr\\Zoo-"+iteration+".csv",false));
+			bw = new BufferedWriter(new FileWriter("C:\\Users\\Manjusri\\Desktop\\Hit Count Expr\\Zoo-"+iteration+".csv",false));
 			
 			for(int i = 0 ; i < U_MATRIX_SHRINK.length; i++){
 				for(int j = 0; j < U_MATRIX_SHRINK[0].length; j++){

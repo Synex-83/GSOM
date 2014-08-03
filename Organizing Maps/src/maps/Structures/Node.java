@@ -4,6 +4,8 @@
  */
 package maps.Structures;
 
+import java.util.ArrayList;
+
 import org.apache.commons.math3.linear.*;
 
 /**
@@ -18,6 +20,8 @@ public class Node {
 	private int POSITION_X = 0; //x position in the 2D grid
  	private int POSITION_Y = 0; //y position in the 2D grid
  	private double ACTIVATION_VALUE = 0.0; //value after weight vector * input vector
+ 	
+ 	public ArrayList<HitHolder> hitList = null;
 	
 	//========================= CONSTRUCTORS ==========================================
  	/**
@@ -27,6 +31,7 @@ public class Node {
  	 */
 	public Node(int Dimensions, int x, int y)
 	{
+		hitList = new ArrayList<HitHolder>();
 		DIMENSION = Dimensions;	
 		setWeightVector();
 		POSITION_X = x;

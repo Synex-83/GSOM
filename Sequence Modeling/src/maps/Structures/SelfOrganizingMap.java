@@ -1383,8 +1383,8 @@ public class SelfOrganizingMap implements Serializable {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.6,0.4};// -- {0.5,0.33,0.17} for 3
-	//	double mean[] = {0.32381,0.279958,0.26426,0.131973};
+	//	double mean[] = //{0.5,0.33,0.17} for 3 //{0.6,0.4};
+		double mean[] = {0.32381,0.279958,0.26426,0.131973};
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];

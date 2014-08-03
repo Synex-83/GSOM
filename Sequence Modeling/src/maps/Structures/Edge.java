@@ -3,13 +3,15 @@
  */
 package maps.Structures;
 
+import java.io.Serializable;
+
 /**
  * @author 		Manjusri Ishwara
  * @date		Nov 2, 2013 - 4:45:58 PM
  * @type        Edge
  *
  */
-public class Edge {
+public class Edge implements Serializable {
 	
 	private double EDGE_LENGTH = 0;
 	private FSMNode ORIGIN = null;

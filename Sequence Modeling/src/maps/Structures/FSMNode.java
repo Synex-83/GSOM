@@ -3,6 +3,7 @@
  */
 package maps.Structures;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
@@ -14,7 +15,7 @@ import java.util.Vector;
  * @type        FSMNode
  *
  */
-public class FSMNode {
+public class FSMNode implements Serializable {
 
 	class repeatNode{
 		public int repeatNumber = 0;
