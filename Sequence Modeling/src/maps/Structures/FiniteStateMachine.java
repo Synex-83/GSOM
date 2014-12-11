@@ -937,9 +937,9 @@ public class FiniteStateMachine implements Serializable {
 		{
 			temp = ite.next();		
 			
-			if(solidNode.contains(temp.getOrigin()) || solidNode.contains(temp.getDestination()))
+			if(solidNode.contains(temp.getOrigin()) && solidNode.contains(temp.getDestination()))
 			{
-				System.out.println(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence());
+				System.out.println(temp.getOrigin().getSequence() +" --> " + temp.getDestination().getSequence() + " HITS " +temp.getNumberOfHits());
 			}	
 		}
 		

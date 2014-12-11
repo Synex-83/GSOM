@@ -36,33 +36,38 @@ public class TestSOM {
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\exe.txt"
 		//"C:\\Users\\User\\Desktop\\Normal FSM vs My Version\\data6.txt"
 		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Pacman\\W-File\\6w.txt"
-		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\X83427.txt", 1); 
-		fp1 = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\platypus - X83427.txt", 1); 
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Other\\Thesis\\humanCSV.txt"
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Other\\Thesis\\repeat.txt"
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\Other\\Thesis\\repeatC.txt"
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\Sets\\HCE\\hce2.txt"
+		//"E:\\workspace\\GSOM\\Sequence Modeling\\data\\mtDNA\\hce2.txt"
+		fp = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Other\\Thesis\\humanCSV.txt", 1); 
+		fp1 = new FileProcessing("E:\\workspace\\GSOM\\Sequence Modeling\\data\\Other\\Thesis\\humanCSVC.txt", 1); 
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
-		length = 17019;
-		threshold = (int)Math.round((length/16)*(100)*(0.8));
+		length = 49;
+		threshold =  10000;//(int)Math.round((length/3)*(100)*(0.8));
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(10000,fp.getDataDimension(),true,false,2,600,0,3,fp1.readFileContinuous()); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(25,fp.getDataDimension(),true,false,2,1,30,3,fp1.readFileContinuous()); //null; //
 		
 		//============SERIALIZE================
 		
-/*		FileOutputStream fout = new FileOutputStream("address.ser");
+		FileOutputStream fout = new FileOutputStream("address.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();
 		fout.close();
-		System.out.println("Done Serializing");*/
+		System.out.println("Done Serializing");
 		
 		//=============DESERIALIZE===============		
 
-			FileInputStream fin = new FileInputStream("addressALT.ser");
+	/*		FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
-			System.out.println("Done Retrieving the serialized object.");
+			System.out.println("Done Retrieving the serialized object.");*/
 
 			SOM.FSM.setThreshold(threshold);
 			
@@ -77,7 +82,7 @@ public class TestSOM {
 			System.out.println("====================================================================================");
 			
 			//SelfOrganizingMap SOM = new SelfOrganizingMap(16,fp.getDataDimension(),false,2,50,0,4);
-			SOM.initTrainSOM(fp.readFile(),100,0.25);//100
+			SOM.initTrainSOM(fp.readFile(),20,0.25);//100
 			
 			//SOM.testVectorSOM(fp.readFile());
 			

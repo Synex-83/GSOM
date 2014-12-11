@@ -107,7 +107,7 @@ public class SelfOrganizingMap implements Serializable {
 		}
 		else if(vector == 3)
 		{
-			double temp[] =  {0.5,0.3,0.15,0.05};
+			double temp[] =  {0.00,0.00,0.50,0.50};//{0.5,0.3,0.15,0.05};
 			VECTOR_WEIGHTS = temp;
 		}
 		else if(vector == 4)
@@ -394,11 +394,11 @@ public class SelfOrganizingMap implements Serializable {
 			
 			if((i%100)== 0)
 			{
-				extractSmallerUMatrix(false);
-				exportSmallUMatrixToCSV(i);
+				//extractSmallerUMatrix(false);
+				//exportSmallUMatrixToCSV(i);
 							
-				extractSmallerUMatrixZERO();
-				exportSmallUMatrixToCSVZERO(i);
+				//extractSmallerUMatrixZERO();
+				//exportSmallUMatrixToCSVZERO(i);
 			}
 		//	CURRENT_PRESENTATION_NUMBER++;
 			System.out.println("Iteration = " + i + " Learning Rate = " + LEARNING_RATE + " Radius = " + RADIUS + " ******************");
@@ -796,7 +796,8 @@ public class SelfOrganizingMap implements Serializable {
 		String line = "";
 		double temp[] = null;
 		Node winner = null;
-		
+		String sequence = "";
+		FSMNode current = null;
 		
 		StringTokenizer first = new StringTokenizer(input, "\n");
 		first.nextToken();	
@@ -805,32 +806,48 @@ public class SelfOrganizingMap implements Serializable {
 		while(first.hasMoreTokens())
 		{
 			line = first.nextToken();
-			//System.out.println(line);
-			if(!line.contains("####"))
+			//System.out.println(!(line.contains("####")) );
+			
+			if(!line.contains("####")& !(line.contains("X")))
 			{
 				temp = new double[INPUT_DIMENSION];
 				String[] inputVector = line.split("\t");
+				sequence = inputVector[1].toString().trim(); //extracts the symbol from the current input presentation
 				
-				for(int i = 1; i < inputVector.length; i++)
+				for(int i = 2; i < inputVector.length; i++) //put 2 in vector mode where the point and the label are both present in data
 				{
-					temp[i-1] = Double.parseDouble(inputVector[i]);					
+					temp[i-2] = Double.parseDouble(inputVector[i]);	//put 2 in vector mode where the point and the label are both present in data				
 				}
-				winner = setAccumulatedValue(new ArrayRealVector(temp));
+				winner = setAccumulatedValue(new ArrayRealVector(temp), sequence);
 				adjustNeighbourhoodOfWinners(winner, new ArrayRealVector(temp));
 				
+				current = FSM.addUpdateNodeNew(new FSMNode(sequence), PREVIOUS, winner, LEARNING_RATE, RADIUS,CURRENT_ITERATION);
+				
+				PREVIOUS = current;
+				current = null;
+				
+				//current here
+				
+				//should stop overruns
 				tempcounter++;
 				
-				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY() + (new ArrayRealVector(temp)).toString());
-				System.out.println("=============================== " + tempcounter);
+		//		System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY() + (new ArrayRealVector(temp)).toString());
+		//		System.out.println("=============================== " + tempcounter);
 	/*			winner = setEuclideanAccumulatedValue(new ArrayRealVector(temp));
 				System.out.println("WINNER x =" + winner.getX() + " y= " + winner.getY());
 				System.out.println("*******************************");*/
+			}
+			else
+			{
+				FSM.resertCurrentCompound(); 
+				PREVIOUS = null;
 			}
 		}
 	}
 	
 	/**
 	 * @param input
+	 * BUG EXISTS DUE TO THE MODIFICATION OF THE WINNER SELECTION METHOD OF VECTOR TYPE SOM TO HANDLE FSM.
 	 */
 	public void testVectorSOM(String input)
 	{
@@ -856,7 +873,7 @@ public class SelfOrganizingMap implements Serializable {
 				{
 					temp[i-1] = Double.parseDouble(inputVector[i]);					
 				}
-				winner = setAccumulatedValue(new ArrayRealVector(temp));
+			//	winner = setAccumulatedValue(new ArrayRealVector(temp));
 				
 				tempcounter++;
 				
@@ -1082,7 +1099,7 @@ public class SelfOrganizingMap implements Serializable {
 	 * Similar to {@link #setEuclideanAccumulatedValue(ArrayRealVector)} need to use only one of these methods to select the
 	 * winner. The multiplication based method takes the maximum value.
 	 */ 
-	private Node setAccumulatedValue(ArrayRealVector input) {
+	private Node setAccumulatedValue(ArrayRealVector input, String sequence) {
 		
 		double temp = 0.0;
 		double maxSeen = 0.0;
@@ -1106,6 +1123,8 @@ public class SelfOrganizingMap implements Serializable {
 			}
 		}	
 		
+		maxNode.incrementNumberOfHits();
+		maxNode.addMappingSequence(sequence);
 		//printSOM();
 		return maxNode;
 	}
@@ -1161,9 +1180,9 @@ public class SelfOrganizingMap implements Serializable {
 			for(int j=0; j < SOM[0].length; j++)
 			{ 
 				SOM[i][j] = new Node(INPUT_DIMENSION,i,j,IS_MATRIX_MODE,0,false);
-				System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
+			//	System.out.print("["+i+"],["+j+ "]->["+SOM[i][j].getX()+","+SOM[i][j].getY()+"]\t");
 			}
-			System.out.println();
+		//	System.out.println();
 		}
 		
 		SOM_HORIZONTAL_LENGTH = SOM[0].length;
@@ -1383,8 +1402,8 @@ public class SelfOrganizingMap implements Serializable {
 		
 		double temp[] = new double[2];
 		
-	//	double mean[] = //{0.5,0.33,0.17} for 3 //{0.6,0.4};
-		double mean[] = {0.32381,0.279958,0.26426,0.131973};
+		double mean[] = {0.6,0.4};//{0.5,0.33,0.17} for 3 //
+	//	double mean[] = {0.32381,0.279958,0.26426,0.131973};
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];
