@@ -46,15 +46,15 @@ public class TestSOM {
 		//length = 752;
 		//threshold = (int)Math.round((length/154.43)*(100)*(0.0));
 		length = 49;
-		threshold =  10000;//(int)Math.round((length/3)*(100)*(0.8));
+		threshold =  500;//(int)Math.round((length/3)*(100)*(0.8));
 		
 		System.out.println("*******************\t" + fp.getFileName()+"\t****************************");
 
-		SelfOrganizingMap SOM = new SelfOrganizingMap(25,fp.getDataDimension(),true,false,2,1,30,3,fp1.readFileContinuous()); //null; //
+		SelfOrganizingMap SOM = new SelfOrganizingMap(25,fp.getDataDimension(),true,true,2,1,20,1,fp1.readFileContinuous()); //null; //
 		
 		//============SERIALIZE================
 		
-		FileOutputStream fout = new FileOutputStream("address.ser");
+		FileOutputStream fout = new FileOutputStream("address1.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fout);   
 		oos.writeObject(SOM);
 		oos.close();
@@ -63,13 +63,14 @@ public class TestSOM {
 		
 		//=============DESERIALIZE===============		
 
-	/*		FileInputStream fin = new FileInputStream("address.ser");
+			/*FileInputStream fin = new FileInputStream("address.ser");
 			ObjectInputStream ois = new ObjectInputStream(fin);
 			SOM = (SelfOrganizingMap) ois.readObject();
 			ois.close();
 			System.out.println("Done Retrieving the serialized object.");*/
 
 			SOM.FSM.setThreshold(threshold);
+			//SOM.setVECTOR_WEIGHTS(new double[]{0.0,0.0,0.00,1.0});
 			
 			System.out.println("THRESHOLD SET");
 		

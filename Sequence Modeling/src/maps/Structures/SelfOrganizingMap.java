@@ -107,7 +107,7 @@ public class SelfOrganizingMap implements Serializable {
 		}
 		else if(vector == 3)
 		{
-			double temp[] =  {0.00,0.00,0.50,0.50};//{0.5,0.3,0.15,0.05};
+			double temp[] = {0.5,0.3,0.15,0.05};// {0.0,0.0,0.50,0.50};//
 			VECTOR_WEIGHTS = temp;
 		}
 		else if(vector == 4)
@@ -181,6 +181,14 @@ public class SelfOrganizingMap implements Serializable {
 		double value = a.dotProduct(b);
 		
 		return value;
+	}
+	
+	/**
+	 * @param temp
+	 */
+	public void setVECTOR_WEIGHTS(double temp[])
+	{
+		VECTOR_WEIGHTS = temp;
 	}
 	
 	
@@ -384,6 +392,16 @@ public class SelfOrganizingMap implements Serializable {
 		TIME_STEP = NUMER_OF_ITERATIONS/Math.log(MAX_RADIUS);
 		PRESENTATION_NUMBER = 8*101;
 		INPUT_SAMPLES = input;
+		System.out.println("Rows " + SOM[0][0].getWeightMatrix().getRowDimension());
+		System.out.println("Columns " + SOM[0][0].getWeightMatrix().getColumnDimension());
+		System.out.print("WEIGHT VECTOR  =  ");
+		for(int i = 0; i < VECTOR_WEIGHTS.length; i++)
+		{
+			System.out.print(VECTOR_WEIGHTS[i] + "  , ");
+		}
+		System.out.println("\n");
+
+		
 		//DISPLAY_SCREEN.render();
 		for(int i = 1; i <= NUMER_OF_ITERATIONS; i++) //if 100 iteration we go from 0...100
 		{
@@ -1402,8 +1420,8 @@ public class SelfOrganizingMap implements Serializable {
 		
 		double temp[] = new double[2];
 		
-		double mean[] = {0.6,0.4};//{0.5,0.33,0.17} for 3 //
-	//	double mean[] = {0.32381,0.279958,0.26426,0.131973};
+	//	double mean[] = {0.6,0.4};//{0.5,0.33,0.17} for 3 //
+		double mean[] = {0.32381,0.279958,0.26426,0.131973};
 		
 		temp[0] = mean[index];
 		temp[1] = mean[index2];
